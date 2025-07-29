@@ -18,7 +18,7 @@ const NavMenu = () => {
 
     return (
         <>
-            {menu_data.map((menu, i) => (
+            {menu_data.filter(menu => !menu.hidden).map((menu, i) => (
                 menu.mega_munu ? (
                     <li key={menu.id} className="has-megamenu">
                         <Link href={menu.link}>{menu.title}</Link>
@@ -42,20 +42,16 @@ const NavMenu = () => {
                             {menu.title}
                         </Link>
 
-                        {menu.has_dropdown && (
-                            <>
-                                {menu.sub_menus && (
-                                    <ul className="sub-menu">
-                                        {menu.sub_menus.map((sub_m, i) => (
-                                            <li key={i}>
-                                                <Link href={sub_m.link} className={`${sub_m.link && isSubMenuItemActive(sub_m.link) ? "active" : ""}`}>
-                                                    {sub_m.title}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </>
+                        {menu.sub_menus && (
+                            <ul className="sub-menu">
+                                {menu.sub_menus.map((sub_m, i) => (
+                                    <li key={i}>
+                                        <Link href={sub_m.link} className={`${sub_m.link && isSubMenuItemActive(sub_m.link) ? "active" : ""}`}>
+                                            {sub_m.title}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         )}
                     </li>
                 )

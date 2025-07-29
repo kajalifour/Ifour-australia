@@ -10,6 +10,7 @@ interface MenuItem {
     title: string;
     link: string;
     has_dropdown: boolean;
+    hidden?: boolean;
     mega_munu?: {
         id: number;
         img: StaticImageData;
@@ -31,6 +32,7 @@ const menu_data: MenuItem[] = [
         title: "Home",
         link: "#",
         has_dropdown: true,
+        hidden: true,
         mega_munu: [
             // {
             //     id: 1,
