@@ -147,7 +147,7 @@ const Offer = () => {
             </div>
             <div className="row g-4">
                {offer_data.map((item) => (
-                  <div key={item.id} className="col-lg-2 col-md-4 col-sm-6 wow bounceInUp" data-wow-delay="00ms"
+                  <div key={item.id} className="col-lg-3 col-md-6 col-sm-6 wow bounceInUp" data-wow-delay="00ms"
                      data-wow-duration="1500ms">
                      <div className="offer__item">
                         <div className="shape-top">
