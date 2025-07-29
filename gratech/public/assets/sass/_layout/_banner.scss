@@ -80,20 +80,20 @@
 			}
 		}
 		h1 {
-			font-size: 80px;
-			line-height: 90px;
+			font-size: 52px;
+			line-height: 57px;
 			font-weight: 700;
 			@include breakpoint(max-lg) {
-				font-size: 60px;
-				line-height: 70px;
+				font-size: 38px;
+				line-height: 44.1px;
 			}
 			@include breakpoint(max-md) {
-				font-size: 50px;
-				line-height: 60px;
+				font-size: 33px;
+				line-height: 40px;
 			}
 			@include breakpoint(max-sm) {
-				font-size: 35px;
-				line-height: 50px;
+				font-size: 25px;
+				line-height: 35px;
 			}
 		}
 		p {
@@ -187,15 +187,15 @@
 				padding: 150px 0;
 			}
 			h1 {
-				font-size: 90px;
-				line-height: 100px;
+				font-size: 57px;
+				line-height: 70px;
 				@include breakpoint(max-lg) {
-					font-size: 60px;
-					line-height: 70px;
+					font-size: 40px;
+					line-height: 45px;
 				}
 				@include breakpoint(max-sm) {
-					font-size: 30px;
-					line-height: 40px;
+					font-size: 20px;
+					line-height: 28px;
 				}
 			}
 			h4 {
