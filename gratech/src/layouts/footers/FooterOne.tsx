@@ -13,6 +13,28 @@ const FooterOne = () => {
 
    return (
       <footer className="footer-area secondary-bg">
+         <style jsx>{`
+            .footer__wrp {
+               display: grid;
+               grid-template-columns: repeat(4, 1fr);
+               gap: 30px;
+               align-items: start;
+            }
+            .footer__item {
+               width: 100%;
+               max-width: none;
+            }
+            @media (max-width: 991px) {
+               .footer__wrp {
+                  grid-template-columns: repeat(2, 1fr);
+               }
+            }
+            @media (max-width: 575px) {
+               .footer__wrp {
+                  grid-template-columns: 1fr;
+               }
+            }
+         `}</style>
          <div className="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
             <Image src={shape_1} alt="shape" />
          </div>
@@ -30,7 +52,7 @@ const FooterOne = () => {
          </div>
          <div className="container">
             <div className="footer__wrp pt-100 pb-100">
-               <div className="footer__item item-big wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+               <div className="footer__item wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                   <Link href="/" className="logo mb-30">
                      <Image src={logo} alt="image" />
                   </Link>
@@ -42,7 +64,7 @@ const FooterOne = () => {
                      <Link href="#"><i className="fa-brands fa-youtube"></i></Link>
                   </div>
                </div>
-               <div className="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+               <div className="footer__item wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                   <h3 className="footer-title">IT Solution</h3>
                   <ul>
                      <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Custom Software Development</Link></li>
@@ -57,7 +79,7 @@ const FooterOne = () => {
                      <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Iot Software Development</Link></li>
                   </ul>
                </div>
-               <div className="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+               <div className="footer__item wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                   <h3 className="footer-title">Quick Link</h3>
                   <ul>
                      <li><Link href="/about"><i className="fa-regular fa-angles-right me-1"></i> About iFour Technolab </Link></li>
@@ -67,9 +89,12 @@ const FooterOne = () => {
                      </li>
                      <li><Link href="/case"><i className="fa-regular fa-angles-right me-1"></i> Our Projects</Link></li>
                      <li><Link href="/team"><i className="fa-regular fa-angles-right me-1"></i> Our Team</Link></li>
+                     <li><Link href="/blog"><i className="fa-regular fa-angles-right me-1"></i> Our Blog</Link></li>
+                     <li><Link href="/contact"><i className="fa-regular fa-angles-right me-1"></i> Contact Us</Link></li>
+                     <li><Link href="/faq"><i className="fa-regular fa-angles-right me-1"></i> FAQ</Link></li>
                   </ul>
                </div>
-               <div className="footer__item item-big wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+               <div className="footer__item wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                   <h3 className="footer-title">Contact Us</h3>
                   <p className="mb-20">15 Banyula drive, Old bar - NSW, 2430, Australia</p>
                   <ul className="footer-contact">
