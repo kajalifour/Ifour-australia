@@ -48,7 +48,7 @@ const About = ({style}:StyleType) => {
                      <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
-                           <rect x="0.75" y="0.75" width="18.5" height="10.5" rx="5.25" stroke="#3C72FC"
+                           <rect x="0.75" y="0.75" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
                               strokeWidth="1.5" />
                            <mask id="path-2-inside-1_668_146" fill="white">
                               <path
@@ -56,7 +56,7 @@ const About = ({style}:StyleType) => {
                            </mask>
                            <path
                               d="M3 6C3 2.96243 5.46243 0.5 8.5 0.5H11.5C14.5376 0.5 17 2.96243 17 6C17 4.61929 15.2091 3.5 13 3.5H7C4.79086 3.5 3 4.61929 3 6ZM17 6C17 9.03757 14.5376 11.5 11.5 11.5H8.5C5.46243 11.5 3 9.03757 3 6C3 7.38071 4.79086 8.5 7 8.5H13C15.2091 8.5 17 7.38071 17 6ZM3 10V2V10ZM17 2V10V2Z"
-                              fill="#3C72FC" mask="url(#path-2-inside-1_668_146)" />
+                              fill="#0f7a95" mask="url(#path-2-inside-1_668_146)" />
                         </svg>
                         WHO WE ARE
                      </h5>

@@ -108,7 +108,7 @@ const Testimonial = () => {
                                  <div className="testimonial-three__image">
                                     <svg width="24" height="18" viewBox="0 0 24 18" fill="none"
                                        xmlns="http://www.w3.org/2000/svg">
-                                       <path d="M0 0V18L9 9V0H0ZM15 0V18L24 9V0H15Z" fill="#3C72FC" />
+                                       <path d="M0 0V18L9 9V0H0ZM15 0V18L24 9V0H15Z" fill="#0f7a95" />
                                     </svg>
                                     <Image src={item.avatar} alt="image" />
                                  </div>

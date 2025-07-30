@@ -141,7 +141,7 @@ const Testimonial = () => {
                                     <svg className="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
                                        xmlns="http://www.w3.org/2000/svg">
                                        <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z"
-                                          fill="#3C72FC" />
+                                          fill="#0f7a95" />
                                     </svg>
                                     <div className="d-flex align-items-center gap-3">
                                        <Image src={item.avatar} alt="image" />

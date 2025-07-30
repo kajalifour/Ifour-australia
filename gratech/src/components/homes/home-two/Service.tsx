@@ -49,7 +49,7 @@ const Service = () => {
                   <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                      <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.75" y="0.750061" width="18.5" height="10.5" rx="5.25" stroke="#3C72FC"
+                        <rect x="0.75" y="0.750061" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
                            strokeWidth="1.5" />
                         <mask id="path-2-inside-1_670_477" fill="white">
                            <path
@@ -57,7 +57,7 @@ const Service = () => {
                         </mask>
                         <path
                            d="M3 6.00006C3 2.96249 5.46243 0.500061 8.5 0.500061H11.5C14.5376 0.500061 17 2.96249 17 6.00006C17 4.61935 15.2091 3.50006 13 3.50006H7C4.79086 3.50006 3 4.61935 3 6.00006ZM17 6.00006C17 9.03763 14.5376 11.5001 11.5 11.5001H8.5C5.46243 11.5001 3 9.03763 3 6.00006C3 7.38077 4.79086 8.50006 7 8.50006H13C15.2091 8.50006 17 7.38077 17 6.00006ZM3 10.0001V2.00006V10.0001ZM17 2.00006V10.0001V2.00006Z"
-                           fill="#3C72FC" mask="url(#path-2-inside-1_670_477)" />
+                           fill="#0f7a95" mask="url(#path-2-inside-1_670_477)" />
                      </svg>
                      SERVICES WE’RE OFFERING
                   </h5>

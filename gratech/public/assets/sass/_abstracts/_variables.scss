@@ -3,13 +3,13 @@
 	--kumbh: "Kumbh Sans", sans-serif;
 
 	// Colors ***
-	--primary-color: #3c72fc;
+	--primary-color: #0f7a95;
 	--primary10: rgba(60, 114, 252, 0.1);
-	--gradient-bg: linear-gradient(90deg, #3c72fc -10.59%, #00060c 300.59%);
-	--secondary-color: #0f0d1d;
+	--gradient-bg: linear-gradient(90deg, #0f7a95 -10.59%, #00060c 300.59%);
+	--secondary-color: #000000;
 	--main-bg: #ffffff;
 	--sub-bg: #f3f7fb;
-	--heading-color: #0f0d1d;
+	--heading-color: #000000;
 	--paragraph: #585858;
 	--span: #585858;
 	--border: #e3e3e3;
@@ -29,10 +29,10 @@
 
 // Dark mood collor area start here ***
 :root[data-theme="dark"] {
-	--primary-color: #3c72fc;
+	--primary-color: #0f7a95;
 	--primary10: rgba(60, 114, 252, 0.1);
-	--gradient-bg: linear-gradient(90deg, #3c72fc -10.59%, #00060c 300.59%);
-	--secondary-color: #0f0d1d;
+	--gradient-bg: linear-gradient(90deg, #0f7a95 -10.59%, #00060c 300.59%);
+	--secondary-color: #000000;
 	--main-bg: #151327;
 	--sub-bg: #16142c;
 	--heading-color: #fff;
@@ -46,13 +46,13 @@
 
 // Overight the Dark mood collor area stat here ***
 :root[data-theme="dark"] .light-area {
-	--primary-color: #3c72fc;
+	--primary-color: #0f7a95;
 	--primary10: rgba(60, 114, 252, 0.1);
-	--gradient-bg: linear-gradient(90deg, #3c72fc -10.59%, #00060c 300.59%);
-	--secondary-color: #0f0d1d;
+	--gradient-bg: linear-gradient(90deg, #0f7a95 -10.59%, #00060c 300.59%);
+	--secondary-color: #000000;
 	--main-bg: #ffffff;
 	--sub-bg: #f3f7fb;
-	--heading-color: #0f0d1d;
+	--heading-color: #000000;
 	--paragraph: #585858;
 	--span: #585858;
 	--border: #e3e3e3;

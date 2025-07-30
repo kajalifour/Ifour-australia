@@ -10,7 +10,7 @@ const Team = () => {
                <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                   <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
-                     <rect x="0.75" y="0.747803" width="18.5" height="10.5" rx="5.25" stroke="#3C72FC"
+                     <rect x="0.75" y="0.747803" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
                         strokeWidth="1.5" />
                      <mask id="path-2-inside-1_687_602" fill="white">
                         <path
@@ -18,7 +18,7 @@ const Team = () => {
                      </mask>
                      <path
                         d="M3 5.9978C3 2.96024 5.46243 0.497803 8.5 0.497803H11.5C14.5376 0.497803 17 2.96024 17 5.9978C17 4.61709 15.2091 3.4978 13 3.4978H7C4.79086 3.4978 3 4.61709 3 5.9978ZM17 5.9978C17 9.03537 14.5376 11.4978 11.5 11.4978H8.5C5.46243 11.4978 3 9.03537 3 5.9978C3 7.37851 4.79086 8.4978 7 8.4978H13C15.2091 8.4978 17 7.37851 17 5.9978ZM3 9.9978V1.9978V9.9978ZM17 1.9978V9.9978V1.9978Z"
-                        fill="#3C72FC" mask="url(#path-2-inside-1_687_602)" />
+                        fill="#0f7a95" mask="url(#path-2-inside-1_687_602)" />
                   </svg>
                   OUR team
                </h5>

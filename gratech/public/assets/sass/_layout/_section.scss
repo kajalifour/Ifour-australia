@@ -308,7 +308,7 @@
 				border-radius: 0px;
 				background: linear-gradient(
 					180deg,
-					#3c72fc -93.57%,
+					#0f7a95 -93.57%,
 					#00060c 228.57%
 				);
 				margin: 0 auto;
@@ -329,7 +329,7 @@
 				height: 0%;
 				background: linear-gradient(
 					180deg,
-					#3c72fc -21.56%,
+					#0f7a95 -21.56%,
 					#00060c 252.19%
 				);
 				border-radius: 8px;
@@ -794,7 +794,7 @@
 		&::before {
 			background: linear-gradient(
 				0deg,
-				#0f0d1d 0%,
+				#000000 0%,
 				rgba(15, 13, 29, 0) 125%
 			);
 		}
@@ -956,7 +956,7 @@
 				content: "";
 				background: linear-gradient(
 					0deg,
-					#3c72fc 0%,
+					#0f7a95 0%,
 					rgba(0, 0, 0, 0) 100%
 				);
 				transition: var(--transition);
@@ -1115,7 +1115,7 @@
 	&__icon {
 		@include radius(70px, 70px, 70px);
 		margin: 0 auto;
-		background: linear-gradient(180deg, #3c72fc -210.71%, #00060c 100%);
+		background: linear-gradient(180deg, #0f7a95 -210.71%, #00060c 100%);
 		margin-top: -35px;
 		transition: 1s;
 	}
@@ -1964,7 +1964,7 @@
 				}
 			}
 		}
-		background: linear-gradient(180deg, #3c72fc -1.09%, #00060c 175.27%);
+		background: linear-gradient(180deg, #0f7a95 -1.09%, #00060c 175.27%);
 		padding: 50px 40px;
 		.pricing-head {
 			padding-bottom: 30px;
