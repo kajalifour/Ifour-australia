@@ -14,11 +14,10 @@ import icon_2 from "@/assets/images/icon/about-icon2.png"
 import info from "@/assets/images/about/about-info.png"
 
 const About = () => {
-
    const [isVideoOpen, setIsVideoOpen] = useState(false);
 
    return (
-      <>
+      <div>
          <section id="about-section" className="about-area sub-bg pt-120">
             <div className="about__shape wow slideInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
                <Image src={shape_1} alt="shape" />
@@ -33,8 +32,9 @@ const About = () => {
                         <div className="image sm-image">
                            <div className="video__btn-wrp">
                               <div className="video-btn video-pulse">
-                                 <a onClick={() => setIsVideoOpen(true)} style={{ cursor: "pointer" }} className="video-popup"><i
-                                    className="fa-solid fa-play"></i></a>
+                                 <a onClick={() => setIsVideoOpen(true)} style={{ cursor: "pointer" }} className="video-popup">
+                                    <i className="fa-solid fa-play"></i>
+                                 </a>
                               </div>
                            </div>
                            <Image src={about_thumb2} alt="image" />
@@ -50,43 +50,15 @@ const About = () => {
                            <Image className="me-1" src={shape_3} alt="icon" />
                            ABOUT Gratech
                         </h5>
-                        <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">A Software Development Company You Can Trust</h2>
-                        <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">iFour Technolab is a Microsoft Certified Solutions Partner and a top software development company offering advanced, customized software solutions. With over a decade of experience and deep tech expertise, we help turn your ideas into reality. Staying updated with the latest technologies, we ensure our solutions align perfectly with your business goals.</p>
-                     </div>
-                     <div className="row g-4 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="col-md-6">
-                           <div className="about__right-item">
-                              <div className="icon">
-                                 <Image src={icon_1} alt="icon" />
-                              </div>
-                              <div className="content">
-                                 <h4 className="mb-1">Best Services</h4>
-                                 <p>Comprehensive Software Development Solutions Tailored to Your Business</p>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="col-md-6">
-                           <div className="about__right-item">
-                              <div className="icon">
-                                 <Image src={icon_2} alt="icon" />
-                              </div>
-                              <div className="content">
-                                 <h4 className="mb-1">24/7 Call Support</h4>
-                                 <p>24/7 Assistance to Keep Your Business Running Smoothly</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div className="about__info mt-50 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <Link href="/about" className="btn-one">Explore More <i
-                           className="fa-regular fa-arrow-right-long"></i></Link>
-                        <div className="d-flex gap-2 align-items-center">
-                           <Image src={info} alt="image" />
-                           <div className="info">
-                              <h5>Ronald Richards</h5>
-                              <span className="sm-font">Co, Founder</span>
-                           </div>
-                        </div>
+                        <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                           A Software Development Company You Can Trust
+                        </h2>
+                        <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                           iFour Technolab is a Microsoft Certified Solutions Partner and a premier software development company delivering leading-edge software development services and solutions. We blend our technological niche-specific expertise with our decade-long experience to bring your innovative vision to life. We keep up with the ever-evolving software development landscape to acquaint ourselves with cutting-edge technology and frameworks, ensuring you get the best possible solutions that perfectly match your business needs.
+                        </p>
+                        <p className="wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                           From start-ups to large enterprises, we have been the monumental driving force behind the successes of many projects. With a team of 120+ dedicated and highly skilled tech geniuses, 7+ SCRUM masters, and four offices situated around the globe, iFour Technolab is your trusted partner in driving innovation, excellence, and unparalleled success.
+                        </p>
                      </div>
                   </div>
                </div>
@@ -97,7 +69,7 @@ const About = () => {
             setIsVideoOpen={setIsVideoOpen}
             videoId="eEzD-Y97ges"
          />
-      </>
+      </div>
    )
 }
 
