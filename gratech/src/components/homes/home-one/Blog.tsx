@@ -13,8 +13,11 @@ const Blog = () => {
                   <Image className="me-1" src={shape} alt="icon" />
                   Blog & news
                </h5>
-               <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Explore Blogs and News
+               <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Our Latest Insights
                </h2>
+               <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ marginTop: '20px', lineHeight: '1.6' }}>
+                  We present key insights and knowledge gleaned from the tech landscape in the form of comprehensive blogs. Dive into our latest blogs to stay at the forefront of technology and keep yourself informed.
+               </p>
             </div>
             <div className="row g-4">
                {bolg_data.filter((items) => items.page === "home_1").map((item) => (

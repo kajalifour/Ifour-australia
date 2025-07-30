@@ -46,19 +46,24 @@ const Service = () => {
          </div>
          <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
-               <div className="section-header">
-                  <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-                     <Image className="me-1" src={shape_2} alt="icon" />
-                     What We OFFER
-                  </h5>
-                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Excellent IT
-                     Services</h2>
-               </div>
+                               <div className="section-header">
+                   <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Our Range of Software Development Services to Achieve Your Goals</h2>
+                   <p className="wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ marginTop: '20px', lineHeight: '1.6' }}>
+                      iFour Technolab has been helping businesses embrace innovation and the full potential of technology since its inception. No matter the requirements, whether it's developing custom software from scratch, reengineering an existing legacy system, or integrating new technologies into routine workflows, trust iFour Technolab to deliver. Our services include the following:
+                   </p>
+                </div>
             </div>
             <Swiper {...setting} modules={[Autoplay, Navigation, Pagination]} className="swiper service__slider">
                {service_data.filter((items) => items.page === "home_1").map((item) => (
                   <SwiperSlide key={item.id} className="swiper-slide">
-                     <div className="service__item">
+                     <div className="service__item" style={{
+                        backgroundColor: 'rgba(15, 122, 149, 0.15)',
+                        borderRadius: '10px',
+                        padding: '20px',
+                        transition: 'all 0.3s ease-in-out',
+                        border: '1px solid rgba(15, 122, 149, 0.2)',
+                        boxShadow: '0 2px 10px rgba(15, 122, 149, 0.1)'
+                     }}>
                         <div className="service-shape">
                            <Image src={shape_3} alt="shape" />
                         </div>

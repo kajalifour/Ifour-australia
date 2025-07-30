@@ -13,7 +13,7 @@ const Blog = () => {
                   <Image className="me-1" src={shape} alt="icon" />
                   Blog & news
                </h5>
-               <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Explore Blogs and News
+               <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Our Latest Insights
                </h2>
             </div>
             <div className="row g-4">

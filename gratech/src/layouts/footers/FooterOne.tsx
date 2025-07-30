@@ -12,7 +12,10 @@ import logo from "@/assets/images/logo/logo.svg"
 const FooterOne = () => {
 
    return (
-      <footer className="footer-area secondary-bg">
+      <footer className="footer-area" style={{ 
+         background: 'linear-gradient(135deg, #0f7a95 0%, #0a5a6f 50%, #083d4f 100%)',
+         color: '#ffffff'
+      }}>
          <style jsx>{`
             .footer__wrp {
                display: grid;
