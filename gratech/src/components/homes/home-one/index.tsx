@@ -17,9 +17,9 @@ const HomeOne = () => {
       <HeaderOne />
       <main>
         <Banner />
+        <Counter />
         <Service />
         <About />
-        <Counter />
         <Case />
         <Offer />
         <Brand />

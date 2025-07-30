@@ -2,7 +2,7 @@ import About from "@/components/about";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
-  title: "About Gratech - IT Service React Next js Template",
+  title: "About iFour Teachnolab - IT Service React Next js Template",
 };
 const page = () => {
   return (

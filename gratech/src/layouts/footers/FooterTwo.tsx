@@ -61,7 +61,7 @@ const FooterTwo = () => {
                <div className="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                   <h3 className="footer-title">Quick Link</h3>
                   <ul>
-                     <li><Link href="/about"><i className="fa-regular fa-angles-right me-1"></i> About Gratech</Link></li>
+                     <li><Link href="/about"><i className="fa-regular fa-angles-right me-1"></i> </Link></li>
                      <li><Link href="/service"><i className="fa-regular fa-angles-right me-1"></i> Our Services</Link>
                      </li>
                      <li><Link href="/pricing"><i className="fa-regular fa-angles-right me-1"></i> Pricing Plan</Link>

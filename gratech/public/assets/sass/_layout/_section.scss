@@ -626,8 +626,11 @@
 	}
 	&__wrp {
 		overflow: hidden;
-		padding: 80px;
-		@include justify-wrp;
+		padding: 64px 80px;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
 		gap: 20px;
 		position: relative;
 		margin-top: -120px;
@@ -635,6 +638,7 @@
 
 		@include breakpoint(max-md) {
 			justify-content: center;
+			flex-wrap: wrap;
 		}
 	}
 	&__item {
@@ -653,6 +657,131 @@
 	}
 }
 // Counter area end here ***
+
+// Clients area start here ***
+.clients {
+	&-area {
+		position: relative;
+		overflow: hidden;
+	}
+	&__shape {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: -1;
+	}
+	&__arry-btn {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		justify-content: center;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "";
+			width: 35%;
+			height: 1px;
+			background-color: var(--primary-color);
+			right: 0;
+			top: 25px;
+			opacity: 0.5;
+			@include breakpoint(max-sm) {
+				width: 30%;
+			}
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			width: 35%;
+			height: 1px;
+			background-color: var(--primary-color);
+			left: 0;
+			top: 25px;
+			opacity: 0.5;
+			@include breakpoint(max-sm) {
+				width: 30%;
+			}
+		}
+	}
+	&__navigation {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+		margin-top: 40px;
+		
+		button {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			border: 1px solid var(--primary-color);
+			background: transparent;
+			color: var(--primary-color);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			
+			&:hover {
+				background: var(--primary-color);
+				color: var(--white);
+			}
+			
+			&.active {
+				background: var(--primary-color);
+				color: var(--white);
+			}
+		}
+	}
+	&__dot {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 12px;
+		
+		.swiper-pagination-bullet {
+			width: 12px;
+			height: 12px;
+			background-color: #e3e3e3;
+			opacity: 1;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			
+			&.swiper-pagination-bullet-active {
+				background-color: var(--primary-color);
+				transform: scale(1.2);
+			}
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		background: var(--white);
+		border-radius: 8px;
+		box-shadow: var(--shadow);
+		transition: var(--transition);
+		
+		&:hover {
+			transform: translateY(-5px);
+		}
+		
+		img {
+			max-width: 100%;
+			height: auto;
+			filter: grayscale(100%);
+			transition: var(--transition);
+		}
+		
+		&:hover img {
+			filter: grayscale(0%);
+		}
+	}
+}
+// Clients area end here ***
 
 // Case area start here ***
 .case {

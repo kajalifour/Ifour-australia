@@ -19,7 +19,7 @@ const counter_data: DataType[] = [
       id: 1,
       icon: icon_1,
       count: 12,
-      title: "Years of Technology Experience"
+      title: "Years of Technology<br />Experience"
    },
    {
       id: 2,
@@ -31,7 +31,7 @@ const counter_data: DataType[] = [
       id: 3,
       icon: icon_3,
       count: 120,
-      title: "Creative nerds under one Roof"
+      title: "Creative nerds under <br/>one Roof"
    },
    {
       id: 4,
@@ -54,7 +54,7 @@ const Counter = () => {
                      <Image src={item.icon} alt="icon" />
                      <div className="content">
                         <h3><span className="count"><Count number={item.count} /></span>+</h3>
-                        <p className="text-white">{item.title}</p>
+                        <p className="text-white" dangerouslySetInnerHTML={{ __html: item.title }}></p>
                      </div>
                   </div>
                ))}
