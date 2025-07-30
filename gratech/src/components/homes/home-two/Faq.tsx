@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image"
 import faqdata from "@/data/FaqData";
 
-import shape_1 from "@/assets/images/shape/faq-shape.png"
 import shape_2 from "@/assets/images/shape/faq-line.png"
 import faq_thumb from "@/assets/images/faq/faq-image.png"
 
@@ -47,9 +46,6 @@ const Faq = ({ style, style_2 }: StyleType) => {
 
    return (
       <section id="faq-section" className="faq-area sub-bg pt-120 pb-120">
-         {!style && <div className="faq__shape">
-            <Image className="sway__animationX" src={shape_1} alt="shape" />
-         </div>}
          <div className="container">
             <div className="row g-4">
                <div className="col-lg-5 pe-2 pe-lg-5">

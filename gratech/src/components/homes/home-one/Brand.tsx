@@ -13,7 +13,6 @@ import brand_7 from "@/assets/images/brand/brand-image12.webp"
 import brand_8 from "@/assets/images/brand/brand-image13.webp"
 import brand_9 from "@/assets/images/brand/brand-image14.webp"
 import brand_10 from "@/assets/images/brand/brand-image-15.webp"
-import shape_1 from "@/assets/images/shape/brand-shape.png"
 import shape_2 from "@/assets/images/icon/section-title.png"
 
 const brand_data: StaticImageData[] = [brand_1, brand_2, brand_3, brand_4, brand_5, brand_6, brand_7, brand_8, brand_9, brand_10];
@@ -49,9 +48,6 @@ const Brand = () => {
       <div className="brand-area">
          <div className="container">
             <div className="brand__wrp">
-               <div className="brand__shape">
-                  <Image src={shape_1} alt="" />
-               </div>
                <div className="section-header mb-60">
                   <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                      <Image className="me-1" src={shape_2} alt="icon" />
