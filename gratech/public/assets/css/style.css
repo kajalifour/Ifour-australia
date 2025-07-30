@@ -4039,7 +4039,7 @@ input.main-search-input::placeholder {
 
 .brand__wrp {
   padding: 65px;
-  background: var(--gradient-bg);
+  background: var(--white);
   margin-top: -85px;
   position: relative;
   z-index: 1;
@@ -4057,11 +4057,7 @@ input.main-search-input::placeholder {
   overflow: hidden;
   position: relative;
   z-index: 1;
-}
-.brand-three-area::before {
-  background-color: var(--heading-color);
-  opacity: 0.9;
-  z-index: -1;
+  background: var(--white);
 }
 .brand-three__shape1 {
   position: absolute;

@@ -962,7 +962,7 @@
 .brand {
 	&__wrp {
 		padding: 65px;
-		background: var(--gradient-bg);
+		background: var(--white);
 		margin-top: -85px;
 		position: relative;
 		z-index: 1;
@@ -981,12 +981,7 @@
 			overflow: hidden;
 			position: relative;
 			z-index: 1;
-			@extend .overlay;
-			&::before {
-				background-color: var(--heading-color);
-				opacity: 0.9;
-				z-index: -1;
-			}
+			background: var(--white);
 		}
 		&__shape1 {
 			position: absolute;

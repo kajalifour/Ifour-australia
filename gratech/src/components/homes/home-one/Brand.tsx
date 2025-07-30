@@ -3,19 +3,25 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Image, { StaticImageData } from "next/image"
 
-import brand_1 from "@/assets/images/brand/brand-image1.png"
-import brand_2 from "@/assets/images/brand/brand-image2.png"
-import brand_3 from "@/assets/images/brand/brand-image3.png"
-import brand_4 from "@/assets/images/brand/brand-image4.png"
-import brand_5 from "@/assets/images/brand/brand-image5.png"
+import brand_1 from "@/assets/images/brand/brand-image6.webp"
+import brand_2 from "@/assets/images/brand/brand-image7.webp"
+import brand_3 from "@/assets/images/brand/brand-image8.webp"
+import brand_4 from "@/assets/images/brand/brand-image-9.webp"
+import brand_5 from "@/assets/images/brand/brand-image-10.webp"
+import brand_6 from "@/assets/images/brand/brand-image11.webp"
+import brand_7 from "@/assets/images/brand/brand-image12.webp"
+import brand_8 from "@/assets/images/brand/brand-image13.webp"
+import brand_9 from "@/assets/images/brand/brand-image14.webp"
+import brand_10 from "@/assets/images/brand/brand-image-15.webp"
 import shape_1 from "@/assets/images/shape/brand-shape.png"
 
-const brand_data: StaticImageData[] = [brand_1, brand_2, brand_3, brand_4, brand_5, brand_3];
+const brand_data: StaticImageData[] = [brand_1, brand_2, brand_3, brand_4, brand_5, brand_6, brand_7, brand_8, brand_9, brand_10];
 
 const setting = {
    slidesPerView: 5,
    spaceBetween: 30,
    loop: true,
+   loopedSlides: 10,
    autoplay: {
       delay: 3000,
       disableOnInteraction: false,
