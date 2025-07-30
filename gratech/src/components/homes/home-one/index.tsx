@@ -7,6 +7,7 @@ import Counter from "./Counter"
 import Case from "./Case"
 import Offer from "./Offer"
 import Brand from "./Brand"
+import Project from "./Project"
 import Process from "./Process"
 import Testimonial from "./Testimonial"
 import Blog from "./Blog"
@@ -23,6 +24,7 @@ const HomeOne = () => {
         <Case />
         <Offer />
         <Brand />
+        <Project />
         <Process />
         <Testimonial />
         <Blog />

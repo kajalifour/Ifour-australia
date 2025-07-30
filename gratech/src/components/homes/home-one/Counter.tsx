@@ -5,6 +5,7 @@ import icon_1 from "@/assets/images/icon/counter-icon1.png"
 import icon_2 from "@/assets/images/icon/counter-icon2.png"
 import icon_3 from "@/assets/images/icon/counter-icon3.png"
 import icon_4 from "@/assets/images/icon/counter-icon4.png"
+import shape_1 from "@/assets/images/shape/counnter-bg-shape.png"
 
 interface DataType {
    id: number;
@@ -30,7 +31,7 @@ const counter_data: DataType[] = [
       id: 3,
       icon: icon_3,
       count: 120,
-      title: "Creative nerds under <br/>one Roof"
+      title: "Creative nerds under <br/> one Roof"
    },
    {
       id: 4,
@@ -45,6 +46,9 @@ const Counter = () => {
       <section className="counter-area">
          <div className="container">
             <div className="counter__wrp gradient-bg">
+               <div className="counter__shape wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                  <Image src={shape_1} alt="shape" />
+               </div>
                {counter_data.map((item) => (
                   <div key={item.id} className="counter__item wow bounceInUp" data-wow-delay="00ms" data-wow-duration="1000ms">
                      <Image src={item.icon} alt="icon" />
