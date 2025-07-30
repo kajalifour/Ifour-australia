@@ -1,3 +1,6 @@
+"use client"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import service_data from "@/data/ServiceData"
 import Image from "next/image"
 import Link from "next/link"
@@ -5,6 +8,35 @@ import Link from "next/link"
 import shape_1 from "@/assets/images/shape/service-bg-shape.png"
 import shape_2 from "@/assets/images/icon/section-title.png"
 import shape_3 from "@/assets/images/shape/service-item-shape.png"
+
+const setting = {
+   slidesPerView: 3,
+   spaceBetween: 30,
+   loop: true,
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+   },
+   pagination: {
+      el: ".service__dot",
+      clickable: true,
+   },
+   navigation: {
+      nextEl: ".service__arry-next",
+      prevEl: ".service__arry-prev",
+   },
+   breakpoints: {
+      1200: {
+         slidesPerView: 3,
+      },
+      992: {
+         slidesPerView: 2,
+      },
+      575: {
+         slidesPerView: 1,
+      },
+   },
+};
 
 const Service = () => {
    return (
@@ -22,13 +54,10 @@ const Service = () => {
                   <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Excellent IT
                      Services</h2>
                </div>
-               <a href="service.html" className="btn-one wow fadeInUp" data-wow-delay="200ms"
-                  data-wow-duration="1500ms">View All
-                  Services <i className="fa-regular fa-arrow-right-long"></i></a>
             </div>
-            <div className="row g-4">
+            <Swiper {...setting} modules={[Autoplay, Navigation, Pagination]} className="swiper service__slider">
                {service_data.filter((items) => items.page === "home_1").map((item) => (
-                  <div key={item.id} className="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="00ms" data-wow-duration="1000ms">
+                  <SwiperSlide key={item.id} className="swiper-slide">
                      <div className="service__item">
                         <div className="service-shape">
                            <Image src={shape_3} alt="shape" />
@@ -39,8 +68,13 @@ const Service = () => {
                         <h4><Link href="/service-details">{item.title}</Link></h4>
                         <p>{item.desc}</p>
                      </div>
-                  </div>
+                  </SwiperSlide>
                ))}
+            </Swiper>
+            <div className="service__navigation wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
+               <button className="arry-prev service__arry-prev"><i className="fa-light fa-chevron-left"></i></button>
+               <div className="service__dot"></div>
+               <button className="arry-next service__arry-next active"><i className="fa-light fa-chevron-right"></i></button>
             </div>
          </div>
       </section>

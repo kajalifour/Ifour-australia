@@ -54,82 +54,27 @@ const service_data: DataType[] = [
       title: "Mobile Application Development",
       desc: "We help formulate your disruptive business idea into a mobile app that matches your aspirations, delivers a delightful user experience, and sets your business up for success."
    },
-
-   // home_2
-   // {
-   //    id: 1,
-   //    page: "home_2",
-   //    thumb: service_thumb1,
-   //    icon: icon2_1,
-   //    title: "Database Security",
-   //    desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis."
-   // },
-   // {
-   //    id: 2,
-   //    page: "home_2",
-   //    thumb: service_thumb2,
-   //    icon: icon2_2,
-   //    title: "IT Consultancy",
-   //    desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis."
-   // },
-   // {
-   //    id: 3,
-   //    page: "home_2",
-   //    thumb: service_thumb3,
-   //    icon: icon2_3,
-   //    title: "App Development",
-   //    desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis."
-   // },
-   // {
-   //    id: 4,
-   //    page: "home_2",
-   //    thumb: service_thumb4,
-   //    icon: icon2_4,
-   //    title: "Cyber Security",
-   //    desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis."
-   // },
-   // {
-   //    id: 5,
-   //    page: "home_2",
-   //    thumb: service_thumb5,
-   //    icon: icon2_5,
-   //    title: "UI/UX Design",
-   //    desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis."
-   // },
-   // {
-   //    id: 6,
-   //    page: "home_2",
-   //    thumb: service_thumb6,
-   //    icon: icon2_6,
-   //    title: "IT Management",
-   //    desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis."
-   // },
-
-   // // home_3
-   // {
-   //    id: 1,
-   //    page: "home_3",
-   //    thumb: service3_thumb1,
-   //    icon: icon3_1,
-   //    title: "Database Security",
-   //    desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis."
-   // },
-   // {
-   //    id: 2,
-   //    page: "home_3",
-   //    thumb: service3_thumb2,
-   //    icon: icon3_2,
-   //    title: "Cyber Security",
-   //    desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis."
-   // },
-   // {
-   //    id: 3,
-   //    page: "home_3",
-   //    thumb: service3_thumb3,
-   //    icon: icon3_3,
-   //    title: "IT Management",
-   //    desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis."
-   // },
+   {
+      id: 4,
+      page: "home_1",
+      icon: icon_1,
+      title: "Web Application Development",
+      desc: "We create powerful, scalable web applications using modern technologies and frameworks to deliver exceptional user experiences and drive business growth."
+   },
+   {
+      id: 5,
+      page: "home_1",
+      icon: icon_2,
+      title: "Cloud Solutions & DevOps",
+      desc: "We provide comprehensive cloud infrastructure solutions and DevOps services to optimize your development processes and ensure seamless deployment."
+   },
+   {
+      id: 6,
+      page: "home_1",
+      icon: icon_3,
+      title: "UI/UX Design & Consulting",
+      desc: "Our expert designers create intuitive, engaging user interfaces and experiences that enhance user satisfaction and drive business success."
+   },
 ];
 
 export default service_data;
