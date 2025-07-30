@@ -24,7 +24,6 @@ const setting = {
    slidesPerView: 5,
    spaceBetween: 30,
    loop: true,
-   loopedSlides: 10,
    autoplay: {
       delay: 3000,
       disableOnInteraction: false,

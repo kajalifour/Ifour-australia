@@ -1,6 +1,6 @@
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import TestimonialForm from "@/components/forms/TestimonialForm"
 import Image, { StaticImageData } from "next/image"
 import { JSX } from "react";
@@ -15,22 +15,55 @@ interface DataType {
    name: string;
    designation: string;
    desc: JSX.Element;
+   isVideo?: boolean;
+   videoUrl?: string;
 }
 
 const testi_data: DataType[] = [
    {
       id: 1,
       avatar: avatar_1,
-      name: "Suborna Tarchera",
-      designation: "Web Developer",
-      desc: (<>“ Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo ”</>)
+      name: "iFour Technolab Client",
+      designation: "Client Testimonial",
+      desc: (<>""</>),
+      isVideo: true,
+      videoUrl: "https://www.youtube.com/embed/itCyHAtz9ps"
    },
    {
       id: 2,
       avatar: avatar_2,
-      name: "Alex Rony",
-      designation: "Web Designer",
-      desc: (<>“ Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo ”</>)
+      name: "iFour Technolab Client",
+      designation: "Client Testimonial",
+      desc: (<>""</>),
+      isVideo: true,
+      videoUrl: "https://www.youtube.com/embed/KYgzAEupZak"
+   },
+   {
+      id: 3,
+      avatar: avatar_1,
+      name: "iFour Technolab Client",
+      designation: "Client Testimonial",
+      desc: (<>""</>),
+      isVideo: true,
+      videoUrl: "https://www.youtube.com/embed/1qgWVsv4yw0"
+   },
+   {
+      id: 4,
+      avatar: avatar_2,
+      name: "iFour Technolab Client",
+      designation: "Client Testimonial",
+      desc: (<>""</>),
+      isVideo: true,
+      videoUrl: "https://www.youtube.com/embed/Vh5hzqowxzk"
+   },
+   {
+      id: 5,
+      avatar: avatar_1,
+      name: "iFour Technolab Client",
+      designation: "Client Testimonial",
+      desc: (<>""</>),
+      isVideo: true,
+      videoUrl: "https://www.youtube.com/embed/cFtsaIihO80"
    },
 ];
 
@@ -41,11 +74,11 @@ const setting = {
       delay: 3000,
       disableOnInteraction: false,
    },
-   pagination: false,
-   navigation: {
-      nextEl: ".testimonial__arry-next",
-      prevEl: ".testimonial__arry-prev",
+   pagination: {
+      el: ".testimonial__dot",
+      clickable: true,
    },
+   navigation: false,
 };
 
 const Testimonial = () => {
@@ -79,42 +112,60 @@ const Testimonial = () => {
                      <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">What Clients Say About Us</h2>
                      <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients’ projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don't want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
                   </div>
-                  <Swiper {...setting} modules={[Autoplay, Navigation]} className="swiper testimonial__slider wow fadeInDown" data-wow-delay="00ms"
+                  <Swiper {...setting} modules={[Autoplay, Pagination]} className="swiper testimonial__slider wow fadeInDown" data-wow-delay="00ms"
                      data-wow-duration="1500ms">
                      {testi_data.map((item) => (
                         <SwiperSlide key={item.id} className="swiper-slide">
                            <div className="testimonial__item">
-                              <svg className="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z"
-                                    fill="#3C72FC" />
-                              </svg>
-                              <div className="d-flex align-items-center gap-3">
-                                 <Image src={item.avatar} alt="image" />
-                                 <div className="testi-info">
-                                    <h4>{item.name}</h4>
-                                    <p>{item.designation}</p>
-                                    <div className="star mt-1">
-                                       <i className="fa-sharp fa-solid fa-star"></i>
-                                       <i className="fa-sharp fa-solid fa-star"></i>
-                                       <i className="fa-sharp fa-solid fa-star"></i>
-                                       <i className="fa-sharp fa-solid fa-star"></i>
-                                       <i className="fa-sharp fa-solid fa-star disable"></i>
+                              {item.isVideo ? (
+                                 <div className="video-testimonial">
+                                    <div className="video-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
+                                       <iframe
+                                          src={item.videoUrl}
+                                          title="Client Testimonial"
+                                          style={{
+                                             position: 'absolute',
+                                             top: 0,
+                                             left: 0,
+                                             width: '100%',
+                                             height: '100%',
+                                             border: 'none'
+                                          }}
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowFullScreen
+                                       ></iframe>
                                     </div>
                                  </div>
-                              </div>
-                              <p className="mt-30">{item.desc}</p>
+                              ) : (
+                                 <>
+                                    <svg className="coma" width="50" height="37" viewBox="0 0 50 37" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z"
+                                          fill="#3C72FC" />
+                                    </svg>
+                                    <div className="d-flex align-items-center gap-3">
+                                       <Image src={item.avatar} alt="image" />
+                                       <div className="testi-info">
+                                          <h4>{item.name}</h4>
+                                          <p>{item.designation}</p>
+                                          <div className="star mt-1">
+                                             <i className="fa-sharp fa-solid fa-star"></i>
+                                             <i className="fa-sharp fa-solid fa-star"></i>
+                                             <i className="fa-sharp fa-solid fa-star"></i>
+                                             <i className="fa-sharp fa-solid fa-star"></i>
+                                             <i className="fa-sharp fa-solid fa-star disable"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <p className="mt-30">{item.desc}</p>
+                                 </>
+                              )}
                            </div>
                         </SwiperSlide>
                      ))}
                   </Swiper>
-                  <div className="testimonial__arry-btn mt-40 wow fadeInDown" data-wow-delay="200ms"
-                     data-wow-duration="1500ms">
-                     <button className="arry-prev testimonial__arry-prev"><i
-                        className="fa-light fa-chevron-left"></i></button>
-                     <button className="arry-next testimonial__arry-next active"><i
-                        className="fa-light fa-chevron-right"></i></button>
-                  </div>
+                  <div className="testimonial__dot mt-40 wow fadeInDown" data-wow-delay="200ms"
+                     data-wow-duration="1500ms"></div>
                </div>
             </div>
          </div>
