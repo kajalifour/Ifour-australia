@@ -3,51 +3,29 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import Image from "next/image"
 
-import tech_1 from "@/assets/images/icon/service-icon1.png"
-import tech_2 from "@/assets/images/icon/service-icon2.png"
-import tech_3 from "@/assets/images/icon/service-icon3.png"
-import tech_4 from "@/assets/images/icon/counter-icon1.png"
-import tech_5 from "@/assets/images/icon/counter-icon2.png"
-import tech_6 from "@/assets/images/icon/counter-icon3.png"
-import tech_7 from "@/assets/images/icon/counter-icon4.png"
+const tech_1 = "/assets/images/technologies/tech-image-01.png"
+const tech_2 = "/assets/images/technologies/tech-image-02.png"
+const tech_3 = "/assets/images/technologies/tech-image-03.png"
+const tech_4 = "/assets/images/technologies/tech-image-04.png"
+const tech_5 = "/assets/images/technologies/tech-image-05.png"
+const tech_6 = "/assets/images/technologies/tech-image-06.webp"
+const tech_7 = "/assets/images/technologies/tech-image-07.png"
+const tech_8 = "/assets/images/technologies/tech-image-08.png"
+const tech_9 = "/assets/images/technologies/tech-image-09.png"
+const tech_10 = "/assets/images/technologies/tech-image-10.png"
 import shape_2 from "@/assets/images/icon/section-title.png"
 
 const tech_data = [
-  {
-    id: 1,
-    icon: tech_1,
-    title: "Hire .Net Developer"
-  },
-  {
-    id: 2,
-    icon: tech_2,
-    title: "Hire Angular Developer"
-  },
-  {
-    id: 3,
-    icon: tech_3,
-    title: "Hire Node.js Developer"
-  },
-  {
-    id: 4,
-    icon: tech_4,
-    title: "Hire Vue.js Developer"
-  },
-  {
-    id: 5,
-    icon: tech_5,
-    title: "Hire C# Developer"
-  },
-  {
-    id: 6,
-    icon: tech_6,
-    title: "Hire WPF Developer"
-  },
-  {
-    id: 7,
-    icon: tech_7,
-    title: "Hire Java Developer"
-  }
+  { id: 1, icon: tech_1 },
+  { id: 2, icon: tech_2 },
+  { id: 3, icon: tech_3 },
+  { id: 4, icon: tech_4 },
+  { id: 5, icon: tech_5 },
+  { id: 6, icon: tech_6 },
+  { id: 7, icon: tech_7 },
+  { id: 8, icon: tech_8 },
+  { id: 9, icon: tech_9 },
+  { id: 10, icon: tech_10 }
 ];
 
 const setting = {
@@ -84,110 +62,72 @@ const setting = {
 
 const Technologies = () => {
    return (
-      <section className="technologies-area pt-120 pb-120" style={{ 
-         backgroundColor: '#000000',
-         background: 'radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, rgba(0, 0, 0, 1) 70%)',
-         position: 'relative'
-      }}>
+      <section className="technologies-area pt-120 pb-120" style={{ backgroundColor: '#ffffff' }}>
          <div className="container">
             <div className="technologies__wrp">
-               <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
-                  <div className="section-header">
-                     <div className="mb-3">
-                        <span style={{
-                           backgroundColor: '#3B82F6',
-                           color: '#ffffff',
-                           padding: '8px 16px',
-                           borderRadius: '20px',
-                           fontSize: '12px',
-                           fontWeight: '600',
-                           textTransform: 'uppercase',
-                           letterSpacing: '1px'
-                        }}>
-                           TECH TALENT
-                        </span>
-                     </div>
-                     <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ 
-                        color: '#ffffff', 
-                        fontSize: '48px',
-                        fontWeight: '700',
-                        lineHeight: '1.2',
-                        marginBottom: '20px'
-                     }}>
-                        Build The Future With Our Developers & Latest Tech
-                     </h2>
-                  </div>
-                  <div className="wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
-                     <button style={{
-                        backgroundColor: '#0F7A95',
-                        color: '#ffffff',
-                        border: 'none',
-                        padding: '15px 30px',
-                        borderRadius: '8px',
-                        fontSize: '16px',
-                        fontWeight: '600',
-                        cursor: 'pointer',
-                        transition: 'all 0.3s ease'
-                     }}>
-                        Explore More →
-                     </button>
-                  </div>
+               <div className="section-header mb-60">
+                  <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{
+                     backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                     color: '#000000',
+                     padding: '8px 16px',
+                     borderRadius: '20px',
+                     fontSize: '12px',
+                     fontWeight: '600',
+                     textTransform: 'uppercase',
+                     letterSpacing: '1px',
+                     display: 'inline-block',
+                     marginBottom: '15px',
+                     backdropFilter: 'blur(10px)'
+                  }}>
+                     <Image className="me-1" src={shape_2} alt="icon" style={{ width: '16px', height: '16px' }} />
+                     Tech Talent
+                  </h5>
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ 
+                     color: '#000000', 
+                     fontSize: '48px',
+                     fontWeight: '700',
+                     lineHeight: '1.2',
+                     marginBottom: '20px'
+                  }}>
+                     Technologies We Utilise
+                  </h2>
                </div>
                
-               <div className="row">
+               <div className="row justify-content-center">
                   {tech_data.map((tech, index) => (
-                     <div key={tech.id} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+                     <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '20%' }}>
                         <div className="technology__item text-center wow fadeInUp" 
-                             data-wow-delay={`${index * 100}ms`} 
-                             data-wow-duration="1500ms"
-                             style={{
-                                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                                borderRadius: '12px',
-                                padding: '30px 20px',
-                                border: '1px solid rgba(255, 255, 255, 0.1)',
-                                transition: 'all 0.3s ease',
-                                height: '100%',
-                                backdropFilter: 'blur(10px)'
-                             }}
-                             onMouseEnter={(e) => {
-                                e.currentTarget.style.transform = 'translateY(-5px)';
-                                e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.5)';
-                                e.currentTarget.style.boxShadow = '0 10px 30px rgba(59, 130, 246, 0.2)';
-                             }}
-                             onMouseLeave={(e) => {
-                                e.currentTarget.style.transform = 'translateY(0)';
-                                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                                e.currentTarget.style.boxShadow = 'none';
-                             }}>
-                           <div className="technology__icon mb-4" style={{ margin: '0 auto', width: '60px', height: '60px' }}>
-                              <div style={{
-                                 width: '60px',
-                                 height: '60px',
-                                 borderRadius: '50%',
-                                 backgroundColor: '#3B82F6',
-                                 display: 'flex',
-                                 alignItems: 'center',
-                                 justifyContent: 'center',
-                                 margin: '0 auto'
-                              }}>
-                                 <Image 
-                                    src={tech.icon} 
-                                    alt="icon" 
-                                    width={30} 
-                                    height={30}
-                                    style={{ filter: 'brightness(0) invert(1)' }}
-                                 />
-                              </div>
-                           </div>
-                           <h4 style={{ 
-                              color: '#ffffff', 
-                              fontSize: '16px', 
-                              fontWeight: '600', 
-                              margin: '0',
-                              textAlign: 'center'
+                           data-wow-delay={`${index * 100}ms`} 
+                           data-wow-duration="1500ms"
+                           style={{
+                              backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                              borderRadius: '12px',
+                              padding: '18px 12px',
+                              border: '1px solid rgba(0, 0, 0, 0.1)',
+                              transition: 'all 0.3s ease',
+                              height: '60%',
+                              backdropFilter: 'blur(10px)'
+                           }}
+                           onMouseEnter={(e) => {
+                              e.currentTarget.style.transform = 'translateY(-5px)';
+                              e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.2)';
+                              e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+                           }}
+                           onMouseLeave={(e) => {
+                              e.currentTarget.style.transform = 'translateY(0)';
+                              e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+                              e.currentTarget.style.boxShadow = 'none';
                            }}>
-                              {tech.title}
-                           </h4>
+                           <img 
+                              src={tech.icon} 
+                              alt="technology" 
+                              style={{ 
+                                 width: '100%',
+                                 height: '100%',
+                                 objectFit: 'cover',
+                                 borderRadius: '8px'
+                              }}
+                           />
                         </div>
                      </div>
                   ))}

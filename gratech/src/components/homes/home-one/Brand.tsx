@@ -22,7 +22,7 @@ const setting = {
    spaceBetween: 30,
    loop: true,
    autoplay: {
-      delay: 3000,
+      delay: 1000,
       disableOnInteraction: false,
    },
    pagination: false,
@@ -45,28 +45,88 @@ const setting = {
 
 const Brand = () => {
    return (
-      <div className="brand-area">
+      <section className="brand-area" style={{
+         marginTop: '-85px',
+         marginBottom: '-45px',
+         position: 'relative',
+         zIndex: 2
+      }}>
          <div className="container">
-            <div className="brand__wrp">
-               <div className="section-header mb-60">
-                  <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-                     <Image className="me-1" src={shape_2} alt="icon" />
-                     OUR CLIENTS
-                  </h5>
-                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Clients We've Served Thus Far</h2>
+            <div className="brand__wrp gradient-bg" style={{
+               borderRadius: '20px',
+               boxShadow: '0 15px 50px rgba(0,0,0,0.15)',
+               padding: '65px',
+               position: 'relative',
+               zIndex: 1
+            }}>
+               <div className="section-header mb-60 text-center">
+                  <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
+                     fontSize: '36px',
+                     fontWeight: '700',
+                     lineHeight: '1.2',
+                     marginBottom: '0'
+                  }}>
+                     Clients We've Served Thus Far
+                  </h2>
                </div>
                <Swiper {...setting} modules={[Autoplay]} className="swiper brand__slider">
                   {brand_data.map((brand, i) => (
                      <SwiperSlide key={i} className="swiper-slide">
-                        <div className="brand__image image">
-                           <Image src={brand} alt="image" />
+                        <div className="brand__item wow bounceInUp" 
+                           data-wow-delay={`${i * 100}ms`} 
+                           data-wow-duration="1000ms"
+                           style={{
+                              display: 'flex',
+                              flexDirection: 'column',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              padding: '17px',
+                              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                              borderRadius: '12px',
+                              border: '1px solid rgba(255, 255, 255, 0.1)',
+                              transition: 'all 0.3s ease',
+                              backdropFilter: 'blur(10px)',
+                              height: '102px',
+                              width: '115%',
+                              marginLeft: '-7.5%'
+                           }}
+                           onMouseEnter={(e) => {
+                              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                              e.currentTarget.style.transform = 'translateY(-5px)';
+                           }}
+                           onMouseLeave={(e) => {
+                              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                              e.currentTarget.style.transform = 'translateY(0)';
+                           }}>
+                           <Image 
+                              src={brand} 
+                              alt="client logo" 
+                              style={{
+                                 maxWidth: '100%',
+                                 maxHeight: '51px',
+                                 objectFit: 'contain',
+                                 filter: 'brightness(0) invert(1)',
+                                 transition: 'all 0.3s ease',
+                                 marginBottom: '8px'
+                              }}
+                              onMouseEnter={(e) => {
+                                 e.currentTarget.style.filter = 'brightness(1) invert(0)';
+                                 e.currentTarget.style.transform = 'scale(1.05)';
+                              }}
+                              onMouseLeave={(e) => {
+                                 e.currentTarget.style.filter = 'brightness(0) invert(1)';
+                                 e.currentTarget.style.transform = 'scale(1)';
+                              }}
+                           />
                         </div>
                      </SwiperSlide>
                   ))}
                </Swiper>
             </div>
          </div>
-      </div>
+      </section>
    )
 }
 
