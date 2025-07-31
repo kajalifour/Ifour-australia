@@ -44,8 +44,7 @@ const setting = {
 const Case = () => {
    return (
       <>
-         {/* Ensuring Your Success Through Reliable IT Solutions Section */}
-         <section id="success-section" className="about-two-area pt-120 pb-120">
+         <section id="success-section" className="about-two-area pt-120 pb-120" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)' }}>
             <div className="container">
                <div className="row g-4">
                   <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -69,32 +68,44 @@ const Case = () => {
                   </div>
                   <div className="col-xl-6">
                      <div className="section-header mb-40">
-                        <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                        <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
                            <Image className="me-1" src={shape_1} alt="icon" />
                            WHO WE ARE
                         </h5>
-                        <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                           Ensuring Your Success Through Reliable IT Solutions
+                        <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
+                           Benefits of Working with iFour Technolab
                         </h2>
-                        <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                           We are committed to delivering exceptional IT solutions that drive your business forward. 
-                           Our team of experts combines technical excellence with strategic thinking to ensure your 
-                           success in the digital landscape.
+                        <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
+                           When you choose iFour Technolab as your software development partner, you not only get a partner devoted to your success but also become entitled to receive several benefits. Here are a few outlined:
                         </p>
                      </div>
                      <div className="about-two__right-item wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <ul>
-                           <li><i className="fa-solid fa-check"></i>Technology Consultancy</li>
-                           <li><i className="fa-solid fa-check"></i>We Provide best services</li>
-                        </ul>
-                        <ul>
-                           <li><i className="fa-solid fa-check"></i>Maintenance And Support</li>
-                           <li><i className="fa-solid fa-check"></i>Requirements Gathering</li>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
+                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
+                              Flexible hiring models
+                           </li>
+                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
+                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
+                              Agile development approaches
+                           </li>
+                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
+                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
+                              High data security
+                           </li>
+                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
+                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
+                              100% IP rights and ownership
+                           </li>
+                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
+                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
+                              Client satisfaction
+                           </li>
                         </ul>
                      </div>
                      <div className="about__info mt-50 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                         <Link href="/about" className="btn-one">
-                           About Us <i className="fa-regular fa-arrow-right-long"></i>
+                           Let's Get Started <i className="fa-regular fa-arrow-right-long"></i>
                         </Link>
                      </div>
                   </div>
