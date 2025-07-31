@@ -1,5 +1,6 @@
 import "../styles/index.css";
 import "../../public/assets/sass/style.scss";
+import "../styles/reduced-padding.css";
 
 export default function RootLayout({
   children,
