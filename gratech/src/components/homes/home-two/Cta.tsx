@@ -1,7 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-
-import shape_1 from "@/assets/images/shape/quote-shape.png"
 import shape_2 from "@/assets/images/shape/quote-shape2.png"
 
 const Cta = () => {
@@ -9,9 +7,7 @@ const Cta = () => {
       <section className="quote-area">
          <div className="container">
             <div className="quote__wrp gradient-bg">
-               <div className="counter__shape wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                  <Image src={shape_1} alt="shape" />
-               </div>
+
                <div className="quote__shape bobble__animation">
                   <Image src={shape_2} alt="shape" />
                </div>

@@ -3,7 +3,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 import shape_1 from "@/assets/images/shape/service-bg-shape.png"
-import shape_3 from "@/assets/images/shape/service-item-shape.png"
 
 const ServiceArea = () => {
    return (
@@ -16,9 +15,7 @@ const ServiceArea = () => {
                {service_data.filter((items) => items.page === "home_1").map((item) => (
                   <div key={item.id} className="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="00ms" data-wow-duration="1000ms">
                      <div className="service__item">
-                        <div className="service-shape">
-                           <Image src={shape_3} alt="shape" />
-                        </div>
+
                         <div className="service__icon">
                            <Image src={item.icon} alt="icon" />
                         </div>

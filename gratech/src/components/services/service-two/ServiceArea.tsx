@@ -2,7 +2,7 @@ import service_data from "@/data/ServiceData"
 import Image from "next/image"
 import Link from "next/link"
 
-import shape from "@/assets/images/shape/service-two-item-shape.png"
+
 
 const ServiceArea = () => {
    return (
@@ -19,7 +19,7 @@ const ServiceArea = () => {
                            <div className="icon">
                               <Image src={item.icon} alt="icon" />
                            </div>
-                           <div className="shape"><Image src={shape} alt="shape" /></div>
+
                            <h4><Link href="/service-details" className="primary-hover">Angular Development</Link></h4>
                            <p>{item.desc}</p>
                            <Link className="read-more-btn" href="/service-details">Read More <i

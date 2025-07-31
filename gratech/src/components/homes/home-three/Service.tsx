@@ -2,15 +2,12 @@ import Image from "next/image"
 import service_data from "@/data/ServiceData"
 import Link from "next/link"
 
-import shape_1 from "@/assets/images/shape/service-three-shape.png"
 import shape_2 from "@/assets/images/icon/section-title.png"
 
 const Service = () => {
    return (
       <section className="service-three-area pt-120 pb-120">
-         <div className="service-three__shape">
-            <Image className="sway__animationX" src={shape_1} alt="shape" />
-         </div>
+
          <div className="container">
             <div className="section-header text-center mb-60">
                <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">

@@ -3,7 +3,6 @@ import Link from "next/link"
 import { JSX } from "react"
 
 import shape_1 from "@/assets/images/shape/offer-shadow-shape.png"
-import shape_3 from "@/assets/images/shape/offer-bg-shape-right.png"
 import shape_4 from "@/assets/images/icon/section-title.png"
 import shape_5 from "@/assets/images/shape/offter-item-shape-top.png"
 import shape_6 from "@/assets/images/shape/offter-item-shape-bottom.png"
@@ -124,10 +123,7 @@ const Offer = () => {
             <Image src={shape_1} alt="shadow" />
          </div>
 
-         <div className="offer__shape-right">
-            <Image className="wow fadeInDownBig" data-wow-delay="400ms" data-wow-duration="1500ms"
-               src={shape_3} alt="shape" />
-         </div>
+
          <div className="container">
             <div className="d-flex gap-4 flex-wrap align-items-center justify-content-between mb-95">
                <div className="section-header">

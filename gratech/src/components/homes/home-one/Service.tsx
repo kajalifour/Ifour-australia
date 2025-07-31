@@ -7,7 +7,6 @@ import Link from "next/link"
 
 import shape_1 from "@/assets/images/shape/service-bg-shape.png"
 import shape_2 from "@/assets/images/icon/section-title.png"
-import shape_3 from "@/assets/images/shape/service-item-shape.png"
 
 const setting = {
    slidesPerView: 3,
@@ -64,9 +63,7 @@ const Service = () => {
                         border: '1px solid rgba(15, 122, 149, 0.2)',
                         boxShadow: '0 2px 10px rgba(15, 122, 149, 0.1)'
                      }}>
-                        <div className="service-shape">
-                           <Image src={shape_3} alt="shape" />
-                        </div>
+
                         <div className="service__icon">
                            <Image src={item.icon} alt="icon" />
                         </div>

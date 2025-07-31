@@ -7,7 +7,6 @@ import Link from "next/link"
 
 import shape_1 from "@/assets/images/shape/service-two-shape-left.png"
 import shape_2 from "@/assets/images/shape/service-two-shape-right.png"
-import shape_3 from "@/assets/images/shape/service-two-item-shape.png"
 
 const setting = {
    slidesPerView: 3,
@@ -81,8 +80,7 @@ const Service = () => {
                            <div className="icon">
                               <Image src={item.icon} alt="icon" />
                            </div>
-                           <div className="shape"><Image src={shape_3}
-                              alt="shape" /></div>
+
                            <h4><Link href="/service-details" className="primary-hover">{item.title}</Link></h4>
                            <p>{item.desc}</p>
                            <Link className="read-more-btn" href="/service-details">Read More <i

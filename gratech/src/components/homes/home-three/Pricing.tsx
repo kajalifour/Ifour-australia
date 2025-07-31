@@ -4,7 +4,6 @@ import Link from "next/link"
 
 import shape_1 from "@/assets/images/shape/pricing-shape-up.png"
 import shape_2 from "@/assets/images/shape/pricing-shape-down.png"
-import shape_3 from "@/assets/images/shape/pricing-shape.png"
 import shape_4 from "@/assets/images/icon/section-title.png"
 import shape_5 from "@/assets/images/shape/pricing-item-shape.png"
 
@@ -25,9 +24,7 @@ const Pricing = ({ style }: StyleType) => {
                   data-wow-duration="1500ms">
                   <Image className="sway_Y__animation" src={shape_2} alt="image" />
                </div>
-               <div className="pricing__shape">
-                  <Image className="sway_Y__animationY" src={shape_3} alt="image" />
-               </div>
+
             </>}
          <div className="container">
             <div className="section-header text-center mb-60">
