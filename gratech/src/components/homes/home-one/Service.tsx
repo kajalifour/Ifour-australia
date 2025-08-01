@@ -24,22 +24,11 @@ const setting = {
       nextEl: ".service__arry-next",
       prevEl: ".service__arry-prev",
    },
-   breakpoints: {
-      1200: {
-         slidesPerView: 3,
-      },
-      992: {
-         slidesPerView: 2,
-      },
-      575: {
-         slidesPerView: 1,
-      },
-   },
 };
 
 const Service = () => {
    return (
-      <section id="service-section" className="service-area pt-120 pb-120">
+      <section id="service-section" className="service-area pt-120 pb-160">
          <div className="service__shape wow slideInRight">
             <Image className="sway_Y__animation" src={shape_1} alt="shape" />
          </div>
@@ -59,11 +48,15 @@ const Service = () => {
                   <SwiperSlide key={item.id} className="swiper-slide">
                      <div className="service__item" style={{
                         backgroundColor: 'rgba(15, 122, 149, 0.15)',
-                        borderRadius: '10px',
+                        borderRadius: '5px',
                         padding: '20px',
                         transition: 'all 0.3s ease-in-out',
                         border: '1px solid rgba(15, 122, 149, 0.2)',
-                        boxShadow: '0 2px 10px rgba(15, 122, 149, 0.1)'
+                        boxShadow: '0 2px 10px rgba(15, 122, 149, 0.1)',
+                        height: '300px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between'
                      }}>
 
                         <div className="service__icon">

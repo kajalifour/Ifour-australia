@@ -24,9 +24,9 @@ const HomeOne = () => {
         <Counter />
         <About />
         <Service />
+        <Brand />
         <Case />
         <Offer />
-        <Brand />
         <Technologies />
         <TechnologyPartners />
         <MediaCoverage />

@@ -22,9 +22,10 @@ const setting = {
    spaceBetween: 30,
    loop: true,
    autoplay: {
-      delay: 600,
+      delay: 0,
       disableOnInteraction: false,
    },
+   speed: 5000,
    pagination: false,
    navigation: false,
    breakpoints: {
@@ -46,10 +47,12 @@ const setting = {
 const Brand = () => {
    return (
       <section className="brand-area" style={{
-         marginTop: '-85px',
-         marginBottom: '-45px',
+         marginTop: '0px',
+         marginBottom: '0px',
          position: 'relative',
-         zIndex: 2
+         zIndex: 2,
+         paddingTop: '60px',
+         paddingBottom: '60px'
       }}>
          <div className="container" style={{
             width: '80%',
@@ -93,9 +96,16 @@ const Brand = () => {
                   </h2>
                </div>
                
-               <Swiper {...setting} modules={[Autoplay]} className="swiper brand__slider">
+               <Swiper {...setting} modules={[Autoplay]} className="swiper brand__slider" style={{
+                  width: '100%',
+                  height: 'auto',
+                  overflow: 'visible'
+               }}>
                   {brand_data.map((brand, i) => (
-                     <SwiperSlide key={i} className="swiper-slide">
+                     <SwiperSlide key={i} className="swiper-slide" style={{
+                        width: 'auto',
+                        height: 'auto'
+                     }}>
                         <div className="brand__item wow bounceInUp" 
                            data-wow-delay={`${i * 100}ms`} 
                            data-wow-duration="1000ms"
@@ -229,6 +239,26 @@ const Brand = () => {
             @keyframes rotate {
                from { transform: rotate(0deg); }
                to { transform: rotate(360deg); }
+            }
+            
+            .swiper {
+               width: 100%;
+               height: auto;
+               overflow: visible;
+            }
+            
+            .swiper-slide {
+               width: auto;
+               height: auto;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+            
+            .brand__slider {
+               width: 100%;
+               height: auto;
+               overflow: visible;
             }
          `}</style>
       </section>

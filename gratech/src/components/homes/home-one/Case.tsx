@@ -145,49 +145,6 @@ const Case = () => {
                         <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                            At iFour Technolab, what differentiates us from others is our steadfast dedication to innovation and making sustainable success a goal that our clients can easily achieve. With our focus set on this objective, we deliver value-driven solutions and services to clients that act as catalysts for long-term prosperity. Our highlights include:
                         </p>
-
-                        <div className="row g-4 mt-4">
-                           <div className="col-12 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                              <div className="feature-item">
-                                 <div className="d-flex align-items-start">
-                                    <div className="icon me-4">
-                                       <i className="fa-solid fa-users-gear" style={{ fontSize: '48px', color: '#0f7a95' }}></i>
-                                    </div>
-                                    <div className="content">
-                                       <h4 className="mb-3">Expert Team</h4>
-                                       <p>We have assembled a team of 120+ veteran software developers capable of building top-grade bespoke software solutions based on your specifications.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-12 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                              <div className="feature-item">
-                                 <div className="d-flex align-items-start">
-                                    <div className="icon me-4">
-                                       <i className="fa-solid fa-headset" style={{ fontSize: '48px', color: '#0f7a95' }}></i>
-                                    </div>
-                                    <div className="content">
-                                       <h4 className="mb-3">Round-the-Clock Support</h4>
-                                       <p>We have a diligent tech support team that is always available for hands-on support, responds to client questions and queries, and addresses them.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="col-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                              <div className="feature-item">
-                                 <div className="d-flex align-items-start">
-                                    <div className="icon me-4">
-                                       <i className="fa-solid fa-microchip" style={{ fontSize: '48px', color: '#0f7a95' }}></i>
-                                    </div>
-                                    <div className="content">
-                                       <h4 className="mb-3">Modern Tech Expertise</h4>
-                                       <p>We remain on the cutting edge of technology, adopting new trends and advancements as they unfold. This up-to-date knowledge and our extensive industry expertise enable us to build unique solutions.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-
                      </div>
                   </div>
                   <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -200,6 +157,48 @@ const Case = () => {
                         </div>
                         <div className="circle-shape">
                            <Image src={shape_6} alt="shape" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <div className="row g-4 mt-4">
+                  <div className="col-xl-4 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                     <div className="feature-item" style={{ padding: '2px' }}>
+                        <div className="d-flex align-items-start">
+                           <div className="icon me-3">
+                              <i className="fa-solid fa-users-gear" style={{ fontSize: '48px', color: '#0f7a95' }}></i>
+                           </div>
+                           <div className="content">
+                              <h4 className="mb-3" style={{ color: '#0f7a95', fontWeight: '600' }}>Expert Team</h4>
+                              <p>We have assembled a team of 120+ veteran software developers capable of building top-grade bespoke software solutions based on your specifications.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div className="col-xl-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                     <div className="feature-item" style={{ padding: '2px' }}>
+                        <div className="d-flex align-items-start">
+                           <div className="icon me-3">
+                              <i className="fa-solid fa-headset" style={{ fontSize: '48px', color: '#0f7a95' }}></i>
+                           </div>
+                           <div className="content">
+                              <h4 className="mb-3" style={{ color: '#0f7a95', fontWeight: '600' }}>Round-the-Clock Support</h4>
+                              <p>We have a diligent tech support team that is always available for hands-on support, responds to client questions and queries, and addresses them.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div className="col-xl-4 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                     <div className="feature-item" style={{ padding: '2px' }}>
+                        <div className="d-flex align-items-start">
+                           <div className="icon me-3">
+                              <i className="fa-solid fa-microchip" style={{ fontSize: '48px', color: '#0f7a95' }}></i>
+                           </div>
+                           <div className="content">
+                              <h4 className="mb-3" style={{ color: '#0f7a95', fontWeight: '600' }}>Modern Tech Expertise</h4>
+                              <p>We remain on the cutting edge of technology, adopting new trends and advancements as they unfold. This up-to-date knowledge and our extensive industry expertise enable us to build unique solutions.</p>
+                           </div>
                         </div>
                      </div>
                   </div>
