@@ -81,7 +81,7 @@ const Brand = () => {
                
                <div className="section-header mb-60 text-center">
                   <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
-                     fontSize: '44px',
+                     fontSize: '33px',
                      fontWeight: '800',
                      lineHeight: '1.1',
                      marginBottom: '0',
@@ -89,7 +89,7 @@ const Brand = () => {
                      letterSpacing: '2px',
                      textTransform: 'uppercase'
                   }}>
-                     <span style={{ color: '#ffffff' }}>Clients</span> We've Served Thus Far
+                     <span style={{ color: '#ffffff' }}>Clients</span> <span style={{ color: '#000000' }}>We've Served Thus Far</span>
                   </h2>
                </div>
                

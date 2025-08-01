@@ -87,11 +87,19 @@ const Case = () => {
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                            <li style={{ marginBottom: '15px', color: '#ffffff' }}>
                               <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                              Flexible hiring models
+                              Fast project kickoff
+                           </li>
+                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
+                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
+                              Fully Tailored Solutions
                            </li>
                            <li style={{ marginBottom: '15px', color: '#ffffff' }}>
                               <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
                               Agile development approaches
+                           </li>
+                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
+                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
+                              Flexible hiring models
                            </li>
                            <li style={{ marginBottom: '15px', color: '#ffffff' }}>
                               <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
