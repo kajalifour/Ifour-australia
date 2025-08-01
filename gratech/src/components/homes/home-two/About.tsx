@@ -23,7 +23,7 @@ const About = ({style}:StyleType) => {
          <div className="container">
             <div className="row g-4">
                <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                  <div className="about-two__left-item">
+                  <div className="about-two__left-item" style={{ marginTop: '100px' }}>
                      <div className="dots">
                         <Image className="sway_Y__animation" src={shape_2} alt="shape" />
                      </div>
@@ -60,27 +60,28 @@ const About = ({style}:StyleType) => {
                         </svg>
                         WHO WE ARE
                      </h5>
-                     <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Ensuring Your
-                        Success Through Reliable IT Solutions </h2>
-                     <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">Aonsectetur
-                        adipiscing elit aenean scelerisque augue vitae consequat aisque eget congue
-                        velit in cursus sodales the
-                        turpis euismod quis sapien euismod
-                        quis sapien the condimentum nec lorem nulla augue.</p>
+                     <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <span style={{ color: '#0f7a95' }}>IT Consulting</span> Service Company
+                     </h2>
+                     <p className="wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '500', marginBottom: '20px' }}>
+                        A Microsoft Certified Solutions Partner with over 10 years of market presence and helping clients with sustainable software solutions.
+                     </p>
+                     <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                        We have professional developers, designers, and engineers at iFour Technolab Australia that are committed to discovering new solutions and resolving business difficulties with efficiency and precision. When you pick us as your software development partner, you will feel confident that you are working with the finest in the business.
+                     </p>
+                     <p className="wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 'bold', marginTop: '25px', marginBottom: '15px' }}>
+                        Our mission/vision
+                     </p>
+                     <p className="wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        Our company specializes in tailoring customized, flexible, and sustainable IT solutions to streamline operations for both small and large businesses. Our goal is to foster the rapid development of SMEs and enterprises in Australia by providing them with effective technology tools. Through our services, Australian businesses can achieve accelerated growth and enhanced efficiency in their operations.
+                     </p>
+                     <p className="wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
+                        Allow us to turn your ideas into reality and catapult your business to new heights.
+                     </p>
                   </div>
-                  <div className="about-two__right-item wow fadeInDown" data-wow-delay="200ms"
-                     data-wow-duration="1500ms">
-                     <ul>
-                        <li><i className="fa-solid fa-check"></i>Technology Consultancy</li>
-                        <li><i className="fa-solid fa-check"></i>We Provide best services</li>
-                     </ul>
-                     <ul>
-                        <li><i className="fa-solid fa-check"></i>Maintenance And Support</li>
-                        <li><i className="fa-solid fa-check"></i>Requirements Gathering</li>
-                     </ul>
-                  </div>
+                  
                   <div className="about__info mt-50 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                     <Link href="/about" className="btn-one">About Us <i
+                     <Link href="/about" className="btn-one">Let's Start <i
                         className="fa-regular fa-arrow-right-long"></i></Link>
                      <Image src={style?shape_6:shape_5} alt="singature" />
                   </div>

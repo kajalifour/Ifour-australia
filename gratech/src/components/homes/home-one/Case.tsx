@@ -52,7 +52,8 @@ const Case = () => {
             <div className="container">
                <div className="row g-4">
                   <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                     <div className="about-two__left-item">
+                    
+                        <div className="about-two__left-item" style={{ marginTop: '60px' }}>
                         <div className="dots">
                            <Image className="sway_Y__animation" src={shape_2} alt="shape" />
                         </div>
