@@ -74,44 +74,44 @@ const Technologies = () => {
                      <span style={{ color: '#0f7a95' }}>Technologies</span> We Utilise
                   </h2>
                </div>
-            </div>
-            
-            <div className="row justify-content-center">
-               {tech_data.map((tech, index) => (
-                  <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '20%' }}>
-                     <div className="technology__item text-center wow fadeInUp" 
-                        data-wow-delay={`${index * 100}ms`} 
-                        data-wow-duration="1500ms"
-                        style={{
-                           backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                           borderRadius: '12px',
-                           padding: '18px 12px',
-                           border: '1px solid rgba(0, 0, 0, 0.1)',
-                           transition: 'all 0.3s ease',
-                           height: '60%',
+               </div>
+               
+               <div className="row justify-content-center">
+                  {tech_data.map((tech, index) => (
+                     <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '20%' }}>
+                        <div className="technology__item text-center wow fadeInUp" 
+                           data-wow-delay={`${index * 100}ms`} 
+                           data-wow-duration="1500ms"
+                           style={{
+                              backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                              borderRadius: '12px',
+                              padding: '18px 12px',
+                              border: '1px solid rgba(0, 0, 0, 0.1)',
+                              transition: 'all 0.3s ease',
+                              height: '60%',
                            backdropFilter: 'blur(10px)',
                            transform: 'perspective(1000px) rotateX(0deg)',
                            transformStyle: 'preserve-3d'
-                        }}
-                        onMouseEnter={(e) => {
+                           }}
+                           onMouseEnter={(e) => {
                            e.currentTarget.style.transform = 'perspective(1000px) rotateX(-3deg) translateZ(15px)';
                            e.currentTarget.style.borderColor = '#0f7a95';
                            e.currentTarget.style.boxShadow = '0 15px 40px rgba(15, 122, 149, 0.25)';
                            e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.08)';
-                        }}
-                        onMouseLeave={(e) => {
+                           }}
+                           onMouseLeave={(e) => {
                            e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) translateZ(0px)';
-                           e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
-                           e.currentTarget.style.boxShadow = 'none';
+                              e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+                              e.currentTarget.style.boxShadow = 'none';
                            e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
-                        }}>
-                        <img 
-                           src={tech.icon} 
-                           alt="technology" 
-                           style={{ 
-                              width: '100%',
-                              height: '100%',
-                              objectFit: 'cover',
+                           }}>
+                           <img 
+                              src={tech.icon} 
+                              alt="technology" 
+                              style={{ 
+                                 width: '100%',
+                                 height: '100%',
+                                 objectFit: 'cover',
                               borderRadius: '8px',
                               transition: 'all 0.3s ease',
                               transform: 'translateZ(0px)'
@@ -123,11 +123,11 @@ const Technologies = () => {
                            onMouseLeave={(e) => {
                               e.currentTarget.style.transform = 'translateZ(0px) scale(1)';
                               e.currentTarget.style.filter = 'none';
-                           }}
-                        />
+                              }}
+                           />
+                        </div>
                      </div>
-                  </div>
-               ))}
+                  ))}
             </div>
          </div>
       </section>
