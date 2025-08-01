@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Image, { StaticImageData } from "next/image"
+import { useEffect, useRef } from 'react';
 
 import brand_1 from "@/assets/images/brand/brand-image6.webp"
 import brand_2 from "@/assets/images/brand/brand-image7.webp"
@@ -25,9 +26,13 @@ const setting = {
       delay: 0,
       disableOnInteraction: false,
    },
-   speed: 5000,
+   speed: 2000,
    pagination: false,
    navigation: false,
+   allowTouchMove: false,
+   observer: false,
+   observeParents: false,
+   loopAdditionalSlides: 5,
    breakpoints: {
       1200: {
          slidesPerView: 5,
@@ -45,6 +50,36 @@ const setting = {
 };
 
 const Brand = () => {
+   const swiperRef = useRef<any>(null);
+
+   useEffect(() => {
+      if (swiperRef.current && swiperRef.current.swiper) {
+         const swiper = swiperRef.current.swiper;
+         swiper.autoplay.start();
+         
+         // Ensure autoplay never stops, especially during loop transitions
+         const interval = setInterval(() => {
+            if (swiper && !swiper.autoplay.running) {
+               swiper.autoplay.start();
+            }
+         }, 500);
+         
+         // Force autoplay to continue even during transitions
+         swiper.on('slideChange', () => {
+            if (!swiper.autoplay.running) {
+               swiper.autoplay.start();
+            }
+         });
+         
+         return () => {
+            clearInterval(interval);
+            if (swiper) {
+               swiper.off('slideChange');
+            }
+         };
+      }
+   }, []);
+
    return (
       <section className="brand-area" style={{
          marginTop: '0px',
@@ -60,47 +95,42 @@ const Brand = () => {
             margin: '0 auto'
          }}>
             <div className="brand__wrp" style={{
-               background: 'linear-gradient(135deg, #0f7a95 0%, #0a5a6f 50%, #083d4f 100%)',
+               background: '#ffffff',
                borderRadius: '0px',
-               boxShadow: '0 30px 80px rgba(15, 122, 149, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+               boxShadow: 'none',
                padding: '68px 80px',
                position: 'relative',
                zIndex: 1,
-               border: '2px solid rgba(255, 255, 255, 0.15)',
+               border: 'none',
                overflow: 'hidden',
                transform: 'scale(1.02)'
             }}>
-               {/* Animated background elements */}
-               <div style={{
-                  position: 'absolute',
-                  top: '-50%',
-                  left: '-50%',
-                  width: '200%',
-                  height: '200%',
-                  background: 'radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%)',
-                  animation: 'float 8s ease-in-out infinite',
-                  pointerEvents: 'none'
-               }}></div>
                
                <div className="section-header mb-60 text-center">
-                  <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
                      fontSize: '33px',
                      fontWeight: '800',
                      lineHeight: '1.1',
                      marginBottom: '0',
-                     textShadow: '0 6px 12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+                     textShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
                      letterSpacing: '2px',
                      textTransform: 'uppercase'
                   }}>
-                     <span style={{ color: '#ffffff' }}>Clients</span> <span style={{ color: '#000000' }}>We've Served Thus Far</span>
+                     <span style={{ color: '#0f7a95' }}>Clients</span> <span style={{ color: '#000000' }}>We've Served Thus Far</span>
                   </h2>
                </div>
                
-               <Swiper {...setting} modules={[Autoplay]} className="swiper brand__slider" style={{
-                  width: '100%',
-                  height: 'auto',
-                  overflow: 'visible'
-               }}>
+               <Swiper 
+                  ref={swiperRef}
+                  {...setting} 
+                  modules={[Autoplay]} 
+                  className="swiper brand__slider" 
+                  style={{
+                     width: '100%',
+                     height: 'auto',
+                     overflow: 'visible'
+                  }}
+               >
                   {brand_data.map((brand, i) => (
                      <SwiperSlide key={i} className="swiper-slide" style={{
                         width: 'auto',
@@ -115,48 +145,23 @@ const Brand = () => {
                               alignItems: 'center',
                               justifyContent: 'center',
                               padding: '24px 20px',
-                              backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                              backgroundColor: 'transparent',
                               borderRadius: '0px',
-                              border: '2px solid rgba(255, 255, 255, 0.25)',
+                              border: 'none',
                               transition: 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-                              backdropFilter: 'blur(15px)',
+                              backdropFilter: 'none',
                               height: '102px',
                               width: '100%',
                               position: 'relative',
                               overflow: 'hidden',
-                              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)'
+                              boxShadow: 'none'
                            }}
                            onMouseEnter={(e) => {
-                              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
-                              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.4)';
-                              e.currentTarget.style.transform = 'translateY(-12px) scale(1.08)';
-                              e.currentTarget.style.boxShadow = '0 20px 50px rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2)';
+                              e.currentTarget.style.transform = 'scale(1.05)';
                            }}
                            onMouseLeave={(e) => {
-                              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
-                              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)';
-                              e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                              e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.2)';
+                              e.currentTarget.style.transform = 'scale(1)';
                            }}>
-                           
-                           {/* Glowing effect */}
-                           <div style={{
-                              position: 'absolute',
-                              top: '0',
-                              left: '0',
-                              right: '0',
-                              bottom: '0',
-                              background: 'linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.15) 50%, transparent 70%)',
-                              transform: 'translateX(-100%)',
-                              transition: 'transform 0.8s ease',
-                              pointerEvents: 'none'
-                           }}
-                           onMouseEnter={(e) => {
-                              e.currentTarget.style.transform = 'translateX(100%)';
-                           }}
-                           onMouseLeave={(e) => {
-                              e.currentTarget.style.transform = 'translateX(-100%)';
-                           }}></div>
                            
                            <Image 
                               src={brand} 
@@ -166,68 +171,22 @@ const Brand = () => {
                                  maxHeight: '54px',
                                  objectFit: 'contain',
                                  transition: 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-                                 filter: 'brightness(1.2) contrast(1.2)',
-                                 transform: 'scale(1)'
+                                 filter: 'brightness(1) contrast(1)',
+                                 transform: 'scale(1)',
+                                 border: 'none',
+                                 outline: 'none'
                               }}
                               onMouseEnter={(e) => {
-                                 e.currentTarget.style.transform = 'scale(1.15)';
-                                 e.currentTarget.style.filter = 'brightness(1.4) contrast(1.3)';
+                                 e.currentTarget.style.transform = 'scale(1.1)';
                               }}
                               onMouseLeave={(e) => {
                                  e.currentTarget.style.transform = 'scale(1)';
-                                 e.currentTarget.style.filter = 'brightness(1.2) contrast(1.2)';
                               }}
                            />
                         </div>
                      </SwiperSlide>
                   ))}
                </Swiper>
-               
-               {/* Decorative elements */}
-               <div style={{
-                  position: 'absolute',
-                  top: '30px',
-                  right: '30px',
-                  width: '80px',
-                  height: '80px',
-                  border: '3px solid rgba(255, 255, 255, 0.3)',
-                  borderRadius: '50%',
-                  animation: 'rotate 12s linear infinite'
-               }}></div>
-               
-               <div style={{
-                  position: 'absolute',
-                  bottom: '30px',
-                  left: '30px',
-                  width: '60px',
-                  height: '60px',
-                  border: '3px solid rgba(255, 255, 255, 0.25)',
-                  borderRadius: '50%',
-                  animation: 'rotate 10s linear infinite reverse'
-               }}></div>
-               
-               {/* Additional decorative elements */}
-               <div style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '20px',
-                  width: '40px',
-                  height: '40px',
-                  border: '2px solid rgba(255, 255, 255, 0.2)',
-                  borderRadius: '50%',
-                  animation: 'rotate 15s linear infinite'
-               }}></div>
-               
-               <div style={{
-                  position: 'absolute',
-                  top: '20%',
-                  right: '20px',
-                  width: '30px',
-                  height: '30px',
-                  border: '2px solid rgba(255, 255, 255, 0.15)',
-                  borderRadius: '50%',
-                  animation: 'rotate 8s linear infinite reverse'
-               }}></div>
             </div>
          </div>
          
@@ -259,6 +218,29 @@ const Brand = () => {
                width: 100%;
                height: auto;
                overflow: visible;
+            }
+            
+            .brand__item {
+               border: none !important;
+               outline: none !important;
+            }
+            
+            .brand__item img {
+               border: none !important;
+               outline: none !important;
+            }
+            
+            .swiper-slide {
+               border: none !important;
+               outline: none !important;
+            }
+            
+            .swiper-wrapper {
+               transition-timing-function: linear !important;
+            }
+            
+            .swiper-slide {
+               transition-timing-function: linear !important;
             }
          `}</style>
       </section>
