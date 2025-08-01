@@ -60,13 +60,14 @@ const Brand = () => {
                zIndex: 1
             }}>
                <div className="section-header mb-60 text-center">
-                  <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
                      fontSize: '36px',
                      fontWeight: '700',
                      lineHeight: '1.2',
-                     marginBottom: '0'
+                     marginBottom: '0',
+                     color: '#000000'
                   }}>
-                     Clients We've Served Thus Far
+                     <span style={{ color: '#ffffff' }}>Clients</span> We've Served Thus Far
                   </h2>
                </div>
                <Swiper {...setting} modules={[Autoplay]} className="swiper brand__slider">

@@ -62,7 +62,7 @@ const setting = {
 
 const Technologies = () => {
    return (
-      <section className="technologies-area pt-120 pb-120" style={{ backgroundColor: '#ffffff' }}>
+      <section className="technologies-area pt-120 pb-80" style={{ backgroundColor: '#ffffff' }}>
          <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                <div className="section-header">
@@ -70,7 +70,9 @@ const Technologies = () => {
                      <Image className="me-1" src={shape_2} alt="icon" />
                      Tech Talent
                   </h5>
-                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Technologies We Utilise</h2>
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                     <span style={{ color: '#0f7a95' }}>Technologies</span> We Utilise
+                  </h2>
                </div>
             </div>
             
@@ -87,17 +89,21 @@ const Technologies = () => {
                            border: '1px solid rgba(0, 0, 0, 0.1)',
                            transition: 'all 0.3s ease',
                            height: '60%',
-                           backdropFilter: 'blur(10px)'
+                           backdropFilter: 'blur(10px)',
+                           transform: 'perspective(1000px) rotateX(0deg)',
+                           transformStyle: 'preserve-3d'
                         }}
                         onMouseEnter={(e) => {
-                           e.currentTarget.style.transform = 'translateY(-5px)';
-                           e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.2)';
-                           e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+                           e.currentTarget.style.transform = 'perspective(1000px) rotateX(-3deg) translateZ(15px)';
+                           e.currentTarget.style.borderColor = '#0f7a95';
+                           e.currentTarget.style.boxShadow = '0 15px 40px rgba(15, 122, 149, 0.25)';
+                           e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.08)';
                         }}
                         onMouseLeave={(e) => {
-                           e.currentTarget.style.transform = 'translateY(0)';
+                           e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) translateZ(0px)';
                            e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
                            e.currentTarget.style.boxShadow = 'none';
+                           e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
                         }}>
                         <img 
                            src={tech.icon} 
@@ -106,7 +112,17 @@ const Technologies = () => {
                               width: '100%',
                               height: '100%',
                               objectFit: 'cover',
-                              borderRadius: '8px'
+                              borderRadius: '8px',
+                              transition: 'all 0.3s ease',
+                              transform: 'translateZ(0px)'
+                           }}
+                           onMouseEnter={(e) => {
+                              e.currentTarget.style.transform = 'translateZ(8px) scale(1.05)';
+                              e.currentTarget.style.filter = 'brightness(1.1) contrast(1.1)';
+                           }}
+                           onMouseLeave={(e) => {
+                              e.currentTarget.style.transform = 'translateZ(0px) scale(1)';
+                              e.currentTarget.style.filter = 'none';
                            }}
                         />
                      </div>

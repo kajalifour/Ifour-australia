@@ -38,7 +38,7 @@ const media_data = [
 
 const MediaCoverage = () => {
    return (
-      <section className="media-coverage-area pt-120 pb-120" style={{ backgroundColor: '#ffffff' }}>
+      <section className="media-coverage-area pt-120 pb-80" style={{ backgroundColor: '#ffffff' }}>
          <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                <div className="section-header">
@@ -46,7 +46,9 @@ const MediaCoverage = () => {
                      <Image className="me-1" src={shape_2} alt="icon" />
                      Press & Media
                   </h5>
-                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Media Coverage</h2>
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                     <span style={{ color: '#0f7a95' }}>Media</span> Coverage
+                  </h2>
                </div>
             </div>
             

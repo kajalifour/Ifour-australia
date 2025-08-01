@@ -77,7 +77,7 @@ const Case = () => {
                            WHO WE ARE
                         </h5>
                         <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                           Benefits of Working with iFour Technolab
+                           <span style={{ color: '#0f7a95' }}>Benefits of Working with</span> iFour Technolab
                         </h2>
                         <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
                            When you choose iFour Technolab as your software development partner, you not only get a partner devoted to your success but also become entitled to receive several benefits. Here are a few outlined:
@@ -131,7 +131,7 @@ const Case = () => {
                            ABOUT iFour Technolab
                         </h5>
                         <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                           Why Choose Us as Your Software Development Agency?
+                           <span style={{ color: '#0f7a95' }}>Why Choose Us as Your</span> Software Development Agency?
                         </h2>
                         <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                            At iFour Technolab, what differentiates us from others is our steadfast dedication to innovation and making sustainable success a goal that our clients can easily achieve. With our focus set on this objective, we deliver value-driven solutions and services to clients that act as catalysts for long-term prosperity. Our highlights include:

@@ -62,7 +62,8 @@ const Process = () => {
                   <Image className="me-1" src={shape} alt="icon" />
                   Work Process
                </h5>
-               <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Our Software Development Process: How we work
+               <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                  <span style={{ color: '#0f7a95' }}>Our Software Development Process:</span> How we work
                </h2>
             </div>
             <div className="row g-4">

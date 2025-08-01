@@ -27,6 +27,24 @@ const FooterOne = () => {
                width: 100%;
                max-width: none;
             }
+            .footer__item a {
+               transition: color 0.3s ease;
+            }
+            .footer__item a:hover {
+               color: #000000 !important;
+            }
+            .social-icon a {
+               transition: color 0.3s ease;
+            }
+            .social-icon a:hover {
+               color: #000000 !important;
+            }
+            .footer__copyright a {
+               transition: color 0.3s ease;
+            }
+            .footer__copyright a:hover {
+               color: #000000 !important;
+            }
             @media (max-width: 991px) {
                .footer__wrp {
                   grid-template-columns: repeat(2, 1fr);
@@ -61,40 +79,40 @@ const FooterOne = () => {
                   </Link>
                   <p>Empowering Industries through Innovative Software Solutions.</p>
                   <div className="social-icon">
-                     <Link href="#"><i className="fa-brands fa-facebook-f"></i></Link>
-                     <Link href="#"><i className="fa-brands fa-twitter"></i></Link>
-                     <Link href="#"><i className="fa-brands fa-linkedin-in"></i></Link>
-                     <Link href="#"><i className="fa-brands fa-youtube"></i></Link>
+                     <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-facebook-f"></i></Link>
+                     <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-twitter"></i></Link>
+                     <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-linkedin-in"></i></Link>
+                     <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-youtube"></i></Link>
                   </div>
                </div>
                <div className="footer__item wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                   <h3 className="footer-title">IT Solution</h3>
                   <ul>
-                     <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Custom Software Development</Link></li>
-                     <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Desktop Application Development</Link>
+                     <li><Link href="/service-details" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Custom Software Development</Link></li>
+                     <li><Link href="/service-details" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Desktop Application Development</Link>
                      </li>
-                     <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Ecommerce Website Development</Link>
+                     <li><Link href="/service-details" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Ecommerce Website Development</Link>
                      </li>
-                     <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Microsoft 365 Development</Link></li>
-                     <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Microsoft Azure Cloud Services</Link></li>
-                     <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Blockchain Development</Link></li>
-                     <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Mobile App Development</Link></li>
-                     <li><Link href="/service-details"><i className="fa-regular fa-angles-right me-1"></i> Iot Software Development</Link></li>
+                     <li><Link href="/service-details" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Microsoft 365 Development</Link></li>
+                     <li><Link href="/service-details" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Microsoft Azure Cloud Services</Link></li>
+                     <li><Link href="/service-details" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Blockchain Development</Link></li>
+                     <li><Link href="/service-details" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Mobile App Development</Link></li>
+                     <li><Link href="/service-details" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Iot Software Development</Link></li>
                   </ul>
                </div>
                <div className="footer__item wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                   <h3 className="footer-title">Quick Link</h3>
                   <ul>
-                     <li><Link href="/about"><i className="fa-regular fa-angles-right me-1"></i> About iFour Technolab </Link></li>
-                     <li><Link href="/service"><i className="fa-regular fa-angles-right me-1"></i> Our Services</Link>
+                     <li><Link href="/about" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> About iFour Technolab </Link></li>
+                     <li><Link href="/service" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Our Services</Link>
                      </li>
-                     <li><Link href="/pricing"><i className="fa-regular fa-angles-right me-1"></i> Pricing Plan</Link>
+                     <li><Link href="/pricing" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Pricing Plan</Link>
                      </li>
-                     <li><Link href="/case"><i className="fa-regular fa-angles-right me-1"></i> Our Projects</Link></li>
-                     <li><Link href="/team"><i className="fa-regular fa-angles-right me-1"></i> Our Team</Link></li>
-                     <li><Link href="/blog"><i className="fa-regular fa-angles-right me-1"></i> Our Blog</Link></li>
-                     <li><Link href="/contact"><i className="fa-regular fa-angles-right me-1"></i> Contact Us</Link></li>
-                     <li><Link href="/faq"><i className="fa-regular fa-angles-right me-1"></i> FAQ</Link></li>
+                     <li><Link href="/case" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Our Projects</Link></li>
+                     <li><Link href="/team" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Our Team</Link></li>
+                     <li><Link href="/blog" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Our Blog</Link></li>
+                     <li><Link href="/contact" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Contact Us</Link></li>
+                     <li><Link href="/faq" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> FAQ</Link></li>
                   </ul>
                </div>
                <div className="footer__item wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
@@ -128,11 +146,11 @@ const FooterOne = () => {
                <div
                   className="d-flex gap-1 flex-wrap align-items-center justify-content-md-between justify-content-center">
                   <p className="wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">&copy; All Copyright 2024
-                     by <Link href="#">iFour Technolab</Link></p>
+                     by <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}>iFour Technolab</Link></p>
                   <ul className="d-flex align-items-center gap-4 wow fadeInDown" data-wow-delay="200ms"
                      data-wow-duration="1500ms">
-                     <li><Link href="#">Terms & Condition</Link></li>
-                     <li><Link href="#">Privacy Policy</Link></li>
+                     <li><Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}>Terms & Condition</Link></li>
+                     <li><Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}>Privacy Policy</Link></li>
                   </ul>
                </div>
             </div>

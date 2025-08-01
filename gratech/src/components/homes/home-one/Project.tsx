@@ -17,7 +17,9 @@ const Project = () => {
                      <Image className="me-1" src={shape_2} alt="icon" />
                      What We DO
                   </h5>
-                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Our Project</h2>
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                     <span style={{ color: '#0f7a95' }}>Our</span> Project
+                  </h2>
                </div>
             </div>
             <div className="row g-4">

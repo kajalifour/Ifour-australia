@@ -18,7 +18,7 @@ const About = () => {
 
    return (
       <div>
-         <section id="about-section" className="about-area sub-bg pt-120">
+         <section id="about-section" className="about-area sub-bg pt-120 pb-80">
             <div className="about__shape wow slideInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
                <Image src={shape_1} alt="shape" />
             </div>
@@ -51,7 +51,7 @@ const About = () => {
                            ABOUT iFour Teachnolab
                         </h5>
                         <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                           A Software Development Company You Can Trust
+                           <span style={{ color: '#0f7a95' }}>A Software Development Company</span> You Can Trust
                         </h2>
                         <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                            iFour Technolab is a Microsoft Certified Solutions Partner and a premier software development company delivering leading-edge software development services and solutions. We blend our technological niche-specific expertise with our decade-long experience to bring your innovative vision to life. We keep up with the ever-evolving software development landscape to acquaint ourselves with cutting-edge technology and frameworks, ensuring you get the best possible solutions that perfectly match your business needs.

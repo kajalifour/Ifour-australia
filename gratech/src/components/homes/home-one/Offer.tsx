@@ -103,7 +103,9 @@ const Offer = () => {
                      <Image className="me-1" src={shape_4} alt="icon" />
                      Tech Talent
                   </h5>
-                  <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Industry We Serve</h2>
+                  <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                     <span style={{ color: '#0f7a95' }}>Industry</span> We Serve
+                  </h2>
                </div>
                <Link href="/pricing" className="btn-one wow fadeInUp" data-wow-delay="200ms"
                   data-wow-duration="1500ms">Explore

@@ -109,7 +109,9 @@ const Testimonial = () => {
                         <Image className="me-1" src={shape_1} alt="icon" />
                         Client's Talk
                      </h5>
-                     <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">What Clients Say About Us</h2>
+                     <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: 'white' }}>
+                        <span style={{ color: '#0f7a95' }}>What Clients Say</span> <span style={{ color: '#000000' }}>About Us</span>
+                     </h2>
                      <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients’ projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don't want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
                   </div>
                   <Swiper {...setting} modules={[Autoplay, Pagination]} className="swiper testimonial__slider wow fadeInDown" data-wow-delay="00ms"

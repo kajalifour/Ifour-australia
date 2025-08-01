@@ -14,7 +14,9 @@ const TechnologyPartners = () => {
                      <Image className="me-1" src={shape_2} alt="icon" />
                      Partnerships
                   </h5>
-                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Our Technology Partners</h2>
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                     <span style={{ color: '#0f7a95' }}>Our</span> Technology Partners
+                  </h2>
                </div>
             </div>
             
@@ -29,14 +31,16 @@ const TechnologyPartners = () => {
                   transition: 'all 0.3s ease',
                   textAlign: 'center',
                   width: '80%',
-                  margin: '0 auto'
+                  margin: '0 auto',
+                  transform: 'perspective(1000px) rotateX(0deg)',
+                  transformStyle: 'preserve-3d'
                }}
                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.15)';
+                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(-5deg) translateZ(20px)';
+                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(15, 122, 149, 0.3)';
                }}
                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) translateZ(0px)';
                   e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.1)';
                }}>
                
@@ -49,13 +53,16 @@ const TechnologyPartners = () => {
                      objectFit: 'contain',
                      borderRadius: '10px',
                      filter: 'grayscale(100%)',
-                     transition: 'filter 0.3s ease'
+                     transition: 'all 0.3s ease',
+                     transform: 'translateZ(0px)'
                   }}
                   onMouseEnter={(e) => {
                      e.currentTarget.style.filter = 'grayscale(0%)';
+                     e.currentTarget.style.transform = 'translateZ(10px)';
                   }}
                   onMouseLeave={(e) => {
                      e.currentTarget.style.filter = 'grayscale(100%)';
+                     e.currentTarget.style.transform = 'translateZ(0px)';
                   }}
                />
             </div>
