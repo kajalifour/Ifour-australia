@@ -38,7 +38,7 @@ const bolg_data: DataType[] = [
       thumb: blog_1,
       date: 10,
       month: "Dec",
-      title: "Necessity May Give us Best Virtual Court"
+      title: "Essential Node.js Interview Questions Every Executive Should Ask When Hiring"
    },
    {
       id: 2,
@@ -46,7 +46,7 @@ const bolg_data: DataType[] = [
       thumb: blog_2,
       date: 12,
       month: "Dec",
-      title: "Tackling the Changes of Retail Industry"
+      title: "Top 10 Benefits of Mobile Apps for Business"
    },
    {
       id: 3,
@@ -54,7 +54,7 @@ const bolg_data: DataType[] = [
       thumb: blog_3,
       date: 15,
       month: "Dec",
-      title: "Easy and Most Powerful Server and Platform"
+      title: "How Much Does It Cost to Hire Node JS Developers In 2025?"
    },
 
    // home_2

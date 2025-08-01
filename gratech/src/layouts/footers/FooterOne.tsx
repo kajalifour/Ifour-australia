@@ -7,7 +7,7 @@ import shape_2 from "@/assets/images/shape/footer-solid-left.png"
 import shape_3 from "@/assets/images/shape/footer-regular-right.png"
 import shape_4 from "@/assets/images/shape/footer-solid-right.png"
 import shape_5 from "@/assets/images/shape/footer-shadow-shape.png"
-import logo from "@/assets/images/logo/logo.svg"
+import logo from "@/assets/images/logo/logo-white.png"
 
 const FooterOne = () => {
 

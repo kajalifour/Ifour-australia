@@ -8,7 +8,7 @@ import Offcanvas from "./Menu/Offcanvas";
 import HeaderSearch from "./Menu/HeaderSearch";
 import HeaderTopOne from "./Menu/HeaderTopOne";
 
-import logo from "@/assets/images/logo/logo.svg";
+import logo from "@/assets/images/logo/logo-white.png";
 
 const HeaderOne = () => {
 
