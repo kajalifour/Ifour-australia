@@ -64,74 +64,54 @@ const Technologies = () => {
    return (
       <section className="technologies-area pt-120 pb-120" style={{ backgroundColor: '#ffffff' }}>
          <div className="container">
-            <div className="technologies__wrp">
-               <div className="section-header mb-60">
-                  <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{
-                     backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                     color: '#000000',
-                     padding: '8px 16px',
-                     borderRadius: '20px',
-                     fontSize: '12px',
-                     fontWeight: '600',
-                     textTransform: 'uppercase',
-                     letterSpacing: '1px',
-                     display: 'inline-block',
-                     marginBottom: '15px',
-                     backdropFilter: 'blur(10px)'
-                  }}>
-                     <Image className="me-1" src={shape_2} alt="icon" style={{ width: '16px', height: '16px' }} />
+            <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
+               <div className="section-header">
+                  <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+                     <Image className="me-1" src={shape_2} alt="icon" />
                      Tech Talent
                   </h5>
-                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ 
-                     color: '#000000', 
-                     fontSize: '48px',
-                     fontWeight: '700',
-                     lineHeight: '1.2',
-                     marginBottom: '20px'
-                  }}>
-                     Technologies We Utilise
-                  </h2>
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Technologies We Utilise</h2>
                </div>
-               
-               <div className="row justify-content-center">
-                  {tech_data.map((tech, index) => (
-                     <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '20%' }}>
-                        <div className="technology__item text-center wow fadeInUp" 
-                           data-wow-delay={`${index * 100}ms`} 
-                           data-wow-duration="1500ms"
-                           style={{
-                              backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                              borderRadius: '12px',
-                              padding: '18px 12px',
-                              border: '1px solid rgba(0, 0, 0, 0.1)',
-                              transition: 'all 0.3s ease',
-                              height: '60%',
-                              backdropFilter: 'blur(10px)'
+            </div>
+            
+            <div className="row justify-content-center">
+               {tech_data.map((tech, index) => (
+                  <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '20%' }}>
+                     <div className="technology__item text-center wow fadeInUp" 
+                        data-wow-delay={`${index * 100}ms`} 
+                        data-wow-duration="1500ms"
+                        style={{
+                           backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                           borderRadius: '12px',
+                           padding: '18px 12px',
+                           border: '1px solid rgba(0, 0, 0, 0.1)',
+                           transition: 'all 0.3s ease',
+                           height: '60%',
+                           backdropFilter: 'blur(10px)'
+                        }}
+                        onMouseEnter={(e) => {
+                           e.currentTarget.style.transform = 'translateY(-5px)';
+                           e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.2)';
+                           e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                           e.currentTarget.style.transform = 'translateY(0)';
+                           e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+                           e.currentTarget.style.boxShadow = 'none';
+                        }}>
+                        <img 
+                           src={tech.icon} 
+                           alt="technology" 
+                           style={{ 
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'cover',
+                              borderRadius: '8px'
                            }}
-                           onMouseEnter={(e) => {
-                              e.currentTarget.style.transform = 'translateY(-5px)';
-                              e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.2)';
-                              e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
-                           }}
-                           onMouseLeave={(e) => {
-                              e.currentTarget.style.transform = 'translateY(0)';
-                              e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
-                              e.currentTarget.style.boxShadow = 'none';
-                           }}>
-                           <img 
-                              src={tech.icon} 
-                              alt="technology" 
-                              style={{ 
-                                 width: '100%',
-                                 height: '100%',
-                                 objectFit: 'cover',
-                                 borderRadius: '8px'
-                              }}
-                           />
-                        </div>
+                        />
                      </div>
-                  ))}
-               </div>
+                  </div>
+               ))}
             </div>
          </div>
       </section>

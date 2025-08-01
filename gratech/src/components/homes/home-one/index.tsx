@@ -8,6 +8,8 @@ import Case from "./Case"
 import Offer from "./Offer"
 import Brand from "./Brand"
 import Technologies from "./Technologies"
+import TechnologyPartners from "./TechnologyPartners"
+import MediaCoverage from "./MediaCoverage"
 import Project from "./Project"
 import Process from "./Process"
 import Testimonial from "./Testimonial"
@@ -26,6 +28,8 @@ const HomeOne = () => {
         <Offer />
         <Brand />
         <Technologies />
+        <TechnologyPartners />
+        <MediaCoverage />
         <Project />
         <Process />
         <Testimonial />
