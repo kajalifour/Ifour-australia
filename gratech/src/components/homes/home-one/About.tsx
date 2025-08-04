@@ -26,10 +26,10 @@ const About = () => {
                <div className="row g-4">
                   <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                      <div className="about__left-item">
-                        <div className="image big-image">
+                        <div className="image big-image" style={{ marginTop: '70px' }}>
                            <Image src={about_thumb1} alt="image" />
                         </div>
-                        <div className="image sm-image">
+                        <div className="image sm-image" style={{ marginTop: '70px' }}>
                            <div className="video__btn-wrp">
                               <div className="video-btn video-pulse">
                                  <a onClick={() => setIsVideoOpen(true)} style={{ cursor: "pointer" }} className="video-popup">

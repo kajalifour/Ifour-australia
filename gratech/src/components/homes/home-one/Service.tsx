@@ -49,21 +49,21 @@ const Service = () => {
                      <div className="service__item" style={{
                         backgroundColor: 'rgba(15, 122, 149, 0.15)',
                         borderRadius: '5px',
-                        padding: '20px',
+                        padding: '20px 20px 50px 20px',
                         transition: 'all 0.3s ease-in-out',
                         border: '1px solid rgba(15, 122, 149, 0.2)',
                         boxShadow: '0 2px 10px rgba(15, 122, 149, 0.1)',
-                        height: '300px',
+                        height: '320px',
                         display: 'flex',
                         flexDirection: 'column',
-                        justifyContent: 'space-between'
+                        justifyContent: 'flex-start'
                      }}>
 
                         <div className="service__icon">
                            <Image src={item.icon} alt="icon" />
                         </div>
                         <h4><Link href="/service-details">{item.title}</Link></h4>
-                        <p>{item.desc}</p>
+                        <p style={{ flex: '1' }}>{item.desc}</p>
                      </div>
                   </SwiperSlide>
                ))}

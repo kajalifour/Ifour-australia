@@ -38,7 +38,7 @@ const media_data = [
 
 const MediaCoverage = () => {
    return (
-      <section className="media-coverage-area pt-120 pb-80" style={{ backgroundColor: '#ffffff' }}>
+      <section className="media-coverage-area pt-120 pb-80" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)' }}>
          <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                <div className="section-header">
@@ -47,7 +47,7 @@ const MediaCoverage = () => {
                      Press & Media
                   </h5>
                   <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                     <span style={{ color: '#0f7a95' }}>Media</span> Coverage
+                     <span style={{ color: '#0f7a95' }}>Media</span> <span style={{ color: '#ffffff' }}>Coverage</span>
                   </h2>
                </div>
             </div>

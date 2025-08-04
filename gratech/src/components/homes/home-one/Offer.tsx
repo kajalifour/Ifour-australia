@@ -90,7 +90,7 @@ const offer_data: DataType[] = [
 
 const Offer = () => {
    return (
-      <section className="offer-area secondary-bg pt-120 pb-200">
+      <section className="offer-area pt-120 pb-200" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)' }}>
          <div className="offer__shadow wow fadeIn" data-wow-delay="200ms" data-wow-duration="1500ms">
             <Image src={shape_1} alt="shadow" />
          </div>
