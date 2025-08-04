@@ -79,6 +79,10 @@ const setting = {
       clickable: true,
    },
    navigation: false,
+   allowTouchMove: true,
+   grabCursor: true,
+   resistance: true,
+   resistanceRatio: 0.85,
 };
 
 const Testimonial = () => {

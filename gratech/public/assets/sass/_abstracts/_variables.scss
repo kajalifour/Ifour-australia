@@ -27,7 +27,6 @@
 	--shadow: 0px 4px 25px 0px #0000000f;
 }
 
-// Dark mood collor area start here ***
 :root[data-theme="dark"] {
 	--primary-color: #0f7a95;
 	--primary10: rgba(60, 114, 252, 0.1);
@@ -42,9 +41,7 @@
 	--white: #ffffff;
 	--black: #000000;
 }
-// Dark mood collor area end here ***
 
-// Overight the Dark mood collor area stat here ***
 :root[data-theme="dark"] .light-area {
 	--primary-color: #0f7a95;
 	--primary10: rgba(60, 114, 252, 0.1);
@@ -59,4 +56,4 @@
 	--white: #ffffff;
 	--black: #000000;
 }
-// Overight the Dark mood collor area end here ***
+

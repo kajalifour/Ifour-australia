@@ -139,7 +139,7 @@ const Case = () => {
                            <Image className="me-1" src={shape_1} alt="icon" />
                            ABOUT iFour Technolab
                         </h5>
-                        <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginTop: '70px' }}>
                            <span style={{ color: '#0f7a95' }}>Why Choose Us as Your</span> Software Development Agency?
                         </h2>
                         <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">

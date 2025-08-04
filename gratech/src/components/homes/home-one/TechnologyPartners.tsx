@@ -31,7 +31,16 @@ const TechnologyPartners = () => {
                   transition: 'all 0.3s ease',
                   textAlign: 'center',
                   width: '80%',
-                  margin: '0 auto'
+                  margin: '0 auto',
+                  cursor: 'pointer'
+               }}
+               onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 15px 50px rgba(0, 0, 0, 0.15)';
+               }}
+               onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0px)';
+                  e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.1)';
                }}>
                
                <img 
