@@ -1,4 +1,6 @@
 "use client"
+import 'swiper/css';
+import 'swiper/css/autoplay';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Image, { StaticImageData } from "next/image"
@@ -22,30 +24,20 @@ const setting = {
    slidesPerView: 5,
    spaceBetween: 30,
    loop: true,
+   speed: 2000, // Consistent speed for smooth movement
    autoplay: {
-      delay: 0,
+      delay: 0, // NO delay between slides
       disableOnInteraction: false,
    },
-   speed: 2000,
-   pagination: false,
-   navigation: false,
    allowTouchMove: false,
-   observer: false,
-   observeParents: false,
+   grabCursor: false,
+   modules: [Autoplay],
    loopAdditionalSlides: 5,
    breakpoints: {
-      1200: {
-         slidesPerView: 5,
-      },
-      992: {
-         slidesPerView: 4,
-      },
-      575: {
-         slidesPerView: 3,
-      },
-      320: {
-         slidesPerView: 2,
-      },
+      1200: { slidesPerView: 5 },
+      992: { slidesPerView: 4 },
+      575: { slidesPerView: 3 },
+      320: { slidesPerView: 2 },
    },
 };
 
@@ -53,58 +45,36 @@ const Brand = () => {
    const swiperRef = useRef<any>(null);
 
    useEffect(() => {
-      if (swiperRef.current && swiperRef.current.swiper) {
-         const swiper = swiperRef.current.swiper;
-         swiper.autoplay.start();
+      const swiper = swiperRef.current;
+      if (swiper) {
+         swiper.autoplay?.start();
          
-         // Ensure autoplay never stops, especially during loop transitions
+         // Monitor autoplay status
          const interval = setInterval(() => {
-            if (swiper && !swiper.autoplay.running) {
-               swiper.autoplay.start();
+            if (!swiper.autoplay?.running && swiper.activeIndex < swiper.slides.length - 1) {
+               swiper.autoplay?.start();
             }
-         }, 500);
+         }, 1000);
          
-         // Force autoplay to continue even during transitions
+         // Handle slide changes
          swiper.on('slideChange', () => {
-            if (!swiper.autoplay.running) {
-               swiper.autoplay.start();
+            // Only restart if not at the last slide
+            if (swiper.activeIndex < swiper.slides.length - 1 && !swiper.autoplay?.running) {
+               swiper.autoplay?.start();
             }
          });
          
          return () => {
             clearInterval(interval);
-            if (swiper) {
-               swiper.off('slideChange');
-            }
+            swiper.off('slideChange');
          };
       }
    }, []);
 
    return (
-      <section className="brand-area" style={{
-         marginTop: '0px',
-         marginBottom: '0px',
-         position: 'relative',
-         zIndex: 2,
-         paddingTop: '60px',
-         paddingBottom: '60px'
-      }}>
-         <div className="container" style={{
-            width: '80%',
-            maxWidth: '80%',
-            margin: '0 auto'
-         }}>
-            <div className="brand__wrp" style={{
-               background: '#ffffff',
-               borderRadius: '0px',
-               boxShadow: 'none',
-               padding: '68px 80px',
-               position: 'relative',
-               zIndex: 1,
-               border: 'none',
-               overflow: 'hidden',
-               transform: 'scale(1.02)'
-            }}>
+      <section className="brand-area">
+         <div className="brand-container">
+            <div className="brand__wrp">
                
                <div className="section-header mb-60 text-center">
                   <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
@@ -121,60 +91,28 @@ const Brand = () => {
                </div>
                
                <Swiper 
-                  ref={swiperRef}
-                  {...setting} 
-                  modules={[Autoplay]} 
-                  className="swiper brand__slider" 
-                  style={{
-                     width: '100%',
-                     height: 'auto',
-                     overflow: 'visible'
+                  onSwiper={(swiper) => {
+                     swiperRef.current = swiper;
                   }}
+                  {...setting} 
+                  className="swiper brand__slider"
                >
                   {brand_data.map((brand, i) => (
-                     <SwiperSlide key={i} className="swiper-slide" style={{
-                        width: 'auto',
-                        height: 'auto'
-                     }}>
+                     <SwiperSlide key={i} className="swiper-slide">
                         <div className="brand__item wow bounceInUp" 
                            data-wow-delay={`${i * 100}ms`} 
-                           data-wow-duration="1000ms"
-                           style={{
-                              display: 'flex',
-                              flexDirection: 'column',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              padding: '24px 20px',
-                              backgroundColor: 'transparent',
-                              borderRadius: '0px',
-                              border: 'none',
-                              transition: 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-                              backdropFilter: 'none',
-                              height: '102px',
-                              width: '100%',
-                              position: 'relative',
-                              overflow: 'hidden',
-                              boxShadow: 'none'
-                           }}
-                           onMouseEnter={(e) => {
-                              e.currentTarget.style.transform = 'scale(1.05)';
-                           }}
-                           onMouseLeave={(e) => {
-                              e.currentTarget.style.transform = 'scale(1)';
-                           }}>
+                           data-wow-duration="1000ms">
                            
                            <Image 
                               src={brand} 
                               alt="client logo" 
+                              width={120}
+                              height={60}
                               style={{
-                                 maxWidth: '100%',
-                                 maxHeight: '54px',
                                  objectFit: 'contain',
                                  transition: 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                                  filter: 'brightness(1) contrast(1)',
                                  transform: 'scale(1)',
-                                 border: 'none',
-                                 outline: 'none'
                               }}
                               onMouseEnter={(e) => {
                                  e.currentTarget.style.transform = 'scale(1.1)';
@@ -191,16 +129,56 @@ const Brand = () => {
          </div>
          
          <style jsx>{`
-            @keyframes float {
-               0%, 100% { transform: translateY(0px) rotate(0deg); }
-               50% { transform: translateY(-30px) rotate(180deg); }
-            }
-            @keyframes rotate {
-               from { transform: rotate(0deg); }
-               to { transform: rotate(360deg); }
+            .brand-area {
+               margin-top: 0px;
+               margin-bottom: 0px;
+               position: relative;
+               z-index: 2;
+               padding-top: 60px;
+               padding-bottom: 60px;
             }
             
-            .swiper {
+            .brand-container {
+               width: 80%;
+               max-width: 80%;
+               margin: 0 auto;
+            }
+            
+            .brand__wrp {
+               background: #ffffff;
+               border-radius: 0px;
+               box-shadow: none;
+               padding: 68px 80px;
+               position: relative;
+               z-index: 1;
+               border: none;
+               overflow: hidden;
+               transform: scale(1.02);
+            }
+            
+            .brand__item {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               padding: 24px 20px;
+               background-color: transparent;
+               border-radius: 0px;
+               border: none;
+               transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+               backdrop-filter: none;
+               height: 102px;
+               width: 100%;
+               position: relative;
+               overflow: hidden;
+               box-shadow: none;
+            }
+            
+            .brand__item:hover {
+               transform: scale(1.05);
+            }
+            
+            .brand__slider {
                width: 100%;
                height: auto;
                overflow: visible;
@@ -214,33 +192,28 @@ const Brand = () => {
                justify-content: center;
             }
             
-            .brand__slider {
-               width: 100%;
-               height: auto;
-               overflow: visible;
-            }
-            
-            .brand__item {
-               border: none !important;
-               outline: none !important;
-            }
-            
-            .brand__item img {
-               border: none !important;
-               outline: none !important;
-            }
-            
-            .swiper-slide {
-               border: none !important;
-               outline: none !important;
-            }
-            
             .swiper-wrapper {
                transition-timing-function: linear !important;
+               transition-duration: 2s !important;
             }
             
             .swiper-slide {
                transition-timing-function: linear !important;
+               transition-duration: 2s !important;
+            }
+            
+            .swiper {
+               transition-timing-function: linear !important;
+            }
+            
+            @keyframes float {
+               0%, 100% { transform: translateY(0px) rotate(0deg); }
+               50% { transform: translateY(-30px) rotate(180deg); }
+            }
+            
+            @keyframes rotate {
+               from { transform: rotate(0deg); }
+               to { transform: rotate(360deg); }
             }
          `}</style>
       </section>
