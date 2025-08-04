@@ -84,7 +84,7 @@ const Technologies = () => {
                            data-wow-duration="1500ms"
                            style={{
                               backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                              borderRadius: '12px',
+                              borderRadius: '0',
                               padding: '18px 12px',
                               border: '1px solid rgba(0, 0, 0, 0.1)',
                               transition: 'all 0.3s ease',
@@ -105,14 +105,14 @@ const Technologies = () => {
                               e.currentTarget.style.boxShadow = 'none';
                            e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
                            }}>
-                           <img 
+                           <img
                               src={tech.icon} 
                               alt="technology" 
                               style={{ 
                                  width: '100%',
                                  height: '100%',
                                  objectFit: 'cover',
-                              borderRadius: '8px',
+                              borderRadius: '0',
                               transition: 'all 0.3s ease',
                               transform: 'translateZ(0px)'
                            }}

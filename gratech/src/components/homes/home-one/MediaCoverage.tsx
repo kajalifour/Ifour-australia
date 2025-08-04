@@ -60,7 +60,7 @@ const MediaCoverage = () => {
                         data-wow-duration="1500ms"
                         style={{
                            backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                           borderRadius: '12px',
+                           borderRadius: '0',
                            padding: '22px 14px', // Increased padding by 20%
                            border: '1px solid rgba(0, 0, 0, 0.1)',
                            transition: 'all 0.3s ease',
@@ -89,7 +89,7 @@ const MediaCoverage = () => {
                               width: '100%',
                               height: '100%',
                               objectFit: 'contain', // Changed to contain for better image display
-                              borderRadius: '8px',
+                              borderRadius: '0',
                               transition: 'filter 0.3s ease'
                            }}
                            onMouseEnter={(e) => {
