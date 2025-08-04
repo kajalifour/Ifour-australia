@@ -85,13 +85,16 @@ const Technologies = () => {
                            style={{
                               backgroundColor: 'rgba(0, 0, 0, 0.05)',
                               borderRadius: '0',
-                              padding: '18px 12px',
+                              padding: '5px',
                               border: '1px solid rgba(0, 0, 0, 0.1)',
                               transition: 'all 0.3s ease',
-                              height: '60%',
-                           backdropFilter: 'blur(10px)',
-                           transform: 'perspective(1000px) rotateX(0deg)',
-                           transformStyle: 'preserve-3d'
+                              height: '102px',
+                              backdropFilter: 'blur(10px)',
+                              transform: 'perspective(1000px) rotateX(0deg)',
+                              transformStyle: 'preserve-3d',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center'
                            }}
                            onMouseEnter={(e) => {
                            e.currentTarget.style.transform = 'perspective(1000px) rotateX(-3deg) translateZ(15px)';
@@ -111,10 +114,12 @@ const Technologies = () => {
                               style={{ 
                                  width: '100%',
                                  height: '100%',
-                                 objectFit: 'cover',
-                              borderRadius: '0',
-                              transition: 'all 0.3s ease',
-                              transform: 'translateZ(0px)'
+                                 objectFit: 'contain',
+                                 borderRadius: '0',
+                                 transition: 'all 0.3s ease',
+                                 transform: 'translateZ(0px)',
+                                 maxWidth: '92px',
+                                 maxHeight: '92px'
                            }}
                            onMouseEnter={(e) => {
                               e.currentTarget.style.transform = 'translateZ(8px) scale(1.05)';
