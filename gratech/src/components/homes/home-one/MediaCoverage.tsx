@@ -61,11 +61,14 @@ const MediaCoverage = () => {
                         style={{
                            backgroundColor: 'rgba(0, 0, 0, 0.05)',
                            borderRadius: '12px',
-                           padding: '18px 12px',
+                           padding: '22px 14px', // Increased padding by 20%
                            border: '1px solid rgba(0, 0, 0, 0.1)',
                            transition: 'all 0.3s ease',
-                           height: '60%',
-                           backdropFilter: 'blur(10px)'
+                           height: '120px', // Fixed height for better consistency
+                           backdropFilter: 'blur(10px)',
+                           display: 'flex',
+                           alignItems: 'center',
+                           justifyContent: 'center'
                         }}
                         onMouseEnter={(e) => {
                            e.currentTarget.style.transform = 'translateY(-5px)';
@@ -85,7 +88,7 @@ const MediaCoverage = () => {
                            style={{ 
                               width: '100%',
                               height: '100%',
-                              objectFit: 'cover',
+                              objectFit: 'contain', // Changed to contain for better image display
                               borderRadius: '8px',
                               transition: 'filter 0.3s ease'
                            }}

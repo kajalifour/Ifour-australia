@@ -31,11 +31,11 @@ const Project = () => {
                          </div>
                          <div className="project__overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4" 
                               style={{
-                                 background: 'linear-gradient(135deg, rgba(64, 169, 255, 0.9), rgba(100, 181, 246, 0.9))',
+                                 background: 'linear-gradient(135deg, rgba(12, 121, 147, 0.9), rgba(15, 121, 147, 0.9), rgba(17, 19, 20, 0.9))',
                                  transform: 'translateY(-100%)',
                                  transition: 'transform 0.3s ease-in-out',
                                  cursor: 'pointer',
-                                 boxShadow: '0 0 25px rgba(64, 169, 255, 0.6)'
+                                 boxShadow: '0 0 25px rgba(15, 122, 149, 0.4)'
                               }}>
                            <h4 className="text-white mb-3 fw-bold fs-4">{item.title}</h4>
                            <p className="text-white mb-0 fs-6 lh-base">{item.desc}</p>

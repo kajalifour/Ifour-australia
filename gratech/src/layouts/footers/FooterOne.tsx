@@ -57,16 +57,16 @@ const FooterOne = () => {
             }
          `}</style>
          <div className="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-            <Image src={shape_1} alt="shape" />
+            <Image src={shape_1} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />
          </div>
          <div className="footer__shape-solid-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <Image className="sway_Y__animation" src={shape_2} alt="shape" />
+            <Image className="sway_Y__animation" src={shape_2} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />
          </div>
          <div className="footer__shape-solid-right wow slideInRight" data-wow-delay="00ms" data-wow-duration="1500ms">
-            <Image className="sway_Y__animation" src={shape_3} alt="shape" />
+            <Image className="sway_Y__animation" src={shape_3} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />
          </div>
          <div className="footer__shape-regular-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <Image src={shape_4} alt="shape" />
+            <Image src={shape_4} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />
          </div>
          <div className="footer__shadow-shape">
             <Image src={shape_5} alt="shodow" />

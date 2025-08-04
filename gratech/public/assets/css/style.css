@@ -2752,6 +2752,7 @@ input.main-search-input::placeholder {
   position: absolute;
   top: 30px;
   left: 0;
+  filter: hue-rotate(180deg) saturate(150%) brightness(0.8);
 }
 .banner__shape-left2 {
   position: absolute;
@@ -2767,6 +2768,7 @@ input.main-search-input::placeholder {
   position: absolute;
   bottom: 0px;
   right: 0;
+  filter: hue-rotate(180deg) saturate(150%) brightness(0.8);
 }
 @media (max-width: 767px) {
   .banner__shape-right1 {
@@ -3066,7 +3068,7 @@ input.main-search-input::placeholder {
   z-index: -1;
 }
 .banner__inner-page::before {
-  background: linear-gradient(270.07deg, #002b98 0.07%, #00060c 99.95%);
+  background: linear-gradient(270.07deg, #0f7a95 0.07%, #00060c 99.95%);
   z-index: -1;
   opacity: 0.75;
 }
@@ -5219,6 +5221,7 @@ input.main-search-input::placeholder {
 .footer-area, .footer-two-area {
   overflow: hidden;
   position: relative;
+  background-color: #000000 !important;
 }
 .footer__wrp {
   position: relative;
@@ -5239,11 +5242,13 @@ input.main-search-input::placeholder {
   position: absolute;
   top: 0;
   left: 0;
+  filter: brightness(0) invert(1) !important;
 }
 .footer__shape-regular-left {
   position: absolute;
   top: 30px;
   left: 0;
+  filter: brightness(0) invert(1) !important;
 }
 @media (max-width: 767px) {
   .footer__shape-regular-left {
@@ -5254,6 +5259,7 @@ input.main-search-input::placeholder {
   position: absolute;
   top: 0;
   right: 0;
+  filter: brightness(0) invert(1) !important;
 }
 @media (max-width: 767px) {
   .footer__shape-solid-right {
@@ -5264,6 +5270,7 @@ input.main-search-input::placeholder {
   position: absolute;
   top: 30px;
   right: 0;
+  filter: brightness(0) invert(1) !important;
 }
 @media (max-width: 767px) {
   .footer__shape-regular-right {

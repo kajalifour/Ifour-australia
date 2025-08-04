@@ -78,7 +78,7 @@ const Banner = () => {
                   </div>
                   <div data-animation="slideInLeft" data-duration="2s" data-delay=".9s"
                      className="banner__shape-left1">
-                     <Image src={shape_2} alt="shape" />
+                     <Image src={shape_2} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />
                   </div>
                   <div className="banner__shape-left3 wow slideInLeft">
                      <Image className="sway__animation" src={shape_3} alt="shape" />
@@ -89,7 +89,7 @@ const Banner = () => {
                   </div>
                   <div className="banner__shape-right1" data-animation="slideInRight" data-duration="2s"
                      data-delay=".3s">
-                     <Image src={shape_5} alt="shape" />
+                     <Image src={shape_5} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />
                   </div>
                   <div className="banner__right-line1" data-animation="slideInRight" data-duration="2s"
                      data-delay=".9s">
@@ -122,7 +122,8 @@ const Banner = () => {
                            {item.sub_title}
                         </h4>
                         <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s" className="text-white">
-                           {item.title}
+                           <span style={{ color: '#0f7a95' }}>Shaping Success through Innovation & Technology</span>
+                           <span style={{ color: 'white' }}> Since 2013</span>
                         </h1>
                         <p data-animation="slideInRight" data-duration="2s" data-delay=".7s" className="mt-20">
                            {item.desc}
