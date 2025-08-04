@@ -35,10 +35,10 @@ const FooterTwo = () => {
                   </Link>
                   <p>Empowering Industries through Innovative Software Solutions.</p>
                   <div className="social-icon">
-                     <Link href="#"><i className="fa-brands fa-facebook-f"></i></Link>
-                     <Link href="#"><i className="fa-brands fa-twitter"></i></Link>
-                     <Link href="#"><i className="fa-brands fa-linkedin-in"></i></Link>
-                     <Link href="#"><i className="fa-brands fa-youtube"></i></Link>
+                     <Link href="https://www.facebook.com/ifourtechnolab/"><i className="fa-brands fa-facebook-f"></i></Link>
+                     <Link href="https://x.com/consultifour"><i className="fa-brands fa-twitter"></i></Link>
+                     <Link href="https://www.linkedin.com/company/ifourtechnolab"><i className="fa-brands fa-linkedin-in"></i></Link>
+                     <Link href="https://www.instagram.com/ifourtechnolab/"><i className="fa-brands fa-instagram"></i></Link>
                   </div>
                </div>
                <div className="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -100,7 +100,7 @@ const FooterTwo = () => {
             <div className="container">
                <div
                   className="d-flex gap-1 flex-wrap align-items-center justify-content-md-between justify-content-center">
-                  <p className="wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">&copy; All Copyright 2024
+                  <p className="wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">&copy; All Copyright 2025
                      by <Link href="#">Gratech</Link></p>
                   <ul className="d-flex align-items-center gap-4 wow fadeInDown" data-wow-delay="200ms"
                      data-wow-duration="1500ms">

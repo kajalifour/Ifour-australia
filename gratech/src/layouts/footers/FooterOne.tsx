@@ -79,10 +79,10 @@ const FooterOne = () => {
                   </Link>
                   <p>Empowering Industries through Innovative Software Solutions.</p>
                   <div className="social-icon">
-                     <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-facebook-f"></i></Link>
-                     <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-twitter"></i></Link>
-                     <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-linkedin-in"></i></Link>
-                     <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-youtube"></i></Link>
+                     <Link href="https://www.facebook.com/ifourtechnolab/" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-facebook-f"></i></Link>
+                     <Link href="https://x.com/consultifour" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-twitter"></i></Link>
+                     <Link href="https://www.linkedin.com/company/ifourtechnolab" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-linkedin-in"></i></Link>
+                     <Link href="https://www.instagram.com/ifourtechnolab/" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-brands fa-instagram"></i></Link>
                   </div>
                </div>
                <div className="footer__item wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">

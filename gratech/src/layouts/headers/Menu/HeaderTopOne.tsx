@@ -36,10 +36,10 @@ const HeaderTopOne = () => {
                   </li>
                </ul>
                <ul className="link-info">
-                  <li><Link href="#0"><i className="fa-brands fa-facebook-f"></i></Link></li>
-                  <li><Link href="#0"><i className="fa-brands fa-twitter"></i></Link></li>
-                  <li><Link href="#0"><i className="fa-brands fa-linkedin-in"></i></Link></li>
-                  <li><Link href="#0"><i className="fa-brands fa-youtube"></i></Link></li>
+                  <li><Link href="https://www.facebook.com/ifourtechnolab/"><i className="fa-brands fa-facebook-f"></i></Link></li>
+                  <li><Link href="https://x.com/consultifour"><i className="fa-brands fa-twitter"></i></Link></li>
+                  <li><Link href="https://www.linkedin.com/company/ifourtechnolab"><i className="fa-brands fa-linkedin-in"></i></Link></li>
+                  <li><Link href="https://www.instagram.com/ifourtechnolab/"><i className="fa-brands fa-instagram"></i></Link></li>
                </ul>
             </div>
          </div>

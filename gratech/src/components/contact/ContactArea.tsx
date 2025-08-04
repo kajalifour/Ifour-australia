@@ -78,9 +78,9 @@ const ContactArea = () => {
                         Follow Social:
                      </h4>
                      <div className="social">
-                        <Link href="#"><i className="fa-brands fa-facebook-f"></i></Link>
-                        <Link href="#"><i className="fa-brands fa-twitter"></i></Link>
-                        <Link href="#"><i className="fa-brands fa-linkedin-in"></i></Link>
+                        <Link href="https://www.facebook.com/ifourtechnolab/"><i className="fa-brands fa-facebook-f"></i></Link>
+                        <Link href="https://x.com/consultifour"><i className="fa-brands fa-twitter"></i></Link>
+                        <Link href="https://www.linkedin.com/company/ifourtechnolab"><i className="fa-brands fa-linkedin-in"></i></Link>
                      </div>
                   </div>
                </div>
