@@ -262,7 +262,7 @@ const Testimonial = () => {
                   width: '100%',
                   height: '100%',
                   backgroundColor: 'rgba(0, 0, 0, 0.9)',
-                  zIndex: 9999,
+                  zIndex: 9998,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -297,7 +297,7 @@ const Testimonial = () => {
                         height: '40px',
                         borderRadius: '50%',
                         cursor: 'pointer',
-                        zIndex: 10,
+                        zIndex: 9999,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -322,7 +322,7 @@ const Testimonial = () => {
                         height: '40px',
                         borderRadius: '50%',
                         cursor: 'pointer',
-                        zIndex: 10,
+                        zIndex: 9999,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -346,7 +346,7 @@ const Testimonial = () => {
                         height: '40px',
                         borderRadius: '50%',
                         cursor: 'pointer',
-                        zIndex: 10,
+                        zIndex: 9999,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'

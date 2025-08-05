@@ -54,15 +54,15 @@ const setting = {
    loop: true,
    autoplay: {
      delay: 2000,
-     disableOnInteraction: false,
+      disableOnInteraction: false,
    },
    pagination: {
-     el: ".clients__dot",
-     clickable: true,
+      el: ".clients__dot",
+      clickable: true,
    },
    navigation: {
-     nextEl: ".clients__arry-next",
-     prevEl: ".clients__arry-prev",
+      nextEl: ".clients__arry-next",
+      prevEl: ".clients__arry-prev",
    },
    breakpoints: {
      1200: { slidesPerView: 5 },
@@ -77,34 +77,34 @@ const setting = {
 const Clients = () => {
    return (
       <>
-         <section className="clients-area pt-120 pb-120">
-            <div className="container">
-               <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
-                  <div className="section-header">
-                     <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <Image className="me-1" src={shape_2} alt="icon" />
-                        OUR CLIENTS
-                     </h5>
-                     <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Clients We've Served Thus Far</h2>
-                  </div>
-
+      <section className="clients-area pt-120 pb-120">
+         <div className="container">
+            <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
+               <div className="section-header">
+                  <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+                     <Image className="me-1" src={shape_2} alt="icon" />
+                     OUR CLIENTS
+                  </h5>
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Clients We've Served Thus Far</h2>
                </div>
-               <Swiper {...setting} modules={[Autoplay, Navigation, Pagination]} className="swiper clients__slider">
+
+            </div>
+            <Swiper {...setting} modules={[Autoplay, Navigation, Pagination]} className="swiper clients__slider">
                   {repeated_data.map((item, index) => (
                      <SwiperSlide key={`${item.id}-${index}`} className="swiper-slide">
-                        <div className="clients__item">
-                           <Image src={item.logo} alt={item.name} />
-                        </div>
-                     </SwiperSlide>
-                  ))}
-               </Swiper>
-               <div className="clients__navigation wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                  <button className="arry-prev clients__arry-prev"><i className="fa-light fa-chevron-left"></i></button>
-                  <div className="clients__dot"></div>
-                  <button className="arry-next clients__arry-next active"><i className="fa-light fa-chevron-right"></i></button>
-               </div>
+                     <div className="clients__item">
+                        <Image src={item.logo} alt={item.name} />
+                     </div>
+                  </SwiperSlide>
+               ))}
+            </Swiper>
+            <div className="clients__navigation wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
+               <button className="arry-prev clients__arry-prev"><i className="fa-light fa-chevron-left"></i></button>
+               <div className="clients__dot"></div>
+               <button className="arry-next clients__arry-next active"><i className="fa-light fa-chevron-right"></i></button>
             </div>
-         </section>
+         </div>
+      </section>
          <style jsx global>{`
            .swiper-wrapper {
              transition-timing-function: linear !important;

@@ -96,7 +96,7 @@ const bolg_data: DataType[] = [
       thumb: blog_2,
       date: 12,
       month: "Dec",
-      title: "Tackling the Changes of Retail Industry"
+      title: "Top 10 Benefits of Mobile Apps for Business"
    },
    {
       id: 3,
@@ -178,7 +178,7 @@ const bolg_data: DataType[] = [
       desc: "Consequat Quisque eget congue velit in OF cursus leo sodales IS the euismod quis sapien euismod",
       name: "Kawser Ahmed",
       avatar: avatar_2,
-      title: "Tackling the Changes of Retail Industry"
+      title: "Top 10 Benefits of Mobile Apps for Business"
    },
    {
       id: 3,
@@ -202,7 +202,7 @@ const bolg_data: DataType[] = [
       desc: "Consequat Quisque eget congue velit in OF cursus leo sodales IS the euismod quis sapien euismod",
       name: "Kawser Ahmed",
       avatar: avatar_2,
-      title: "Tackling the Changes of Retail Industry"
+      title: "Top 10 Benefits of Mobile Apps for Business"
    },
 ];
 

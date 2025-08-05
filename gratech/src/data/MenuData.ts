@@ -134,7 +134,7 @@ const menu_data: MenuItem[] = [
         id: 7,
         has_dropdown: false,
         title: "Contact Us",
-        link: "/contact-us",
+        link: "/contact",
     },
 ];
 
