@@ -1,9 +1,10 @@
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Image from "next/image";
 import Link from "next/link";
 import Case_data from '@/data/CaseData';
+import service_data from "@/data/ServiceData";
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
@@ -16,6 +17,24 @@ import about_thumb4 from "@/assets/images/about/about-image2.png"
 import shape_5 from "@/assets/images/shape/about-line.png"
 import shape_6 from "@/assets/images/shape/about-circle.png"
 import blog_image3 from "@/assets/images/blog/blog-image3.jpg"
+
+const setting = {
+   slidesPerView: 3,
+   spaceBetween: 30,
+   loop: true,
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+   },
+   pagination: {
+      el: ".service__dot",
+      clickable: true,
+   },
+   navigation: {
+      nextEl: ".service__arry-next",
+      prevEl: ".service__arry-prev",
+   },
+};
 
 // Custom Software Development Section Component
 const CustomSoftwareSection = () => {
@@ -84,12 +103,12 @@ const CustomSoftwareSection = () => {
 
 // Benefits Section Component
 const BenefitsSection = () => {
-    return (
-        <section id="success-section" className="about-two-area pt-120 pb-120" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)' }}>
+   return (
+        <section id="success-section" className="about-two-area" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', paddingTop: '50px', paddingBottom: '20px' }}>
             <div className="container">
-                <div className="row g-4">
+               <div className="row g-4">
                     <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="about-two__left-item" style={{ marginTop: '60px' }}>
+                        <div className="about-two__left-item" style={{ marginLeft: '30px', marginTop: '200px', transform: 'scale(1.3)', transformOrigin: 'center center' }}>
                             <div className="dots">
                                 <Image className="sway_Y__animation" src={shape_2} alt="shape" />
                             </div>
@@ -101,60 +120,148 @@ const BenefitsSection = () => {
                             </div>
                             <div className="image sm-image">
                                 <Image src={about_thumb2} alt="image" />
-                            </div>
+                              </div>
                             <div className="circle-shape">
                                 <Image className="animation__rotate" src={shape_4} alt="shape" />
-                            </div>
+                           </div>
                         </div>
                     </div>
                     <div className="col-xl-6">
-                        <div className="section-header mb-40">
-                            <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                                <Image className="me-1" src={shape_1} alt="icon" />
-                                WHO WE ARE
-                            </h5>
-                            <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                                <span style={{ color: '#0f7a95' }}>Benefits of Working with</span> iFour Technolab
-                            </h2>
-                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                                When you choose iFour Technolab as your software development partner, you not only get a partner devoted to your success but also become entitled to receive several benefits. Here are a few outlined:
-                            </p>
-                        </div>
-                        <div className="about-two__right-item wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div className="about-two__right-item wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginRight: '0', transform: 'none', paddingLeft: '20px', paddingRight: '10px' }}>
+                            <div className="section-header mb-30">
+                                <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
+                                    <Image className="me-1" src={shape_1} alt="icon" />
+                                    WHO WE ARE
+                                </h5>
+                                <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95' }}>Why Choose iFour?</span> 
+                                </h2>
+                                <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                    At iFour, we have in-depth knowledge of the Australian market, allowing us to deliver solutions that resonate with your target audience. We combine this local understanding with our global expertise, staying up-to-date with industry trends and technologies to ensure your software meets global standards. Given below are the reasons to choose iFour.
+                                </p>
+                            </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                                    <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                                    Fast project kickoff
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    Local Understanding, Global Expertise
                                 </li>
-                                <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                                    <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                                    Fully Tailored Solutions
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    Tailored Solutions for Your Business
                                 </li>
-                                <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                                    <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                                    Agile development approaches
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    120+ veteran professionals
                                 </li>
-                                <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                                    <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                                    Flexible hiring models
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    Certified Microsoft Solutions Partner
                                 </li>
-                                <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                                    <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                                    High data security
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    Full-Cycle Development Services
                                 </li>
-                                <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                                    <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                                    100% IP rights and ownership
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
+                                    Expertise Across Industries
                                 </li>
-                                <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                                    <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                                    Client satisfaction
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>7.</span>
+                                    Quality Assurance and Security
                                 </li>
-                            </ul>
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>8.</span>
+                                    Transparent Communication and Timely Delivery
+                                </li>
+                              </ul>
+                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '30px' }}>
+                                Ready to unlock the full potential of your business with custom software development? Contact iFour today to discuss your project requirements. Our team of experts is eager to collaborate with you, understand your vision, and deliver a software solution that drives innovation and growth in your industry. Let us be your trusted technology partner on your digital transformation journey.
+                            </p>
+                           </div>
+                              </div>
+                           </div>
                         </div>
-                        <div className="about__info mt-50 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <Link href="/about" className="btn-one">
-                                Let's Get Started <i className="fa-regular fa-arrow-right-long"></i>
+        </section>
+    );
+};
+
+// Service Cards Section Component
+const ServiceCardsSection = () => {
+    return (
+        <section id="service-section" className="service-area pt-120 pb-160">
+            <div className="service__shape wow slideInRight">
+                <Image className="sway_Y__animation" src={shape_1} alt="shape" />
+            </div>
+            <div className="container">
+                <Swiper {...setting} modules={[Autoplay, Navigation, Pagination]} className="swiper service__slider">
+                    {service_data.filter((items: any) => items.page === "home_1").map((item: any) => (
+                        <SwiperSlide key={item.id} className="swiper-slide">
+                            <div className="service__item" style={{
+                                backgroundColor: 'rgba(15, 122, 149, 0.15)',
+                                borderRadius: '5px',
+                                padding: '20px 20px 50px 20px',
+                                transition: 'all 0.3s ease-in-out',
+                                border: '1px solid rgba(15, 122, 149, 0.2)',
+                                boxShadow: '0 2px 10px rgba(15, 122, 149, 0.1)',
+                                height: '320px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'flex-start'
+                            }}>
+                                <div className="service__icon">
+                                    <Image src={item.icon} alt="icon" />
+                                </div>
+                                <h4><Link href="/service-details">{item.title}</Link></h4>
+                                <p style={{ flex: '1' }}>{item.desc}</p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                <div className="service__navigation wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
+                    <button className="arry-prev service__arry-prev"><i className="fa-light fa-chevron-left"></i></button>
+                    <div className="service__dot"></div>
+                    <button className="arry-next service__arry-next active"><i className="fa-light fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+// CTA Section Component
+const CTASection = () => {
+    return (
+        <section className="cta-area pt-120 pb-120" style={{ 
+            background: 'linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%)',
+            textAlign: 'center'
+        }}>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-xl-8">
+                        <div className="cta-content wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <h2 style={{ 
+                                color: '#1a237e', 
+                                fontSize: '2.5rem', 
+                                fontWeight: '600', 
+                                marginBottom: '2rem',
+                                lineHeight: '1.3'
+                            }}>
+                                Looking for reliable bespoke software development solutions?
+                            </h2>
+                            <Link href="/contact" className="btn btn-primary" style={{
+                                backgroundColor: '#0f7a95',
+                                borderColor: '#0f7a95',
+                                color: '#ffffff',
+                                padding: '15px 40px',
+                                fontSize: '1.1rem',
+                                fontWeight: '600',
+                                borderRadius: '8px',
+                                textDecoration: 'none',
+                                display: 'inline-block',
+                                transition: 'all 0.3s ease',
+                                textTransform: 'uppercase',
+                                letterSpacing: '1px'
+                            }}>
+                                GET STARTED NOW
                             </Link>
                         </div>
                     </div>
@@ -180,15 +287,52 @@ const AboutSection = () => {
                                 ABOUT iFour Technolab
                             </h5>
                             <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginTop: '70px' }}>
-                                <span style={{ color: '#0f7a95' }}>Why Choose Us as Your</span> Software Development Agency?
-                            </h2>
-                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                                At iFour Technolab, what differentiates us from others is our steadfast dedication to innovation and making sustainable success a goal that our clients can easily achieve. With our focus set on this objective, we deliver value-driven solutions and services to clients that act as catalysts for long-term prosperity. Our highlights include:
+                                <span style={{ color: '#0f7a95' }}>Our Custom Software Services</span>
+                                 </h2>
+                                                        <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                                As an Australian-based software development company, we understand the unique needs and challenges faced by businesses in Australia. Our bespoke software development services are designed to help you overcome these challenges and achieve your business objectives. Our custom software services can assist you with
                             </p>
-                        </div>
-                    </div>
+                            <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginTop: '15px' }}>
+                                <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    Product development
+                                </li>
+                                <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    Web application development
+                                </li>
+                                <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    Client-server applications
+                                </li>
+                                <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    Cloud application development
+                                </li>
+                                <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    Business line solutions
+                                </li>
+                                <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
+                                    Database Design & Management
+                                </li>
+                                <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>7.</span>
+                                     Internet or intranet applications
+                                </li>
+                                <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>8.</span>
+                                    Software or web maintenance
+                                </li>
+                            </ul>
+                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#333', width: '100%', fontSize: '1.1rem', lineHeight: '1.8', marginTop: '20px' }}>
+                                Contact us today to discuss how we can create a tailored software solution to drive innovation and growth for your organization.
+                            </p>
+                                 </div>
+                              </div>
                     <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="about__left-item">
+                        <div className="about__left-item" style={{ marginTop: '25%' }}>
                             <div className="image big-image">
                                 <Image src={about_thumb3} alt="image" />
                             </div>
@@ -199,52 +343,10 @@ const AboutSection = () => {
                                 <Image src={shape_6} alt="shape" />
                             </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div className="row g-4 mt-4">
-                    <div className="col-xl-4 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="feature-item" style={{ padding: '2px' }}>
-                            <div className="d-flex align-items-start">
-                                <div className="icon me-3">
-                                    <i className="fa-solid fa-users-gear" style={{ fontSize: '48px', color: '#0f7a95' }}></i>
-                                </div>
-                                <div className="content">
-                                    <h4 className="mb-3" style={{ color: '#0f7a95', fontWeight: '600' }}>Expert Team</h4>
-                                    <p>We have assembled a team of 120+ veteran software developers capable of building top-grade bespoke software solutions based on your specifications.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <div className="feature-item" style={{ padding: '2px' }}>
-                            <div className="d-flex align-items-start">
-                                <div className="icon me-3">
-                                    <i className="fa-solid fa-headset" style={{ fontSize: '48px', color: '#0f7a95' }}></i>
-                                </div>
-                                <div className="content">
-                                    <h4 className="mb-3" style={{ color: '#0f7a95', fontWeight: '600' }}>Round-the-Clock Support</h4>
-                                    <p>We have a diligent tech support team that is always available for hands-on support, responds to client questions and queries, and addresses them.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-4 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div className="feature-item" style={{ padding: '2px' }}>
-                            <div className="d-flex align-items-start">
-                                <div className="icon me-3">
-                                    <i className="fa-solid fa-microchip" style={{ fontSize: '48px', color: '#0f7a95' }}></i>
-                                </div>
-                                <div className="content">
-                                    <h4 className="mb-3" style={{ color: '#0f7a95', fontWeight: '600' }}>Modern Tech Expertise</h4>
-                                    <p>We remain on the cutting edge of technology, adopting new trends and advancements as they unfold. This up-to-date knowledge and our extensive industry expertise enable us to build unique solutions.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  </div>
+               </div>
             </div>
-        </section>
+         </section>
     );
 };
 
@@ -260,6 +362,9 @@ const ServiceDetailsArea = () => {
             
             {/* About Section */}
             <AboutSection />
+            
+            {/* Service Cards Section */}
+            <ServiceCardsSection />
             
             {/* Add more sections here as needed */}
             {/* <BrandSection /> */}

@@ -37,43 +37,43 @@ const service_data: DataType[] = [
       id: 1,
       page: "home_1",
       icon: icon_1,
-      title: "Custom Software Developement",
-      desc: "We specialize in the use of advanced technology and frameworks, such as .NET, Angular, and Node.js, to construct software solutions tailored exclusively to fit your unique needs."
+      title: "Custom Product Development",
+      desc: "Transform your vision into an innovative solution with our product development services. We provide end-to-end consultation from concept to product launch to help you ensure competitiveness in the marketplace."
    },
    {
       id: 2,
       page: "home_1",
       icon: icon_2,
-      title: "Desktop Application Developement",
-      desc: "Our team, composed of the brightest minds from the software development industry, can help you build robust, resilient, and highly secure desktop apps."
+      title: "Web Application Development",
+      desc: "We have a team of experts proficient in building stunning and user-centered web applications to drive engagement. We integrate modern tech stacks to get high-performing web apps that help you stand out."
    },
    {
       id: 3,
       page: "home_1",
       icon: icon_3,
-      title: "Mobile Application Development",
-      desc: "We help formulate your disruptive business idea into a mobile app that matches your aspirations, delivers a delightful user experience, and sets your business up for success."
+      title: "Cloud Application Development",
+      desc: "Our team holds enough experience in the field to help you build cloud apps. At iFour, we build scalable and secure cloud solutions that drive business agility."
    },
    {
       id: 4,
       page: "home_1",
       icon: icon_1,
-      title: "Web Application Development",
-      desc: "We create powerful, scalable web applications using modern technologies and frameworks to deliver exceptional user experiences and drive business growth."
+      title: "Business Line Solutions",
+      desc: "We help you simplify your business operations by designing a tailored solution that addresses your pain points and business challenges."
    },
    {
       id: 5,
       page: "home_1",
       icon: icon_2,
-      title: "Cloud Solutions & DevOps",
-      desc: "We provide comprehensive cloud infrastructure solutions and DevOps services to optimize your development processes and ensure seamless deployment."
+      title: "Desktop App Development",
+      desc: "With our top-notch desktop app development services, you can experience user-friendly and high-performing solutions that maximize your productivity and let you work flawlessly into your current infrastructure."
    },
    {
       id: 6,
       page: "home_1",
       icon: icon_3,
-      title: "UI/UX Design & Consulting",
-      desc: "Our expert designers create intuitive, engaging user interfaces and experiences that enhance user satisfaction and drive business success."
+      title: "Internet or Intranet Services",
+      desc: "Trust iFour Technolab for reliable support and maintenance services. We monitor your software after deployment to ensure continued performance and security and address bugs."
    },
 ];
 
