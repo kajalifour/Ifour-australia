@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,6 +28,42 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                <Link href="/">Home</Link><span><i className="fa-regular fa-angles-right mx-2"></i>{sub_title}</span>
             </div>
+                         {title === "Custom Software Development Company" && (
+                <div className="banner-content wow fadeInUp mt-4" data-wow-delay="400ms" data-wow-duration="1500ms">
+                   <p className="text-white mb-4" style={{
+                      fontSize: '1.32rem',
+                      lineHeight: '1.6',
+                      opacity: '0.9',
+                      maxWidth: '600px',
+                      margin: '0',
+                      textAlign: 'left'
+                   }}>
+                      Discover top-tier talent in Australia for custom software development. 
+                      iFour specializes in crafting innovative, scalable, and affordable 
+                      solutions tailored to your business needs.
+                   </p>
+                   <Link href="/contact" className="btn btn-primary" style={{
+                      backgroundColor: '#ffffff',
+                      color: '#0f7a95',
+                      padding: '12px 30px',
+                      borderRadius: '5px',
+                      textDecoration: 'none',
+                      display: 'inline-block',
+                      fontWeight: '600',
+                      transition: 'all 0.3s ease'
+                   }}
+                   onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#0f7a95';
+                      e.currentTarget.style.color = '#ffffff';
+                   }}
+                   onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#ffffff';
+                      e.currentTarget.style.color = '#0f7a95';
+                   }}>
+                      Get In Touch
+                   </Link>
+                </div>
+             )}
          </div>
       </section>
    )
