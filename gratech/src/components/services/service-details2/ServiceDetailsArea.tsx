@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef } from "react";
 import Case_data from '@/data/CaseData';
-import service_data2 from "@/data/ServiceData";
+import serviceData2 from "@/data/ServiceData2";
 import project_data from "@/data/ProjectData";
 import bolg_data from "@/data/BlogData";
 
@@ -291,7 +291,7 @@ const ServiceCardsSection = () => {
             </div>
             <div className="container">
                 <Swiper {...setting} modules={[Autoplay, Navigation, Pagination]} className="swiper service__slider">
-                    {service_data2.filter((items: any) => items.page === "home_1").map((item: any) => (
+                    {serviceData2.filter((items: any) => items.page === "home_1").map((item: any) => (
                         <SwiperSlide key={item.id} className="swiper-slide">
                             <div className="service__item" style={{
                                 backgroundColor: 'rgba(15, 122, 149, 0.15)',

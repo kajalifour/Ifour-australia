@@ -1,4 +1,4 @@
-import ServiceDetails from "@/components/services/service-details";
+import ServiceDetails from "@/components/services/service-details4";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
