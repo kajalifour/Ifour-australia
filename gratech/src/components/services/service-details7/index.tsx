@@ -8,7 +8,7 @@ const ServiceDetails = () => {
       <>
          <HeaderOne />
          <main>
-            <BreadCrumb sub_title="Service Details" title="Service Details" />
+            <BreadCrumb sub_title="Mobile App Development Company" title="Mobile App Development Company" />
             <ServiceDetailsArea />
          </main>
          <FooterOne />

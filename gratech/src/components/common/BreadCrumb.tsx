@@ -11,6 +11,59 @@ interface DataType {
    title: string;
 }
 const BreadCrumb = ({ sub_title, title }: DataType) => {
+   // Function to get service-specific content
+   const getServiceContent = (serviceTitle: string) => {
+      switch (serviceTitle) {
+         case "Custom Software Development Company":
+            return {
+               description: "Discover top-tier talent in Australia for custom software development. iFour specializes in crafting innovative, scalable, and affordable solutions tailored to your business needs.",
+               buttonText: "Get In Touch"
+            };
+             case "Desktop Application Development Company":
+            return {
+               description: "At iFour, we specialize in crafting innovative desktop app that drive productivity, simplify business workflows, and enhance user experience. With a team of highly experienced and vetted developers we help you transform your ideas into reality with a secure and robust solutions.",
+               buttonText: "Get In Touch"
+            };
+            case "Ecommerce Website Development Company":
+            return {
+               description: "need to add",
+               buttonText: "Get In Touch"
+            };
+            case "Microsoft 365 Development Company":
+            return {
+               description: "Get a comprehensive suite of tools and resources to create solutions that enhance productivity, collaboration, and data management within the Microsoft 365 ecosystem. Our team works closely with clients to understand their unique requirements and provides dynamic Microsoft Office 365 solutions that enhance collaboration, productivity, and work efficiency across your business environment.",
+              buttonText: "Get In Touch"
+            };
+         case "Microsoft Azure Cloud Services Company":
+            return {
+               description: "need to add this.",
+               buttonText: "Get In Touch"
+            };
+            case "Blockchain Development Company":
+            return {
+               description: "need to add this.",
+               bbuttonText: "Get In Touch"
+            };
+            case "Mobile App Development Company":
+            return {
+               description: "iFour Technolab, your reliable Mobile app development company in Australia helps you improve your digital presence with top-notch mobile app solutions. With industry experience and strong command over the latest tech stack, our team brings solutions that bring success. Whether it's about mobile apps, web solutions, or custom software, our programmers design innovative solutions for all your needs.",
+               buttonText: "Get In Touch"
+            };
+           case "IoT Software Development Company":
+            return {
+               description: "need to add this.",
+               buttonText: "Get In Touch"
+            };
+         default:
+            return {
+               description: "Discover top-tier talent in Australia for custom software development. iFour specializes in crafting innovative, scalable, and affordable solutions tailored to your business needs.",
+               buttonText: "Get In Touch"
+            };
+      }
+   };
+
+   const serviceContent = getServiceContent(title);
+
    return (
       <section className="banner__inner-page bg-image pt-180 pb-180 bg-image"
          style={{ backgroundImage: `url(/assets/images/banner/banner-inner-page.jpg)` }}>
@@ -28,7 +81,19 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                <Link href="/">Home</Link><span><i className="fa-regular fa-angles-right mx-2"></i>{sub_title}</span>
             </div>
-                         {title === "Custom Software Development Company" && (
+            {(title === "Custom Software Development Company" || 
+              title === "Custom Product Development Company" ||
+              title === "Web Application Development Company" ||
+              title === "Cloud Application Development Company" ||
+              title === "Business Line Solutions Company" ||
+              title === "Desktop Application Development Company" ||
+              title === "Internet or Intranet Services Company" ||
+              title === "Mobile App Development Company" ||
+              title === "Microsoft 365 Development Company" ||
+              title === "Microsoft Azure Cloud Services Company" ||
+              title === "Ecommerce Website Development Company" ||
+              title === "IoT Software Development Company" ||
+              title === "Blockchain Development Company") && (
                 <div className="banner-content wow fadeInUp mt-4" data-wow-delay="400ms" data-wow-duration="1500ms">
                    <p className="text-white mb-4" style={{
                       fontSize: '1.32rem',
@@ -38,9 +103,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
                       margin: '0',
                       textAlign: 'left'
                    }}>
-                      Discover top-tier talent in Australia for custom software development. 
-                      iFour specializes in crafting innovative, scalable, and affordable 
-                      solutions tailored to your business needs.
+                      {serviceContent.description}
                    </p>
                    <Link href="/contact" className="btn btn-primary" style={{
                       backgroundColor: '#ffffff',
@@ -60,7 +123,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
                       e.currentTarget.style.backgroundColor = '#ffffff';
                       e.currentTarget.style.color = '#0f7a95';
                    }}>
-                      Get In Touch
+                      {serviceContent.buttonText}
                    </Link>
                 </div>
              )}

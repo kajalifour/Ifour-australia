@@ -8,7 +8,7 @@ const ServiceDetails = () => {
       <>
          <HeaderOne />
          <main>
-            <BreadCrumb sub_title="Service Details" title="Service Details" />
+            <BreadCrumb sub_title="Microsoft 365 Development Company" title="Microsoft 365 Development Company" />
             <ServiceDetailsArea />
          </main>
          <FooterOne />
