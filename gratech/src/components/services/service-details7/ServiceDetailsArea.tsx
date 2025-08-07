@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef } from "react";
 import Case_data from '@/data/CaseData';
-import serviceData7 from "@/data/ServiceData7";
+import service_data7 from "@/data/ServiceData7";
 import project_data from "@/data/ProjectData";
 import bolg_data from "@/data/BlogData";
 
@@ -164,7 +164,7 @@ const DesktopApplicationSection = () => {
                                 marginBottom: '1.5rem',
                                 fontWeight: '700'
                             }}>
-                                <span style={{ color: '#0f7a95' }}>Maximize the Potential of Microsoft</span> 365 to Grow Your Business
+                                <span style={{ color: '#0f7a95' }}>Mobile Apps Built with </span> Excellence
                             </h2>
                             <div className="text-content wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{
                                 fontSize: '1.1rem',
@@ -172,11 +172,15 @@ const DesktopApplicationSection = () => {
                                 color: '#333'
                             }}>
                                 <p style={{ marginBottom: '1.5rem' }}>
-                                iFour Technolab is a trusted partner for Microsoft 365 development services with a proven track record in cloud computing and migration services. Backed by years of technology expertise as a Microsoft Solutions Partner, we bring unrivaled expertise and credibility to every project we undertake. Our commitment to excellence has allowed us to refine our skills and become a reliable choice for organizations seeking top-notch software solutions.                                </p>
+                                 Welcome to iFour, the leading provider of mobile app development services that are set to revolutionize the digital landscape. As a Microsoft Solutions Partner with 10 years of market experience, we have solidified our position as industry experts. Our team of 120+ veteran professionals is driven by a passion for crafting innovative applications that propel businesses to new heights.
+‍
+                                </p>
                                 <p style={{ marginBottom: '1.5rem' }}>
-                                With a team of over 120 seasoned experts, we are driven by a passion for developing creative and customized software solutions that propel organizations forward in the dynamic digital market. Our talented professionals are equipped with the knowledge and skills to craft innovative solutions tailored to your specific needs, ensuring that your business stays ahead of the curve. </p>
+                                With our global presence spanning four branches, we bring diverse perspectives and a wealth of knowledge to every project. Our multi-talented team leverages cutting-edge technologies and industry best practices to develop mobile apps that exceed expectations. </p>
                                 <p style={{ marginBottom: '1.5rem' }}>
-As an Australian software firm, we understand the significance of local knowledge combined with global expertise. This enables us to deliver solutions that not only meet your unique requirements but also adhere to industry best practices. We recognize the importance of scalability, security, and innovation in today's business landscape, and our Microsoft 365 development services are designed to empower your Australian business with all three. </p>                           
+                                At iFour, we understand that mobile apps have become an essential component of modern business strategies. Whether you need a sleek e-commerce app, a feature-rich customer engagement platform, or a game-changing enterprise solution, we have the expertise to bring your vision to life.  </p>
+                           <p style={{ marginBottom: '1.5rem' }}>
+                                We understand your vision and deliver a perfect mobile app solution that drives growth in your industry.</p>
 
                             </div>
                         </div>
@@ -220,48 +224,46 @@ const BenefitsSection = () => {
                                     WHO WE ARE
                                 </h5>
                                 <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95' }}>Why Microsoft 365 Development Services?</span> 
+                                    <span style={{ color: '#0f7a95' }}>Why Choose iFour?</span> 
                                 </h2>
                                 <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                 Microsoft 365 development enables you to focus on boosting productivity and efficiency within your company. It allows you to harness the capabilities of Microsoft 365 applications such as Word, Excel, PowerPoint, and more to streamline workflows, automate processes, and empower your workforce to work smarter and accomplish more.                               </p>                          
-                                                           <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                 At iFour, we believe in the power of customization. Our Microsoft 365 development services are specifically tailored to meet the unique needs of Australian businesses. We take the time to understand your organization's requirements, processes, and objectives to create bespoke solutions that drive productivity, collaboration, and growth. Given below are the reasons to choose iFour.</p> </div>
+                                  At iFour, we have in-depth knowledge of the Australian market, allowing us to deliver solutions that resonate with your target audience. We combine this local understanding with our global expertise, staying up-to-date with industry trends and technologies to ensure your software meets global standards. Given below are the reasons to choose iFour. </p>   </div>                                                                            
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
-                                     Local Understanding, Global Expertise
+                                    Certified Microsoft Solutions Partner
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
-                                    Tailored Solutions for Your Business
+                                    Local Understanding, Global Expertise
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
-                                     Certified Microsoft Solutions Partner
+                                     Tailored-made applications for Your Business
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
-                                    120+ veteran professionals
+                                    120+ vetted professionals
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
-                                    Full-Cycle Development Services
-                                </li>
-                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
-                                     Quality Assurance and Security
-                                </li>
-                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>7.</span>
                                     Expertise Across Industries
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
+                                     Full-Cycle Development Services
+                                </li>
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>7.</span>
+                                    Quality Assurance and Security
+                                </li>
+                                <li style={{ marginBottom: '12px', color: '#ffffff' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>8.</span>
-                                   Transparent Communication and Timely Delivery
+                                    Transparent Communication and On-time Delivery
                                 </li>
                               </ul>
                             <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '30px' }}>
-                                Ready to unlock your business potential? Contact us now and let us be your Microsoft technology partner on your digital transformation journey.
+                                Looking for Applications that resonate with your target audience? Avail of our mobile app development services. Contact us today to discuss your project requirements. Our team of experts is eager to collaborate with you, understand your vision, and deliver a mobile app solution that drives innovation and growth in your industry. Let us be your reliable technology partner on your digital transformation journey.
                             </p>
                            </div>
                               </div>
@@ -280,7 +282,7 @@ const ServiceCardsSection = () => {
             </div>
             <div className="container">
                 <Swiper {...setting} modules={[Autoplay, Navigation, Pagination]} className="swiper service__slider">
-                    {serviceData7.filter((items: any) => items.page === "home_1").map((item: any) => (
+                    {service_data7.filter((items: any) => items.page === "home_1").map((item: any) => (
                         <SwiperSlide key={item.id} className="swiper-slide">
                             <div className="service__item" style={{
                                 backgroundColor: 'rgba(15, 122, 149, 0.15)',
@@ -334,7 +336,7 @@ const CTASection = () => {
                                 marginBottom: '2rem',
                                 lineHeight: '1.3'
                             }}>
-                                Revolutionise your business with custom software solutions.
+                                Revolutionize your business with Mobile App development solutions.
                             </h2>
                             <Link href="/contact" className="btn btn-primary" style={{
                                 backgroundColor: '#0f7a95',
@@ -1310,39 +1312,39 @@ const AboutSection = () => {
                                 ABOUT iFour Technolab
                             </h5>
                             <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginTop: '70px' }}>
-                                <span style={{ color: '#0f7a95' }}>Our Microsoft 365 Services</span>
+                                <span style={{ color: '#0f7a95' }}>Our Mobile App Development Approach</span>
                                  </h2>
                                                         <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                             With our extensive experience and expertise as a trusted software development partner, we have honed our skills in Microsoft 365 development. Our team of seasoned professionals is well-versed in leveraging the full potential of Microsoft 365 to deliver customized solutions that align perfectly with your business objectives. Our Microsoft 365 services include -
+                              As an Australian-based software development company, we understand the unique needs and challenges faced by businesses in Australia. Our bespoke software development services are designed to help you overcome these challenges and achieve your business objectives. Our custom software services can assist you with
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginTop: '15px' }}>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
-                                    Office 365 licenses
+                                    Discovery and planning
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
-                                     Office 365managed services
+                                     Design and prototyping
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
-                                    Migration from legacy email provider
+                                   Development and coding
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
-                                    Migration from google workspace
+                                    Testing and Quality Assurance
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
-                                    Migration from Exchange on-premises to Office 365
+                                    Deployment and Launch
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
                                     <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
-                                     Migration fromopensource email to Office 365
+                                     Post-Launch Support and Maintenance
                                 </li>
                             </ul>
                             <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#333', width: '100%', fontSize: '1.1rem', lineHeight: '1.8', marginTop: '20px' }}>
-                                Contact us today to leverage the full potential of Microsoft 365 platforms for your business.
+                                Contact us today to discuss how we can create a tailored software solution to drive innovation and growth for your organization.
                             </p>
                                  </div>
                               </div>
