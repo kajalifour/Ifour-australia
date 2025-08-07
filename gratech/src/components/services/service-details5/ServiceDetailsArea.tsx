@@ -681,12 +681,10 @@ const TechnologiesSection = () => {
                            style={{ 
                               width: '100%',
                               height: '100%',
-                              objectFit: 'contain',
+                              objectFit: 'fill',
                               borderRadius: '0',
                               transition: 'all 0.3s ease',
                               transform: 'translateZ(0px)',
-                              maxWidth: '92px',
-                              maxHeight: '92px'
                         }}
                         onMouseEnter={(e) => {
                            e.currentTarget.style.transform = 'translateZ(8px) scale(1.05)';
@@ -732,8 +730,8 @@ const MediaCoverageSection = () => {
                         style={{
                            backgroundColor: 'rgba(0, 0, 0, 0.05)',
                            borderRadius: '0',
-                           padding: '22px 14px',
-                           border: '1px solid rgba(0, 0, 0, 0.1)',
+                           padding: '0',
+                           border: '0',
                            transition: 'all 0.3s ease',
                            height: '120px',
                            backdropFilter: 'blur(10px)',
@@ -759,7 +757,7 @@ const MediaCoverageSection = () => {
                            style={{ 
                               width: '100%',
                               height: '100%',
-                              objectFit: 'contain',
+                              objectFit: 'fill',
                               borderRadius: '0',
                               transition: 'filter 0.3s ease'
                            }}

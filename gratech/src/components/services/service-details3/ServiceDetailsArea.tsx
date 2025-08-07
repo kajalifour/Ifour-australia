@@ -258,7 +258,7 @@ const BenefitsSection = () => {
                                     Expertise Across Industries
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>8.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>9.</span>
                                    Transparent Communication and Timely Delivery
                                 </li>
                                
@@ -664,7 +664,7 @@ const TechnologiesSection = () => {
                         style={{
                            backgroundColor: 'rgba(0, 0, 0, 0.05)',
                            borderRadius: '0',
-                           padding: '5px',
+                           padding: '0px',
                            border: '1px solid rgba(0, 0, 0, 0.1)',
                            transition: 'all 0.3s ease',
                            height: '102px',
@@ -693,12 +693,10 @@ const TechnologiesSection = () => {
                            style={{ 
                               width: '100%',
                               height: '100%',
-                              objectFit: 'contain',
+                              objectFit: 'fill',
                               borderRadius: '0',
                               transition: 'all 0.3s ease',
                               transform: 'translateZ(0px)',
-                              maxWidth: '92px',
-                              maxHeight: '92px'
                         }}
                         onMouseEnter={(e) => {
                            e.currentTarget.style.transform = 'translateZ(8px) scale(1.05)';
@@ -1345,11 +1343,11 @@ Our professionals can assist you with:
                                      Custom eCommerce functionality
                                 </li>
                                  <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>6.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>7.</span>
                                       Integration with multiple platforms
                                 </li>
                                  <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>6.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>8.</span>
                                      Payment gateway integration
                                 </li>
                             </ul>

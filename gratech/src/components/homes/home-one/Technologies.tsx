@@ -85,7 +85,7 @@ const Technologies = () => {
                            style={{
                               backgroundColor: 'rgba(0, 0, 0, 0.05)',
                               borderRadius: '0',
-                              padding: '5px',
+                              padding: '0',
                               border: '1px solid rgba(0, 0, 0, 0.1)',
                               transition: 'all 0.3s ease',
                               height: '102px',
@@ -114,12 +114,11 @@ const Technologies = () => {
                               style={{ 
                                  width: '100%',
                                  height: '100%',
-                                 objectFit: 'contain',
+                                 objectFit: 'fill',
+                                  display: 'block',
                                  borderRadius: '0',
                                  transition: 'all 0.3s ease',
                                  transform: 'translateZ(0px)',
-                                 maxWidth: '92px',
-                                 maxHeight: '92px'
                            }}
                            onMouseEnter={(e) => {
                               e.currentTarget.style.transform = 'translateZ(8px) scale(1.05)';

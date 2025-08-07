@@ -742,7 +742,7 @@ const MediaCoverageSection = () => {
                            backgroundColor: 'rgba(0, 0, 0, 0.05)',
                            borderRadius: '0',
                            padding: '22px 14px',
-                           border: '1px solid rgba(0, 0, 0, 0.1)',
+                           border: '0',
                            transition: 'all 0.3s ease',
                            height: '120px',
                            backdropFilter: 'blur(10px)',
@@ -768,7 +768,7 @@ const MediaCoverageSection = () => {
                            style={{ 
                               width: '100%',
                               height: '100%',
-                              objectFit: 'contain',
+                              objectFit: 'fill',
                               borderRadius: '0',
                               transition: 'filter 0.3s ease'
                            }}
