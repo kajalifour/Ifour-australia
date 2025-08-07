@@ -228,23 +228,23 @@ const BenefitsSection = () => {
                                   </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>1.</span>
                                      Unparalleled scalability
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>2.</span>
                                     Enhanced data security
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>3.</span>
                                       Seamless integration with Microsoft Products
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>4.</span>
                                     Geographically Distributed Data Centers
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>5.</span>
                                     Pay only for the resources you need
                                 </li>
                               </ul>
@@ -1308,39 +1308,39 @@ const AboutSection = () => {
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginTop: '15px' }}>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>1.</span>
                                     Server and licenses
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>2.</span>
                                       Cloud infrastructure migration service
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>3.</span>
                                    Cloud tenant migration service
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>4.</span>
                                     Cloud connectivity service
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>5.</span>
                                    Modern workplace service (AVD, Windows 365)
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>6.</span>
                                     Cloud identity services
                                 </li>
                                  <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>7.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>7.</span>
                                     Cost analysis and optimization services
                                 </li>
                                  <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>8.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>8.</span>
                                     Azure managed services
                                 </li>
                                  <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>9.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>9.</span>
                                     Cloud security and assessments
                                 </li>
                             </ul>

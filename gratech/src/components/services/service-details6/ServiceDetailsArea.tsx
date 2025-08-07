@@ -231,23 +231,23 @@ const BenefitsSection = () => {
                                   </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>1.</span>
                                       Enhanced Security and reduced fraud.
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>2.</span>
                                     Transparency and Trust with a shared view
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>3.</span>
                                       Improved Efficiency and Cost Savings
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>4.</span>
                                     Self-executing agreements and no intermediaries
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>5.</span>
                                      Traceability and Supply Chain Optimization
                                 </li>
                               </ul>
@@ -1308,23 +1308,23 @@ const AboutSection = () => {
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginTop: '15px' }}>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>1.</span>
                                     Blockchain consulting
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>2.</span>
                                       Smart contract development
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>3.</span>
                                    DApps development services
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>4.</span>
                                     Cryptocurrency development
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>5.</span>
                                    Blockchain integration and Migration
                                 </li>
                             </ul>

@@ -228,35 +228,35 @@ const BenefitsSection = () => {
                                  At iFour, we believe in the power of customization. Our Microsoft 365 development services are specifically tailored to meet the unique needs of Australian businesses. We take the time to understand your organization's requirements, processes, and objectives to create bespoke solutions that drive productivity, collaboration, and growth. Given below are the reasons to choose iFour.</p> </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>1.</span>
                                      Local Understanding, Global Expertise
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>2.</span>
                                     Tailored Solutions for Your Business
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>3.</span>
                                      Certified Microsoft Solutions Partner
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>4.</span>
                                     120+ veteran professionals
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>5.</span>
                                     Full-Cycle Development Services
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>6.</span>
                                      Quality Assurance and Security
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>7.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>7.</span>
                                     Expertise Across Industries
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>8.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>8.</span>
                                    Transparent Communication and Timely Delivery
                                 </li>
                               </ul>
@@ -1317,27 +1317,27 @@ const AboutSection = () => {
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginTop: '15px' }}>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>1.</span>
                                     Office 365 licenses
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>2.</span>
                                      Office 365managed services
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>3.</span>
                                     Migration from legacy email provider
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>4.</span>
                                     Migration from google workspace
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>5.</span>
                                     Migration from Exchange on-premises to Office 365
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>6.</span>
                                      Migration fromopensource email to Office 365
                                 </li>
                             </ul>

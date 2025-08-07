@@ -231,43 +231,43 @@ We create Desktop applications that offer exceptional performance, security, and
 At iFour, we strive to create long-term, mutually beneficial partnerships with our clients and develop desktop apps that help them stay ahead of the competition. Our service benefits include:</p> </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>1.</span>
                                     Tailor-made solutions
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>2.</span>
                                     Dedicated software development team
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>3.</span>
                                     Business-friendly hiring models
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>4.</span>
                                     Competitive pricing model
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>5.</span>
                                     Teams at scale
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>6.</span>
                                      Cost-effective
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>7.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>7.</span>
                                     Rapid delivery
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>8.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>8.</span>
                                     100% transparency
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>8.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>8.</span>
                                     Effortless communication
                                 </li>
                                 <li style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '12px', fontWeight: 'bold' }}>8.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>8.</span>
                                     Flawless design
                                 </li>
                               </ul>
@@ -1328,27 +1328,27 @@ const AboutSection = () => {
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginTop: '15px' }}>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>1.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>1.</span>
                                     Custom Desktop Application Development
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>2.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>2.</span>
                                      Legacy Application Modernization
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>3.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>3.</span>
                                    Application Integration
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>4.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>4.</span>
                                     Application Maintenance and Support
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>5.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>5.</span>
                                     Cross Platform Desktop App Development
                                 </li>
                                 <li style={{ marginBottom: '8px', color: '#333', fontSize: '0.9rem' }}>
-                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '12px', fontWeight: 'bold' }}>6.</span>
+                                    <span style={{ color: '#0f7a95', marginRight: '8px', fontSize: '16px', fontWeight: 'bold' }}>6.</span>
                                      UWP App Development
                                 </li>
                             </ul>
