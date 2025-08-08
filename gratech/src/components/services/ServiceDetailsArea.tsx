@@ -249,7 +249,7 @@ const AboutSection = ({ data }: { data: ServiceDetailsData }) => {
                                 {data.aboutData?.description}
                             </p>
                             {data.aboutData?.services && data.aboutData.services.length > 0 && (
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                                <ul style={{ listStyle: 'none', padding: 0, margin: '20px 0 0 0' }}>
                                     {data.aboutData.services.map((service, index) => (
                                         <li key={index} style={{ marginBottom: '12px', color: '#333' }}>
                                             <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>{index + 1}.</span>

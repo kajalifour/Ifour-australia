@@ -136,8 +136,10 @@ const ServiceDetails = () => {
          <HeaderOne />
          <main>
             <BreadCrumb sub_title="Mobile App Development Company" title="Mobile App Development Company" />
-            <ServiceDetailsArea data={serviceDetailsData} />
-            <BenefitsSection data={serviceDetailsData} />
+            <ServiceDetailsArea 
+                data={serviceDetailsData} 
+                BenefitsSection={<BenefitsSection data={serviceDetailsData} />} 
+            />
          </main>
          <FooterOne />
       </>

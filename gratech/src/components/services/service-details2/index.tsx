@@ -50,7 +50,7 @@ const serviceDetailsData = {
         title: "Our Desktop App Services",
         subtitle: "",
         description: "As an Australian-based desktop App development company, we have comprehensive understanding of the unique needs and user demands in Australia. At iFour, we offer a comprehensive range of desktop application development services to address your unique business needs. Our team of skilled developers and designers leverage the latest technologies and frameworks to create robust and user-friendly desktop applications. Our services include:",
-        additionalInfo: "",
+        additionalInfo: "Whether you need a new desktop application or want to modernize existing legacy systems, our development team ensures optimal performance, security, and user experience. We leverage modern frameworks and technologies to create applications that are not only feature-rich but also maintainable and scalable for future growth.",
         services: [
             "Custom Desktop Application Development",
             "Legacy Application Modernization",

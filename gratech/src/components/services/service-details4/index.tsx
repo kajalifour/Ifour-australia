@@ -136,8 +136,10 @@ const ServiceDetails = () => {
          <HeaderOne />
          <main>
             <BreadCrumb sub_title="Microsoft 365 Development Company" title="Microsoft 365 Development Company" />
-            <ServiceDetailsArea data={serviceDetailsData} />
-            <BenefitsSection data={serviceDetailsData} />
+            <ServiceDetailsArea 
+                data={serviceDetailsData} 
+                BenefitsSection={<BenefitsSection data={serviceDetailsData} />} 
+            />
          </main>
          <FooterOne />
       </>

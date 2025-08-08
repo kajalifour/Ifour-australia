@@ -12,20 +12,20 @@ import shape_3 from "@/assets/images/shape/about-circle-helper.png";
 import shape_4 from "@/assets/images/shape/about-two-circle.png";
 
 const serviceDetailsData = {
-    title: "Ecommerce Website Development",
-    subtitle: "Services",
-    description: "iFour Technolab is a premier ecommerce website development company in Australia, specializing in creating powerful, user-friendly, and scalable online stores that drive sales and enhance customer experience. Our expert team delivers cutting-edge ecommerce solutions that help businesses thrive in the digital marketplace.",
+    title: "Retail Software Development Company Australia",
+    subtitle: "",
+    description: "Welcome to iFour, your trusted partner for top-notch E-commerce development services in Australia. In the fast-paced world of digital commerce, having a robust and user-friendly online platform is essential to stay ahead of the competition and reach a broader audience. With our mastery in e-commerce software development, we are committed to empowering your online success. Let's explore how our tailored E-commerce solutions can transform your business and elevate your brand presence in the Australian market.\n\nWe recognize the value of having both local knowledge and worldwide competence, therefore we make sure that our solutions not only satisfy your particular demands but also follow industry best practices. When you pick iFour, you can count on outstanding outcomes that promote growth and distinguish your company from the competition. Count on us to be your successful technology partner.",
+    additionalInfo: "",
     benefits: [
-        "Tailor-made solutions",
-        "Dedicated software development team",
-        "Business-friendly hiring models",
-        "Competitive pricing model",
-        "Teams at scale",
-        "Cost-effective",
-        "Rapid delivery",
-        "100% transparency",
-        "Effortless communication",
-        "Flawless design"
+        "Local Understanding, Global Expertise",
+        "Microsoft Solutions Partner",
+        "Tailored Solutions for Your Business",
+        "120+ veteran professionals",
+        "Full-Cycle Development Services",
+        "Quality Assurance and Security",
+        "Transparent Communication and Timely Delivery",
+        "Expertise Across Industries",
+        "Transparent Communication and Timely Delivery",
     ],
     services: [
         "Custom Ecommerce Development",
@@ -36,7 +36,7 @@ const serviceDetailsData = {
         "Ecommerce Maintenance and Support"
     ],
     serviceData: serviceData4,
-    showServiceCards: true,
+    showServiceCards: false,
     showProjects: true,
     showClients: true,
     showTechnologies: true,
@@ -47,25 +47,27 @@ const serviceDetailsData = {
     showTechnologyPartners: true,
     showAbout: true,
     aboutData: {
-        title: "Ecommerce Website Development",
-        subtitle: "Solutions That Drive Sales",
-        description: "Our ecommerce website development expertise encompasses the entire spectrum of online retail solutions, from custom platform development to third-party integrations. We specialize in creating user-friendly, secure, and scalable ecommerce websites that provide seamless shopping experiences and maximize conversion rates.",
-        additionalInfo: "Whether you're launching a new online store or upgrading an existing one, our development team ensures that your ecommerce platform is equipped with the latest features, mobile responsiveness, and security measures. We focus on creating intuitive user interfaces, streamlined checkout processes, and robust backend systems that support your business growth.",
+        title: "Our E-commerce development Services",
+        subtitle: "",
+        description: "At iFour, more than 120 seasoned individuals make up our team, and they are enthusiastic about developing unique, custom software that helps organizations succeed in the rapidly evolving digital environment.Our professionals can assist you with:",
+        additionalInfo: "Contact us today to discuss your unique needs and how we can create a tailored solution to drive innovation and growth for your e-commerce business.",
         services: [
-            "Custom Ecommerce Development",
-            "Ecommerce Platform Migration",
-            "Payment Gateway Integration",
-            "Inventory Management Systems",
-            "Mobile Commerce Solutions",
-            "Ecommerce Maintenance and Support"
+            "E-commerce App development",
+            "E-commerce website design and development",
+            " Custom eCommerce storefront designs",
+            "E-commerce marketplace development",
+            " Plugin and module development",
+            "Custom eCommerce functionality",
+            "Integration with multiple platforms",
+            "Payment gateway integration"
         ]
     },
     benefitsData: {
         title: "WHO WE ARE",
-        subtitle: "Benefits of Ecommerce Website Development",
-        description: "We create powerful ecommerce websites that offer exceptional performance, security, and robust processing capabilities. Our ecommerce solutions grant you complete control over the user interface and user experience, allowing for tailored and customized shopping experiences that align precisely with your brand and business requirements.",
+        subtitle: "Why Choose iFour?",
+        description: "At iFour, we are not just another software development company – we are your strategic partner in conquering the Australian market. Our team boasts an in-depth knowledge of the Australian landscape, giving us a unique advantage in crafting solutions that truly speak to your target audience. But we don't stop there! Embracing a global outlook, we stay ahead of the game by keeping a finger on the pulse of industry trends and cutting-edge technologies. With iFour, your software will not only meet Australian standards but will also soar to international acclaim.",
         additionalDescription: "",
-        conclusion: "Are you ready to unleash the full potential of your company with our ecommerce website development services? Contact us right away to discuss your business needs and get a powerful online store solution."
+        conclusion: "Ready to unlock the full potential of your Retail business? Contact us now"
     }
 };
 
@@ -136,8 +138,10 @@ const ServiceDetails = () => {
          <HeaderOne />
          <main>
             <BreadCrumb sub_title="Ecommerce Website Development Company" title="Ecommerce Website Development Company" />
-            <ServiceDetailsArea data={serviceDetailsData} />
-            <BenefitsSection data={serviceDetailsData} />
+            <ServiceDetailsArea 
+                data={serviceDetailsData} 
+                BenefitsSection={<BenefitsSection data={serviceDetailsData} />} 
+            />
          </main>
          <FooterOne />
       </>
