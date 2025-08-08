@@ -1,4 +1,5 @@
 "use client"
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Image from "next/image";
@@ -110,7 +111,7 @@ interface ServiceDetailsData {
 
 interface ServiceDetailsAreaProps {
    data: ServiceDetailsData;
-   BenefitsSection?: React.ComponentType<{ data: ServiceDetailsData }>;
+   BenefitsSection?: React.ReactNode;
 }
 
 const testi_data: TestimonialDataType[] = [
@@ -1063,7 +1064,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection }: ServiceDetailsAreaProps) 
             <MainServiceSection data={data} />
             
             {/* Benefits Section */}
-            {BenefitsSection && <BenefitsSection data={data} />}
+            {BenefitsSection}
             
             {/* About Section */}
             <AboutSection data={data} />

@@ -20,16 +20,14 @@ const serviceDetailsData = {
     subtitle: "Solution",
     description: "Welcome to iFour, your trusted partner for custom software development services in Australia. As a Microsoft Solutions Partner, we bring a wealth of expertise and credibility to every project we undertake. With over 10 years of market experience, we have honed our skills and perfected our craft, making us a reliable choice for businesses seeking top-notch software solutions.\n\nOur team consists of over 120 veteran professionals who are passionate about creating innovative and tailor-made software that propels businesses forward in the ever-changing digital landscape.\n\nWe understand the importance of local understanding and global expertise, ensuring that our solutions not only meet your unique needs but also align with industry best practices. When you choose iFour, you can expect exceptional results that drive growth and set your business apart from the competition. Trust us to be your technology partner on the path to success.",
     benefits: [
-        "Tailor-made solutions",
-        "Dedicated software development team",
-        "Business-friendly hiring models",
-        "Competitive pricing model",
-        "Teams at scale",
-        "Cost-effective",
-        "Rapid delivery",
-        "100% transparency",
-        "Effortless communication",
-        "Flawless design"
+        "Local Understanding, Global Expertise",
+        "Tailored Solutions for Your Business",
+        "120+ veteran professionals",
+        "Certified Microsoft Solutions Partner",
+        "Full-Cycle Development Services",
+        "Expertise Across Industries",
+        "Quality Assurance and Security",
+        "Transparent Communication and Timely Delivery",
     ],
     services: [
         "Product development",
@@ -72,7 +70,7 @@ const serviceDetailsData = {
         title: "WHO WE ARE",
         subtitle: "Why Choose iFour?",
         description: "At iFour, we have in-depth knowledge of the Australian market, allowing us to deliver solutions that resonate with your target audience. We combine this local understanding with our global expertise, staying up-to-date with industry trends and technologies to ensure your software meets global standards. Given below are the reasons to choose iFour.",
-        additionalDescription: "At iFour, we strive to create long-term, mutually beneficial partnerships with our clients and develop applications that help them stay ahead of the competition. Our service benefits include:",
+        additionalDescription: "",
         conclusion: "Ready to unlock the full potential of your business with custom software development? Contact iFour today to discuss your project requirements. Our team of experts is eager to collaborate with you, understand your vision, and deliver a software solution that drives innovation and growth in your industry. Let us be your trusted technology partner on your digital transformation journey."
     }
 };
@@ -133,7 +131,7 @@ const BenefitsSection = ({ data }: { data: any }) => {
                                     {data.benefitsData?.description || "We create applications that offer exceptional performance, security, and robust processing capabilities. Our applications grant you complete control over the user interface and user experience, allowing for tailored and customized experiences that align precisely with your preferences and branding."}
                                 </p>
                                 <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '20px' }}>
-                                    {data.benefitsData?.additionalDescription || "At iFour, we strive to create long-term, mutually beneficial partnerships with our clients and develop applications that help them stay ahead of the competition. Our service benefits include:"}
+                                    {data.benefitsData?.additionalDescription || ""}
                                 </p>
                             </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 20px 0' }}>
@@ -161,7 +159,10 @@ const ServiceDetails = () => {
             <HeaderOne />
             <main>
                 <BreadCrumb sub_title="Custom Software Development Company" title="Custom Software Development Company" />
-                <ServiceDetailsArea data={serviceDetailsData} BenefitsSection={BenefitsSection} />
+                <ServiceDetailsArea 
+                    data={serviceDetailsData} 
+                    BenefitsSection={<BenefitsSection data={serviceDetailsData} />} 
+                />
             </main>
             <FooterOne />
         </>

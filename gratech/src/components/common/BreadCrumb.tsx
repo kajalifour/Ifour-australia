@@ -82,7 +82,6 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
                <Link href="/">Home</Link><span><i className="fa-regular fa-angles-right mx-2"></i>{sub_title}</span>
             </div>
             {(title === "Custom Software Development Company" || 
-              title === "Custom Product Development Company" ||
               title === "Web Application Development Company" ||
               title === "Cloud Application Development Company" ||
               title === "Business Line Solutions Company" ||

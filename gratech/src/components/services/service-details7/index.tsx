@@ -64,7 +64,7 @@ const serviceDetailsData = {
         title: "WHO WE ARE",
         subtitle: "Benefits of Mobile App Development",
         description: "We create powerful mobile applications that offer exceptional performance, security, and robust processing capabilities. Our mobile app solutions grant you complete control over the user interface and user experience, allowing for tailored and customized mobile experiences that align precisely with your business requirements and user preferences.",
-        additionalDescription: "At iFour, we strive to create long-term, mutually beneficial partnerships with our clients and develop mobile applications that help them stay ahead of the competition. Our mobile app development benefits include:",
+        additionalDescription: "",
         conclusion: "Are you ready to unleash the full potential of your company with our mobile app development services? Contact us right away to discuss your business needs and get a powerful mobile solution."
     }
 };
@@ -108,7 +108,7 @@ const BenefitsSection = ({ data }: { data: any }) => {
                                     {data.benefitsData?.description || "We create applications that offer exceptional performance, security, and robust processing capabilities. Our applications grant you complete control over the user interface and user experience, allowing for tailored and customized experiences that align precisely with your preferences and branding."}
                                 </p>
                                 <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                    {data.benefitsData?.additionalDescription || "At iFour, we strive to create long-term, mutually beneficial partnerships with our clients and develop applications that help them stay ahead of the competition. Our service benefits include:"}
+                                    {data.benefitsData?.additionalDescription || ""}
                                 </p>
                             </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
