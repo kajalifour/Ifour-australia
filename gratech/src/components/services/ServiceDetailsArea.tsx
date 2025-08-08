@@ -90,10 +90,27 @@ interface ServiceDetailsData {
    showBlog?: boolean;
    showAgileApproach?: boolean;
    showTechnologyPartners?: boolean;
+   showAbout?: boolean;
+   aboutData?: {
+      title: string;
+      subtitle: string;
+      description: string;
+      additionalInfo?: string;
+      image?: any;
+      services?: string[];
+   };
+   benefitsData?: {
+      title?: string;
+      subtitle?: string;
+      description?: string;
+      additionalDescription?: string;
+      conclusion?: string;
+   };
 }
 
 interface ServiceDetailsAreaProps {
    data: ServiceDetailsData;
+   BenefitsSection?: React.ComponentType<{ data: ServiceDetailsData }>;
 }
 
 const testi_data: TestimonialDataType[] = [
@@ -191,9 +208,11 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
                                 lineHeight: '1.8',
                                 color: '#333'
                             }}>
-                                <p style={{ marginBottom: '1.5rem' }}>
-                                    {data.description}
-                                </p>
+                                {data.description.split('\n\n').map((paragraph, index) => (
+                                    <p key={index} style={{ marginBottom: '1.5rem' }}>
+                                        {paragraph}
+                                    </p>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -204,59 +223,62 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
 };
 
 // Benefits Section Component
-const BenefitsSection = ({ data }: { data: ServiceDetailsData }) => {
-   return (
-        <section id="success-section" className="about-two-area" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', paddingTop: '50px', paddingBottom: '20px' }}>
+
+
+// About Section Component
+const AboutSection = ({ data }: { data: ServiceDetailsData }) => {
+    if (!data.showAbout) return null;
+    return (
+        <section id="about-section" className="about-area sub-bg pt-120 pb-120">
+            <div className="about__shape wow slideInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
+                <Image src={shape_5} alt="shape" />
+            </div>
             <div className="container">
-               <div className="row g-4">
-                    <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="about-two__left-item" style={{ marginLeft: '30px', marginTop: '200px', transform: 'scale(1.3)', transformOrigin: 'center center' }}>
-                            <div className="dots">
-                                <Image className="sway_Y__animation" src={shape_2} alt="shape" />
-                            </div>
-                            <div className="shape-halper">
-                                <Image className="sway__animation" src={shape_3} alt="shape" />
-                            </div>
-                            <div className="image big-image">
-                                <Image src={about_thumb1} alt="image" />
-                            </div>
-                            <div className="image sm-image">
-                                <Image src={about_thumb2} alt="image" />
-                              </div>
-                            <div className="circle-shape">
-                                <Image className="animation__rotate" src={shape_4} alt="shape" />
-                           </div>
+                <div className="row g-4">
+                    <div className="col-xl-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div className="section-header mb-40">
+                            <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                                <Image className="me-1" src={shape_1} alt="icon" />
+                                ABOUT iFour Technolab
+                            </h5>
+                            <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginTop: '70px' }}>
+                                <span style={{ color: '#0f7a95' }}>{data.aboutData?.title}</span> {data.aboutData?.subtitle}
+                            </h2>
+                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                                {data.aboutData?.description}
+                            </p>
+                            {data.aboutData?.services && data.aboutData.services.length > 0 && (
+                                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                                    {data.aboutData.services.map((service, index) => (
+                                        <li key={index} style={{ marginBottom: '12px', color: '#333' }}>
+                                            <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>{index + 1}.</span>
+                                            {service}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                            {data.aboutData?.additionalInfo && (
+                                <p className="wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms" style={{ marginTop: '20px' }}>
+                                    {data.aboutData.additionalInfo}
+                                </p>
+                            )}
                         </div>
                     </div>
-                    <div className="col-xl-6">
-                        <div className="about-two__right-item wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginRight: '0', transform: 'none', paddingLeft: '20px', paddingRight: '10px' }}>
-                            <div className="section-header mb-30">
-                                <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                                    <Image className="me-1" src={shape_1} alt="icon" />
-                                    WHO WE ARE
-                                </h5>
-                                <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                                    <span style={{ color: '#0f7a95' }}>Benefits of our services</span> 
-                                </h2>
-                                <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8' }}>
-We create applications that offer exceptional performance, security, and robust processing capabilities. Our applications grant you complete control over the user interface and user experience, allowing for tailored and customized experiences that align precisely with your preferences and branding.                                </p>                          
-                                                           <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8' }}>
-At iFour, we strive to create long-term, mutually beneficial partnerships with our clients and develop applications that help them stay ahead of the competition. Our service benefits include:</p> </div>
-                            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                {data.benefits.map((benefit, index) => (
-                                    <li key={index} style={{ marginBottom: '12px', color: '#ffffff' }}>
-                                        <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>{index + 1}.</span>
-                                        {benefit}
-                                    </li>
-                                ))}
-                              </ul>
-                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '30px' }}>
-                                Are you ready to unleash the full potential of your company with our services? Contact us right away to discuss your business needs.
-                            </p>
-                           </div>
-                              </div>
-                           </div>
+                    <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div className="about__left-item">
+                            <div className="image big-image" style={{ marginTop: '70px' }}>
+                                <Image src={data.aboutData?.image || about_thumb3} alt="image" />
+                            </div>
+                            <div className="image sm-image" style={{ marginTop: '70px' }}>
+                                <Image src={data.aboutData?.image || about_thumb4} alt="image" />
+                            </div>
+                            <div className="circle-shape">
+                                <Image src={shape_6} alt="shape" />
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };
@@ -1034,14 +1056,17 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
 };
 
 // Main ServiceDetailsArea Component
-const ServiceDetailsArea = ({ data }: ServiceDetailsAreaProps) => {
+const ServiceDetailsArea = ({ data, BenefitsSection }: ServiceDetailsAreaProps) => {
     return (
         <>
             {/* Main Service Section */}
             <MainServiceSection data={data} />
             
             {/* Benefits Section */}
-            <BenefitsSection data={data} />
+            {BenefitsSection && <BenefitsSection data={data} />}
+            
+            {/* About Section */}
+            <AboutSection data={data} />
             
             {/* Service Cards Section */}
             <ServiceCardsSection data={data} />
