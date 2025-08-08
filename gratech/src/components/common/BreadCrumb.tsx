@@ -42,7 +42,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             case "Blockchain Development Company":
             return {
                description: "need to add this.",
-               bbuttonText: "Get In Touch"
+               buttonText: "Get In Touch"
             };
             case "Mobile App Development Company":
             return {
@@ -51,7 +51,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             };
            case "IoT Software Development Company":
             return {
-               description: "need to add this.",
+               description: "iFour Technolab, your trusted IoT software development company in Australia, specializes in creating innovative IoT solutions that connect devices, collect data, and drive intelligent business decisions. Our expert team delivers cutting-edge IoT applications that transform your business operations and enhance user experiences.",
                buttonText: "Get In Touch"
             };
          default:
