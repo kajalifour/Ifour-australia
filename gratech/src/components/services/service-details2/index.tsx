@@ -14,7 +14,7 @@ import shape_4 from "@/assets/images/shape/about-two-circle.png";
 const serviceDetailsData = {
     title: "Desktop App Development",
     subtitle: "Services",
-    description: "In today's digital world, desktop applications continue to play a crucial role in enhancing productivity, streamlining operations, and delivering seamless user experiences. iFour Technolab is a leading desktop application development company specializing in creating robust and customized applications that cater to the unique needs of businesses in Australia.",
+    description: "Desktop App Development Services: In today's digital world, desktop applications continue to play a crucial role in enhancing productivity, streamlining operations, and delivering seamless user experiences. iFour Technolab is a leading desktop application development company specializing in creating robust and customized applications that cater to the unique needs of businesses in Australia.\n\nYour company's success begins with selecting the proper provider for application development. Millions of applications enter the market with the expectation of success, yet only a small percentage of them are successful.\n\niFour meticulously handles everything from design through production and release. We have decades of experience and have provided flawless and strong desktop apps to a wide range of industrial clients.\n\nEven, if you have existing legacy desktop applications that need to be updated or modernized, we can help. Our experts analyze your legacy system, identify areas for improvement, and provide a roadmap for transforming your outdated application into a modern and efficient solution.",
     benefits: [
         "Tailor-made solutions",
         "Dedicated software development team",
@@ -47,10 +47,10 @@ const serviceDetailsData = {
     showTechnologyPartners: true,
     showAbout: true,
     aboutData: {
-        title: "Desktop Application Development",
-        subtitle: "Powerful Solutions for Modern Businesses",
-        description: "Our desktop application development expertise spans across multiple platforms and technologies, enabling us to create powerful, user-friendly applications that enhance productivity and streamline business operations. We specialize in developing cross-platform desktop applications that work seamlessly across Windows, macOS, and Linux environments.",
-        additionalInfo: "Whether you need a new desktop application or want to modernize existing legacy systems, our development team ensures optimal performance, security, and user experience. We leverage modern frameworks and technologies to create applications that are not only feature-rich but also maintainable and scalable for future growth.",
+        title: "Our Desktop App Services",
+        subtitle: "",
+        description: "As an Australian-based desktop App development company, we have comprehensive understanding of the unique needs and user demands in Australia. At iFour, we offer a comprehensive range of desktop application development services to address your unique business needs. Our team of skilled developers and designers leverage the latest technologies and frameworks to create robust and user-friendly desktop applications. Our services include:",
+        additionalInfo: "",
         services: [
             "Custom Desktop Application Development",
             "Legacy Application Modernization",
@@ -136,8 +136,10 @@ const ServiceDetails2 = () => {
             <HeaderOne />
             <main>
                 <BreadCrumb sub_title="Desktop Application Development Company" title="Desktop Application Development Company" />
-                <ServiceDetailsArea data={serviceDetailsData} />
-                <BenefitsSection data={serviceDetailsData} />
+                <ServiceDetailsArea 
+                    data={serviceDetailsData} 
+                    BenefitsSection={<BenefitsSection data={serviceDetailsData} />} 
+                />
             </main>
             <FooterOne />
         </>
