@@ -12,28 +12,26 @@ import shape_3 from "@/assets/images/shape/about-circle-helper.png";
 import shape_4 from "@/assets/images/shape/about-two-circle.png";
 
 const serviceDetailsData = {
-    title: "Microsoft Azure Cloud Services",
-    subtitle: "Services",
-    description: "iFour Technolab is a premier Microsoft Azure cloud services company in Australia, specializing in designing, implementing, and managing cloud solutions that drive business transformation. Our expert team delivers scalable, secure, and cost-effective Azure solutions that help businesses leverage the full power of cloud computing.",
+    title: "Software Development Company ",
+    subtitle: "Australia",
+    description: "iFour Technolab is a reliable partner for cloud computing and migration services. With over ten years of experience as a Microsoft Solutions Partner, we offer a depth of expertise and credibility to every project we tackle. We have developed our abilities and mastered our art, making us a dependable choice for organizations looking for high-quality software solutions.\n\nWe have more than 120 veteran experts that are passionate about developing creative and custom software solutions that move organizations forward in the ever-changing digital market.\n\nAs an Australian software firm, we realize the value of local knowledge and worldwide expertise in ensuring that our solutions not only satisfy your specific requirements but also adhere to industry best practices. \n\n Contact us today to schedule a consultation and embark on your journey to the cloud with Microsoft Azure. Let us empower your Australian business with scalability, security, and innovation like never before.",
     benefits: [
-        "Tailor-made solutions",
-        "Dedicated software development team",
-        "Business-friendly hiring models",
-        "Competitive pricing model",
-        "Teams at scale",
-        "Cost-effective",
-        "Rapid delivery",
-        "100% transparency",
-        "Effortless communication",
-        "Flawless design"
+        "Unparalleled scalability",
+        "Enhanced data security",
+        "Seamless integration with Microsoft Products",
+        "Geographically Distributed Data Centers",
+        "Pay only for the resources you need"
     ],
     services: [
-        "Azure Cloud Migration",
-        "Azure App Development",
-        "Azure DevOps Services",
-        "Azure Infrastructure Setup",
-        "Azure Security & Compliance",
-        "Azure Monitoring & Support"
+        "Server and licenses",
+        "Cloud infrastructure migration service",
+        "Cloud tenant migration service",
+        "Cloud connectivity service",
+        "Modern workplace service (AVD, Windows 365)",
+        "Cloud identity services",
+        "Cost analysis and optimization services",
+        "Azure managed services",
+        "Cloud security and assessments"
     ],
     serviceData: serviceData7,
     showServiceCards: true,
@@ -47,25 +45,28 @@ const serviceDetailsData = {
     showTechnologyPartners: true,
     showAbout: true,
     aboutData: {
-        title: "Microsoft Azure Cloud Services",
-        subtitle: "Transforming Business Through Cloud Innovation",
-        description: "Our Microsoft Azure cloud services expertise spans the entire cloud journey, from initial planning and migration to ongoing optimization and management. We specialize in designing and implementing scalable, secure, and cost-effective Azure solutions that drive business transformation and digital innovation.",
-        additionalInfo: "Whether you're migrating existing applications to Azure or building new cloud-native solutions, our team ensures optimal performance, security, and cost efficiency. We focus on creating robust cloud architectures that support your business growth while maintaining compliance and operational excellence.",
+        title: "Microsoft Azure Services",
+        subtitle: "",
+        description: "Microsoft Azure provides unmatched scalability, allowing your business to grow effortlessly. Whether you're a startup or an enterprise, Azure's flexible infrastructure can accommodate your expanding needs, ensuring your applications and services can scale seamlessly. Take a look at our Microsoft Azure Services tailored for Australian Businesses:",
+        additionalInfo: "Contact us today to discuss how we can create a tailored software solution to drive innovation and growth for your organization.",
         services: [
-            "Azure Cloud Migration",
-            "Azure App Development",
-            "Azure DevOps Services",
-            "Azure Infrastructure Setup",
-            "Azure Security & Compliance",
-            "Azure Monitoring & Support"
+        "Server and licenses",
+        "Cloud infrastructure migration service",
+        "Cloud tenant migration service",
+        "Cloud connectivity service",
+        "Modern workplace service (AVD, Windows 365)",
+        "Cloud identity services",
+        "Cost analysis and optimization services",
+        "Azure managed services",
+        "Cloud security and assessments"
         ]
     },
     benefitsData: {
         title: "WHO WE ARE",
-        subtitle: "Benefits of Microsoft Azure Cloud Services",
-        description: "We create powerful Azure cloud solutions that offer exceptional performance, security, and robust processing capabilities. Our Azure cloud services grant you complete control over the cloud infrastructure and user experience, allowing for tailored and customized cloud experiences that align precisely with your business requirements and scalability needs.",
+        subtitle: "Why Choose Microsoft Azure for Your Australian Business?",
+        description: "At iFour, we understand that modern businesses require flexible, scalable, and secure cloud solutions to stay ahead in today's competitive landscape. That's why we highly recommend Microsoft Azure, a cutting-edge cloud computing platform offering extensive services designed to elevate your business to new heights. Some of the benefits of Azure cloud services include:",
         additionalDescription: "",
-        conclusion: "Are you ready to unleash the full potential of your company with our Microsoft Azure cloud services? Contact us right away to discuss your business needs and get a powerful cloud solution."
+        conclusion: "Ready to scale your business with Microsoft Azure cloud solutions? Contact us right away to discuss your requirements. Our team of experts is eager to work with you, understand your plan, and deliver solutions that drive innovation and growth in your industry. \n\n Let us be your trusted technology partner on your digital transformation journey."
     }
 };
 
