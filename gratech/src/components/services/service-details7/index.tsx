@@ -56,10 +56,10 @@ const serviceDetailsData = {
         services: [
             "iOS App Development",
             "Android App Development",
-            "Cross-Platform Development",
-            "App Maintenance & Support",
-            "App Store Optimization",
-            "Mobile App Testing"
+            "Xamarin App Development",
+            "React Native App Development",
+            "Hybrid App Development",
+            "Cross-platform App Development"
         ]
     },
     benefitsData: {

@@ -101,10 +101,10 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
             // Mobile App Development Services (service-details7)
             "iOS App Development": "Build for Apple's ecosystem, our team delivers sleek and intuitive solutions for iOS app development. With extensive experience in building iOS solutions, our team crafts fully functional app that satisfies your needs.",
             "Android App Development": "Our team holds the necessary expertise in Android app development. With a focus on smooth user experience and advanced functionalities, we build Android apps that help you grow in this competitive market.",
-            "Cross-Platform Development": "Reach a wider audience without spending too much time and money with cross-platform app development services. We craft cross-platform solutions using technologies like React Native to help you enjoy a native-like performance.",
-            "App Maintenance & Support": "Comprehensive maintenance and support services to keep your mobile applications running smoothly. We provide regular updates, bug fixes, and performance optimizations.",
-            "App Store Optimization": "Optimize your mobile apps for better visibility and downloads in app stores. Our ASO services help improve your app's ranking and discoverability.",
-            "Mobile App Testing": "Thorough testing services to ensure your mobile applications work flawlessly across all devices and platforms. We provide comprehensive quality assurance for optimal user experience."
+            "Xamarin App Development": "Get high-performing mobile apps that provide a smooth user experience across Android, iOS, and Windows platforms with our Xamarin app development services. Our team is proficient in building robust solutions that meet your business goals.",
+            "React Native App Development": "Enjoy cross-platform mobile apps having native capabilities with React Native app development. Our programmers will help you build high-performing apps that suit your unique business needs.",
+            "Hybrid App Development": "Get the features of HTML5 and native worlds with our Hybrid app development. With hybrid solutions, you can get a mobile app that seamlessly works across devices like iOS, Android, desktop, and laptop and gives a smooth user experience.",
+            "Cross-platform App Development": "Reach a wider audience without spending too much time and money with cross-platform app development services. We craft cross-platform solutions using technologies like React Native to help you enjoy a native-like performance."
         };
 
         servicesToDisplay = services.slice(0, 6).map((service: string, index: number) => ({
@@ -173,12 +173,17 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                              }}>
                             <div className="service-two__item wow fadeInUp" 
                                  data-wow-delay={`${index * 200}ms`} 
-                                 data-wow-duration="1500ms">
+                                 data-wow-duration="1500ms"
+                                 style={{
+                                     height: '100%',
+                                     display: 'flex',
+                                     flexDirection: 'column'
+                                 }}>
                                 {/* Service Image */}
                                 <div className="image">
                                     <div style={{
                                         width: '100%',
-                                        height: '200px',
+                                        height: '100px',
                                         background: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',
                                         display: 'flex',
                                         alignItems: 'center',
@@ -188,7 +193,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                     }}>
                                         {/* Placeholder icon for the image area */}
                                         <div style={{
-                                            fontSize: '48px',
+                                            fontSize: '32px',
                                             color: '#ffffff',
                                             opacity: '0.8'
                                         }}>
@@ -213,7 +218,12 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                 </div>
 
                                 {/* Service Content - Exact copy from home-two */}
-                                <div className="service-two__content">
+                                <div className="service-two__content" style={{
+                                    flex: 1,
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between'
+                                }}>
                                     <div className="icon">
                                         <Image src={service.icon} alt="icon" />
                                     </div>
