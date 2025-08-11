@@ -48,7 +48,7 @@ const About = () => {
                      <div className="section-header mb-40">
                         <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                            <Image className="me-1" src={shape_3} alt="icon" />
-                           ABOUT iFour Teachnolab
+                           ABOUT Us
                         </h5>
                         <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                            <span style={{ color: '#0f7a95' }}>A Software Development Company</span> You Can Trust
