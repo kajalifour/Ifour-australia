@@ -12,9 +12,9 @@ import shape_3 from "@/assets/images/shape/about-circle-helper.png";
 import shape_4 from "@/assets/images/shape/about-two-circle.png";
 
 const serviceDetailsData = {
-    title: "IoT Software Development",
-    subtitle: "Services",
-    description: "iFour Technolab is a leading IoT software development company in Australia, specializing in creating innovative IoT solutions that connect devices, collect data, and drive intelligent business decisions. Our expert team delivers cutting-edge IoT applications that transform your business operations and enhance user experiences.",
+    title: "IoT Application Development Services ",
+    subtitle:"Australia",
+    description: "Step into the world of IoT innovation with iFour, your trusted partner for bespoke IoT software development services in Australia. As a distinguished Microsoft Solutions Partner, we bring a wealth of expertise and credibility to every IoT project we undertake.\n\n With over a decade of experience in the market, our team of over 120 skilled professionals is dedicated to crafting tailor-made IoT solutions that propel businesses forward in the dynamic digital landscape.\n\nWe understand the significance of combining local insights with global expertise, ensuring that our IoT offerings not only address your unique needs but also align with industry best practices. \n\nEmbrace exceptional IoT results that drive growth and set your business apart from the competition by choosing iFour as your technology partner on the path to IoT success.",
     benefits: [
         "Tailor-made solutions",
         "Dedicated software development team",
@@ -47,25 +47,25 @@ const serviceDetailsData = {
     showTechnologyPartners: true,
     showAbout: true,
     aboutData: {
-        title: "IoT Software Development",
-        subtitle: "Connecting the Digital and Physical Worlds",
-        description: "Our IoT software development expertise encompasses the entire IoT ecosystem, from sensor integration and data collection to cloud processing and intelligent analytics. We specialize in creating innovative IoT solutions that connect devices, collect data, and drive intelligent business decisions across various industries.",
-        additionalInfo: "Whether you're implementing IoT platforms, integrating sensors, or developing real-time analytics solutions, our development team ensures robust, scalable, and secure implementations. We focus on creating IoT applications that not only meet current business needs but also position your organization for future technological advancements in the connected world.",
+        title: "Our IoT Software ",
+        subtitle: "Services",
+        description: "As an Australian-based IoT software development company, we understand the local market, audience requirements, and challenges faced by businesses in Australia effectively. Our software development services are designed to help you overcome these challenges and achieve your business objectives. Our IoT software services include:",
+        additionalInfo: "Reach out us today to discuss your requirements and let us drive innovation and growth for your organization.",
         services: [
-            "IoT Platform Development",
-            "Sensor Integration",
-            "Real-time Data Analytics",
-            "IoT Device Management",
-            "Cloud IoT Solutions",
-            "IoT Security Implementation"
+            "IoT consulting services",
+            "IoT Application development",
+            "IoT integration services",
+            "IoT PoC and prototype development",
+            "IoT data analytics and visualization",
+            "IoT support and maintenance"
         ]
     },
     benefitsData: {
         title: "WHO WE ARE",
-        subtitle: "Benefits of IoT Software Development",
-        description: "We create powerful IoT applications that offer exceptional performance, security, and robust processing capabilities. Our IoT solutions grant you complete control over the connected infrastructure and user experience, allowing for tailored and customized IoT experiences that align precisely with your business requirements and connectivity needs.",
+        subtitle: "Why Choose iFour?",
+        description: "We have been in the business for over a decade and our solutions resonate with our target customers and their requirements. We combine our local understanding with our global expertise, staying up-to-date with industry trends and technologies to ensure your software meets global standards. Given below are the reasons to choose iFour.",
         additionalDescription: "",
-        conclusion: "Are you ready to unleash the full potential of your company with our IoT software development services? Contact us right away to discuss your business needs and get a powerful IoT solution."
+        conclusion: "Ready to unlock the full potential of your business with custom software development? Contact iFour today to discuss your project requirements. Our team of experts is eager to collaborate with you, understand your vision, and deliver a software solution that drives innovation and growth in your industry. Let us be your trusted technology partner on your digital transformation journey."
     }
 };
 
