@@ -103,7 +103,7 @@ const FooterOne = () => {
                <div className="footer__item wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                   <h3 className="footer-title">Quick Link</h3>
                   <ul>
-                     <li><Link href="/about" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> About iFour Technolab </Link></li>
+                     <li><Link href="/about" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> About Us </Link></li>
                      <li><Link href="/service" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Our Services</Link>
                      </li>
                      <li><Link href="/pricing" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}><i className="fa-regular fa-angles-right me-1"></i> Pricing Plan</Link>
@@ -119,7 +119,7 @@ const FooterOne = () => {
                   <h3 className="footer-title">Contact Us</h3>
                   <p className="mb-20">15 Banyula drive, Old bar - NSW, 2430, Australia</p>
                   <ul className="footer-contact">
-                     <li>
+                     {/* <li>
                         <i className="fa-regular fa-clock"></i>
                         <div className="info">
                            <h5>
@@ -127,7 +127,7 @@ const FooterOne = () => {
                            </h5>
                            <p>Mon - Sat: 10.00 AM - 4.00 PM</p>
                         </div>
-                     </li>
+                     </li> */}
                      <li>
                         <i className="fa-duotone fa-phone"></i>
                         <div className="info">
@@ -145,7 +145,7 @@ const FooterOne = () => {
             <div className="container">
                <div
                   className="d-flex gap-1 flex-wrap align-items-center justify-content-md-between justify-content-center">
-                  <p className="wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">&copy; All Copyright 2024
+                  <p className="wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">&copy; All Copyright 2025
                      by <Link href="#" style={{ transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#000000'} onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}>iFour Technolab</Link></p>
                   <ul className="d-flex align-items-center gap-4 wow fadeInDown" data-wow-delay="200ms"
                      data-wow-duration="1500ms">
