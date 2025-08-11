@@ -9,6 +9,8 @@ import icon_3 from "@/assets/images/icon/service-icon3.png";
 import shape_1 from "@/assets/images/shape/service-two-shape-left.png";
 import shape_2 from "@/assets/images/shape/service-two-shape-right.png";
 
+
+
 // Service data structure matching the home-two template
 interface ServiceItem {
     id: number;
@@ -169,7 +171,8 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                         <div key={service.id} className="col-lg-4 col-md-6" 
                              style={{ 
                                  animationDelay: `${index * 100}ms`,
-                                 animationDuration: '1000ms'
+                                 animationDuration: '1000ms',
+                                 padding: '15px'
                              }}>
                             <div className="service-two__item wow fadeInUp" 
                                  data-wow-delay={`${index * 200}ms`} 
@@ -177,30 +180,81 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                  style={{
                                      height: '100%',
                                      display: 'flex',
-                                     flexDirection: 'column'
+                                     flexDirection: 'column',
+                                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                     cursor: 'pointer',
+                                     position: 'relative'
+                                 }}
+                                 onMouseEnter={(e) => {
+                                     e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                                     e.currentTarget.style.boxShadow = '0 25px 50px rgba(15, 122, 149, 0.2), 0 0 0 1px rgba(15, 122, 149, 0.1)';
+                                     e.currentTarget.style.border = '2px solid #0f7a95';
+                                     e.currentTarget.style.background = 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)';
+                                 }}
+                                                                  onMouseLeave={(e) => {
+                                     e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                                     e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                                     e.currentTarget.style.border = '2px solid transparent';
+                                     e.currentTarget.style.background = 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)';
                                  }}>
-                                {/* Service Image */}
+                                 
+                                 {/* Ripple Effect Overlay */}
+                                 <div style={{
+                                     position: 'absolute',
+                                     top: '0',
+                                     left: '0',
+                                     right: '0',
+                                     bottom: '0',
+                                     background: 'radial-gradient(circle at center, rgba(15, 122, 149, 0.1) 0%, transparent 70%)',
+                                     opacity: '0',
+                                     transition: 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                     pointerEvents: 'none',
+                                     borderRadius: '8px'
+                                 }}
+                                 onMouseEnter={(e) => {
+                                     e.currentTarget.style.opacity = '1';
+                                 }}
+                                 onMouseLeave={(e) => {
+                                     e.currentTarget.style.opacity = '0';
+                                 }}></div>
+                                 
+                                 {/* Service Header - Teal area with title */}
                                 <div className="image">
                                     <div style={{
                                         width: '100%',
-                                        height: '100px',
+                                        height: '150px',
                                         background: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',
                                         display: 'flex',
+                                        flexDirection: 'column',
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         borderRadius: '8px 8px 0 0',
-                                        position: 'relative'
+                                        position: 'relative',
+                                        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                        overflow: 'hidden',
+                                        padding: '15px'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.background = 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%), linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%)';
+                                        e.currentTarget.style.transform = 'scale(1.05)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.background = 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)';
+                                        e.currentTarget.style.transform = 'scale(1)';
                                     }}>
-                                        {/* Placeholder icon for the image area */}
-                                        <div style={{
-                                            fontSize: '32px',
+                                        {/* Service Title in teal area */}
+                                        <h4 style={{
                                             color: '#ffffff',
-                                            opacity: '0.8'
+                                            fontSize: '22px',
+                                            fontWeight: '600',
+                                            margin: '0 0 8px 0',
+                                            textAlign: 'center',
+                                            textShadow: '0 2px 4px rgba(0,0,0,0.3)'
                                         }}>
-                                            🔧
-                                        </div>
+                                            {service.title}
+                                        </h4>
                                         
-                                        {/* Circuit board pattern overlay */}
+                                        {/* Subtle pattern overlay */}
                                         <div style={{
                                             position: 'absolute',
                                             top: '0',
@@ -212,24 +266,52 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                                 linear-gradient(0deg, transparent 98%, rgba(255,255,255,0.1) 100%)
                                             `,
                                             backgroundSize: '20px 20px',
-                                            opacity: '0.3'
+                                            opacity: '0.2'
                                         }}></div>
                                     </div>
                                 </div>
 
-                                {/* Service Content - Exact copy from home-two */}
+                                {/* Service Content - Description */}
                                 <div className="service-two__content" style={{
                                     flex: 1,
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    justifyContent: 'space-between'
+                                    justifyContent: 'center',
+                                    padding: '30px',
+                                    position: 'relative',
+                                    overflow: 'hidden',
+                                    borderRadius: '0 0 8px 8px'
                                 }}>
-                                    <div className="icon">
-                                        <Image src={service.icon} alt="icon" />
+                                    {/* Content overlay */}
+                                    <div style={{
+                                        position: 'relative',
+                                        zIndex: '2',
+                                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                                        padding: '20px',
+                                        borderRadius: '8px',
+                                        backdropFilter: 'blur(5px)',
+                                        border: '1px solid rgba(255, 255, 255, 0.2)'
+                                    }}>
+                                        <p style={{
+                                            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                            textShadow: '0 0 0 rgba(15, 122, 149, 0)',
+                                            color: '#666',
+                                            fontSize: '16px',
+                                            lineHeight: '1.6',
+                                            margin: '0',
+                                            textAlign: 'center'
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.textShadow = '0 0 8px rgba(15, 122, 149, 0.3)';
+                                            e.currentTarget.style.color = '#2c3e50';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.textShadow = '0 0 0 rgba(15, 122, 149, 0)';
+                                            e.currentTarget.style.color = '#666';
+                                        }}>
+                                            {service.desc}
+                                        </p>
                                     </div>
-
-                                    <h4>{service.title}</h4>
-                                    <p>{service.desc}</p>
                                 </div>
                             </div>
                         </div>
