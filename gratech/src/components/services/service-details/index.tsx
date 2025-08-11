@@ -61,14 +61,12 @@ const serviceDetailsData = {
         description: "As an Australian-based software development company, we understand the unique needs and challenges faced by businesses in Australia. Our bespoke software development services are designed to help you overcome these challenges and achieve your business objectives. Our custom software services can assist you with",
         additionalInfo: "Contact us today to discuss how we can create a tailored software solution to drive innovation and growth for your organization.",
         services: [
-            "Product development",
-            "Web application development",
-            "Client-server applications",
-            "Cloud application development",
-            "Business line solutions",
-            "Desktop applications",
-            "Internet or intranet applications",
-            "Software or web maintenance"
+            "Custom Product Development",
+            "Web Application Development",
+            "Cloud Application Development",
+            "Business Line Solutions",
+            "Desktop App Development",
+            "Internet or Intranet Services"
         ]
     },
     benefitsData: {

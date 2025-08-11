@@ -54,11 +54,12 @@ const serviceDetailsData = {
         description: "With our extensive experience and expertise as a trusted software development partner, we have honed our skills in Microsoft 365 development. Our team of seasoned professionals is well-versed in leveraging the full potential of Microsoft 365 to deliver customized solutions that align perfectly with your business objectives. Our Microsoft 365 services include -",
         additionalInfo: "Contact us today to leverage the full potential of Microsoft 365 platforms for your business.",
         services: [
-            "Office 365 licenses",
-            "Office 365managed services",
-            "Migration from google workspace",
+            "Office 365 Licenses",
+            "Office 365 Managed Services",
+            "Migration from Legacy Email Provider",
+            "Migration from Google Workspace",
             "Migration from Exchange on-premises to Office 365",
-            "Migration fromopensource email to Office 365"
+            "Migration from open-source email to Office 365"
         ]
     },
     benefitsData: {

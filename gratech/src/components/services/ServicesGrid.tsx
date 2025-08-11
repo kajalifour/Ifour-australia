@@ -72,7 +72,25 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
     if (services && services.length > 0) {
         // Create a mapping of service titles to their specific descriptions
         const serviceDescriptions: { [key: string]: string } = {
-            // Microsoft 365 Services
+            // Custom Software Development Services
+            "Product development": "Transform your vision into an innovative solution with our product development services. We provide end-to-end consultation from concept to product launch to help you ensure competitiveness in the marketplace.",
+            "Web application development": "We have a team of experts proficient in building stunning and user-cantered web applications to drive engagement. We integrate modern tech stacks to get high-performing web apps that help you stand out.",
+            "Client-server applications": "Our team holds enough experience in the field to help you build client-server applications. At iFour, we build scalable and secure solutions that drive business agility.",
+            "Cloud application development": "Our team holds enough experience in the field to help you build cloud apps. At iFour, we build scalable and secure cloud solutions that drive business agility.",
+            "Business line solutions": "We help you simplify your business operations by designing a tailored solution that addresses your pain points and business challenges.",
+            "Desktop applications": "With our top-notch desktop app development services, you can experience user-friendly and high-performing solutions that maximize your productivity and let you work flawlessly into your current infrastructure.",
+            "Internet or intranet applications": "Trust iFour Technolab for reliable support and maintenance services. We monitor your software after deployment to ensure continued performance and security and address bugs.",
+            "Software or web maintenance": "Trust iFour Technolab for reliable support and maintenance services. We monitor your software after deployment to ensure continued performance and security and address bugs.",
+            
+            // Desktop Application Development Services (service-details2)
+            "Custom Desktop Application Development": "We specialize in creating custom desktop applications tailored to your specific business needs. Our solutions are built with modern technologies to ensure optimal performance and user experience.",
+            "Legacy Application Modernization": "Transform your existing legacy applications into modern, efficient solutions. We help you upgrade outdated systems while preserving your valuable business logic and data.",
+            "Application Integration": "Seamlessly integrate your desktop applications with other business systems and databases. Our integration solutions ensure smooth data flow and improved operational efficiency.",
+            "Application Maintenance and Support": "Comprehensive maintenance and support services to keep your desktop applications running smoothly. We provide regular updates, bug fixes, and performance optimizations.",
+            "Cross Platform Desktop App Development": "Develop desktop applications that work seamlessly across Windows, macOS, and Linux platforms. Our cross-platform solutions ensure maximum reach and compatibility.",
+            "UWP App Development": "Create modern Universal Windows Platform applications that work across all Windows 10 devices. Our UWP apps provide native performance and seamless integration.",
+            
+            // Microsoft 365 Development Services (service-details4)
             "Office 365 Licenses": "We help you assist in finding the best plan to access a suite of productivity apps that satisfy your business needs. Businesses can leverage advanced security, compliance tools, and additional storage by choosing the best plan without breaking the bank.",
             "Office 365 Managed Services": "Our Microsoft 365 managed services empower clients to fully leverage their subscriptions by handling routine maintenance and support tasks. This service alleviates the daily burden on IT teams, allowing them to focus on more important projects.",
             "Migration from Legacy Email Provider": "iFour helps you migrate from legacy tools to the future-proof solutions. We provide migration services for Zoho Office Suite, IBM Connections, Word Perfect, Live Link, and G Suite like platforms to the latest version of Office 365.",
@@ -80,13 +98,13 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
             "Migration from Exchange on-premises to Office 365": "By migrating from Exchange on-premises to Office 365, businesses can take advantage of cloud benefits. The service includes migrating all emails, contacts, and calendars from user mailboxes to Office 365.",
             "Migration from open-source email to Office 365": "We also help clients migrate from open-source email to Office 365 where clients can choose to migrate the content of user mailboxes from open-source mailbox to Microsoft 365. This helps clients improve productivity and scalability.",
             
-            // Mobile App Development Services
-            "Android App Development": "Our team holds the necessary expertise in Android app development. With a focus on smooth user experience and advanced functionalities, we build Android apps that help you grow in this competitive market.",
+            // Mobile App Development Services (service-details7)
             "iOS App Development": "Build for Apple's ecosystem, our team delivers sleek and intuitive solutions for iOS app development. With extensive experience in building iOS solutions, our team crafts fully functional app that satisfies your needs.",
-            "Xamarin App Development": "Get high-performing mobile apps that provide a smooth user experience across Android, iOS, and Windows platforms with our Xamarin app development services. Our team is proficient in building robust solutions that meet your business goals.",
-            "React Native App Development": "Enjoy cross-platform mobile apps having native capabilities with React Native app development. Our programmers will help you build high-performing apps that suit your unique business needs.",
-            "Hybrid App Development": "Get the features of HTML5 and native worlds with our Hybrid app development. With hybrid solutions, you can get a mobile app that seamlessly works across devices like iOS, Android, desktop, and laptop and gives a smooth user experience.",
-            "Cross-platform App Development": "Reach a wider audience without spending too much time and money with cross-platform app development services. We craft cross-platform solutions using technologies like React Native to help you enjoy a native-like performance."
+            "Android App Development": "Our team holds the necessary expertise in Android app development. With a focus on smooth user experience and advanced functionalities, we build Android apps that help you grow in this competitive market.",
+            "Cross-Platform Development": "Reach a wider audience without spending too much time and money with cross-platform app development services. We craft cross-platform solutions using technologies like React Native to help you enjoy a native-like performance.",
+            "App Maintenance & Support": "Comprehensive maintenance and support services to keep your mobile applications running smoothly. We provide regular updates, bug fixes, and performance optimizations.",
+            "App Store Optimization": "Optimize your mobile apps for better visibility and downloads in app stores. Our ASO services help improve your app's ranking and discoverability.",
+            "Mobile App Testing": "Thorough testing services to ensure your mobile applications work flawlessly across all devices and platforms. We provide comprehensive quality assurance for optimal user experience."
         };
 
         servicesToDisplay = services.slice(0, 6).map((service: string, index: number) => ({
@@ -200,15 +218,8 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                         <Image src={service.icon} alt="icon" />
                                     </div>
 
-                                    <h4>
-                                        <Link href="/service-details" className="primary-hover">
-                                            {service.title}
-                                        </Link>
-                                    </h4>
+                                    <h4>{service.title}</h4>
                                     <p>{service.desc}</p>
-                                    <Link className="read-more-btn" href="/service-details">
-                                        Read More <i className="fa-regular fa-arrow-right-long"></i>
-                                    </Link>
                                 </div>
                             </div>
                         </div>
