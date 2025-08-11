@@ -1,9 +1,12 @@
+"use client";
+
 import BreadCrumb from "@/components/common/BreadCrumb"
 import FooterOne from "@/layouts/footers/FooterOne"
 import HeaderOne from "@/layouts/headers/HeaderOne"
 import ServiceDetailsArea from '../ServiceDetailsArea';
 import serviceData7 from "@/data/ServiceData7";
 import Image from "next/image";
+import Link from "next/link";
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg";
 import about_thumb2 from "@/assets/images/about/about-two-image2.png";
 import shape_1 from "@/assets/images/icon/section-title.png";
@@ -140,6 +143,67 @@ const ServiceDetails = () => {
             <ServiceDetailsArea 
                 data={serviceDetailsData} 
                 BenefitsSection={<BenefitsSection data={serviceDetailsData} />} 
+                CTASection={
+                    <section className="cta-area pt-96 pb-96" style={{
+                        background: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',
+                        textAlign: 'center',
+                        marginBottom: '70px'
+                    }}>
+                        <div className="container">
+                            <div className="row justify-content-center">
+                                <div className="col-xl-8">
+                                    <div className="cta-content wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
+                                        paddingTop: '15px'
+                                    }}>
+                                        <h2 style={{
+                                            color: '#ffffff',
+                                            fontSize: '2rem',
+                                            fontWeight: '600',
+                                            marginBottom: '2rem',
+                                            lineHeight: '1.3'
+                                        }}>
+                                            Infuse the power of Azure cloud services into your business.
+                                        </h2>
+                                        <p style={{
+                                            color: '#ffffff',
+                                            fontSize: '1.1rem',
+                                            marginBottom: '2rem',
+                                            opacity: '0.9',
+                                            lineHeight: '1.6'
+                                        }}>
+                                        </p>
+                                        <Link href="/contact" className="btn btn-primary" style={{
+                                            background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)',
+                                            border: 'none',
+                                            color: '#0f7a95',
+                                            padding: '15px 40px',
+                                            fontSize: '1.1rem',
+                                            fontWeight: '600',
+                                            borderRadius: '8px',
+                                            textDecoration: 'none',
+                                            display: 'inline-block',
+                                            transition: 'all 0.3s ease',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '1px',
+                                            marginBottom: '30px',
+                                            boxShadow: '0 4px 15px rgba(255, 255, 255, 0.3)'
+                                        }}
+                                        onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                                            e.currentTarget.style.background = 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)';
+                                            e.currentTarget.style.color = '#ffffff';
+                                        }}
+                                        onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                                            e.currentTarget.style.background = 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)';
+                                            e.currentTarget.style.color = '#0f7a95';
+                                        }}>
+                                           Get started now
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                }
             />
          </main>
          <FooterOne />

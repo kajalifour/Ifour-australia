@@ -111,8 +111,9 @@ interface ServiceDetailsData {
 }
 
 interface ServiceDetailsAreaProps {
-   data: ServiceDetailsData;
-   BenefitsSection?: React.ReactNode;
+    data: ServiceDetailsData;
+    BenefitsSection?: React.ReactNode;
+    CTASection?: React.ReactNode;
 }
 
 const testi_data: TestimonialDataType[] = [
@@ -329,54 +330,7 @@ const ServiceCardsSection = ({ data }: { data: ServiceDetailsData }) => {
     );
 };
 
-// CTA Section Component
-const CTASection = () => {
-    return (
-        <section className="cta-area pt-96 pb-96" style={{ 
-            background: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',
-            textAlign: 'center',
-            marginBottom: '70px'
-        }}>
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-xl-8">
-                        <div className="cta-content wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
-                            paddingTop: '15px'
-                        }}>
-                            <h2 style={{ 
-                                color: '#ffffff', 
-                                fontSize: '2rem', 
-                                fontWeight: '600', 
-                                marginBottom: '2rem',
-                                lineHeight: '1.3'
-                            }}>
-                                Business complexities to take care of? We are here!
-                            </h2>
-                            <Link href="/contact" className="btn btn-primary" style={{
-                                background: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',
-                                border: 'none',
-                                color: '#ffffff',
-                                padding: '15px 40px',
-                                fontSize: '1.1rem',
-                                fontWeight: '600',
-                                borderRadius: '8px',
-                                textDecoration: 'none',
-                                display: 'inline-block',
-                                transition: 'all 0.3s ease',
-                                textTransform: 'uppercase',
-                                letterSpacing: '1px',
-                                marginBottom: '30px',
-                                boxShadow: '0 4px 15px rgba(15, 122, 149, 0.3)'
-                            }}>
-                                GET STARTED NOW
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
+
 
 // Project Section Component
 const ProjectSection = ({ data }: { data: ServiceDetailsData }) => {
@@ -1193,7 +1147,7 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
 };
 
 // Main ServiceDetailsArea Component
-const ServiceDetailsArea = ({ data, BenefitsSection }: ServiceDetailsAreaProps) => {
+const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetailsAreaProps) => {
     return (
         <>
             {/* Main Service Section */}
@@ -1208,8 +1162,8 @@ const ServiceDetailsArea = ({ data, BenefitsSection }: ServiceDetailsAreaProps) 
             {/* Service Cards Section */}
             <ServiceCardsSection data={data} />
             
-            {/* CTA Section */}
-            <CTASection />
+            {/* CTA Section - Positioned after service cards, before projects */}
+            {CTASection}
             
             {/* Project Section */}
             <ProjectSection data={data} />
