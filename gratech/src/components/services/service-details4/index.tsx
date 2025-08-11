@@ -12,20 +12,18 @@ import shape_3 from "@/assets/images/shape/about-circle-helper.png";
 import shape_4 from "@/assets/images/shape/about-two-circle.png";
 
 const serviceDetailsData = {
-    title: "Maximize the Potential of Microsoft 365 to Grow Your Business",
-    subtitle: "",
-    description: "iFour Technolab is a trusted partner for Microsoft 365 development services with a proven track record in cloud computing and migration services. Backed by years of technology expertise as a Microsoft Solutions Partner, we bring unrivaled expertise and credibility to every project we undertake. Our commitment to excellence has allowed us to refine our skills and become a reliable choice for organizations seeking top-notch software solutions.",
+    title: "Maximize the Potential of Microsoft 365 to ",
+    subtitle:"Grow Your Business",
+    description: "iFour Technolab is a trusted partner for Microsoft 365 development services with a proven track record in cloud computing and migration services. Backed by years of technology expertise as a Microsoft Solutions Partner, we bring unrivaled expertise and credibility to every project we undertake. Our commitment to excellence has allowed us to refine our skills and become a reliable choice for organizations seeking top-notch software solutions.\n\nWith a team of over 120 seasoned experts, we are driven by a passion for developing creative and customized software solutions that propel organizations forward in the dynamic digital market. Our talented professionals are equipped with the knowledge and skills to craft innovative solutions tailored to your specific needs, ensuring that your business stays ahead of the curve.\n\nAs an Australian software firm, we understand the significance of local knowledge combined with global expertise. This enables us to deliver solutions that not only meet your unique requirements but also adhere to industry best practices. We recognize the importance of scalability, security, and innovation in today's business landscape, and our Microsoft 365 development services are designed to empower your Australian business with all three.",
     benefits: [
-        "Tailor-made solutions",
-        "Dedicated software development team",
-        "Business-friendly hiring models",
-        "Competitive pricing model",
-        "Teams at scale",
-        "Cost-effective",
-        "Rapid delivery",
-        "100% transparency",
-        "Effortless communication",
-        "Flawless design"
+        "Local Understanding, Global Expertise",
+        "Tailored Solutions for Your Business",
+        "Certified Microsoft Solutions Partner",
+        "120+ veteran professionals",
+        "Full-Cycle Development Services",
+        "Quality Assurance and Security",
+        "Expertise Across Industries",
+        "Transparent Communication and Timely Delivery"
     ],
     services: [
         "Custom Microsoft 365 Applications",
@@ -47,25 +45,24 @@ const serviceDetailsData = {
     showTechnologyPartners: true,
     showAbout: true,
     aboutData: {
-        title: "Microsoft 365 Development",
-        subtitle: "Empowering Business Productivity",
-        description: "Our Microsoft 365 development expertise enables businesses to maximize their investment in the Microsoft ecosystem. We specialize in creating custom applications, workflows, and integrations that enhance productivity and streamline business operations within the Microsoft 365 environment.",
-        additionalInfo: "From Power Platform solutions to custom SharePoint applications and Teams integrations, our development team ensures seamless connectivity and enhanced user experiences. We focus on creating solutions that leverage the full potential of Microsoft 365 while maintaining security, compliance, and scalability for your business needs.",
+        title: "Our Microsoft 365 Services",
+        subtitle: "",
+        description: "With our extensive experience and expertise as a trusted software development partner, we have honed our skills in Microsoft 365 development. Our team of seasoned professionals is well-versed in leveraging the full potential of Microsoft 365 to deliver customized solutions that align perfectly with your business objectives. Our Microsoft 365 services include -",
+        additionalInfo: "Contact us today to leverage the full potential of Microsoft 365 platforms for your business.",
         services: [
-            "Custom Microsoft 365 Applications",
-            "Power Platform Development",
-            "SharePoint Development",
-            "Teams App Development",
-            "Office Add-ins Development",
-            "Microsoft 365 Integration"
+            "Office 365 licenses",
+            "Office 365managed services",
+            "Migration from google workspace",
+            "Migration from Exchange on-premises to Office 365",
+            "Migration fromopensource email to Office 365"
         ]
     },
     benefitsData: {
         title: "WHO WE ARE",
-        subtitle: "Benefits of Microsoft 365 Development",
-        description: "We create powerful Microsoft 365 applications that offer exceptional performance, security, and robust processing capabilities. Our Microsoft 365 solutions grant you complete control over the user interface and user experience, allowing for tailored and customized experiences that align precisely with your business requirements and Microsoft ecosystem.",
-        additionalDescription: "",
-        conclusion: "Are you ready to unleash the full potential of your company with our Microsoft 365 development services? Contact us right away to discuss your business needs and get a powerful Microsoft 365 solution."
+        subtitle: "Why Microsoft 365 Development Services?",
+        description: "Microsoft 365 development enables you to focus on boosting productivity and efficiency within your company. It allows you to harness the capabilities of Microsoft 365 applications such as Word, Excel, PowerPoint, and more to streamline workflows, automate processes, and empower your workforce to work smarter and accomplish more.",
+        additionalDescription: "At iFour, we believe in the power of customization. Our Microsoft 365 development services are specifically tailored to meet the unique needs of Australian businesses. We take the time to understand your organization's requirements, processes, and objectives to create bespoke solutions that drive productivity, collaboration, and growth. Given below are the reasons to choose iFour.",
+        conclusion: "Ready to unlock your business potential? Contact us now and let us be your Microsoft technology partner on your digital transformation journey."
     }
 };
 
