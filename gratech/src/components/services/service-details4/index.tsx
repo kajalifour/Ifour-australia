@@ -12,9 +12,9 @@ import shape_3 from "@/assets/images/shape/about-circle-helper.png";
 import shape_4 from "@/assets/images/shape/about-two-circle.png";
 
 const serviceDetailsData = {
-    title: "Microsoft 365 Development",
-    subtitle: "Services",
-    description: "iFour Technolab is a leading Microsoft 365 development company in Australia, specializing in creating custom solutions that leverage the power of Microsoft 365 to enhance productivity and streamline business operations. Our expert team delivers innovative applications and integrations that maximize the value of your Microsoft 365 investment.",
+    title: "Maximize the Potential of Microsoft 365 to Grow Your Business",
+    subtitle: "",
+    description: "iFour Technolab is a trusted partner for Microsoft 365 development services with a proven track record in cloud computing and migration services. Backed by years of technology expertise as a Microsoft Solutions Partner, we bring unrivaled expertise and credibility to every project we undertake. Our commitment to excellence has allowed us to refine our skills and become a reliable choice for organizations seeking top-notch software solutions.",
     benefits: [
         "Tailor-made solutions",
         "Dedicated software development team",
