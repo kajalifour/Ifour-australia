@@ -4,6 +4,7 @@ import BreadCrumb from "@/components/common/BreadCrumb";
 import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import ServiceDetailsArea from '../ServiceDetailsArea';
+import ServicesGrid from '../ServicesGrid';
 import serviceData from "@/data/ServiceData";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,7 +44,7 @@ const serviceDetailsData = {
         "Software or web maintenance"
     ],
     serviceData: serviceData,
-    showServiceCards: true,
+    showServiceCards: false,
     showProjects: true,
     showClients: true,
     showTechnologies: true,
@@ -53,6 +54,7 @@ const serviceDetailsData = {
     showAgileApproach: true,
     showTechnologyPartners: true,
     showAbout: true,
+    showServicesGrid: true, // New option to control ServicesGrid display
     aboutData: {
         title: "Our Custom Software",
         subtitle: "Services",

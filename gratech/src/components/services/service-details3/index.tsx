@@ -40,6 +40,7 @@ const serviceDetailsData = {
     ],
     serviceData: serviceData4,
     showServiceCards: false,
+    showServicesGrid: false,
     showProjects: true,
     showClients: true,
     showTechnologies: true,

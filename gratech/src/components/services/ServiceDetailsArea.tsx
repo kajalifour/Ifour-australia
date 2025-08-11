@@ -9,6 +9,7 @@ import Case_data from '@/data/CaseData';
 import project_data from "@/data/ProjectData";
 import bolg_data from "@/data/BlogData";
 import TestimonialForm from "@/components/forms/TestimonialForm"
+import ServicesGrid from './ServicesGrid';
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
@@ -108,6 +109,7 @@ interface ServiceDetailsData {
       additionalDescription?: string;
       conclusion?: string;
    };
+   showServicesGrid?: boolean;
 }
 
 interface ServiceDetailsAreaProps {
@@ -1161,6 +1163,17 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
             
             {/* Service Cards Section */}
             <ServiceCardsSection data={data} />
+            
+            {/* Services Grid Section - Added before CTA */}
+            {data.showServicesGrid && (
+                <div style={{ marginBottom: '70px' }}>
+                    <ServicesGrid 
+                        key={`services-grid-${data.services?.join('-') || 'default'}`}
+                        serviceData={data.serviceData}
+                        services={data.services}
+                    />
+                </div>
+            )}
             
             {/* CTA Section - Positioned after service cards, before projects */}
             {CTASection}

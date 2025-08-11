@@ -29,15 +29,16 @@ const serviceDetailsData = {
         "Transparent Communication and Timely Delivery"
     ],
     services: [
-        "Custom Microsoft 365 Applications",
-        "Power Platform Development",
-        "SharePoint Development",
-        "Teams App Development",
-        "Office Add-ins Development",
-        "Microsoft 365 Integration"
+        "Office 365 Licenses",
+        "Office 365 Managed Services",
+        "Migration from Legacy Email Provider",
+        "Migration from Google Workspace",
+        "Migration from Exchange on-premises to Office 365",
+        "Migration from open-source email to Office 365"
     ],
     serviceData: serviceData7,
-    showServiceCards: true,
+    showServiceCards: false,
+    showServicesGrid: true,
     showProjects: true,
     showClients: true,
     showTechnologies: true,

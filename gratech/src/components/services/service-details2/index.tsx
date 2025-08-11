@@ -39,7 +39,8 @@ const serviceDetailsData = {
         "UWP App Development"
     ],
     serviceData: serviceData2,
-    showServiceCards: true,
+    showServiceCards: false,
+    showServicesGrid: true,
     showProjects: true,
     showClients: true,
     showTechnologies: true,

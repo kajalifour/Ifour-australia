@@ -33,7 +33,8 @@ const serviceDetailsData = {
         "Blockchain integration and Migration"
     ],
     serviceData: serviceData2,
-    showServiceCards: true,
+    showServiceCards: false,
+    showServicesGrid: false,
     showProjects: true,
     showClients: true,
     showTechnologies: true,

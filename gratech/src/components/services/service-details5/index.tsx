@@ -37,7 +37,8 @@ const serviceDetailsData = {
         "Cloud security and assessments"
     ],
     serviceData: serviceData7,
-    showServiceCards: true,
+    showServiceCards: false,
+    showServicesGrid: false,
     showProjects: true,
     showClients: true,
     showTechnologies: true,

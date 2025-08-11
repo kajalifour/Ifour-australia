@@ -29,15 +29,16 @@ const serviceDetailsData = {
         "Transparent Communication and On-time Delivery"
     ],
     services: [
-        "Discovery and planning",
-        "Design and prototyping",
-        "Development and coding",
-        "Testing and Quality Assurance",
-        "Deployment and Launch",
-        "Post-Launch Support and Maintenance"
+        "Android App Development",
+        "iOS App Development",
+        "Xamarin App Development",
+        "React Native App Development",
+        "Hybrid App Development",
+        "Cross-platform App Development"
     ],
     serviceData: serviceData2,
-    showServiceCards: true,
+    showServiceCards: false,
+    showServicesGrid: true,
     showProjects: true,
     showClients: true,
     showTechnologies: true,
