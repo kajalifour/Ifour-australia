@@ -12,28 +12,22 @@ import shape_3 from "@/assets/images/shape/about-circle-helper.png";
 import shape_4 from "@/assets/images/shape/about-two-circle.png";
 
 const serviceDetailsData = {
-    title: "Blockchain Development",
-    subtitle: "Services",
-    description: "iFour Technolab is a leading blockchain development company in Australia, specializing in creating innovative blockchain solutions that drive transparency, security, and efficiency. Our expert team delivers cutting-edge blockchain applications that transform business processes and create new opportunities.",
+    title: "Blockchain Consulting Services",
+    subtitle: "Australia",
+    description: "As the technology landscape continues to evolve, Blockchain has emerged as a transformative force, revolutionizing various industries. At iFour, we leverage our expertise in Blockchain development to help businesses harness the power of this decentralized technology and unlock new opportunities for growth and innovation.\n\n iFour Technolab is a Microsoft Certified Solutions Partner with 5+SCRUM masters and over 120 veteran professionals who are passionate about creating innovative blockchain solutions that provide security and propel businesses forward in the ever-changing digital landscape. \n\nWe can help you with personalized blockchain solutions adapted to your specific needs since we have decades of expertise in the IT business and thorough awareness of satisfying client expectations. \n\nWe recognize the value of local knowledge and impeccable expertise in ensuring that our solutions are in line with industry best practices and your organizational requirements.\n\nWhen you work with iFour, you can anticipate remarkable outcomes that will propel your company forward and set it apart from the competition. You can rely on us to be your technology partner on the road to success.",
     benefits: [
-        "Tailor-made solutions",
-        "Dedicated software development team",
-        "Business-friendly hiring models",
-        "Competitive pricing model",
-        "Teams at scale",
-        "Cost-effective",
-        "Rapid delivery",
-        "100% transparency",
-        "Effortless communication",
-        "Flawless design"
+        "Enhanced Security and reduced fraud.",
+        "Transparency and Trust with a shared view",
+        " Improved Efficiency and Cost Savings",
+        "Self-executing agreements and no intermediaries",
+        "Traceability and Supply Chain Optimization"
     ],
     services: [
-        "Custom Blockchain Development",
-        "Smart Contract Development",
-        "DeFi Application Development",
-        "NFT Platform Development",
-        "Blockchain Integration",
-        "Blockchain Consulting"
+        "Blockchain consulting",
+        "Smart contract development",
+        "Apps development services",
+        "Cryptocurrency development",
+        "Blockchain integration and Migration"
     ],
     serviceData: serviceData2,
     showServiceCards: true,
@@ -47,10 +41,10 @@ const serviceDetailsData = {
     showTechnologyPartners: true,
     showAbout: true,
     aboutData: {
-        title: "Blockchain Development",
-        subtitle: "Building the Future of Trust and Transparency",
-        description: "Our blockchain development expertise encompasses the entire spectrum of distributed ledger technologies, from custom blockchain platforms to smart contracts and decentralized applications. We specialize in creating innovative blockchain solutions that drive transparency, security, and efficiency across various industries.",
-        additionalInfo: "Whether you're exploring DeFi applications, NFT platforms, or enterprise blockchain solutions, our development team ensures robust, scalable, and secure implementations. We focus on creating blockchain applications that not only meet current business needs but also position your organization for future technological advancements.",
+        title: "Our Blockchain Development Services",
+        subtitle: "",
+        description: "As an Australian-based software development company, we understand the unique needs and difficulties that Australian businesses face. Our custom blockchain development services are designed to help you overcome these challenges and achieve your business objectives. Among our offerings are:",
+        additionalInfo: "We prioritize quality and security in every aspect of our Blockchain development process. Our robust development methodologies and adherence to industry standards ensure that your Blockchain solution is reliable, secure, and scalable. Reach out us today to discuss your ideas.",
         services: [
             "Custom Blockchain Development",
             "Smart Contract Development",
@@ -62,10 +56,10 @@ const serviceDetailsData = {
     },
     benefitsData: {
         title: "WHO WE ARE",
-        subtitle: "Benefits of Blockchain Development",
-        description: "We create powerful blockchain applications that offer exceptional performance, security, and robust processing capabilities. Our blockchain solutions grant you complete control over the decentralized infrastructure and user experience, allowing for tailored and customized blockchain experiences that align precisely with your business requirements and transparency needs.",
+        subtitle: "Why Blockchain technology?",
+        description: "Most individuals believe that Blockchain and cryptocurrency are interchangeable. However, it is not true. A cryptocurrency is a form of application that uses Blockchain technology. So, avoid confusing Blockchain for Cryptocurrency. Bitcoin is a popular example of cryptocurrency. Because of the numerous benefits offered by Blockchain, the entire globe is rushing to adopt this technology. Some key benefits of Blockchain include:",
         additionalDescription: "",
-        conclusion: "Are you ready to unleash the full potential of your company with our blockchain development services? Contact us right away to discuss your business needs and get a powerful blockchain solution."
+        conclusion: "Ready to unlock your business potential with Blockchain development? Contact iFour today to discuss your project requirements. Our dedicated team is eager to work with you, understand your vision, and create a software solution that fosters innovation and success in your sector. Allow us to be your trusted technology partner on your digital transformation journey."
     }
 };
 
