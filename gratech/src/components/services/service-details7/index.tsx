@@ -14,26 +14,24 @@ import shape_4 from "@/assets/images/shape/about-two-circle.png";
 const serviceDetailsData = {
     title: "Mobile App Development",
     subtitle: "Services",
-    description: "iFour Technolab is a leading mobile app development company in Australia, specializing in creating innovative, user-friendly, and high-performance mobile applications for iOS and Android platforms. Our expert team delivers cutting-edge mobile solutions that drive user engagement and business growth.",
+    description: "Welcome to iFour, the leading provider of mobile app development services that are set to revolutionize the digital landscape. As a Microsoft Solutions Partner with 10 years of market experience, we have solidified our position as industry experts. Our team of 120+ veteran professionals is driven by a passion for crafting innovative applications that propel businesses to new heights.\n\nWith our global presence spanning four branches, we bring diverse perspectives and a wealth of knowledge to every project. Our multi-talented team leverages cutting-edge technologies and industry best practices to develop mobile apps that exceed expectations.\n\nAt iFour, we understand that mobile apps have become an essential component of modern business strategies. Whether you need a sleek e-commerce app, a feature-rich customer engagement platform, or a game-changing enterprise solution, we have the expertise to bring your vision to life.\n\nWe understand your vision and deliver a perfect mobile app solution that drives growth in your industry.",
     benefits: [
-        "Tailor-made solutions",
-        "Dedicated software development team",
-        "Business-friendly hiring models",
-        "Competitive pricing model",
-        "Teams at scale",
-        "Cost-effective",
-        "Rapid delivery",
-        "100% transparency",
-        "Effortless communication",
-        "Flawless design"
+        "Certified Microsoft Solutions Partner",
+        "Local Understanding, Global Expertise",
+        "Tailored-made applications for Your Business",
+        "120+ vetted professionals",
+        "Expertise Across Industries",
+        "Full-Cycle Development Services",
+        "Quality Assurance and Security",
+        "Transparent Communication and On-time Delivery"
     ],
     services: [
-        "iOS App Development",
-        "Android App Development",
-        "Cross-Platform Development",
-        "App Maintenance & Support",
-        "App Store Optimization",
-        "Mobile App Testing"
+        "Discovery and planning",
+        "Design and prototyping",
+        "Development and coding",
+        "Testing and Quality Assurance",
+        "Deployment and Launch",
+        "Post-Launch Support and Maintenance"
     ],
     serviceData: serviceData2,
     showServiceCards: true,
@@ -47,10 +45,10 @@ const serviceDetailsData = {
     showTechnologyPartners: true,
     showAbout: true,
     aboutData: {
-        title: "Mobile App Development",
-        subtitle: "Creating Engaging Mobile Experiences",
-        description: "Our mobile app development expertise spans across iOS, Android, and cross-platform technologies, enabling us to create innovative, user-friendly, and high-performance mobile applications. We specialize in developing mobile solutions that drive user engagement, enhance user experience, and deliver measurable business value.",
-        additionalInfo: "From native iOS and Android applications to cross-platform solutions using React Native and Flutter, our development team ensures optimal performance, security, and user experience. We focus on creating mobile applications that not only meet current user expectations but also adapt to evolving mobile technologies and user preferences.",
+        title: "Our Mobile App Development",
+        subtitle: "Approach",
+        description: "As an Australian-based software development company, we understand the unique needs and challenges faced by businesses in Australia. Our bespoke software development services are designed to help you overcome these challenges and achieve your business objectives. Our custom software services can assist you with",
+        additionalInfo: "Contact us today to discuss how we can create a tailored software solution to drive innovation and growth for your organization.",
         services: [
             "iOS App Development",
             "Android App Development",
@@ -62,10 +60,10 @@ const serviceDetailsData = {
     },
     benefitsData: {
         title: "WHO WE ARE",
-        subtitle: "Benefits of Mobile App Development",
-        description: "We create powerful mobile applications that offer exceptional performance, security, and robust processing capabilities. Our mobile app solutions grant you complete control over the user interface and user experience, allowing for tailored and customized mobile experiences that align precisely with your business requirements and user preferences.",
+        subtitle: "Why Choose iFour?",
+        description: "At iFour, we have in-depth knowledge of the Australian market, allowing us to deliver solutions that resonate with your target audience. We combine this local understanding with our global expertise, staying up-to-date with industry trends and technologies to ensure your software meets global standards. Given below are the reasons to choose iFour.",
         additionalDescription: "",
-        conclusion: "Are you ready to unleash the full potential of your company with our mobile app development services? Contact us right away to discuss your business needs and get a powerful mobile solution."
+        conclusion: "Looking for Applications that resonate with your target audience? Avail of our mobile app development services. Contact us today to discuss your project requirements. Our team of experts is eager to collaborate with you, understand your vision, and deliver a mobile app solution that drives innovation and growth in your industry. Let us be your reliable technology partner on your digital transformation journey."
     }
 };
 
