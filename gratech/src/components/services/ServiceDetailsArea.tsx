@@ -1050,24 +1050,36 @@ const TechnologyPartnersSection = ({ data }: { data: ServiceDetailsData }) => {
                         textAlign: 'center',
                         width: '80%',
                         margin: '0 auto',
-                        cursor: 'pointer'
+                        cursor: 'pointer',
+                        borderRadius: '10px'
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = '0 15px 40px rgba(15, 122, 149, 0.25)';
+                        e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.08)';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.1)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
                     }}>
                     <img 
                         src="/assets/images/logo/technology partner.webp" 
                         alt="Our Technology Partners" 
                         style={{ 
-                            maxWidth: '100%',
-                            height: 'auto',
-                            objectFit: 'contain',
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
                             borderRadius: '10px',
                             filter: 'grayscale(100%)',
+                            transform: 'scale(0.9)',
                             transition: 'all 0.3s ease'
                         }}
                         onMouseEnter={(e) => {
-                            e.currentTarget.style.filter = 'grayscale(0%)';
+                            e.currentTarget.style.filter = 'grayscale(0%) brightness(1.1) contrast(1.1)';
+                            e.currentTarget.style.transform = 'scale(1.1)';
                         }}
                         onMouseLeave={(e) => {
                             e.currentTarget.style.filter = 'grayscale(100%)';
+                            e.currentTarget.style.transform = 'scale(0.9)';
                         }}
                     />
                 </div>
