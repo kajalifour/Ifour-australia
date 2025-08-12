@@ -219,7 +219,7 @@ const ServiceDetails = () => {
                                                 e.currentTarget.style.background = 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)';
                                                 e.currentTarget.style.color = '#0f7a95';
                                             }}>
-                                                START YOUR SOFTWARE JOURNEY
+                                               Get started now
                                             </Link>
                                         </div>
                                     </div>
