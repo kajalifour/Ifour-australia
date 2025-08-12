@@ -1028,12 +1028,12 @@ const TechnologyPartnersSection = ({ data }: { data: ServiceDetailsData }) => {
     if (!data.showTechnologyPartners) return null;
     
     return (
-        <section id="technology-partners-section" className="service-area pt-120 pb-120" style={{ background: '#ffffff', paddingTop: '100px', paddingBottom: '100px' }}>
+        <section id="technology-partners-section" className="service-area pt-120 pb-120" style={{ background: 'linear-gradient(135deg, #0f7a95 0%, #0a5a6b 50%, #0f7a95 100%)', paddingTop: '50px', paddingBottom: '50px', marginLeft: '150px', marginRight: '150px', marginTop: '70px', marginBottom: '70px' }}>
             <div className="container">
                 <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                     <div className="section-header">
-                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#000000' }}>
-                            <span style={{ color: '#0f7a95' }}>Our</span> Technology Partners
+                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
+                            <span style={{ color: '#ffffff' }}>Our</span> Technology Partners
                         </h2>
                     </div>
                 </div>
