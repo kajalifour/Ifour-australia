@@ -1153,9 +1153,7 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                                     </li>
                                 </ul>
                                 <h3><Link href="/blog-details" className="primary-hover">Essential Node.js Interview Questions Every Executive Should Ask When Hiring.</Link></h3>
-                                <p className="mt-10">Consequat Quisque eget congue velit in OF cursus leo sodales IS the
-                                    euismod quis
-                                    sapien euismod</p>
+                                <p className="mt-10"></p>
                                 <div className="about__info justify-content-between flex-wrap gap-3 mt-25">
                                     <div className="d-flex gap-2 align-items-center">
                                         <Image src={bolg_data.filter((items) => items.page === "home_1")[0]?.avatar || "/assets/images/blog/admin1.png"} alt="image" width={50} height={50} />
