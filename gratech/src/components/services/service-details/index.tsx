@@ -34,7 +34,7 @@ const serviceDetailsData = {
         "Transparent Communication and Timely Delivery",
     ],
     services: [
-        "Product development",
+        "Custom Product development",
         "Web application development",
         "Client-server applications",
         "Cloud application development",

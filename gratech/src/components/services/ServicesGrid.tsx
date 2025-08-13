@@ -75,7 +75,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
         // Create a mapping of service titles to their specific descriptions
         const serviceDescriptions: { [key: string]: string } = {
             // Custom Software Development Services
-            "Product development": "Transform your vision into an innovative solution with our product development services. We provide end-to-end consultation from concept to product launch to help you ensure competitiveness in the marketplace.",
+            "Custom Product development": "Transform your vision into an innovative solution with our product development services. We provide end-to-end consultation from concept to product launch to help you ensure competitiveness in the marketplace.",
             "Web application development": "We have a team of experts proficient in building stunning and user-cantered web applications to drive engagement. We integrate modern tech stacks to get high-performing web apps that help you stand out.",
             "Client-server applications": "Our team holds enough experience in the field to help you build client-server applications. At iFour, we build scalable and secure solutions that drive business agility.",
             "Cloud application development": "Our team holds enough experience in the field to help you build cloud apps. At iFour, we build scalable and secure cloud solutions that drive business agility.",
@@ -131,7 +131,19 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
     }
     
     return (
-        <section id="service-section" className="service-two-area secondary-bg pt-120 pb-120">
+        <>
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                    .service-two__item {
+                        border-radius: 0 !important;
+                        border-top-left-radius: 0 !important;
+                        border-top-right-radius: 0 !important;
+                        border-bottom-left-radius: 0 !important;
+                        border-bottom-right-radius: 0 !important;
+                    }
+                `
+            }} />
+            <section id="service-section" className="service-two-area secondary-bg pt-120 pb-120">
             {/* Background shapes matching home-two */}
             <div className="service-two__shape-left sway_Y__animationY">
                 <Image src={shape_1} alt="shape" />
@@ -172,7 +184,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                              style={{ 
                                  animationDelay: `${index * 100}ms`,
                                  animationDuration: '1000ms',
-                                 padding: '15px'
+                                 padding: '12px'
                              }}>
                             <div className="service-two__item wow fadeInUp" 
                                  data-wow-delay={`${index * 200}ms`} 
@@ -183,7 +195,12 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                      flexDirection: 'column',
                                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                                      cursor: 'pointer',
-                                     position: 'relative'
+                                     position: 'relative',
+                                     borderRadius: '0',
+                                     borderTopLeftRadius: '0',
+                                     borderTopRightRadius: '0',
+                                     borderBottomLeftRadius: '0',
+                                     borderBottomRightRadius: '0'
                                  }}
                                  onMouseEnter={(e) => {
                                      e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
@@ -209,7 +226,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                      opacity: '0',
                                      transition: 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                                      pointerEvents: 'none',
-                                     borderRadius: '8px'
+                                                                             borderRadius: '0'
                                  }}
                                  onMouseEnter={(e) => {
                                      e.currentTarget.style.opacity = '1';
@@ -222,17 +239,17 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                 <div className="image">
                                     <div style={{
                                         width: '100%',
-                                        height: '150px',
+                                        height: '120px',
                                         background: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',
                                         display: 'flex',
                                         flexDirection: 'column',
                                         alignItems: 'center',
                                         justifyContent: 'center',
-                                        borderRadius: '8px 8px 0 0',
+                                        borderRadius: '0',
                                         position: 'relative',
                                         transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                                         overflow: 'hidden',
-                                        padding: '15px'
+                                        padding: '12px'
                                     }}
                                     onMouseEnter={(e) => {
                                         e.currentTarget.style.background = 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%), linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%)';
@@ -277,18 +294,18 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                     display: 'flex',
                                     flexDirection: 'column',
                                     justifyContent: 'center',
-                                    padding: '30px',
+                                    padding: '24px',
                                     position: 'relative',
                                     overflow: 'hidden',
-                                    borderRadius: '0 0 8px 8px'
+                                                                            borderRadius: '0'
                                 }}>
                                     {/* Content overlay */}
                                     <div style={{
                                         position: 'relative',
                                         zIndex: '2',
                                         backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                                        padding: '20px',
-                                        borderRadius: '8px',
+                                        padding: '16px',
+                                        borderRadius: '0',
                                         backdropFilter: 'blur(5px)',
                                         border: '1px solid rgba(255, 255, 255, 0.2)'
                                     }}>
@@ -319,6 +336,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

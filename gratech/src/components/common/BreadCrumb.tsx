@@ -16,8 +16,8 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
       switch (serviceTitle) {
          case "Custom Software Development Company":
             return {
-               description: "Discover top-tier talent in Australia for custom software development. iFour specializes in crafting innovative, scalable, and affordable solutions tailored to your business needs.",
-               buttonText: "Get In Touch"
+               description: "Discover the top 1% of talent in Australia to build your next dream project. iFour specializes in custom software development services to help you get scalable solutions that improve your current workflow, eliminate manual processes, and mitigate data handling errors. Get affordable and tailored software solutions with us and say no to hefty investment.",
+               buttonText: "Get In Touch Now"
             };
              case "Desktop Application Development Company":
             return {
