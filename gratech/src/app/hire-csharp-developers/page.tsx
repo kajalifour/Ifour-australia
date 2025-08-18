@@ -30,7 +30,7 @@ const page = () => {
       "C# Integration Services",
       "Mobile App Development",
       "Windows App Development",
-      "Support and Maintenance"
+      "C# Support and Maintenance"
     ],
     showServiceCards: true,
     showProjects: true,

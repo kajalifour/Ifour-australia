@@ -125,7 +125,7 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             "C# Integration Services": "We specialize in optimizing data flow, and streamlining processes, through seamless integration of APIs, legacy systems, and cloud services. Onboard our C Sharp experts to ensure a smooth connection between your system and third-party services.",
             "Mobile App Development": "Hire our top C# experts to create dynamic and efficient Android and iOS apps. Our programmers follow coding best practices to deliver scalable and qualitative solutions that drive business growth.",
             "Windows App Development": "We have skilled programmers proficient in building impressive UIs, standalone intranet apps, and Windows desktop apps. Our experts provide top-notch services to help you streamline your business operations.",
-            "Support and Maintenance": "Ensure the smooth performance and flawless functionality of your software with our support and maintenance services. Our programmers will help you resolve any issues that you encounter to help you enjoy a seamless performance.",
+            "C# Support and Maintenance": "Ensure the smooth performance and flawless functionality of your software with our support and maintenance services. Our programmers will help you resolve any issues that you encounter to help you enjoy a seamless performance.",
             
             // WPF specific services
             "Custom WPF Development": "iFour specializes in creating tailored WPF applications that align with specific business requirements, ensuring high functionality and efficiency. Our skilled team creates innovative applications and delivers tailored solutions that enhance your competitive edge.",
@@ -137,11 +137,11 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             
             // Vue.js specific services
             "Vue.js UI Development": "iFour provides Vue.js developers for hire who quickly integrate into your existing team to help you build interactive user interfaces for your web apps tailored to your precise needs.",
-            "Custom Web App Development": "Hire Vue.js developers who have extensive experience in building secure, feature-rich, and highly scalable web apps customized according to your needs and help you achieve your business goals.",
-            "Progressive Web App (PWA) Development": "Partner with iFour to hire Vue Js developers who work to create Progressive Web Apps (PWAs) that is fast, reliable, and work across all devices and help you enjoy a native-like app experience.",
+            "Vue.js Web App Development": "Hire Vue.js developers who have extensive experience in building secure, feature-rich, and highly scalable web apps customized according to your needs and help you achieve your business goals.", 
+            "Progressive Web App (PWA) Development": "Partner with iFour to hire Vue.js developers who work to create Progressive Web Apps (PWAs) that are fast, reliable, and work across all devices and help you enjoy a native-like app experience.",
             "MVP/PoC Development": "Hire our top talent for Proof-of-Concept development and Minimum Viable Product development services. These services help you test a new idea quickly without any high investment.",
             "Vue.js App Migration": "Get assistance from our team to migrate your current application from another framework to Vue.js technology to improve the performance, responsiveness, and efficiency of your application.",
-            "Support & Maintenance": "Get post-launch app support and maintenance services from our Vue.js programmers. These ongoing support services will help to enhance the usability and seamlessness of your application."
+            "Vue.js Support & Maintenance": "Get post-launch app support and maintenance services from our Vue.js programmers. These ongoing support services will help to enhance the usability and seamlessness of your application."
         };
 
         // Create hire items from services array
