@@ -52,7 +52,30 @@ const page = () => {
       "Quick Hiring"
     ],
     serviceTwoTitle: "Why Hire Java Developers from iFour?",
-    serviceTwoSubtitle: "With a team of certified Java experts, we specialize in creating secure and scalable solutions tailored to your unique business needs. Here are the potential benefits of relying on iFour to onboard the dedicated Java expert."
+    serviceTwoSubtitle: "With a team of certified Java experts, we specialize in creating secure and scalable solutions tailored to your unique business needs. Here are the potential benefits of relying on iFour to onboard the dedicated Java expert.",
+    hireAboutSection: {
+      hiringOptions: {
+        title: "How to Hire Java Developers from iFour?",
+        subtitle: "You can hire Java developers in two following ways.",
+        options: [
+          "On an hourly basis",
+          "As a part of the dedicated team"
+        ]
+      },
+      hiringProcess: {
+        title: "Easy steps to onboard the top Java programmers.",
+        steps: [
+          "Share with us your requirements",
+          "Analyze resumes of qualified resources",
+          "Shortlist and interview the programmer",
+          "Agreement and Payment Procedure",
+          "Introducing Team Members to the Client",
+          "Discussing Project Objectives",
+          "Preparing the Work Environment",
+          "Project Begins"
+        ]
+      }
+    }
   };
 
   return (

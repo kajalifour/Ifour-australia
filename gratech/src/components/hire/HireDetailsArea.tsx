@@ -12,6 +12,7 @@ import TestimonialForm from "@/components/forms/TestimonialForm"
 import HireGrid from '@/components/hire/HireGrid';
 import HireCTA from '@/components/hire/HireCTA';
 import ServiceTwo from '@/components/hire/ServiceTwo';
+import HireAboutSection from '@/components/hire/HireAboutSection';
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
@@ -118,6 +119,16 @@ interface ServiceDetailsData {
    serviceTwoServices?: string[];
    serviceTwoTitle?: string;
    serviceTwoSubtitle?: string;
+   hireAboutSection?: {
+     hiringOptions?: {
+       title: string;
+       options: string[];
+     };
+     hiringProcess?: {
+       title: string;
+       steps: string[];
+     };
+   };
 }
 
 interface ServiceDetailsAreaProps {
@@ -1296,6 +1307,12 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
                 services={data.serviceTwoServices}
                 title={data.serviceTwoTitle || "Additional Services"}
                 subtitle={data.serviceTwoSubtitle || "Explore More Development Solutions"}
+            />
+            
+            {/* Second About Section - Always show below ServiceTwo on hire pages */}
+            <HireAboutSection 
+                hiringOptions={data.hireAboutSection?.hiringOptions}
+                hiringProcess={data.hireAboutSection?.hiringProcess}
             />
             
             {/* CTA Section - Positioned after service cards, before projects */}

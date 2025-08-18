@@ -52,7 +52,29 @@ const page = () => {
       "Customized Solution"
     ],
     serviceTwoTitle: "Why Choose iFour to Hire .NET Developers?",
-    serviceTwoSubtitle: "Outsource to iFour and get access to vetted and experienced resources along with the following benefits."
+    serviceTwoSubtitle: "Outsource to iFour and get access to vetted and experienced resources along with the following benefits.",
+         hireAboutSection: {
+       hiringOptions: {
+         title: "How to Hire .NET Developers from iFour?",
+         options: [
+           "On an hourly basis",
+           "As a part of the dedicated team"
+         ]
+       },
+       hiringProcess: {
+         title: "We have a straightforward hiring process, which is as follows:",
+         steps: [
+           "Gathering requirements",
+           "Sending CVs of our .NET developers",
+           "Shortlisting the programmer",
+           "Discussing contract and payment details",
+           "Introducing the team to the client",
+           "Project discussion",
+           "Setting up the work environment",
+           "Starting the project"
+         ]
+       }
+     }
   };
 
   return (

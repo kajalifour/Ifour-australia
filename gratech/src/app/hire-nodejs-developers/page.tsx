@@ -55,7 +55,30 @@ const page = () => {
       "Cost-effectiveness"
     ],
     serviceTwoTitle: "Why Hire Node.js Developers from iFour?",
-    serviceTwoSubtitle: "Being a reliable and top-notch IT company, iFour aims to bring innovative solutions that help clients stay ahead of the race. iFour has helped more than 50+ start-ups with 15 industry verticals across the globe. Hence by connecting with us, clients can get solutions for all sorts of needs, no matter if they are starting small or have a big enterprise."
+    serviceTwoSubtitle: "Being a reliable and top-notch IT company, iFour aims to bring innovative solutions that help clients stay ahead of the race. iFour has helped more than 50+ start-ups with 15 industry verticals across the globe. Hence by connecting with us, clients can get solutions for all sorts of needs, no matter if they are starting small or have a big enterprise.",
+    hireAboutSection: {
+      hiringOptions: {
+        title: "How to Hire Node.js Developers from iFour?",
+        subtitle: "We have a team of programmers proficient in building robust solutions and helping you achieve the full potential of node technology",
+        options: [
+          "On an hourly basis",
+          "As a part of the dedicated team"
+        ]
+      },
+      hiringProcess: {
+        title: "Hire top-tier Node.js developers in just a few easy steps.",
+        steps: [
+          "Collecting Project Requirements",
+          "Sharing CVs of Node.js Developers",
+          "Shortlisting The Programmer",
+          "Agreement and Payment Procedure",
+          "Introducing Team Members to the Client",
+          "Discussing Project Objectives",
+          "Preparing the Work Environment",
+          "Project Begins"
+        ]
+      }
+    }
   };
 
   return (

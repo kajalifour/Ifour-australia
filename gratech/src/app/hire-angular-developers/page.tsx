@@ -52,7 +52,30 @@ const page = () => {
       "Experienced Team"
     ],
     serviceTwoTitle: "Why Choose iFour to Hire Angular Developers?",
-    serviceTwoSubtitle: "iFour has helped multiple industries and clients worldwide to help them establish their digital workflows. Connect with us and get access to skilled programmers having extensive coding skills to build your dream project."
+    serviceTwoSubtitle: "iFour has helped multiple industries and clients worldwide to help them establish their digital workflows. Connect with us and get access to skilled programmers having extensive coding skills to build your dream project.",
+         hireAboutSection: {
+               hiringOptions: {
+          title: "How to Hire Angular Developers from iFour?",
+          subtitle: "Hire Angular programmers with the two following options",
+          options: [
+            "On an hourly basis",
+            "As a part of the dedicated team"
+          ]
+        },
+        hiringProcess: {
+          title: "We have a straightforward hiring process, which is as follows:",
+          steps: [
+            "Gather Project Requirements",
+            "Sharing CVs of our Angular Experts",
+            "Shortlisting The Programmer",
+            "Contract Signing and Payment Details",
+            "Introducing The Team to The Client",
+            "Project Discussion",
+            "Setting Up The Work Environment",
+            "Starting The Project"
+          ]
+        }
+     }
   };
 
   return (

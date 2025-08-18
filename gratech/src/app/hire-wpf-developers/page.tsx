@@ -52,7 +52,30 @@ const page = () => {
       "Ongoing Tech Support"
     ],
     serviceTwoTitle: "Why Hire WPF Developers from iFour?",
-    serviceTwoSubtitle: "Being a top-rated WPF development company, iFour offers quick access to vetted WPF experts ready to help you build robust solutions. Our technical team helps you implement unique features tailored to your precise needs."
+    serviceTwoSubtitle: "Being a top-rated WPF development company, iFour offers quick access to vetted WPF experts ready to help you build robust solutions. Our technical team helps you implement unique features tailored to your precise needs.",
+    hireAboutSection: {
+      hiringOptions: {
+        title: "What is the Procedure for Hiring WPF Developers?",
+        subtitle: "Clients can hire WPF developers through iFour in two ways.",
+        options: [
+          "On an hourly basis",
+          "As a part of the dedicated team"
+        ]
+      },
+      hiringProcess: {
+        title: "Here is our approach to hiring dedicated WPF programmers.",
+        steps: [
+          "Collecting Requirements",
+          "Sharing CVs of WPF Developers",
+          "Shortlisting The Programmer",
+          "Agreement and Payment Procedure",
+          "Introducing Team Members to the Client",
+          "Discussing Project Objectives",
+          "Preparing the Work Environment",
+          "Project Begins"
+        ]
+      }
+    }
   };
 
   return (
