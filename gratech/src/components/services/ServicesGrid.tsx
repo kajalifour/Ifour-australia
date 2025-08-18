@@ -100,6 +100,14 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
             "Migration from Exchange on-premises to Office 365": "By migrating from Exchange on-premises to Office 365, businesses can take advantage of cloud benefits. The service includes migrating all emails, contacts, and calendars from user mailboxes to Office 365.",
             "Migration from open-source email to Office 365": "We also help clients migrate from open-source email to Office 365 where clients can choose to migrate the content of user mailboxes from open-source mailbox to Microsoft 365. This helps clients improve productivity and scalability.",
             
+            // .NET Development Services
+            ".NET Web Development": "We specialize in designing and developing dynamic and responsive web-based software solutions using ASP.NET that help to ensure optimum user satisfaction.",
+            ".NET Mobile App Development": "Our .NET developers have expertise in crafting high-quality mobile apps that can in multiple platforms and offer a range of advanced features.",
+            ".NET Desktop Development": "Build powerful and high-performing Windows applications with WPF to achieve an interface that is both intuitive and consistent with the Windows operating system.",
+            ".NET Integration Services": "Our services include integrating .NET solutions with other powerful tools and we also help you upgrade your existing solutions to improve its performance.",
+            ".NET Migration": "Receive expert guidance from our team of skilled .NET programmers to migrate your legacy .NET application and ensure long-term sustainability of your system.",
+            ".NET Support & Maintenance": "By partnering with us clients can get continuous support and maintenance services which ensures optimal performance of your software and seamless user experience.",
+            
             // Mobile App Development Services (service-details7)
             "iOS App Development": "Build for Apple's ecosystem, our team delivers sleek and intuitive solutions for iOS app development. With extensive experience in building iOS solutions, our team crafts fully functional app that satisfies your needs.",
             "Android App Development": "Our team holds the necessary expertise in Android app development. With a focus on smooth user experience and advanced functionalities, we build Android apps that help you grow in this competitive market.",

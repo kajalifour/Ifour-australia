@@ -1,7 +1,7 @@
 "use client";
 
 import ServiceDetailsArea from "@/components/services/ServiceDetailsArea";
-import ServicesGrid from "@/components/services/ServicesGrid";
+import HireGrid from "@/components/hire/HireGrid";
 
 const HireVueJS = () => {
   const hireData = {
@@ -28,13 +28,13 @@ const HireVueJS = () => {
     showTechnologyPartners: true,
     showAgileApproach: true,
     showAbout: true,
-    showServicesGrid: true
+    showServicesGrid: false
   };
 
   return (
     <>
       <ServiceDetailsArea data={hireData} />
-      <ServicesGrid />
+      <HireGrid services={hireData.services} />
     </>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
 
-import ServiceDetailsArea from "@/components/services/ServiceDetailsArea";
-import ServicesGrid from "@/components/services/ServicesGrid";
+import ServiceDetailsArea from "@/components/hire/HireDetailsArea";
+import HireGrid from "@/components/hire/HireGrid";
 
 const HireDotNet = () => {
   const hireData = {
@@ -17,24 +17,24 @@ const HireDotNet = () => {
       "Performance optimization and testing"
     ],
     services: [
-      "Custom .NET Application Development",
-      "Web Application Development",
-      "API Development and Integration",
-      "Database Design and Management",
-      "Cloud Migration and Deployment",
-      "Application Maintenance and Support"
+        ".NET Web Development",
+        ".NET Mobile App Development",
+        ".NET Desktop Development",
+        ".NET Integration Services",
+        ".NET Migration",
+        ".NET Support & Maintenance"
     ],
     showBlog: true,
     showTechnologyPartners: true,
     showAgileApproach: true,
     showAbout: true,
-    showServicesGrid: true
+    showServicesGrid: false
   };
 
   return (
     <>
       <ServiceDetailsArea data={hireData} />
-      <ServicesGrid />
+      <HireGrid services={hireData.services} />
     </>
   );
 };

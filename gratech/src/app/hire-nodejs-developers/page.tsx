@@ -1,37 +1,59 @@
-import HireDetails from "@/components/hire/hire-details";
+import BreadCrumb from "@/components/common/BreadCrumb"
+import FooterOne from "@/layouts/footers/FooterOne"
+import HeaderOne from "@/layouts/headers/HeaderOne"
+import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
 export const metadata = {
   title: "Hire Node.js Developers - Gratech IT Services",
-  description: "Hire experienced Node.js developers for your backend development projects. Professional Node.js development services.",
+  description: "Hire experienced Node.js developers for your backend and web application projects. Professional Node.js development services.",
 };
 
 const page = () => {
+  const hireData = {
+    title: "Hire Node.js Developers",
+    subtitle: "Expert Node.js Development Services",
+    description: "Hire skilled Node.js developers who excel in building scalable backend applications, APIs, and real-time web solutions. Our developers are experts in Node.js, Express.js, and modern JavaScript development practices.",
+    benefits: [
+      "Expert knowledge of Node.js runtime environment",
+      "JavaScript and TypeScript expertise",
+      "Express.js and middleware development",
+      "Real-time applications with Socket.io",
+      "Microservices architecture design",
+      "Performance optimization and scalability"
+    ],
+    services: [
+      "Node.js Web & Network App Development",
+      "Node.js API Development Service",
+      "Consulting, Maintenance & Support Service",
+      "Custom Web App Development",
+      "Content Management System",
+      "Microservices Architecture",
+      "E-commerce Web Development",
+      "Node.js Plugin Development",
+      "Migration to the Latest Version"
+    ],
+    showServiceCards: true,
+    showProjects: true,
+    showClients: true,
+    showTechnologies: true,
+    showMediaCoverage: true,
+    showTestimonials: true,
+    showBlog: true,
+    showAgileApproach: true,
+    showTechnologyPartners: true,
+    showAbout: true,
+    showServicesGrid: true
+  };
+
   return (
-    <HireDetails 
-      title="Hire Node.js Developers"
-      subtitle="Expert Node.js Development Services"
-      description="Hire skilled Node.js developers who specialize in building scalable, high-performance backend applications. Our developers excel in server-side JavaScript, Express.js, and modern backend architectures."
-      benefits={[
-        "Expert knowledge of Node.js runtime",
-        "Express.js and server framework expertise",
-        "RESTful API and GraphQL development",
-        "Database integration and ORM usage",
-        "Microservices architecture design",
-        "Performance optimization and scaling"
-      ]}
-      services={[
-        "Custom Node.js Application Development",
-        "RESTful API Development",
-        "GraphQL API Development",
-        "Microservices Architecture",
-        "Database Design and Integration",
-        "Application Deployment and DevOps"
-      ]}
-      ctaTitle="Ready to hire skilled Node.js developers?"
-      ctaDescription="Get in touch with us today to discuss your project requirements and find the perfect Node.js developers for your team."
-      ctaButtonText="Hire Node.js Developers"
-      ctaButtonLink="/contact"
-    />
+    <>
+      <HeaderOne />
+      <main>
+        <BreadCrumb sub_title="Hire Developers" title="Hire Node.js Developers" />
+        <HireDetailsArea data={hireData} />
+      </main>
+      <FooterOne />
+    </>
   )
 }
 
