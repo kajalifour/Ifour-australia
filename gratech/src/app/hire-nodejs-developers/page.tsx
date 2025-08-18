@@ -42,7 +42,10 @@ const page = () => {
     showAgileApproach: true,
     showTechnologyPartners: true,
     showAbout: true,
-    showServicesGrid: true
+    showServicesGrid: true,
+    ctaTitle: "Overcome Scalability Issues with Our Node.js Solutions",
+    ctaButtonText: "Let’s Discuss Your Project",
+    ctaButtonLink: "/contact"
   };
 
   return (

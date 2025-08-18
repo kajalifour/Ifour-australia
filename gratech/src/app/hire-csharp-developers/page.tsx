@@ -42,7 +42,10 @@ const page = () => {
     showAgileApproach: true,
     showTechnologyPartners: true,
     showAbout: true,
-    showServicesGrid: true
+    showServicesGrid: true,
+    ctaTitle: "Hire C#Developers for Optimized Solutions and Assured Business Growth",
+    ctaButtonText: "Talk to Our Experts",
+    ctaButtonLink: "/contact"
   };
 
   return (

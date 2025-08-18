@@ -39,7 +39,10 @@ const page = () => {
     showAgileApproach: true,
     showTechnologyPartners: true,
     showAbout: true,
-    showServicesGrid: true
+    showServicesGrid: true,
+    ctaTitle: "Hire our .NET experts to deal with your integration complexities",
+    ctaButtonText: "SHORTLIST NOW",
+    ctaButtonLink: "/contact"
   };
 
   return (

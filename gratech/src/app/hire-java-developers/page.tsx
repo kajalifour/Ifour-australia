@@ -39,7 +39,10 @@ const page = () => {
     showAgileApproach: true,
     showTechnologyPartners: true,
     showAbout: true,
-    showServicesGrid: true
+    showServicesGrid: true,
+    ctaTitle: "Looking for an expert Java development team? Get started with us.",
+    ctaButtonText: "Let’s Discuss Your Project",
+    ctaButtonLink: "/contact"
   };
 
   return (

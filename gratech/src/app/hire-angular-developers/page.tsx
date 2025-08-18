@@ -39,7 +39,10 @@ const page = () => {
     showAgileApproach: true,
     showTechnologyPartners: true,
     showAbout: true,
-    showServicesGrid: true
+    showServicesGrid: true,
+    ctaTitle: "Hire Angular JS Developers to Accelerate Your Frontend Architecture",
+    ctaButtonText: "GET STARTED TODAY",
+    ctaButtonLink: "/contact"
   };
 
   return (
