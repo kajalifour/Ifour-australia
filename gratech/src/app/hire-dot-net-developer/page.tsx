@@ -42,7 +42,17 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Hire our .NET experts to deal with your integration complexities",
     ctaButtonText: "SHORTLIST NOW",
-    ctaButtonLink: "/contact"
+    ctaButtonLink: "/contact",
+    serviceTwoServices: [
+      "Extensive Expertise",
+      "End-to-end Solution",
+      "Total Transparency",
+      "Faster Delivery",
+      "Cutting-edge Technology",
+      "Customized Solution"
+    ],
+    serviceTwoTitle: "Why Choose iFour to Hire .NET Developers?",
+    serviceTwoSubtitle: "Outsource to iFour and get access to vetted and experienced resources along with the following benefits."
   };
 
   return (

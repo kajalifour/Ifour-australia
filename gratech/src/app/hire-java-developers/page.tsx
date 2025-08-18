@@ -42,7 +42,17 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Looking for an expert Java development team? Get started with us.",
     ctaButtonText: "Let’s Discuss Your Project",
-    ctaButtonLink: "/contact"
+    ctaButtonLink: "/contact",
+    serviceTwoServices: [
+      "Vast Talent Pool",
+      "Industry Expertise",
+      "Transparent Communication",
+      "Cost-effective Solution",
+      "Agile Methodology",
+      "Quick Hiring"
+    ],
+    serviceTwoTitle: "Why Hire Java Developers from iFour?",
+    serviceTwoSubtitle: "With a team of certified Java experts, we specialize in creating secure and scalable solutions tailored to your unique business needs. Here are the potential benefits of relying on iFour to onboard the dedicated Java expert."
   };
 
   return (

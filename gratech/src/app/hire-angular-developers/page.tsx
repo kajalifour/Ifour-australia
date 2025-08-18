@@ -42,7 +42,17 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Hire Angular JS Developers to Accelerate Your Frontend Architecture",
     ctaButtonText: "GET STARTED TODAY",
-    ctaButtonLink: "/contact"
+    ctaButtonLink: "/contact",
+    serviceTwoServices: [
+      "Quick Onboarding",
+      "Proven Track Record",
+      "User-centric Approach",
+      "Competitive Pricing",
+      "Comprehensive Services",
+      "Experienced Team"
+    ],
+    serviceTwoTitle: "Why Choose iFour to Hire Angular Developers?",
+    serviceTwoSubtitle: "iFour has helped multiple industries and clients worldwide to help them establish their digital workflows. Connect with us and get access to skilled programmers having extensive coding skills to build your dream project."
   };
 
   return (

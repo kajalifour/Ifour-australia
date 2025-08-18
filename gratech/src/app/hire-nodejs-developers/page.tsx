@@ -45,7 +45,17 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Overcome Scalability Issues with Our Node.js Solutions",
     ctaButtonText: "Let’s Discuss Your Project",
-    ctaButtonLink: "/contact"
+    ctaButtonLink: "/contact",
+    serviceTwoServices: [
+      "Extensive Expertise",
+      "Custom Solutions",
+      "Agile Methodology",
+      "Secured Solutions",
+      "Timely Delivery",
+      "Cost-effectiveness"
+    ],
+    serviceTwoTitle: "Why Hire Node.js Developers from iFour?",
+    serviceTwoSubtitle: "Being a reliable and top-notch IT company, iFour aims to bring innovative solutions that help clients stay ahead of the race. iFour has helped more than 50+ start-ups with 15 industry verticals across the globe. Hence by connecting with us, clients can get solutions for all sorts of needs, no matter if they are starting small or have a big enterprise."
   };
 
   return (

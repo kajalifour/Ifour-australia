@@ -42,7 +42,17 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Hire WPF developers with iFour to build your next desktop App.",
     ctaButtonText: "Let’s Discuss Your Project",
-    ctaButtonLink: "/contact"
+    ctaButtonLink: "/contact",
+    serviceTwoServices: [
+      "Vetted WPF Experts",
+      "Qualitative Solution",
+      "Hire 4X Faster",
+      "100% Transparency",
+      "Cost Effectiveness",
+      "Ongoing Tech Support"
+    ],
+    serviceTwoTitle: "Why Hire WPF Developers from iFour?",
+    serviceTwoSubtitle: "Being a top-rated WPF development company, iFour offers quick access to vetted WPF experts ready to help you build robust solutions. Our technical team helps you implement unique features tailored to your precise needs."
   };
 
   return (

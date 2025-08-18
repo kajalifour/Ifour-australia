@@ -45,7 +45,17 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Hire C#Developers for Optimized Solutions and Assured Business Growth",
     ctaButtonText: "Talk to Our Experts",
-    ctaButtonLink: "/contact"
+    ctaButtonLink: "/contact",
+    serviceTwoServices: [
+      "Talented Team",
+      "Quick Hiring",
+      "Industry Expertise",
+      "Qualitative Solutions",
+      "Cost-effectiveness",
+      "24*7 Support"
+    ],
+    serviceTwoTitle: "Why Choose iFour to Hire C# Developers?",
+    serviceTwoSubtitle: "We provide a plethora of services to help you build robust and reliable cross-platform solutions. iFour is your development partner from concept to completion."
   };
 
   return (

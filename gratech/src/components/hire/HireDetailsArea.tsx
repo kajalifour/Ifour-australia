@@ -11,6 +11,7 @@ import bolg_data from "@/data/BlogData";
 import TestimonialForm from "@/components/forms/TestimonialForm"
 import HireGrid from '@/components/hire/HireGrid';
 import HireCTA from '@/components/hire/HireCTA';
+import ServiceTwo from '@/components/hire/ServiceTwo';
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
@@ -114,6 +115,9 @@ interface ServiceDetailsData {
    ctaTitle?: string;
    ctaButtonText?: string;
    ctaButtonLink?: string;
+   serviceTwoServices?: string[];
+   serviceTwoTitle?: string;
+   serviceTwoSubtitle?: string;
 }
 
 interface ServiceDetailsAreaProps {
@@ -1285,6 +1289,13 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
                 title={data.ctaTitle || "Looking for reliable bespoke software development solutions?"}
                 buttonText={data.ctaButtonText || "GET STARTED NOW"}
                 buttonLink={data.ctaButtonLink || "/contact"}
+            />
+            
+            {/* ServiceTwo Section - Additional services below CTA (hire pages only) */}
+            <ServiceTwo 
+                services={data.serviceTwoServices}
+                title={data.serviceTwoTitle || "Additional Services"}
+                subtitle={data.serviceTwoSubtitle || "Explore More Development Solutions"}
             />
             
             {/* CTA Section - Positioned after service cards, before projects */}

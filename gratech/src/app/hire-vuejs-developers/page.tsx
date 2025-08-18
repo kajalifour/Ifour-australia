@@ -42,7 +42,17 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Need expert Vue.js developers to enhance your project?",
     ctaButtonText: "Let’s Discuss Your Project",
-    ctaButtonLink: "/contact"
+    ctaButtonLink: "/contact",
+    serviceTwoServices: [
+      "Technical Efficiency",
+      "Cost Saving",
+      "Assured Quality",
+      "Hassle-Free Recruitment",
+      "User-centered Approach",
+      "Cloud Solutions & Migration"
+    ],
+    serviceTwoTitle: "Why Work with iFour?",
+    serviceTwoSubtitle: "iFour provides a reliable team of Vue.js programmers who dedicatedly work toward bringing your ideas to reality by incorporating the best development methods. By joining hands with iFour, clients can obtain the following benefits."
   };
 
   return (
