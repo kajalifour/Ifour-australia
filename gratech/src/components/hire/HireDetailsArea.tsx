@@ -468,7 +468,7 @@ const ClientsSection = ({ data }: { data: ServiceDetailsData }) => {
     };
 
    return (
-      <section className="clients-area pt-120 pb-120">
+      <section className="clients-area pt-120 pb-120" style={{ marginTop: '70px' }}>
          <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                <div className="section-header">
@@ -1324,6 +1324,9 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
             {/* Clients Section */}
             <ClientsSection data={data} />
             
+            {/* Testimonial Section */}
+            <TestimonialSection data={data} />
+            
             {/* Agile Approach Section */}
             <AgileApproachSection data={data} />
             
@@ -1332,12 +1335,6 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
             
             {/* Media Coverage Section */}
             <MediaCoverageSection data={data} />
-            
-            {/* Gap between Media Coverage and Testimonial */}
-            <div style={{ height: '120px', backgroundColor: '#ffffff' }}></div>
-            
-            {/* Testimonial Section */}
-            <TestimonialSection data={data} />
             
             {/* Technology Partners Section */}
             <TechnologyPartnersSection data={data} />
