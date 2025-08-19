@@ -43,6 +43,9 @@ const page = () => {
     ctaTitle: "Hire our .NET experts to deal with your integration complexities",
     ctaButtonText: "SHORTLIST NOW",
     ctaButtonLink: "/contact",
+    ctaTwoTitle: "Tap into the innovative world of web apps by hiring our .NET Developers.",
+    ctaTwoButtonText: "Get in touch now",
+    ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Extensive Expertise",
       "End-to-end Solution",

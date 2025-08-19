@@ -43,6 +43,9 @@ const page = () => {
     ctaTitle: "Hire Angular JS Developers to Accelerate Your Frontend Architecture",
     ctaButtonText: "GET STARTED TODAY",
     ctaButtonLink: "/contact",
+    ctaTwoTitle: "Hire Angular JS Developers and Unlock the Full Potential of Robust Framework",
+    ctaTwoButtonText: "Get in touch now",
+    ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Quick Onboarding",
       "Proven Track Record",

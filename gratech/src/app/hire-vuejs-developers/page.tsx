@@ -43,6 +43,9 @@ const page = () => {
     ctaTitle: "Need expert Vue.js developers to enhance your project?",
     ctaButtonText: "Let’s Discuss Your Project",
     ctaButtonLink: "/contact",
+    ctaTwoTitle: "Engage with Top Vue.js Developers Within Minutes.",
+    ctaTwoButtonText: "Let’s Connect",
+    ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Technical Efficiency",
       "Cost Saving",

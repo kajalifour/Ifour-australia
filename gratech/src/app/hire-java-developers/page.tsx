@@ -43,6 +43,9 @@ const page = () => {
     ctaTitle: "Looking for an expert Java development team? Get started with us.",
     ctaButtonText: "Let’s Discuss Your Project",
     ctaButtonLink: "/contact",
+    ctaTwoTitle: "Hire Skilled Java Developers to Bring Your Vision to Life.",
+    ctaTwoButtonText: "Let’s Connect",
+    ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Vast Talent Pool",
       "Industry Expertise",

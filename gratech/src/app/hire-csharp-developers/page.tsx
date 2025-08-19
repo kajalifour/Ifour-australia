@@ -46,6 +46,9 @@ const page = () => {
     ctaTitle: "Hire C#Developers for Optimized Solutions and Assured Business Growth",
     ctaButtonText: "Talk to Our Experts",
     ctaButtonLink: "/contact",
+    ctaTwoTitle: "Get Instant Access to C# Experts with iFour",
+    ctaTwoButtonText: "Let’s Work Together",
+    ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Talented Team",
       "Quick Hiring",

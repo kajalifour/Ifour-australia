@@ -11,6 +11,7 @@ import bolg_data from "@/data/BlogData";
 import TestimonialForm from "@/components/forms/TestimonialForm"
 import HireGrid from '@/components/hire/HireGrid';
 import HireCTA from '@/components/hire/HireCTA';
+import HireCTATwo from '@/components/hire/HireCTATwo';
 import ServiceTwo from '@/components/hire/ServiceTwo';
 import HireAboutSection from '@/components/hire/HireAboutSection';
 
@@ -116,6 +117,9 @@ interface ServiceDetailsData {
    ctaTitle?: string;
    ctaButtonText?: string;
    ctaButtonLink?: string;
+   ctaTwoTitle?: string;
+   ctaTwoButtonText?: string;
+   ctaTwoButtonLink?: string;
    serviceTwoServices?: string[];
    serviceTwoTitle?: string;
    serviceTwoSubtitle?: string;
@@ -1326,6 +1330,13 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
             
             {/* Testimonial Section */}
             <TestimonialSection data={data} />
+            
+            {/* CTA Two Section - Between Testimonials and Agile Approach */}
+            <HireCTATwo 
+                title={data.ctaTwoTitle || "Ready to Start Your Project?"}
+                buttonText={data.ctaTwoButtonText || "GET STARTED NOW"}
+                buttonLink={data.ctaTwoButtonLink || "/contact"}
+            />
             
             {/* Agile Approach Section */}
             <AgileApproachSection data={data} />

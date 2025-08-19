@@ -46,6 +46,9 @@ const page = () => {
     ctaTitle: "Overcome Scalability Issues with Our Node.js Solutions",
     ctaButtonText: "Let’s Discuss Your Project",
     ctaButtonLink: "/contact",
+    ctaTwoTitle: "Outsource Dedicated Node.js Developers from iFour Technolab",
+    ctaTwoButtonText: "Let’s Connect",
+    ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Extensive Expertise",
       "Custom Solutions",

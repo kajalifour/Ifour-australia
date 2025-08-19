@@ -43,6 +43,9 @@ const page = () => {
     ctaTitle: "Hire WPF developers with iFour to build your next desktop App.",
     ctaButtonText: "Let’s Discuss Your Project",
     ctaButtonLink: "/contact",
+    ctaTwoTitle: "Ready to Build Your Next Desktop App? Hire WPF Developers Today.",
+    ctaTwoButtonText: "Let’s Connect",
+    ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Vetted WPF Experts",
       "Qualitative Solution",
