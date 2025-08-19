@@ -57,6 +57,8 @@ const page = () => {
     serviceTwoTitle: "Why Hire WPF Developers from iFour?",
     serviceTwoSubtitle: "Being a top-rated WPF development company, iFour offers quick access to vetted WPF experts ready to help you build robust solutions. Our technical team helps you implement unique features tailored to your precise needs.",
     hireAboutSection: {
+      title: "Value-added WPF Development Services",
+      description: "iFour offers reliable WPF App development services, ensuring faster turnaround times and improved ROI. Our WPF developers create visually appealing and engaging Windows applications through expert design and development.",
       hiringOptions: {
         title: "What is the Procedure for Hiring WPF Developers?",
         subtitle: "Clients can hire WPF developers through iFour in two ways.",

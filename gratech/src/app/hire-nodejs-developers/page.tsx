@@ -60,6 +60,8 @@ const page = () => {
     serviceTwoTitle: "Why Hire Node.js Developers from iFour?",
     serviceTwoSubtitle: "Being a reliable and top-notch IT company, iFour aims to bring innovative solutions that help clients stay ahead of the race. iFour has helped more than 50+ start-ups with 15 industry verticals across the globe. Hence by connecting with us, clients can get solutions for all sorts of needs, no matter if they are starting small or have a big enterprise.",
     hireAboutSection: {
+      title: "Our Node.JS Development Services",
+      description: "Being a top-notch Node.js development company in Australia, we provide end-to-end development services to help your business grow.",
       hiringOptions: {
         title: "How to Hire Node.js Developers from iFour?",
         subtitle: "We have a team of programmers proficient in building robust solutions and helping you achieve the full potential of node technology",

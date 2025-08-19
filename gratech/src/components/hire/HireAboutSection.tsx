@@ -6,6 +6,8 @@ import shape_1 from "@/assets/images/icon/section-title.png";
 import shape_5 from "@/assets/images/shape/about-line.png";
 
 interface HireAboutSectionProps {
+    title?: string;
+    description?: string;
     hiringOptions?: {
         title: string;
         subtitle?: string;
@@ -18,6 +20,8 @@ interface HireAboutSectionProps {
 }
 
 const HireAboutSection: React.FC<HireAboutSectionProps> = ({
+    title,
+    description,
     hiringOptions = {
         title: "How to Hire Developers from iFour?",
         options: [
@@ -48,6 +52,33 @@ const HireAboutSection: React.FC<HireAboutSectionProps> = ({
                 <Image src={shape_5} alt="shape" width={100} height={100} />
             </div>
             <div className="container">
+                {/* Title and Description Section */}
+                {title && description && (
+                    <div className="row mb-5">
+                        <div className="col-12 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+                            <div className="section-header text-center mb-40">
+                                <h2 style={{ 
+                                    color: '#0f7a95', 
+                                    fontSize: '2.5rem', 
+                                    fontWeight: '700',
+                                    marginBottom: '20px',
+                                    lineHeight: '1.2'
+                                }}>
+                                    {title}
+                                </h2>
+                                <p style={{ 
+                                    color: '#666', 
+                                    fontSize: '1.1rem', 
+                                    lineHeight: '1.6',
+                                    maxWidth: '800px',
+                                    margin: '0 auto'
+                                }}>
+                                    {description}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )}
                 <div className="row g-4">
                     {/* Left Side - Hiring Options */}
                     <div className="col-xl-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">

@@ -57,6 +57,8 @@ const page = () => {
     serviceTwoTitle: "Why Work with iFour?",
     serviceTwoSubtitle: "iFour provides a reliable team of Vue.js programmers who dedicatedly work toward bringing your ideas to reality by incorporating the best development methods. By joining hands with iFour, clients can obtain the following benefits.",
     hireAboutSection: {
+      title: "Our Vue js Development Services",
+      description: "Our Vue.js experts are familiar with the latest tech stacks and have extensive knowledge to empower businesses with agile development methodologies. By onboarding the talent from us, clients can get access to the following Vue.js development services.",
       hiringOptions: {
         title: "How to Hire Vue.js Developers from iFour?",
         subtitle: "Our specialists provide more than code, assisting at every step to lead you to the right path of success. Our hassle-free hiring process helps clients get the right resources on time.\n\nHire Vue,js developers in two following ways:",

@@ -57,6 +57,8 @@ const page = () => {
     serviceTwoTitle: "Why Hire Java Developers from iFour?",
     serviceTwoSubtitle: "With a team of certified Java experts, we specialize in creating secure and scalable solutions tailored to your unique business needs. Here are the potential benefits of relying on iFour to onboard the dedicated Java expert.",
     hireAboutSection: {
+      title: "Expertise in Java Development Services",
+      description: "Our experts build quality-rich solutions backed by agile methodologies and industry expertise. Our developers offer a comprehensive set of Java development services, which are as follows:",
       hiringOptions: {
         title: "How to Hire Java Developers from iFour?",
         subtitle: "You can hire Java developers in two following ways.",

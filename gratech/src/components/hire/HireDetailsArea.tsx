@@ -1332,11 +1332,54 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
             {/* Benefits Section */}
             {BenefitsSection}
             
-            {/* About Section */}
-            <AboutSection data={data} />
-            
             {/* Service Cards Section */}
             <ServiceCardsSection data={data} />
+            
+            {/* Quality Services Section - Above HireGrid */}
+            {data.hireAboutSection?.title && data.hireAboutSection?.description && (
+                <section className="quality-services-section pt-120 pb-80" style={{ 
+                    background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%)',
+                    marginBottom: '50px'
+                }}>
+                    <div className="container">
+                        <div className="row g-4 align-items-center">
+                            <div className="col-xl-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                <div className="content-section">
+                                    <h2 style={{ 
+                                        color: '#0f7a95', 
+                                        fontSize: '2.5rem', 
+                                        fontWeight: '700',
+                                        marginBottom: '20px',
+                                        lineHeight: '1.2'
+                                    }}>
+                                        {data.hireAboutSection.title}
+                                    </h2>
+                                    <p style={{ 
+                                        color: '#666', 
+                                        fontSize: '1.1rem', 
+                                        lineHeight: '1.6'
+                                    }}>
+                                        {data.hireAboutSection.description}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-xl-6 wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
+                                <div className="about__left-item" style={{ position: 'relative' }}>
+                                    <div className="image big-image" style={{ marginTop: '0px' }}>
+                                        <Image src={about_thumb3} alt="Quality Services" width={400} height={300} />
+                                    </div>
+                                    <div className="image sm-image" style={{ marginTop: '0px' }}>
+                                        <Image src={about_thumb4} alt="Quality Services" width={300} height={200} />
+                                    </div>
+                                    <div className="circle-shape">
+                                        <Image src={shape_6} alt="shape" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
             
             {/* Services Grid Section - Added before CTA */}
             {data.showServicesGrid && (

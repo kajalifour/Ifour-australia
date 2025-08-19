@@ -60,12 +60,27 @@ const page = () => {
     serviceTwoTitle: "Why Choose iFour to Hire C# Developers?",
     serviceTwoSubtitle: "We provide a plethora of services to help you build robust and reliable cross-platform solutions. iFour is your development partner from concept to completion.",
     hireAboutSection: {
+      title: "Our C# Development Services",
+      description: "We provide a comprehensive suite of services counting from consulting to development and deployment. Hire C# developers from us and leverage the following services.",
       hiringOptions: {
         title: "How to Hire C# Programmers from iFour?",
         subtitle: "Get an extended team of programmers with industry expertise and proficiency in advanced technology to build the next-gen digital solutions. With iFour clients can hire C-sharp programmers 4x faster.\n\nWe offer the following hiring models.",
         options: [
           "On an hourly basis",
           "As a part of the dedicated team"
+        ]
+      },
+      hiringProcess: {
+        title: "We have a straightforward hiring process, which is as follows:",
+        steps: [
+          "Gathering requirements",
+          "Sending CVs of our C# developers",
+          "Shortlisting the programmer",
+          "Discussing contract and payment details",
+          "Introducing the team to the client",
+          "Project discussion",
+          "Setting up the work environment",
+          "Starting the project"
         ]
       }
     }

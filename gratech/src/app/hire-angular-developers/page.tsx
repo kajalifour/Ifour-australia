@@ -57,6 +57,8 @@ const page = () => {
     serviceTwoTitle: "Why Choose iFour to Hire Angular Developers?",
     serviceTwoSubtitle: "iFour has helped multiple industries and clients worldwide to help them establish their digital workflows. Connect with us and get access to skilled programmers having extensive coding skills to build your dream project.",
          hireAboutSection: {
+           title: "Angular Development Services We Provide",
+           description: "iFour a reputed Angular development company, relishes expertise for multi-industries. We bring solutions that help you achieve your business goals. Hire Angular programmers to leverage the following services.",
                hiringOptions: {
           title: "How to Hire Angular Developers from iFour?",
           subtitle: "Hire Angular programmers with the two following options",

@@ -57,6 +57,8 @@ const page = () => {
     serviceTwoTitle: "Why Choose iFour to Hire .NET Developers?",
     serviceTwoSubtitle: "Outsource to iFour and get access to vetted and experienced resources along with the following benefits.",
          hireAboutSection: {
+       title: "Quality-Oriented .NET Development Services We Provide",
+       description: "As a Microsoft solution partner and a reputed .NET development company, we bring solutions that serve your business goals while saving maximum on the budget. Connect with iFour and get the following .NET development services.",
        hiringOptions: {
          title: "How to Hire .NET Developers from iFour?",
          options: [
