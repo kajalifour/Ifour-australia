@@ -126,7 +126,7 @@ const ServiceTwo: React.FC<ServiceTwoProps> = ({
                                 </svg>
                                 {title.toUpperCase()}
                             </h5>
-                            <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ fontSize: '24px', fontWeight: '400', opacity: '0.9' }}>
                                 {subtitle}
                             </h2>
                         </div>

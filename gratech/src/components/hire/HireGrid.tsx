@@ -270,7 +270,7 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
                                 <div className="image">
                                     <div style={{
                                         width: '100%',
-                                        height: '120px',
+                                        height: '70px',
                                         background: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',
                                         display: 'flex',
                                         flexDirection: 'column',
