@@ -14,6 +14,7 @@ import HireCTA from '@/components/hire/HireCTA';
 import HireCTATwo from '@/components/hire/HireCTATwo';
 import ServiceTwo from '@/components/hire/ServiceTwo';
 import HireAboutSection from '@/components/hire/HireAboutSection';
+import IndustryWeServe from '@/components/hire/IndustryWeServe';
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
@@ -687,15 +688,15 @@ const MediaCoverageSection = ({ data }: { data: ServiceDetailsData }) => {
     ];
 
     return (
-        <section className="media-coverage-area pt-120 pb-80" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', marginBottom: '0' }}>
+        <section className="media-coverage-area pt-120 pb-80" style={{ background: '#ffffff', marginBottom: '0' }}>
             <div className="container">
                 <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                     <div className="section-header">
-                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
+                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#333333' }}>
                             <Image className="me-1" src={shape_1} alt="icon" />
                             Press & Media
                         </h5>
-                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
+                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#333333' }}>
                             <span style={{ color: '#0f7a95' }}>Media</span> Coverage
                         </h2>
                     </div>
@@ -708,13 +709,12 @@ const MediaCoverageSection = ({ data }: { data: ServiceDetailsData }) => {
                                 data-wow-delay={`${index * 100}ms`} 
                                 data-wow-duration="1500ms"
                                 style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                                    borderRadius: '0',
+                                    backgroundColor: 'rgba(15, 122, 149, 0.05)',
+                                    borderRadius: '8px',
                                     padding: '22px 14px',
-                                    border: '1px solid rgba(0, 0, 0, 0.1)',
+                                    border: '1px solid rgba(15, 122, 149, 0.1)',
                                     transition: 'all 0.3s ease',
                                     height: '120px',
-                                    backdropFilter: 'blur(10px)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center'
@@ -723,13 +723,13 @@ const MediaCoverageSection = ({ data }: { data: ServiceDetailsData }) => {
                                     e.currentTarget.style.transform = 'translateY(-5px)';
                                     e.currentTarget.style.borderColor = '#0f7a95';
                                     e.currentTarget.style.boxShadow = '0 10px 30px rgba(15, 122, 149, 0.2)';
-                                    e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.05)';
+                                    e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.1)';
                                 }}
                                 onMouseLeave={(e) => {
                                     e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+                                    e.currentTarget.style.borderColor = 'rgba(15, 122, 149, 0.1)';
                                     e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
+                                    e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.05)';
                                 }}>
                                 <img 
                                     src={media.icon} 
@@ -1341,14 +1341,11 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
             {/* Agile Approach Section */}
             <AgileApproachSection data={data} />
             
-            {/* Technologies Section */}
-            <TechnologiesSection data={data} />
+            {/* Industry We Serve Section */}
+            <IndustryWeServe />
             
             {/* Media Coverage Section */}
             <MediaCoverageSection data={data} />
-            
-            {/* Technology Partners Section */}
-            <TechnologyPartnersSection data={data} />
             
             {/* Blog Section */}
             <BlogSection data={data} />
