@@ -185,7 +185,9 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
                   </>
                )}
             </div>
-            {(title === "Custom Software Development Company" || 
+            {(title.startsWith("Hire ") ||
+              sub_title === "Technologies" ||
+              title === "Custom Software Development Company" || 
               title === "Web Application Development Company" ||
               title === "Cloud Application Development Company" ||
               title === "Business Line Solutions Company" ||
@@ -196,14 +198,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
               title === "Microsoft Azure Cloud Services Company" ||
               title === "Ecommerce Website Development Company" ||
               title === "IoT Software Development Company" ||
-              title === "Blockchain Development Company" ||
-              title === "Hire .NET Developers" ||
-              title === "Hire Angular Developers" ||
-              title === "Hire Node.js Developers" ||
-              title === "Hire Vue JS Developers" ||
-              title === "Hire C# Developers" ||
-              title === "Hire WPF Developers" ||
-              title === "Hire Java Developers") && (
+              title === "Blockchain Development Company") && (
                 <div className="banner-content wow fadeInUp mt-4" data-wow-delay="400ms" data-wow-duration="1500ms">
                    <p className="text-white mb-4" style={{
                       fontSize: '1.32rem',
