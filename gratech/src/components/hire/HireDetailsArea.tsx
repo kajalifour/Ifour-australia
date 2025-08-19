@@ -15,6 +15,7 @@ import HireCTATwo from '@/components/hire/HireCTATwo';
 import ServiceTwo from '@/components/hire/ServiceTwo';
 import HireAboutSection from '@/components/hire/HireAboutSection';
 import IndustryWeServe from '@/components/hire/IndustryWeServe';
+import NewsletterSection from '@/components/common/NewsletterSection';
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
@@ -1441,6 +1442,9 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
             
             {/* Blog Section */}
             <BlogSection data={data} />
+            
+            {/* Newsletter Section - Above Footer */}
+            <NewsletterSection />
             
             {/* Global CSS for clients slider */}
             <style jsx global>{`

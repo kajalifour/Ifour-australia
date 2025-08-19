@@ -14,6 +14,7 @@ import Project from "./Project"
 import Process from "./Process"
 import Testimonial from "./Testimonial"
 import Blog from "./Blog"
+import NewsletterSection from "@/components/common/NewsletterSection"
 
 const HomeOne = () => {
   return (
@@ -34,6 +35,7 @@ const HomeOne = () => {
         <Process />
         <Testimonial />
         <Blog />
+        <NewsletterSection />
       </main>
       <FooterOne />
     </>
