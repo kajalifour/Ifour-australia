@@ -19,6 +19,47 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
                description: "Discover the top 1% of talent in Australia to build your next dream project. iFour specializes in custom software development services to help you get scalable solutions that improve your current workflow, eliminate manual processes, and mitigate data handling errors. Get affordable and tailored software solutions with us and say no to hefty investment.",
                buttonText: "Get In Touch Now"
             };
+         // Technologies pages
+         case "Angular Development Company":
+            return {
+               description: "Boost your brand’s digital footprint to the next level by enlisting our exemplary Angular development services. Build interactive, secure, and highly extensible software solutions by leveraging our technical acumen and knowledge as a leading Angular development company.",
+               buttonText: "Get In Touch Now"
+            };
+         case ".NET Development Company":
+            return {
+               description: "Leverage modern .NET and Azure to build secure, scalable, and cloud‑ready applications. Our team crafts enterprise‑grade solutions with clean architecture and best practices.",
+               buttonText: "Get In Touch Now"
+            };
+         case "C# Development Company":
+            return {
+               description: "Create robust and maintainable software using modern C# and .NET. We focus on clean architecture, testing, and performance to deliver long‑term value.",
+               buttonText: "Get In Touch Now"
+            };
+         case "Java Development Company":
+            return {
+               description: "Design and deliver scalable, secure Java applications with cloud‑native architectures and automated DevOps pipelines.",
+               buttonText: "Get In Touch Now"
+            };
+         case "Salesforce Development Company":
+            return {
+               description: "Customize, integrate, and extend Salesforce to streamline operations and drive growth with our certified experts.",
+               buttonText: "Get In Touch Now"
+            };
+         case "WPF Application Development Company":
+            return {
+               description: "Build modern, high‑performance Windows desktop applications using WPF and MVVM patterns for exceptional UX and productivity.",
+               buttonText: "Get In Touch Now"
+            };
+         case "React.js Development Company":
+            return {
+               description: "Deliver responsive, accessible, and maintainable frontends using React and Next.js, optimized for performance and scalability.",
+               buttonText: "Get In Touch Now"
+            };
+         case "Node.js Development Company":
+            return {
+               description: "Develop high‑throughput APIs and real‑time applications with Node.js, designed for scalability, security, and reliability.",
+               buttonText: "Get In Touch Now"
+            };
              case "Desktop Application Development Company":
             return {
                description: "At iFour, we specialize in crafting innovative desktop app that drive productivity, simplify business workflows, and enhance user experience. With a team of highly experienced and vetted developers we help you transform your ideas into reality with a secure and robust solutions.",
@@ -128,7 +169,21 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
          <div className="container">
             <h2 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">{title}</h2>
             <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-               <Link href="/">Home</Link><span><i className="fa-regular fa-angles-right mx-2"></i>{sub_title}</span>
+               <Link href="/">Home</Link>
+               <span><i className="fa-regular fa-angles-right mx-2"></i></span>
+               {title.startsWith("Hire ") ? (
+                  // Hire style: Home › Hire Developers › Hire Angular Developers
+                  <>
+                     <span>Hire Developers</span>
+                     <span><i className="fa-regular fa-angles-right mx-2"></i>{title}</span>
+                  </>
+               ) : (
+                  // Technologies style: Home › Technologies › Angular Development Company
+                  <>
+                     <Link href="/technologies">Technologies</Link>
+                     <span><i className="fa-regular fa-angles-right mx-2"></i>{title}</span>
+                  </>
+               )}
             </div>
             {(title === "Custom Software Development Company" || 
               title === "Web Application Development Company" ||
