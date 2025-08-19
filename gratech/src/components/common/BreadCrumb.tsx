@@ -68,7 +68,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
    //for hire breadcrumb 
       const gethireContent = (serviceTitle: string) => {
       switch (serviceTitle) {
-         case "Hire .NET Developer":
+         case "Hire .NET Developers":
             return {
                description: "iFour remains a reliable partner to hire .NET developers in Australia. We have a team of highly skilled .NET developers proficient in building outstanding web apps. From dynamic web-based software solutions to cross-platform mobile apps and feature-rich Windows apps, we offer a range of .NET development services. Tap into the world of web apps with our .NET experts and take your projects to the next level.",
                buttonText: "Get In Touch Now"
@@ -142,7 +142,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
               title === "Ecommerce Website Development Company" ||
               title === "IoT Software Development Company" ||
               title === "Blockchain Development Company" ||
-              title === "Hire .NET Developer" ||
+              title === "Hire .NET Developers" ||
               title === "Hire Angular Developers" ||
               title === "Hire Node.js Developers" ||
               title === "Hire Vue JS Developers" ||

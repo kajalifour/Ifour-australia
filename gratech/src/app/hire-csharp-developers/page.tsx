@@ -10,9 +10,9 @@ export const metadata = {
 
 const page = () => {
   const hireData = {
-    title: "Hire C# Developers",
+    title: "Hire C# Developers to Build Advanced Digital Solutions",
     subtitle: "Expert C# Development Services",
-    description: "Hire skilled C# developers who excel in building robust Windows applications, web solutions, and enterprise software. Our developers are experts in C#, .NET Framework, and Microsoft technologies.",
+    description: "iFour is a top-notch C Sharp development company in Australia with a talent pool of C# experts who help build powerful business software. We have served over 500 businesses and work with 15+ industry verticals to provide robust solutions and custom solutions tailored to business needs of any scale.\n\nWe provide unique solutions tailored to your business needs, from SMEs to large enterprises, whether you want to boost operational efficiency, enhance customer interaction, or innovate with cutting-edge features. Our C# development services encompass everything to deliver tangible business results. Hire the right talent from us to build your next dream project.",
     benefits: [
       "Expert knowledge of C# programming language",
       ".NET Framework and .NET Core expertise",

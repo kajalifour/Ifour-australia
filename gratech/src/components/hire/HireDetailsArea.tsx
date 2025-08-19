@@ -230,7 +230,56 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
                                 marginBottom: '1.5rem',
                                 fontWeight: '700'
                             }}>
-                                <span style={{ color: '#0f7a95' }}>{data.title}</span> {data.subtitle || 'Services'}
+                                <div style={{ color: '#0f7a95', fontWeight: '400' }}>
+                                    {data.title.includes('Connect with iFour') ? (
+                                        <>
+                                            Connect with iFour to<br />
+                                            Obtain Exceptional<br />
+                                            Results
+                                        </>
+                                    ) : data.title.includes('Node.js Programmers') ? (
+                                        <>
+                                            Hire Node.js Programmers to<br />
+                                            Build Robust Back-end<br />
+                                            Solutions
+                                        </>
+                                    ) : data.title.includes('Vue.js Developers to Build') ? (
+                                        <>
+                                            Hire Vue.js Developers to<br />
+                                            Build Interactive Web<br />
+                                            Solutions
+                                        </>
+                                    ) : data.title.includes('C# Developers to Build') ? (
+                                        <>
+                                            Hire C# Developers to<br />
+                                            Build Advanced Digital<br />
+                                            Solutions
+                                        </>
+                                    ) : data.title.includes('WPF Developers to Enhance') ? (
+                                        <>
+                                            Hire WPF Developers to<br />
+                                            Enhance Your System
+                                        </>
+                                    ) : data.title.includes('Build Custom Solutions') ? (
+                                        <>
+                                            Build Custom Solutions with<br />
+                                            Our Dedicated Java<br />
+                                            Developers
+                                        </>
+                                    ) : data.title.includes('Angular') ? (
+                                        <>
+                                            Maximize Business Success with<br />
+                                            Our Experienced Angular<br />
+                                            Developers
+                                        </>
+                                    ) : (
+                                        <>
+                                            Maximize Business Success with<br />
+                                            Our Experienced .NET<br />
+                                            Developers
+                                        </>
+                                    )}
+                                </div>
                             </h2>
                             <div className="text-content wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{
                                 fontSize: '1.1rem',

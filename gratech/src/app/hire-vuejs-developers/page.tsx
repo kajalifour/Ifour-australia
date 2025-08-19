@@ -10,9 +10,9 @@ export const metadata = {
 
 const page = () => {
   const hireData = {
-    title: "Hire Vue.js Developers",
+    title: "Hire Vue.js Developers to Build Interactive Web Solutions",
     subtitle: "Expert Vue.js Development Services",
-    description: "Hire skilled Vue.js developers who excel in building modern, responsive web applications. Our developers are experts in Vue.js framework, JavaScript, and modern web development practices.",
+    description: "Vue.js is a progressive framework for building dynamic user interfaces. At iFour, we have skilled and vetted Vue.js developers who specialize in delivering powerful, adaptable, responsive, and high-performing front-end applications.\n\nWe help businesses of all sizes across various niches resolve industry-specific challenges. Our Vue.js programmers work with advanced technologies and have practical experience with all versions and releases of Vue.js, enabling them to provide the best digital transformation solutions.",
     benefits: [
       "Expert knowledge of Vue.js framework",
       "JavaScript and TypeScript expertise",
@@ -85,7 +85,7 @@ const page = () => {
     <>
       <HeaderOne />
       <main>
-        <BreadCrumb sub_title="Hire Developers" title="Hire Vue.js Developers" />
+        <BreadCrumb sub_title="Hire Developers" title="Hire Vue JS Developers" />
         <HireDetailsArea data={hireData} />
       </main>
       <FooterOne />

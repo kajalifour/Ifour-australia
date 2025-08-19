@@ -10,9 +10,9 @@ export const metadata = {
 
 const page = () => {
   const hireData = {
-    title: "Hire Node.js Developers",
+    title: "Hire Node.js Programmers to Build Robust Back-end Solutions",
     subtitle: "Expert Node.js Development Services",
-    description: "Hire skilled Node.js developers who excel in building scalable backend applications, APIs, and real-time web solutions. Our developers are experts in Node.js, Express.js, and modern JavaScript development practices.",
+    description: "Node.js is a versatile technology offering performance, scalability, adaptability, agility, and resilience. Its features enable efficient request handling, smooth data processing, and event-driven modules, making it ideal for building future-proof web and mobile apps.\n\nAt iFour we have a team of vetted experts who are well-trained and hold industry expertise to craft dynamic solutions. Our programming team excels at crafting versatile, real-time applications that feature efficient input/output processing and dynamic server capabilities, ensuring smooth and uninterrupted backend performance.",
     benefits: [
       "Expert knowledge of Node.js runtime environment",
       "JavaScript and TypeScript expertise",

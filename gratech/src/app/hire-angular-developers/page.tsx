@@ -10,9 +10,9 @@ export const metadata = {
 
 const page = () => {
   const hireData = {
-    title: "Hire Angular Developers",
+    title: "Connect with iFour to Obtain Exceptional Results",
     subtitle: "Expert Angular Development Services",
-    description: "Hire skilled Angular developers who excel in building modern, responsive web applications. Our developers are experts in Angular framework, TypeScript, and modern web development practices.",
+    description: "iFour specializes in developing secure web and mobile applications using Angular, catering to a wide range of established businesses, from startups to large enterprises. Whether you want to build small or large projects, we provide end-to-end development solutions to suit your needs.\n\nMoreover, with a straightforward hiring approach, the client gets quick access to the right resources to get started with their project. We are not just a tech partner but a growth partner that leads you to the right path of success.",
     benefits: [
       "Expert knowledge of Angular framework",
       "TypeScript and JavaScript expertise",

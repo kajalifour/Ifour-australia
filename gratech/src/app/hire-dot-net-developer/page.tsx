@@ -10,9 +10,9 @@ export const metadata = {
 
 const page = () => {
   const hireData = {
-    title: "Hire .NET Developers",
+    title: "Maximize Business Success with Our Experienced .NET Developers",
     subtitle: "Expert .NET Development Services",
-    description: "Hire skilled .NET developers who excel in building robust Microsoft applications and enterprise solutions. Our developers are experts in .NET Framework, .NET Core, and Microsoft technologies.",
+    description: "iFour a leading .NET development company has certified .NET experts well-versed in the latest tech stack to help you scale your .NET project to the next level. Our expert team excels in C#, ASP.NET MVC, web API, and more, and has a solid track record of designing and developing powerpack web and mobile app projects for businesses of all sizes.\n\nOur experts work closely with clients to understand their requirements and craft solutions catering to their needs. Hence by partnering with us you can get end-to-end .net development services and gain a competitive edge. Choose from a talent pool of .NET programmers to hire and enhance your team's capabilities.",
     benefits: [
       "Expert knowledge of .NET Framework and .NET Core",
       "ASP.NET and MVC development expertise",

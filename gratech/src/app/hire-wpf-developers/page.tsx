@@ -10,9 +10,9 @@ export const metadata = {
 
 const page = () => {
   const hireData = {
-    title: "Hire WPF Developers",
+    title: "Hire WPF Developers to Enhance Your System",
     subtitle: "Expert WPF Development Services",
-    description: "Hire skilled WPF developers who excel in building modern Windows desktop applications and user interfaces. Our developers are experts in WPF, XAML, and Windows application development.",
+    description: "iFour is a Microsoft-certified partner with over 10 years of experience in development. By hiring WPF developers from iFour, you get access to a huge talent pool of WPF experts who deliver qualitative, feature-rich, and high-performing solutions tailored to your needs.\n\nWe offer customized, results-driven Microsoft-based web development services. Our programmers have expertise across diverse industrial sectors to help solve business specific challenges efficiently. With our innovative, and best-in-class solutions, you can achieve outstanding results that drive assured business success.",
     benefits: [
       "Expert knowledge of WPF framework",
       "XAML and C# programming expertise",

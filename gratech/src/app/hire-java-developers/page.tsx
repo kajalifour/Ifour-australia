@@ -10,9 +10,9 @@ export const metadata = {
 
 const page = () => {
   const hireData = {
-    title: "Hire Java Developers",
+    title: "Build Custom Solutions with Our Dedicated Java Developers",
     subtitle: "Expert Java Development Services",
-    description: "Hire skilled Java developers who excel in building robust enterprise applications, web solutions, and scalable systems. Our developers are experts in Java, Spring Boot, and modern development practices.",
+    description: "By hiring Java developers from iFour, you get access to a vast talent pool of iFour developers who are experts in creating top-notch and user-friendly Java-based solutions. We provide accurate solutions for all business scales and assure you work with top talent proficient in building custom solutions. Our team brings innovation and efficiency to your projects to help you stay competitive.\n\nYou can easily interact with our developers just like your in-house staff to create innovative solutions. We offer flexible hiring models and competitive pricing to connect you with the right talent without compromising on quality or cost. Boost your project with our expert Java team dedicated to delivering excellence. Rely on iFour Technolab to connect with the right talent.",
     benefits: [
       "Access to top-tier Java talent",
       "Flexible engagement models",
