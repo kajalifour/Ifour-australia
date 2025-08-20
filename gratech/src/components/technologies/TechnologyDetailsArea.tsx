@@ -7,7 +7,7 @@ type Props = React.ComponentProps<typeof HireDetailsArea>;
 
 // Wrapper to keep Technologies separated from Hire while reusing the same layout/sections
 const TechnologyDetailsArea: React.FC<Props> = (props) => {
-    return <HireDetailsArea {...props} />;
+    return <HireDetailsArea {...props} isTechnologyPage={true} />;
 };
 
 export default TechnologyDetailsArea;

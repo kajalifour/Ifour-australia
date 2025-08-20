@@ -141,6 +141,7 @@ interface ServiceDetailsAreaProps {
     data: ServiceDetailsData;
     BenefitsSection?: React.ReactNode;
     CTASection?: React.ReactNode;
+    isTechnologyPage?: boolean;
 }
 
 const testi_data: TestimonialDataType[] = [
@@ -1324,7 +1325,7 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
 };
 
 // Main ServiceDetailsArea Component
-const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetailsAreaProps) => {
+const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPage = false }: ServiceDetailsAreaProps) => {
     return (
         <>
             {/* Main Service Section */}
@@ -1392,19 +1393,23 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection }: ServiceDetail
                 </div>
             )}
             
-            {/* Hire CTA Section - Positioned after services grid */}
-            <HireCTA 
-                title={data.ctaTitle || "Looking for reliable bespoke software development solutions?"}
-                buttonText={data.ctaButtonText || "GET STARTED NOW"}
-                buttonLink={data.ctaButtonLink || "/contact"}
-            />
+            {/* Hire CTA Section - Positioned after services grid (hire pages only) */}
+            {!isTechnologyPage && (
+                <HireCTA 
+                    title={data.ctaTitle || "Looking for reliable bespoke software development solutions?"}
+                    buttonText={data.ctaButtonText || "GET STARTED NOW"}
+                    buttonLink={data.ctaButtonLink || "/contact"}
+                />
+            )}
             
             {/* ServiceTwo Section - Additional services below CTA (hire pages only) */}
-            <ServiceTwo 
-                services={data.serviceTwoServices}
-                title={data.serviceTwoTitle || "Additional Services"}
-                subtitle={data.serviceTwoSubtitle || "Explore More Development Solutions"}
-            />
+            {!isTechnologyPage && (
+                <ServiceTwo 
+                    services={data.serviceTwoServices}
+                    title={data.serviceTwoTitle || "Additional Services"}
+                    subtitle={data.serviceTwoSubtitle || "Explore More Development Solutions"}
+                />
+            )}
             
             {/* Second About Section - Always show below ServiceTwo on hire pages */}
             <HireAboutSection 
