@@ -180,7 +180,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
                ) : (
                   // Technologies style: Home › Technologies › Angular Development Company
                   <>
-                     <Link href="/technologies">Technologies</Link>
+                     <span>Technologies</span>
                      <span><i className="fa-regular fa-angles-right mx-2"></i>{title}</span>
                   </>
                )}

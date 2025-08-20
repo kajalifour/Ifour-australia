@@ -125,16 +125,18 @@ interface ServiceDetailsData {
    serviceTwoServices?: string[];
    serviceTwoTitle?: string;
    serviceTwoSubtitle?: string;
-   hireAboutSection?: {
-     hiringOptions?: {
-       title: string;
-       options: string[];
-     };
-     hiringProcess?: {
-       title: string;
-       steps: string[];
-     };
-   };
+       hireAboutSection?: {
+      title?: string;
+      description?: string;
+      hiringOptions?: {
+        title: string;
+        options: string[];
+      };
+      hiringProcess?: {
+        title: string;
+        steps: string[];
+      };
+    };
 }
 
 interface ServiceDetailsAreaProps {
@@ -214,7 +216,7 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
                         }}>
                             <Image 
                                 src={data.image || blog_image3} 
-                                alt={data.title} 
+                                alt={data.title || "Service Image"} 
                                 style={{
                                     width: '110%',
                                     height: 'auto',
@@ -347,10 +349,10 @@ const AboutSection = ({ data }: { data: ServiceDetailsData }) => {
                     <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="about__left-item">
                             <div className="image big-image" style={{ marginTop: '70px' }}>
-                                <Image src={data.aboutData?.image || about_thumb3} alt="image" width={400} height={300} />
+                                <Image src={data.aboutData?.image || about_thumb3} alt={data.aboutData?.title || "About Image"} width={400} height={300} />
                             </div>
                             <div className="image sm-image" style={{ marginTop: '70px' }}>
-                                <Image src={data.aboutData?.image || about_thumb4} alt="image" width={300} height={200} />
+                                <Image src={data.aboutData?.image || about_thumb4} alt={data.aboutData?.title || "About Image"} width={300} height={200} />
                             </div>
                             <div className="circle-shape">
                                 <Image src={shape_6} alt="shape" />
@@ -389,7 +391,7 @@ const ServiceCardsSection = ({ data }: { data: ServiceDetailsData }) => {
                                 justifyContent: 'flex-start'
                             }}>
                                 <div className="service__icon">
-                                    <Image src={item.icon} alt="icon" width={60} height={60} />
+                                    <Image src={item.icon || shape_1} alt={item.title || "Service Icon"} width={60} height={60} />
                                 </div>
                                 <h4><Link href="/service-details">{item.title}</Link></h4>
                                 <p style={{ flex: '1' }}>{item.desc}</p>
@@ -430,7 +432,7 @@ const ProjectSection = ({ data }: { data: ServiceDetailsData }) => {
                         <div key={item.id} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div className="project__item position-relative overflow-hidden rounded-3 project-hover-container" style={{ height: '300px' }}>
                                 <div className="project__image w-100 h-100">
-                                    <Image src={item.image} alt={item.title} fill className="object-fit-cover" />
+                                    <Image src={item.image || blog_image3} alt={item.title || "Project Image"} fill className="object-fit-cover" />
                                 </div>
                                 <div className="project__overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4" 
                                     style={{
@@ -1195,7 +1197,7 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                     <div className="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="blog-two__grid-item">
                             <Link href="/blog-details" className="blog__image d-block image">
-                                <Image src={bolg_data.filter((items) => items.page === "home_1")[0]?.thumb || bolg_data[0].thumb} alt="image" width={400} height={300} />
+                                <Image src={bolg_data.filter((items) => items.page === "home_1")[0]?.thumb || bolg_data[0].thumb} alt="Blog Image" width={400} height={300} />
                                 <div className="blog-tag">
                                     <h3 className="text-white">{bolg_data.filter((items) => items.page === "home_1")[0]?.date || bolg_data[0].date}</h3>
                                     <span className="text-white">{bolg_data.filter((items) => items.page === "home_1")[0]?.month || bolg_data[0].month}</span>
@@ -1242,7 +1244,7 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                                 <p className="mt-10"></p>
                                 <div className="about__info justify-content-between flex-wrap gap-3 mt-25">
                                     <div className="d-flex gap-2 align-items-center">
-                                        <Image src={bolg_data.filter((items) => items.page === "home_1")[0]?.avatar || "/assets/images/blog/admin1.png"} alt="image" width={50} height={50} />
+                                        <Image src={bolg_data.filter((items) => items.page === "home_1")[0]?.avatar || "/assets/images/blog/admin1.png"} alt="Blog Author" width={50} height={50} />
                                         <div className="info">
                                             <Link href="#" className="primary-color">By Admin</Link>
                                             <h5>{bolg_data.filter((items) => items.page === "home_1")[0]?.name || "Alex Rony"}</h5>
@@ -1260,7 +1262,7 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                             <div key={item.id} className="blog-two__list-item mb-30 wow fadeInUp" data-wow-delay="00ms"
                                 data-wow-duration="1500ms">
                                 <Link href="/blog-details" className="blog__image d-block image">
-                                    <Image src={item.thumb} alt="image" width={400} height={300} />
+                                    <Image src={item.thumb || blog_image3} alt={item.title || "Blog Image"} width={400} height={300} />
                                     <div className="blog-tag">
                                         <h3 className="text-white">{item.date}</h3>
                                         <span className="text-white">{item.month}</span>
@@ -1306,7 +1308,7 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                                 <h3><Link href="/blog-details" className="primary-hover">{item.title}</Link></h3>
                                 <div className="about__info mt-30">
                                     <div className="d-flex gap-2 align-items-center">
-                                        <Image src={item.avatar || "/assets/images/blog/admin1.png"} alt="image" width={50} height={50} />
+                                        <Image src={item.avatar || "/assets/images/blog/admin1.png"} alt={item.name || "Blog Author"} width={50} height={50} />
                                         <div className="info">
                                             <Link href="#" className="primary-color">By Admin</Link>
                                             <h5>{item.name || "Admin"}</h5>
@@ -1361,7 +1363,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
                                         fontSize: '1.1rem', 
                                         lineHeight: '1.6'
                                     }}>
-                                        {data.hireAboutSection.description}
+                                        {data.hireAboutSection?.description || ""}
                                     </p>
                                 </div>
                             </div>

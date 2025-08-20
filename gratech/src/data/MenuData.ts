@@ -89,7 +89,7 @@ const menu_data: MenuItem[] = [
     {
         id: 3,
         title: "Technologies",
-        link: "/technologies",
+        link: "#",
         has_dropdown: true,
         sub_menus: [
             { link: "/angular-development-company", title: "Angular Development" },
