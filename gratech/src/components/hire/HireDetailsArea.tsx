@@ -16,6 +16,7 @@ import ServiceTwo from '@/components/hire/ServiceTwo';
 import HireAboutSection from '@/components/hire/HireAboutSection';
 import IndustryWeServe from '@/components/hire/IndustryWeServe';
 import NewsletterSection from '@/components/common/NewsletterSection';
+import WhyChooseUsSection from '@/components/technologies/WhyChooseUsSection';
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
@@ -136,6 +137,13 @@ interface ServiceDetailsData {
         title: string;
         steps: string[];
       };
+    };
+    whyChooseUs?: {
+      title: string;
+      paragraphs: string[];
+      ctaText: string;
+      ctaLink: string;
+      ctaSuffix: string;
     };
 }
 
@@ -1395,22 +1403,27 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
                 </div>
             )}
             
+            {/* Why Choose Us Section - Only for Technology Pages */}
+            {isTechnologyPage && data.whyChooseUs && (
+                <WhyChooseUsSection data={data.whyChooseUs} />
+            )}
+            
             {/* Hire CTA Section - Positioned after services grid (hire pages only) */}
             {!isTechnologyPage && (
-                <HireCTA 
-                    title={data.ctaTitle || "Looking for reliable bespoke software development solutions?"}
-                    buttonText={data.ctaButtonText || "GET STARTED NOW"}
-                    buttonLink={data.ctaButtonLink || "/contact"}
-                />
+            <HireCTA 
+                title={data.ctaTitle || "Looking for reliable bespoke software development solutions?"}
+                buttonText={data.ctaButtonText || "GET STARTED NOW"}
+                buttonLink={data.ctaButtonLink || "/contact"}
+            />
             )}
             
             {/* ServiceTwo Section - Additional services below CTA (hire pages only) */}
             {!isTechnologyPage && (
-                <ServiceTwo 
-                    services={data.serviceTwoServices}
-                    title={data.serviceTwoTitle || "Additional Services"}
-                    subtitle={data.serviceTwoSubtitle || "Explore More Development Solutions"}
-                />
+            <ServiceTwo 
+                services={data.serviceTwoServices}
+                title={data.serviceTwoTitle || "Additional Services"}
+                subtitle={data.serviceTwoSubtitle || "Explore More Development Solutions"}
+            />
             )}
             
             {/* Second About Section - Always show below ServiceTwo on hire pages */}

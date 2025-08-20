@@ -75,6 +75,16 @@ const page = () => {
         ],
       },
     },
+    whyChooseUs: {
+      title: "Why Choose Us as Your Angular Development Company?",
+      paragraphs: [
+        "iFour Technolab has always placed a strong focus on helping clients realise their unique goals and triumph in their respective fields. With a team of exceptionally skilled professionals and decade-long domain experience, we stand ready to assist you in your endeavours. We prioritise client satisfaction and, thus, work closely with you to fully understand your requirements and not only meet expectations but surpass your expectations.",
+        "With a track record of success, iFour Technolab is your ideal Angular development agency. Leveraging our perfect blend of technical expertise, commitment to quality, and client-focused approach, we're not only your partner in innovation; we're an ally dedicated to your success and ensuring optimal results."
+      ],
+      ctaText: "Hire Angular developers",
+      ctaLink: "/hire-angular-developers",
+      ctaSuffix: "from iFour to build powerful web and mobile apps catering to your unique business needs."
+    },
   };
 
   return (
