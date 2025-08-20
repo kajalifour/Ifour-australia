@@ -68,6 +68,20 @@ const page = () => {
         steps: ["Requirements", "Team match", "Onboarding", "Sprints", "Delivery"],
       },
     },
+    angularBenefits: {
+      title: "Why Java is Ideal for Enterprise Development?",
+      description: "Java is a robust, object-oriented programming language that has been the backbone of enterprise software development for decades. Since its introduction by Sun Microsystems, Java has become the preferred choice for building scalable, secure, and high-performance applications that power businesses worldwide.\n\nWith its 'Write Once, Run Anywhere' philosophy, extensive ecosystem, and enterprise-grade features, Java stands as the top choice for enterprise development today. Java continues to dominate the enterprise landscape, thanks to its reliability, security, and vast community support that ensures long-term stability and growth.\n\nLet us explore the key reasons why businesses should consider Java for their enterprise development:",
+      benefits: [
+        "Platform Independence",
+        "Enterprise-Grade Security",
+        "High Performance",
+        "Scalable Architecture",
+        "Rich Ecosystem",
+        "Strong Typing",
+        "Garbage Collection",
+        "Extensive Libraries"
+      ]
+    },
   };
 
   return (

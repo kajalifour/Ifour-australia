@@ -68,6 +68,20 @@ const page = () => {
         steps: ["Requirements", "Profiles", "Shortlist", "Kickoff", "Delivery"],
       },
     },
+    angularBenefits: {
+      title: "Why WPF is Ideal for Desktop Application Development?",
+      description: "Windows Presentation Foundation (WPF) is Microsoft's powerful framework for building rich, modern desktop applications. Since its introduction, WPF has become the preferred choice for creating sophisticated, high-performance Windows applications that deliver exceptional user experiences and drive business productivity.\n\nWith its XAML-based declarative UI, MVVM architecture pattern, and extensive customization capabilities, WPF stands as the top choice for desktop development today. WPF continues to dominate the Windows desktop landscape, thanks to its seamless integration with the .NET ecosystem, powerful data binding, and advanced UI capabilities that enable rapid development.\n\nLet us explore the key reasons why businesses should consider WPF for their desktop application development:",
+      benefits: [
+        "Rich User Interface",
+        "MVVM Architecture",
+        "XAML-Based Design",
+        "Data Binding",
+        "Custom Controls",
+        "High Performance",
+        "Windows Integration",
+        "Modern UI/UX"
+      ]
+    },
   };
 
   return (

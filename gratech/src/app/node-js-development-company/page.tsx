@@ -71,6 +71,20 @@ const page = () => {
         steps: ["Requirements", "Team match", "Onboarding", "Sprints", "Delivery"],
       },
     },
+    angularBenefits: {
+      title: "Why Node.js is Ideal for Backend Development?",
+      description: "Node.js is a powerful JavaScript runtime that has revolutionized server-side development. Since its introduction, Node.js has become the preferred choice for building fast, scalable, and efficient backend applications and APIs that power modern web and mobile applications.\n\nWith its event-driven, non-blocking I/O architecture and extensive npm ecosystem, Node.js stands as the top choice for backend development today. Node.js continues to dominate the server-side landscape, thanks to its exceptional performance, developer-friendly nature, and seamless JavaScript integration that enables full-stack development.\n\nLet us explore the key reasons why businesses should consider Node.js for their backend development:",
+      benefits: [
+        "Event-Driven Architecture",
+        "Non-Blocking I/O",
+        "Fast Performance",
+        "Scalable Applications",
+        "Rich NPM Ecosystem",
+        "Full-Stack JavaScript",
+        "Real-Time Capabilities",
+        "Cross-Platform Support"
+      ]
+    },
   };
 
   return (

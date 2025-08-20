@@ -68,6 +68,20 @@ const page = () => {
         steps: ["Discovery", "Solutioning", "Onboarding", "Build", "Rollout"],
       },
     },
+    angularBenefits: {
+      title: "Why Salesforce is Ideal for CRM Development?",
+      description: "Salesforce is the world's leading customer relationship management (CRM) platform that has revolutionized how businesses manage customer interactions. Since its introduction, Salesforce has become the preferred choice for building comprehensive, scalable, and intelligent CRM solutions that drive business growth and customer satisfaction.\n\nWith its cloud-native architecture, extensive customization capabilities, and powerful automation features, Salesforce stands as the top choice for CRM development today. Salesforce continues to dominate the CRM landscape, thanks to its innovative features, robust ecosystem, and continuous innovation that keeps businesses ahead of the competition.\n\nLet us explore the key reasons why businesses should consider Salesforce for their CRM development:",
+      benefits: [
+        "Cloud-Native Platform",
+        "Comprehensive CRM Features",
+        "Extensive Customization",
+        "Powerful Automation",
+        "Rich App Ecosystem",
+        "AI-Powered Insights",
+        "Scalable Architecture",
+        "Enterprise Security"
+      ]
+    },
   };
 
   return (
