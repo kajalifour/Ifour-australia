@@ -1341,6 +1341,14 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
             {/* Main Service Section */}
             <MainServiceSection data={data} />
             
+            {/* Complete HireAboutSection - Only for Technology Pages (Right after main service section) */}
+            {isTechnologyPage && (
+                <HireAboutSection 
+                    hiringOptions={data.hireAboutSection?.hiringOptions}
+                    hiringProcess={data.hireAboutSection?.hiringProcess}
+                />
+            )}
+            
             {/* Benefits Section */}
             {BenefitsSection}
             
@@ -1403,10 +1411,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
                 </div>
             )}
             
-            {/* Why Choose Us Section - Only for Technology Pages */}
-            {isTechnologyPage && data.whyChooseUs && (
-                <WhyChooseUsSection data={data.whyChooseUs} />
-            )}
+
             
             {/* Hire CTA Section - Positioned after services grid (hire pages only) */}
             {!isTechnologyPage && (
@@ -1426,14 +1431,21 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
             />
             )}
             
-            {/* Second About Section - Always show below ServiceTwo on hire pages */}
-            <HireAboutSection 
-                hiringOptions={data.hireAboutSection?.hiringOptions}
-                hiringProcess={data.hireAboutSection?.hiringProcess}
-            />
+            {/* Second About Section - Only show on hire pages */}
+            {!isTechnologyPage && (
+                <HireAboutSection 
+                    hiringOptions={data.hireAboutSection?.hiringOptions}
+                    hiringProcess={data.hireAboutSection?.hiringProcess}
+                />
+            )}
             
             {/* CTA Section - Positioned after service cards, before projects */}
             {CTASection}
+            
+            {/* Why Choose Us Section - Only for Technology Pages (Above Projects) */}
+            {isTechnologyPage && data.whyChooseUs && (
+                <WhyChooseUsSection data={data.whyChooseUs} />
+            )}
             
             {/* Project Section */}
             <ProjectSection data={data} />
