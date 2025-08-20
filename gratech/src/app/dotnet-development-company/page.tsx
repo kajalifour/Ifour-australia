@@ -60,19 +60,29 @@ const page = () => {
       title: ".NET Development Services We Provide",
       description: "From greenfield development to modernization and integration, our .NET team delivers secure, fast, and scalable applications.",
       hiringOptions: {
-        title: "Engagement Options",
-        options: ["On an hourly basis", "As a part of the dedicated team"],
+        title: ".NET Engagement Models",
+        options: ["Fixed-price projects", "Dedicated .NET team", "Hourly consulting"],
       },
       hiringProcess: {
-        title: "Our collaboration process",
+        title: "Our .NET Development Process",
         steps: [
-          "Requirement Analysis",
-          "Solution Proposal",
-          "Team Onboarding",
-          "Execution & Sprints",
-          "Delivery & Support",
+          "Requirement Analysis & Planning",
+          "Architecture Design",
+          "Development & Testing",
+          "Deployment & Integration",
+          "Support & Maintenance",
         ],
       },
+    },
+    whyChooseUs: {
+      title: "Why Choose Us as Your .NET Development Company?",
+      paragraphs: [
+        "iFour Technolab specializes in enterprise-grade .NET solutions with deep expertise in ASP.NET Core, Azure, and modern Microsoft technologies. Our certified .NET developers deliver robust, scalable applications that drive business growth and digital transformation.",
+        "With over a decade of .NET development experience, we've successfully delivered hundreds of projects across industries. Our commitment to Microsoft best practices, security-first approach, and performance optimization makes us your trusted .NET development partner."
+      ],
+      ctaText: "Hire .NET developers",
+      ctaLink: "/hire-dot-net-developer",
+      ctaSuffix: "from iFour to build enterprise-grade applications with cutting-edge Microsoft technologies."
     },
   };
 

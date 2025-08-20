@@ -17,6 +17,7 @@ import HireAboutSection from '@/components/hire/HireAboutSection';
 import IndustryWeServe from '@/components/hire/IndustryWeServe';
 import NewsletterSection from '@/components/common/NewsletterSection';
 import WhyChooseUsSection from '@/components/technologies/WhyChooseUsSection';
+import TechnologiesListSection from '@/components/technologies/TechnologiesListSection';
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
@@ -144,6 +145,11 @@ interface ServiceDetailsData {
       ctaText: string;
       ctaLink: string;
       ctaSuffix: string;
+    };
+    angularBenefits?: {
+      title: string;
+      description: string;
+      benefits: string[];
     };
 }
 
@@ -1341,13 +1347,18 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
             {/* Main Service Section */}
             <MainServiceSection data={data} />
             
-            {/* Complete HireAboutSection - Only for Technology Pages (Right after main service section) */}
+            {/* Technologies List Section - Only for Technology Pages (Right after main service section) */}
             {isTechnologyPage && (
-                <HireAboutSection 
-                    hiringOptions={data.hireAboutSection?.hiringOptions}
-                    hiringProcess={data.hireAboutSection?.hiringProcess}
+                <TechnologiesListSection 
+                    data={{
+                        hiringOptions: data.hireAboutSection?.hiringOptions,
+                        hiringProcess: data.hireAboutSection?.hiringProcess,
+                        angularBenefits: data.angularBenefits
+                    }}
                 />
             )}
+            
+
             
             {/* Benefits Section */}
             {BenefitsSection}
