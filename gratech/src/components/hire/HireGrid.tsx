@@ -179,7 +179,15 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             "Integration Services": "We integrate Salesforce seamlessly with your existing systems, fostering data flow and collaboration.",
             "Salesforce Automation": "Our salesforce automation solutions simplify your complex workflows, save time and reduce manual errors.",
             "Migration to Salesforce": "Migrating from legacy systems to Salesforce? We handle the migration process, ensuring a seamless transition.",
-            "Support and Maintenance": "Our dedicated support team is available 24/7 to address your queries and ensure the smooth functioning of your Salesforce platform."
+            "Support and Maintenance": "Our dedicated support team is available 24/7 to address your queries and ensure the smooth functioning of your Salesforce platform.",
+            
+            // React.js specific services (Technology page set of 6)
+            "Custom React.js Development": "At iFour, we specialize in crafting tailor-made React.js solutions that precisely match your business needs. Our expert developers bring your ideas to life, creating dynamic and scalable applications that drive your success.",
+            "React.js Consulting Services": "We guide you through the intricacies of technology. Our experienced consultants provide strategic insights, helping you make informed decisions and implement React.js effectively within your projects.",
+            "React.js UI/UX Design": "Elevate user experiences with our React.js UI/UX design expertise. Our skilled designers create visually appealing and intuitive interfaces, ensuring that your applications captivate users and keep them engaged.",
+            "React.js Migration Services": "Upgrade seamlessly with iFour's React.js migration services. We facilitate the smooth transition of your existing applications to React.js, unlocking its benefits while ensuring minimal disruption and optimized performance.",
+            "Application Maintenance": "Rely on iFour for comprehensive application maintenance services. We proactively monitor, manage, and optimize your software, ensuring its consistent performance, security, and adaptability over time.",
+            "Application Re-engineering": "Transform your legacy applications into modern powerhouses with our re-engineering solutions. We revamp and enhance your software, incorporating the latest technologies to align with your evolving business needs."
         };
 
         // Create hire items from services array
@@ -218,28 +226,28 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             <div className="container">
                 {/* Section Header - Exact copy from home-two */}
                 {showTitle && (
-                    <div className="d-flex gap-4 flex-wrap align-items-center justify-content-between mb-60">
-                        <div className="section-header">
-                            <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.75" y="0.750061" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
-                                        strokeWidth="1.5" />
-                                    <mask id="path-2-inside-1_670_477" fill="white">
-                                        <path
-                                            d="M3 6.00006C3 3.79092 4.79086 2.00006 7 2.00006H13C15.2091 2.00006 17 3.79092 17 6.00006C17 8.2092 15.2091 10.0001 13 10.0001H7C4.79086 10.0001 3 8.2092 3 6.00006Z" />
-                                    </mask>
+                <div className="d-flex gap-4 flex-wrap align-items-center justify-content-between mb-60">
+                    <div className="section-header">
+                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.75" y="0.750061" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
+                                    strokeWidth="1.5" />
+                                <mask id="path-2-inside-1_670_477" fill="white">
                                     <path
-                                        d="M3 6.00006C3 2.96249 5.46243 0.500061 8.5 0.500061H11.5C14.5376 0.500061 17 2.96249 17 6.00006C17 4.61935 15.2091 3.50006 13 3.50006C3 4.61935 3 6.00006ZM17 6.00006C17 9.03763 14.5376 11.5001 11.5 11.5001H8.5C5.46243 11.5001 3 9.03763 3 6.00006ZM3 10.0001V2.00006V10.0001ZM17 2.00006V10.0001V2.00006Z"
-                                        fill="#0f7a95" mask="url(#path-2-inside-1_670_477)" />
-                                </svg>
-                                HIRING SERVICES
-                            </h5>
-                            <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                Exclusive Hiring Services
-                            </h2>
-                        </div>
+                                        d="M3 6.00006C3 3.79092 4.79086 2.00006 7 2.00006H13C15.2091 2.00006 17 3.79092 17 6.00006C17 8.2092 15.2091 10.0001 13 10.0001H7C4.79086 10.0001 3 8.2092 3 6.00006Z" />
+                                </mask>
+                                <path
+                                    d="M3 6.00006C3 2.96249 5.46243 0.500061 8.5 0.500061H11.5C14.5376 0.500061 17 2.96249 17 6.00006C17 4.61935 15.2091 3.50006 13 3.50006C3 4.61935 3 6.00006ZM17 6.00006C17 9.03763 14.5376 11.5001 11.5 11.5001H8.5C5.46243 11.5001 3 9.03763 3 6.00006ZM3 10.0001V2.00006V10.0001ZM17 2.00006V10.0001V2.00006Z"
+                                    fill="#0f7a95" mask="url(#path-2-inside-1_670_477)" />
+                            </svg>
+                            HIRING SERVICES
+                        </h5>
+                        <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            Exclusive Hiring Services
+                        </h2>
                     </div>
+                </div>
                 )}
 
                 {/* Hire Services Grid - 2 rows of 3 services each */}

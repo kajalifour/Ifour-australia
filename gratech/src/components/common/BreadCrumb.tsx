@@ -52,7 +52,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             };
          case "React.js Development Company":
             return {
-               description: "Deliver responsive, accessible, and maintainable frontends using React and Next.js, optimized for performance and scalability.",
+               description: "Create highly engaging user interfaces, feature-rich web solutions, and plugins with our React.js development services.",
                buttonText: "Get In Touch Now"
             };
          case "Node.js Development Company":
