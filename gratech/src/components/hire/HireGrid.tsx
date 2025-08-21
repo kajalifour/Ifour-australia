@@ -22,9 +22,10 @@ interface HireGridProps {
     hireData?: any[]; // Hire data from the page
     services?: string[]; // Services array from the page
     title?: string; // Custom title for the section
+    showTitle?: boolean; // Control whether to show the title section
 }
 
-const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring Services" }) => {
+const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring Services", showTitle = true }) => {
     // Default hire data if none provided
     const defaultHireData: HireItem[] = [
         {
@@ -90,12 +91,12 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             ".NET Support & Maintenance": "By partnering with us clients can get continuous support and maintenance services which ensures optimal performance of your software and seamless user experience.",
             
             // Angular specific services
-            "Angular Web Development": "With the expertise of Angular web development, our experts help you craft high-performing web apps with interactive UI and responsive app designs. Our coder uses Angular's robust toolkit to create enterprise-grade solutions.",
-            "Angular App Development": "Our programmers help you build Angular mobile apps that are high-performing, secure, and scalable to help you provide a better user experience. Hire Angular developers from iFour to build tailored mobile apps for your needs.",
-            "Angular UI/UX Design": "Our AngularJS experts help you create an interactive front end. Get help from our programmers to craft attractive UI/UX designs to improve app performance which ultimately benefits to boost user engagement.",
-            "Migration Services": "Hire dedicated Angular experts to migrate your existing apps to Angular and improve performance to provide a feature-rich user experience. Our team works to improve the performance of the software with minimal downtime.",
-            "API Development & Integration": "Get experts for custom API development using Angular for robust architectures and scalability. Apart from this, our developers also have expertise in integrating Angular software with third-party systems and services.",
-            "Angular Support & Maintenance": "By hiring Angular developers from us you can access quick support and maintenance services for your projects. Our programmer promptly resolves bugs and improves performance to keep your software up to date.",
+            "Angular Web Development": "Through our tech expertise and mastery of the relevant web technologies, we build Angular-based web solutions tailor-made to suit your unique requirements and specifications.",
+            "Angular Mobile App Development": "We engineer fully functional, high-performing, and user-friendly mobile apps with aesthetically appealing UIs, leveraging our expertise in the Angular mobile app development niche.",
+            "Angular UI/UX Design": "Our creative minds craft intuitive, alluring, and attractive UI/UX designs that improve the overall user experience of your applications and captivate your end users.",
+            "Angular Migration and Upgrade": "Do you have a software solution that runs on an older version of Angular or a completely different technology? Trust us to seamlessly upgrade it or migrate it to Angular per your requirements.",
+            "Angular Integration & API Development": "We have extensive experience in integrating your Angular applications with third-party services to enhance their functionality. We also specialise in developing custom, secure APIs to enable faultless data exchange.",
+            "Angular Support and Maintenance": "Our services don't end with deployment. We continue to offer comprehensive support and maintenance services to ensure the smooth functioning of your Angular applications and that they stay up-to-date.",
             
             // Node.js specific services
             "Node.js Web & Network App Development": "Our Node.js web and network app development services include building server-side apps, APIs, and real-time web apps using Node.js' asynchronous and event-driven I/O model.",
@@ -179,28 +180,30 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             
             <div className="container">
                 {/* Section Header - Exact copy from home-two */}
-                <div className="d-flex gap-4 flex-wrap align-items-center justify-content-between mb-60">
-                    <div className="section-header">
-                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.75" y="0.750061" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
-                                    strokeWidth="1.5" />
-                                <mask id="path-2-inside-1_670_477" fill="white">
+                {showTitle && (
+                    <div className="d-flex gap-4 flex-wrap align-items-center justify-content-between mb-60">
+                        <div className="section-header">
+                            <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+                                <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.75" y="0.750061" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
+                                        strokeWidth="1.5" />
+                                    <mask id="path-2-inside-1_670_477" fill="white">
+                                        <path
+                                            d="M3 6.00006C3 3.79092 4.79086 2.00006 7 2.00006H13C15.2091 2.00006 17 3.79092 17 6.00006C17 8.2092 15.2091 10.0001 13 10.0001H7C4.79086 10.0001 3 8.2092 3 6.00006Z" />
+                                    </mask>
                                     <path
-                                        d="M3 6.00006C3 3.79092 4.79086 2.00006 7 2.00006H13C15.2091 2.00006 17 3.79092 17 6.00006C17 8.2092 15.2091 10.0001 13 10.0001H7C4.79086 10.0001 3 8.2092 3 6.00006Z" />
-                                </mask>
-                                <path
-                                    d="M3 6.00006C3 2.96249 5.46243 0.500061 8.5 0.500061H11.5C14.5376 0.500061 17 2.96249 17 6.00006C17 4.61935 15.2091 3.50006 13 3.50006C3 4.61935 3 6.00006ZM17 6.00006C17 9.03763 14.5376 11.5001 11.5 11.5001H8.5C5.46243 11.5001 3 9.03763 3 6.00006ZM3 10.0001V2.00006V10.0001ZM17 2.00006V10.0001V2.00006Z"
-                                    fill="#0f7a95" mask="url(#path-2-inside-1_670_477)" />
-                            </svg>
-                            HIRING SERVICES
-                        </h5>
-                        <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            Exclusive Hiring Services
-                        </h2>
+                                        d="M3 6.00006C3 2.96249 5.46243 0.500061 8.5 0.500061H11.5C14.5376 0.500061 17 2.96249 17 6.00006C17 4.61935 15.2091 3.50006 13 3.50006C3 4.61935 3 6.00006ZM17 6.00006C17 9.03763 14.5376 11.5001 11.5 11.5001H8.5C5.46243 11.5001 3 9.03763 3 6.00006ZM3 10.0001V2.00006V10.0001ZM17 2.00006V10.0001V2.00006Z"
+                                        fill="#0f7a95" mask="url(#path-2-inside-1_670_477)" />
+                                </svg>
+                                HIRING SERVICES
+                            </h5>
+                            <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                Exclusive Hiring Services
+                            </h2>
+                        </div>
                     </div>
-                </div>
+                )}
 
                 {/* Hire Services Grid - 2 rows of 3 services each */}
                 <div className="row g-4">

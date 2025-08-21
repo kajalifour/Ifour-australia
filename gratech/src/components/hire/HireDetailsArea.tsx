@@ -286,9 +286,8 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
                                         </>
                                     ) : data.title.includes('Angular') ? (
                                         <>
-                                            Maximize Business Success with<br />
-                                            Our Experienced Angular<br />
-                                            Developers
+                                            Best-in-Class Angular<br />
+                                            Development Services
                                         </>
                                     ) : (
                                         <>
@@ -1385,13 +1384,17 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
                                     }}>
                                         {data.hireAboutSection.title}
                                     </h2>
-                                    <p style={{ 
+                                    <div style={{ 
                                         color: '#666', 
                                         fontSize: '1.1rem', 
                                         lineHeight: '1.6'
                                     }}>
-                                        {data.hireAboutSection?.description || ""}
-                                    </p>
+                                        {data.hireAboutSection?.description?.split('\n\n').map((paragraph, index) => (
+                                            <p key={index} style={{ marginBottom: '1.5rem' }}>
+                                                {paragraph}
+                                            </p>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-xl-6 wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
@@ -1418,6 +1421,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
                     <HireGrid 
                         key={`hire-grid-${data.services?.join('-') || 'default'}`}
                         services={data.services}
+                        showTitle={!isTechnologyPage}
                     />
                 </div>
             )}

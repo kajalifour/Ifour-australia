@@ -10,9 +10,9 @@ export const metadata = {
 
 const page = () => {
   const techData = {
-    title: "Connect with iFour to Obtain Exceptional Results",
-    subtitle: "Expert Angular Development Services",
-    description: "iFour specializes in developing secure web and mobile applications using Angular, catering to a wide range of established businesses, from startups to large enterprises. Whether you want to build small or large projects, we provide end-to-end development solutions to suit your needs.\n\nWe are not just a tech partner but a growth partner that leads you to the right path of success.",
+    title: "Best-in-Class Angular Development Services",
+    subtitle: "",
+    description: "A strong brand identity is a given in today’s rapidly evolving technological landscape. By establishing such a presence, a business can reinforce its standing in the market, driving success and growth. At iFour Technolab, our expertise lies in helping businesses attain these objectives through our spectrum of extremely customisable Angular development services.\n\nBeing a reputed Angular development agency, we have a team of skilled Angular professionals who possess unrivalled experience working with the framework. Whether your project involves developing a dynamic web application, an innovative, feature-rich mobile app, or a complex enterprise-level solution, trust the iFour Technolab team to handle it with excellence.\n\nBy capitalising on our Angular competency, we can aid you in turning mere business concepts into robust, secure, and scalable software solutions. Utilise iFour Technolab’s high-quality Angular development services, and let us propel business success to unprecedented levels.",
     benefits: [
       "Expert knowledge of Angular framework",
       "TypeScript and JavaScript expertise",
@@ -23,11 +23,11 @@ const page = () => {
     ],
     services: [
       "Angular Web Development",
-      "Angular App Development",
+      "Angular Mobile App Development",
       "Angular UI/UX Design",
-      "Migration Services",
-      "API Development & Integration",
-      "Angular Support & Maintenance",
+      "Angular Migration and Upgrade",
+      "Angular Integration & API Development",
+      "Angular Support and Maintenance",
     ],
     showServiceCards: true,
     showProjects: true,
@@ -43,8 +43,8 @@ const page = () => {
     ctaTitle: "Build with Angular – Get Started Today",
     ctaButtonText: "GET STARTED TODAY",
     ctaButtonLink: "/contact",
-    ctaTwoTitle: "Let’s craft your Angular solution",
-    ctaTwoButtonText: "Get in touch now",
+    ctaTwoTitle: "Revolutionise your business with custom software solutions.",
+    ctaTwoButtonText: "Get started now",
     ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Quick Onboarding",
@@ -54,11 +54,11 @@ const page = () => {
       "Comprehensive Services",
       "Experienced Team",
     ],
-    serviceTwoTitle: "Why Choose iFour for Angular?",
+    serviceTwoTitle: "Best-in-Class Angular Development Services",
     serviceTwoSubtitle: "Trusted partner for robust Angular solutions",
     hireAboutSection: {
-      title: "Angular Development Services We Provide",
-      description: "iFour is a reputed Angular development company, bringing solutions that help you achieve your business goals. Work with our Angular experts to leverage the following services.",
+      title: "Beat the Curve with Custom Angular Development Services",
+      description: "iFour Technolab is an expert Angular development company, offering a range of stellar Angular development services. Our services are carefully curated with the focused aim of helping businesses gain an edge in the market. We have a team of highly experienced Angular developers who possess exceptional tech expertise and unmatched development prowess.\n\nWe are steadfast in our pursuit of innovation and excellence, rendering top-notch Angular development services and assisting businesses in the tech terrain to succeed. When you select us as your Angular development company, rest easy knowing that you're collaborating with the best in the business.\n\nHere's what we can help you with:",
       hiringOptions: {
         title: "Engagement Options",
         subtitle: "Choose a model that fits your needs",
