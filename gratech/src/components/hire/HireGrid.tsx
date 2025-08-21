@@ -122,16 +122,24 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             "Architecture & Design Consulting": "Our Java experts provide strategic guidance and subject matter specification to design eye-catching and efficient software architectures. Our programmers also focus on the flexibility of the architecture to design future-proof solutions.",
             "Support and Maintenance": "Our Java programmers offer continuous support and maintenance services to help you ensure the seamless performance of your software. Our Java developers will assist you resolve any queries or bugs to ensure the smooth working of the app.",
             
-            // C# specific services
-            "Custom Software Development": "Hire our C# experts to build custom solutions tailored to unique requirements that align with your business objectives. Our programmers build robust solutions to help you provide an unmatched user experience.",
-            "C# SaaS Development": "Benefit your business with boosted efficiency and productivity by opting for SaaS development. Our coders create secure and performant SaaS-based apps that help you deliver reliable experiences to your users.",
-            "C# PaaS Development": "Access the development platform remotely through PaaS powered by cloud computing and develop your apps without managing the underlying infrastructure. Get the right assistance to build, test, and use software in a single environment.",
-            "C# Cloud Development": "We offer comprehensive cloud services including IaaS, SaaS, and PaaS offerings for your business. Hire C# developers with us having extensive experience in building highly interactive apps and platforms for the cloud.",
-            "C# Migration Services": "Leverage our C# migration services to upgrade your legacy apps to keep your business functional and up to date. Our C# programmers help you effectively solve your legacy system concerns.",
-            "C# Integration Services": "We specialize in optimizing data flow, and streamlining processes, through seamless integration of APIs, legacy systems, and cloud services. Onboard our C Sharp experts to ensure a smooth connection between your system and third-party services.",
-            "Mobile App Development": "Hire our top C# experts to create dynamic and efficient Android and iOS apps. Our programmers follow coding best practices to deliver scalable and qualitative solutions that drive business growth.",
-            "Windows App Development": "We have skilled programmers proficient in building impressive UIs, standalone intranet apps, and Windows desktop apps. Our experts provide top-notch services to help you streamline your business operations.",
-            "C# Support and Maintenance": "Ensure the smooth performance and flawless functionality of your software with our support and maintenance services. Our programmers will help you resolve any issues that you encounter to help you enjoy a seamless performance.",
+            // C# specific services (Technology page set of 6)
+            "Custom Software Development": "Our expert C# software developers craft tailor-made software solutions that align perfectly with your business objectives and workflows.",
+            "Web Application Development": "Our team of software experts leverage C# to build dynamic and responsive web applications that provide an unmatched user experience.",
+            "Mobile App Development": "Reach a wider audience with cross-platform mobile applications developed using C#, ensuring consistent performance on different devices.",
+            "Enterprise Solutions": "Transform your business operations with robust C# enterprise solutions that streamline processes and enhance collaboration.",
+            "Migration and Modernization": "Upgrade your legacy systems and applications with our C# migration and modernization services for improved performance and efficiency.",
+            "Support and maintenance": "With the help of our first-rate maintenance and support services, you can ensure the flawless operation and peak performance of your software.",
+            
+            // C# specific services (Hire page set of 9)
+            "Hire Custom Software Development": "Hire our C# experts to build custom solutions tailored to unique requirements that align with your business objectives. Our programmers build robust solutions to help you provide an unmatched user experience.",
+            "Hire C# SaaS Development": "Benefit your business with boosted efficiency and productivity by opting for SaaS development. Our coders create secure and performant SaaS-based apps that help you deliver reliable experiences to your users.",
+            "Hire C# PaaS Development": "Access the development platform remotely through PaaS powered by cloud computing and develop your apps without managing the underlying infrastructure. Get the right assistance to build, test, and use software in a single environment.",
+            "Hire C# Cloud Development": "We offer comprehensive cloud services including IaaS, SaaS, and PaaS offerings for your business. Hire C# developers with us having extensive experience in building highly interactive apps and platforms for the cloud.",
+            "Hire C# Migration Services": "Leverage our C# migration services to upgrade your legacy apps to keep your business functional and up to date. Our C# programmers help you effectively solve your legacy system concerns.",
+            "Hire C# Integration Services": "We specialize in optimizing data flow, and streamlining processes, through seamless integration of APIs, legacy systems, and cloud services. Onboard our C Sharp experts to ensure a smooth connection between your system and third-party services.",
+            "Hire Mobile App Development": "Hire our top C# experts to create dynamic and efficient Android and iOS apps. Our programmers follow coding best practices to deliver scalable and qualitative solutions that drive business growth.",
+            "Hire Windows App Development": "We have skilled programmers proficient in building impressive UIs, standalone intranet apps, and Windows desktop apps. Our experts provide top-notch services to help you streamline your business operations.",
+            "Hire Support and Maintenance": "Ensure the smooth performance and flawless functionality of your software with our support and maintenance services. Our programmers will help you resolve any issues that you encounter to help you enjoy a seamless performance.",
             
             // WPF specific services
             "Custom WPF Development": "iFour specializes in creating tailored WPF applications that align with specific business requirements, ensuring high functionality and efficiency. Our skilled team creates innovative applications and delivers tailored solutions that enhance your competitive edge.",

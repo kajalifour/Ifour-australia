@@ -32,7 +32,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             };
          case "C# Development Company":
             return {
-               description: "Create robust and maintainable software using modern C# and .NET. We focus on clean architecture, testing, and performance to deliver long‑term value.",
+               description: "Take your business to new heights with our top-notch C# development services. Leverage our expertise to create reliable, high-performance software solutions tailored to your unique needs. As a trusted C# development company, we're dedicated to delivering excellence and driving your business success.",
                buttonText: "Get In Touch Now"
             };
          case "Java Development Company":
