@@ -10,9 +10,9 @@ export const metadata = {
 
 const page = () => {
   const techData = {
-    title: "Connect with iFour to Obtain Exceptional Results",
+    title: "Boost Business Excellence with Superior Node.js Development Services",
     subtitle: "Expert Node.js Development Services",
-    description: "Build reliable, scalable, and high‑performance backends and APIs with our Node.js specialists.",
+    description: "At iFour Technolab, we take immense pride in being distinguished as a leading Node.js development services provider, driving innovation and excellence across Australia. With our affluent development expertise, we engineer dynamic, adaptable, and top-performing web solutions that empower businesses to thrive in the digital era.\n\n With years of experience and a proven track record, our talented Node.js developers possess the required skills, creative acumen, and inventive thinking to successfully actualise your concepts. From startups to large-scale enterprises, we cater to industries across diverse verticals, delivering custom solutions that match their business specifications and demands. \n\n If you’re looking for top-tier Node.js app development services, contact iFour Technolab today.‍",
     benefits: [
       "Event‑driven architecture",
       "API performance",
@@ -22,15 +22,12 @@ const page = () => {
       "Cloud deployments",
     ],
     services: [
-      "Node.js Web & Network App Development",
-      "Node.js API Development Service",
-      "Consulting, Maintenance & Support Service",
-      "Custom Web App Development",
-      "Content Management System",
-      "Microservices Architecture",
-      "E-commerce Web Development",
+      "Node.js Web Application Development",
+      "Node.js E-commerce Development",
+      "Node.js Consulting & Support",
+      "Node.js API Development",
       "Node.js Plugin Development",
-      "Migration to the Latest Version",
+      "Node.js Migration",
     ],
     showServiceCards: true,
     showProjects: true,
@@ -46,8 +43,8 @@ const page = () => {
     ctaTitle: "Scale with Node.js",
     ctaButtonText: "GET STARTED TODAY",
     ctaButtonLink: "/contact",
-    ctaTwoTitle: "Build fast, reliable APIs",
-    ctaTwoButtonText: "Talk to experts",
+    ctaTwoTitle: "Revolutionize your business with custom software solutions.",
+    ctaTwoButtonText: "Get started now",
     ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Extensive Expertise",
@@ -59,9 +56,19 @@ const page = () => {
     ],
     serviceTwoTitle: "Why Choose iFour for Node.js?",
     serviceTwoSubtitle: "High‑performance backends at speed",
+    whyChooseUs: {
+      title: "Why Choose Us as Your Node.js Development Company?",
+      paragraphs: [
+        "Choosing iFour Technolab as your Node.js development company guarantees exceptional outcomes for your business growth. Our team of qualified experts is firmly committed to delivering innovative, dependable, and top-notch solutions capable of pivoting your business toward sustainable success.",
+        "Whether you need a cutting-edge web application, real-time APIs, or scalable plugins, you can confidently trust us to make it happen. We differentiate ourselves from our competitors by carefully blending quality, ingenuity, and excellence and serving clients through our rich service offerings. By opting for our Node.js development services, you are essentially creating opportunities for your business to flourish and succeed. Partner with us and allow us to propel your business to extraordinary echelons of success. Get in touch with us now!"
+      ],
+      ctaText: "Hire Node.js developers",
+      ctaLink: "/hire-nodejs-developers",
+      ctaSuffix: "from iFour to build powerful web and mobile apps catering to your unique business needs."
+    },
     hireAboutSection: {
-      title: "Node.js Development Services We Provide",
-      description: "From APIs to microservices, we deliver performant, secure Node.js solutions.",
+      title: "Node.js Development Services We Offer",
+      description: "Our proficiency in Node.js development has helped several organisations overcome obstacles and accomplish their objectives throughout the years. We have effectively built and delivered solutions that have hastened corporate growth, offered excellent usability prospects, and satisfied desired performance criteria. Our Node.js development services include:",
       hiringOptions: {
         title: "Engagement Options",
         options: ["On an hourly basis", "As a part of the dedicated team"],
@@ -72,17 +79,17 @@ const page = () => {
       },
     },
     angularBenefits: {
-      title: "Why Node.js is Ideal for Backend Development?",
-      description: "Node.js is a powerful JavaScript runtime that has revolutionized server-side development. Since its introduction, Node.js has become the preferred choice for building fast, scalable, and efficient backend applications and APIs that power modern web and mobile applications.\n\nWith its event-driven, non-blocking I/O architecture and extensive npm ecosystem, Node.js stands as the top choice for backend development today. Node.js continues to dominate the server-side landscape, thanks to its exceptional performance, developer-friendly nature, and seamless JavaScript integration that enables full-stack development.\n\nLet us explore the key reasons why businesses should consider Node.js for their backend development:",
+      title: "What Makes Node.js Ideal for Web Development?",
+      description: "With Node.js, developers can create both front- and back-end aspects of web solutions by using just JavaScript as their coding language. Its distinct event-driven, non-blocking I/O architecture makes Node.js a perfect choice for building scalable, real-time applications.\n\nThe runtime made its debut in 2009 and has since become immensely popular for its robust capabilities. It empowers developers to construct web solutions that function flawlessly across multiple platforms, including Windows, Linux, Unix, macOS, and more. \n\nBy tapping into Node.js’s inherent capabilities, developers can formulate lightning-fast, high-impact web solutions with real-time functionalities that captivate users, leaving a lasting impression.",
       benefits: [
-        "Event-Driven Architecture",
-        "Non-Blocking I/O",
-        "Fast Performance",
-        "Scalable Applications",
-        "Rich NPM Ecosystem",
-        "Full-Stack JavaScript",
-        "Real-Time Capabilities",
-        "Cross-Platform Support"
+        "Lightning-Fast Performance",
+        "Scalability at its Best",
+        "Good for Real-time Applications",
+        "full-stack development",
+        "vast and vibrant ecosystem - NPM",
+        "Optimised performance",
+        "Microservices architecture",
+        "Active community support"
       ]
     },
   };

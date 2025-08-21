@@ -57,7 +57,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             };
          case "Node.js Development Company":
             return {
-               description: "Develop high‑throughput APIs and real‑time applications with Node.js, designed for scalability, security, and reliability.",
+               description: "Elevate your digital presence with our premier Node.js development services. Build potent, scalable, and efficient web-based solutions by channelling our proficiency as a top Node.js development company. Trust in our technical prowess to bring your innovative ideas to life.",
                buttonText: "Get In Touch Now"
             };
              case "Desktop Application Development Company":

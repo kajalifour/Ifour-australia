@@ -106,16 +106,13 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             "Angular Integration & API Development": "We have extensive experience in integrating your Angular applications with third-party services to enhance their functionality. We also specialise in developing custom, secure APIs to enable faultless data exchange.",
             "Angular Support and Maintenance": "Our services don't end with deployment. We continue to offer comprehensive support and maintenance services to ensure the smooth functioning of your Angular applications and that they stay up-to-date.",
             
-            // Node.js specific services
-            "Node.js Web & Network App Development": "Our Node.js web and network app development services include building server-side apps, APIs, and real-time web apps using Node.js' asynchronous and event-driven I/O model.",
-            "Node.js API Development Service": "Hire Node.js developers from us to leverage our API development services, our programmers build robust and secure APIs while ensuring smooth data exchange and communication between your applications and services.",
-            "Consulting, Maintenance & Support Service": "Our Node JS experts provide expert guidance and consultation while offering maintenance and support services to help you ensure the app's performance and security.",
-            "Custom Web App Development": "Engage with our coders to obtain dynamic and high-performing web app development services using Node.js. Our experts help you ensure a smooth and seamless user experience for your web apps.",
-            "Content Management System": "Simplify the workflow of your corporate content management with our CMS development services. Our Node.js experts create flexible and dynamic content management systems that suit your business needs.",
-            "Microservices Architecture": "Get help from our Node JS coders to design and implement microservices architecture which will help improve your app's flexibility, maintainability, and deployment efficiency.",
-            "E-commerce Web Development": "Our Node.js specialist crafts scalable and reliable e-commerce web using Node technology, helping clients provide a smooth shopping experience and simplified transaction processes to the end user.",
-            "Node.js Plugin Development": "We have a talent pool of Node JS developers to hire who can help you build node.js plugins. Leverage the expertise of our programmers to get functional plugins that enhance the capabilities of business apps.",
-            "Migration to the Latest Version": "Our Node.js programmers utilize highly curated app migration best practices to help you migrate your web or mobile app to Node's latest dynamic architecture resulting in a faster and secure I/O process.",
+            // Node.js specific services (Technology page set of 6)
+            "Node.js Web Application Development": "iFour specialises in crafting cutting-edge Node.js web applications that deliver seamless user experiences, unmatched performance, and real-time functionalities to elevate your online presence.",
+            "Node.js E-commerce Development": "At iFour, we build robust and feature-rich e-commerce websites that drive sales, enhance customer engagement, and provide secure payment gateways, ensuring a thriving online retail business.",
+            "Node.js Consulting & Support": "Our dedicated team provides expert consulting and unwavering support, guiding you through technological challenges and ensuring your systems operate optimally and efficiently.",
+            "Node.js API Development": "Leverage the power of Node.js with our API development services, enabling efficient data exchange, scalability, and integrations to create dynamic and interconnected applications.",
+            "Node.js Plugin Development": "iFour's Node.js plugin development enhances the functionality and versatility of your applications, introducing custom features and seamless extensions to maximise their potential.",
+            "Node.js Migration": "Rely on the iFour team to faultlessly migrate your systems to the latest versions, ensuring enhanced performance, security, and compatibility while minimising business disruptions.",
             
             // Java specific services
             "Enterprise App Development": "Engage with a group of Java developers from iFour to build versatile and scalable enterprise software. Our Java programmers possess hands-on experience in crafting robust and user-friendly web apps for your needs.",
