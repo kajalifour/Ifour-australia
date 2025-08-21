@@ -12,7 +12,7 @@ const page = () => {
   const techData = {
     title: "Connect with iFour to Obtain Exceptional Results",
     subtitle: "Expert WPF Development Services",
-    description: "Design and build high‑quality Windows applications with our experienced WPF engineers using MVVM and modern tooling.",
+    description: "In the ever-evolving landscape of software development, Windows Presentation Foundation (WPF) has emerged as a powerful technology that enables businesses to build visually stunning and feature-rich desktop applications.\n\nIt allows developers to create visually appealing interfaces with rich graphics, animations, and multimedia elements. This enhances user engagement and provides a seamless, interactive experience, leading to increased user satisfaction.\n\nWPF applications can run on various Windows operating systems, making them accessible to a broad audience. This cross-platform compatibility ensures your software reaches a larger user base, maximizing its impact on your target audience.\n\niFour Technolab is a one-stop destination for top-class WPF development services in Australia. We have over 10 years of development experience and a remarkable track record of providing quality services to a variety of enterprises. Connect us now to learn more.",
     benefits: [
       "MVVM architecture",
       "Rich UI/UX",
@@ -22,12 +22,12 @@ const page = () => {
       "Testing & automation",
     ],
     services: [
-      "Custom WPF Development",
-      "WPF Business Portals & Intelligence",
-      "Migration and Porting to .Net platform",
-      "WPF Components Development",
-      "Legacy App Modernization",
-      "WPF Add-in Development",
+      "Custom WPF Development Solutions",
+      "Migration and Porting to the .NET Platform",
+      "WPF Custom Components Development",
+      "Integration with Non-.NET Applications",
+      "WPF Add-ins Development",
+      "Legacy Application Modernization",
     ],
     showServiceCards: true,
     showProjects: true,
@@ -43,8 +43,8 @@ const page = () => {
     ctaTitle: "Build modern WPF applications",
     ctaButtonText: "GET STARTED TODAY",
     ctaButtonLink: "/contact",
-    ctaTwoTitle: "Revamp your desktop apps",
-    ctaTwoButtonText: "Talk to experts",
+    ctaTwoTitle: "Revolutionise your business with custom software solutions.",
+    ctaTwoButtonText: "Get started now",
     ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Vetted WPF Experts",
@@ -56,9 +56,20 @@ const page = () => {
     ],
     serviceTwoTitle: "Why Choose iFour for WPF?",
     serviceTwoSubtitle: "High‑quality Windows app delivery",
+    whyChooseUs: {
+      title: "Why Choose Us as Your WPF Development Company?",
+      paragraphs: [
+        "iFour Technolab is a Microsoft certified solutions partner and a leading Custom Application development company with over 10 years of experience. We are committed to delivering innovative and quality-oriented solutions meeting the unique demands of businesses in the Australian market.",
+        "When you choose iFour Technolab as your WPF development partner, you are choosing a collaboration that goes beyond contracts and milestones. We become an extension of your team, a cohesive force striving tirelessly to attain your goals. Together, we traverse the ever-changing world of technology, laying the foundation for a profitable future where your company will be at the cutting edge of innovation.",
+        "Reach out to us today to discuss your WPF development needs and embark on a journey of technological excellence with iFour Technolab."
+      ],
+      ctaText: "",
+      ctaLink: "",
+      ctaSuffix: ""
+    },
     hireAboutSection: {
-      title: "WPF Development Services We Provide",
-      description: "We create advanced desktop experiences that delight users and improve productivity.",
+      title: "Our WPF development services",
+      description: "Choosing the right technology for your business is pivotal to its success. WPF is built on the .NET Framework, allowing seamless integration with other .NET technologies. This integration enables developers to leverage a wide range of libraries and tools, reducing development time and costs.\n\nAt iFour, we are committed to empowering Australian businesses with efficient and innovative software solutions. Our expertise in WPF development and proficiency in simplifying diverse businesses makes us a go-to partner for several clients.\n\nOur WPF development services include:",
       hiringOptions: {
         title: "Engagement Options",
         options: ["On an hourly basis", "As a part of the dedicated team"],
@@ -69,17 +80,17 @@ const page = () => {
       },
     },
     angularBenefits: {
-      title: "Why WPF is Ideal for Desktop Application Development?",
-      description: "Windows Presentation Foundation (WPF) is Microsoft's powerful framework for building rich, modern desktop applications. Since its introduction, WPF has become the preferred choice for creating sophisticated, high-performance Windows applications that deliver exceptional user experiences and drive business productivity.\n\nWith its XAML-based declarative UI, MVVM architecture pattern, and extensive customization capabilities, WPF stands as the top choice for desktop development today. WPF continues to dominate the Windows desktop landscape, thanks to its seamless integration with the .NET ecosystem, powerful data binding, and advanced UI capabilities that enable rapid development.\n\nLet us explore the key reasons why businesses should consider WPF for their desktop application development:",
+      title: "Why WPF is ideal for Business Application development?",
+      description: "By choosing WPF for your application development, you future-proof your software with a technology that Microsoft continues to support and enhance. This ensures your application remains relevant and adaptable to upcoming technological advancements.\n\nWPF's ability to create visually stunning interfaces significantly enhances the user experience. This not only impresses your customers but also fosters positive brand perception.\n\nSome of the key reasons include:",
       benefits: [
-        "Rich User Interface",
-        "MVVM Architecture",
-        "XAML-Based Design",
-        "Data Binding",
-        "Custom Controls",
-        "High Performance",
-        "Windows Integration",
-        "Modern UI/UX"
+        "Enhances user experience",
+        "Cross-platform compatibility",
+        "DataBinding and MVVM Architecture",
+        "Integration with .NET framework",
+        "Modernization and future-proofing",
+        "Optimized performance",
+        "Scalability features",
+        "Strong community support"
       ]
     },
   };

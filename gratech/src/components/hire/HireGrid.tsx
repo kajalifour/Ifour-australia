@@ -149,7 +149,15 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             "Hire Windows App Development": "We have skilled programmers proficient in building impressive UIs, standalone intranet apps, and Windows desktop apps. Our experts provide top-notch services to help you streamline your business operations.",
             "Hire Support and Maintenance": "Ensure the smooth performance and flawless functionality of your software with our support and maintenance services. Our programmers will help you resolve any issues that you encounter to help you enjoy a seamless performance.",
             
-            // WPF specific services
+            // WPF specific services (Technology page set of 6)
+            "Custom WPF Development Solutions": "iFour crafts tailor-made WPF applications that cater to your unique business needs, delivering visually stunning and high-performing software to boost productivity and engage users effectively.",
+            "Migration and Porting to the .NET Platform": "iFour seamlessly migrates your existing applications to the .NET framework, modernizing and optimizing them with the power of WPF, ensuring smooth functionality and enhanced user experiences.",
+            "WPF Custom Components Development": "iFour develops custom WPF components that enrich your applications with advanced functionalities and interactive interfaces, empowering your software with new features to stand out in the market.",
+            "Integration with Non-.NET Applications": "iFour excels in integrating WPF applications with non-.NET platforms, enabling seamless data exchange and collaboration between different systems, creating a unified and efficient business environment.",
+            "WPF Add-ins Development": "iFour enhances the capabilities of your WPF applications with custom add-ins, extending their functionality and empowering users with innovative tools to boost productivity and business efficiency.",
+            "Legacy Application Modernization": "iFour revitalizes outdated WPF applications through modernization, updating their design, functionality, and performance, transforming legacy software into dynamic and visually appealing solutions.",
+            
+            // WPF specific services (Hire page - keeping existing)
             "Custom WPF Development": "iFour specializes in creating tailored WPF applications that align with specific business requirements, ensuring high functionality and efficiency. Our skilled team creates innovative applications and delivers tailored solutions that enhance your competitive edge.",
             "WPF Business Portals & Intelligence": "We consolidate information from various stages within an enterprise application, leading to reduced costs. Data is transmitted based on established trust levels, which boosts efficiency. We use Business Intelligence methods to generate reports contributing to a business's growth.",
             "Migration and Porting to .Net platform": "Our programmers at iFour help you seamlessly migrate your existing app to the .NET framework. Our WPF developers modernize and optimize the app to ensure smooth performance and improved user experiences.",

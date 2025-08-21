@@ -47,7 +47,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             };
          case "WPF Application Development Company":
             return {
-               description: "Build modern, high‑performance Windows desktop applications using WPF and MVVM patterns for exceptional UX and productivity.",
+               description: "Take your desktop applications to the next level with our expert WPF development services. Craft visually stunning, feature-rich software solutions using the latest technologies and best practices. As a trusted WPF development company, we're committed to delivering excellence for your business",
                buttonText: "Get In Touch Now"
             };
          case "React.js Development Company":
