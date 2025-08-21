@@ -42,7 +42,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             };
          case "Salesforce Development Company":
             return {
-               description: "Customize, integrate, and extend Salesforce to streamline operations and drive growth with our certified experts.",
+               description: "Transform your business processes with our specialized Salesforce development services. From CRM customization to app development, our seasoned team of Salesforce experts delivers innovative solutions as per your requirements. Choose us as your Salesforce development company now.",
                buttonText: "Get In Touch Now"
             };
          case "WPF Application Development Company":

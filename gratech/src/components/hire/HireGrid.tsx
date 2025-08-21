@@ -163,7 +163,15 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             "Progressive Web App (PWA) Development": "Partner with iFour to hire Vue.js developers who work to create Progressive Web Apps (PWAs) that are fast, reliable, and work across all devices and help you enjoy a native-like app experience.",
             "MVP/PoC Development": "Hire our top talent for Proof-of-Concept development and Minimum Viable Product development services. These services help you test a new idea quickly without any high investment.",
             "Vue.js App Migration": "Get assistance from our team to migrate your current application from another framework to Vue.js technology to improve the performance, responsiveness, and efficiency of your application.",
-            "Vue.js Support & Maintenance": "Get post-launch app support and maintenance services from our Vue.js programmers. These ongoing support services will help to enhance the usability and seamlessness of your application."
+            "Vue.js Support & Maintenance": "Get post-launch app support and maintenance services from our Vue.js programmers. These ongoing support services will help to enhance the usability and seamlessness of your application.",
+            
+            // Salesforce specific services (Technology page set of 6)
+            "Salesforce Implementation": "Our experts will guide you through a smooth and efficient implementation process, customizing Salesforce to suit your business model.",
+            "Salesforce Customization": "We perfectly customize Salesforce for your company that eventually provide top performance and a great user experience.",
+            "Integration Services": "We integrate Salesforce seamlessly with your existing systems, fostering data flow and collaboration.",
+            "Salesforce Automation": "Our salesforce automation solutions simplify your complex workflows, save time and reduce manual errors.",
+            "Migration to Salesforce": "Migrating from legacy systems to Salesforce? We handle the migration process, ensuring a seamless transition.",
+            "Support and Maintenance": "Our dedicated support team is available 24/7 to address your queries and ensure the smooth functioning of your Salesforce platform."
         };
 
         // Create hire items from services array

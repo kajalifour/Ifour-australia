@@ -12,7 +12,7 @@ const page = () => {
   const techData = {
     title: "Connect with iFour to Obtain Exceptional Results",
     subtitle: "Expert Salesforce Development Services",
-    description: "We help businesses customize, integrate, and extend Salesforce to streamline operations and drive growth.",
+    description: "In the rapidly evolving business landscape of Australia, staying ahead of the competition is vital for sustained success. Salesforce technology has emerged as a game-changer, revolutionizing the way businesses manage customer relationships and streamline their operations.\n\nSalesforce enables businesses to understand their customers better and build lasting relationships. With a centralized customer database, personalized interactions, and targeted marketing campaigns become seamless, leading to increased customer satisfaction and loyalty.\n\nIt offers a comprehensive suite of tools for automation, workflow management, and data analytics. By optimizing business processes, companies can improve productivity, minimize errors, and reduce operational costs.",
     benefits: [
       "Custom objects & workflows",
       "Apex & Lightning components",
@@ -23,11 +23,11 @@ const page = () => {
     ],
     services: [
       "Salesforce Implementation",
-      "Custom App Development",
-      "Salesforce Integration",
-      "Salesforce Migration",
-      "Salesforce Support & Maintenance",
-      "Analytics & Reporting",
+      "Salesforce Customization",
+      "Integration Services",
+      "Salesforce Automation",
+      "Migration to Salesforce",
+      "Support and Maintenance",
     ],
     showServiceCards: true,
     showProjects: true,
@@ -43,8 +43,8 @@ const page = () => {
     ctaTitle: "Enhance your Salesforce platform",
     ctaButtonText: "GET STARTED TODAY",
     ctaButtonLink: "/contact",
-    ctaTwoTitle: "Talk to our Salesforce specialists",
-    ctaTwoButtonText: "Get in touch now",
+    ctaTwoTitle: "Ready to Elevate Your Business? Experience Salesforce with iFour!",
+    ctaTwoButtonText: "Get started now",
     ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Custom Solutions",
@@ -56,9 +56,19 @@ const page = () => {
     ],
     serviceTwoTitle: "Why Choose iFour for Salesforce?",
     serviceTwoSubtitle: "Tailored CRM solutions for growth",
+    whyChooseUs: {
+      title: "Why Choose Us as Your Salesforce Development Company?",
+      paragraphs: [
+        "At iFour, we are passionate about empowering Australian businesses with Salesforce technology. Whether you run a small startup or a large enterprise, we will help you scale your business to meet your needs. This platform also offers a high level of customization, allowing businesses to tailor the platform to their unique requirements.",
+        "Partner with us now and we'll elevate your business to new heights of success. Contact us today to embark on your Salesforce journey!"
+      ],
+      ctaText: "",
+      ctaLink: "",
+      ctaSuffix: ""
+    },
     hireAboutSection: {
-      title: "Salesforce Services We Provide",
-      description: "End‑to‑end Salesforce consulting, development, and support to unlock CRM value.",
+      title: "Salesforce development services we offer:",
+      description: "At iFour, we take pride in being a leading Salesforce development services provider in Australia. Our team of certified Salesforce experts is dedicated to helping your business leverage the full potential of this powerful platform.\n\nWe understand the importance of fulfilling your strategic goals and hence we are here to help you achieve that. Our qualified cloud solution experts will help you with the best, most reliable, and highly scalable salesforce development solutions that simplify your business.\n\nTake a look at our Salesforce services:",
       hiringOptions: {
         title: "Engagement Options",
         options: ["On an hourly basis", "As a part of the dedicated team"],
@@ -69,17 +79,17 @@ const page = () => {
       },
     },
     angularBenefits: {
-      title: "Why Salesforce is Ideal for CRM Development?",
-      description: "Salesforce is the world's leading customer relationship management (CRM) platform that has revolutionized how businesses manage customer interactions. Since its introduction, Salesforce has become the preferred choice for building comprehensive, scalable, and intelligent CRM solutions that drive business growth and customer satisfaction.\n\nWith its cloud-native architecture, extensive customization capabilities, and powerful automation features, Salesforce stands as the top choice for CRM development today. Salesforce continues to dominate the CRM landscape, thanks to its innovative features, robust ecosystem, and continuous innovation that keeps businesses ahead of the competition.\n\nLet us explore the key reasons why businesses should consider Salesforce for their CRM development:",
+      title: "Why should I choose Salesforce?",
+      description: "Salesforce is a global leader in CRM and cloud-based solutions. Its track record of success and widespread adoption by businesses across industries testify to its effectiveness and reliability.\n\nIt offers robust reporting and analytics capabilities that provide valuable insights into sales performance, customer behavior, and market trends. These insights empower businesses to make data-driven decisions and strategize effectively.\n\nBesides, choosing the right technology partner is crucial for the success of your business. Here are the compelling reasons why Salesforce stands out as the preferred choice:",
       benefits: [
-        "Cloud-Native Platform",
-        "Comprehensive CRM Features",
-        "Extensive Customization",
-        "Powerful Automation",
-        "Rich App Ecosystem",
-        "AI-Powered Insights",
-        "Scalable Architecture",
-        "Enterprise Security"
+        "Enhanced customer engagement",
+        "Automation and workflow management",
+        "Flawless cloud-based accessibility",
+        "Scalability and customization",
+        "Innovation and feature updates",
+        "Suits businesses of all sizes",
+        "Adheres to stringent security measures",
+        "Vast AppExchange ecosystem"
       ]
     },
   };
