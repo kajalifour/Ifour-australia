@@ -114,13 +114,21 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             "Node.js Plugin Development": "iFour's Node.js plugin development enhances the functionality and versatility of your applications, introducing custom features and seamless extensions to maximise their potential.",
             "Node.js Migration": "Rely on the iFour team to faultlessly migrate your systems to the latest versions, ensuring enhanced performance, security, and compatibility while minimising business disruptions.",
             
-            // Java specific services
-            "Enterprise App Development": "Engage with a group of Java developers from iFour to build versatile and scalable enterprise software. Our Java programmers possess hands-on experience in crafting robust and user-friendly web apps for your needs.",
-            "Product Development Expertise": "Our programmers possess in-depth expertise and experience to craft custom solutions that align with your business goals. With our innovative approach to software development, our Java team helps you transform your ideas into a market-ready product.",
-            "Cloud-native Software Development": "Get the right assistance from our Java programmers who can help you build and deploy Java programs on cloud platforms like AWS, GCP, and Azure. Fuel your solution using the true power of cloud platforms at cost-effective budgeting.",
-            "Software App Re-engineering": "Hire Java developers with us to improve the functionality and performance of your app. With our app re-engineering services, you can modernize your product by updating architecture and improving UI/UX. Our programmers provide consistent support to update software.",
-            "Architecture & Design Consulting": "Our Java experts provide strategic guidance and subject matter specification to design eye-catching and efficient software architectures. Our programmers also focus on the flexibility of the architecture to design future-proof solutions.",
-            "Support and Maintenance": "Our Java programmers offer continuous support and maintenance services to help you ensure the seamless performance of your software. Our Java developers will assist you resolve any queries or bugs to ensure the smooth working of the app.",
+            // Java specific services (Technology page set of 6)
+            "Enterprise Application Development": "We excel in creating robust and scalable applications tailored to streamline your business operations and drive growth.",
+            "Product development expertise": "Leverage our extensive experience and innovation-driven approach to transform your ideas into market-leading products that captivate your audience.",
+            "Cloud-native software development": "AWS, GCP, Azure: Harness the power of the cloud with our expertise in developing cutting-edge, scalable, and secure applications on leading cloud platforms.",
+            "Software Application re-engineering": "Modernize and revitalize your legacy applications for enhanced performance, improved user experience, and seamless integration with modern technologies",
+            "Architecture and design consulting": "Our expert consultants provide strategic insights and industry best practices to design future-proof and efficient software architectures.",
+            "Application support and maintenance": "Ensure the smooth functioning and optimal performance of your applications with our top-class maintenance and support services",
+            
+            // Java specific services (Hire page set of 6)
+            "Hire Enterprise Application Development": "Engage with a group of Java developers from iFour to build versatile and scalable enterprise software. Our Java programmers possess hands-on experience in crafting robust and user-friendly web apps for your needs.",
+            "Hire Product Development Expertise": "Our programmers possess in-depth expertise and experience to craft custom solutions that align with your business goals. With our innovative approach to software development, our Java team helps you transform your ideas into a market-ready product.",
+            "Hire Cloud-native Software Development": "Get the right assistance from our Java programmers who can help you build and deploy Java programs on cloud platforms like AWS, GCP, and Azure. Fuel your solution using the true power of cloud platforms at cost-effective budgeting.",
+            "Hire Software Application Re-engineering": "Hire Java developers with us to improve the functionality and performance of your app. With our app re-engineering services, you can modernize your product by updating architecture and improving UI/UX. Our programmers provide consistent support to update software.",
+            "Hire Architecture & Design Consulting": "Our Java experts provide strategic guidance and subject matter specification to design eye-catching and efficient software architectures. Our programmers also focus on the flexibility of the architecture to design future-proof solutions.",
+            "Hire Java Support and Maintenance": "Our Java programmers offer continuous support and maintenance services to help you ensure the seamless performance of your software. Our Java developers will assist you resolve any queries or bugs to ensure the smooth working of the app.",
             
             // C# specific services (Technology page set of 6)
             "Custom Software Development": "Our expert C# software developers craft tailor-made software solutions that align perfectly with your business objectives and workflows.",

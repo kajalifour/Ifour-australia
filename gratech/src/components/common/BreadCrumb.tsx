@@ -37,7 +37,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             };
          case "Java Development Company":
             return {
-               description: "Design and deliver scalable, secure Java applications with cloud‑native architectures and automated DevOps pipelines.",
+               description: "Modernize your company projects with our exceptional Java development services. Harness the power of Java to build scalable, flexible, and robust apps that meet the demands of today's market. Partner with us, a leading Java development company, to realize your business potential.",
                buttonText: "Get In Touch Now"
             };
          case "Salesforce Development Company":

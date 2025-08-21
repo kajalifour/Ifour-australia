@@ -12,7 +12,7 @@ const page = () => {
   const techData = {
     title: "Connect with iFour to Obtain Exceptional Results",
     subtitle: "Expert Java Development Services",
-    description: "We build scalable, secure, and high-availability Java applications with modern architectures and DevOps.",
+    description: "Java, a robust and versatile programming language, has become a driving force behind the digital transformation of businesses worldwide. Since its inception in1995, Java has cemented its position as one of the most popular programming languages, enabling developers to create a wide range of applications, from web and mobile solutions to enterprise-level systems.\n\n Its  significance in the business world is undeniable, playing a pivotal role in shaping modern technologies and revolutionizing how companies operate and interact with their customers.\n\n iFour Technolab Pty. Ltd. is a renowned Java software development firm in Australia with experience in maximizing Java's limitless potential. We are a Microsoft solutions partner with more than 120 highly qualified employees and more than ten years of expertise in providing outstanding software solutions right through Australia. \n\nWe have been a trusted partner of various global clients, and we bring extensive expertise and mastery in delivering Java solutions tailored for businesses across Australia.",
     benefits: [
       "Spring Boot microservices",
       "Cloud-native delivery",
@@ -22,12 +22,12 @@ const page = () => {
       "Observability",
     ],
     services: [
-      "Enterprise App Development",
-      "Product Development Expertise",
-      "Cloud-native Software Development",
-      "Software App Re-engineering",
-      "Architecture & Design Consulting",
-      "Support and Maintenance",
+      "Enterprise Application Development",
+      "Product development expertise",
+      "Cloud-native software development",
+      "Software Application re-engineering",
+      "Architecture and design consulting",
+      "Application support and maintenance",
     ],
     showServiceCards: true,
     showProjects: true,
@@ -43,7 +43,7 @@ const page = () => {
     ctaTitle: "Accelerate with Java",
     ctaButtonText: "GET STARTED TODAY",
     ctaButtonLink: "/contact",
-    ctaTwoTitle: "Let’s discuss your Java roadmap",
+    ctaTwoTitle: "Empower Your Digital Transformation with iFour Technolab",
     ctaTwoButtonText: "Talk to experts",
     ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
@@ -56,9 +56,20 @@ const page = () => {
     ],
     serviceTwoTitle: "Why Choose iFour for Java?",
     serviceTwoSubtitle: "Scalable delivery with modern Java",
+    whyChooseUs: {
+      title: "Why Choose Us as Your Java Development Company?",
+      paragraphs: [
+        "Transform your organization's operations with our robust and scalable Java-based enterprise solutions. From ERP systems to CRM platforms, we create solutions that streamline your processes and enhance collaboration, giving your business a competitive advantage.",
+        "Experience the transformative power of Java with iFour Technolab Australia. Our Java development services are designed to fuel your digital transformation, drive innovation, and accelerate your growth in the dynamic Australian tech landscape.",
+        "Partner with us, and together, we will create a tech-driven future tailored for your success. Let's embark on a journey of digital excellence with Java as your driving force!"
+      ],
+      ctaText: "Hire Java developers",
+      ctaLink: "/hire-java-developers",
+      ctaSuffix: "from iFour to build powerful web and mobile apps catering to your unique business needs."
+    },
     hireAboutSection: {
-      title: "Java Development Services We Provide",
-      description: "From greenfield to modernization, we deliver reliable Java solutions across industries.",
+      title: "Our Java development services",
+      description: "We understand that every business is unique, and so should your software solutions. Our Java development services focus on understanding your specific requirements and challenges. With this insight, we craft tailor-made solutions that address your pain points, boost efficiency, and elevate your digital capabilities, driving tangible outcomes for your business.\n\nAt iFour Technolab Australia, our Java development services cater to diverse business needs, providing you with innovative and reliable solutions to fuel your growth. Here are the key services we offer using Java.",
       hiringOptions: {
         title: "Engagement Options",
         options: ["On an hourly basis", "As a part of the dedicated team"],
@@ -69,8 +80,8 @@ const page = () => {
       },
     },
     angularBenefits: {
-      title: "Why Java is Ideal for Enterprise Development?",
-      description: "Java is a robust, object-oriented programming language that has been the backbone of enterprise software development for decades. Since its introduction by Sun Microsystems, Java has become the preferred choice for building scalable, secure, and high-performance applications that power businesses worldwide.\n\nWith its 'Write Once, Run Anywhere' philosophy, extensive ecosystem, and enterprise-grade features, Java stands as the top choice for enterprise development today. Java continues to dominate the enterprise landscape, thanks to its reliability, security, and vast community support that ensures long-term stability and growth.\n\nLet us explore the key reasons why businesses should consider Java for their enterprise development:",
+      title: "Why should I choose Java for Enterprise software development?",
+      description: "Java is not just a programming language; it's a powerful platform that empowers businesses with unparalleled versatility. At iFour Technolab, we harness the full potential of Java to build robust, scalable, and secure software solutions. From web applications to enterprise systems and mobile apps, our Java experts create bespoke solutions that align perfectly with your business goals.\n\nAt iFour, we firmly believe in the transformative capabilities of Java, making it the cornerstone of our software development services. Let's explore the factors making Java an optimal choice for your digital journey:",
       benefits: [
         "Platform Independence",
         "Enterprise-Grade Security",
