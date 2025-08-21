@@ -43,8 +43,8 @@ const page = () => {
     ctaTitle: "Build robust solutions on .NET",
     ctaButtonText: "GET STARTED TODAY",
     ctaButtonLink: "/contact",
-    ctaTwoTitle: "Ready to modernize with .NET?",
-    ctaTwoButtonText: "Talk to experts",
+    ctaTwoTitle: "Take your business to the next level with .NET software development",
+    ctaTwoButtonText: "Get in touch now",
     ctaTwoButtonLink: "/contact",
     serviceTwoServices: [
       "Quick Onboarding",
