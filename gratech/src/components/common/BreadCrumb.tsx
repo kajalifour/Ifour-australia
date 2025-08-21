@@ -27,7 +27,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             };
          case ".NET Development Company":
             return {
-               description: "Leverage modern .NET and Azure to build secure, scalable, and cloud‑ready applications. Our team crafts enterprise‑grade solutions with clean architecture and best practices.",
+               description: "Drive business growth with potent, feature-packed, and cutting-edge .NET-powered software solutions. As a well-experienced .NET development company, we implement software solutions with unrivaled features and functionality while delivering top-notch .NET development services.",
                buttonText: "Get In Touch Now"
             };
          case "C# Development Company":

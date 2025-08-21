@@ -289,11 +289,23 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
                                             Best-in-Class Angular<br />
                                             Development Services
                                         </>
-                                    ) : (
+                                    ) : data.title.includes('Maximize Business Success') ? (
                                         <>
                                             Maximize Business Success with<br />
                                             Our Experienced .NET<br />
                                             Developers
+                                        </>
+                                    ) : data.title.includes('Drive Business Success') ? (
+                                        <>
+                                            Drive Business Success with<br />
+                                            Our .NET Development<br />
+                                            Services
+                                        </>
+                                    ) : (
+                                        <>
+                                            Drive Business Success with<br />
+                                            Our .NET Development<br />
+                                            Services
                                         </>
                                     )}
                                 </div>

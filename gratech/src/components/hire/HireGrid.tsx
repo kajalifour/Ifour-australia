@@ -82,13 +82,21 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
             "Internet or intranet applications": "Hire developers for internet and intranet applications. We provide reliable support and maintenance services to ensure continued performance and security.",
             "Software or web maintenance": "Hire maintenance specialists for ongoing software and web application support. We monitor your applications after deployment and address issues promptly.",
             
-            // .NET specific services
-            ".NET Web Development": "We specialize in designing and developing dynamic and responsive web-based software solutions using ASP.NET that help to ensure optimum user satisfaction.",
-            ".NET Mobile App Development": "Our .NET developers have expertise in crafting high-quality mobile apps that can run on multiple platforms and offer a range of advanced features.",
-            ".NET Desktop Development": "Build powerful and high-performing Windows applications with WPF to achieve an interface that is both intuitive and consistent with the Windows operating system.",
-            ".NET Integration Services": "Our services include integrating .NET solutions with other powerful tools and we also help you upgrade your existing solutions to improve its performance.",
-            ".NET Migration": "Receive expert guidance from our team of skilled .NET programmers to migrate your legacy .NET application and ensure long-term sustainability of your system.",
-            ".NET Support & Maintenance": "By partnering with us clients can get continuous support and maintenance services which ensures optimal performance of your software and seamless user experience.",
+            // .NET specific services (Technologies page)
+            ".NET Web Development": "As part of our ASP.NET development services, we create custom web-based software solutions that are secure, scalable, and tailor-made to your individual specifications.",
+            ".NET Mobile App Development": "Get innovative, high-performance mobile apps with visually engaging UIs handcrafted according to your industry-specific requirements that deliver an elegant user experience and drive growth.",
+            ".NET Desktop Development": "Experience excellence at its finest by leveraging our .NET development services. You can rely on us at iFour Technolab to take care of all your .NET desktop development needs.",
+            ".NET Cloud Integration Services": "We can help you unlock unparalleled scalability, business efficiency, and profitability by seamlessly integrating your .NET applications with cloud platforms like Azure and AWS.",
+            ".NET Migration and Upgrade": "We can migrate or upgrade your existing software solutions flawlessly and effortlessly to the .NET framework to augment its performance and security without loss of functionality.",
+            ".NET Support & Maintenance": "Trust iFour Technolab for reliable support and maintenance services. We monitor your software after deployment to ensure continued performance and security and address bugs.",
+            
+            // .NET specific services (Hire page)
+            "Hire .NET Web Development": "We specialize in designing and developing dynamic and responsive web-based software solutions using ASP.NET that help to ensure optimum user satisfaction.",
+            "Hire .NET Mobile App Development": "Our .NET developers have expertise in crafting high-quality mobile apps that can run on multiple platforms and offer a range of advanced features.",
+            "Hire .NET Desktop Development": "Build powerful and high-performing Windows applications with WPF to achieve an interface that is both intuitive and consistent with the Windows operating system.",
+            "Hire .NET Cloud Integration Services": "Our services include integrating .NET solutions with other powerful tools and we also help you upgrade your existing solutions to improve its performance.",
+            "Hire .NET Migration and Upgrade": "Receive expert guidance from our team of skilled .NET programmers to migrate your legacy .NET application and ensure long-term sustainability of your system.",
+            "Hire .NET Support & Maintenance": "By partnering with us clients can get continuous support and maintenance services which ensures optimal performance of your software and seamless user experience.",
             
             // Angular specific services
             "Angular Web Development": "Through our tech expertise and mastery of the relevant web technologies, we build Angular-based web solutions tailor-made to suit your unique requirements and specifications.",

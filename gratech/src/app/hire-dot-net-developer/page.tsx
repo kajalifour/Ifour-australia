@@ -22,12 +22,12 @@ const page = () => {
       "Performance optimization and security"
     ],
     services: [
-      ".NET Web Development",
-      ".NET Mobile App Development", 
-      ".NET Desktop Development",
-      ".NET Integration Services",
-      ".NET Migration",
-      ".NET Support & Maintenance"
+      "Hire .NET Web Development",
+      "Hire .NET Mobile App Development", 
+      "Hire .NET Desktop Development",
+      "Hire .NET Cloud Integration Services",
+      "Hire .NET Migration and Upgrade",
+      "Hire .NET Support & Maintenance"
     ],
     showServiceCards: true,
     showProjects: true,
