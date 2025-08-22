@@ -29,8 +29,8 @@ const tech_data = [
 ];
 
 const setting = {
-   slidesPerView: 4,
-   spaceBetween: 30,
+   slidesPerView: 2,
+   spaceBetween: 20,
    loop: true,
    autoplay: {
       delay: 3000,
@@ -45,17 +45,25 @@ const setting = {
       prevEl: ".technologies__arry-prev",
    },
    breakpoints: {
-      1200: {
-         slidesPerView: 4,
+      480: {
+         slidesPerView: 2,
+         spaceBetween: 20,
+      },
+      576: {
+         slidesPerView: 3,
+         spaceBetween: 25,
+      },
+      768: {
+         slidesPerView: 3,
+         spaceBetween: 30,
       },
       992: {
-         slidesPerView: 3,
+         slidesPerView: 4,
+         spaceBetween: 30,
       },
-      575: {
-         slidesPerView: 2,
-      },
-      320: {
-         slidesPerView: 1,
+      1200: {
+         slidesPerView: 4,
+         spaceBetween: 30,
       },
    },
 };
@@ -78,7 +86,7 @@ const Technologies = () => {
                
                <div className="row justify-content-center">
                   {tech_data.map((tech, index) => (
-                     <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '20%' }}>
+                     <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '50%', minWidth: '120px' }}>
                         <div className="technology__item text-center wow fadeInUp" 
                            data-wow-delay={`${index * 100}ms`} 
                            data-wow-duration="1500ms"

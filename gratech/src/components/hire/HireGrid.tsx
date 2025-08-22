@@ -243,7 +243,12 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
                             </svg>
                             HIRING SERVICES
                         </h5>
-                        <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
+                            fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
+                            lineHeight: '1.2',
+                            marginBottom: '1.5rem',
+                            fontWeight: '700'
+                        }}>
                             Exclusive Hiring Services
                         </h2>
                     </div>
@@ -253,7 +258,7 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
                 {/* Hire Services Grid - 2 rows of 3 services each */}
                 <div className="row g-4">
                     {hireToDisplay.map((service, index) => (
-                        <div key={service.id} className="col-lg-4 col-md-6" 
+                        <div key={service.id} className="col-lg-4 col-md-6 col-sm-12" 
                              style={{ 
                                  animationDelay: `${index * 100}ms`,
                                  animationDuration: '1000ms',
@@ -341,7 +346,7 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
                                         {/* Service Title in teal area */}
                                         <h4 style={{
                                             color: '#ffffff',
-                                            fontSize: '22px',
+                                            fontSize: 'clamp(18px, 2.5vw, 22px)',
                                             fontWeight: '600',
                                             margin: '0 0 8px 0',
                                             textAlign: 'center',
@@ -392,7 +397,7 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
                                             transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                                             textShadow: '0 0 0 rgba(15, 122, 149, 0)',
                                             color: '#666',
-                                            fontSize: '16px',
+                                            fontSize: 'clamp(14px, 1.5vw, 16px)',
                                             lineHeight: '1.6',
                                             margin: '0',
                                             textAlign: 'center'

@@ -149,8 +149,8 @@ const testi_data: TestimonialDataType[] = [
 ];
 
 const setting = {
-   slidesPerView: 3,
-   spaceBetween: 30,
+   slidesPerView: 1,
+   spaceBetween: 20,
    loop: true,
    autoplay: {
       delay: 3000,
@@ -163,6 +163,20 @@ const setting = {
    navigation: {
       nextEl: ".service__arry-next",
       prevEl: ".service__arry-prev",
+   },
+   breakpoints: {
+      576: {
+         slidesPerView: 2,
+         spaceBetween: 25,
+      },
+      768: {
+         slidesPerView: 2,
+         spaceBetween: 30,
+      },
+      992: {
+         slidesPerView: 3,
+         spaceBetween: 30,
+      },
    },
 };
 
@@ -201,7 +215,7 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
                     <div className="col-xl-6 wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
                         <div className="content-section">
                             <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
-                                fontSize: '2.5rem',
+                                fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
                                 lineHeight: '1.2',
                                 marginBottom: '1.5rem',
                                 fontWeight: '700'
@@ -209,7 +223,7 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
                                 <span style={{ color: '#0f7a95' }}>{data.title}</span> {data.subtitle || 'Services'}
                             </h2>
                             <div className="text-content wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{
-                                fontSize: '1.1rem',
+                                fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
                                 lineHeight: '1.8',
                                 color: '#333'
                             }}>
@@ -424,8 +438,8 @@ const ClientsSection = ({ data }: { data: ServiceDetailsData }) => {
     if (!data.showClients) return null;
     
     const client_setting = {
-       slidesPerView: 5,
-       spaceBetween: 30,
+       slidesPerView: 2,
+       spaceBetween: 20,
        loop: true,
        autoplay: {
          delay: 2000,
@@ -440,11 +454,11 @@ const ClientsSection = ({ data }: { data: ServiceDetailsData }) => {
           prevEl: ".clients__arry-prev",
        },
        breakpoints: {
-         1200: { slidesPerView: 5 },
-         992: { slidesPerView: 4 },
-         768: { slidesPerView: 3 },
-         575: { slidesPerView: 2 },
-         480: { slidesPerView: 1 },
+         480: { slidesPerView: 2, spaceBetween: 20 },
+         576: { slidesPerView: 3, spaceBetween: 25 },
+         768: { slidesPerView: 3, spaceBetween: 30 },
+         992: { slidesPerView: 4, spaceBetween: 30 },
+         1200: { slidesPerView: 5, spaceBetween: 30 },
        },
     };
 
@@ -587,7 +601,7 @@ const TechnologiesSection = ({ data }: { data: ServiceDetailsData }) => {
                 
                 <div className="row justify-content-center">
                     {tech_data.map((tech, index) => (
-                        <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '20%' }}>
+                        <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '50%', minWidth: '120px' }}>
                             <div className="technology__item text-center wow fadeInUp" 
                                 data-wow-delay={`${index * 100}ms`} 
                                 data-wow-duration="1500ms"
@@ -680,7 +694,7 @@ const MediaCoverageSection = ({ data }: { data: ServiceDetailsData }) => {
                 
                 <div className="row justify-content-center">
                     {media_data.map((media, index) => (
-                        <div key={media.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '20%' }}>
+                        <div key={media.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '50%', minWidth: '120px' }}>
                             <div className="media__item text-center wow fadeInUp" 
                                 data-wow-delay={`${index * 100}ms`} 
                                 data-wow-duration="1500ms"

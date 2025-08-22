@@ -52,7 +52,12 @@ const TechnologiesGrid: React.FC<TechnologiesGridProps> = ({ items = defaultItem
                             </svg>
                             TECHNOLOGIES WE WORK WITH
                         </h5>
-                        <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
+                            fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
+                            lineHeight: '1.2',
+                            marginBottom: '1.5rem',
+                            fontWeight: '700'
+                        }}>
                             Explore Our Technology Capabilities
                         </h2>
                     </div>
@@ -60,7 +65,7 @@ const TechnologiesGrid: React.FC<TechnologiesGridProps> = ({ items = defaultItem
 
                 <div className="row g-4">
                     {items.map((item, index) => (
-                        <div key={item.id} className="col-lg-3 col-md-6" style={{ animationDelay: `${index * 100}ms`, animationDuration: "1000ms", padding: "12px" }}>
+                        <div key={item.id} className="col-lg-4 col-md-6 col-sm-12" style={{ animationDelay: `${index * 100}ms`, animationDuration: "1000ms", padding: "12px" }}>
                             <Link href={item.link} className="text-decoration-none">
                                 <div className="service-two__item wow fadeInUp" data-wow-delay={`${index * 200}ms`} data-wow-duration="1500ms" style={{ height: "100%", display: "flex", flexDirection: "column", transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)", cursor: "pointer", position: "relative", borderRadius: "0", background: "linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)", boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)", border: "2px solid transparent", overflow: "hidden" }}>
                                     <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, background: "radial-gradient(circle at center, rgba(15, 122, 149, 0.1) 0%, transparent 70%)", opacity: 0, transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)", pointerEvents: "none", borderRadius: 0 }}></div>
@@ -70,12 +75,12 @@ const TechnologiesGrid: React.FC<TechnologiesGridProps> = ({ items = defaultItem
                                                 // Use regular img for public assets path
                                                 <img src={item.icon} alt={`${item.title} icon`} style={{ width: 48, height: 48, objectFit: "contain", marginBottom: 8 }} />
                                             )}
-                                            <h4 style={{ color: "#ffffff", fontSize: "20px", fontWeight: 600, margin: 0, textAlign: "center", textShadow: "0 2px 4px rgba(0,0,0,0.3)" }}>{item.title}</h4>
+                                            <h4 style={{ color: "#ffffff", fontSize: "clamp(16px, 2.5vw, 20px)", fontWeight: 600, margin: 0, textAlign: "center", textShadow: "0 2px 4px rgba(0,0,0,0.3)" }}>{item.title}</h4>
                                         </div>
                                     </div>
                                     <div className="service-two__content" style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", padding: "24px", position: "relative", overflow: "hidden", borderRadius: 0 }}>
                                         <div style={{ position: "relative", zIndex: 2, backgroundColor: "rgba(255, 255, 255, 0.9)", padding: "16px", borderRadius: 0, backdropFilter: "blur(5px)", border: "1px solid rgba(255, 255, 255, 0.2)" }}>
-                                            <p style={{ color: "#666", fontSize: 16, lineHeight: 1.6, margin: 0, textAlign: "center" }}>{item.desc}</p>
+                                            <p style={{ color: "#666", fontSize: "clamp(14px, 1.5vw, 16px)", lineHeight: 1.6, margin: 0, textAlign: "center" }}>{item.desc}</p>
                                         </div>
                                     </div>
                                 </div>

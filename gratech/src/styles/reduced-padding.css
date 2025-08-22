@@ -181,4 +181,847 @@
   .pb-60 { padding-bottom: 21px; }
   .mt-60 { margin-top: 21px; }
   .mb-60 { margin-bottom: 21px; }
+  
+  /* Main Service Section Mobile Responsive */
+  .pt-120.pb-120 {
+    margin: 0 15px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+  
+  /* Container adjustments for mobile */
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Image container mobile adjustments */
+  .image-container {
+    height: auto !important;
+    min-height: 200px !important;
+  }
+  
+  .image-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Content section mobile adjustments */
+  .content-section h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .content-section .text-content {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* About section mobile adjustments */
+  .about__left-item .image.big-image {
+    margin-top: 20px !important;
+  }
+  
+  .about__left-item .image.sm-image {
+    margin-top: 20px !important;
+  }
+  
+  /* Service cards mobile adjustments */
+  .service__item {
+    height: auto !important;
+    min-height: 280px !important;
+    padding: 15px 15px 30px 15px !important;
+  }
+  
+  /* Swiper adjustments for mobile */
+  .service__slider .swiper-slide {
+    width: 100% !important;
+  }
+  
+  /* Project section mobile adjustments */
+  .project__item {
+    height: 250px !important;
+  }
+  
+  /* Technologies grid mobile adjustments */
+  .technology__item {
+    height: 80px !important;
+  }
+  
+  .col-lg-2.col-md-3.col-sm-4.col-6 {
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+  }
+  
+  /* Media coverage mobile adjustments */
+  .media__item {
+    height: 100px !important;
+    padding: 15px 10px !important;
+  }
+  
+  /* Testimonial section mobile adjustments */
+  .testimonial-area .row {
+    flex-direction: column;
+  }
+  
+  .testimonial-area .col-lg-6 {
+    margin-bottom: 30px;
+  }
+  
+  /* Blog section mobile adjustments */
+  .blog-two__grid-item,
+  .blog-two__list-item {
+    margin-bottom: 20px !important;
+  }
+  
+  /* Quality services section mobile adjustments */
+  .quality-services-section {
+    margin-bottom: 30px !important;
+  }
+  
+  /* Technology partners section mobile adjustments */
+  .technology-partners__container {
+    width: 95% !important;
+    padding: 30px 20px !important;
+  }
+  
+  /* Agile approach section mobile adjustments */
+  .agile-process-image {
+    padding: 10px !important;
+  }
+  
+  /* Clients section mobile adjustments */
+  .clients-area {
+    margin-top: 30px !important;
+  }
+  
+  /* CTA sections mobile adjustments */
+  .cta-area {
+    padding: 40px 20px !important;
+  }
+  
+  /* Section headers mobile adjustments */
+  .section-header h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .section-header h5 {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Navigation buttons mobile adjustments */
+  .service__navigation,
+  .clients__navigation {
+    margin-top: 20px !important;
+    gap: 15px !important;
+  }
+  
+  .service__navigation button,
+  .clients__navigation button {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  /* Swiper dots mobile adjustments */
+  .service__dot,
+  .clients__dot {
+    margin: 0 10px !important;
+  }
+  
+  /* Grid layouts mobile adjustments */
+  .row.g-4 {
+    --bs-gutter-x: 1rem !important;
+    --bs-gutter-y: 1rem !important;
+  }
+  
+  /* Card spacing mobile adjustments */
+  .col-lg-4.col-md-6 {
+    padding: 8px !important;
+  }
+  
+  /* Image sizing mobile adjustments */
+  .about__left-item .image img,
+  .about__left-item .image.big-image img,
+  .about__left-item .image.sm-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+  
+  /* Form elements mobile adjustments */
+  .talk-us__item {
+    padding: 20px !important;
+  }
+  
+  /* Video container mobile adjustments */
+  .video-container {
+    padding-bottom: 56.25% !important;
+  }
+  
+  /* Play button mobile adjustments */
+  .play-button-overlay {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  /* Video popup mobile adjustments */
+  .video-popup-content {
+    width: 95% !important;
+    margin: 20px !important;
+  }
+  
+  /* Newsletter section mobile adjustments */
+  .newsletter-section {
+    padding: 30px 15px !important;
+  }
+  
+  /* Footer mobile adjustments */
+  .footer-area {
+    padding: 30px 15px !important;
+  }
+  
+  /* Breadcrumb mobile adjustments */
+  .breadcrumb-area {
+    padding: 20px 15px !important;
+  }
+  
+  /* Header mobile adjustments */
+  .header-area {
+    padding: 10px 15px !important;
+  }
+  
+  /* Menu mobile adjustments */
+  .main-menu {
+    padding: 10px 0 !important;
+  }
+  
+  /* Button mobile adjustments */
+  .btn-one {
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Text sizing mobile adjustments */
+  p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  h3 {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  h4 {
+    font-size: 1.2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* List items mobile adjustments */
+  ul li {
+    margin-bottom: 8px !important;
+  }
+  
+  /* Icon sizing mobile adjustments */
+  .service__icon img,
+  .service__icon svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  /* Shape elements mobile adjustments */
+  .service__shape,
+  .about__shape {
+    display: none !important;
+  }
+  
+  /* Circle shape mobile adjustments */
+  .circle-shape {
+    display: none !important;
+  }
+  
+  /* Animation adjustments for mobile */
+  .wow {
+    animation-duration: 0.8s !important;
+  }
+  
+  /* Swiper breakpoints mobile adjustments */
+  .swiper-slide {
+    width: 100% !important;
+  }
+  
+  /* Grid column adjustments for mobile */
+  .col-xl-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .col-xl-10 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Flex utilities mobile adjustments */
+  .d-flex.flex-wrap {
+    flex-direction: column !important;
+  }
+  
+  .d-flex.flex-wrap.gap-4 {
+    gap: 1rem !important;
+  }
+  
+  /* Justify content mobile adjustments */
+  .justify-content-between {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  /* Align items mobile adjustments */
+  .align-items-center {
+    align-items: flex-start !important;
+  }
+  
+  /* Margin and padding utilities mobile adjustments */
+  .mb-60 {
+    margin-bottom: 30px !important;
+  }
+  
+  .mt-30 {
+    margin-top: 15px !important;
+  }
+  
+  .mt-25 {
+    margin-top: 12px !important;
+  }
+  
+  .mt-20 {
+    margin-top: 10px !important;
+  }
+  
+  .mb-30 {
+    margin-bottom: 15px !important;
+  }
+  
+  .mb-20 {
+    margin-bottom: 10px !important;
+  }
+  
+  /* Padding utilities mobile adjustments */
+  .p-4 {
+    padding: 1rem !important;
+  }
+  
+  .px-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .py-4 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  /* Border radius mobile adjustments */
+  .rounded-3 {
+    border-radius: 0.375rem !important;
+  }
+  
+  /* Position utilities mobile adjustments */
+  .position-relative {
+    position: relative !important;
+  }
+  
+  .position-absolute {
+    position: absolute !important;
+  }
+  
+  /* Overflow utilities mobile adjustments */
+  .overflow-hidden {
+    overflow: hidden !important;
+  }
+  
+  /* Display utilities mobile adjustments */
+  .d-block {
+    display: block !important;
+  }
+  
+  .d-flex {
+    display: flex !important;
+  }
+  
+  .d-none {
+    display: none !important;
+  }
+  
+  /* Text alignment mobile adjustments */
+  .text-center {
+    text-align: center !important;
+  }
+  
+  .text-white {
+    color: #ffffff !important;
+  }
+  
+  /* Background utilities mobile adjustments */
+  .bg-image {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  
+  /* Z-index utilities mobile adjustments */
+  .z-index-1 {
+    z-index: 1 !important;
+  }
+  
+  .z-index-2 {
+    z-index: 2 !important;
+  }
+  
+  /* Transform utilities mobile adjustments */
+  .translate-middle {
+    transform: translate(-50%, -50%) !important;
+  }
+  
+  /* Width and height utilities mobile adjustments */
+  .w-100 {
+    width: 100% !important;
+  }
+  
+  .h-100 {
+    height: 100% !important;
+  }
+  
+  /* Object fit utilities mobile adjustments */
+  .object-fit-cover {
+    object-fit: cover !important;
+  }
+  
+  /* Flex direction mobile adjustments */
+  .flex-column {
+    flex-direction: column !important;
+  }
+  
+  /* Justify content mobile adjustments */
+  .justify-content-center {
+    justify-content: center !important;
+  }
+  
+  .justify-content-start {
+    justify-content: flex-start !important;
+  }
+  
+  .justify-content-end {
+    justify-content: flex-end !important;
+  }
+  
+  /* Align items mobile adjustments */
+  .align-items-start {
+    align-items: flex-start !important;
+  }
+  
+  .align-items-end {
+    align-items: flex-end !important;
+  }
+  
+  /* Gap utilities mobile adjustments */
+  .gap-2 {
+    gap: 0.5rem !important;
+  }
+  
+  .gap-3 {
+    gap: 0.75rem !important;
+  }
+  
+  .gap-4 {
+    gap: 1rem !important;
+  }
+  
+  /* Font weight mobile adjustments */
+  .fw-bold {
+    font-weight: 700 !important;
+  }
+  
+  .fw-normal {
+    font-weight: 400 !important;
+  }
+  
+  /* Font size mobile adjustments */
+  .fs-4 {
+    font-size: 1.25rem !important;
+  }
+  
+  .fs-6 {
+    font-size: 0.875rem !important;
+  }
+  
+  /* Line height mobile adjustments */
+  .lh-base {
+    line-height: 1.5 !important;
+  }
+  
+  /* Margin auto mobile adjustments */
+  .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .my-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+  
+  /* Padding auto mobile adjustments */
+  .px-auto {
+    padding-left: auto !important;
+    padding-right: auto !important;
+  }
+  
+  .py-auto {
+    padding-top: auto !important;
+    padding-bottom: auto !important;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 768px) and (max-width: 991px) {
+  .pt-120 { padding-top: 60px; }
+  .pb-120 { padding-bottom: 60px; }
+  .mt-120 { margin-top: 60px; }
+  .mb-120 { margin-bottom: 60px; }
+  .pt-100 { padding-top: 50px; }
+  .pb-100 { padding-bottom: 50px; }
+  .mt-100 { margin-top: 50px; }
+  .mb-100 { margin-bottom: 50px; }
+  .pt-60 { padding-top: 30px; }
+  .pb-60 { padding-bottom: 30px; }
+  .mt-60 { margin-top: 30px; }
+  .mb-60 { margin-bottom: 30px; }
+  
+  /* Main Service Section Tablet Responsive */
+  .pt-120.pb-120 {
+    margin: 0 50px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+  
+  /* Content section tablet adjustments */
+  .content-section h2 {
+    font-size: 2.2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Technologies grid tablet adjustments */
+  .col-lg-2.col-md-3.col-sm-4.col-6 {
+    max-width: 33.333% !important;
+    flex: 0 0 33.333% !important;
+  }
+  
+  /* Service cards tablet adjustments */
+  .service__item {
+    height: 300px !important;
+  }
+  
+  /* Section headers tablet adjustments */
+  .section-header h2 {
+    font-size: 2.2rem !important;
+  }
+}
+
+/* Laptop responsive adjustments (1024px to 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  /* Main Service Section Laptop Responsive */
+  .pt-120.pb-120 {
+    margin: 0 80px !important;
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+  
+  /* Content section laptop adjustments */
+  .content-section h2 {
+    font-size: 2.3rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1.25rem !important;
+  }
+  
+  .content-section .text-content {
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+  }
+  
+  /* Section headers laptop adjustments */
+  .section-header h2 {
+    font-size: 2.3rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  .section-header h5 {
+    font-size: 1rem !important;
+    padding-bottom: 15px !important;
+  }
+  
+  /* Service cards laptop adjustments */
+  .service__item {
+    height: 310px !important;
+    padding: 18px 18px 45px 18px !important;
+  }
+  
+  .service__item h4 {
+    font-size: 1.3rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .service__item p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Technologies grid laptop adjustments */
+  .technology__item {
+    height: 95px !important;
+  }
+  
+  .col-lg-2.col-md-3.col-sm-4.col-6 {
+    max-width: 25% !important;
+    flex: 0 0 25% !important;
+  }
+  
+  /* Media coverage laptop adjustments */
+  .media__item {
+    height: 110px !important;
+    padding: 20px 12px !important;
+  }
+  
+  /* Project section laptop adjustments */
+  .project__item {
+    height: 280px !important;
+  }
+  
+  /* Blog section laptop adjustments */
+  .blog-two__grid-item h3,
+  .blog-two__list-item h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .blog-two__grid-item p,
+  .blog-two__list-item p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* CTA sections laptop adjustments */
+  .cta-area h2 {
+    font-size: 2.2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .cta-area p {
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+  }
+  
+  /* Testimonial section laptop adjustments */
+  .testimonial-area h2 {
+    font-size: 2.2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .testimonial-area p {
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+  }
+  
+  /* About section laptop adjustments */
+  .about-area h2 {
+    font-size: 2.3rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  .about-area p {
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+  }
+  
+  /* Clients section laptop adjustments */
+  .clients-area h2 {
+    font-size: 2.2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Agile approach section laptop adjustments */
+  .agile-approach-area h2 {
+    font-size: 2.2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Technology partners section laptop adjustments */
+  .technology-partners__container {
+    width: 85% !important;
+    padding: 40px 28px !important;
+  }
+  
+  /* Quality services section laptop adjustments */
+  .quality-services-section h2 {
+    font-size: 2.3rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  .quality-services-section .text-content {
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+  }
+  
+  /* Service grid laptop adjustments */
+  .service-two__item h4 {
+    font-size: 1.3rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .service-two__item p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Hire grid laptop adjustments */
+  .hire-grid h2 {
+    font-size: 2.2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Technologies grid laptop adjustments */
+  .technologies-grid h2 {
+    font-size: 2.2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Button laptop adjustments */
+  .btn-one {
+    padding: 12px 25px !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Navigation buttons laptop adjustments */
+  .service__navigation button,
+  .clients__navigation button {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  
+  /* Icon sizing laptop adjustments */
+  .service__icon img,
+  .service__icon svg {
+    width: 55px !important;
+    height: 55px !important;
+  }
+  
+  /* Container laptop adjustments */
+  .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Image container laptop adjustments */
+  .image-container img {
+    max-width: 500px !important;
+  }
+  
+  /* Text sizing laptop adjustments */
+  p {
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+  }
+  
+  h3 {
+    font-size: 1.6rem !important;
+    line-height: 1.35 !important;
+  }
+  
+  h4 {
+    font-size: 1.4rem !important;
+    line-height: 1.35 !important;
+  }
+  
+  /* List items laptop adjustments */
+  ul li {
+    margin-bottom: 10px !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Margin and padding laptop adjustments */
+  .mb-60 {
+    margin-bottom: 50px !important;
+  }
+  
+  .mt-30 {
+    margin-top: 20px !important;
+  }
+  
+  .mt-25 {
+    margin-top: 18px !important;
+  }
+  
+  .mt-20 {
+    margin-top: 15px !important;
+  }
+  
+  .mb-30 {
+    margin-bottom: 20px !important;
+  }
+  
+  .mb-20 {
+    margin-bottom: 15px !important;
+  }
+  
+  /* Grid layouts laptop adjustments */
+  .row.g-4 {
+    --bs-gutter-x: 1.5rem !important;
+    --bs-gutter-y: 1.5rem !important;
+  }
+  
+  /* Card spacing laptop adjustments */
+  .col-lg-4.col-md-6 {
+    padding: 10px !important;
+  }
+}
+
+/* Large screen responsive adjustments */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Main Service Section Large Screen Responsive */
+  .pt-120.pb-120 {
+    margin: 0 100px !important;
+  }
+  
+  /* Content section large screen adjustments */
+  .content-section h2 {
+    font-size: 2.4rem !important;
+  }
+  
+  /* Technologies grid large screen adjustments */
+  .col-lg-2.col-md-3.col-sm-4.col-6 {
+    max-width: 25% !important;
+    flex: 0 0 25% !important;
+  }
+}
+
+/* Extra large screen responsive adjustments */
+@media (min-width: 1200px) {
+  /* Main Service Section Extra Large Screen Responsive */
+  .pt-120.pb-120 {
+    margin: 0 150px !important;
+  }
+  
+  /* Content section extra large screen adjustments */
+  .content-section h2 {
+    font-size: 2.5rem !important;
+  }
+  
+  /* Technologies grid extra large screen adjustments */
+  .col-lg-2.col-md-3.col-sm-4.col-6 {
+    max-width: 20% !important;
+    flex: 0 0 20% !important;
+  }
 } 

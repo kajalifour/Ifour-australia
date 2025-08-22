@@ -135,7 +135,7 @@ const ServiceTwo: React.FC<ServiceTwoProps> = ({
                     {/* Services Grid - 2 rows of 3 services each */}
                     <div className="row g-4">
                         {servicesToDisplay.map((serviceTitle, index) => (
-                            <div key={index} className="col-lg-4 col-md-6" 
+                            <div key={index} className="col-lg-4 col-md-6 col-sm-12" 
                                  style={{ 
                                      animationDelay: `${index * 100}ms`,
                                      animationDuration: '1000ms',
