@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import shape_1 from "@/assets/images/icon/section-title.png";
+
 import shape_5 from "@/assets/images/shape/about-line.png";
 
 interface HireAboutSectionProps {

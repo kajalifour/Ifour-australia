@@ -16,7 +16,6 @@ import industry08 from "@/assets/images/industry/industry-08.webp"
 import industry09 from "@/assets/images/industry/industry-09.webp"
 import industry10 from "@/assets/images/industry/industry-10.webp"
 import industry11 from "@/assets/images/industry/industry-11.webp"
-import contactIcon from "@/assets/images/icon/about-icon2.png"
 
 interface DataType {
    id: number;

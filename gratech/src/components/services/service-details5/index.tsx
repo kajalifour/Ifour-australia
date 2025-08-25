@@ -75,7 +75,16 @@ const serviceDetailsData = {
 };
 
 // Benefits Section Component
-const BenefitsSection = ({ data }: { data: any }) => {
+const BenefitsSection = ({ data }: { data: {
+    benefits: string[];
+    benefitsData?: {
+        title?: string;
+        subtitle?: string;
+        description?: string;
+        additionalDescription?: string;
+        conclusion?: string;
+    };
+} }) => {
     return (
         <section id="success-section" className="about-two-area" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', paddingTop: '50px', paddingBottom: '20px' }}>
             <div className="container">

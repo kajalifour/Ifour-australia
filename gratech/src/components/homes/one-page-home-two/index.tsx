@@ -23,7 +23,7 @@ const OnePageHomeTwo = () => {
             <Service />
             <Choose />
             <Team />
-            <Faq style={false} style_2={false} />
+            <Faq style_2={false} />
             <Case />
             <Testimonial style={false} />
             <Blog />

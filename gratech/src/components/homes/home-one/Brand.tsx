@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Image, { StaticImageData } from "next/image"
 import { useEffect, useRef } from 'react';
+import type { Swiper as SwiperType } from "swiper";
 
 import brand_1 from "@/assets/images/brand/brand-image6.webp"
 import brand_2 from "@/assets/images/brand/brand-image7.webp"
@@ -16,7 +17,6 @@ import brand_7 from "@/assets/images/brand/brand-image12.webp"
 import brand_8 from "@/assets/images/brand/brand-image13.webp"
 import brand_9 from "@/assets/images/brand/brand-image14.webp"
 import brand_10 from "@/assets/images/brand/brand-image-15.webp"
-import shape_2 from "@/assets/images/icon/section-title.png"
 
 const brand_data: StaticImageData[] = [brand_1, brand_2, brand_3, brand_4, brand_5, brand_6, brand_7, brand_8, brand_9, brand_10];
 
@@ -42,7 +42,7 @@ const setting = {
 };
 
 const Brand = () => {
-   const swiperRef = useRef<any>(null);
+   const swiperRef = useRef<SwiperType | null>(null);
 
    useEffect(() => {
       const swiper = swiperRef.current;
@@ -86,7 +86,7 @@ const Brand = () => {
                      letterSpacing: '2px',
                      textTransform: 'uppercase'
                   }}>
-                     <span style={{ color: '#0f7a95' }}>Clients</span> <span style={{ color: '#000000' }}>We've Served Thus Far</span>
+                     <span style={{ color: '#0f7a95' }}>Clients</span> <span style={{ color: '#000000' }}>We&apos;ve Served Thus Far</span>
                   </h2>
                </div>
                

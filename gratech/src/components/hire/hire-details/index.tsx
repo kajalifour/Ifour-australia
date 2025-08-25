@@ -26,7 +26,7 @@ interface HireDetailsProps {
 }
 
 // Benefits Section Component
-const BenefitsSection = ({ data }: { data: any }) => {
+const BenefitsSection = ({ data }: { data: HireDetailsProps }) => {
   return (
     <section id="success-section" className="about-two-area" style={{ 
       background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', 
@@ -101,7 +101,7 @@ const BenefitsSection = ({ data }: { data: any }) => {
 };
 
 // CTA Section Component
-const CTASection = ({ data }: { data: any }) => {
+const CTASection = ({ data }: { data: HireDetailsProps }) => {
   return (
     <section className="cta-area pt-96 pb-96" style={{
       background: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',

@@ -1,11 +1,11 @@
 "use client"
-import React from 'react';
+import React, { JSX } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useState, useRef } from "react";
-import Case_data from '@/data/CaseData';
 import project_data from "@/data/ProjectData";
 import bolg_data from "@/data/BlogData";
 import TestimonialForm from "@/components/forms/TestimonialForm"
@@ -20,14 +20,9 @@ import WhyChooseUsSection from '@/components/technologies/WhyChooseUsSection';
 import TechnologiesListSection from '@/components/technologies/TechnologiesListSection';
 
 import shape_1 from "@/assets/images/icon/section-title.png"
-import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
-import about_thumb2 from "@/assets/images/about/about-two-image2.png"
-import shape_2 from "@/assets/images/shape/about-two-dot.png"
-import shape_3 from "@/assets/images/shape/about-circle-helper.png"
-import shape_4 from "@/assets/images/shape/about-two-circle.png"
 import about_thumb3 from "@/assets/images/about/about-image1.jpg"
 import about_thumb4 from "@/assets/images/about/about-image2.png"
-import shape_5 from "@/assets/images/shape/about-line.png"
+
 import shape_6 from "@/assets/images/shape/about-circle.png"
 import blog_image3 from "@/assets/images/blog/blog-image3.jpg"
 
@@ -41,17 +36,7 @@ import client5 from "@/assets/images/brand/brand-image-10.webp"
 // Agile process image
 import agileProcess from "@/assets/images/project/process_iFour.webp"
 
-// Technology images
-const tech_1 = "/assets/images/technologies/tech-image-01.png"
-const tech_2 = "/assets/images/technologies/tech-image-02.png"
-const tech_3 = "/assets/images/technologies/tech-image-03.png"
-const tech_4 = "/assets/images/technologies/tech-image-04.png"
-const tech_5 = "/assets/images/technologies/tech-image-05.png"
-const tech_6 = "/assets/images/technologies/tech-image-06.webp"
-const tech_7 = "/assets/images/technologies/tech-image-07.png"
-const tech_8 = "/assets/images/technologies/tech-image-08.png"
-const tech_9 = "/assets/images/technologies/tech-image-09.png"
-const tech_10 = "/assets/images/technologies/tech-image-10.png"
+
 
 // Media coverage images
 const media_1 = "/assets/images/logo/mediacoverage-1.webp"
@@ -76,10 +61,10 @@ import avatar_2 from "@/assets/images/testimonial/testimonial-image2.png"
 
 interface TestimonialDataType {
    id: number;
-   avatar: any;
+   avatar: string | StaticImageData;
    name: string;
    designation: string;
-   desc: any;
+   desc: string | JSX.Element;
    isVideo?: boolean;
    videoUrl?: string;
 }
@@ -90,8 +75,14 @@ interface ServiceDetailsData {
    description: string;
    benefits: string[];
    services: string[];
-   image?: any;
-   serviceData?: any[];
+   image?: string;
+   serviceData?: Array<{
+      id: number;
+      icon: string;
+      title: string;
+      desc: string;
+      page: string;
+   }>;
    showServiceCards?: boolean;
    showProjects?: boolean;
    showClients?: boolean;
@@ -107,7 +98,7 @@ interface ServiceDetailsData {
       subtitle: string;
       description: string;
       additionalInfo?: string;
-      image?: any;
+      image?: string;
       services?: string[];
    };
    benefitsData?: {
@@ -166,7 +157,7 @@ const testi_data: TestimonialDataType[] = [
       avatar: avatar_1,
       name: "John Schenk",
       designation: "President - John Schenk & Associates, LLC",
-      desc: (<>""</>),
+      desc: <></>,
       isVideo: true,
       videoUrl: "https://www.youtube.com/embed/itCyHAtz9ps"
    },
@@ -175,7 +166,7 @@ const testi_data: TestimonialDataType[] = [
       avatar: avatar_2,
       name: "Gavin Kretzschmar",
       designation: "Dean and Professor ISE-LSE - Kazakhstan & London",
-      desc: (<>""</>),
+      desc: <></>,
       isVideo: true,
       videoUrl: "https://www.youtube.com/embed/KYgzAEupZak"
    },
@@ -184,7 +175,7 @@ const testi_data: TestimonialDataType[] = [
       avatar: avatar_1,
       name: "Carlos Hernandez",
       designation: "Chief Executive Officer - Abstrax Labs",
-      desc: (<>""</>),
+      desc: <></>,
       isVideo: true,
       videoUrl: "https://www.youtube.com/embed/1qgWVsv4yw0"
    },
@@ -346,63 +337,7 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
 // Benefits Section Component
 
 
-// About Section Component
-const AboutSection = ({ data }: { data: ServiceDetailsData }) => {
-    if (!data.showAbout) return null;
-    return (
-        <section id="about-section" className="about-area sub-bg pt-120 pb-120">
-            <div className="about__shape wow slideInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
-                <Image src={shape_5} alt="shape" width={100} height={100} />
-            </div>
-            <div className="container">
-                <div className="row g-4">
-                    <div className="col-xl-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="section-header mb-40">
-                            <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                <Image className="me-1" src={shape_1} alt="icon" />
-                                ABOUT iFour Technolab
-                            </h5>
-                            <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginTop: '70px' }}>
-                                <span style={{ color: '#0f7a95' }}>{data.aboutData?.title}</span> {data.aboutData?.subtitle}
-                            </h2>
-                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                                {data.aboutData?.description}
-                            </p>
-                            {data.aboutData?.services && data.aboutData.services.length > 0 && (
-                                <ul style={{ listStyle: 'none', padding: 0, margin: '20px 0 0 0' }}>
-                                    {data.aboutData.services.map((service, index) => (
-                                        <li key={index} style={{ marginBottom: '12px', color: '#333' }}>
-                                            <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>{index + 1}.</span>
-                                            {service}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                            {data.aboutData?.additionalInfo && (
-                                <p className="wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms" style={{ marginTop: '20px' }}>
-                                    {data.aboutData.additionalInfo}
-                                </p>
-                            )}
-                        </div>
-                    </div>
-                    <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="about__left-item">
-                            <div className="image big-image" style={{ marginTop: '70px' }}>
-                                <Image src={data.aboutData?.image || about_thumb3} alt={data.aboutData?.title || "About Image"} width={400} height={300} />
-                            </div>
-                            <div className="image sm-image" style={{ marginTop: '70px' }}>
-                                <Image src={data.aboutData?.image || about_thumb4} alt={data.aboutData?.title || "About Image"} width={300} height={200} />
-                            </div>
-                            <div className="circle-shape">
-                                <Image src={shape_6} alt="shape" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
+
 
 // Service Cards Section Component
 const ServiceCardsSection = ({ data }: { data: ServiceDetailsData }) => {
@@ -415,7 +350,7 @@ const ServiceCardsSection = ({ data }: { data: ServiceDetailsData }) => {
             </div>
             <div className="container">
                 <Swiper {...setting} modules={[Autoplay, Navigation, Pagination]} className="swiper service__slider">
-                    {data.serviceData.filter((items: any) => items.page === "home_1").map((item: any) => (
+                    {data.serviceData.filter((items: { page: string }) => items.page === "home_1").map((item: { id: number; icon: string; title: string; desc: string; page: string }) => (
                         <SwiperSlide key={item.id} className="swiper-slide">
                             <div className="service__item" style={{
                                 backgroundColor: 'rgba(15, 122, 149, 0.15)',
@@ -454,7 +389,7 @@ const ServiceCardsSection = ({ data }: { data: ServiceDetailsData }) => {
 const ProjectSection = ({ data }: { data: ServiceDetailsData }) => {
     if (!data.showProjects) return null;
     
-    const project_items = project_data.filter((items: any) => items.page === "home_1");
+    const project_items = project_data.filter((items: { page: string }) => items.page === "home_1");
 
     return (
         <section id="project-section" className="service-area pt-120 pb-120" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', paddingTop: '100px', paddingBottom: '100px' }}>
@@ -467,7 +402,7 @@ const ProjectSection = ({ data }: { data: ServiceDetailsData }) => {
                     </div>
                 </div>
                 <div className="row g-4">
-                    {project_items.map((item: any) => (
+                    {project_items.map((item: { id: number; image: string; title: string; desc: string }) => (
                         <div key={item.id} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div className="project__item position-relative overflow-hidden rounded-3 project-hover-container" style={{ height: '300px' }}>
                                 <div className="project__image w-100 h-100">
@@ -501,7 +436,7 @@ const ProjectSection = ({ data }: { data: ServiceDetailsData }) => {
 // Client data
 interface ClientType {
    id: number;
-   logo: any;
+   logo: string | StaticImageData;
    name: string;
 }
 
@@ -573,7 +508,7 @@ const ClientsSection = ({ data }: { data: ServiceDetailsData }) => {
                      <Image className="me-1" src={shape_1} alt="icon" />
                      OUR CLIENTS
                   </h5>
-                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Clients We've Served Thus Far</h2>
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Clients We&apos;ve Served Thus Far</h2>
                </div>
             </div>
             <Swiper {...client_setting} modules={[Autoplay, Navigation, Pagination]} className="swiper clients__slider">
@@ -669,93 +604,7 @@ const AgileApproachSection = ({ data }: { data: ServiceDetailsData }) => {
     );
 };
 
-// Technologies Section Component
-const TechnologiesSection = ({ data }: { data: ServiceDetailsData }) => {
-    if (!data.showTechnologies) return null;
-    
-    const tech_data = [
-        { id: 1, icon: tech_1 },
-        { id: 2, icon: tech_2 },
-        { id: 3, icon: tech_3 },
-        { id: 4, icon: tech_4 },
-        { id: 5, icon: tech_5 },
-        { id: 6, icon: tech_6 },
-        { id: 7, icon: tech_7 },
-        { id: 8, icon: tech_8 },
-        { id: 9, icon: tech_9 },
-        { id: 10, icon: tech_10 }
-    ];
 
-    return (
-        <section className="technologies-area pt-120 pb-80" style={{ backgroundColor: '#ffffff' }}>
-            <div className="container">
-                <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
-                    <div className="section-header">
-                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <Image className="me-1" src={shape_1} alt="icon" />
-                            Tech Talent
-                        </h5>
-                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <span style={{ color: '#0f7a95' }}>Technologies</span> We Utilise
-                        </h2>
-                    </div>
-                </div>
-                
-                <div className="row justify-content-center">
-                    {tech_data.map((tech, index) => (
-                        <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '50%', minWidth: '120px' }}>
-                            <div className="technology__item text-center wow fadeInUp" 
-                                data-wow-delay={`${index * 100}ms`} 
-                                data-wow-duration="1500ms"
-                                style={{
-                                    backgroundColor: 'transparent',
-                                    borderRadius: '0',
-                                    padding: '0px',
-                                    border: 'none',
-                                    transition: 'all 0.3s ease',
-                                    height: '102px',
-                                    transform: 'perspective(1000px) rotateX(0deg)',
-                                    transformStyle: 'preserve-3d',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'perspective(1000px) rotateX(-3deg) translateZ(15px)';
-                                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(15, 122, 149, 0.25)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) translateZ(0px)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}>
-                                <img
-                                    src={tech.icon} 
-                                    alt="technology" 
-                                    style={{ 
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'fill',
-                                        borderRadius: '0',
-                                        transition: 'all 0.3s ease',
-                                        transform: 'translateZ(0px)',
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translateZ(8px) scale(1.05)';
-                                        e.currentTarget.style.filter = 'brightness(1.1) contrast(1.1)';
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = 'translateZ(0px) scale(1)';
-                                        e.currentTarget.style.filter = 'none';
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-};
 
 // Media Coverage Section Component
 const MediaCoverageSection = ({ data }: { data: ServiceDetailsData }) => {
@@ -823,9 +672,11 @@ const MediaCoverageSection = ({ data }: { data: ServiceDetailsData }) => {
                                     e.currentTarget.style.boxShadow = 'none';
                                     e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.05)';
                                 }}>
-                                <img 
+                                <Image 
                                     src={media.icon} 
                                     alt="media coverage" 
+                                    width={120}
+                                    height={60}
                                     style={{ 
                                         width: '100%',
                                         height: '100%',
@@ -851,11 +702,11 @@ const MediaCoverageSection = ({ data }: { data: ServiceDetailsData }) => {
 
 // Testimonial Section Component
 const TestimonialSection = ({ data }: { data: ServiceDetailsData }) => {
-    if (!data.showTestimonials) return null;
-    
     const [isVideoPopupOpen, setIsVideoPopupOpen] = useState(false);
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-    const swiperRef = useRef<any>(null);
+    const swiperRef = useRef<SwiperType | null>(null);
+    
+    if (!data.showTestimonials) return null;
 
     const handleVideoPlay = (videoIndex: number) => {
         setCurrentVideoIndex(videoIndex);
@@ -932,12 +783,12 @@ const TestimonialSection = ({ data }: { data: ServiceDetailsData }) => {
                         <div className="section-header mb-40">
                             <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                                 <Image className="me-1" src={shape_1} alt="icon" />
-                                Client's Talk
+                                Client&apos;s Talk
                             </h5>
                             <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: 'white' }}>
                                 <span style={{ color: '#0f7a95' }}>What Clients Say</span> <span style={{ color: '#000000' }}>About Us</span>
                             </h2>
-                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients' projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don't want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
+                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients&apos; projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don&apos;t want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
                         </div>
                         
                         <Swiper 
@@ -1138,70 +989,7 @@ const TestimonialSection = ({ data }: { data: ServiceDetailsData }) => {
     );
 };
 
-// Technology Partners Section Component
-const TechnologyPartnersSection = ({ data }: { data: ServiceDetailsData }) => {
-    if (!data.showTechnologyPartners) return null;
-    
-    return (
-        <section id="technology-partners-section" className="service-area pt-120 pb-120" style={{ background: 'linear-gradient(135deg, #0f7a95 0%, #0a5a6b 50%, #0f7a95 100%)', paddingTop: '50px', paddingBottom: '50px', marginLeft: '150px', marginRight: '150px', marginTop: '70px', marginBottom: '70px' }}>
-            <div className="container">
-                <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
-                    <div className="section-header">
-                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                            <span style={{ color: '#ffffff' }}>Our</span> Technology Partners
-                        </h2>
-                    </div>
-                </div>
-                
-                <div className="technology-partners__container wow fadeInUp" 
-                    data-wow-delay="300ms" 
-                    data-wow-duration="1500ms"
-                    style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                        padding: '48px 32px',
-                        boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)',
-                        backdropFilter: 'blur(15px)',
-                        transition: 'all 0.3s ease',
-                        textAlign: 'center',
-                        width: '80%',
-                        margin: '0 auto',
-                        cursor: 'pointer',
-                        borderRadius: '10px'
-                    }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.boxShadow = '0 15px 40px rgba(15, 122, 149, 0.25)';
-                        e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.08)';
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.1)';
-                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                    }}>
-                    <img 
-                        src="/assets/images/logo/technology partner.webp" 
-                        alt="Our Technology Partners" 
-                        style={{ 
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            borderRadius: '10px',
-                            filter: 'grayscale(100%)',
-                            transform: 'scale(0.9)',
-                            transition: 'all 0.3s ease'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.filter = 'grayscale(0%) brightness(1.1) contrast(1.1)';
-                            e.currentTarget.style.transform = 'scale(1.1)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.filter = 'grayscale(100%)';
-                            e.currentTarget.style.transform = 'scale(0.9)';
-                        }}
-                    />
-                </div>
-            </div>
-        </section>
-    );
-};
+
 
 // Blog Section Component
 const BlogSection = ({ data }: { data: ServiceDetailsData }) => {

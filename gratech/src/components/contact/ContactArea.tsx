@@ -88,7 +88,7 @@ const ContactArea = () => {
                         </h5>
                         <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Ready to Get
                            Started?</h2>
-                        <p className="wow fadeInUp mt-3" data-wow-delay="400ms" data-wow-duration="1500ms">We're here to answer your questions, understand your vision, and help you take the next step. Let’s create something impactful together.</p>
+                        <p className="wow fadeInUp mt-3" data-wow-delay="400ms" data-wow-duration="1500ms">We&apos;re here to answer your questions, understand your vision, and help you take the next step. Let&apos;s create something impactful together.</p>
                      </div>
                      <div className="contact__form">
                         <ContactForm />

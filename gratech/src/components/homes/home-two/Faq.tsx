@@ -15,11 +15,10 @@ interface DataType {
 };
 
 interface StyleType {
-   style: boolean;
    style_2: boolean;
 }
 
-const Faq = ({ style, style_2 }: StyleType) => {
+const Faq = ({ style_2 }: StyleType) => {
 
    const [faqData, setFaqData] = useState<DataType[]>([]);
 
@@ -31,7 +30,7 @@ const Faq = ({ style, style_2 }: StyleType) => {
          showAnswer: index === 0,
       }));
       setFaqData(updatedFaq);
-   }, []);
+   }, [faq_data]);
 
    const toggleAnswer = (faqId: number) => {
       setFaqData((prevFaqData) =>

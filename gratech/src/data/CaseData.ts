@@ -4,10 +4,6 @@ import Case_1 from "@/assets/images/case/case-image1.jpg"
 import Case_2 from "@/assets/images/case/case-image2.jpg"
 import Case_3 from "@/assets/images/case/case-image3.jpg"
 import Case_4 from "@/assets/images/case/case-image4.jpg"
-import Case2_1 from "@/assets/images/case/case-two-image1.jpg"
-import Case2_2 from "@/assets/images/case/case-two-image2.jpg"
-import Case2_3 from "@/assets/images/case/case-two-image3.jpg"
-import Case2_4 from "@/assets/images/case/case-two-image4.jpg"
 
 interface DataType {
    id: number;

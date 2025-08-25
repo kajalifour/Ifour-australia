@@ -25,7 +25,7 @@ const DarkHome = () => {
             <Service />
             <Choose />
             <Team />
-            <Faq style={false} style_2={true} />
+            <Faq style_2={true} />
             <Case />
             <Testimonial style={true} />
             <Blog />

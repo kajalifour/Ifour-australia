@@ -9,7 +9,7 @@ const FaqMain = () => {
          <HeaderOne />
          <main>
             <BreadCrumb sub_title="Faq" title="Faq" />
-            <Faq style={true} style_2={false} />
+            <Faq style_2={false} />
          </main>
          <FooterOne />
       </>

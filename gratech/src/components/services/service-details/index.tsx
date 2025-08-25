@@ -4,15 +4,10 @@ import BreadCrumb from "@/components/common/BreadCrumb";
 import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import ServiceDetailsArea from '../ServiceDetailsArea';
-import ServicesGrid from '../ServicesGrid';
 import serviceData from "@/data/ServiceData";
 import Image from "next/image";
 import Link from "next/link";
-import about_thumb3 from "@/assets/images/about/about-image1.jpg";
-import about_thumb4 from "@/assets/images/about/about-image2.png";
 import shape_1 from "@/assets/images/icon/section-title.png";
-import shape_5 from "@/assets/images/shape/about-line.png";
-import shape_6 from "@/assets/images/shape/about-circle.png";
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg";
 import about_thumb2 from "@/assets/images/about/about-two-image2.png";
 import shape_2 from "@/assets/images/shape/about-two-dot.png";
@@ -79,7 +74,7 @@ const serviceDetailsData = {
 };
 
 // Benefits Section Component
-const BenefitsSection = ({ data }: { data: any }) => {
+const BenefitsSection = ({ data }: { data: typeof serviceDetailsData }) => {
     return (
         <section id="success-section" className="about-two-area" style={{ 
             background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', 

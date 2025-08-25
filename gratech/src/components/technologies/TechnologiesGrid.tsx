@@ -73,7 +73,7 @@ const TechnologiesGrid: React.FC<TechnologiesGridProps> = ({ items = defaultItem
                                         <div style={{ width: "100%", height: "120px", background: "linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderRadius: 0, position: "relative", overflow: "hidden", padding: "12px" }}>
                                             {item.icon && (
                                                 // Use regular img for public assets path
-                                                <img src={item.icon} alt={`${item.title} icon`} style={{ width: 48, height: 48, objectFit: "contain", marginBottom: 8 }} />
+                                                <Image src={item.icon} alt={`${item.title} icon`} width={48} height={48} style={{ objectFit: "contain", marginBottom: 8 }} />
                                             )}
                                             <h4 style={{ color: "#ffffff", fontSize: "clamp(16px, 2.5vw, 20px)", fontWeight: 600, margin: 0, textAlign: "center", textShadow: "0 2px 4px rgba(0,0,0,0.3)" }}>{item.title}</h4>
                                         </div>

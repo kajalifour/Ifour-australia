@@ -18,7 +18,6 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <link rel="icon" href="/favicon.png" sizes="any" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" />
       </head>
       <body suppressHydrationWarning={true}>
         {children}

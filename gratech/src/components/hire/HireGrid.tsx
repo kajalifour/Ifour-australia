@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import Image, { StaticImageData } from 'next/image';
+
 import icon_1 from "@/assets/images/icon/service-icon1.png";
 import icon_2 from "@/assets/images/icon/service-icon2.png";
 import icon_3 from "@/assets/images/icon/service-icon3.png";
@@ -12,20 +12,19 @@ import shape_2 from "@/assets/images/shape/service-two-shape-right.png";
 // Hire-specific data structure matching the service grid design
 interface HireItem {
     id: number;
-    icon: any;
+    icon: string | StaticImageData;
     title: string;
     desc: string;
 }
 
 // Props interface for HireGrid
 interface HireGridProps {
-    hireData?: any[]; // Hire data from the page
+    hireData?: HireItem[]; // Hire data from the page
     services?: string[]; // Services array from the page
-    title?: string; // Custom title for the section
     showTitle?: boolean; // Control whether to show the title section
 }
 
-const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring Services", showTitle = true }) => {
+const HireGrid: React.FC<HireGridProps> = ({ services, showTitle = true }) => {
     // Default hire data if none provided
     const defaultHireData: HireItem[] = [
         {
@@ -425,3 +424,5 @@ const HireGrid: React.FC<HireGridProps> = ({ hireData, services, title = "Hiring
 };
 
 export default HireGrid;
+
+

@@ -43,9 +43,11 @@ const TechnologyPartners = () => {
                   e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.1)';
                }}>
                
-               <img 
+               <Image 
                   src={partner_image} 
                   alt="Our Technology Partners" 
+                  width={800}
+                  height={400}
                   style={{ 
                      maxWidth: '100%',
                      height: 'auto',

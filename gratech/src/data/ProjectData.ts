@@ -10,7 +10,7 @@ const project_data: ProjectDataType[] = [
    {
       id: 1,
       page: "home_1",
-      image: "/assets/images/project/project-image-01.webp",
+      image: "/assets/images/brand/project-image-01.webp",
       title: "AI Healthcare Monitoring System",
       desc: "AI system that automates manual diagnostics and removes unpredictability from the healthcare"
    },

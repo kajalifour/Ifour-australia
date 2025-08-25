@@ -2,16 +2,12 @@
 import { useState } from "react";
 import VideoPopup from "@/modals/VideoPopup";
 import Image from "next/image"
-import Link from "next/link"
 
 import about_thumb1 from "@/assets/images/about/about-image1.jpg"
 import about_thumb2 from "@/assets/images/about/about-image2.png"
 import shape_1 from "@/assets/images/shape/about-line.png"
 import shape_2 from "@/assets/images/shape/about-circle.png"
 import shape_3 from "@/assets/images/icon/section-title.png"
-import icon_1 from "@/assets/images/icon/about-icon1.png"
-import icon_2 from "@/assets/images/icon/about-icon2.png"
-import info from "@/assets/images/about/about-info.png"
 
 const About = () => {
    const [isVideoOpen, setIsVideoOpen] = useState(false);

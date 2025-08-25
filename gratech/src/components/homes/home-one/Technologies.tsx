@@ -1,6 +1,4 @@
 "use client"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import Image from "next/image"
 
 const tech_1 = "/assets/images/technologies/tech-image-01.png"
@@ -28,45 +26,7 @@ const tech_data = [
   { id: 10, icon: tech_10 }
 ];
 
-const setting = {
-   slidesPerView: 2,
-   spaceBetween: 20,
-   loop: true,
-   autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-   },
-   pagination: {
-      el: ".technologies__dot",
-      clickable: true,
-   },
-   navigation: {
-      nextEl: ".technologies__arry-next",
-      prevEl: ".technologies__arry-prev",
-   },
-   breakpoints: {
-      480: {
-         slidesPerView: 2,
-         spaceBetween: 20,
-      },
-      576: {
-         slidesPerView: 3,
-         spaceBetween: 25,
-      },
-      768: {
-         slidesPerView: 3,
-         spaceBetween: 30,
-      },
-      992: {
-         slidesPerView: 4,
-         spaceBetween: 30,
-      },
-      1200: {
-         slidesPerView: 4,
-         spaceBetween: 30,
-      },
-   },
-};
+
 
 const Technologies = () => {
    return (
@@ -116,9 +76,11 @@ const Technologies = () => {
                               e.currentTarget.style.boxShadow = 'none';
                            e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
                            }}>
-                           <img
+                           <Image
                               src={tech.icon} 
                               alt="technology" 
+                              width={120}
+                              height={60}
                               style={{ 
                                  width: '100%',
                                  height: '100%',

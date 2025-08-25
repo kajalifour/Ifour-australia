@@ -82,9 +82,11 @@ const MediaCoverage = () => {
                            e.currentTarget.style.boxShadow = 'none';
                            e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
                         }}>
-                        <img 
+                        <Image 
                            src={media.icon} 
                            alt="media coverage" 
+                           width={120}
+                           height={60}
                            style={{ 
                               width: '100%',
                               height: '100%',

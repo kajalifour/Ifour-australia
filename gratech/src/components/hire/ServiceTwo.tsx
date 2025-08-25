@@ -2,9 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import icon_1 from "@/assets/images/icon/service-icon1.png";
-import icon_2 from "@/assets/images/icon/service-icon2.png";
-import icon_3 from "@/assets/images/icon/service-icon3.png";
+
 import shape_1 from "@/assets/images/shape/service-two-shape-left.png";
 import shape_2 from "@/assets/images/shape/service-two-shape-right.png";
 

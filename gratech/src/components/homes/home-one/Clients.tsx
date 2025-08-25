@@ -2,7 +2,6 @@ import Image from "next/image"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
-import shape_1 from "@/assets/images/shape/service-bg-shape.png"
 import shape_2 from "@/assets/images/icon/section-title.png"
 
 // Import client logos - you can replace these with actual client logos
@@ -14,7 +13,7 @@ import client5 from "@/assets/images/brand/brand-image-10.webp"
 
 interface ClientType {
    id: number;
-   logo: any;
+   logo: typeof client1;
    name: string;
 }
 
@@ -85,7 +84,7 @@ const Clients = () => {
                      <Image className="me-1" src={shape_2} alt="icon" />
                      OUR CLIENTS
                   </h5>
-                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Clients We've Served Thus Far</h2>
+                  <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Clients We&apos;ve Served Thus Far</h2>
                </div>
 
             </div>

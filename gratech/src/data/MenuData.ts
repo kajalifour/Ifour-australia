@@ -1,10 +1,5 @@
 import { StaticImageData } from "next/image";
 
-import img_1 from "@/assets/images/menu/home1-image.jpg"
-import img_2 from "@/assets/images/menu/home2-image.jpg"
-import img_3 from "@/assets/images/menu/home3-image.jpg"
-import img_4 from "@/assets/images/menu/home4-image.jpg"
-
 interface MenuItem {
     id: number;
     title: string;

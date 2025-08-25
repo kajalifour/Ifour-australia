@@ -6,7 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 import shape_1 from "@/assets/images/shape/service-bg-shape.png"
-import shape_2 from "@/assets/images/icon/section-title.png"
 
 const setting = {
    slidesPerView: 3,
@@ -39,7 +38,7 @@ const Service = () => {
                      <span style={{ color: '#0f7a95' }}>Our Range of Software Development Services</span> to Achieve Your Goals
                   </h2>
                   <p className="wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ marginTop: '20px', lineHeight: '1.6' }}>
-                     iFour Technolab has been helping businesses embrace innovation and the full potential of technology since its inception. No matter the requirements, whether it's developing custom software from scratch, reengineering an existing legacy system, or integrating new technologies into routine workflows, trust iFour Technolab to deliver. Our services include the following:
+                     iFour Technolab has been helping businesses embrace innovation and the full potential of technology since its inception. No matter the requirements, whether it&apos;s developing custom software from scratch, reengineering an existing legacy system, or integrating new technologies into routine workflows, trust iFour Technolab to deliver. Our services include the following:
                   </p>
                </div>
             </div>

@@ -1,9 +1,6 @@
 "use client"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
 import Image from "next/image";
 import Link from "next/link";
-import Case_data from '@/data/CaseData';
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
@@ -16,34 +13,7 @@ import about_thumb4 from "@/assets/images/about/about-image2.png"
 import shape_5 from "@/assets/images/shape/about-line.png"
 import shape_6 from "@/assets/images/shape/about-circle.png"
 
-const setting = {
-   slidesPerView: 4,
-   spaceBetween: 24,
-   loop: true,
-   autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-   },
-   pagination: {
-      el: ".case__dot",
-      clickable: true,
-   },
-   navigation: false,
-   breakpoints: {
-      '1440': {
-         slidesPerView: 4,
-      },
-      '992': {
-         slidesPerView: 3,
-      },
-      '575': {
-         slidesPerView: 2,
-      },
-      '320': {
-         slidesPerView: 1,
-      },
-   },
-};
+
 
 const Case = () => {
    return (
@@ -118,7 +88,7 @@ const Case = () => {
                      </div>
                      <div className="about__info mt-50 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                         <Link href="/about" className="btn-one">
-                           Let's Get Started <i className="fa-regular fa-arrow-right-long"></i>
+                           Let&apos;s Get Started <i className="fa-regular fa-arrow-right-long"></i>
                         </Link>
                      </div>
                   </div>

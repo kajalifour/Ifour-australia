@@ -1,8 +1,7 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import Image, { StaticImageData } from 'next/image';
 import icon_1 from "@/assets/images/icon/service-icon1.png";
 import icon_2 from "@/assets/images/icon/service-icon2.png";
 import icon_3 from "@/assets/images/icon/service-icon3.png";
@@ -14,15 +13,15 @@ import shape_2 from "@/assets/images/shape/service-two-shape-right.png";
 // Service data structure matching the home-two template
 interface ServiceItem {
     id: number;
-    thumb?: any;
-    icon: any;
+    thumb?: StaticImageData;
+    icon: StaticImageData;
     title: string;
     desc: string;
 }
 
 // Props interface for ServicesGrid
 interface ServicesGridProps {
-    serviceData?: any[]; // Service data from the page
+    serviceData?: ServiceItem[]; // Service data from the page
     services?: string[]; // Services array from the page
 }
 
@@ -126,7 +125,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
     }
     // If serviceData is provided and has items, use it (LOWER PRIORITY)
     else if (serviceData && serviceData.length > 0) {
-        servicesToDisplay = serviceData.slice(0, 6).map((item: any, index: number) => ({
+        servicesToDisplay = serviceData.slice(0, 6).map((item: ServiceItem, index: number) => ({
             id: item.id || index + 1,
             icon: [icon_1, icon_2, icon_3][index % 3], // Cycle through available icons
             title: item.title || `Service ${index + 1}`,
@@ -177,7 +176,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ serviceData, services }) =>
                                     d="M3 6.00006C3 2.96249 5.46243 0.500061 8.5 0.500061H11.5C14.5376 0.500061 17 2.96249 17 6.00006C17 4.61935 15.2091 3.50006 13 3.50006C3 4.61935 3 6.00006ZM17 6.00006C17 9.03763 14.5376 11.5001 11.5 11.5001H8.5C5.46243 11.5001 3 9.03763 3 6.00006C3 7.38077 4.79086 8.50006 7 8.50006H13C15.2091 8.50006 17 7.38077 17 6.00006ZM3 10.0001V2.00006V10.0001ZM17 2.00006V10.0001V2.00006Z"
                                     fill="#0f7a95" mask="url(#path-2-inside-1_670_477)" />
                             </svg>
-                            SERVICES WE'RE OFFERING
+                            SERVICES WE&apos;RE OFFERING
                         </h5>
                         <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
                             fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',

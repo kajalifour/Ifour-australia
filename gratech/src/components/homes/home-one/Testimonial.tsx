@@ -4,6 +4,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import TestimonialForm from "@/components/forms/TestimonialForm"
 import Image, { StaticImageData } from "next/image"
 import { JSX, useState, useRef } from "react";
+import type { Swiper as SwiperType } from "swiper";
 
 import shape_1 from "@/assets/images/icon/section-title.png"
 import avatar_1 from "@/assets/images/testimonial/testimonial-image1.png"
@@ -25,7 +26,7 @@ const testi_data: DataType[] = [
       avatar: avatar_1,
       name: "iFour Technolab Client",
       designation: "Client Testimonial",
-      desc: (<>""</>),
+      desc: (<>iFour Technolab delivered exceptional results for our project. Their team demonstrated outstanding technical expertise and professional communication throughout the development process.</>),
       isVideo: true,
       videoUrl: "https://www.youtube.com/embed/itCyHAtz9ps"
    },
@@ -34,7 +35,7 @@ const testi_data: DataType[] = [
       avatar: avatar_2,
       name: "iFour Technolab Client",
       designation: "Client Testimonial",
-      desc: (<>""</>),
+      desc: (<>Working with iFour Technolab was a game-changer for our business. Their innovative solutions and attention to detail exceeded our expectations.</>),
       isVideo: true,
       videoUrl: "https://www.youtube.com/embed/KYgzAEupZak"
    },
@@ -43,7 +44,7 @@ const testi_data: DataType[] = [
       avatar: avatar_1,
       name: "iFour Technolab Client",
       designation: "Client Testimonial",
-      desc: (<>""</>),
+      desc: (<>The quality of work delivered by iFour Technolab is outstanding. They transformed our vision into reality with precision and creativity.</>),
       isVideo: true,
       videoUrl: "https://www.youtube.com/embed/1qgWVsv4yw0"
    },
@@ -52,7 +53,7 @@ const testi_data: DataType[] = [
       avatar: avatar_2,
       name: "iFour Technolab Client",
       designation: "Client Testimonial",
-      desc: (<>""</>),
+      desc: (<>iFour Technolab consistently delivers high-quality solutions. Their expertise in modern technologies helped us achieve remarkable results.</>),
       isVideo: true,
       videoUrl: "https://www.youtube.com/embed/Vh5hzqowxzk"
    },
@@ -61,7 +62,7 @@ const testi_data: DataType[] = [
       avatar: avatar_1,
       name: "iFour Technolab Client",
       designation: "Client Testimonial",
-      desc: (<>""</>),
+      desc: (<>Partnering with iFour Technolab was the best decision for our digital transformation. Their team is highly skilled and professional.</>),
       isVideo: true,
       videoUrl: "https://www.youtube.com/embed/cFtsaIihO80"
    },
@@ -88,7 +89,7 @@ const setting = {
 const Testimonial = () => {
    const [isVideoPopupOpen, setIsVideoPopupOpen] = useState(false);
    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-   const swiperRef = useRef<any>(null);
+   const swiperRef = useRef<SwiperType | null>(null);
 
    const handleVideoPlay = (videoIndex: number) => {
       setCurrentVideoIndex(videoIndex);
@@ -140,12 +141,12 @@ const Testimonial = () => {
                   <div className="section-header mb-40">
                      <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <Image className="me-1" src={shape_1} alt="icon" />
-                        Client's Talk
+                        Client&apos;s Talk
                      </h5>
                      <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: 'white' }}>
                         <span style={{ color: '#0f7a95' }}>What Clients Say</span> <span style={{ color: '#000000' }}>About Us</span>
                      </h2>
-                     <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients' projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don't want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
+                     <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients&apos; projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don&apos;t want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
                   </div>
                   <Swiper 
                      {...setting} 

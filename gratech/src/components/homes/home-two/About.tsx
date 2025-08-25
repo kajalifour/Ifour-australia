@@ -81,7 +81,7 @@ const About = ({style}:StyleType) => {
                   </div>
                   
                   <div className="about__info mt-50 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                     <Link href="/about" className="btn-one">Let's Start <i
+                     <Link href="/about" className="btn-one">Let&apos;s Start <i
                         className="fa-regular fa-arrow-right-long"></i></Link>
                      <Image src={style?shape_6:shape_5} alt="singature" />
                   </div>
