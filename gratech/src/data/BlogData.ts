@@ -7,6 +7,13 @@ import blog_4 from "@/assets/images/blog/blog-image4.jpg"
 import blog_5 from "@/assets/images/blog/blog-image5.jpg"
 import blog_6 from "@/assets/images/blog/blog-image6.jpg"
 
+// New blog images
+import blogimage_1 from "@/assets/images/blog/blogimage-1.webp"
+import blogimage_2 from "@/assets/images/blog/blogimage-2.webp"
+import blogimage_3 from "@/assets/images/blog/blogimage-3.webp"
+import blogimage_4 from "@/assets/images/blog/blogimage-4.webp"
+import blogimage_5 from "@/assets/images/blog/blogimage-5.webp"
+
 import blog2_1 from "@/assets/images/blog/blog-two-list-image1.jpg"
 import blog2_2 from "@/assets/images/blog/blog-two-list-image2.jpg"
 
@@ -64,7 +71,7 @@ const bolg_data: DataType[] = [
       thumb: blog2_1,
       date: 15,
       month: "Dec",
-      title: "What’s the Holding Back the It Solution",
+      title: "What's the Holding Back the It Solution",
       category: "Technology",
       name: "Haven Richards",
       avatar: avatar_2,
@@ -81,46 +88,51 @@ const bolg_data: DataType[] = [
       avatar: avatar_2,
    },
 
-   // blog_1
+   // blog_1 - Updated with new images and descriptions
    {
       id: 1,
       page: "blog_1",
-      thumb: blog_1,
+      thumb: blogimage_1,
       date: 10,
       month: "Dec",
-      title: "Necessity May Give us Best Virtual Court"
+      title: "",
+      desc: "How Much Does It Cost to Hire Node JS Developers In 2025?"
    },
    {
       id: 2,
       page: "blog_1",
-      thumb: blog_2,
+      thumb: blogimage_2,
       date: 12,
       month: "Dec",
-      title: "Top 10 Benefits of Mobile Apps for Business"
+      title: "Top 10 Benefits of Mobile Apps for Business",
+      desc: "Explore the top benefits that mobile applications bring to modern businesses. From increased customer engagement to improved operational efficiency."
    },
    {
       id: 3,
       page: "blog_1",
-      thumb: blog_3,
+      thumb: blogimage_3,
       date: 15,
       month: "Dec",
-      title: "Easy and Most Powerful Server and Platform"
+      title: "How Much Does It Cost to Hire Node JS Developers In 2025?",
+      desc: "Get insights into the current market rates for hiring Node.js developers. Understand the factors that influence development costs and make informed decisions."
    },
    {
       id: 4,
       page: "blog_1",
-      thumb: blog_4,
+      thumb: blogimage_4,
       date: 22,
       month: "Dec",
-      title: "Keep Your Business Safe & Ensure High Availability."
+      title: "Web App vs Desktop App: Which One Should You Choose?",
+      desc: "Compare web applications and desktop applications to determine the best choice for your business needs. Understand the pros and cons of each approach."
    },
    {
       id: 5,
       page: "blog_1",
-      thumb: blog_5,
+      thumb: blogimage_5,
       date: 16,
       month: "Dec",
-      title: "Powerful Server and Platform"
+      title: "Best Practices to Secure .NET Application",
+      desc: "Learn essential security practices for .NET applications. Implement robust authentication, authorization, and data protection measures."
    },
    {
       id: 6,
@@ -128,7 +140,7 @@ const bolg_data: DataType[] = [
       thumb: blog_6,
       date: 19,
       month: "Dec",
-      title: "What’s the Holding Back the It Solution"
+      title: "What's the Holding Back the It Solution"
    },
    {
       id: 7,
@@ -152,7 +164,7 @@ const bolg_data: DataType[] = [
       thumb: blog_6,
       date: 19,
       month: "Dec",
-      title: "What’s the Holding Back the It Solution"
+      title: "What's the Holding Back the It Solution"
    },
 
    // blog_1

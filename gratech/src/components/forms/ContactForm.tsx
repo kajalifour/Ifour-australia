@@ -1,5 +1,6 @@
 "use client"
-import { toast } from 'react-toastify';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -9,6 +10,7 @@ import { useRef } from 'react';
 interface FormData {
    user_name: string;
    user_email: string;
+   user_phone: string;
    message: string;
 }
 
@@ -16,6 +18,7 @@ const schema = yup
    .object({
       user_name: yup.string().required().label("Name"),
       user_email: yup.string().required().email().label("Email"),
+      user_phone: yup.string().required().label("Phone Number"),
       message: yup.string().required().label("Message"),
    })
    .required();
@@ -23,6 +26,8 @@ const schema = yup
 const ContactForm = () => {
 
    const { register, handleSubmit, reset, formState: { errors }, } = useForm<FormData>({ resolver: yupResolver(schema), });
+   const [submitted, setSubmitted] = useState<"idle" | "success" | "error">("idle");
+   const router = useRouter();
 
    const form = useRef<HTMLFormElement>(null);
 
@@ -31,14 +36,14 @@ const ContactForm = () => {
          emailjs.sendForm('service_6y6yqwk', 'template_l7vv1mg',
             form.current, '0Nl20_gGiZ8xlkEt9')
             .then(() => {
-               toast.success('Message sent successfully', { position: 'top-center' });
                reset();
+               router.push('/thank-you');
             })
             .catch(() => {
-               toast.error('Failed to send message. Please try again.', { position: 'top-center' });
+               setSubmitted('error');
             });
       } else {
-         toast.error('Form reference is null.', { position: 'top-center' });
+         setSubmitted('error');
       }
    };
 
@@ -56,6 +61,14 @@ const ContactForm = () => {
                <input className="bg-transparent bor" id="email" {...register("user_email")} type="email"
                   placeholder="Your Email" />
                <p className="form_error">{errors.user_email?.message}</p>
+            </div>
+         </div>
+         <div className="row">
+            <div className="col-12">
+               <label htmlFor="phone">Phone Number*</label>
+               <input className="bg-transparent bor" id="phone" {...register("user_phone")} type="tel"
+                  placeholder="Your Phone Number" />
+               <p className="form_error">{errors.user_phone?.message}</p>
             </div>
          </div>
          <div className="text-area">

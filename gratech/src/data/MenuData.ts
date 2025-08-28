@@ -68,7 +68,7 @@ const menu_data: MenuItem[] = [
     {
         id: 2,
         title: "Services",
-        link: "/#",
+        link: "#",
         has_dropdown: true,
         sub_menus: [
             { link: "/custom-software-development-company", title: "Custom Software Development" },
@@ -115,7 +115,7 @@ const menu_data: MenuItem[] = [
     {
         id: 5,
         title: "Showcase",
-        link: "case-study",
+        link: "/case-study",
         has_dropdown: false,
        
     },
@@ -124,12 +124,6 @@ const menu_data: MenuItem[] = [
         has_dropdown: false,
         title: "Blog",
         link: "/blog",
-    },
-     {
-        id: 7,
-        has_dropdown: false,
-        title: "Contact Us",
-        link: "/contact",
     },
 ];
 

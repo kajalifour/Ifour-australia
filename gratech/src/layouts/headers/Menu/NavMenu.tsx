@@ -21,7 +21,7 @@ const NavMenu = () => {
             {menu_data.filter(menu => !menu.hidden).map((menu, i) => (
                 menu.mega_munu ? (
                     <li key={menu.id} className="has-megamenu">
-                        <Link href={menu.link}>{menu.title}</Link>
+                        <Link href={menu.link}>{menu.title} <i className="fa-solid fa-angle-down" style={{ marginLeft: 6 }}></i></Link>
                         <ul className="sub-menu mega-menu menu-image">
                             <li>
                                 {menu.mega_munu.map((item) => (
@@ -40,6 +40,7 @@ const NavMenu = () => {
                     <li key={menu.id}>
                         <Link href={menu.link} className={`${(isMenuItemActive(menu.link) || (menu.sub_menus && menu.sub_menus.some((sub_m) => sub_m.link && isSubMenuItemActive(sub_m.link)))) ? "active" : ""}`}>
                             {menu.title}
+                            {menu.sub_menus && <i className="fa-solid fa-angle-down" style={{ marginLeft: 6 }}></i>}
                         </Link>
 
                         {menu.sub_menus && (

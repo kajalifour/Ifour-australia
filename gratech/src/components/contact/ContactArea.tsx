@@ -15,7 +15,7 @@ const ContactArea = () => {
                                              <p className="text-white" style={{ fontSize: '1.15em', marginBottom: '40px', lineHeight: '1.4' }}>contact our Melbourne office:</p>
                                            <ul className="mt-40 mb-40" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '30px', flexDirection: 'row' }}>
-                             <i style={{ flexShrink: 0, display: 'flex', alignItems: 'center', marginTop: '5px' }}>
+                             <i style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '5px' }}>
                                 <svg width="40" height="40" viewBox="0 0 30 30" fill="none"
                                    xmlns="http://www.w3.org/2000/svg">
                                    <path
@@ -32,7 +32,7 @@ const ContactArea = () => {
                              </div>
                           </li>
                                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '30px', flexDirection: 'row' }}>
-                             <i style={{ flexShrink: 0, display: 'flex', alignItems: 'center', position: 'relative', marginTop: '5px' }}>
+                             <i style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', marginTop: '5px' }}>
                                                                  <svg width="40" height="40" viewBox="0 0 30 30" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -52,7 +52,7 @@ const ContactArea = () => {
                              </div>
                           </li>
                                                    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '30px', flexDirection: 'row' }}>
-                             <i style={{ flexShrink: 0, display: 'flex', alignItems: 'center', position: 'relative', marginTop: '5px' }}>
+                             <i style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', marginTop: '5px' }}>
                                                                  <svg width="40" height="40" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" clipRule="evenodd"

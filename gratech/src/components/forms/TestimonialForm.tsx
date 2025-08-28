@@ -25,7 +25,7 @@ const TestimonialForm = () => {
                <textarea id="massage" placeholder="Write Message"></textarea>
             </div>
          </div>
-         <button>Sand Message</button>
+         <button>Send Message</button>
       </form>
    )
 }

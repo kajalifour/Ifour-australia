@@ -171,14 +171,53 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
             <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                <Link href="/">Home</Link>
                <span><i className="fa-regular fa-angles-right mx-2"></i></span>
-               {title.startsWith("Hire ") ? (
-                  // Hire style: Home › Hire Developers › Hire Angular Developers
+               {title === "Our Showcase" ? (
+                  // Simple path for showcase: Home > Our Showcase
+                  <>
+                     <span>Our Showcase</span>
+                  </>
+               ) : title.startsWith("Hire ") ? (
+                  // Hire style: Home > Hire Developers > Hire Angular Developers
                   <>
                      <span>Hire Developers</span>
                      <span><i className="fa-regular fa-angles-right mx-2"></i>{title}</span>
                   </>
+               ) : title === "Life Cycle Assessment for Packaging Industry" ? (
+                  // Case study style: Home > case-study > life-cycle-assessment-for-packaging-industry
+                  <>
+                     <span>case-study</span>
+                     <span><i className="fa-regular fa-angles-right mx-2"></i>life-cycle-assessment-for-packaging-industry</span>
+                  </>
+               ) : title === "Life Cycle Assessment Software" ? (
+                  // Case study style: Home > case-study > life-cycle-assessment-software
+                  <>
+                     <span>case-study</span>
+                     <span><i className="fa-regular fa-angles-right mx-2"></i>life-cycle-assessment-software</span>
+                  </>
+               ) : title === "Airport Parking Booking System" ? (
+                  // Case study style: Home > case-study > airport-parking-operator-booking-system
+                  <>
+                     <span>case-study</span>
+                     <span><i className="fa-regular fa-angles-right mx-2"></i>airport-parking-operator-booking-system</span>
+                  </>
+               ) : title === "AI Healthcare Monitoring System" ? (
+                  // Case study style: Home > case-study > ai-healthcare-monitoring-system
+                  <>
+                     <span>case-study</span>
+                     <span><i className="fa-regular fa-angles-right mx-2"></i>ai-healthcare-monitoring-system</span>
+                  </>
+               ) : title === "Contact Us" ? (
+                  // Contact page: Home > Contact Us
+                  <>
+                     <span>Contact Us</span>
+                  </>
+               ) : title === "404" ? (
+                  // 404 page: Home > 404
+                  <>
+                     <span>404</span>
+                  </>
                ) : (
-                  // Technologies style: Home › Technologies › Angular Development Company
+                  // Technologies style: Home > Technologies > Angular Development Company
                   <>
                      <span>Technologies</span>
                      <span><i className="fa-regular fa-angles-right mx-2"></i>{title}</span>

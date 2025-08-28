@@ -1,15 +1,35 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const NewsletterSection = () => {
 	const [email, setEmail] = useState('');
+	const [emailError, setEmailError] = useState<string>('');
+	const [submitted, setSubmitted] = useState<'idle' | 'success' | 'error'>('idle');
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log('Newsletter subscription:', email);
-		setEmail('');
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+		if (!emailRegex.test(email.trim())) {
+			setEmailError('Please enter a valid email address.');
+			return;
+		}
+		try {
+			console.log('Newsletter subscription:', email);
+			setEmail('');
+			setEmailError('');
+			setSubmitted('success');
+		} catch {
+			setSubmitted('error');
+		}
 	};
+
+	useEffect(() => {
+		if (submitted !== 'idle') {
+			const timer = setTimeout(() => setSubmitted('idle'), 4000);
+			return () => clearTimeout(timer);
+		}
+	}, [submitted]);
 
 	const ACCENT = '#0f7a95';
 	const INPUT_HEIGHT = 54; // keep input/button heights in sync
@@ -39,59 +59,82 @@ const NewsletterSection = () => {
 						</h3>
 					</div>
 					<div className="col-lg-6">
-						{/* right aligned form with max width */}
+						{/* right aligned form with max width or confirmation box */}
 						<div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-							<form onSubmit={handleSubmit} style={{ width: '100%', maxWidth: 560 }}>
-								<div style={{ display: 'flex', alignItems: 'center' }}>
-									{/* Input pill - right corners squared to merge */}
-									<input
-										type="email"
-										value={email}
-										onChange={(e) => setEmail(e.target.value)}
-										placeholder="Enter your email here"
-										required
-										style={{
-											height: INPUT_HEIGHT,
-											flex: 1,
-											padding: '0 18px',
-											border: `2px solid ${ACCENT}`,
-											borderTopLeftRadius: RADIUS,
-											borderBottomLeftRadius: RADIUS,
-											borderTopRightRadius: 0,
-											borderBottomRightRadius: 0,
-											outline: 'none',
-											backgroundColor: '#fff',
-											color: '#333',
-											boxShadow: '0 6px 18px rgba(15, 122, 149, 0.12)'
-										}}
-									/>
-									{/* Button - shares border, no left border to avoid double line */}
-									<button
-										type="submit"
-										style={{
-											height: INPUT_HEIGHT,
-											padding: '0 28px',
-											backgroundColor: ACCENT,
-											color: '#fff',
-											border: `2px solid ${ACCENT}`,
-											borderLeft: 'none',
-											borderTopRightRadius: RADIUS,
-											borderBottomRightRadius: RADIUS,
-											borderTopLeftRadius: 0,
-											borderBottomLeftRadius: 0,
-											fontSize: '1rem',
-											fontWeight: 700,
-											whiteSpace: 'nowrap',
-											cursor: 'pointer',
-											boxShadow: '0 6px 18px rgba(15, 122, 149, 0.18)'
-										}}
-										onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0a5a6a')}
-										onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = ACCENT)}
-									>
-										Send now
-									</button>
+							{submitted === 'success' ? (
+								<div style={{
+									width: '100%',
+									maxWidth: 560,
+									background: '#e6e6e6',
+									borderRadius: 8,
+									padding: '14px 18px',
+									minHeight: INPUT_HEIGHT,
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+									color: '#111',
+									fontWeight: 600
+								}}>
+									Thank you! Your submission has been received!
 								</div>
-							</form>
+							) : (
+								<form onSubmit={handleSubmit} style={{ width: '100%', maxWidth: 560 }} noValidate>
+									<div style={{ display: 'flex', alignItems: 'center' }}>
+										{/* Input pill - right corners squared to merge */}
+										<input
+											type="email"
+											value={email}
+											onChange={(e) => { setEmail(e.target.value); if (emailError) setEmailError(''); }}
+											placeholder="Enter your email here"
+											required
+											style={{
+												height: INPUT_HEIGHT,
+												flex: 1,
+												padding: '0 18px',
+												border: `2px solid ${emailError ? '#b00020' : ACCENT}`,
+												borderTopLeftRadius: RADIUS,
+												borderBottomLeftRadius: RADIUS,
+												borderTopRightRadius: 0,
+												borderBottomRightRadius: 0,
+												outline: 'none',
+												backgroundColor: '#fff',
+												color: '#333',
+												boxShadow: '0 6px 18px rgba(15, 122, 149, 0.12)'
+											}}
+										/>
+										{/* Button - shares border, no left border to avoid double line */}
+										<button
+											type="submit"
+											style={{
+												height: INPUT_HEIGHT,
+												padding: '0 28px',
+												backgroundColor: ACCENT,
+												color: '#fff',
+												border: `2px solid ${ACCENT}`,
+												borderLeft: 'none',
+												borderTopRightRadius: RADIUS,
+												borderBottomRightRadius: RADIUS,
+												borderTopLeftRadius: 0,
+												borderBottomLeftRadius: 0,
+												fontSize: '1rem',
+												fontWeight: 700,
+												whiteSpace: 'nowrap',
+												cursor: 'pointer',
+												boxShadow: '0 6px 18px rgba(15, 122, 149, 0.18)'
+											}}
+											onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0a5a6a')}
+											onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = ACCENT)}
+										>
+											Send now
+										</button>
+									</div>
+									{emailError && (
+										<div aria-live="polite" style={{ marginTop: 10, color: '#b00020', fontSize: '.92rem', fontWeight: 600, textAlign: 'right' }}>
+											{emailError}
+										</div>
+									)}
+								</form>
+							)}
 						</div>
 					</div>
 				</div>
