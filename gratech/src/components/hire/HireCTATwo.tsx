@@ -88,7 +88,7 @@ const HireCTATwo: React.FC<HireCTATwoProps> = ({
                 }
             `}</style>
             
-            <section className="hire-cta-two-section pt-80 pb-80" style={{ marginTop: '120px', marginBottom: '50px' }}>
+            <section className="hire-cta-two-section pt-80 pb-80" style={{ marginTop: '120px', marginBottom: '50px', paddingBottom: '60px' }}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-8 text-center">

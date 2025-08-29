@@ -18,83 +18,102 @@ import shape_6 from "@/assets/images/shape/about-circle.png"
 const Case = () => {
    return (
       <>
-         <section id="success-section" className="about-two-area pt-120 pb-120" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)' }}>
+         <section id="success-section" className="about-two-area" style={{ 
+            background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', 
+            paddingTop: '50px', 
+            paddingBottom: '50px', 
+            minHeight: '600px',
+            position: 'relative',
+            zIndex: 1
+        }}>
             <div className="container">
-               <div className="row g-4">
-                  <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    
-                        <div className="about-two__left-item" style={{ marginTop: '60px' }}>
-                        <div className="dots">
-                           <Image className="sway_Y__animation" src={shape_2} alt="shape" />
+                <div className="row g-4 align-items-center">
+                    <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div className="about-two__left-item" style={{ 
+                            marginLeft: '30px', 
+                            marginTop: '100px', 
+                            transform: 'scale(1.2)', 
+                            transformOrigin: 'center center' 
+                        }}>
+                            <div className="dots">
+                                <Image className="sway_Y__animation" src={shape_2} alt="shape" />
+                            </div>
+                            <div className="shape-halper">
+                                <Image className="sway__animation" src={shape_3} alt="shape" />
+                            </div>
+                            <div className="image big-image">
+                                <Image src={about_thumb1} alt="image" />
+                            </div>
+                            <div className="image sm-image">
+                                <Image src={about_thumb2} alt="image" />
+                            </div>
+                            <div className="circle-shape">
+                                <Image className="animation__rotate" src={shape_4} alt="shape" />
+                            </div>
                         </div>
-                        <div className="shape-halper">
-                           <Image className="sway__animation" src={shape_3} alt="shape" />
+                    </div>
+                    <div className="col-xl-6">
+                        <div className="about-two__right-item wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ 
+                            marginRight: '0', 
+                            transform: 'none', 
+                            paddingLeft: '20px', 
+                            paddingRight: '10px' 
+                        }}>
+                            <div className="section-header mb-30">
+                                <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#ffffff', fontSize: '1.2rem' }}>
+                                    <Image className="me-1" src={shape_1} alt="icon" />
+                                    WHO WE ARE
+                                </h5>
+                                <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff', fontSize: '2.5rem', marginBottom: '20px' }}>
+                                    <span style={{ color: '#0f7a95' }}>Benefits of Working with</span> iFour Technolab
+                                </h2>
+                                <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
+                                    When you choose iFour Technolab as your software development partner, you not only get a partner devoted to your success but also become entitled to receive several benefits. Here are a few outlined:
+                                </p>
+                            </div>
+                            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 20px 0' }}>
+                                <li style={{ marginBottom: '12px', color: '#ffffff', fontSize: '1rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>1.</span>
+                                    Fast project kickoff
+                                </li>
+                                <li style={{ marginBottom: '12px', color: '#ffffff', fontSize: '1rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>2.</span>
+                                    Fully Tailored Solutions
+                                </li>
+                                <li style={{ marginBottom: '12px', color: '#ffffff', fontSize: '1rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>3.</span>
+                                    Agile development approaches
+                                </li>
+                                <li style={{ marginBottom: '12px', color: '#ffffff', fontSize: '1rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>4.</span>
+                                    Flexible hiring models
+                                </li>
+                                <li style={{ marginBottom: '12px', color: '#ffffff', fontSize: '1rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>5.</span>
+                                    High data security
+                                </li>
+                                <li style={{ marginBottom: '12px', color: '#ffffff', fontSize: '1rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>6.</span>
+                                    100% IP rights and ownership
+                                </li>
+                                <li style={{ marginBottom: '12px', color: '#ffffff', fontSize: '1rem' }}>
+                                    <span style={{ color: '#0f7a95', marginRight: '10px', fontSize: '18px', fontWeight: 'bold' }}>7.</span>
+                                    Client satisfaction
+                                </li>
+                            </ul>
+                            <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff', width: '100%', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '30px' }}>
+                                Are you ready to unleash the full potential of your company with our services? Contact us right away to discuss your business needs.
+                            </p>
+                            <div className="about__info wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
+                                <Link href="/contact" className="btn-one">
+                                    Let&apos;s Get Started <i className="fa-regular fa-arrow-right-long"></i>
+                                </Link>
+                            </div>
                         </div>
-                        <div className="image big-image">
-                           <Image src={about_thumb1} alt="image" />
-                        </div>
-                        <div className="image sm-image">
-                           <Image src={about_thumb2} alt="image" />
-                        </div>
-                        <div className="circle-shape">
-                           <Image className="animation__rotate" src={shape_4} alt="shape" />
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-xl-6">
-                     <div className="section-header mb-40">
-                        <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                           <Image className="me-1" src={shape_1} alt="icon" />
-                           WHO WE ARE
-                        </h5>
-                        <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                           <span style={{ color: '#0f7a95' }}>Benefits of Working with</span> iFour Technolab
-                        </h2>
-                        <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                           When you choose iFour Technolab as your software development partner, you not only get a partner devoted to your success but also become entitled to receive several benefits. Here are a few outlined:
-                        </p>
-                     </div>
-                     <div className="about-two__right-item wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                              Fast project kickoff
-                           </li>
-                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                              Fully Tailored Solutions
-                           </li>
-                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                              Agile development approaches
-                           </li>
-                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                              Flexible hiring models
-                           </li>
-                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                              High data security
-                           </li>
-                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                              100% IP rights and ownership
-                           </li>
-                           <li style={{ marginBottom: '15px', color: '#ffffff' }}>
-                              <i className="fa-solid fa-circle" style={{ color: '#0f7a95', marginRight: '10px', fontSize: '8px' }}></i>
-                              Client satisfaction
-                           </li>
-                        </ul>
-                     </div>
-                     <div className="about__info mt-50 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <Link href="/about" className="btn-one">
-                           Let&apos;s Get Started <i className="fa-regular fa-arrow-right-long"></i>
-                        </Link>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </section>
+        </section>
 
          {/* A Software Development Company You Can Trust Section */}
          <section id="about-section" className="about-area sub-bg pt-120 pb-120">

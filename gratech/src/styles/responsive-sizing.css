@@ -1,0 +1,359 @@
+/* Minimal Responsive Sizing Fixes - Only for sizing issues */
+
+/* Image responsive sizing - CRITICAL FOR BENEFITS SECTION */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Next.js Image component specific fixes */
+img[alt] {
+  max-width: 100% !important;
+  height: auto !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Full-width container fixes - Remove white side margins */
+.container-fluid,
+.about-two-area .container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.container,
+.about-two-area .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100vw !important;
+  width: 100vw !important;
+}
+
+/* Benefits section full-width like industry section */
+.about-two-area {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  overflow: visible !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Ensure descendants do not re-introduce side gaps */
+.about-two-area .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+.about-two-area [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Ensure left item can render full circle without clipping */
+.about-two-area, .about-two-area * { overflow: visible !important; }
+
+.about-two__left-item,
+.about-two__left-item .image,
+.about-two__left-item .circle-shape,
+.about-two__left-item .shape-halper,
+.about-two__left-item .dots {
+  overflow: visible !important;
+}
+
+/* Tackle Next.js <span> wrappers around Image */
+.about-two__left-item span,
+.about-two__left-item picture {
+  display: block !important;
+  overflow: visible !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Nudge the circle image 100px from the left so full circle is visible */
+.about-two__left-item .circle-shape {
+  margin-left: 100px !important;
+  padding-left: 100px !important;
+}
+
+/* Desktop default: make canvas wider so circle is fully visible and centered */
+@media (min-width: 1200px) {
+  .about-two__left-item {
+    width: 160% !important; /* was 140% */
+    max-width: none !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* center the wider canvas */
+  }
+  .about-two__left-item .image,
+  .about-two__left-item img {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important; /* keep full circle intact */
+  }
+}
+
+/* Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-two__left-item {
+    width: 140% !important; /* was 130% */
+    max-width: none !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  .about-two__left-item .image,
+  .about-two__left-item img {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-two__left-item {
+    width: 130% !important; /* was 125% */
+    max-width: none !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  .about-two__left-item .image,
+  .about-two__left-item img {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  * { max-width: 100% !important; box-sizing: border-box !important; }
+  .mean-container { overflow-x: hidden !important; }
+  .mean-nav { overflow-x: hidden !important; }
+
+  .image-container, .video-container { overflow: hidden !important; max-width: 100% !important; }
+
+  .about-two__left-item {
+    width: 120% !important; /* was 115% */
+    max-width: none !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  .about-two__left-item .image,
+  .about-two__left-item img {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+/* Hard guarantee: no horizontal scroll and full-bleed band */
+html, body, #__next { overflow-x: hidden !important; width: 100% !important; }
+
+/* Force full viewport width band without side whites */
+.about-two-area {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.about-two-area .container, .about-two-area .container-fluid, .about-two-area .row, .about-two-area [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* Never clip descendants */
+.about-two-area, .about-two-area * { overflow: visible !important; }
+
+/* Desktop+ tweaks to always show the full circle */
+@media (min-width: 1200px) {
+  .about-two__left-item { width: 185% !important; left: 50% !important; transform: translateX(-58%) !important; position: relative !important; }
+  .about-two__left-item .circle-shape { margin-left: 240px !important; padding-left: 240px !important; }
+}
+
+/* Ultra-desktop overrides to ensure 100% view shows full circle */
+@media (min-width: 1366px) {
+  .about-two__left-item { width: 200% !important; left: 50% !important; transform: translateX(-60%) !important; }
+  .about-two__left-item .circle-shape { margin-left: 260px !important; padding-left: 260px !important; }
+}
+@media (min-width: 1536px) {
+  .about-two__left-item { width: 210% !important; left: 50% !important; transform: translateX(-62%) !important; }
+  .about-two__left-item .circle-shape { margin-left: 300px !important; padding-left: 300px !important; }
+}
+
+/* Final: pin and size the blue circle so the full ring is always visible */
+.about-two__left-item { position: relative !important; }
+.about-two__left-item .circle-shape {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  left: max(-12vw, -280px) !important; /* push further left so ring shows at 100% */
+  width: clamp(560px, 50vw, 1080px) !important;
+  height: clamp(560px, 50vw, 1080px) !important;
+  z-index: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+}
+.about-two__left-item .circle-shape img,
+.about-two__left-item .circle-shape picture,
+.about-two__left-item .circle-shape span {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  overflow: visible !important;
+}
+/* Keep the portrait and small photo above the circle */
+.about-two__left-item .image { position: relative !important; z-index: 1 !important; }
+
+/* Full-bleed service sections on hire/technology/service pages */
+.service-two-area,
+.service-two-area.secondary-bg,
+.service-two-area.primary-bg {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.service-two-area .container,
+.service-two-area .container-fluid,
+.service-two-area .row,
+.service-two-area [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Remove any outer margins from parent wrappers */
+body,
+#__next,
+main,
+section,
+div {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Ensure the page itself has no side spacing */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  position: relative !important;
+}
+
+/* Prevent background content from showing through on mobile */
+body {
+  background: #ffffff !important;
+  min-height: 100vh !important;
+}
+
+/* Ensure sections don't create scroll issues */
+section {
+  position: relative !important;
+  z-index: 1 !important;
+  background: inherit !important;
+}
+
+/* Fix for full-bleed sections to prevent background bleed */
+.about-two-area,
+.service-two-area,
+.service-two-area.secondary-bg,
+.service-two-area.primary-bg {
+  position: relative !important;
+  z-index: 2 !important;
+  background: inherit !important;
+  overflow: hidden !important;
+}
+
+/* Make service names appear on single line */
+.service-two__item h4,
+.service-two__content h4,
+.service-two__item .image h4,
+.service-two__item .service-two__content h4 {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.2 !important;
+  word-wrap: normal !important;
+  word-break: keep-all !important;
+}
+
+/* Ensure service titles don't wrap */
+.service-two__item .image div h4,
+.service-two__content h4 {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
+}
+
+/* Aggressive removal of ALL side spacing */
+* {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Force full viewport width on all containers */
+.container,
+.container-fluid,
+.row,
+[class*="col-"],
+section,
+div,
+main,
+#__next {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Override any Bootstrap or framework spacing */
+.container-fluid,
+.container {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+}

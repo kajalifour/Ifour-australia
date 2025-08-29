@@ -25,45 +25,8 @@ const menu_data: MenuItem[] = [
     {
         id: 1,
         title: "Home",
-        link: "#",
-        has_dropdown: true,
-        hidden: true,
-        mega_munu: [
-            // {
-            //     id: 1,
-            //     img: img_1,
-            //     btn_1: "Multi Page",
-            //     btn_link1: "/",
-            //     btn_2: "One Page",
-            //     btn_link2: "/home-1-one-page",
-            //     title: "Home Page 01"
-            // }
-            // {
-            //     id: 2,
-            //     img: img_2,
-            //     btn_1: "Multi Page",
-            //     btn_link1: "/home-two",
-            //     btn_2: "One Page",
-            //     btn_link2: "/home-2-one-page",
-            //     title: "Home Page 01"
-            // },
-            // {
-            //     id: 3,
-            //     img: img_3,
-            //     btn_1: "Multi Page",
-            //     btn_link1: "/home-three",
-            //     btn_2: "One Page",
-            //     btn_link2: "/home-3-one-page",
-            //     title: "Home Page 03"
-            // },
-            // {
-            //     id: 4,
-            //     img: img_4,
-            //     btn_1: "View Page",
-            //     btn_link1: "/dark-home",
-            //     title: "Home Dark"
-            // },
-        ],
+        link: "/",
+        has_dropdown: false,
     },
     {
         id: 2,
@@ -71,14 +34,14 @@ const menu_data: MenuItem[] = [
         link: "#",
         has_dropdown: true,
         sub_menus: [
-            { link: "/custom-software-development-company", title: "Custom Software Development" },
-            { link: "/desktop-application-development-company", title: "Desktop Application Development" },
-            { link: "/ecommerce-website-development-company", title: "Ecommerce Website Development" },
-            { link: "/microsoft-365-development-company", title: "Microsoft 365 Development" },
-            { link: "/microsoft-azure-cloud-services-company", title: "Microsoft Azure Cloud Services" },
-            { link: "/blockchain-development-company", title: "Blockchain Development" },
-            { link: "/mobile-app-development-company", title: "Mobile App Development" },
-            { link: "/iot-software-development-company", title: "Iot Software Development" }
+            { link: "/custom-software-development-company", title: "Custom Software Dev" },
+            { link: "/desktop-application-development-company", title: "Desktop App Dev" },
+            { link: "/ecommerce-website-development-company", title: "Ecommerce Website Dev" },
+            { link: "/microsoft-365-development-company", title: "Microsoft 365 Dev" },
+            { link: "/microsoft-azure-cloud-services-company", title: "Azure Cloud Services" },
+            { link: "/blockchain-development-company", title: "Blockchain Dev" },
+            { link: "/mobile-app-development-company", title: "Mobile App Dev" },
+            { link: "/iot-software-development-company", title: "IoT Software Dev" }
         ],
     },
     {
@@ -87,14 +50,14 @@ const menu_data: MenuItem[] = [
         link: "#",
         has_dropdown: true,
         sub_menus: [
-            { link: "/angular-development-company", title: "Angular Development" },
-            { link: "/dotnet-development-company", title: ".Net Development" },
-            { link: "/node-js-development-company", title: "Node.js Development" },
-            { link: "/c-sharp-development-company", title: "C# Development" },
-            { link: "/java-development-company", title: "Java Development" },
-            { link: "/salesforce-development-company", title: "Salesforce Development" },
-            { link: "/wpf-application-development-company", title: "WPF Development" },
-            { link: "/reactjs-development-company", title: "React.js Development" },
+            { link: "/angular-development-company", title: "Angular Dev" },
+            { link: "/dotnet-development-company", title: ".Net Dev" },
+            { link: "/node-js-development-company", title: "Node.js Dev" },
+            { link: "/c-sharp-development-company", title: "C# Dev" },
+            { link: "/java-development-company", title: "Java Dev" },
+            { link: "/salesforce-development-company", title: "Salesforce Dev" },
+            { link: "/wpf-application-development-company", title: "WPF Dev" },
+            { link: "/reactjs-development-company", title: "React.js Dev" },
         ],
     },
     {

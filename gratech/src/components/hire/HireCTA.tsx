@@ -88,7 +88,7 @@ const HireCTA: React.FC<HireCTAProps> = ({
                 }
             `}</style>
             
-            <section className="hire-cta-section pt-80 pb-80">
+            <section className="hire-cta-section pt-80 pb-80" style={{ paddingBottom: '60px', marginBottom: '60px' }}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-8 text-center">

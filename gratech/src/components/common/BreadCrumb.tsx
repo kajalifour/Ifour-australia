@@ -216,6 +216,11 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
                   <>
                      <span>404</span>
                   </>
+               ) : title === "Terms and Conditions" ? (
+                  // Terms page: Home > Terms and Conditions
+                  <>
+                     <span>Terms and Conditions</span>
+                  </>
                ) : (
                   // Technologies style: Home > Technologies > Angular Development Company
                   <>

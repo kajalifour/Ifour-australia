@@ -33,8 +33,115 @@ import client3 from "@/assets/images/brand/brand-image8.webp"
 import client4 from "@/assets/images/brand/brand-image-9.webp"
 import client5 from "@/assets/images/brand/brand-image-10.webp"
 
-// Agile process image
-import agileProcess from "@/assets/images/project/process_iFour.webp"
+ // Agile process image
+ import agileProcess from "@/assets/images/project/process_iFour.webp"
+
+ // Technology icons imports
+ import tech_1 from "@/assets/images/technologies/tech-image-01.png"
+ import tech_2 from "@/assets/images/technologies/tech-image-02.png"
+ import tech_3 from "@/assets/images/technologies/tech-image-03.png"
+ import tech_4 from "@/assets/images/technologies/tech-image-04.png"
+ import tech_5 from "@/assets/images/technologies/tech-image-05.png"
+ import tech_6 from "@/assets/images/technologies/tech-image-06.webp"
+ import tech_7 from "@/assets/images/technologies/tech-image-07.png"
+ import tech_8 from "@/assets/images/technologies/tech-image-08.png"
+ import tech_9 from "@/assets/images/technologies/tech-image-09.png"
+ import tech_10 from "@/assets/images/technologies/tech-image-10.png"
+
+// Technologies Section Component
+const TechnologiesSection = ({ data }: { data: ServiceDetailsData }) => {
+    if (!data.showTechnologies) return null;
+    
+    const tech_data = [
+        { id: 1, icon: tech_1 },
+        { id: 2, icon: tech_2 },
+        { id: 3, icon: tech_3 },
+        { id: 4, icon: tech_4 },
+        { id: 5, icon: tech_5 },
+        { id: 6, icon: tech_6 },
+        { id: 7, icon: tech_7 },
+        { id: 8, icon: tech_8 },
+        { id: 9, icon: tech_9 },
+        { id: 10, icon: tech_10 }
+    ];
+
+    return (
+        <section className="technologies-area pt-120 pb-80" style={{ backgroundColor: '#ffffff' }}>
+            <div className="container">
+                <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
+                    <div className="section-header">
+                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <Image className="me-1" src={shape_1} alt="icon" />
+                            Tech Talent
+                        </h5>
+                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <span style={{ color: '#0f7a95' }}>Technologies</span> We Utilise
+                        </h2>
+                    </div>
+                </div>
+                
+                <div className="row justify-content-center">
+                    {tech_data.map((tech, index) => (
+                        <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '50%', minWidth: '120px' }}>
+                            <div className="technology__item text-center wow fadeInUp" 
+                                data-wow-delay={`${index * 100}ms`} 
+                                data-wow-duration="1500ms"
+                                style={{
+                                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                    borderRadius: '0',
+                                    padding: '0',
+                                    border: '1px solid rgba(0, 0, 0, 0.1)',
+                                    transition: 'all 0.3s ease',
+                                    height: '102px',
+                                    backdropFilter: 'blur(10px)',
+                                    transform: 'perspective(1000px) rotateX(0deg)',
+                                    transformStyle: 'preserve-3d',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.transform = 'perspective(1000px) rotateX(-3deg) translateZ(15px)';
+                                    e.currentTarget.style.borderColor = '#0f7a95';
+                                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(15, 122, 149, 0.25)';
+                                    e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.08)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) translateZ(0px)';
+                                    e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+                                    e.currentTarget.style.boxShadow = 'none';
+                                    e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
+                                }}>
+                                <Image
+                                    src={tech.icon} 
+                                    alt="technology" 
+                                    width={120}
+                                    height={60}
+                                    style={{ 
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'fill',
+                                        borderRadius: '0',
+                                        transition: 'all 0.3s ease',
+                                        transform: 'translateZ(0px)',
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = 'translateZ(8px) scale(1.05)';
+                                        e.currentTarget.style.filter = 'brightness(1.1) contrast(1.1)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'translateZ(0px) scale(1)';
+                                        e.currentTarget.style.filter = 'none';
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
 
 
 
@@ -109,6 +216,9 @@ interface ServiceDetailsData {
       conclusion?: string;
    };
    showServicesGrid?: boolean;
+   showMainServiceSection?: boolean;
+   showServiceTwo?: boolean;
+   showCTATwo?: boolean;
    ctaTitle?: string;
    ctaButtonText?: string;
    ctaButtonLink?: string;
@@ -1156,9 +1266,9 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
 // Main ServiceDetailsArea Component
 const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPage = false }: ServiceDetailsAreaProps) => {
     return (
-        <>
-            {/* Main Service Section */}
-            <MainServiceSection data={data} />
+                 <>
+                          {/* Main Service Section */}
+              {data.showMainServiceSection !== false && <MainServiceSection data={data} />}
             
             {/* Technologies List Section - Only for Technology Pages (Right after main service section) */}
             {isTechnologyPage && (
@@ -1252,7 +1362,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
             )}
             
             {/* ServiceTwo Section - Additional services below CTA (hire pages only) */}
-            {!isTechnologyPage && (
+            {!isTechnologyPage && data.showServiceTwo !== false && data.showCTATwo !== false && (
             <ServiceTwo 
                 services={data.serviceTwoServices}
                 title={data.serviceTwoTitle || "Additional Services"}
@@ -1285,12 +1395,14 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
             {/* Testimonial Section */}
             <TestimonialSection data={data} />
             
-            {/* CTA Two Section - Between Testimonials and Agile Approach */}
-            <HireCTATwo 
-                title={data.ctaTwoTitle || "Ready to Start Your Project?"}
-                buttonText={data.ctaTwoButtonText || "GET STARTED NOW"}
-                buttonLink={data.ctaTwoButtonLink || "/contact"}
-            />
+                         {/* CTA Two Section - Between Testimonials and Agile Approach */}
+             {data.showCTATwo !== false && (
+             <HireCTATwo 
+                 title={data.ctaTwoTitle || "Ready to Start Your Project?"}
+                 buttonText={data.ctaTwoButtonText || "GET STARTED NOW"}
+                 buttonLink={data.ctaTwoButtonLink || "/contact"}
+             />
+             )}
             
             {/* Agile Approach Section */}
             <AgileApproachSection data={data} />
