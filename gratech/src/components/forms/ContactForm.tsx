@@ -25,7 +25,7 @@ const schema = yup
 
 const ContactForm = () => {
 
-   const { register, handleSubmit, reset, formState: { errors }, } = useForm<FormData>({ resolver: yupResolver(schema), });
+      const { register, handleSubmit, reset, formState: { errors }, } = useForm<FormData>({ resolver: yupResolver(schema), });
    const [submitted, setSubmitted] = useState<"idle" | "success" | "error">("idle");
    const router = useRouter();
 
@@ -48,7 +48,7 @@ const ContactForm = () => {
    };
 
    return (
-      <form ref={form} onSubmit={handleSubmit(sendEmail)}>
+      <form ref={form} onSubmit={handleSubmit(sendEmail)} data-status={submitted}>
          <div className="row">
             <div className="col-6">
                <label htmlFor="name">Your Name*</label>

@@ -53,7 +53,7 @@ export const validateApiUrl = (url) => {
   try {
     new URL(url);
     return true;
-  } catch (error) {
+  } catch {
     console.error('Invalid API URL:', url);
     return false;
   }

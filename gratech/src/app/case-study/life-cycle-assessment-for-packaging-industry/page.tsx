@@ -11,7 +11,7 @@ import NewsletterSection from "@/components/common/NewsletterSection";
 import TestimonialForm from "@/components/forms/TestimonialForm";
 import shape_1 from "@/assets/images/icon/section-title.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import avatar_1 from "@/assets/images/testimonial/testimonial-image1.png";
 import avatar_2 from "@/assets/images/testimonial/testimonial-image2.png";
@@ -107,33 +107,7 @@ const PackagingIndustryCaseStudy = () => {
     { id: 12, title: "Contact Us", link: "/contact" },
   ];
 
-  // Testimonial data
-  const testimonial_data = [
-    {
-      id: 1,
-      name: "John Smith",
-      designation: "CEO, TechCorp",
-      image: "/assets/images/testimonial/testimonial-1.jpg",
-      text: "iFour Technolab delivered exceptional results for our healthcare monitoring system. Their expertise in AI and IoT integration exceeded our expectations.",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "Sarah Johnson",
-      designation: "CTO, MedTech Solutions",
-      image: "/assets/images/testimonial/testimonial-2.jpg",
-      text: "The team at iFour demonstrated outstanding technical skills and delivered our project on time with superior quality. Highly recommended!",
-      rating: 5
-    },
-    {
-      id: 3,
-      name: "Michael Brown",
-      designation: "Director, HealthTech Inc",
-      image: "/assets/images/testimonial/testimonial-3.jpg",
-      text: "Working with iFour was a game-changer for our healthcare platform. Their innovative approach and attention to detail made all the difference.",
-      rating: 5
-    }
-  ];
+
 
   const testimonial_setting = {
     slidesPerView: 1,
@@ -172,7 +146,7 @@ const PackagingIndustryCaseStudy = () => {
                   <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Challenge</h3>
                   <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Our client faced the challenge of streamlining their assessment of product lifecycles and evaluating environmental impacts for different packaging options. The traditional methods they used for various calculations hindered their decision-making process, resulting in the need for a more efficient and user-friendly solution.</p>
                   <div style={{ borderLeft: '3px solid #0f7a95', paddingLeft: '24px' }}>
-                    <p style={{ marginBottom: 0, fontSize: '18px', lineHeight: 1.8 }}>With our flawless solution, the customer can efficiently evaluate environmental changes and perform impact calculations at various stages of a product's life cycle. This enhanced decision-making ability not only empowers our Australian client but also delivers exceptional value to their respective customers.</p>
+                                          <p style={{ marginBottom: 0, fontSize: '18px', lineHeight: 1.8 }}>With our flawless solution, the customer can efficiently evaluate environmental changes and perform impact calculations at various stages of a product&apos;s life cycle. This enhanced decision-making ability not only empowers our Australian client but also delivers exceptional value to their respective customers.</p>
                   </div>
                   <p className="mt-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Looking to revolutionize business procedures fostering a greener and more sustainable future? Contact us now.</p>
                 </div>
@@ -314,7 +288,7 @@ const PackagingIndustryCaseStudy = () => {
               <div className="row g-4 mb-40" style={{ padding: '40px 0' }}>
                 <div className="col-12">
                   <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Conclusion/Results:</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Our customer is now able to analyze environmental changes and carry out impact calculations at different points in a product's life cycle thanks to the sustainable solution offered by iFour Technolab. Our clients wield more power, and their respective consumers benefit greatly as a result of this well-informed decision-making. Together, we are driving positive transformations in the realm of sustainability assessment, paving the way for a greener and brighter future in Australia.</p>
+                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Our customer is now able to analyze environmental changes and carry out impact calculations at different points in a product&apos;s life cycle thanks to the sustainable solution offered by iFour Technolab. Our clients wield more power, and their respective consumers benefit greatly as a result of this well-informed decision-making. Together, we are driving positive transformations in the realm of sustainability assessment, paving the way for a greener and brighter future in Australia.</p>
                 </div>
               </div>
             </div>
@@ -327,7 +301,7 @@ const PackagingIndustryCaseStudy = () => {
             <div className="row g-4 mb-40" style={{ padding: '60px 0' }}>
               <div className="col-12">
                 <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '48px', fontWeight: 700 }}>How we work</h3>
-                <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Let's unveil our unique software development approach -</h4>
+                <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Let&apos;s unveil our unique software development approach -</h4>
                 <div className="text-center">
                   <Image 
                     src="/assets/images/case/casestudyimage-01.png"
@@ -342,7 +316,7 @@ const PackagingIndustryCaseStudy = () => {
           </div>
         </section>
 
-        {/* Client's Talk Section */}
+        {/* Client&apos;s Talk Section */}
         <section id="testimonial-section" className="testimonial-area bg-image pt-120 pb-120" style={{ 
           backgroundImage: `url(/assets/images/bg/testimonial-bg.png)`,
           marginTop: '120px'
@@ -371,12 +345,12 @@ const PackagingIndustryCaseStudy = () => {
                 <div className="section-header mb-40">
                   <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                     <Image className="me-1" src={shape_1} alt="icon" />
-                    Client's Talk
+                    Client&apos;s Talk
                   </h5>
                   <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: 'white' }}>
                     <span style={{ color: '#0f7a95' }}>What Clients Say</span> <span style={{ color: '#000000' }}>About Us</span>
                   </h2>
-                  <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients' projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don't want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
+                  <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients&apos; projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don&apos;t want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
                 </div>
                 
                 <Swiper 

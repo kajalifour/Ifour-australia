@@ -12,17 +12,13 @@ import NewsletterSection from "@/components/common/NewsletterSection";
 import TestimonialForm from "@/components/forms/TestimonialForm";
 import shape_1 from "@/assets/images/icon/section-title.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import { useRef } from "react";
 import avatar_1 from "@/assets/images/testimonial/testimonial-image1.png";
 import avatar_2 from "@/assets/images/testimonial/testimonial-image2.png";
 
-import client1 from "@/assets/images/brand/brand-image6.webp";
-import client2 from "@/assets/images/brand/brand-image7.webp";
-import client3 from "@/assets/images/brand/brand-image8.webp";
-import client4 from "@/assets/images/brand/brand-image-9.webp";
-import client5 from "@/assets/images/brand/brand-image-10.webp";
+
 
 // Import industry images
 import industry01 from "@/assets/images/industry/industry-01.webp";
@@ -39,7 +35,7 @@ import industry11 from "@/assets/images/industry/industry-11.webp";
 
 // Import blog data
 import bolg_data from "@/data/BlogData";
-
+import { StaticImageData } from "next/image";
 
 
 const AIHealthcareCaseStudy = () => {
@@ -109,19 +105,12 @@ const AIHealthcareCaseStudy = () => {
     }
   };
 
-  // Client data
-  const client_data = [
-    { id: 1, logo: client1, name: "Spearity™" },
-    { id: 2, logo: client2, name: "Taglogic" },
-    { id: 3, logo: client3, name: "Manning Audiology" },
-    { id: 4, logo: client4, name: "Greater Dandenong Bookkeeping Services" },
-    { id: 5, logo: client5, name: "WGE EQUIPMENT SOLUTIONS" },
-  ];
 
-  const repeated_client_data = [...client_data, ...client_data];
+
+
 
   // Industry data
-  const industry_data = [
+  const industry_data: Array<{ id: number; icon: string | StaticImageData | null; title: string; link?: string }> = [
     { id: 1, icon: industry01, title: "Healthcare" },
     { id: 2, icon: industry02, title: "Finance" },
     { id: 3, icon: industry03, title: "Education" },
@@ -133,61 +122,12 @@ const AIHealthcareCaseStudy = () => {
     { id: 9, icon: industry09, title: "Technology" },
     { id: 10, icon: industry10, title: "Retail" },
     { id: 11, icon: industry11, title: "Logistics" },
-    { id: 12, title: "Contact Us", link: "/contact" },
+    { id: 12, icon: null, title: "Contact Us", link: "/contact" },
   ];
 
-  // Testimonial data
-  const testimonial_data = [
-    {
-      id: 1,
-      name: "John Smith",
-      designation: "CEO, TechCorp",
-      image: "/assets/images/testimonial/testimonial-1.jpg",
-      text: "iFour Technolab delivered exceptional results for our healthcare monitoring system. Their expertise in AI and IoT integration exceeded our expectations.",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "Sarah Johnson",
-      designation: "CTO, MedTech Solutions",
-      image: "/assets/images/testimonial/testimonial-2.jpg",
-      text: "The team at iFour demonstrated outstanding technical skills and delivered our project on time with superior quality. Highly recommended!",
-      rating: 5
-    },
-    {
-      id: 3,
-      name: "Michael Brown",
-      designation: "Director, HealthTech Inc",
-      image: "/assets/images/testimonial/testimonial-3.jpg",
-      text: "Working with iFour was a game-changer for our healthcare platform. Their innovative approach and attention to detail made all the difference.",
-      rating: 5
-    }
-  ];
 
-  const client_setting = {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".clients__dot",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".clients__arry-next",
-      prevEl: ".clients__arry-prev",
-    },
-    breakpoints: {
-      480: { slidesPerView: 2, spaceBetween: 20 },
-      576: { slidesPerView: 3, spaceBetween: 25 },
-      768: { slidesPerView: 3, spaceBetween: 30 },
-      992: { slidesPerView: 4, spaceBetween: 30 },
-      1200: { slidesPerView: 5, spaceBetween: 30 },
-    },
-  };
+
+
 
   const testimonial_setting = {
     slidesPerView: 1,
@@ -243,7 +183,7 @@ const AIHealthcareCaseStudy = () => {
               <div className="row align-items-center g-4 mb-40" style={{ padding: '40px 0' }}>
                 <div className="col-12">
                   <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Solution</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>To address the client's needs, we embarked on an AI-based project that resulted in a versatile and intelligent tracking device, reforming the health monitoring experience. Leveraging cutting-edge sensors, IoT network technologies, Informedica, ChatGPT, and AI capabilities, our solution facilitates quick and secure data transfer and interpretation. This empowers healthcare staff in hospitals and nursing homes to respond promptly to unforeseen incidents identified by an autonomous diagnostic system.</p>
+                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>To address the client&apos;s needs, we embarked on an AI-based project that resulted in a versatile and intelligent tracking device, reforming the health monitoring experience. Leveraging cutting-edge sensors, IoT network technologies, Informedica, ChatGPT, and AI capabilities, our solution facilitates quick and secure data transfer and interpretation. This empowers healthcare staff in hospitals and nursing homes to respond promptly to unforeseen incidents identified by an autonomous diagnostic system.</p>
                   
                   <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Web and Mobile Application:</h4>
                   <ul className="list-unstyled">
@@ -279,7 +219,7 @@ const AIHealthcareCaseStudy = () => {
                 <div className="col-12">
                   <h3 className="case-single__title mb-20" style={{ color: '#000000', fontSize: '32px', fontWeight: 700 }}>Modules</h3>
                   <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Dashboard:</h4>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>A comprehensive overview of the member's health, activities, and essential updates.</p>
+                                        <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>A comprehensive overview of the member&apos;s health, activities, and essential updates.</p>
                   <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Chatbot (Yasmina Chatbot):</h4>
                   <ul className="list-unstyled mb-20">
                     <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
@@ -423,7 +363,7 @@ const AIHealthcareCaseStudy = () => {
               <div className="row g-4 mb-40" style={{ padding: '40px 0' }}>
                 <div className="col-12">
                   <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '48px', fontWeight: 700 }}>How we work</h3>
-                  <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Let's unveil our unique software development approach -</h4>
+                  <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Let&apos;s unveil our unique software development approach -</h4>
                   <div className="text-center">
                     <Image 
                       src="/assets/images/case/casestudyimage-01.png"
@@ -439,7 +379,7 @@ const AIHealthcareCaseStudy = () => {
           </div>
         </section>
 
-        {/* Client's Talk Section */}
+        {/* Client&apos;s Talk Section */}
         <section id="testimonial-section" className="testimonial-area bg-image pt-120 pb-120" style={{ 
           backgroundImage: `url(/assets/images/bg/testimonial-bg.png)`,
           marginTop: '120px',
@@ -469,12 +409,12 @@ const AIHealthcareCaseStudy = () => {
                 <div className="section-header mb-40">
                   <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                     <Image className="me-1" src={shape_1} alt="icon" />
-                    Client's Talk
+                    Client&apos;s Talk
                   </h5>
                   <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: 'white' }}>
                     <span style={{ color: '#0f7a95' }}>What Clients Say</span> <span style={{ color: '#000000' }}>About Us</span>
                   </h2>
-                  <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients' projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don't want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
+                  <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients&apos; projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don&apos;t want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
                 </div>
                 
                 <Swiper 
@@ -631,7 +571,7 @@ const AIHealthcareCaseStudy = () => {
                         {item.icon && (
                           <div className="offer__icon mb-20">
                             <Image 
-                              src={item.icon} 
+                              src={item.icon as string} 
                               alt={item.title} 
                               width={60} 
                               height={60} 
@@ -651,7 +591,7 @@ const AIHealthcareCaseStudy = () => {
                         {item.icon && (
                           <div className="offer__icon mb-20">
                             <Image 
-                              src={item.icon} 
+                              src={item.icon as string} 
                               alt={item.title} 
                               width={60} 
                               height={60} 

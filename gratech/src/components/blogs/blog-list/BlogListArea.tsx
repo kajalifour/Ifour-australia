@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import Image from "next/image"
-import Link from "next/link"
+import type { StaticImageData } from "next/image"
 import BlogSidebar from "../blog-sidebar";
 import bolg_data from "@/data/BlogData";
 import { useRouter } from "next/navigation";
@@ -12,7 +12,7 @@ interface BlogPost {
    slug: string;
    excerpt: string;
    content: string;
-   featuredImage: any; // StaticImageData or string URL
+   featuredImage: string | StaticImageData; // StaticImageData or string URL
    author: string;
    publishedAt: string;
    category: string;
@@ -63,7 +63,7 @@ const BlogListArea = () => {
                      const apiPosts = JSON.parse(text);
                      // Add API posts to the array (maintaining same structure)
                      allPosts = [...allPosts, ...apiPosts];
-                  } catch (jsonErr) {
+                  } catch {
                      console.warn('Invalid JSON from /api/blog/posts. Falling back to hardcoded post.');
                   }
                } else {
@@ -75,8 +75,8 @@ const BlogListArea = () => {
             }
 
             setPosts(allPosts);
-         } catch (error) {
-            console.error('Error setting up blog posts:', error);
+         } catch {
+            console.error('Error setting up blog posts');
             setPosts([]);
          } finally {
             setLoading(false);
@@ -94,7 +94,7 @@ const BlogListArea = () => {
             month: 'long', 
             day: 'numeric' 
          });
-      } catch (error) {
+      } catch {
          return dateString; // Return original string if date parsing fails
       }
    };
@@ -129,7 +129,7 @@ const BlogListArea = () => {
                      display: 'block'
                   }}
                   priority={post.id <= 2}
-                  onError={(e) => {
+                  onError={() => {
                      console.error('Image failed to load:', post.featuredImage);
                      // You can set a fallback image here if needed
                   }}

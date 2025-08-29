@@ -61,7 +61,7 @@ const CTABox = () => {
         opacity: '0.8',
         transform: 'rotate(5deg)'
       }}>
-        "
+        &quot;
       </div>
       {/* Decorative elements */}
       <div style={{

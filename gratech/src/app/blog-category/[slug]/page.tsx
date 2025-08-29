@@ -1,24 +1,24 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import HeaderOne from '@/layouts/headers/HeaderOne';
 import BreadCrumb from '@/components/common/BreadCrumb';
 import NewsletterSection from '@/components/common/NewsletterSection';
 import FooterOne from '@/layouts/footers/FooterOne';
 import { fetchBlogCategoryBySlug, fetchBlogPostsByCategory } from '@/services/blogApi';
 
-interface Props {
-  params: { slug: string };
-}
+ 
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   try {
-    const category = await fetchBlogCategoryBySlug(params.slug);
+    const category = await fetchBlogCategoryBySlug(slug);
     return {
       title: `Blog Category by ${category.title}`,
       description: category.description,
     };
-  } catch (error) {
+  } catch {
     return {
       title: 'Blog Category Not Found',
       description: 'The requested blog category could not be found.',
@@ -33,14 +33,15 @@ export async function generateStaticParams() {
   ];
 }
 
-export default async function BlogCategoryPage({ params }: Props) {
+export default async function BlogCategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   let category;
   let posts;
   
   try {
-    category = await fetchBlogCategoryBySlug(params.slug);
-    posts = await fetchBlogPostsByCategory(params.slug);
-  } catch (error) {
+    category = await fetchBlogCategoryBySlug(slug);
+    posts = await fetchBlogPostsByCategory(slug);
+  } catch {
     notFound();
   }
 
@@ -67,7 +68,7 @@ export default async function BlogCategoryPage({ params }: Props) {
                   <div className="blog-item mb-30">
                     <div className="blog-thumb">
                       <Link href={`/blog/${post.slug}`}>
-                        <img src={post.thumbnail} alt={post.title} />
+                        <Image src={post.thumbnail} alt={post.title} width={600} height={400} />
                       </Link>
                     </div>
                     <div className="blog-content">

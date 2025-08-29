@@ -6,10 +6,7 @@ import Case_data from "@/data/CaseData";
 import Image from "next/image";
 import Link from "next/link";
 
-// Helper function to generate slug from title
-const generateSlug = (title: string): string => {
-  return title.toLowerCase().replace(/\s+/g, '-');
-};
+
 
 const CaseStudyArea = () => {
   // Define the 4 specific case studies we want to show

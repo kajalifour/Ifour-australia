@@ -47,11 +47,52 @@ export interface BlogListItem {
 interface ApiResponse<T> {
   data?: T;
   notFound?: boolean;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
+// API Post interface
+interface ApiPost {
+  id?: string;
+  blogId?: string;
+  title?: string;
+  blogTitle?: string;
+  slug?: string;
+  blogSlug?: string;
+  date?: string;
+  month?: string;
+  year?: string;
+  publishDate?: string;
+  thumbnail?: string;
+  imageUrl?: string;
+  category?: string;
+  categoryName?: string;
+  excerpt?: string;
+  shortDescription?: string;
+  description?: string;
+  content?: string;
+  fullDescription?: string;
+  author?: string;
+  authorName?: string;
+}
+
+// API Category interface
+interface ApiCategory {
+  id?: string;
+  categoryId?: string;
+  slug?: string;
+  categorySlug?: string;
+  title?: string;
+  categoryName?: string;
+  description?: string;
+  categoryDescription?: string;
+  postCount?: number;
+  blogCount?: number;
+}
+
+
+
 // Error handler
-const handleApiError = (error: any) => {
+const handleApiError = (error: unknown) => {
   console.error('API Error:', error);
   throw new Error('Failed to fetch data from API');
 };
@@ -303,7 +344,7 @@ const getHardcodedBlogPostsByCategory = (categorySlug: string): BlogListItem[] =
 // API Functions using existing API
 export const fetchAllBlogPosts = async (pageNum: number = 1): Promise<BlogListItem[]> => {
   try {
-    const response: ApiResponse<any[]> = await getAllBlog(pageNum);
+    const response = await getAllBlog(pageNum) as unknown as ApiResponse<ApiPost[]>;
     
     // Check if response has notFound property
     if (response.notFound) {
@@ -312,10 +353,10 @@ export const fetchAllBlogPosts = async (pageNum: number = 1): Promise<BlogListIt
     
     // Transform the API response to match our interface
     if (response.data && Array.isArray(response.data)) {
-      return response.data.map((post: any) => ({
-        id: post.id || post.blogId,
-        title: post.title || post.blogTitle,
-        slug: post.slug || post.blogSlug,
+      return response.data.map((post: ApiPost) => ({
+        id: post.id || post.blogId || '',
+        title: post.title || post.blogTitle || '',
+        slug: post.slug || post.blogSlug || '',
         date: post.date || post.publishDate?.split('-')[2] || '22',
         month: post.month || post.publishDate?.split('-')[1] || 'Nov',
         year: post.year || post.publishDate?.split('-')[0] || '2023',
@@ -326,7 +367,7 @@ export const fetchAllBlogPosts = async (pageNum: number = 1): Promise<BlogListIt
     }
     
     return [];
-  } catch (error) {
+  } catch {
     // TODO: REMOVE HARDCODED DATA WHEN API IS READY
     console.log('API not available, using hardcoded fallback data for blog listing');
     return [
@@ -402,7 +443,7 @@ export const fetchAllBlogPosts = async (pageNum: number = 1): Promise<BlogListIt
 
 export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost> => {
   try {
-    const response: ApiResponse<any> = await getBlogDetails(slug);
+    const response = await getBlogDetails(slug) as unknown as ApiResponse<ApiPost>;
     
     // Check if response has notFound property
     if (response.notFound) {
@@ -410,7 +451,7 @@ export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost> => {
     }
     
     // Transform the API response to match our interface
-    const post = response.data || response;
+    const post = response.data || response as unknown as ApiPost;
     return {
       id: post.id || post.blogId || slug,
       slug: post.slug || post.blogSlug || slug,
@@ -426,7 +467,7 @@ export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost> => {
       author: post.author || post.authorName || 'Ahmed Mehmood',
       thumbnail: post.thumbnail || post.imageUrl || "/assets/images/blog/post-sm1.png"
     };
-  } catch (error) {
+  } catch {
     // TODO: REMOVE HARDCODED DATA WHEN API IS READY
     console.log('API not available, using hardcoded fallback data for', slug);
     
@@ -436,14 +477,14 @@ export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost> => {
     }
     
     // For all other slugs, throw error (no fallback)
-    handleApiError(error);
-    throw error;
+    handleApiError(new Error('Blog post not found'));
+    throw new Error('Blog post not found');
   }
 };
 
 export const fetchBlogCategoryBySlug = async (slug: string): Promise<BlogCategory> => {
   try {
-    const response: ApiResponse<any[]> = await getBlogCategory();
+    const response = await getBlogCategory() as unknown as ApiResponse<ApiCategory[]>;
     
     // Check if response has notFound property
     if (response.notFound) {
@@ -453,7 +494,7 @@ export const fetchBlogCategoryBySlug = async (slug: string): Promise<BlogCategor
     // Find the category by slug
     const categories = response.data || response;
     const category = Array.isArray(categories) 
-      ? categories.find((cat: any) => cat.slug === slug || cat.categorySlug === slug)
+      ? categories.find((cat: ApiCategory) => cat.slug === slug || cat.categorySlug === slug)
       : null;
     
     if (!category) {
@@ -467,7 +508,7 @@ export const fetchBlogCategoryBySlug = async (slug: string): Promise<BlogCategor
       description: category.description || category.categoryDescription || "Blog category description",
       postCount: category.postCount || category.blogCount || 0
     };
-  } catch (error) {
+  } catch {
     // TODO: REMOVE HARDCODED DATA WHEN API IS READY
     console.log('API not available, using hardcoded fallback data for category', slug);
     
@@ -477,14 +518,14 @@ export const fetchBlogCategoryBySlug = async (slug: string): Promise<BlogCategor
     }
     
     // For all other slugs, throw error (no fallback)
-    handleApiError(error);
-    throw error;
+    handleApiError(new Error('Category not found'));
+    throw new Error('Category not found');
   }
 };
 
 export const fetchBlogPostsByCategory = async (categorySlug: string, pageNum: number = 1): Promise<BlogListItem[]> => {
   try {
-    const response: ApiResponse<any[]> = await getBlogsOfCategory(categorySlug, pageNum);
+    const response = await getBlogsOfCategory(categorySlug, pageNum) as unknown as ApiResponse<ApiPost[]>;
     
     // Check if response has notFound property
     if (response.notFound) {
@@ -493,10 +534,10 @@ export const fetchBlogPostsByCategory = async (categorySlug: string, pageNum: nu
     
     // Transform the API response to match our interface
     if (response.data && Array.isArray(response.data)) {
-      return response.data.map((post: any) => ({
-        id: post.id || post.blogId,
-        title: post.title || post.blogTitle,
-        slug: post.slug || post.blogSlug,
+      return response.data.map((post: ApiPost) => ({
+        id: post.id || post.blogId || '',
+        title: post.title || post.blogTitle || '',
+        slug: post.slug || post.blogSlug || '',
         date: post.date || post.publishDate?.split('-')[2] || '15',
         month: post.month || post.publishDate?.split('-')[1] || 'Jan',
         year: post.year || post.publishDate?.split('-')[0] || '2024',
@@ -524,7 +565,7 @@ export const fetchBlogPostsByCategory = async (categorySlug: string, pageNum: nu
 
 export const fetchRecentBlogPosts = async (): Promise<BlogListItem[]> => {
   try {
-    const response: ApiResponse<any[]> = await getRecentBlogPosts();
+    const response = await getRecentBlogPosts() as unknown as ApiResponse<ApiPost[]>;
     
     // Check if response has notFound property
     if (response.notFound) {
@@ -533,10 +574,10 @@ export const fetchRecentBlogPosts = async (): Promise<BlogListItem[]> => {
     
     // Transform the API response to match our interface
     if (response.data && Array.isArray(response.data)) {
-      return response.data.map((post: any) => ({
-        id: post.id || post.blogId,
-        title: post.title || post.blogTitle,
-        slug: post.slug || post.blogSlug,
+      return response.data.map((post: ApiPost) => ({
+        id: post.id || post.blogId || '',
+        title: post.title || post.blogTitle || '',
+        slug: post.slug || post.blogSlug || '',
         date: post.date || post.publishDate?.split('-')[2] || '22',
         month: post.month || post.publishDate?.split('-')[1] || 'Nov',
         year: post.year || post.publishDate?.split('-')[0] || '2023',
@@ -547,7 +588,7 @@ export const fetchRecentBlogPosts = async (): Promise<BlogListItem[]> => {
     }
     
     return [];
-  } catch (error) {
+  } catch {
     // TODO: REMOVE HARDCODED DATA WHEN API IS READY
     console.log('API not available, using hardcoded fallback data for recent posts');
     return [
@@ -591,7 +632,7 @@ export const fetchRecentBlogPosts = async (): Promise<BlogListItem[]> => {
 // TODO: REMOVE HARDCODED DATA WHEN API IS READY
 export const fetchAllBlogCategories = async (): Promise<BlogCategory[]> => {
   try {
-    const response: ApiResponse<any[]> = await getBlogCategory();
+    const response = await getBlogCategory() as unknown as ApiResponse<ApiCategory[]>;
     
     if (response.notFound) {
       throw new Error('Blog categories not found');
@@ -599,17 +640,17 @@ export const fetchAllBlogCategories = async (): Promise<BlogCategory[]> => {
     
     const categories = response.data || response;
     if (Array.isArray(categories)) {
-      return categories.map((cat: any) => ({
-        id: cat.id || cat.categoryId,
-        slug: cat.slug || cat.categorySlug,
-        title: cat.title || cat.categoryName,
-        description: cat.description || cat.categoryDescription,
+      return categories.map((cat: ApiCategory) => ({
+        id: cat.id || cat.categoryId || '',
+        slug: cat.slug || cat.categorySlug || '',
+        title: cat.title || cat.categoryName || '',
+        description: cat.description || cat.categoryDescription || '',
         postCount: cat.postCount || cat.blogCount || 0
       }));
     }
     
     return [];
-  } catch (error) {
+  } catch {
     // TODO: REMOVE HARDCODED DATA WHEN API IS READY
     console.log('API not available, using hardcoded fallback data for all categories');
     return [
@@ -694,7 +735,7 @@ export const fetchAllBlogCategories = async (): Promise<BlogCategory[]> => {
   }
 };
 
-export const searchBlogPosts = async (query: string): Promise<BlogListItem[]> => {
+export const searchBlogPosts = async (): Promise<BlogListItem[]> => {
   // This would need to be implemented in the API if not already available
   throw new Error('Search functionality not implemented in API');
 };

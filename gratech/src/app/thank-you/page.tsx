@@ -1,9 +1,6 @@
 "use client";
 
-import Wrapper from "@/layouts/Wrapper";
 import Link from "next/link";
-import Image from "next/image";
-import shape from "@/assets/images/icon/section-title.png";
 import NewsletterSection from "@/components/common/NewsletterSection";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import FooterOne from "@/layouts/footers/FooterOne";
@@ -51,7 +48,7 @@ const ThankYouPage = () => {
                   </div>
                   
                                      <p className="text-white mb-4" style={{ fontSize: '1.1rem', opacity: 0.9, lineHeight: 1.6 }}>
-                     We'll get back to you within 24 hours.
+                     We&apos;ll get back to you within 24 hours.
                    </p>
                   
                   <div style={{

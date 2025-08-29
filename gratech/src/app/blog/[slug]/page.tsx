@@ -55,7 +55,7 @@ const CTABox = () => {
         opacity: '0.8',
         transform: 'rotate(5deg)'
       }}>
-        "
+        &quot;
       </div>
       {/* Decorative elements */}
       <div style={{
@@ -129,7 +129,7 @@ const CTABox2 = () => {
         opacity: '0.8',
         transform: 'rotate(5deg)'
       }}>
-        "
+        &quot;
       </div>
       {/* Decorative elements */}
       <div style={{
@@ -168,7 +168,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.content.excerpt,
     };
-  } catch (error) {
+  } catch {
     return {
       title: 'Blog Not Found',
       description: 'The requested blog post could not be found.',
@@ -185,11 +185,10 @@ export async function generateStaticParams() {
 
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params;
-  let post;
   
   try {
-    post = await fetchBlogPostBySlug(slug);
-  } catch (error) {
+    await fetchBlogPostBySlug(slug);
+  } catch {
     notFound();
   }
 
@@ -271,16 +270,16 @@ export default async function BlogDetailPage({ params }: Props) {
                       <p style={{ marginBottom: '20px' }}><strong>Answer:</strong> Key advantages of using Node.js for microservices include flexibility, non-blocking I/O nature for easy scaling, rapid performance, a rich ecosystem of libraries, and improved developer productivity.</p>
                       
                       <h4 style={{ fontWeight: 600, marginBottom: '10px', color: '#0f7a95' }}>14. What is REPL in Node.js?</h4>
-                      <p style={{ marginBottom: '20px' }}><strong>Answer:</strong> REPL in Node.js stands for Read, Evaluate, Print, Loop, representing a computer environment. It's similar to a Windows shell where the command is entered, and the system responds with an output.</p>
+                      <p style={{ marginBottom: '20px' }}><strong>Answer:</strong> REPL in Node.js stands for Read, Evaluate, Print, Loop, representing a computer environment. It&apos;s similar to a Windows shell where the command is entered, and the system responds with an output.</p>
                       
                       <h4 style={{ fontWeight: 600, marginBottom: '10px', color: '#0f7a95' }}>15. How will you implement authentication and authorization?</h4>
-                      <p style={{ marginBottom: '20px' }}><strong>Answer:</strong> Authentication refers to the process of verifying a user's identity and it can be implemented using libraries like passport for OAuth and JWT. Authorization refers to determining what actions to perform and can be implemented by defining user roles and permissions in middleware functions.</p>
+                      <p style={{ marginBottom: '20px' }}><strong>Answer:</strong> Authentication refers to the process of verifying a user&apos;s identity and it can be implemented using libraries like passport for OAuth and JWT. Authorization refers to determining what actions to perform and can be implemented by defining user roles and permissions in middleware functions.</p>
                       
                       <h4 style={{ fontWeight: 600, marginBottom: '10px', color: '#0f7a95' }}>16. What is the difference between setTimeout and setImmediate?</h4>
                       <p style={{ marginBottom: '20px' }}><strong>Answer:</strong> The main difference between setTimeout and setImmediate is that the setTimeout is used to hold a function and execute it after a specific time. While setImmediate is used to execute the callback function immediately.</p>
                       
                       <p style={{ marginTop: '30px', fontSize: '16px', lineHeight: '1.6' }}>
-                        So, these are some of the essential node.js interview questions that executives should ask while hiring node js developers. Aside from the technical interview questions, it is also essential to check for the soft skills of the programmers including, communication, creative problem-solving, time management, etc. This helps to hire the right coder who possesses work creativity along with tech expertise to be productive in the workplace. Now let's check out some Nodejs interview tips to consider.
+                        So, these are some of the essential node.js interview questions that executives should ask while hiring node js developers. Aside from the technical interview questions, it is also essential to check for the soft skills of the programmers including, communication, creative problem-solving, time management, etc. This helps to hire the right coder who possesses work creativity along with tech expertise to be productive in the workplace. Now let&apos;s check out some Nodejs interview tips to consider.
                       </p>
                       
                       {/* Fourth CTA Box - After 16th question */}
@@ -314,7 +313,7 @@ export default async function BlogDetailPage({ params }: Props) {
                           marginBottom: '20px',
                           color: '#2c3e50'
                         }}>
-                          <strong>Comprehensive testing is crucial for code quality.</strong> Hence while hiring node js developers assess the candidate's knowledge about testing frameworks and methodologies, like unit and integration testing, and discuss their strategies in the interview.
+                          <strong>Comprehensive testing is crucial for code quality.</strong> Hence while hiring node js developers assess the candidate&apos;s knowledge about testing frameworks and methodologies, like unit and integration testing, and discuss their strategies in the interview.
                         </p>
                         
                         <p style={{ 
@@ -341,7 +340,7 @@ export default async function BlogDetailPage({ params }: Props) {
                           marginBottom: '20px',
                           color: '#2c3e50'
                         }}>
-                          <strong>Candidates often lack preparation for technical Node.js questions,</strong> particularly about its architecture and core modules. It's important to evaluate their familiarity with the Node.js ecosystem and libraries.
+                          <strong>Candidates often lack preparation for technical Node.js questions,</strong> particularly about its architecture and core modules. It&apos;s important to evaluate their familiarity with the Node.js ecosystem and libraries.
                         </p>
                         
                         <p style={{ 
@@ -369,7 +368,7 @@ export default async function BlogDetailPage({ params }: Props) {
                           marginBottom: '20px',
                           color: '#2c3e50'
                         }}>
-                          In this blog, we covered some of the essential Nodejs interview questions to ask while hiring. As we discussed it's crucial to identify the soft skills of programmers along with their technical expertise.
+                          In this blog, we covered some of the essential Nodejs interview questions to ask while hiring. As we discussed it&apos;s crucial to identify the soft skills of programmers along with their technical expertise.
                         </p>
                         
                         <p style={{ 

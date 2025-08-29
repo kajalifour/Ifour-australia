@@ -75,7 +75,7 @@ const ThankYouPage: React.FC = () => {
             textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
           }}
         >
-          We appreciate your response. We'll reach out to you shortly.
+          We appreciate your response. We&apos;ll reach out to you shortly.
         </p>
 
         {/* Action Buttons */}

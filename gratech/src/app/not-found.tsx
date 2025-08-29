@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import shape from "@/assets/images/icon/section-title.png";
 import NewsletterSection from "@/components/common/NewsletterSection";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import FooterOne from "@/layouts/footers/FooterOne";
@@ -48,7 +46,7 @@ const NotFoundPage = () => {
                      </div>
                      
                      <p className="mb-4" style={{ fontSize: '1.1rem', color: '#666', lineHeight: 1.6 }}>
-                       The page you're looking for doesn't exist or has been moved.
+                       The page you&apos;re looking for doesn&apos;t exist or has been moved.
                      </p>
                      
                      <div style={{
