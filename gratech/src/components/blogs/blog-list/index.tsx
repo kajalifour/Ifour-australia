@@ -1,15 +1,17 @@
-import BreadCrumb from "@/components/common/BreadCrumb"
 import FooterOne from "@/layouts/footers/FooterOne"
 import HeaderOne from "@/layouts/headers/HeaderOne"
 import BlogListArea from "./BlogListArea"
+import BlogBanner from "../BlogBanner"
+import NewsletterSection from "@/components/common/NewsletterSection"
 
 const BlogList = () => {
    return (
       <>
          <HeaderOne />
          <main>
-            <BreadCrumb sub_title="Blog" title="Blog" />
+            <BlogBanner pageName="Blog" />
             <BlogListArea />
+            <NewsletterSection />
          </main>
          <FooterOne />
       </>

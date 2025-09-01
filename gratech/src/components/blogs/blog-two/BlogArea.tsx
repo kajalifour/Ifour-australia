@@ -4,7 +4,7 @@ import ReactPaginate from "react-paginate";
 import Image from "next/image"
 import Link from "next/link"
 import bolg_data from "@/data/BlogData";
-import BlogSidebar from "../blog-sidebar";
+import BlogSidebar from "../BlogSidebar";
 
 const BlogArea = () => {
 

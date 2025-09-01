@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link";
 import BlogComment from "./BlogComment";
-import BlogSidebar from "../blog-sidebar";
+import BlogSidebar from "../BlogSidebar";
 
 import blog_thumb1 from "@/assets/images/blog/blog-single-image1.jpg"
 import blog_thumb2 from "@/assets/images/blog/blog-single-sm1.jpg"
