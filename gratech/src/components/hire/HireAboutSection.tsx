@@ -75,88 +75,50 @@ const HireAboutSection: React.FC<HireAboutSectionProps> = ({
                                 }}>
                                     {description}
                                 </p>
+                                
+                                {/* CTA Button - Positioned above the CTA section */}
+                                <div className="cta-button-section" style={{ marginTop: '40px' }}>
+                                    <a 
+                                        href="/contact" 
+                                        className="btn-one"
+                                        style={{
+                                            display: 'inline-block',
+                                            backgroundColor: '#0f7a95',
+                                            color: 'white',
+                                            padding: '15px 30px',
+                                            borderRadius: '8px',
+                                            textDecoration: 'none',
+                                            fontSize: '18px',
+                                            fontWeight: '600',
+                                            transition: 'all 0.3s ease',
+                                            boxShadow: '0 4px 15px rgba(15, 122, 149, 0.2)',
+                                            border: 'none',
+                                            cursor: 'pointer'
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.backgroundColor = '#0a5a6a';
+                                            e.currentTarget.style.transform = 'translateY(-2px)';
+                                            e.currentTarget.style.boxShadow = '0 6px 20px rgba(15, 122, 149, 0.3)';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.backgroundColor = '#0f7a95';
+                                            e.currentTarget.style.transform = 'translateY(0)';
+                                            e.currentTarget.style.boxShadow = '0 4px 15px rgba(15, 122, 149, 0.2)';
+                                        }}
+                                    >
+                                        Schedule Your Free Consultation
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 )}
                 <div className="row g-4">
-                    {/* Left Side - Hiring Options */}
+                    {/* Left Side - Empty for spacing */}
                     <div className="col-xl-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="section-header mb-40">
-                                                         {/* Hiring Options Section - Left Side */}
-                             <div className="hiring-options wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms" style={{ marginTop: '0px' }}>
-                                 <h4 style={{ color: '#0f7a95', marginTop: '40px', marginBottom: '15px', fontSize: '24px', fontWeight: '600' }}>
-                                     {hiringOptions.title}
-                                 </h4>
-                                <p style={{ color: '#666', marginBottom: '20px', fontSize: '16px' }}>
-                                    {hiringOptions.subtitle || "You can hire professionals in two ways:"}
-                                </p>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                    {hiringOptions.options.map((option, index) => (
-                                        <li key={index} style={{ 
-                                            color: '#0f7a95', 
-                                            fontSize: '18px', 
-                                            fontWeight: '500',
-                                            marginBottom: '10px',
-                                            display: 'flex',
-                                            alignItems: 'center'
-                                        }}>
-                                            <span style={{ 
-                                                marginRight: '10px', 
-                                                fontSize: '20px',
-                                                fontWeight: 'bold'
-                                            }}>
-                                                -
-                                            </span>
-                                            {option}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
                     </div>
 
-                    {/* Right Side - Hiring Process Steps */}
-                    <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="hiring-process-section" style={{ marginTop: '0px' }}>
-                            <h4 style={{ color: '#0f7a95', marginTop: '20px', marginBottom: '25px', fontSize: '24px', fontWeight: '600' }}>
-                                {hiringProcess.title}
-                            </h4>
-                            <div className="process-steps">
-                                {hiringProcess.steps.map((step, index) => (
-                                    <div key={index} className="process-step" style={{ marginBottom: '15px' }}>
-                                        <div style={{
-                                            backgroundColor: '#0f7a95',
-                                            color: 'white',
-                                            padding: '15px 20px',
-                                            borderRadius: '8px',
-                                            fontSize: '16px',
-                                            fontWeight: '500',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            transition: 'all 0.3s ease',
-                                            cursor: 'pointer',
-                                            boxShadow: '0 4px 15px rgba(15, 122, 149, 0.2)'
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.currentTarget.style.backgroundColor = '#0a5a6a';
-                                            e.currentTarget.style.transform = 'translateX(5px)';
-                                            e.currentTarget.style.boxShadow = '0 6px 20px rgba(15, 122, 149, 0.3)';
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.currentTarget.style.backgroundColor = '#0f7a95';
-                                            e.currentTarget.style.transform = 'translateX(0)';
-                                            e.currentTarget.style.boxShadow = '0 4px 15px rgba(15, 122, 149, 0.2)';
-                                        }}>
-                                            <span style={{ lineHeight: '1.4', color: '#ffffff' }}>
-                                                {step}
-                                            </span>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                    {/* Right Side - Removed */}
                 </div>
             </div>
         </section>

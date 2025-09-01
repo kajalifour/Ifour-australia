@@ -27,6 +27,7 @@ const menu_data: MenuItem[] = [
         title: "Home",
         link: "/",
         has_dropdown: false,
+        hidden: true, // Hide from desktop menu, show only in mobile
     },
     {
         id: 2,

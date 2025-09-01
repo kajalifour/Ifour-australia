@@ -88,7 +88,7 @@ const MobileMenu = () => {
                            )}
                         </>
                      )}
-                     {menu.sub_menus && (
+                     {menu.has_dropdown && menu.sub_menus && (
                         <a
                            className={`mean-expand ${navTitle === menu.title ? "mean-clicked" : ""}`}
                            onClick={() => openMobileMenu(menu.title)}

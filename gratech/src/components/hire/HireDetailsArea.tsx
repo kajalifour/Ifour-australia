@@ -1271,7 +1271,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
               {data.showMainServiceSection !== false && <MainServiceSection data={data} />}
             
             {/* Technologies List Section - Only for Technology Pages (Right after main service section) */}
-            {isTechnologyPage && (
+            {isTechnologyPage && data.showTechnologiesList !== false && (
                 <TechnologiesListSection 
                     data={{
                         hiringOptions: data.hireAboutSection?.hiringOptions,
@@ -1352,13 +1352,16 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
             
 
             
-            {/* Hire CTA Section - Positioned after services grid (hire pages only) */}
-            {!isTechnologyPage && (
+            {/* Hire CTA Section - Positioned after services grid */}
             <HireCTA 
                 title={data.ctaTitle || "Looking for reliable bespoke software development solutions?"}
                 buttonText={data.ctaButtonText || "GET STARTED NOW"}
                 buttonLink={data.ctaButtonLink || "/contact"}
             />
+            
+            {/* Technologies Section - Show after CTA for technology pages */}
+            {data.showTechnologies && (
+                <TechnologiesSection data={data} />
             )}
             
             {/* ServiceTwo Section - Additional services below CTA (hire pages only) */}
