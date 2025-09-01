@@ -111,21 +111,21 @@ const Banner = () => {
                   <div className="container">
                      <div className="banner__content">
                         <h4 data-animation="slideInRight" data-duration="2s" data-delay=".3s"
-                           className="text-white mb-20">
+                           className="mb-20" style={{ color: '#000000' }}>
                            <svg className="me-1" width="40" height="16" viewBox="0 0 40 16" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
                               <rect x="0.5" y="0.500183" width="25.6667" height="15" rx="7.5"
-                                 stroke="white" />
+                                 stroke="black" />
                               <rect x="13.3334" y="0.000183105" width="26.6667" height="16" rx="8"
-                                 fill="white" />
+                                 fill="black" />
                            </svg>
                            {item.sub_title}
                         </h4>
                         <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s" className="text-white">
                            <span style={{ color: '#0f7a95' }}>Shaping Success through Innovation & Technology</span>
-                           <span style={{ color: 'white' }}> Since 2013</span>
+                           <span style={{ color: '#000000' }}> Since 2013</span>
                         </h1>
-                        <p data-animation="slideInRight" data-duration="2s" data-delay=".7s" className="mt-20">
+                        <p data-animation="slideInRight" data-duration="2s" data-delay=".7s" className="mt-20" style={{ color: '#000000' }}>
                            {item.desc}
                         </p>
                         <a data-animation="slideInRight" data-duration="2s" data-delay=".9s" href="about.html"

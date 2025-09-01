@@ -1,6 +1,3 @@
-"use client"
-import { useState } from "react";
-import VideoPopup from "@/modals/VideoPopup";
 import Image from "next/image"
 
 import about_thumb1 from "@/assets/images/about/about-image1.jpg"
@@ -10,7 +7,6 @@ import shape_2 from "@/assets/images/shape/about-circle.png"
 import shape_3 from "@/assets/images/icon/section-title.png"
 
 const About = () => {
-   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
    return (
       <div>
@@ -26,13 +22,6 @@ const About = () => {
                            <Image src={about_thumb1} alt="image" />
                         </div>
                         <div className="image sm-image" style={{ marginTop: '70px' }}>
-                           <div className="video__btn-wrp">
-                              <div className="video-btn video-pulse">
-                                 <a onClick={() => setIsVideoOpen(true)} style={{ cursor: "pointer" }} className="video-popup">
-                                    <i className="fa-solid fa-play"></i>
-                                 </a>
-                              </div>
-                           </div>
                            <Image src={about_thumb2} alt="image" />
                         </div>
                         <div className="circle-shape">
@@ -60,11 +49,6 @@ const About = () => {
                </div>
             </div>
          </section>
-         <VideoPopup
-            isVideoOpen={isVideoOpen}
-            setIsVideoOpen={setIsVideoOpen}
-            videoId="eEzD-Y97ges"
-         />
       </div>
    )
 }
