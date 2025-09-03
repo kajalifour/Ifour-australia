@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllBlog } from "@/utils/api";
+import styles from "./BlogMainSection.module.css";
 
 interface Blog {
   id: string;
@@ -64,25 +65,26 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
   }
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-8 col-md-12">
+    <div className={`${styles.blogMainSection}`} style={{ width: '100%', maxWidth: '100%', margin: 0, padding: 0 }}>
+      <div className="container" style={{ maxWidth: '100%', width: '100%', margin: 0, padding: 0 }}>
+        <div className="row" style={{ margin: 0, width: '100%' }}>
+          <div className="col-lg-8 col-md-12" style={{ width: '100%', maxWidth: '100%', flex: '0 0 100%', padding: 0, margin: 0 }}>
           {blogs.length > 0 ? (
             blogs.map(
               (blog, i) =>
                 blog.isPublished && (
                   <React.Fragment key={blog.id}>
-                    <article className="post clearfix post-standar fl-sd wow fadeInUp">
-                      <div className="featured-post">
+                    <article className={`post clearfix post-standar fl-sd wow fadeInUp ${styles.blogPost}`} style={{ width: '100%', maxWidth: '100%', marginLeft: 0, marginRight: 0, paddingLeft: 0, paddingRight: 0 }}>
+                      <div className={`featured-post ${styles.featuredPost}`} style={{ width: '100%', maxWidth: '100%', margin: 0, padding: 0 }}>
                         <Link href={`/blog/${blog.slug}`}>
                           <Image
                             alt={blog.alt || blog.postTitle}
                             src={blog.fileName}
-                            width={770}
-                            height={450}
+                            width={900}
+                            height={540}
                             quality={100}
                             priority={i === 0}
-                            style={{ objectFit: 'cover' }}
+                            style={{ objectFit: 'cover', width: '100%', maxWidth: '100%', margin: 0, padding: 0 }}
                             placeholder="blur"
                             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                             onError={(e) => {
@@ -92,14 +94,14 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                           />
                         </Link>
                       </div>
-                      <div className="content-post">
+                      <div className={`content-post ${styles.contentPost}`}>
                         <div
                           className="themesflat-spacer clearfix"
                           data-desktop={31}
                           data-mobile={10}
                           data-smobile={10}
                         />
-                        <ul className="meta">
+                        <ul className={`meta ${styles.meta}`}>
                           <li className="author">
                             <Link href={`/blog/${blog.slug}`}>
                               {blog.authorName}
@@ -111,12 +113,12 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                             </Link>
                           </li>
                         </ul>
-                        <h1 className="title-post">
+                        <h2 className={`blog-title-small ${styles.blogTitleSmall}`}>
                           <Link href={`/blog/${blog.slug}`}>
                             {blog.postTitle}
                           </Link>
-                        </h1>
-                        <p>
+                        </h2>
+                        <p className={styles.blogExcerpt} style={{ paddingLeft: 0, marginLeft: 0, textIndent: 0, textAlign: 'left' }}>
                           {blog.postContent.length > 160
                             ? `${blog.postContent.slice(0, 160)}...`
                             : blog.postContent}
@@ -127,10 +129,33 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                           data-mobile={10}
                           data-smobile={10}
                         />
-                        <div className="flat-read-more">
+                        <div className={`flat-read-more ${styles.readMoreContainer}`}>
                           <Link
                             href={`/blog/${blog.slug}`}
-                            className="themesflat-button bg-accent btn-read-more"
+                            className={`themesflat-button bg-accent btn-read-more ${styles.readMoreButton}`}
+                            style={{
+                              display: 'inline-block',
+                              padding: '10px 20px',
+                              fontSize: '13px',
+                              fontWeight: '500',
+                              textTransform: 'none',
+                              letterSpacing: '0.3px',
+                              borderRadius: '4px',
+                              background: 'white',
+                              color: '#0f7a95',
+                              textDecoration: 'none',
+                              border: '2px solid #0f7a95',
+                              cursor: 'pointer',
+                              transition: 'all 0.3s ease'
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background = '#0f7a95';
+                              e.currentTarget.style.color = 'white';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = 'white';
+                              e.currentTarget.style.color = '#0f7a95';
+                            }}
                           >
                             <span>Read More</span>
                           </Link>
@@ -182,5 +207,6 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
         />
       </div>
     </div>
+  </div>
   );
 }

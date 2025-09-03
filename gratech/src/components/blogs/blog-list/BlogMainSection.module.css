@@ -1,0 +1,265 @@
+/* Blog Main Section Styles */
+.blogTitleSmall {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  margin: 0 0 15px 0 !important;
+  color: #2c3e50 !important;
+  font-family: 'Kumbh Sans', sans-serif !important;
+}
+
+/* Override container constraints to use full left side width */
+.blogMainSection {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.blogMainSection .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.blogMainSection .row {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.blogMainSection .col-lg-8 {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Force full width for blog posts */
+.blogMainSection .blogPost {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Ensure images use full width */
+.blogMainSection .featuredPost {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.blogMainSection .featuredPost img {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.blogTitleSmall a {
+  color: #2c3e50 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.blogTitleSmall a:hover {
+  color: #0f7a95 !important;
+}
+
+/* Blog post styling - Elegant and sober design */
+.blogPost {
+  margin-bottom: 40px !important;
+  padding: 0 !important;
+  background: #fff !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  position: relative !important;
+  border: 1px solid #f0f0f0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.blogPost:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  border-color: #e0e0e0 !important;
+}
+
+/* Clean image container */
+.featuredPost {
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* Clean image styling */
+.featuredPost img {
+  transition: transform 0.3s ease !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 400px !important;
+  max-height: 500px !important;
+  object-fit: cover !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.blogPost:hover .featuredPost img {
+  transform: scale(1.02) !important;
+}
+
+.contentPost {
+  padding: 20px 25px 25px !important;
+  text-align: left !important;
+}
+
+.meta {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 15px 0 !important;
+  display: flex !important;
+  gap: 20px !important;
+  font-size: 13px !important;
+  color: #6b7280 !important;
+  font-weight: 400 !important;
+}
+
+.meta li {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.meta li:not(:last-child)::after {
+  content: '•' !important;
+  position: absolute !important;
+  right: -12px !important;
+  color: #d1d5db !important;
+  font-size: 14px !important;
+}
+
+.meta li a {
+  color: #6b7280 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+  font-weight: 400 !important;
+}
+
+.meta li a:hover {
+  color: #0f7a95 !important;
+}
+
+.blogExcerpt {
+  color: #4b5563 !important;
+  line-height: 1.6 !important;
+  margin: 0 0 20px 0 !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+  letter-spacing: 0.2px !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  text-indent: 0 !important;
+  position: relative !important;
+}
+
+.readMoreContainer {
+  margin-top: 20px !important;
+  text-align: left !important;
+}
+
+.readMoreButton {
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  letter-spacing: 0.3px !important;
+  border-radius: 4px !important;
+  background: white !important;
+  color: #0f7a95 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid #0f7a95 !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+}
+
+.readMoreButton:hover {
+  background: #0f7a95 !important;
+  color: white !important;
+  border-color: #0f7a95 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(15, 122, 149, 0.3) !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .blogTitleSmall {
+    font-size: 18px !important;
+    margin: 0 0 12px 0 !important;
+  }
+  
+  .contentPost {
+    padding: 18px 22px 22px !important;
+  }
+  
+  .meta {
+    gap: 15px !important;
+    font-size: 12px !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .meta li:not(:last-child)::after {
+    display: none !important;
+  }
+  
+  .blogExcerpt {
+    font-size: 14px !important;
+  }
+  
+  .readMoreButton {
+    padding: 9px 18px !important;
+    font-size: 12px !important;
+  }
+  
+  .featuredPost img {
+    min-height: 350px !important;
+    max-height: 400px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .blogTitleSmall {
+    font-size: 16px !important;
+    margin: 0 0 10px 0 !important;
+  }
+  
+  .contentPost {
+    padding: 16px 20px 20px !important;
+  }
+  
+  .meta {
+    gap: 10px !important;
+    font-size: 11px !important;
+  }
+  
+  .featuredPost img {
+    min-height: 300px !important;
+    max-height: 350px !important;
+  }
+}

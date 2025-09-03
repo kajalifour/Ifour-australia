@@ -16,7 +16,7 @@ export default async function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
       <div className="row">
         <div className="col-lg-8 col-md-12 col-sm-12">
           <div className="blog-header">
-            <h1 className="blog-title">{blogDetail?.postTitle}</h1>
+            <h2 className="blog-title">{blogDetail?.postTitle}</h2>
             <div className="meta-info">
               <span className="author">
                 <span className="icons user-icon"></span>
