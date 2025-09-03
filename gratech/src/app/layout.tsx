@@ -2,6 +2,7 @@ import "../styles/index.css";
 import "../../public/assets/sass/style.scss";
 import "../styles/reduced-padding.css";
 import "../styles/blog-content.css";
+import "../../public/assets/css/blog-details.css";
 
 export default function RootLayout({
   children,
