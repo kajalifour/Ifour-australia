@@ -288,7 +288,7 @@ const PackagingIndustryCaseStudy = () => {
               <div className="row g-4 mb-40" style={{ padding: '40px 0' }}>
                 <div className="col-12">
                   <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Conclusion/Results:</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Our customer is now able to analyze environmental changes and carry out impact calculations at different points in a product&apos;s life cycle thanks to the sustainable solution offered by iFour Technolab. Our clients wield more power, and their respective consumers benefit greatly as a result of this well-informed decision-making. Together, we are driving positive transformations in the realm of sustainability assessment, paving the way for a greener and brighter future in Australia.</p>
+                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Our customer is now able to analyze environmental changes and carry out impact calculations at different points in a product's life cycle thanks to the sustainable solution offered by iFour Technolab. Our clients wield more power, and their respective consumers benefit greatly as a result of this well-informed decision-making. Together, we are driving positive transformations in the realm of sustainability assessment, paving the way for a greener and brighter future in Australia.</p>
                 </div>
               </div>
             </div>
@@ -301,7 +301,7 @@ const PackagingIndustryCaseStudy = () => {
             <div className="row g-4 mb-40" style={{ padding: '60px 0' }}>
               <div className="col-12">
                 <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '48px', fontWeight: 700 }}>How we work</h3>
-                <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Let&apos;s unveil our unique software development approach -</h4>
+                <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Let's unveil our unique software development approach -</h4>
                 <div className="text-center">
                   <Image 
                     src="/assets/images/case/casestudyimage-01.png"
@@ -316,7 +316,7 @@ const PackagingIndustryCaseStudy = () => {
           </div>
         </section>
 
-        {/* Client&apos;s Talk Section */}
+        {/* Client's Talk Section */}
         <section id="testimonial-section" className="testimonial-area bg-image pt-120 pb-120" style={{ 
           backgroundImage: `url(/assets/images/bg/testimonial-bg.png)`,
           marginTop: '120px'
@@ -345,7 +345,7 @@ const PackagingIndustryCaseStudy = () => {
                 <div className="section-header mb-40">
                   <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                     <Image className="me-1" src={shape_1} alt="icon" />
-                    Client&apos;s Talk
+                    Client's Talk
                   </h5>
                   <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: 'white' }}>
                     <span style={{ color: '#0f7a95' }}>What Clients Say</span> <span style={{ color: '#000000' }}>About Us</span>

@@ -1,5 +1,5 @@
 import React from "react";
-import BlogMainSection from "../BlogMainSection";
+import BlogMainSection from "./BlogMainSection";
 import BlogSidebar from "../BlogSidebar";
 
 const BlogListArea = () => {

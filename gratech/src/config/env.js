@@ -2,7 +2,7 @@
 export const config = {
   // Use a more reliable fallback or disable API calls when not available
   API_URL: process.env.NEXT_PUBLIC_API_URL || null,
-  SITE_TYPE: '7',
+  SITE_TYPE: '9',
   // Add other configuration variables as needed
 };
 

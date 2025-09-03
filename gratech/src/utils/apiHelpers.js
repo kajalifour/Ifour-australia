@@ -53,7 +53,7 @@ export const validateApiUrl = (url) => {
   try {
     new URL(url);
     return true;
-  } catch {
+  } catch (error) {
     console.error('Invalid API URL:', url);
     return false;
   }
@@ -67,7 +67,7 @@ export const validateApiUrl = (url) => {
 export const createApiOptions = (additionalHeaders = {}) => {
   return {
     headers: { 
-      sitetype: '7',
+      sitetype: '9',
       ...additionalHeaders 
     },
     cache: 'no-store'

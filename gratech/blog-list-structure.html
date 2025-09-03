@@ -1,0 +1,53 @@
+<!-- Blog Listing Content Structure for Admin Panel -->
+<!-- Copy this entire div into your admin "Blog Page Content" field -->
+
+<div class="blog-list-content">
+  <!-- Banner / Intro (optional) -->
+  <div class="blog-list-intro">
+    <h1>Our Blog</h1>
+    <p>Insights, tutorials, and news to help you stay ahead.</p>
+  </div>
+
+  <!-- Categories (optional static titles – real categories come from API on the site) -->
+  <div class="blog-categories">
+    <h3>Categories</h3>
+    <ul>
+      <li><a href="#">Node.js Development</a></li>
+      <li><a href="#">Mobile Development</a></li>
+      <li><a href="#">Web Development</a></li>
+      <li><a href="#">Technology</a></li>
+    </ul>
+  </div>
+
+  <!-- Blog Cards Wrapper -->
+  <div class="blog-cards">
+    <!-- Blog Card -->
+    <article class="blog-card">
+      <a class="blog-card-image" href="/blog/sample-slug">
+        <img src="/assets/images/blog/blog-image1.jpg" alt="Sample Blog Post" />
+      </a>
+      <div class="blog-card-body">
+        <h2 class="blog-card-title">
+          <a href="/blog/sample-slug">Sample Blog Post Title</a>
+        </h2>
+        <div class="blog-card-meta">
+          <span class="date">November 26, 2024</span>
+          <span class="author">by John Doe</span>
+        </div>
+        <p class="blog-card-excerpt">
+          Short introduction of the article goes here. Keep it concise and engaging to encourage clicks.
+        </p>
+        <a class="blog-card-readmore" href="/blog/sample-slug" aria-label="Read more">Read More</a>
+      </div>
+    </article>
+
+    <!-- Duplicate the article block above for more static examples if needed. Real posts load dynamically on the site. -->
+  </div>
+
+  <!-- Pagination Placeholder (the site handles this dynamically) -->
+  <nav class="blog-pagination" aria-label="Blog pagination">
+    <a class="prev" href="#">Previous</a>
+    <span class="current">1</span>
+    <a class="next" href="#">Next</a>
+  </nav>
+</div>

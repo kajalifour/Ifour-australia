@@ -588,7 +588,7 @@ export const fetchRecentBlogPosts = async (): Promise<BlogListItem[]> => {
     }
     
     return [];
-  } catch {
+  } catch (error) {
     // TODO: REMOVE HARDCODED DATA WHEN API IS READY
     console.log('API not available, using hardcoded fallback data for recent posts');
     return [

@@ -11,12 +11,12 @@ import BlogSidebar from '@/components/blogs/BlogSidebar';
 
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
-    const { slug } = await params;
+    const { slug } = params;
     const blogDetailData = await getMetaDataOfPage(slug);
     const blogDetail = await blogDetailData;
 
@@ -46,14 +46,15 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogDetailPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug } = params;
 
   return (
     <>
       <HeaderOne />
       <main>
         <BlogDetailBanner pageName="Blog Details" />
-        <BlogDetailsPage blogSlug={slug} />
+        {/* Force dynamic rendering for always-fresh data */}
+        <BlogDetailsPage slug={slug} />
         <NewsletterSection />
       </main>
       <FooterOne />
