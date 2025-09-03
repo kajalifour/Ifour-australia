@@ -24,7 +24,7 @@ export default function BlogDetailBanner({ pageName }: BlogDetailBannerProps) {
         <Image className="sway__animationX" src={shape_3} alt="shape" />
       </div>
       <div className="container">
-        <h2 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Blog Details</h2>
+        <h1 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Blog Details</h1>
         <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
           <Link href="/">Home</Link>
           <span><i className="fa-regular fa-angles-right mx-2"></i></span>

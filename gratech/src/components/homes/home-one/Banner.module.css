@@ -1,0 +1,37 @@
+/* Banner Custom Styles */
+.custom-banner-text {
+  color: #ffffff !important;
+}
+
+.banner__content h1.custom-banner-text {
+  color: #ffffff !important;
+}
+
+.banner__content h4.custom-banner-text {
+  color: #ffffff !important;
+}
+
+.banner__content p.custom-banner-text {
+  color: #ffffff !important;
+}
+
+/* Override any global banner h1 color */
+.banner__content h1.custom-banner-text span {
+  color: #ffffff !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 767px) {
+  .banner__content h1.custom-banner-text {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .banner__content h4.custom-banner-text {
+    font-size: 1.2rem !important;
+  }
+  
+  .banner__content p.custom-banner-text {
+    font-size: 1rem !important;
+  }
+}

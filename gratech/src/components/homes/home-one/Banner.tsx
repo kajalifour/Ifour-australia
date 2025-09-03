@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import Image from "next/image"
 import { JSX } from "react"
+import styles from "./Banner.module.css"
 
 import line from "@/assets/images/banner/banner-line.png"
 import shape_1 from "@/assets/images/banner/banner-regular-left-shape.png"
@@ -73,14 +74,14 @@ const Banner = () => {
             {banner_data.map((item) => (
                <SwiperSlide key={item.id} className="swiper-slide">
                   <div data-animation="slideInLeft" data-duration="2s" data-delay=".3s"
-                     className="banner__shape-left2">
+                     className="banner__shape-left2 d-none d-md-block">
                      <Image src={shape_1} alt="shape" />
                   </div>
                   <div data-animation="slideInLeft" data-duration="2s" data-delay=".9s"
-                     className="banner__shape-left1">
+                     className="banner__shape-left1 d-none d-md-block">
                      <Image src={shape_2} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />
                   </div>
-                  <div className="banner__shape-left3 wow slideInLeft">
+                  <div className="banner__shape-left3 wow slideInLeft d-none d-md-block">
                      <Image className="sway__animation" src={shape_3} alt="shape" />
                   </div>
                   <div className="banner__shape-right2" data-animation="slideInRight" data-duration="3s"
@@ -111,21 +112,21 @@ const Banner = () => {
                   <div className="container">
                      <div className="banner__content">
                         <h4 data-animation="slideInRight" data-duration="2s" data-delay=".3s"
-                           className="mb-20" style={{ color: '#000000' }}>
+                           className="mb-20" style={{ color: '#ffffff' }}>
                            <svg className="me-1" width="40" height="16" viewBox="0 0 40 16" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
                               <rect x="0.5" y="0.500183" width="25.6667" height="15" rx="7.5"
-                                 stroke="black" />
+                                 stroke="white" />
                               <rect x="13.3334" y="0.000183105" width="26.6667" height="16" rx="8"
-                                 fill="black" />
+                                 fill="white" />
                            </svg>
                            {item.sub_title}
                         </h4>
                         <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s" className="text-white">
-                           <span style={{ color: '#0f7a95' }}>Shaping Success through Innovation & Technology</span>
-                           <span style={{ color: '#000000' }}> Since 2013</span>
+                           <span style={{ color: '#ffffff !important', fontWeight: '600' }}>Shaping Success through Innovation & Technology</span>
+                           <span style={{ color: '#ffffff !important', fontWeight: '600' }}> Since 2013</span>
                         </h1>
-                        <p data-animation="slideInRight" data-duration="2s" data-delay=".7s" className="mt-20" style={{ color: '#000000' }}>
+                        <p data-animation="slideInRight" data-duration="2s" data-delay=".7s" className="mt-20" style={{ color: '#ffffff' }}>
                            {item.desc}
                         </p>
                         <a data-animation="slideInRight" data-duration="2s" data-delay=".9s" href="about.html"

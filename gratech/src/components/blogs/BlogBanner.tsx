@@ -26,7 +26,7 @@ export default function BlogBanner({ pageName, sectionName, sectionHref }: BlogB
         <Image className="sway__animationX" src={shape_3} alt="shape" />
       </div>
       <div className="container">
-        <h2 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">{pageName}</h2>
+        <h1 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: 'white', fontSize: '2.5rem', fontWeight: '700' }}>{pageName}</h1>
         <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
           <Link href="/">Home</Link>
           {sectionName ? (
