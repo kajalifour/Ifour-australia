@@ -1,0 +1,171 @@
+/* Blog Category Page Styles */
+.breadcrumbSection {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbItem:not(:last-child)::after {
+  content: '>';
+  margin-left: 10px;
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.breadcrumbLink {
+  color: #0f7a95;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #0d5a6f;
+}
+
+.breadcrumbActive {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.categoryHeader {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  border: 1px solid #e9ecef;
+}
+
+.categoryTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.categoryDescription {
+  font-size: 1.1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.categoryImage {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.categoryImage:hover {
+  transform: scale(1.05);
+}
+
+.categoryPlaceholder {
+  width: 200px;
+  height: 150px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 1.2rem;
+  border: 2px dashed #d1d5db;
+}
+
+/* Pagination Styles */
+.paginationWrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.paginationButton {
+  padding: 8px 16px;
+  border: 1px solid #0f7a95;
+  background: white;
+  color: #0f7a95;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.paginationButton:hover {
+  background: #0f7a95;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.paginationButtonActive {
+  background: #0f7a95;
+  color: white;
+  border-color: #0f7a95;
+}
+
+.paginationInfo {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .categoryHeader {
+    padding: 30px 20px;
+  }
+  
+  .categoryTitle {
+    font-size: 2rem;
+  }
+  
+  .categoryDescription {
+    font-size: 1rem;
+  }
+  
+  .breadcrumbSection {
+    padding: 15px;
+  }
+  
+  .breadcrumb {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .categoryHeader {
+    padding: 20px 15px;
+  }
+  
+  .categoryTitle {
+    font-size: 1.8rem;
+  }
+  
+  .categoryImage,
+  .categoryPlaceholder {
+    width: 150px;
+    height: 120px;
+  }
+}

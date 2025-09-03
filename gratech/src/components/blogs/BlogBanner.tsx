@@ -8,9 +8,11 @@ import shape_3 from "@/assets/images/banner/inner-banner-shape3.png"
 
 interface BlogBannerProps {
   pageName: string;
+  sectionName?: string;
+  sectionHref?: string;
 }
 
-export default function BlogBanner({ pageName }: BlogBannerProps) {
+export default function BlogBanner({ pageName, sectionName, sectionHref }: BlogBannerProps) {
   return (
     <section className="banner__inner-page bg-image pt-180 pb-180 bg-image"
       style={{ 
@@ -24,9 +26,19 @@ export default function BlogBanner({ pageName }: BlogBannerProps) {
         <Image className="sway__animationX" src={shape_3} alt="shape" />
       </div>
       <div className="container">
-        <h2 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Blog</h2>
+        <h2 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">{pageName}</h2>
         <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
           <Link href="/">Home</Link>
+          {sectionName ? (
+            <>
+              <span><i className="fa-regular fa-angles-right mx-2"></i></span>
+              {sectionHref ? (
+                <Link href={sectionHref}>{sectionName}</Link>
+              ) : (
+                <span>{sectionName}</span>
+              )}
+            </>
+          ) : null}
           <span><i className="fa-regular fa-angles-right mx-2"></i></span>
           <span>{pageName}</span>
         </div>

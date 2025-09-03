@@ -2,16 +2,22 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { getBlogCategory, getRecentBlogPosts } from "@/utils/api";
+import { getBlogCategory, getBlogCategoriesAlternative, getRecentBlogPosts } from "@/utils/api";
 
 interface Category {
   id: string;
-  categoryName: string;
-  categorySlug: string;
+  catId?: number;
+  catTitle?: string;
+  catSlug?: string;
+  categoryName?: string;
+  categorySlug?: string;
+  name?: string;
+  slug?: string;
 }
 
 interface RecentPost {
   id: string;
+  postId?: string;
   slug: string;
   postTitle: string;
   publishedDates: string;
@@ -27,14 +33,19 @@ export default function BlogSidebar() {
       try {
         setLoading(true);
         
-        // Fetch categories and recent posts in parallel
-        const [categoriesResponse, recentPostsResponse] = await Promise.all([
-          getBlogCategory(),
-          getRecentBlogPosts()
-        ]);
+        // Try to get categories from primary endpoint first
+        let categoriesResponse = await getBlogCategory();
+        
+        // If no categories, try alternative endpoint
+        if (!categoriesResponse?.data?.resultSet && !categoriesResponse?.data) {
+          categoriesResponse = await getBlogCategoriesAlternative();
+        }
+        
+        // Get recent posts
+        const recentPostsResponse = await getRecentBlogPosts();
 
-        const categoryList = categoriesResponse?.data?.resultSet || [];
-        const recentPostsList = recentPostsResponse?.data?.resultSet || [];
+        const categoryList = categoriesResponse?.data?.resultSet || categoriesResponse?.data || [];
+        const recentPostsList = recentPostsResponse?.data?.resultSet || recentPostsResponse?.data || [];
 
         setCategories(categoryList);
         setRecentPosts(recentPostsList);
@@ -109,10 +120,11 @@ export default function BlogSidebar() {
           Categories
         </h5>
         <ul className="categories-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-          {categories.map((category) => (
-            <li key={category.id} style={{ marginBottom: '10px' }}>
-              <Link 
-                href={`/blog-category/${category.categorySlug}`}
+          {categories.length > 0 ? (
+            categories.map((category) => (
+              <li key={category.catId || category.id} style={{ marginBottom: '10px' }}>
+                              <Link 
+                href={`/blog-category/${category.catSlug || category.categorySlug || category.slug || category.categoryName?.toLowerCase().replace(/\s+/g, '-')}`}
                 style={{ 
                   color: '#0f7a95', 
                   textDecoration: 'none', 
@@ -125,10 +137,15 @@ export default function BlogSidebar() {
                 onMouseEnter={(e) => e.currentTarget.style.color = '#0a5a6f'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#0f7a95'}
               >
-                {category.categoryName}
+                {category.catTitle || category.categoryName || category.name}
               </Link>
+              </li>
+            ))
+          ) : (
+            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic' }}>
+              No categories available
             </li>
-          ))}
+          )}
         </ul>
       </div>
 
@@ -138,30 +155,36 @@ export default function BlogSidebar() {
           Recent Posts
         </h5>
         <ul className="recent-posts-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-          {recentPosts.map((post) => (
-            <li key={post.id} style={{ marginBottom: '15px', paddingBottom: '15px', borderBottom: '1px solid #f0f0f0' }}>
-              <Link 
-                href={`/blog/${post.slug}`}
-                style={{ 
-                  color: '#333', 
-                  textDecoration: 'none', 
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  display: 'block',
-                  marginBottom: '5px',
-                  lineHeight: '1.4',
-                  transition: 'color 0.3s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#0f7a95'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#333'}
-              >
-                {post.postTitle}
-              </Link>
-              <span style={{ color: '#666', fontSize: '12px' }}>
-                {post.publishedDates}
-              </span>
+          {recentPosts.length > 0 ? (
+            recentPosts.map((post) => (
+              <li key={post.id || post.postId || `post-${post.slug}`} style={{ marginBottom: '15px', paddingBottom: '15px', borderBottom: '1px solid #f0f0f0' }}>
+                <Link 
+                  href={`/blog/${post.slug}`}
+                  style={{ 
+                    color: '#333', 
+                    textDecoration: 'none', 
+                    fontSize: '14px',
+                    fontWeight: '500',
+                    display: 'block',
+                    marginBottom: '5px',
+                    lineHeight: '1.4',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#0f7a95'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = '#333'}
+                >
+                  {post.postTitle}
+                </Link>
+                <span style={{ color: '#666', fontSize: '12px' }}>
+                  {post.publishedDates}
+                </span>
+              </li>
+            ))
+          ) : (
+            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic' }}>
+              No recent posts available
             </li>
-          ))}
+          )}
         </ul>
       </div>
 

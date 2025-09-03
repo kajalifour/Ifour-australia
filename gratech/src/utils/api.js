@@ -15,13 +15,34 @@ export const getAllBlog = async (catSlug,pageNum) => {
 };
 
 export const getBlogCategory = async () => {
-  let response = await fetch(`${URL}/Blog/GetBlogCategory`, {
-    headers: { sitetype: '9' },
-    cache: 'no-store',
-  });
-  response = await response.json();
+  try {
+    let response = await fetch(`${URL}/Blog/GetBlogCategory`, {
+      headers: { sitetype: '9' },
+      cache: 'no-store',
+    });
+    
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('getBlogCategory error:', error);
+    throw error;
+  }
+};
 
-  return response;
+// Alternative category endpoint
+export const getBlogCategoriesAlternative = async () => {
+  try {
+    let response = await fetch(`${URL}/Blog/GetCategories`, {
+      headers: { sitetype: '9' },
+      cache: 'no-store',
+    });
+    
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('getBlogCategoriesAlternative error:', error);
+    return null;
+  }
 };
 
 export const getRecentBlogPosts = async () => {

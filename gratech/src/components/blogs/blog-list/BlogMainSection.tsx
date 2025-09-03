@@ -16,6 +16,7 @@ interface Blog {
   fileName: string;
   alt?: string;
   isPublished: boolean;
+  categoryName?: string;
 }
 
 interface BlogMainSectionProps {
@@ -112,6 +113,13 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                               {blog.publishedDates}
                             </Link>
                           </li>
+                          {blog.categoryName && (
+                            <li className="category">
+                              <Link href={`/blog-category/${blog.categoryName.toLowerCase().replace(/\s+/g, '-')}`}>
+                                {blog.categoryName}
+                              </Link>
+                            </li>
+                          )}
                         </ul>
                         <h2 className={`blog-title-small ${styles.blogTitleSmall}`}>
                           <Link href={`/blog/${blog.slug}`}>
