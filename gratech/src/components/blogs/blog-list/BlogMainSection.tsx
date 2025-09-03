@@ -33,7 +33,7 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
     const fetchBlogs = async () => {
       try {
         setLoading(true);
-        const response = await getAllBlog(categorySlug, pageNum);
+        const response: any = await getAllBlog(categorySlug, pageNum);
         const blogList = response?.data?.blogList?.resultSet || [];
         const pageCount = response?.data?.blogList?.pageCount || 1;
         

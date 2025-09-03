@@ -53,7 +53,7 @@ export default function BlogCategoryPage({
       
       try {
         setLoading(true);
-        const response = await getBlogsOfCategory(categorySlug, currentPageNum);
+        const response: any = await getBlogsOfCategory(categorySlug, currentPageNum);
         const blogList = response?.data?.blogList?.resultSet || [];
         const pageCount = response?.data?.blogList?.pageCount || 1;
         

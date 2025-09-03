@@ -37,15 +37,18 @@ export default function BlogSidebar() {
         let categoriesResponse = await getBlogCategory();
         
         // If no categories, try alternative endpoint
-        if (!categoriesResponse?.data?.resultSet && !categoriesResponse?.data) {
+        if (!(categoriesResponse as any)?.data?.resultSet && !(categoriesResponse as any)?.data) {
           categoriesResponse = await getBlogCategoriesAlternative();
         }
         
         // Get recent posts
         const recentPostsResponse = await getRecentBlogPosts();
 
-        const categoryList = categoriesResponse?.data?.resultSet || categoriesResponse?.data || [];
-        const recentPostsList = recentPostsResponse?.data?.resultSet || recentPostsResponse?.data || [];
+        const categoriesData: any = categoriesResponse as any;
+        const recentPostsData: any = recentPostsResponse as any;
+
+        const categoryList = categoriesData?.data?.resultSet || categoriesData?.data || [];
+        const recentPostsList = recentPostsData?.data?.resultSet || recentPostsData?.data || [];
 
         setCategories(categoryList);
         setRecentPosts(recentPostsList);
