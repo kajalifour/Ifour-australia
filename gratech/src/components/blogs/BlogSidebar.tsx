@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { getBlogCategory, getBlogCategoriesAlternative, getRecentBlogPosts } from "@/utils/api";
+import { getBlogCategory, getBlogCategoriesAlternative, getRecentBlogPosts, getAllBlog } from "@/utils/api";
 
 interface Category {
   id: string;
@@ -41,17 +41,41 @@ export default function BlogSidebar() {
           categoriesResponse = await getBlogCategoriesAlternative();
         }
         
-        // Get recent posts
+        // Get recent posts (API returns by fixed category)
         const recentPostsResponse = await getRecentBlogPosts();
 
         const categoriesData: any = categoriesResponse as any;
         const recentPostsData: any = recentPostsResponse as any;
 
         const categoryList = categoriesData?.data?.resultSet || categoriesData?.data || [];
-        const recentPostsList = recentPostsData?.data?.resultSet || recentPostsData?.data || [];
+        const recentPostsRaw = recentPostsData?.data?.resultSet || recentPostsData?.data || [];
+
+        // Normalize function
+        const normalize = (arr: any[]): RecentPost[] =>
+          (Array.isArray(arr) ? arr : [])
+            .filter((p: any) => p && (p.isPublished === undefined || p.isPublished === true))
+            .map((item: any) => ({
+              id: String(item.id ?? item.postId ?? item.postID ?? item.slug ?? crypto?.randomUUID?.() ?? Math.random()),
+              postId: String(item.postId ?? item.id ?? item.postID ?? ''),
+              slug: item.slug ?? item.postSlug ?? '',
+              postTitle: item.postTitle ?? item.title ?? item.name ?? 'Untitled',
+              publishedDates: item.publishedDates ?? item.publishedDate ?? item.createdAt ?? ''
+            }));
+
+        let recentList: RecentPost[] = normalize(recentPostsRaw);
+        
+        // Fallback: if empty, get from GetAll (first page), regardless of category
+        if (recentList.length === 0) {
+          const allRes: any = await getAllBlog("", 1); // empty catSlug returns all if backend allows
+          const allRaw = allRes?.data?.blogList?.resultSet || [];
+          recentList = normalize(allRaw);
+        }
+
+        // Final limit
+        recentList = recentList.slice(0, 8);
 
         setCategories(categoryList);
-        setRecentPosts(recentPostsList);
+        setRecentPosts(recentList);
       } catch (error) {
         console.error("Error fetching sidebar data:", error);
         setCategories([]);
@@ -126,22 +150,22 @@ export default function BlogSidebar() {
           {categories.length > 0 ? (
             categories.map((category) => (
               <li key={category.catId || category.id} style={{ marginBottom: '10px' }}>
-                              <Link 
-                href={`/blog-category/${category.catSlug || category.categorySlug || category.slug || category.categoryName?.toLowerCase().replace(/\s+/g, '-')}`}
-                style={{ 
-                  color: '#0f7a95', 
-                  textDecoration: 'none', 
-                  fontSize: '14px',
-                  display: 'block',
-                  padding: '8px 0',
-                  borderBottom: '1px solid #f0f0f0',
-                  transition: 'color 0.3s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#0a5a6f'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#0f7a95'}
-              >
-                {category.catTitle || category.categoryName || category.name}
-              </Link>
+                <Link 
+                  href={`/blog-category/${category.catSlug || category.categorySlug || category.slug || category.categoryName?.toLowerCase().replace(/\s+/g, '-')}`}
+                  style={{ 
+                    color: '#0f7a95', 
+                    textDecoration: 'none', 
+                    fontSize: '14px',
+                    display: 'block',
+                    padding: '8px 0',
+                    borderBottom: '1px solid #f0f0f0',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#0a5a6f'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = '#0f7a95'}
+                >
+                  {category.catTitle || category.categoryName || category.name}
+                </Link>
               </li>
             ))
           ) : (
@@ -160,27 +184,35 @@ export default function BlogSidebar() {
         <ul className="recent-posts-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
           {recentPosts.length > 0 ? (
             recentPosts.map((post) => (
-              <li key={post.id || post.postId || `post-${post.slug}`} style={{ marginBottom: '15px', paddingBottom: '15px', borderBottom: '1px solid #f0f0f0' }}>
+              <li
+                key={post.id || post.postId || `post-${post.slug}`}
+                style={{
+                  marginBottom: '14px',
+                  paddingBottom: '14px',
+                  borderBottom: '1px solid #eef2f7',
+                }}
+              >
                 <Link 
                   href={`/blog/${post.slug}`}
                   style={{ 
-                    color: '#333', 
+                    color: '#1f2937',
                     textDecoration: 'none', 
-                    fontSize: '14px',
-                    fontWeight: '500',
+                    fontSize: '15px',
+                    fontWeight: 600,
                     display: 'block',
-                    marginBottom: '5px',
-                    lineHeight: '1.4',
-                    transition: 'color 0.3s ease'
+                    marginBottom: '6px',
+                    lineHeight: '1.5',
+                    transition: 'color 0.2s ease'
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#0f7a95'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = '#333'}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#0f7a95')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#1f2937')}
                 >
                   {post.postTitle}
                 </Link>
-                <span style={{ color: '#666', fontSize: '12px' }}>
-                  {post.publishedDates}
-                </span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#d1d5db', display: 'inline-block' }} />
+                  <span style={{ color: '#6b7280', fontSize: '12px' }}>{post.publishedDates}</span>
+                </div>
               </li>
             ))
           ) : (
