@@ -60,7 +60,7 @@ export default function BlogCategoryPage({
         setBlogs(blogList);
         setTotalPages(pageCount);
       } catch (error) {
-        console.error("Error fetching blogs:", error);
+        // Silent error handling
       } finally {
         setLoading(false);
       }

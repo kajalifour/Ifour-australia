@@ -60,7 +60,6 @@ export async function generateStaticParams() {
       slug: category.catSlug || category.slug || category.categoryName?.toLowerCase().replace(/\s+/g, '-'),
     }));
   } catch (error) {
-    console.error('Error generating static params:', error);
     return [];
   }
 }
@@ -97,7 +96,6 @@ export default async function BlogCategoryPageRoute({ params }: Props) {
       />
     );
   } catch (error) {
-    console.error('Error loading category page:', error);
     notFound();
   }
 }

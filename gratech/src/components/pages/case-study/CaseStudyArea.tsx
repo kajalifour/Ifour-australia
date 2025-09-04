@@ -1,3 +1,4 @@
+"use client";
 import BreadCrumb from "@/components/common/BreadCrumb";
 import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
@@ -43,28 +44,50 @@ const CaseStudyArea = () => {
 
   return (
     <>
+      <style jsx>{`
+        .case-title-responsive {
+          font-size: 1.5rem;
+          line-height: 1.3;
+          margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+          .case-title-responsive {
+            font-size: 1.25rem;
+            line-height: 1.4;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .case-title-responsive {
+            font-size: 1.1rem;
+            line-height: 1.4;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .case-title-responsive {
+            font-size: 1rem;
+            line-height: 1.4;
+          }
+        }
+      `}</style>
       <HeaderOne />
       <main>
         <BreadCrumb title="Our Showcase" sub_title="Our Showcase" />
         
         <section className="case-area pt-60 pb-60">
           <div className="container">
-            <div className="row gx-1 gy-2">
+            <div className="row gx-3 gy-4">
               {specificCaseStudies.map((item) => (
-                <div key={item.id} className="col-xl-6 col-lg-6 col-md-6">
-                  <div className="case__item" style={{ 
-                    transform: 'scale(0.75)', 
-                    transformOrigin: 'top left',
-                    marginBottom: '-50px',
-                    marginLeft: '-50px',
-                    marginRight: '-50px'
-                  }}>
+                <div key={item.id} className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div className="case__item">
                     <div className="image case__image">
                       <Image src={item.thumb} alt="image" />
                     </div>
                     <div className="case__content">
                       <span className="primary-color sm-font">{item.sub_title}</span>
-                      <h3 style={{ fontSize: '200%' }}>
+                      <h3 className="case-title-responsive">
                         <Link href={item.url} className="text-white primary-hover">
                           {item.title}
                         </Link>
