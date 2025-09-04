@@ -3,10 +3,16 @@ import FooterOne from "@/layouts/footers/FooterOne"
 import HeaderOne from "@/layouts/headers/HeaderOne"
 import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
-export const metadata = {
-  title: "Hire Node.js Developers - Gratech IT Services",
-  description: "Hire experienced Node.js developers for your backend and web application projects. Professional Node.js development services.",
+export const metadata = { 
+  title: 'Hire Node.js Developers & Programmers',
+  keywords: 'hire Node.js developers Australia, Node.js development company, Node.js programmers for hire, backend developers, web app development, JavaScript developers', 
+  description: 'Connect with iFour to hire Node.js developers and build robust and feature-oriented web app solutions for your needs.',
+  openGraph: {
+    title: 'Hire Node.js Developers & Programmers',
+    description: 'Connect with iFour to hire Node.js developers and build robust and feature-oriented web app solutions for your needs.',
+  },
 };
+
 
 const page = () => {
   const hireData = {

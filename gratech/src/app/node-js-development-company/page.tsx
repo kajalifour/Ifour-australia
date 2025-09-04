@@ -4,8 +4,13 @@ import HeaderOne from "@/layouts/headers/HeaderOne"
 import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsArea"
 
 export const metadata = {
-  title: "Node.js Development Company - Gratech IT Services",
-  description: "Node.js development services for APIs, real-time apps, and scalable backends.",
+  title: 'Node JS Development Company | Node.js Development Services',
+  keywords: 'Node.js development company, Node JS development services, hire Node.js developers, Node.js web development, Node.js mobile app development, backend development',
+  description: 'Looking for a Node JS development company in Australia? We offer a range of NodeJS development services to build quality web and mobile apps. Contact us today!',
+  openGraph: {
+    title: 'Node JS Development Company | Node.js Development Services',
+    description: 'Looking for a Node JS development company in Australia? We offer a range of NodeJS development services to build quality web and mobile apps. Contact us today!',
+  },
 };
 
 const page = () => {

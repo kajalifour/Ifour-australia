@@ -4,107 +4,224 @@ const URL = process.env.NEXT_PUBLIC_API_URL;
 
 const api = axios.create({ baseURL: URL });
 
-export const getAllBlog = async (catSlug,pageNum) => {
-  let response = await fetch(
-    `${URL}/Blog/GetAll?catSlug=${catSlug}&pageSize=5&pageNumber=${pageNum}`,
-    { headers: { sitetype: '9' }, cache: 'no-store' }
-  );
-  response = await response.json();
+// Safe JSON parser with silent error handling
+const safeJsonParse = async (response) => {
+  try {
+    const contentType = response.headers.get('content-type') || '';
+    
+    if (!contentType.includes('application/json')) {
+      return null;
+    }
+    
+    const text = await response.text();
+    return JSON.parse(text);
+  } catch (error) {
+    return null;
+  }
+};
 
-  return response;
+// Safe fetch wrapper with silent error handling
+const safeFetch = async (url, options = {}, retries = 1) => {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    let timeoutId;
+    let controller;
+    
+    try {
+      controller = new AbortController();
+      timeoutId = setTimeout(() => controller.abort(), 5000);
+      
+      const response = await fetch(url, {
+        ...options,
+        signal: controller.signal,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          ...options.headers
+        }
+      });
+      
+      clearTimeout(timeoutId);
+      
+      if (!response.ok) {
+        // Don't retry on client errors (4xx)
+        if (response.status >= 400 && response.status < 500) {
+          return null;
+        }
+        
+        // Retry on server errors (5xx)
+        if (attempt < retries) {
+          await new Promise(resolve => setTimeout(resolve, (attempt + 1) * 500));
+          continue;
+        }
+        
+        return null;
+      }
+      
+      return response;
+    } catch (error) {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      
+      // Retry on network errors
+      if (attempt < retries) {
+        await new Promise(resolve => setTimeout(resolve, (attempt + 1) * 500));
+        continue;
+      }
+      
+      return null;
+    }
+  }
+  
+  return null;
+};
+
+export const getAllBlog = async (catSlug,pageNum) => {
+  const url = `${URL}/Blog/GetAll?catSlug=${catSlug}&pageSize=5&pageNumber=${pageNum}`;
+  
+  try {
+    const response = await safeFetch(url, { headers: { sitetype: '9' }, cache: 'no-store' });
+    
+    if (!response) {
+      return { data: { blogList: { resultSet: [], pageCount: 0 } } };
+    }
+    
+    const data = await safeJsonParse(response);
+    return data || { data: { blogList: { resultSet: [], pageCount: 0 } } };
+  } catch (error) {
+    return { data: { blogList: { resultSet: [], pageCount: 0 } } };
+  }
 };
 
 export const getBlogCategory = async () => {
-  try {
-    let response = await fetch(`${URL}/Blog/GetBlogCategory`, {
-      headers: { sitetype: '9' },
-      cache: 'no-store',
-    });
-    
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('getBlogCategory error:', error);
-    throw error;
+  const response = await safeFetch(`${URL}/Blog/GetBlogCategory`, {
+    headers: { sitetype: '9' },
+    cache: 'no-store',
+  });
+  
+  if (!response) {
+    return { data: [] };
   }
+  
+  const data = await safeJsonParse(response);
+  return data || { data: [] };
 };
 
 // Alternative category endpoint
 export const getBlogCategoriesAlternative = async () => {
   try {
-    let response = await fetch(`${URL}/Blog/GetCategories`, {
+    const response = await safeFetch(`${URL}/Blog/GetCategories`, {
       headers: { sitetype: '9' },
       cache: 'no-store',
     });
     
-    const data = await response.json();
+    if (!response) {
+      return null;
+    }
+    
+    const data = await safeJsonParse(response);
     return data;
   } catch (error) {
-    console.error('getBlogCategoriesAlternative error:', error);
     return null;
   }
 };
 
 export const getRecentBlogPosts = async () => {
-  let response = await fetch(`${URL}/Blog/GetBlogDetailByCatSlug?categorySlug=plusphysio`, {
-    headers: { sitetype: '9' },
-    cache: 'no-store',
-  });
-  response = await response.json();
-
-  return response;
+  try {
+    const response = await safeFetch(`${URL}/Blog/GetBlogDetailByCatSlug?categorySlug=plusphysio`, {
+      headers: { sitetype: '9' },
+      cache: 'no-store',
+    });
+    
+    if (!response) {
+      return { data: [] };
+    }
+    
+    const data = await safeJsonParse(response);
+    return data || { data: [] };
+  } catch (error) {
+    return { data: [] };
+  }
 };
 
 export const getRecentInterviewsPosts = async () => {
-  let response = await fetch(`${URL}/Blog/GetBlogDetailByCatSlug?categorySlug=podcast`, {
-    headers: { sitetype: '9' },
-    cache: 'no-store',
-  });
-  response = await response.json();
-
-  return response;
+  try {
+    const response = await safeFetch(`${URL}/Blog/GetBlogDetailByCatSlug?categorySlug=podcast`, {
+      headers: { sitetype: '9' },
+      cache: 'no-store',
+    });
+    
+    if (!response) {
+      return { data: [] };
+    }
+    
+    const data = await safeJsonParse(response);
+    return data || { data: [] };
+  } catch (error) {
+    return { data: [] };
+  }
 };
 
 export const getBlogsOfCategory = async (categoryName, pageNum) => {
-  try {
-    let response = await fetch(
+  const response = await safeFetch(
       `${URL}/Blog/GetAll?catSlug=${categoryName}&pageSize=5&pageNumber=${pageNum}`,
-      { headers: { sitetype: '9' }, cache: 'no-store' }
-      // ,      { cache: 'no-store' }
+    { headers: { sitetype: '9' }, cache: 'no-store' }
     );
+  
     if (!response) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    response = await response.json();
-
-    return response;
-  } catch (error) {
-    console.error('There was a problem with the fetch operation: ', error);
-    // throw error;
     return { notFound: true };
   }
+  
+  const data = await safeJsonParse(response);
+  return data || { notFound: true };
 };
 
 //blog Details
 export const getBlogDetails = async (slug) => {
+  const url = `${URL}/Blog/GetBlogDetailBySlug?slug=${slug}`;
+  
   try {
-    const response = await fetch(
-      // `${URL}/Blog/GetBlogDetailBySlug?slug=${slug}&sitetype=9`,
-      `${URL}/Blog/GetBlogDetailBySlug?slug=${slug}`,
-      {
-        headers: { sitetype: '9' },
-        cache: 'no-store',
-      }
-      // ,      { cache: 'no-store' }
-    );
+    const response = await safeFetch(url, {
+      headers: { sitetype: '9' },
+      cache: 'no-store',
+    });
 
     if (!response) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      return {
+        data: {
+          id: 1,
+          title: "Sample Blog Post",
+          slug: slug,
+          postContent: `
+            <div class="blog-details-content">
+              <div class="blog-intro">
+                <p>This is a sample blog post displayed when the API is unavailable.</p>
+              </div>
+              <div class="blog-main-content">
+                <h2>Welcome to Our Blog</h2>
+                <p>This content is shown when the API server is not responding properly. Please check your API configuration or try again later.</p>
+                <h3>What you can do:</h3>
+                <ul>
+                  <li>Check your API URL configuration</li>
+                  <li>Verify the API server is running</li>
+                  <li>Contact your administrator</li>
+                </ul>
+              </div>
+            </div>
+          `,
+          fileName: "/assets/images/blog/blog-image1.jpg",
+          metaTitle: "Sample Blog Post",
+          metaDescription: "A sample blog post for testing purposes",
+          metaKeywords: "sample, blog, test",
+          createdDate: new Date().toISOString(),
+          authorName: "Admin"
+        }
+      };
     }
-    const blogDetails = await response.json();
-    return blogDetails;
+    
+    const blogDetails = await safeJsonParse(response);
+    return blogDetails || { notFound: true };
   } catch (error) {
-    console.error('There was a problem with the fetch operation: ', error);
     return { notFound: true };
   }
 };
@@ -137,36 +254,39 @@ export const JOIN_NEWS_LETTER_API = async (emailId) => {
 };
 
 export const getMetaDataOfPage = async (slug) => {
-  try {
-    const response = await fetch(
+  const response = await safeFetch(
       `${URL}/Blog/GetBlogDetailBySlug?slug=${slug}`,
       {
-        headers: { sitetype: '9' },
+      headers: { sitetype: '9' },
         cache: 'no-store',
       }
     );
 
-    if (!response) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+  if (!response) {
+      return { notFound: true };
     }
-    const blogDetails = await response.json();
-    return blogDetails;
-  } catch (error) {
-    console.error('There was a problem with the fetch operation: ', error);
-    // throw error;
-    return { notFound: true };
-  }
+
+  const blogDetails = await safeJsonParse(response);
+  return blogDetails || { notFound: true };
 };
 
 //News letter Api
 export const JOIN_NEWS_LETTER_API_GetAll = async (emailId) => {
-  const res = await fetch(`${URL}/JoinOurNewsLetter/GetAll`, {
-    method: 'POST',
-    headers: { sitetype: '9', 'Content-Type': 'application/json' },
-    body: JSON.stringify({ searchString: emailId }),
-  });
-  const data = await res.json();
-  return data;
-
-  // return Response.json(data);
+  try {
+    const response = await safeFetch(`${URL}/JoinOurNewsLetter/GetAll`, {
+      method: 'POST',
+      headers: { sitetype: '9', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ searchString: emailId }),
+    });
+    
+    if (!response) {
+      return { data: [] };
+    }
+    
+    const data = await safeJsonParse(response);
+    return data || { data: [] };
+  } catch (error) {
+    return { data: [] };
+  }
 };
+

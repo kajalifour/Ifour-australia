@@ -4,8 +4,13 @@ import HeaderOne from "@/layouts/headers/HeaderOne"
 import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsArea"
 
 export const metadata = {
-  title: ".NET Development Company - Gratech IT Services",
-  description: ".NET development company for enterprise-grade solutions using ASP.NET, Azure, and modern Microsoft stack.",
+  title: '.NET Development Company | ASP.Net Development Services',
+  keywords: '.NET development company, ASP.NET development services, .NET developers Australia, hire ASP.NET developers, .NET web development, ASP.NET app development',
+  description: 'Leading .NET development company in Australia. We provide a range of ASP.NET development services to build powerful apps, games, & websites. Contact us today!',
+  openGraph: {
+    title: '.NET Development Company | ASP.Net Development Services',
+    description: 'Leading .NET development company in Australia. We provide a range of ASP.NET development services to build powerful apps, games, & websites. Contact us today!',
+  },
 };
 
 const page = () => {

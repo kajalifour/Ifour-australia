@@ -4,8 +4,13 @@ import HeaderOne from "@/layouts/headers/HeaderOne"
 import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsArea"
 
 export const metadata = {
-  title: "WPF Application Development Company - Gratech IT Services",
-  description: "WPF application development for modern Windows desktop experiences and enterprise solutions.",
+  title: 'WPF Application Development Company Australia | iFour Technolab',
+  keywords: 'WPF development company, WPF application development, WPF desktop applications, Microsoft solutions partner, custom WPF apps, hire WPF developers, WPF UI design, WPF software development Australia',
+  description: 'iFour Technolab, a Microsoft Solutions Partner, leads in WPF application development in Australia. Our team delivers interactive, user-friendly, and straightforward WPF desktop applications globally.',
+  openGraph: {
+    title: 'WPF Application Development Company Australia | iFour Technolab',
+    description: 'iFour Technolab, a Microsoft Solutions Partner, leads in WPF application development in Australia. Our team delivers interactive, user-friendly, and straightforward WPF desktop applications globally.',
+  },
 };
 
 const page = () => {

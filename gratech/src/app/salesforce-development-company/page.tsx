@@ -4,8 +4,13 @@ import HeaderOne from "@/layouts/headers/HeaderOne"
 import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsArea"
 
 export const metadata = {
-  title: "Salesforce Development Company - Gratech IT Services",
-  description: "Salesforce development, customization, and integration services to extend your CRM capabilities.",
+  title: 'Salesforce Development Company Australia | iFour Technolab',
+  keywords: 'Salesforce development company, Salesforce CRM development, Salesforce consulting, Salesforce customization, Salesforce integration, hire Salesforce developers, Salesforce solutions Australia, iFour Technolab',
+  description: 'iFour Technolab, an outstanding Salesforce Development Company, extends its high-quality services to clients in Australia through industry-specific Salesforce CRM developers.',
+  openGraph: {
+    title: 'Salesforce Development Company Australia | iFour Technolab',
+    description: 'iFour Technolab, an outstanding Salesforce Development Company, extends its high-quality services to clients in Australia through industry-specific Salesforce CRM developers.',
+  },
 };
 
 const page = () => {

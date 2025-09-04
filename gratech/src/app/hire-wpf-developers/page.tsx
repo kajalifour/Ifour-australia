@@ -3,9 +3,14 @@ import FooterOne from "@/layouts/footers/FooterOne"
 import HeaderOne from "@/layouts/headers/HeaderOne"
 import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
-export const metadata = {
-  title: "Hire WPF Developers - Gratech IT Services",
-  description: "Hire experienced WPF developers for your Windows desktop application projects. Professional WPF development services.",
+export const metadata = { 
+  title: 'Hire WPF Developers | Dedicated WPF Experts',
+  keywords: 'hire WPF developers Australia, WPF development company, WPF programmers for hire, desktop app developers, custom WPF applications, .NET developers',
+  description: 'Hire WPF developers in Australia with iFour Technolab who can help you build custom and high-performing WPF apps tailored to your unique business needs.',
+  openGraph: {
+    title: 'Hire WPF Developers | Dedicated WPF Experts',
+    description: 'Hire WPF developers in Australia with iFour Technolab who can help you build custom and high-performing WPF apps tailored to your unique business needs.',
+  },
 };
 
 const page = () => {

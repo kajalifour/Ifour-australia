@@ -3,9 +3,14 @@ import FooterOne from "@/layouts/footers/FooterOne"
 import HeaderOne from "@/layouts/headers/HeaderOne"
 import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
-export const metadata = {
-  title: "Hire Vue.js Developers - Gratech IT Services",
-  description: "Hire experienced Vue.js developers for your web application projects. Professional Vue.js development services.",
+export const metadata = { 
+  title: 'Hire Vue Js Developers | Top VueJs Experts',
+  keywords: 'hire Vue.js developers Australia, Vue.js development company, Vue.js programmers for hire, frontend developers, web app development, JavaScript developers',
+  description: 'Hire Vue Js developers from iFour instantly who match your technical expertise and provide end-to-end development services for your needs.',
+  openGraph: {
+    title: 'Hire Vue Js Developers | Top VueJs Experts',
+    description: 'Hire Vue Js developers from iFour instantly who match your technical expertise and provide end-to-end development services for your needs.',
+  },
 };
 
 const page = () => {

@@ -21,19 +21,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const blogDetail = await blogDetailData;
 
     return {
-      title: blogDetail?.data?.metaTitle || 'Blog Post',
-      description: blogDetail?.data?.metaDescription || 'Read our blog post',
-      keywords: blogDetail?.data?.metaKeywords || 'blog, article',
+      title: blogDetail?.data?.metaTitle || 'Blog Post | iFour Technolabs',
+      description: blogDetail?.data?.metaDescription || 'Read our latest blog post on IT services and technology solutions.',
+      keywords: blogDetail?.data?.metaKeywords || 'blog, article, IT services, technology',
       openGraph: {
+        title: blogDetail?.data?.metaTitle || 'Blog Post | iFour Technolabs',
+        description: blogDetail?.data?.metaDescription || 'Read our latest blog post on IT services and technology solutions.',
         images: blogDetail?.data?.fileName,
-        siteName: "iFour Technolab",
+        siteName: "iFour Technolabs",
         type: "article",
       },
     };
   } catch {
     return {
-      title: 'Blog Not Found',
-      description: 'The requested blog post could not be found.',
+      title: 'Blog Not Found | iFour Technolabs',
+      description: 'The requested blog post could not be found. Explore our other IT and technology blog posts.',
     };
   }
 }

@@ -4,10 +4,14 @@ import HeaderOne from "@/layouts/headers/HeaderOne"
 import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsArea"
 
 export const metadata = {
-  title: "Java Development Company - Gratech IT Services",
-  description: "Java development services for enterprise apps, cloud-native systems, and platform engineering.",
+  title: 'Java Development Company | Java Web & App Development Services',
+  keywords: 'Java development company, Java development services, hire Java developers, custom Java software, Java web development, Java mobile app development, enterprise Java solutions, Australia Java company',
+  description: 'As a leading Java development company in Australia, we offer a range of Java development services to build custom software, web, & mobile apps. Call us!',
+  openGraph: {
+    title: 'Java Development Company | Java Web & App Development Services',
+    description: 'As a leading Java development company in Australia, we offer a range of Java development services to build custom software, web, & mobile apps. Call us!',
+  },
 };
-
 const page = () => {
   const techData = {
     title: "Connect with iFour to Obtain Exceptional Results",

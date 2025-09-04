@@ -4,8 +4,13 @@ import HeaderOne from "@/layouts/headers/HeaderOne"
 import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsArea"
 
 export const metadata = {
-  title: "React.js Development Company - Gratech IT Services",
-  description: "React.js development services for modern, scalable, and high‑performing frontend applications.",
+  title: 'React.js Development Company Australia | iFour',
+  keywords: 'React.js development company, React development services, React web development, React app development, hire React developers, frontend development, JavaScript developers, UI development',
+  description: 'As a leading React.js Development Company in Australia, we provide top-notch React development services worldwide, leveraging the expertise of our industry-specific software developers.',
+  openGraph: {
+    title: 'React.js Development Company Australia | iFour',
+    description: 'As a leading React.js Development Company in Australia, we provide top-notch React development services worldwide, leveraging the expertise of our industry-specific software developers.',
+  },
 };
 
 const page = () => {

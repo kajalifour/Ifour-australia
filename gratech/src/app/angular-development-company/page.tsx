@@ -4,8 +4,13 @@ import HeaderOne from "@/layouts/headers/HeaderOne"
 import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsArea"
 
 export const metadata = {
-  title: "Angular Development Company - Gratech IT Services",
-  description: "Angular development company for web and mobile applications. Professional Angular engineering and consulting.",
+  title: 'Angular Development Company | Angular Development Services',
+   keywords: '',
+  description: 'iFour Technolab - trusted Angular development company offers top-notch Angular development services for your business. Build your next web & mobile app today!',
+  openGraph: {
+    title: 'Angular Development Company | Angular Development Services',
+    description: 'iFour Technolab - trusted Angular development company offers top-notch Angular development services for your business. Build your next web & mobile app today!',
+  },
 };
 
 const page = () => {

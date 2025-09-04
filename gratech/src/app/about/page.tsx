@@ -2,7 +2,13 @@ import About from "@/components/about";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
-  title: "About iFour Teachnolab - IT Service React Next js Template",
+  title: 'About Us | IT Solutions Provider - iFour Technolab AUS',
+  keywords: 'about iFour Technolabs, IT consulting company, IT solutions provider, software development, technology services, business solutions',
+  description: 'As one of the top-notch IT consulting company, iFour leverages the latest technologies and deliver custom-made business solutions to firms of any size.',
+  openGraph: {
+    title: 'About Us | IT Solutions Provider - iFour Technolab AUS',
+    description: 'As one of the top-notch IT consulting company, iFour leverages the latest technologies and deliver custom-made business solutions to firms of any size.',
+  },
 };
 const page = () => {
   return (

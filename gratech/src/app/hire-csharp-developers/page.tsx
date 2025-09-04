@@ -3,11 +3,15 @@ import FooterOne from "@/layouts/footers/FooterOne"
 import HeaderOne from "@/layouts/headers/HeaderOne"
 import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
-export const metadata = {
-  title: "Hire C# Developers - Gratech IT Services",
-  description: "Hire experienced C# developers for your .NET and Windows application projects. Professional C# development services.",
+export const metadata = { 
+  title: 'Hire C Sharp Developers in Australia | Skilled C# Programmers',
+  keywords: 'hire C# developers Australia, C# development company, C# programmers for hire, .NET developers, custom software development, software solutions', 
+  description: 'Hire highly skilled C# developers from iFour with hands-on experience to build custom software for your business.',
+  openGraph: {
+    title: 'Hire C Sharp Developers in Australia | Skilled C# Programmers',
+    description: 'Hire highly skilled C# developers from iFour with hands-on experience to build custom software for your business.',
+  },
 };
-
 const page = () => {
   const hireData = {
     title: "Hire C# Developers to Build Advanced Digital Solutions",

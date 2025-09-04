@@ -80,17 +80,24 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                         <Link href={`/blog/${blog.slug}`}>
                           <Image
                             alt={blog.alt || blog.postTitle}
-                            src={blog.fileName}
+                            src={blog.fileName || '/assets/images/blog/blog-image1.jpg'}
                             width={900}
                             height={540}
                             quality={100}
                             priority={i === 0}
-                            style={{ objectFit: 'cover', width: '100%', maxWidth: '100%', margin: 0, padding: 0 }}
+                            style={{ 
+                              objectFit: 'cover', 
+                              width: '100%', 
+                              maxWidth: '100%', 
+                              margin: 0, 
+                              padding: 0,
+                              borderRadius: '8px'
+                            }}
                             placeholder="blur"
                             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
-                              target.style.display = 'none';
+                              target.src = '/assets/images/blog/blog-image1.jpg';
                             }}
                           />
                         </Link>

@@ -4,10 +4,14 @@ import HeaderOne from "@/layouts/headers/HeaderOne"
 import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
 export const metadata = {
-  title: "Hire Java Developers - Gratech IT Services",
-  description: "Hire experienced Java developers for your enterprise application projects. Professional Java development services.",
+  title: 'Hire Java Developers | iFour Technolabs - Expert Enterprise Development Team',
+  keywords: 'hire Java developers, Java development team, enterprise developers, Java programmers, backend developers, Spring framework developers',
+  description: 'Hire experienced Java developers from iFour Technolabs for your enterprise application projects. Professional Java development services with expert Spring framework and enterprise development skills.',
+  openGraph: {
+    title: 'Hire Java Developers | iFour Technolabs - Expert Enterprise Development Team',
+    description: 'Hire experienced Java developers from iFour Technolabs for your enterprise application projects. Professional Java development services with expert Spring framework and enterprise development skills.',
+  },
 };
-
 const page = () => {
   const hireData = {
     title: "Build Custom Solutions with Our Dedicated Java Developers",

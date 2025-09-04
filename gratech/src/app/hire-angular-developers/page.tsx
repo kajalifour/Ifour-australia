@@ -4,10 +4,14 @@ import HeaderOne from "@/layouts/headers/HeaderOne"
 import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
 export const metadata = {
-  title: "Hire Angular Developers - Gratech IT Services",
-  description: "Hire experienced Angular developers for your web application projects. Professional Angular development services.",
+  title: 'Hire Angular Developers in Australia',
+  keywords: 'hire Angular developers Australia, Angular development company, Angular programmers for hire, frontend developers, Angular solutions, TypeScript developers',
+  description: 'Hire Angular developers in Australia from a top-notch IT company iFour and get robust and feature-rich Angular solutions for your business.',
+  openGraph: {
+    title: 'Hire Angular Developers in Australia',
+    description: 'Hire Angular developers in Australia from a top-notch IT company iFour and get robust and feature-rich Angular solutions for your business.',
+  },
 };
-
 const page = () => {
   const hireData = {
     title: "Connect with iFour to Obtain Exceptional Results",

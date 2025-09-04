@@ -1,4 +1,5 @@
 import React from "react";
+import { Metadata } from 'next';
 import { getBlogCategory, getBlogsOfCategory } from "@/utils/api";
 import { notFound } from "next/navigation";
 import BlogCategoryPage from "@/components/blogs/BlogCategoryPage";
@@ -8,6 +9,47 @@ interface Props {
 }
 
 export const dynamic = 'force-dynamic';
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  try {
+    const { slug } = params;
+    const categories = await getBlogCategory();
+    const categoryList = categories?.data || [];
+    const currentCategory = categoryList.find((cat: any) => 
+      cat.catSlug === slug || 
+      cat.slug === slug || 
+      cat.categoryName?.toLowerCase().replace(/\s+/g, '-') === slug
+    );
+
+    if (currentCategory) {
+      return {
+        title: `${currentCategory.categoryName || slug} - Blog Category | iFour Technolabs`,
+        description: `Explore ${currentCategory.categoryName || slug} blog posts and articles on IT services, technology solutions, and software development.`,
+        keywords: `${currentCategory.categoryName || slug}, blog category, IT blog, technology articles, software development`,
+        openGraph: {
+          title: `${currentCategory.categoryName || slug} - Blog Category | iFour Technolabs`,
+          description: `Explore ${currentCategory.categoryName || slug} blog posts and articles on IT services, technology solutions, and software development.`,
+          siteName: "iFour Technolabs",
+          type: "website",
+        },
+      };
+    }
+  } catch (error) {
+    // Fallback metadata
+  }
+  
+  return {
+    title: 'Blog Category | iFour Technolabs',
+    description: 'Explore our blog categories for IT services, technology solutions, and software development insights.',
+    keywords: 'blog category, IT blog, technology articles, software development',
+    openGraph: {
+      title: 'Blog Category | iFour Technolabs',
+      description: 'Explore our blog categories for IT services, technology solutions, and software development insights.',
+      siteName: "iFour Technolabs",
+      type: "website",
+    },
+  };
+}
 
 export async function generateStaticParams() {
   try {
