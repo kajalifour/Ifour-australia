@@ -155,13 +155,41 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
    const hireContent = gethireContent(title);
 
        return (
-       <section className="banner__inner-page bg-image pt-180 pb-180 bg-image"
-          style={{ 
-             backgroundImage: `linear-gradient(135deg, rgba(15, 122, 149, 0.3) 0%, rgba(13, 107, 127, 0.3) 50%, rgba(10, 90, 106, 0.3) 100%), url(/assets/images/banner/banner-inner-page.jpg)`,
-             backgroundSize: 'cover',
-             backgroundPosition: 'center',
-             backgroundRepeat: 'no-repeat'
-          }}>
+       <>
+         <style jsx>{`
+            .banner__inner-page h1 {
+               color: white;
+               font-size: 2.5rem;
+               font-weight: 700;
+               line-height: 1.2;
+               margin-bottom: 1rem;
+            }
+            @media (max-width: 768px) {
+               .banner__inner-page h1 {
+                  font-size: 2rem;
+                  line-height: 1.3;
+               }
+            }
+            @media (max-width: 576px) {
+               .banner__inner-page h1 {
+                  font-size: 1.75rem;
+                  line-height: 1.4;
+               }
+            }
+            @media (max-width: 480px) {
+               .banner__inner-page h1 {
+                  font-size: 1.5rem;
+                  line-height: 1.4;
+               }
+            }
+         `}</style>
+         <section className="banner__inner-page bg-image pt-180 pb-180 bg-image"
+            style={{ 
+               backgroundImage: `linear-gradient(135deg, rgba(15, 122, 149, 0.3) 0%, rgba(13, 107, 127, 0.3) 50%, rgba(10, 90, 106, 0.3) 100%), url(/assets/images/banner/banner-inner-page.jpg)`,
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+               backgroundRepeat: 'no-repeat'
+            }}>
           {/* Left side shapes - only on home page */}
           {title === "Home" && (
              <>
@@ -178,7 +206,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
              <Image className="sway__animationX" src={shape_3} alt="shape" />
           </div>
          <div className="container">
-           <h1 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: 'white', fontSize: '2.5rem', fontWeight: '700' }}>{title}</h1>
+           <h1 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">{title}</h1>
             <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                <Link href="/">Home</Link>
                <span><i className="fa-regular fa-angles-right mx-2"></i></span>
@@ -289,6 +317,7 @@ const BreadCrumb = ({ sub_title, title }: DataType) => {
              )}
          </div>
       </section>
+      </>
    )
 }
 

@@ -55,6 +55,13 @@ const FooterOne = () => {
                   grid-template-columns: 1fr;
                }
             }
+            /* Hide triangular left side footer shapes on mobile */
+            @media (max-width: 768px) {
+               .footer__shape-regular-left,
+               .footer__shape-solid-left {
+                  display: none !important;
+               }
+            }
          `}</style>
          <div className="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
             <Image src={shape_1} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />

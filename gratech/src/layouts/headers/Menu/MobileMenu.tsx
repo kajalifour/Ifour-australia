@@ -80,7 +80,7 @@ const MobileMenu = () => {
                                  {menu.sub_menus.map((sub_m, i) => (
                                     <li key={i}>
                                        <Link href={sub_m.link} className={`${sub_m.link && isSubMenuItemActive(sub_m.link) ? "active" : ""}`}>
-                                          {sub_m.title}
+                                          {sub_m.mobileTitle || sub_m.title}
                                        </Link>
                                     </li>
                                  ))}

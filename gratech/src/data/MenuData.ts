@@ -3,6 +3,7 @@ import { StaticImageData } from "next/image";
 interface MenuItem {
     id: number;
     title: string;
+    mobileTitle?: string; // short label for mobile
     link: string;
     has_dropdown: boolean;
     hidden?: boolean;
@@ -18,6 +19,7 @@ interface MenuItem {
     sub_menus?: {
         link: string;
         title: string;
+        mobileTitle?: string; // short label for mobile
     }[];
 }
 
@@ -35,14 +37,14 @@ const menu_data: MenuItem[] = [
         link: "#",
         has_dropdown: true,
         sub_menus: [
-            { link: "/custom-software-development-company", title: "Custom Software Dev" },
-            { link: "/desktop-application-development-company", title: "Desktop App Dev" },
-            { link: "/ecommerce-website-development-company", title: "Ecommerce Website Dev" },
-            { link: "/microsoft-365-development-company", title: "Microsoft 365 Dev" },
-            { link: "/microsoft-azure-cloud-services-company", title: "Azure Cloud Services" },
-            { link: "/blockchain-development-company", title: "Blockchain Dev" },
-            { link: "/mobile-app-development-company", title: "Mobile App Dev" },
-            { link: "/iot-software-development-company", title: "IoT Software Dev" }
+            { link: "/custom-software-development-company", title: "Custom Software Development", mobileTitle: "Custom Software Dev" },
+            { link: "/desktop-application-development-company", title: "Desktop Application Development", mobileTitle: "Desktop App Dev" },
+            { link: "/ecommerce-website-development-company", title: "Ecommerce Website Development", mobileTitle: "Ecommerce Website Dev" },
+            { link: "/microsoft-365-development-company", title: "Microsoft 365 Development", mobileTitle: "Microsoft 365 Dev" },
+            { link: "/microsoft-azure-cloud-services-company", title: "Azure Cloud Services", mobileTitle: "Azure Cloud Services" },
+            { link: "/blockchain-development-company", title: "Blockchain Development", mobileTitle: "Blockchain Dev" },
+            { link: "/mobile-app-development-company", title: "Mobile App Development", mobileTitle: "Mobile App Dev" },
+            { link: "/iot-software-development-company", title: "IoT Software Development", mobileTitle: "IoT Software Dev" }
         ],
     },
     {
@@ -51,14 +53,14 @@ const menu_data: MenuItem[] = [
         link: "#",
         has_dropdown: true,
         sub_menus: [
-            { link: "/angular-development-company", title: "Angular Dev" },
-            { link: "/dotnet-development-company", title: ".Net Dev" },
-            { link: "/node-js-development-company", title: "Node.js Dev" },
-            { link: "/c-sharp-development-company", title: "C# Dev" },
-            { link: "/java-development-company", title: "Java Dev" },
-            { link: "/salesforce-development-company", title: "Salesforce Dev" },
-            { link: "/wpf-application-development-company", title: "WPF Dev" },
-            { link: "/reactjs-development-company", title: "React.js Dev" },
+            { link: "/angular-development-company", title: "Angular Development", mobileTitle: "Angular Dev" },
+            { link: "/dotnet-development-company", title: ".NET Development", mobileTitle: ".Net Dev" },
+            { link: "/node-js-development-company", title: "Node.js Development", mobileTitle: "Node.js Dev" },
+            { link: "/c-sharp-development-company", title: "C# Development", mobileTitle: "C# Dev" },
+            { link: "/java-development-company", title: "Java Development", mobileTitle: "Java Dev" },
+            { link: "/salesforce-development-company", title: "Salesforce Development", mobileTitle: "Salesforce Dev" },
+            { link: "/wpf-application-development-company", title: "WPF Application Development", mobileTitle: "WPF Dev" },
+            { link: "/reactjs-development-company", title: "React.js Development", mobileTitle: "React.js Dev" },
         ],
     },
     {

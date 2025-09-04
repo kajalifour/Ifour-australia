@@ -48,7 +48,8 @@ const NavMenu = () => {
                                 {menu.sub_menus.map((sub_m, i) => (
                                     <li key={i}>
                                         <Link href={sub_m.link} className={`${sub_m.link && isSubMenuItemActive(sub_m.link) ? "active" : ""}`}>
-                                            {sub_m.title}
+                                            <span className="d-none d-lg-inline">{sub_m.title}</span>
+                                            <span className="d-inline d-lg-none">{sub_m.mobileTitle || sub_m.title}</span>
                                         </Link>
                                     </li>
                                 ))}
