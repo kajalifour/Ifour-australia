@@ -5,14 +5,14 @@ import { notFound } from "next/navigation";
 import BlogCategoryPage from "@/components/blogs/BlogCategoryPage";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
-    const { slug } = params;
+    const { slug } = await params;
     const categories = await getBlogCategory();
     const categoryList = categories?.data || [];
     const currentCategory = categoryList.find((cat: any) => 
@@ -65,7 +65,7 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogCategoryPageRoute({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
   
   try {
     // Get category details

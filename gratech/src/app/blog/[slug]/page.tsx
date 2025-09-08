@@ -11,12 +11,12 @@ import BlogSidebar from '@/components/blogs/BlogSidebar';
 
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
-    const { slug } = params;
+    const { slug } = await params;
     const blogDetailData = await getMetaDataOfPage(slug);
     const blogDetail = await blogDetailData;
 
@@ -48,7 +48,7 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogDetailPage({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
 
   return (
     <>
