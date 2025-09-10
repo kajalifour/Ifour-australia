@@ -573,6 +573,65 @@ section.blog-area .col-lg-5 {
   text-decoration: none !important;
 }
 
+/* Additional rules for home page blog section */
+#blog-section .blog__content h3 a,
+#blog-section .blog__content h3 a:visited,
+#blog-section .blog__content h3 a:hover,
+#blog-section .blog__content h3 a:focus {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+#blog-section .primary-hover,
+#blog-section .primary-hover:hover,
+#blog-section .primary-hover:focus {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+/* Fix blog images in home page Explore Blogs and News section */
+#blog-section .blog__image,
+#blog-section .blog-two__grid-item .blog__image,
+#blog-section .blog-two__list-item .blog__image {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 8px !important;
+}
+
+#blog-section .blog__image img,
+#blog-section .blog-two__grid-item .blog__image img,
+#blog-section .blog-two__list-item .blog__image img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Make the large blog card (left side) taller */
+#blog-section .blog-two__grid-item .blog__image img {
+  min-height: 400px !important;
+  max-height: 500px !important;
+}
+
+/* Make the smaller blog cards (right side) shorter */
+#blog-section .blog-two__list-item .blog__image img {
+  min-height: 180px !important;
+  max-height: 220px !important;
+}
+
+#blog-section .blog__image .blog-tag,
+#blog-section .blog-two__grid-item .blog__image .blog-tag,
+#blog-section .blog-two__list-item .blog__image .blog-tag {
+  position: absolute !important;
+  bottom: 15px !important;
+  left: 15px !important;
+  background: #0f7a95 !important;
+  padding: 8px 12px !important;
+  border-radius: 4px !important;
+  z-index: 2 !important;
+}
+
 .sidebar-area a:hover,
 .sidebar-area .logo:hover,
 .sidebar-area .info a:hover,
