@@ -207,11 +207,11 @@ const ServiceDetails = () => {
                                                 boxShadow: '0 4px 15px rgba(255, 255, 255, 0.3)'
                                             }}
                                             onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                                                e.currentTarget.style.background = 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)';
+                                                e.currentTarget.style.backgroundImage = 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)';
                                                 e.currentTarget.style.color = '#ffffff';
                                             }}
                                             onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                                                e.currentTarget.style.background = 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)';
+                                                e.currentTarget.style.backgroundImage = 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)';
                                                 e.currentTarget.style.color = '#0f7a95';
                                             }}>
                                                Get started now

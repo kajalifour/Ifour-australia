@@ -123,8 +123,8 @@ const Banner = () => {
                            {item.sub_title}
                         </h4>
                         <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s" className="text-white">
-                           <span style={{ color: '#ffffff !important', fontWeight: '600' }}>Shaping Success through Innovation & Technology</span>
-                           <span style={{ color: '#ffffff !important', fontWeight: '600' }}> Since 2013</span>
+                           <span style={{ color: '#0f7a95 !important', fontWeight: '600' }}>Shaping Success through Innovation & Technology</span>
+                           <span style={{ color: '#0f7a95 !important', fontWeight: '600' }}> Since 2013</span>
                         </h1>
                         <p data-animation="slideInRight" data-duration="2s" data-delay=".7s" className="mt-20" style={{ color: '#ffffff' }}>
                            {item.desc}

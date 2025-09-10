@@ -29,7 +29,7 @@ interface HireDetailsProps {
 const BenefitsSection = ({ data }: { data: HireDetailsProps }) => {
   return (
     <section id="success-section" className="about-two-area" style={{ 
-      background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', 
+      backgroundImage: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', 
       paddingTop: '50px', 
       paddingBottom: '50px', 
       minHeight: '600px',
@@ -104,7 +104,7 @@ const BenefitsSection = ({ data }: { data: HireDetailsProps }) => {
 const CTASection = ({ data }: { data: HireDetailsProps }) => {
   return (
     <section className="cta-area pt-96 pb-96" style={{
-      background: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',
+      backgroundImage: 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)',
       textAlign: 'center',
       marginBottom: '70px'
     }}>
@@ -132,8 +132,8 @@ const CTASection = ({ data }: { data: HireDetailsProps }) => {
               }}>
                 {data.ctaDescription || `Get in touch with us today to discuss your project requirements and find the perfect ${data.title.toLowerCase()} for your team.`}
               </p>
-              <Link href={data.ctaButtonLink || "/contact"} className="btn btn-primary" style={{
-                background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)',
+              <Link href={data.ctaButtonLink || "/contact"} className="btn btn-primary cta-read-more" style={{
+                backgroundImage: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)',
                 border: 'none',
                 color: '#0f7a95',
                 padding: '15px 40px',
@@ -149,11 +149,11 @@ const CTASection = ({ data }: { data: HireDetailsProps }) => {
                 boxShadow: '0 4px 15px rgba(255, 255, 255, 0.3)'
               }}
               onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                e.currentTarget.style.background = 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)';
+                e.currentTarget.style.backgroundImage = 'linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%)';
                 e.currentTarget.style.color = '#ffffff';
               }}
               onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                e.currentTarget.style.background = 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)';
+                e.currentTarget.style.backgroundImage = 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)';
                 e.currentTarget.style.color = '#0f7a95';
               }}>
                 {data.ctaButtonText || "Get Started Now"}

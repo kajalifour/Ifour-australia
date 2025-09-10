@@ -27,6 +27,9 @@ export default function BlogSidebar() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [recentPosts, setRecentPosts] = useState<RecentPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [reachSubmitted, setReachSubmitted] = useState(false);
+  const [reachName, setReachName] = useState("");
+  const [reachEmail, setReachEmail] = useState("");
 
   useEffect(() => {
     const fetchSidebarData = async () => {
@@ -91,7 +94,7 @@ export default function BlogSidebar() {
   if (loading) {
     return (
       <div id="sidebar" className="sidebar">
-        <div className="widget widget_search mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+        <div className="widget widget_loading mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
           <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
             Loading...
           </h5>
@@ -102,42 +105,61 @@ export default function BlogSidebar() {
 
   return (
     <div id="sidebar" className="sidebar">
-      {/* Search Widget */}
-      <div className="widget widget_search mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-        <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
-          Search
-        </h5>
-        <div className="search-form-container">
-          <div className="input-group" style={{ position: 'relative' }}>
-            <input
-              type="search"
-              className="form-control"
-              placeholder="Search..."
-              style={{ border: '2px solid #e9ecef', borderRadius: '8px', padding: '12px 15px', fontSize: '14px' }}
-            />
-            <button
-              className="btn"
-              type="submit"
-              style={{ position: 'absolute', right: '5px', top: '50%', transform: 'translateY(-50%)', backgroundColor: '#0f7a95', color: 'white', border: 'none', borderRadius: '6px', padding: '8px 15px', fontSize: '14px' }}
-            >
-              <i className="fa fa-search"></i>
-            </button>
-          </div>
-        </div>
-      </div>
 
-      {/* Reach Out Us Widget */}
+      {/* Reach out to us Widget */}
       <div className="widget widget_reach_out mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
         <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
           Reach Out Us
         </h5>
         <div className="reach-out-content">
-          <p style={{ color: '#666', fontSize: '14px', lineHeight: '1.6', marginBottom: '15px' }}>
-            Have questions or need assistance? We're here to help!
-          </p>
-          <Link href="/contact" className="btn btn-primary" style={{ backgroundColor: '#0f7a95', color: 'white', textDecoration: 'none', padding: '10px 20px', borderRadius: '6px', display: 'inline-block', fontSize: '14px' }}>
-            Contact Us
-          </Link>
+          {!reachSubmitted && (
+            <>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setReachSubmitted(true);
+                  setReachName("");
+                  setReachEmail("");
+                }}
+                style={{ display: 'grid', gap: '12px' }}
+              >
+                <div>
+                  <label htmlFor="reachName" style={{ display: 'block', color: '#374151', fontSize: '13px', fontWeight: 600, marginBottom: '6px' }}>Your Name</label>
+                  <input
+                    id="reachName"
+                    name="name"
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                    value={reachName}
+                    onChange={(e) => setReachName(e.target.value)}
+                    style={{ width: '100%', border: '2px solid #e9ecef', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', background: '#ffffff', color: '#111827' }}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="reachEmail" style={{ display: 'block', color: '#374151', fontSize: '13px', fontWeight: 600, marginBottom: '6px' }}>Email Address</label>
+                  <input
+                    id="reachEmail"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                    value={reachEmail}
+                    onChange={(e) => setReachEmail(e.target.value)}
+                    style={{ width: '100%', border: '2px solid #e9ecef', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', background: '#ffffff', color: '#111827' }}
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#0f7a95', color: 'white', textDecoration: 'none', padding: '10px 20px', borderRadius: '6px', display: 'inline-block', fontSize: '14px', border: 'none' }}>
+                  Inquire Now
+                </button>
+              </form>
+            </>
+          )}
+          {reachSubmitted && (
+            <div style={{ backgroundColor: '#e5ebef', color: '#111827', padding: '22px', borderRadius: '6px', textAlign: 'center', fontSize: '15px', fontWeight: 500 }}>
+              Thank you! Your submission has been received!
+            </div>
+          )}
         </div>
       </div>
 

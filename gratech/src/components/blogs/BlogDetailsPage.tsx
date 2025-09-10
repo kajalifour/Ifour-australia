@@ -33,15 +33,23 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
   // Fix spacer spacing - TARGET SPECIFIC HTML STRUCTURE
   useEffect(() => {
     const fixSpacing = () => {
+      try {
+        // Check if we're in a browser environment
+        if (typeof window === 'undefined' || !document) {
+          return;
+        }
+
       // Hide all spacers
       const spacers = document.querySelectorAll('.themesflat-spacer');
       spacers.forEach((spacer) => {
         const element = spacer as HTMLElement;
-        element.style.marginTop = '0px';
-        element.style.height = '0px';
-        element.style.display = 'none';
-        element.style.visibility = 'hidden';
-        element.style.opacity = '0';
+        if (element) {
+          element.style.marginTop = '0px';
+          element.style.height = '0px';
+          element.style.display = 'none';
+          element.style.visibility = 'hidden';
+          element.style.opacity = '0';
+        }
       });
 
       // Target the specific HTML structure from the blog content
@@ -49,7 +57,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
       if (blogDetailsContent) {
         // Target the blog-main-content div specifically
         const blogMainContent = blogDetailsContent.querySelector('.blog-main-content');
-        if (blogMainContent) {
+        if (blogMainContent && blogMainContent instanceof HTMLElement) {
           // Global prune: remove stray <br> and empty/nbsp-only text nodes inside blog-main-content
           const pruneWhitespaceDeep = (root: HTMLElement) => {
             const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT);
@@ -68,7 +76,15 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                 }
               }
             }
-            toRemove.forEach(n => n.parentNode && n.parentNode.removeChild(n));
+            toRemove.forEach(n => {
+              if (n && n.parentNode) {
+                try {
+                  n.parentNode.removeChild(n);
+                } catch (error) {
+                  console.warn('Failed to remove child node:', error);
+                }
+              }
+            });
           };
           pruneWhitespaceDeep(blogMainContent as HTMLElement);
 
@@ -85,8 +101,14 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
             if (!alreadyWrapped) {
               const wrapper = document.createElement('div');
               wrapper.className = 'comparison-table';
-              parentElement?.insertBefore(wrapper, tableElement);
-              wrapper.appendChild(tableElement);
+              if (parentElement && tableElement) {
+                try {
+                  parentElement.insertBefore(wrapper, tableElement);
+                  wrapper.appendChild(tableElement);
+                } catch (error) {
+                  console.warn('Failed to wrap table element:', error);
+                }
+              }
               // Remove stray BRs/whitespace that come before the table
               const cleanLeadingSpace = (node: HTMLElement) => {
                 let first = node.firstChild as ChildNode | null;
@@ -97,7 +119,13 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                   if (isBr || isEmptyText || isEmptySpan) {
                     const toRemove = first;
                     first = first.nextSibling;
-                    node.removeChild(toRemove);
+                    if (toRemove && node) {
+                      try {
+                        node.removeChild(toRemove);
+                      } catch (error) {
+                        console.warn('Failed to remove child node:', error);
+                      }
+                    }
                     continue;
                   }
                   break;
@@ -113,7 +141,13 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                 if (isBr || isEmptyText || isEmptySpan) {
                   const toRemove = prev;
                   prev = prev.previousSibling;
-                  toRemove.parentNode && toRemove.parentNode.removeChild(toRemove);
+                  if (toRemove && toRemove.parentNode) {
+                    try {
+                      toRemove.parentNode.removeChild(toRemove);
+                    } catch (error) {
+                      console.warn('Failed to remove child node:', error);
+                    }
+                  }
                   continue;
                 }
                 break;
@@ -130,7 +164,13 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                   if (isBr || isEmptyText || isEmptySpan) {
                     const toRemove = first;
                     first = first.nextSibling;
-                    wrapper.removeChild(toRemove);
+                    if (toRemove && wrapper) {
+                      try {
+                        wrapper.removeChild(toRemove);
+                      } catch (error) {
+                        console.warn('Failed to remove child node:', error);
+                      }
+                    }
                     continue;
                   }
                   break;
@@ -141,12 +181,18 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                   const isBr = prev.nodeType === 1 && (prev as Element).tagName === 'BR';
                   const isEmptyText = prev.nodeType === 3 && ((prev.textContent || '').replace(/\u00A0/g, ' ').trim() === '');
                   const isEmptySpan = prev.nodeType === 1 && (prev as Element).tagName === 'SPAN' && (((prev as Element).textContent || '').trim() === '');
-                  if (isBr || isEmptyText || isEmptySpan) {
-                    const toRemove = prev;
-                    prev = prev.previousSibling;
-                    toRemove.parentNode && toRemove.parentNode.removeChild(toRemove);
-                    continue;
+                if (isBr || isEmptyText || isEmptySpan) {
+                  const toRemove = prev;
+                  prev = prev.previousSibling;
+                  if (toRemove && toRemove.parentNode) {
+                    try {
+                      toRemove.parentNode.removeChild(toRemove);
+                    } catch (error) {
+                      console.warn('Failed to remove child node:', error);
+                    }
                   }
+                  continue;
+                }
                   break;
                 }
               }
@@ -211,18 +257,20 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
         element.style.margin = '0px';
         element.style.padding = '0px';
       });
+      } catch (error) {
+        console.warn('Error in fixSpacing function:', error);
+      }
     };
 
-    // Run immediately
-    fixSpacing();
+    // Run immediately if DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fixSpacing);
+    } else {
+      fixSpacing();
+    }
     
     // Run again after a short delay to ensure it overrides any other scripts
     setTimeout(fixSpacing, 100);
-    setTimeout(fixSpacing, 500);
-    setTimeout(fixSpacing, 1000);
-    // Re-run a few times over 3 seconds to catch late injections
-    const intervalId = setInterval(fixSpacing, 250);
-    setTimeout(() => clearInterval(intervalId), 3000);
 
     // Observe mutations to re-apply fix when CMS content updates or reflows
     const blogMain = document.querySelector('.blog-main-content');
@@ -236,20 +284,27 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
         });
       };
       observer = new MutationObserver(scheduleFix);
-      // Observe broadly to catch node replacements
-      observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+      // Observe only within the blog content for minimal overhead
+      observer.observe(blogMain, { childList: true, subtree: true, characterData: true });
     }
 
     return () => {
-      if (observer) observer.disconnect();
+      if (observer) {
+        observer.disconnect();
+        observer = null;
+      }
+      // Remove event listener if it was added
+      if (document.readyState === 'loading') {
+        document.removeEventListener('DOMContentLoaded', fixSpacing);
+      }
     };
   }, [blogDetail]);
 
   if (loading) {
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-lg-8 col-md-12 col-sm-12">
+        <div className="row g-0">
+          <div className="col-lg-7 col-md-12 col-sm-12 px-0 col-left-70">
             <div className="text-center py-5">
               <p>Loading blog details...</p>
             </div>
@@ -262,8 +317,8 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
   if (!blogDetail) {
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-lg-8 col-md-12 col-sm-12">
+        <div className="row g-0">
+          <div className="col-lg-7 col-md-12 col-sm-12 px-0 col-left-70">
             <div className="text-center py-5">
               <h2>Blog Post Not Found</h2>
               <p>The requested blog post could not be found.</p>
@@ -275,9 +330,9 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
   }
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-8 col-md-12 col-sm-12">
+    <div className={`container blog-details-page slug-${slug}`}>
+      <div className="row g-0">
+        <div className="col-lg-7 col-md-12 col-sm-12 px-0 col-left-70">
           <div className="blog-header">
             <h2 className="blog-title">{blogDetail?.postTitle}</h2>
             <div className="meta-info">
@@ -308,10 +363,9 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                     alt={blogDetail?.alt || 'Blog image'}
                     width={770}
                     height={450}
-                    quality={100}
-                    priority={true}
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                    quality={85}
+                    priority={false}
+                    placeholder="empty"
                     unoptimized={unoptimized}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -380,9 +434,10 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                           alt={blogDetail?.authorName || 'Author'}
                           width={80}
                           height={80}
-                          quality={100}
+                          quality={85}
                           className="profile-img"
                           unoptimized={unoptimized}
+                          placeholder="empty"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
                             target.src = FALLBACK_AUTHOR;
@@ -424,7 +479,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
             <></>
           )}
         </div>
-        <div className="col-lg-4 col-md-12">
+        <div className="col-lg-5 col-md-12 px-0 col-right-30">
           <BlogSidebar />
         </div>
       </div>

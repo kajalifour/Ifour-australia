@@ -19,24 +19,110 @@ const FooterOne = () => {
          <style jsx>{`
             .footer__wrp {
                display: grid;
-               grid-template-columns: repeat(4, 1fr);
-               gap: 30px;
+               grid-template-columns: 2fr 1fr 1fr 1.5fr;
+               gap: 40px;
                align-items: start;
             }
             .footer__item {
                width: 100%;
                max-width: none;
             }
+            .footer__item:first-child {
+               padding-right: 20px;
+            }
+            .footer__item h3.footer-title {
+               font-size: 18px;
+               font-weight: 700;
+               margin-bottom: 25px;
+               color: #ffffff;
+               text-transform: uppercase;
+               letter-spacing: 0.5px;
+            }
+            .footer__item ul {
+               list-style: none;
+               padding: 0;
+               margin: 0;
+            }
+            .footer__item ul li {
+               margin-bottom: 12px;
+            }
+            .footer__item ul li a {
+               color: #ffffff;
+               text-decoration: none;
+               font-size: 14px;
+               display: flex;
+               align-items: center;
+               transition: color 0.3s ease;
+            }
+            .footer__item ul li a:hover {
+               color: #000000 !important;
+            }
+            .footer__item ul li a i {
+               margin-right: 8px;
+               font-size: 12px;
+            }
+            .footer__item p {
+               color: #ffffff;
+               font-size: 14px;
+               line-height: 1.6;
+               margin-bottom: 20px;
+            }
+            .social-icon {
+               display: flex;
+               gap: 15px;
+               margin-top: 20px;
+            }
+            .social-icon a {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 40px;
+               height: 40px;
+               background: rgba(255, 255, 255, 0.1);
+               border-radius: 50%;
+               color: #ffffff;
+               text-decoration: none;
+               transition: all 0.3s ease;
+               font-size: 16px;
+            }
+            .social-icon a:hover {
+               background: #000000;
+               color: #ffffff !important;
+               transform: translateY(-2px);
+            }
+            .footer-contact {
+               list-style: none;
+               padding: 0;
+               margin: 0;
+            }
+            .footer-contact li {
+               display: flex;
+               align-items: flex-start;
+               margin-bottom: 20px;
+            }
+            .footer-contact li i {
+               font-size: 18px;
+               margin-right: 15px;
+               margin-top: 2px;
+               color: #ffffff;
+               min-width: 20px;
+            }
+            .footer-contact li .info h5 {
+               font-size: 14px;
+               font-weight: 600;
+               margin-bottom: 5px;
+               color: #ffffff;
+            }
+            .footer-contact li .info p {
+               font-size: 14px;
+               color: #ffffff;
+               margin: 0;
+               line-height: 1.4;
+            }
             .footer__item a {
                transition: color 0.3s ease;
             }
             .footer__item a:hover {
-               color: #000000 !important;
-            }
-            .social-icon a {
-               transition: color 0.3s ease;
-            }
-            .social-icon a:hover {
                color: #000000 !important;
             }
             .footer__copyright a {
@@ -48,11 +134,16 @@ const FooterOne = () => {
             @media (max-width: 991px) {
                .footer__wrp {
                   grid-template-columns: repeat(2, 1fr);
+                  gap: 30px;
                }
             }
             @media (max-width: 575px) {
                .footer__wrp {
                   grid-template-columns: 1fr;
+                  gap: 25px;
+               }
+               .footer__item:first-child {
+                  padding-right: 0;
                }
             }
             /* Hide triangular left side footer shapes on mobile */

@@ -168,7 +168,7 @@ export default function BlogCategoryPage({
                       <article className="post clearfix post-standar fl-sd wow fadeInUp" style={{
                         marginBottom: '0px',
                         padding: '0',
-                        background: '#fff',
+                        backgroundColor: '#fff',
                         borderRadius: '8px',
                         overflow: 'hidden',
                         boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
@@ -185,11 +185,13 @@ export default function BlogCategoryPage({
                               quality={100}
                               priority={i === 0}
                               style={{ 
-                                objectFit: 'cover', 
+                                objectFit: 'contain', 
+                                objectPosition: 'center center',
                                 width: '100%', 
                                 maxWidth: '100%', 
                                 margin: 0, 
-                                padding: 0 
+                                padding: 0,
+                                backgroundColor: '#f8f9fa'
                               }}
                             />
                           </Link>
@@ -246,7 +248,7 @@ export default function BlogCategoryPage({
                           padding: '8px 16px',
                           margin: '0 4px',
                           border: '1px solid #0f7a95',
-                          background: 'white',
+                          backgroundColor: 'white',
                           color: '#0f7a95',
                           borderRadius: '4px',
                           cursor: 'pointer'
@@ -264,7 +266,7 @@ export default function BlogCategoryPage({
                           padding: '8px 16px',
                           margin: '0 4px',
                           border: page === currentPageNum ? 'none' : '1px solid #0f7a95',
-                          background: page === currentPageNum ? '#0f7a95' : 'white',
+                          backgroundColor: page === currentPageNum ? '#0f7a95' : 'white',
                           color: page === currentPageNum ? 'white' : '#0f7a95',
                           borderRadius: '4px',
                           cursor: 'pointer'
@@ -281,7 +283,7 @@ export default function BlogCategoryPage({
                           padding: '8px 16px',
                           margin: '0 4px',
                           border: '1px solid #0f7a95',
-                          background: 'white',
+                          backgroundColor: 'white',
                           color: '#0f7a95',
                           borderRadius: '4px',
                           cursor: 'pointer'
@@ -305,7 +307,7 @@ export default function BlogCategoryPage({
 
           {/* Newsletter Section - Same style as blog page */}
           <section className="newsletter-section pt-80 pb-80" style={{
-            background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 50%, #f0f8ff 100%)',
+            backgroundImage: 'linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 50%, #f0f8ff 100%)',
             position: 'relative',
             overflow: 'hidden'
           }}>
@@ -313,7 +315,9 @@ export default function BlogCategoryPage({
             <div style={{
               position: 'absolute', inset: 0,
               backgroundImage: 'radial-gradient(circle, #0f7a95 1px, transparent 1px)',
-              backgroundSize: '20px 20px', opacity: 0.08, pointerEvents: 'none'
+              backgroundSize: '20px 20px', 
+              opacity: 0.08, 
+              pointerEvents: 'none'
             }} />
 
             <div className="container">
@@ -329,8 +333,8 @@ export default function BlogCategoryPage({
                 <div className="col-lg-6">
                   {/* right aligned form with max width */}
                   <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <form style={{ width: '100%', maxWidth: 560 }} noValidate>
-                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <form className="newsletter-form" style={{ width: '100%', maxWidth: 560 }} noValidate>
+                      <div className="controls" style={{ display: 'flex', alignItems: 'center' }}>
                         {/* Input pill - right corners squared to merge */}
                         <input
                           type="email"
@@ -383,6 +387,23 @@ export default function BlogCategoryPage({
               </div>
             </div>
           </section>
+          <style jsx global>{`
+            @media (max-width: 575.98px) {
+              .newsletter-form .controls { display: block !important; }
+              .newsletter-form input[type="email"] {
+                width: 100% !important;
+                border-top-right-radius: 28px !important;
+                border-bottom-right-radius: 28px !important;
+                margin-bottom: 10px;
+              }
+              .newsletter-form button[type="submit"] {
+                width: 100% !important;
+                border-top-left-radius: 28px !important;
+                border-bottom-left-radius: 28px !important;
+                border-left: 2px solid #0f7a95 !important;
+              }
+            }
+          `}</style>
         </div>
       </section>
     </>

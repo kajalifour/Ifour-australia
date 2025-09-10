@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import MobileMenu from "./MobileMenu";
 
-import logo from "@/assets/images/logo/logo.svg"
+import logo from "@/assets/images/logo/logo-white.png"
 
 interface MobileSidebarProps {
    offCanvas: boolean;

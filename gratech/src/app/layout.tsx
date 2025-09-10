@@ -1,8 +1,8 @@
-import "../styles/index.css";
+import "../../public/assets/css/all.min.css";
 import "../../public/assets/sass/style.scss";
 import "../styles/reduced-padding.css";
 import "../../public/assets/css/blog-details.css";
-import "../../public/assets/css/all.min.css";
+import "../styles/index.css";
 
 export default function RootLayout({
   children,

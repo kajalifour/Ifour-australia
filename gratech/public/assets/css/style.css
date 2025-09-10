@@ -1,3 +1,96 @@
+/* Fix mobile wrapping gap for 'Read More' links across components */
+@media (max-width: 575.98px) {
+  a.read-more-btn,
+  a.btn-one,
+  .themesflat-button.btn-read-more,
+  .flat-read-more .themesflat-button,
+  /* handle non-anchor CTAs using div/span */
+  [class*="read-more"],
+  .cta-area [class*="btn"],
+  .cta-area [class*="button"],
+  .cta-read-more {
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+}
+
+/* Add top margin to newsletter section on all pages */
+.newsletter-section {
+  margin-top: 50px !important;
+}
+
+/* Blog table styling with teal background - stronger selectors */
+.blog-details-content table,
+.blog-details-content .blog-main-content table,
+.blog-details-content .comparison-table table,
+.content-post table,
+.content-post .blog-main-content table {
+  background-color: #0f7a95 !important;
+  color: white !important;
+  border-collapse: collapse !important;
+}
+
+.blog-details-content table th,
+.blog-details-content .blog-main-content table th,
+.blog-details-content .comparison-table table th,
+.content-post table th,
+.content-post .blog-main-content table th {
+  background-color: #0a5a6a !important;
+  color: white !important;
+  padding: 12px !important;
+  border: 1px solid #0d6b7f !important;
+  font-weight: bold !important;
+}
+
+.blog-details-content table td,
+.blog-details-content .blog-main-content table td,
+.blog-details-content .comparison-table table td,
+.content-post table td,
+.content-post .blog-main-content table td {
+  background-color: #0f7a95 !important;
+  color: white !important;
+  padding: 12px !important;
+  border: 1px solid #0d6b7f !important;
+}
+
+/* Override any inline styles or other CSS that might be interfering */
+.blog-details-content table *,
+.content-post table * {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+/* Fix gap between "Read" and "More:" in blue boxes */
+.blog-details-content .blog-main-content p:has(span),
+.blog-details-content .blog-main-content div:has(span),
+.content-post p:has(span),
+.content-post div:has(span) {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+.blog-details-content .blog-main-content span,
+.content-post span {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Alternative approach - target specific text patterns */
+.blog-details-content .blog-main-content p,
+.content-post p {
+  white-space: nowrap !important;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .blog-details-content .blog-main-content p,
+  .content-post p {
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+}
 /*-----------------------------------------------------------------
 
 
@@ -5642,6 +5735,34 @@ input.main-search-input::placeholder {
 
   font-weight: 700;
 
+  color: #ffffff !important;
+
+}
+
+/* Ensure banner text color consistency - override any animation or loading issues */
+.banner__content h1 span,
+.banner__content h1,
+.banner__content .text-white {
+  color: #ffffff !important;
+}
+
+/* Prevent color changes during animations */
+.banner__content h1[data-animation],
+.banner__content h1 span[data-animation] {
+  color: #ffffff !important;
+}
+
+/* Ensure immediate color application - prevent flash of different color */
+.banner__content h1,
+.banner__content h1 span {
+  color: #ffffff !important;
+  transition: none !important;
+}
+
+/* Override any potential CSS loading delays */
+.banner__content h1:not([style*="color"]),
+.banner__content h1 span:not([style*="color"]) {
+  color: #ffffff !important;
 }
 
 @media (max-width: 991px) {
@@ -5651,6 +5772,8 @@ input.main-search-input::placeholder {
     font-size: 60px;
 
     line-height: 70px;
+
+    color: #ffffff !important;
 
   }
 
@@ -5664,6 +5787,8 @@ input.main-search-input::placeholder {
 
     line-height: 60px;
 
+    color: #ffffff !important;
+
   }
 
 }
@@ -5675,6 +5800,8 @@ input.main-search-input::placeholder {
     font-size: 35px;
 
     line-height: 50px;
+
+    color: #ffffff !important;
 
   }
 
@@ -11032,6 +11159,8 @@ input.main-search-input::placeholder {
 .blog-area .container {
   max-width: 1200px !important;
   margin: 0 auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 
 .blog-area .row {
@@ -11042,9 +11171,57 @@ input.main-search-input::placeholder {
   padding-right: 30px !important;
 }
 
+/* Mobile responsive fixes for blog */
 @media (max-width: 991px) {
   .blog-area .col-lg-8 {
     padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+  
+  .blog-area .col-lg-4 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-area .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .blog-area .col-lg-8,
+  .blog-area .col-lg-4 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  /* Ensure blog posts don't overflow */
+  .blog-area .post {
+    margin-bottom: 30px !important;
+  }
+  
+  .blog-area .featured-post {
+    margin-bottom: 20px !important;
+  }
+  
+  .blog-area .featured-post img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-area .container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  
+  .blog-area .col-lg-8,
+  .blog-area .col-lg-4 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
   }
 }
 
@@ -11052,6 +11229,55 @@ input.main-search-input::placeholder {
 .blog-bannerimg img {
   min-height: 300px;
   max-height: 450px;
+}
+
+/* Blog details page mobile responsiveness */
+@media (max-width: 768px) {
+  .blog-details-content {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .blog-header {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .blog-title {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .meta-info {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .author-container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-details-content {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .blog-header {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .blog-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .author-container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
 }
 
 /* Blog card images in lists */
@@ -11287,5 +11513,457 @@ input.main-search-input::placeholder {
   .meta {
     gap: 12px !important;
     font-size: 12px !important;
+  }
+}
+
+/* Newsletter Section Responsive Styles */
+@media screen and (max-width: 768px) {
+  .newsletter-section .newsletter-form-desktop {
+    display: none !important;
+  }
+  .newsletter-section .newsletter-form-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  .newsletter-section .newsletter-form-mobile input {
+    width: 100% !important;
+    border-radius: 28px !important;
+    border-top-right-radius: 28px !important;
+    border-bottom-right-radius: 28px !important;
+  }
+  .newsletter-section .newsletter-form-mobile button {
+    width: 100% !important;
+    border-radius: 28px !important;
+    border-left: 2px solid #0f7a95 !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .newsletter-section .newsletter-form-desktop {
+    display: flex !important;
+  }
+  .newsletter-section .newsletter-form-mobile {
+    display: none !important;
+  }
+}
+
+/* Additional mobile breakpoint for smaller screens */
+@media screen and (max-width: 480px) {
+  .newsletter-section .newsletter-form-desktop {
+    display: none !important;
+  }
+  .newsletter-section .newsletter-form-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+}
+
+/* CTA Section Styles */
+.hire-cta-section {
+  background: linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hire-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+.hire-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hire-cta-button {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 16px 32px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  color: #2c3e50 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hire-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s;
+}
+
+.hire-cta-button:hover::before {
+  left: 100%;
+}
+
+.hire-cta-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  background: linear-gradient(135deg, #ffffff 0%, #e9ecef 100%) !important;
+}
+
+.hire-cta-button:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* CTA Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .hire-cta-section {
+    padding: 60px 0 !important;
+  }
+  
+  .hire-cta-section h2 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 20px !important;
+    padding: 0 15px !important;
+  }
+  
+  .hire-cta-button {
+    padding: 14px 24px !important;
+    font-size: 14px !important;
+    letter-spacing: 0.3px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+  }
+  
+  .hire-cta-content {
+    padding: 0 15px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hire-cta-section {
+    padding: 50px 0 !important;
+  }
+  
+  .hire-cta-section h2 {
+    font-size: 24px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 18px !important;
+    padding: 0 10px !important;
+  }
+  
+  .hire-cta-button {
+    padding: 12px 20px !important;
+    font-size: 13px !important;
+    letter-spacing: 0.2px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+  }
+  
+  .hire-cta-content {
+    padding: 0 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hire-cta-section h2 {
+    font-size: 22px !important;
+    line-height: 1.4 !important;
+    padding: 0 8px !important;
+  }
+  
+  .hire-cta-button {
+    padding: 10px 18px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.1px !important;
+  }
+  
+  .hire-cta-content {
+    padding: 0 8px !important;
+  }
+}
+
+/* Hire Details CTA Styles */
+.cta-area {
+  background: linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-content h2 {
+  color: #ffffff !important;
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 2rem !important;
+  line-height: 1.3 !important;
+}
+
+.cta-content p {
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 2rem !important;
+  opacity: 0.9 !important;
+  line-height: 1.6 !important;
+}
+
+.cta-read-more {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%) !important;
+  border: none !important;
+  color: #0f7a95 !important;
+  padding: 15px 40px !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 30px !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
+}
+
+.cta-read-more:hover {
+  background: linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Hire Details CTA Mobile Responsive */
+@media (max-width: 768px) {
+  .cta-area {
+    padding: 60px 0 !important;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 15px !important;
+  }
+  
+  .cta-content p {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 15px !important;
+  }
+  
+  .cta-read-more {
+    padding: 12px 30px !important;
+    font-size: 1rem !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-area {
+    padding: 50px 0 !important;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1.2rem !important;
+    padding: 0 10px !important;
+  }
+  
+  .cta-content p {
+    font-size: 0.95rem !important;
+    margin-bottom: 1.2rem !important;
+    padding: 0 10px !important;
+  }
+  
+  .cta-read-more {
+    padding: 10px 24px !important;
+    font-size: 0.9rem !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-content h2 {
+    font-size: 1.4rem !important;
+    padding: 0 8px !important;
+  }
+  
+  .cta-content p {
+    font-size: 0.9rem !important;
+    padding: 0 8px !important;
+  }
+  
+  .cta-read-more {
+    padding: 8px 20px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Blog Details Page Styles */
+/* Ensure lists have comfortable side padding inside blog content */
+.blog-details-content .blog-main-content ul,
+.blog-details-content .blog-main-content ol {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Laptop/Desktop tweaks */
+@media (min-width: 992px) {
+  .blog-details-content .blog-main-content ul,
+  .blog-details-content .blog-main-content ol {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 575.98px) {
+  .blog-details-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .blog-details-content .blog-main-content ul,
+  .blog-details-content .blog-main-content ol {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .blog-details-content .blog-main-content li {
+    word-break: break-word;
+  }
+}
+
+/* Make images responsive in blog body */
+.blog-details-content .blog-main-content img,
+.blog-details-content .blog-main-content picture img,
+.blog-details-content .blog-main-content a img,
+.blog-details-content .blog-main-content figure img {
+  display: block;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+.blog-details-content .blog-main-content figure,
+.blog-details-content .blog-main-content .wp-caption,
+.blog-details-content .blog-main-content p:has(img) {
+  margin: 16px 0;
+}
+
+/* Ensure banner image scales on small screens */
+.blog-bannerimg img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Make tables scrollable on small screens */
+.blog-details-content .comparison-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blog-details-content .comparison-table table {
+  width: 100%;
+}
+
+/* Images inside tables should also shrink */
+.blog-details-content .comparison-table table img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.blog-details-content .comparison-table table td,
+.blog-details-content .comparison-table table th {
+  word-break: break-word;
+}
+
+/* Blog CTABox Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .blog-cta-box {
+    margin-top: 30px !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+  }
+  
+  .blog-cta-box p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .blog-cta-box span {
+    font-size: 17px !important;
+  }
+  
+  .blog-cta-box .quote-icon {
+    font-size: 60px !important;
+    bottom: -10px !important;
+    right: -10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-cta-box {
+    margin-top: 25px !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+  }
+  
+  .blog-cta-box p {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+  
+  .blog-cta-box span {
+    font-size: 16px !important;
+  }
+  
+  .blog-cta-box .quote-icon {
+    font-size: 50px !important;
+    bottom: -8px !important;
+    right: -8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-cta-box {
+    margin-top: 20px !important;
+    padding: 12px !important;
+  }
+  
+  .blog-cta-box p {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .blog-cta-box span {
+    font-size: 15px !important;
+  }
+  
+  .blog-cta-box .quote-icon {
+    font-size: 40px !important;
+    bottom: -5px !important;
+    right: -5px !important;
   }
 }

@@ -7,3 +7,721 @@
 @import "../../public/assets/css/bootstrap.min.css";
 @import "../../public/assets/css/meanmenu.css";
 @import "../../public/assets/css/nice-select.css";
+
+/* Blog Image Display Fixes - Comprehensive */
+.blog-area .featured-post,
+.blog-area .featured-post img,
+.blog-area .post .featured-post,
+.blog-area .post .featured-post img,
+.featured-post,
+.featured-post img,
+.post .featured-post,
+.post .featured-post img {
+  width: 120% !important;
+  max-width: 120% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure blog post images are fully visible and not cropped */
+.blog-area .post,
+.post {
+  overflow: visible !important;
+}
+
+.blog-area .post .featured-post,
+.featured-post {
+  overflow: visible !important;
+  border-radius: 8px 8px 0 0 !important;
+  position: relative !important;
+  background: #f8f9fa !important;
+}
+
+.blog-area .post .featured-post img,
+.featured-post img {
+  border-radius: 8px 8px 0 0 !important;
+  max-height: 600px !important;
+  min-height: 360px !important;
+  width: 120% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/* Override any theme CSS that might be causing cropping */
+.blog__image,
+.blog__image img,
+.blog__image .blog-tag {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+}
+
+/* Ensure no absolute positioning interferes with image display */
+.blog-area *,
+.post *,
+.featured-post * {
+  position: static !important;
+}
+
+.blog-area .featured-post,
+.post .featured-post,
+.featured-post {
+  position: relative !important;
+}
+
+/* Mobile responsive fixes - Consistent width for image and content */
+@media (max-width: 768px) {
+  .blog-area .post .featured-post,
+  .featured-post {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 5px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .blog-area .post .featured-post img,
+  .featured-post img {
+    max-height: 400px !important;
+    min-height: 250px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    box-sizing: border-box !important;
+  }
+  
+  .blog-area .post .content-post,
+  .content-post {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 18px 20px 20px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-area .post .featured-post,
+  .featured-post {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 5px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .blog-area .post .featured-post img,
+  .featured-post img {
+    max-height: 350px !important;
+    min-height: 200px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    box-sizing: border-box !important;
+  }
+  
+  .blog-area .post .content-post,
+  .content-post {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 16px 18px 18px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ===== COMPREHENSIVE BLOG FIXES ===== */
+
+/* Blog post container - allows overflow for wider content */
+.blog-area .post,
+.post {
+  overflow: visible !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Featured post container - wider for desktop */
+.blog-area .post .featured-post,
+.featured-post {
+  background: #f8f9fa !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+  width: 120% !important;
+  max-width: 120% !important;
+  margin-left: -10% !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: block !important;
+  position: relative !important;
+}
+
+/* Featured post images - match container width */
+.blog-area .post .featured-post img,
+.featured-post img {
+  background: #f8f9fa !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 360px !important;
+  max-height: 600px !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+/* Content post - default width for posts without images */
+.blog-area .post .content-post,
+.content-post {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 20px 25px 25px !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+}
+
+/* Content post - wider when following a featured post */
+.blog-area .post .featured-post + .content-post,
+.featured-post + .content-post {
+  width: 120% !important;
+  max-width: 120% !important;
+  margin-left: -10% !important;
+  margin-right: 0 !important;
+  padding: 20px 25px 25px !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+}
+
+/* Banner color consistency overrides */
+.banner__shape-left1,
+.banner__shape-right1 {
+  filter: none !important;
+}
+
+.banner__shape-left1 img,
+.banner__shape-right1 img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Banner title color is controlled per-page; no global override */
+
+
+.blog-area .post .featured-post img,
+.featured-post img {
+  background: #f8f9fa !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  width: 120% !important;
+  max-width: 120% !important;
+}
+
+/* Ensure no clipping or cropping occurs */
+.blog-area .post,
+.post {
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+}
+
+.blog-area .post .featured-post,
+.featured-post {
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+}
+
+/* Force full image visibility */
+.blog-area .post .featured-post img,
+.featured-post img {
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Ensure proper alignment between image and content */
+.blog-area .post,
+.post {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+
+.blog-area .post .content-post,
+.content-post {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 20px 25px 25px !important;
+  box-sizing: border-box !important;
+}
+
+/* Mobile-specific content alignment */
+@media (max-width: 768px) {
+  .blog-area .post .content-post,
+  .content-post {
+    padding: 18px 20px 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-area .post .content-post,
+  .content-post {
+    padding: 16px 18px 18px !important;
+  }
+}
+
+/* Blog layout improvements - 70% left, 30% right layout */
+.blog-area > .container,
+.blog-area > .container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+}
+
+.blog-area .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  --bs-gutter-x: 0 !important;
+}
+
+/* Remove column padding completely inside blog list */
+.blog-area .row > [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.blog-area .col-lg-7 {
+  width: 70% !important;
+  max-width: 70% !important;
+  flex: 0 0 70% !important;
+  padding-right: 0 !important;
+}
+
+.blog-area .col-lg-5 {
+  width: 30% !important;
+  max-width: 30% !important;
+  flex: 0 0 30% !important;
+  padding-left: 0 !important;
+}
+
+/* Extra strong selectors to pin exact 70/30 widths */
+.blog-area .col-left-70 { width: 70% !important; max-width: 70% !important; flex: 0 0 70% !important; }
+.blog-area .col-right-30 { width: 30% !important; max-width: 30% !important; flex: 0 0 30% !important; }
+
+@media (max-width: 991px) {
+  .blog-area .col-left-70,
+  .blog-area .col-right-30 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}
+
+/* Ensure images and content fit within the 70% column on blog list */
+.blog-area .col-lg-7 .featured-post,
+.blog-area .col-lg-7 .featured-post img,
+.blog-area .col-lg-7 .blogPost .featured-post,
+.blog-area .col-lg-7 .blogPost .featured-post img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-left: 0 !important;
+}
+
+.blog-area .col-lg-7 .content-post,
+.blog-area .col-lg-7 .content-post * {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+}
+
+/* Sidebar: ensure widgets fit within 30% column */
+.blog-area .col-lg-5 .widget,
+.blog-area .col-lg-5 .widget * {
+  max-width: 100% !important;
+  overflow: hidden;
+}
+
+/* Remove excessive gaps from theme spacers in blog list */
+.blog-area .themesflat-spacer {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Strong overrides for /blog list to prevent 120% widths from earlier rules */
+.blog-area .col-lg-7 .post .featured-post,
+.blog-area .col-lg-7 .post .featured-post img,
+.blog-area .col-lg-7 .post .content-post,
+.blog-area .col-lg-7 .post .content-post * {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+}
+
+/* Blog list titles: force black, remove underline in all states */
+.blog-area h2.blog-title-small a,
+.blog-area h2.blog-title-small a:visited,
+.blog-area h2.blog-title-small a:hover,
+.blog-area h2.blog-title-small a:focus {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.blog-area .col-lg-7 .post .featured-post { padding: 0 !important; }
+
+.blog-area .col-lg-7 .post { margin-left: 0 !important; margin-right: 0 !important; }
+
+.blog-area .col-lg-7 .themesflat-spacer { display: none !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
+
+/* Ensure excerpts show fully and are not clipped */
+.blog-area .post .content-post p,
+.blog-area .post .content-post .BlogMainSection_blogExcerpt__azMSq {
+  overflow: visible !important;
+  display: block !important;
+  max-height: none !important;
+}
+
+/* NUCLEAR OPTION - Force 70/30 layout with maximum specificity */
+section.blog-area > .container,
+section.blog-area > .container-fluid { 
+  padding: 0 !important; 
+  max-width: 100% !important; 
+  margin: 0 auto !important;
+}
+
+section.blog-area .row { 
+  margin: 0 !important; 
+  --bs-gutter-x: 0 !important; 
+  width: 100% !important;
+}
+
+section.blog-area .row > [class*="col-"] { 
+  padding: 0 !important; 
+}
+
+section.blog-area .col-left-70,
+section.blog-area .col-lg-7 { 
+  width: 70% !important; 
+  max-width: 70% !important; 
+  flex: 0 0 70% !important; 
+  float: left !important;
+}
+
+section.blog-area .col-right-30,
+section.blog-area .col-lg-5 { 
+  width: 30% !important; 
+  max-width: 30% !important; 
+  flex: 0 0 30% !important; 
+  float: right !important;
+}
+
+/* Force blog content to fit within 70% column */
+.blog-area .col-left-70 .post,
+.blog-area .col-left-70 .featured-post,
+.blog-area .col-left-70 .featured-post img,
+.blog-area .col-left-70 .content-post {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Remove ALL theme spacers from blog list */
+.blog-area .themesflat-spacer {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Force blog posts to use full width of their container */
+.blog-area .col-left-70 .post,
+.blog-area .col-left-70 article {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Navigation menu styling - black text, no underline */
+.header__main .main-menu ul li a {
+  color: #000000 !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+
+.header__main .main-menu ul li a:hover {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.header__main .main-menu ul li a:focus {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.header__main .main-menu ul li a:visited {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+/* Sub-menu links */
+.header__main .main-menu ul li .sub-menu li a {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.header__main .main-menu ul li .sub-menu li a:hover {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+/* Header: remove only underline from all links (keeps colors intact) */
+.header__main a,
+.header__main a:hover,
+.header__main a:focus,
+.header__main a:visited {
+  text-decoration: none !important;
+}
+
+/* Logo styling for better mobile visibility */
+.header__main .logo img {
+  max-height: 50px !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .header__main .logo img {
+    max-height: 40px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__main .logo img {
+    max-height: 35px !important;
+  }
+}
+
+/* Mobile menu - remove all underlines */
+.sidebar-area a,
+.sidebar-area .logo,
+.sidebar-area .info a,
+.sidebar-area .social-icon a,
+.sidebar-area .mean-nav a,
+.sidebar-area .sub-menu a,
+.sidebar-area .mega-menu a,
+.sidebar-area .btn-one {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Force "Explore Blogs and News" title to be black */
+.blog-two-area .section-header h2,
+#blog-section .section-header h2,
+.blog-two-area h2,
+#blog-section h2 {
+  color: #000000 !important;
+}
+
+/* Ensure blog section titles are black */
+.blog-two-area .section-header h2:contains("Explore Blogs and News"),
+#blog-section .section-header h2:contains("Explore Blogs and News") {
+  color: #000000 !important;
+}
+
+/* Home blog section post titles: make links black, remove underline */
+.blog-two-area .blog__content h3 a,
+.blog-two-area .blog__content h3 a:visited,
+.blog-two-area .blog__content h3 a:hover,
+.blog-two-area .blog__content h3 a:focus {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+/* Override theme utility that turns links blue in this section */
+.blog-two-area .primary-hover,
+.blog-two-area .primary-hover:hover,
+.blog-two-area .primary-hover:focus {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.sidebar-area a:hover,
+.sidebar-area .logo:hover,
+.sidebar-area .info a:hover,
+.sidebar-area .social-icon a:hover,
+.sidebar-area .mean-nav a:hover,
+.sidebar-area .sub-menu a:hover,
+.sidebar-area .mega-menu a:hover,
+.sidebar-area .btn-one:hover {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.sidebar-area a:focus,
+.sidebar-area .logo:focus,
+.sidebar-area .info a:focus,
+.sidebar-area .social-icon a:focus,
+.sidebar-area .mean-nav a:focus,
+.sidebar-area .sub-menu a:focus,
+.sidebar-area .mega-menu a:focus,
+.sidebar-area .btn-one:focus {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.sidebar-area a:visited,
+.sidebar-area .logo:visited,
+.sidebar-area .info a:visited,
+.sidebar-area .social-icon a:visited,
+.sidebar-area .mean-nav a:visited,
+.sidebar-area .sub-menu a:visited,
+.sidebar-area .mega-menu a:visited,
+.sidebar-area .btn-one:visited {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Tighten article spacing and content padding */
+.blog-area article.post {
+  margin: 0 0 24px 0 !important;
+  padding: 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.blog-area article.post .content-post {
+  padding: 16px 18px 18px !important;
+}
+
+.blog-area article.post .flat-read-more,
+.blog-area article.post .flat-read-more * {
+  margin-top: 8px !important;
+}
+
+/* Footer: remove only underline from links (preserve colors and hover effects) */
+.footer-area a,
+.footer-two-area a,
+.footer__copyright a,
+.footer__item a,
+.footer__item .logo,
+.footer__item .social-icon a {
+  text-decoration: none !important;
+}
+
+.footer-area a:hover,
+.footer-two-area a:hover,
+.footer__copyright a:hover,
+.footer__item a:hover,
+.footer__item .social-icon a:hover {
+  text-decoration: none !important;
+}
+
+/* Blog details page layout */
+.container .row .col-lg-7 {
+  width: 70% !important;
+  max-width: 70% !important;
+  flex: 0 0 70% !important;
+  padding-right: 15px !important;
+}
+
+.container .row .col-lg-5 {
+  width: 30% !important;
+  max-width: 30% !important;
+  flex: 0 0 30% !important;
+  padding-left: 15px !important;
+}
+
+/* Prevent overlapping issues */
+.blog-area .post,
+.blog-area .blogPost,
+.blog-details-content,
+.blog-main-content {
+  overflow: visible !important;
+  word-wrap: break-word !important;
+  max-width: 100% !important;
+}
+
+/* Mobile responsive adjustments for blog layout */
+@media (max-width: 991px) {
+  .blog-area .col-lg-7,
+  .blog-area .col-lg-5,
+  .container .row .col-lg-7,
+  .container .row .col-lg-5 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* Blog details: keep images within content column and prevent overlap */
+.blog-details-content img,
+.blog-main-content img,
+.col-lg-7 .blog-details-content img,
+.col-lg-7 .blog-main-content img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Ensure any figure/wrapper also respects the column width */
+.blog-details-content figure,
+.blog-main-content figure {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 20px 0 !important;
+}
+
+/* Override earlier wide image rules inside the 70% left column on details */
+.container .row .col-lg-7 .featured-post,
+.container .row .col-lg-7 .featured-post img,
+.container .row .col-lg-7 .blog-bannerimg img {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+}
+
+/* Slug-specific fix for /blog/web-app-vs-desktop-app */
+.blog-details-page.slug-web-app-vs-desktop-app .col-lg-7 .featured-post,
+.blog-details-page.slug-web-app-vs-desktop-app .col-lg-7 .featured-post img,
+.blog-details-page.slug-web-app-vs-desktop-app .col-lg-7 .blog-bannerimg img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background-color: #f8f9fa !important;
+}

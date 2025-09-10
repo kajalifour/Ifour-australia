@@ -53,9 +53,9 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
 
   if (loading) {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-8 col-md-12">
+      <div className="container px-0">
+        <div className="row mx-0">
+          <div className="col-12 px-0">
             <div className="text-center py-5">
               <p>Loading blogs...</p>
             </div>
@@ -66,17 +66,14 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
   }
 
   return (
-    <div className={`${styles.blogMainSection}`} style={{ width: '100%', maxWidth: '100%', margin: 0, padding: 0 }}>
-      <div className="container" style={{ maxWidth: '100%', width: '100%', margin: 0, padding: 0 }}>
-        <div className="row" style={{ margin: 0, width: '100%' }}>
-          <div className="col-lg-8 col-md-12" style={{ width: '100%', maxWidth: '100%', flex: '0 0 100%', padding: 0, margin: 0 }}>
+    <div className={`${styles.blogMainSection}`}>
           {blogs.length > 0 ? (
             blogs.map(
               (blog, i) =>
                 blog.isPublished && (
                   <React.Fragment key={blog.id}>
-                    <article className={`post clearfix post-standar fl-sd wow fadeInUp ${styles.blogPost}`} style={{ width: '100%', maxWidth: '100%', marginLeft: 0, marginRight: 0, paddingLeft: 0, paddingRight: 0 }}>
-                      <div className={`featured-post ${styles.featuredPost}`} style={{ width: '100%', maxWidth: '100%', margin: 0, padding: 0 }}>
+                    <article className={`post clearfix post-standar fl-sd wow fadeInUp ${styles.blogPost}`}>
+                      <div className={`featured-post ${styles.featuredPost}`}>
                         <Link href={`/blog/${blog.slug}`}>
                           <Image
                             alt={blog.alt || blog.postTitle}
@@ -86,12 +83,13 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                             quality={100}
                             priority={i === 0}
                             style={{ 
-                              objectFit: 'cover', 
+                              objectFit: 'contain', 
+                              objectPosition: 'center center',
                               width: '100%', 
-                              maxWidth: '100%', 
-                              margin: 0, 
-                              padding: 0,
-                              borderRadius: '8px'
+                              height: 'auto',
+                              borderRadius: '8px 8px 0 0',
+                              display: 'block',
+                              backgroundColor: '#f8f9fa'
                             }}
                             placeholder="blur"
                             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
@@ -156,7 +154,7 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                               textTransform: 'none',
                               letterSpacing: '0.3px',
                               borderRadius: '4px',
-                              background: 'white',
+                              backgroundColor: 'white',
                               color: '#0f7a95',
                               textDecoration: 'none',
                               border: '2px solid #0f7a95',
@@ -164,11 +162,11 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                               transition: 'all 0.3s ease'
                             }}
                             onMouseEnter={(e) => {
-                              e.currentTarget.style.background = '#0f7a95';
+                              e.currentTarget.style.backgroundColor = '#0f7a95';
                               e.currentTarget.style.color = 'white';
                             }}
                             onMouseLeave={(e) => {
-                              e.currentTarget.style.background = 'white';
+                              e.currentTarget.style.backgroundColor = 'white';
                               e.currentTarget.style.color = '#0f7a95';
                             }}
                           >
@@ -211,17 +209,12 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
               <p>Page {pageNum} of {totalPages}</p>
             </div>
           )}
-        </div>
-      </div>
-      <div className="row">
         <div
           className="themesflat-spacer clearfix"
           data-desktop={244}
           data-mobile={60}
           data-smobile={60}
         />
-      </div>
     </div>
-  </div>
   );
 }

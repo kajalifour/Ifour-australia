@@ -15,9 +15,8 @@
   color: #ffffff !important;
 }
 
-/* Override any global banner h1 color */
+/* Override any global banner h1 color - handled inline in Banner.tsx */
 .banner__content h1.custom-banner-text span {
-  color: #ffffff !important;
 }
 
 /* Mobile responsive adjustments */

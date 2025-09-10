@@ -73,7 +73,7 @@
 
 /* Blog post styling - Elegant and sober design */
 .blogPost {
-  margin-bottom: 40px !important;
+  margin-bottom: 24px !important;
   padding: 0 !important;
   background: #fff !important;
   border-radius: 8px !important;
@@ -86,6 +86,8 @@
   border: 1px solid #f0f0f0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .blogPost:hover {
@@ -94,35 +96,79 @@
   border-color: #e0e0e0 !important;
 }
 
-/* Clean image container */
+/* ===== COMPREHENSIVE BLOG FIXES ===== */
+
+/* Blog post container - allows overflow for wider content */
+.blogMainSection .blogPost {
+  overflow: visible !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Featured post container - wider for desktop */
 .featuredPost {
   position: relative !important;
   overflow: hidden !important;
   width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   height: auto !important;
-  margin: 0 !important;
   display: block !important;
+  border-radius: 8px 8px 0 0 !important;
+  box-sizing: border-box !important;
+  background: #f8f9fa !important;
+  padding: 0 !important;
 }
 
-/* Clean image styling */
+/* Featured post images - match container width */
 .featuredPost img {
   transition: transform 0.3s ease !important;
   width: 100% !important;
+  max-width: 100% !important;
   height: auto !important;
-  min-height: 400px !important;
-  max-height: 500px !important;
-  object-fit: cover !important;
+  min-height: 360px !important;
+  max-height: 600px !important;
+  object-fit: contain !important;
+  object-position: center center !important;
   display: block !important;
   position: relative !important;
   z-index: 1 !important;
+  border-radius: 8px 8px 0 0 !important;
+  background: #f8f9fa !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 .blogPost:hover .featuredPost img {
   transform: scale(1.02) !important;
 }
 
+/* Content post - default width for posts without images */
 .contentPost {
   padding: 20px 25px 25px !important;
+  text-align: left !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Content post - wider when following a featured post */
+.featuredPost + .contentPost {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 20px 25px 25px !important;
+  box-sizing: border-box !important;
   text-align: left !important;
 }
 
@@ -181,6 +227,15 @@
   text-align: left !important;
 }
 
+/* Remove theme spacer gaps within blog list */
+.blogMainSection .themesflat-spacer {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  visibility: hidden !important;
+}
+
 .readMoreButton {
   display: inline-block !important;
   padding: 10px 20px !important;
@@ -204,6 +259,30 @@
   border-color: #0f7a95 !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 4px 12px rgba(15, 122, 149, 0.3) !important;
+}
+
+/* Additional fixes for image display */
+.featuredPost a {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Ensure no text overlays are cut off */
+.featuredPost {
+  position: relative !important;
+}
+
+.featuredPost::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
 }
 
 /* Responsive design */
@@ -232,14 +311,37 @@
     font-size: 14px !important;
   }
   
+  .readMoreContainer { margin-top: 16px !important; }
+  .readMoreButton { white-space: nowrap !important; }
+
   .readMoreButton {
     padding: 9px 18px !important;
     font-size: 12px !important;
   }
   
+  .featuredPost {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 5px !important;
+    box-sizing: border-box !important;
+  }
+  
   .featuredPost img {
-    min-height: 350px !important;
+    min-height: 250px !important;
     max-height: 400px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    box-sizing: border-box !important;
+  }
+  
+  .contentPost {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 18px 20px 20px !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -258,8 +360,28 @@
     font-size: 11px !important;
   }
   
+  .featuredPost {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 5px !important;
+    box-sizing: border-box !important;
+  }
+  
   .featuredPost img {
-    min-height: 300px !important;
+    min-height: 200px !important;
     max-height: 350px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    box-sizing: border-box !important;
+  }
+  
+  .contentPost {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 16px 18px 18px !important;
+    box-sizing: border-box !important;
   }
 }
