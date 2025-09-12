@@ -33,6 +33,35 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  // Lightweight button style enforcement - only when blogs are loaded
+  useEffect(() => {
+    if (blogs.length > 0) {
+      // Single timeout to apply styles after blogs are rendered
+      const timeoutId = setTimeout(() => {
+        const buttons = document.querySelectorAll('.flat-read-more a');
+        buttons.forEach((button) => {
+          const el = button as HTMLElement;
+          el.style.setProperty('width', 'auto', 'important');
+          el.style.setProperty('min-width', 'auto', 'important');
+          el.style.setProperty('max-width', 'none', 'important');
+          el.style.setProperty('padding', '10px 20px', 'important');
+          el.style.setProperty('font-size', '14px', 'important');
+          el.style.setProperty('border-radius', '6px', 'important');
+          el.style.setProperty('height', 'auto', 'important');
+          el.style.setProperty('line-height', 'normal', 'important');
+          el.style.setProperty('color', 'white', 'important');
+          
+          const span = el.querySelector('span');
+          if (span) {
+            span.style.setProperty('color', 'white', 'important');
+          }
+        });
+      }, 100);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [blogs]);
+
   // Derive current page from the query string, fallback to prop/default
   const currentPage = useMemo(() => {
     const fromQuery = Number(searchParams?.get("page") || "");
@@ -97,7 +126,7 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                             src={blog.fileName || '/assets/images/blog/blog-image1.jpg'}
                             width={900}
                             height={540}
-                            quality={100}
+                            quality={75}
                             priority={i === 0}
                             style={{ 
                               objectFit: 'contain', 
@@ -162,29 +191,60 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                         <div className={`flat-read-more ${styles.readMoreContainer}`}>
                           <Link
                             href={`/blog/${blog.slug}`}
-                            className={`themesflat-button bg-accent btn-read-more ${styles.readMoreButton}`}
+                            className={`btn-one ${styles.readMoreButton}`}
                             style={{
                               display: 'inline-block',
                               padding: '10px 20px',
-                              fontSize: '13px',
-                              fontWeight: '500',
+                              fontSize: '14px',
+                              fontWeight: '600',
                               textTransform: 'none',
                               letterSpacing: '0.3px',
-                              borderRadius: '4px',
-                              backgroundColor: 'white',
-                              color: '#0f7a95',
+                              borderRadius: '6px',
+                              backgroundColor: '#0f7a95',
+                              color: 'white',
                               textDecoration: 'none',
-                              border: '2px solid #0f7a95',
+                              border: 'none',
                               cursor: 'pointer',
-                              transition: 'all 0.3s ease'
+                              transition: 'all 0.3s ease',
+                              boxShadow: '0 4px 15px rgba(15, 122, 149, 0.2)',
+                              position: 'relative',
+                              overflow: 'hidden',
+                              width: 'auto',
+                              minWidth: 'auto',
+                              maxWidth: 'none',
+                              height: 'auto',
+                              lineHeight: 'normal',
+                              textAlign: 'center',
+                              boxSizing: 'border-box'
                             }}
                             onMouseEnter={(e) => {
-                              e.currentTarget.style.backgroundColor = '#0f7a95';
-                              e.currentTarget.style.color = 'white';
+                              e.currentTarget.style.setProperty('background-color', '#0a5a6a', 'important');
+                              e.currentTarget.style.setProperty('transform', 'translateY(-2px)', 'important');
+                              e.currentTarget.style.setProperty('box-shadow', '0 6px 20px rgba(15, 122, 149, 0.3)', 'important');
                             }}
                             onMouseLeave={(e) => {
-                              e.currentTarget.style.backgroundColor = 'white';
-                              e.currentTarget.style.color = '#0f7a95';
+                              e.currentTarget.style.setProperty('background-color', '#0f7a95', 'important');
+                              e.currentTarget.style.setProperty('transform', 'translateY(0)', 'important');
+                              e.currentTarget.style.setProperty('box-shadow', '0 4px 15px rgba(15, 122, 149, 0.2)', 'important');
+                            }}
+                            ref={(el) => {
+                              if (el) {
+                                // Apply button size and color styles
+                                el.style.setProperty('width', 'auto', 'important');
+                                el.style.setProperty('min-width', 'auto', 'important');
+                                el.style.setProperty('max-width', 'none', 'important');
+                                el.style.setProperty('padding', '10px 20px', 'important');
+                                el.style.setProperty('font-size', '14px', 'important');
+                                el.style.setProperty('border-radius', '6px', 'important');
+                                el.style.setProperty('height', 'auto', 'important');
+                                el.style.setProperty('line-height', 'normal', 'important');
+                                el.style.setProperty('color', 'white', 'important');
+                                
+                                const span = el.querySelector('span');
+                                if (span) {
+                                  span.style.setProperty('color', 'white', 'important');
+                                }
+                              }
                             }}
                           >
                             <span>Read More</span>

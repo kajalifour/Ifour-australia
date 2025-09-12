@@ -225,6 +225,8 @@
 .readMoreContainer {
   margin-top: 20px !important;
   text-align: left !important;
+  width: auto !important;
+  display: block !important;
 }
 
 /* Remove theme spacer gaps within blog list */
@@ -236,29 +238,132 @@
   visibility: hidden !important;
 }
 
-.readMoreButton {
+.readMoreButton,
+.readMoreButton.btn-one,
+.readMoreButton.themesflat-button,
+.readMoreButton.bg-accent,
+.readMoreButton.btn-read-more {
   display: inline-block !important;
   padding: 10px 20px !important;
-  font-size: 13px !important;
-  font-weight: 500 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
   text-transform: none !important;
   letter-spacing: 0.3px !important;
-  border-radius: 4px !important;
-  background: white !important;
-  color: #0f7a95 !important;
+  border-radius: 6px !important;
+  background-color: #0f7a95 !important;
+  color: white !important;
   text-decoration: none !important;
   transition: all 0.3s ease !important;
-  border: 2px solid #0f7a95 !important;
+  border: none !important;
   cursor: pointer !important;
-  box-shadow: none !important;
+  box-shadow: 0 4px 15px rgba(15, 122, 149, 0.2) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  width: auto !important;
+  height: auto !important;
+  line-height: normal !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
 }
 
-.readMoreButton:hover {
-  background: #0f7a95 !important;
+.readMoreButton:hover,
+.readMoreButton.btn-one:hover,
+.readMoreButton.themesflat-button:hover,
+.readMoreButton.bg-accent:hover,
+.readMoreButton.btn-read-more:hover {
+  background-color: #0a5a6a !important;
   color: white !important;
-  border-color: #0f7a95 !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(15, 122, 149, 0.3) !important;
+  box-shadow: 0 6px 20px rgba(15, 122, 149, 0.3) !important;
+}
+
+/* Ensure button doesn't take full width and has proper sizing */
+.readMoreContainer a,
+.readMoreContainer .readMoreButton,
+.readMoreContainer .btn-one,
+.readMoreContainer .themesflat-button,
+.readMoreContainer .bg-accent,
+.readMoreContainer .btn-read-more {
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+  flex: none !important;
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  border-radius: 6px !important;
+  height: auto !important;
+  line-height: normal !important;
+  box-sizing: border-box !important;
+}
+
+/* Force button sizing with highest specificity */
+.flat-read-more a,
+.flat-read-more .readMoreButton,
+.flat-read-more .btn-one,
+.flat-read-more .themesflat-button,
+.flat-read-more .bg-accent,
+.flat-read-more .btn-read-more {
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  border-radius: 6px !important;
+  height: auto !important;
+  line-height: normal !important;
+  display: inline-block !important;
+  box-sizing: border-box !important;
+}
+
+/* Global override for any conflicting styles */
+.blogMainSection .flat-read-more a,
+.blogMainSection .flat-read-more .readMoreButton,
+.blogMainSection .flat-read-more .btn-one,
+.blogMainSection .flat-read-more .themesflat-button,
+.blogMainSection .flat-read-more .bg-accent,
+.blogMainSection .flat-read-more .btn-read-more {
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  border-radius: 6px !important;
+  height: auto !important;
+  line-height: normal !important;
+  display: inline-block !important;
+  box-sizing: border-box !important;
+  color: white !important;
+}
+
+/* Ultra-specific override for any global button styles */
+.blog-area .blogMainSection .flat-read-more a,
+.blog-area .blogMainSection .flat-read-more .readMoreButton,
+.blog-area .blogMainSection .flat-read-more .btn-one,
+.blog-area .blogMainSection .flat-read-more .themesflat-button,
+.blog-area .blogMainSection .flat-read-more .bg-accent,
+.blog-area .blogMainSection .flat-read-more .btn-read-more,
+.blog-area .flat-read-more a,
+.blog-area .flat-read-more .readMoreButton,
+.blog-area .flat-read-more .btn-one,
+.blog-area .flat-read-more .themesflat-button,
+.blog-area .flat-read-more .bg-accent,
+.blog-area .flat-read-more .btn-read-more {
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  border-radius: 6px !important;
+  height: auto !important;
+  line-height: normal !important;
+  display: inline-block !important;
+  box-sizing: border-box !important;
+  flex: none !important;
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
+  flex-basis: auto !important;
+  color: white !important;
 }
 
 /* Additional fixes for image display */
@@ -315,8 +420,12 @@
   .readMoreButton { white-space: nowrap !important; }
 
   .readMoreButton {
-    padding: 9px 18px !important;
-    font-size: 12px !important;
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+    letter-spacing: 0.2px !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: normal !important;
   }
   
   .featuredPost {
@@ -384,4 +493,28 @@
     padding: 16px 18px 18px !important;
     box-sizing: border-box !important;
   }
+}
+
+/* Button size and styling overrides */
+.blogMainSection .flat-read-more a,
+.blogMainSection .flat-read-more .readMoreButton,
+.blogMainSection .flat-read-more .btn-one {
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  border-radius: 6px !important;
+  height: auto !important;
+  line-height: normal !important;
+  display: inline-block !important;
+  box-sizing: border-box !important;
+  color: white !important;
+}
+
+/* White text override for spans */
+.blogMainSection .flat-read-more a span,
+.blogMainSection .flat-read-more .readMoreButton span,
+.blogMainSection .flat-read-more .btn-one span {
+  color: white !important;
 }

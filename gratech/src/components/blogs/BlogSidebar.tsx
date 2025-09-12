@@ -107,7 +107,7 @@ export default function BlogSidebar() {
     <div id="sidebar" className="sidebar">
 
       {/* Recent Posts Widget */}
-      <div className="widget widget_recent_posts mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+      <div className="widget widget_recent_posts mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)', minHeight: '200px' }}>
         <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
           Recent Posts
         </h5>
@@ -146,7 +146,7 @@ export default function BlogSidebar() {
               </li>
             ))
           ) : (
-            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic' }}>
+            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic', padding: '20px 0' }}>
               No recent posts available
             </li>
           )}
@@ -154,7 +154,7 @@ export default function BlogSidebar() {
       </div>
 
       {/* Categories Widget */}
-      <div className="widget widget_categories mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+      <div className="widget widget_categories mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)', minHeight: '150px' }}>
         <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
           Categories
         </h5>
@@ -181,7 +181,7 @@ export default function BlogSidebar() {
               </li>
             ))
           ) : (
-            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic' }}>
+            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic', padding: '20px 0' }}>
               No categories available
             </li>
           )}

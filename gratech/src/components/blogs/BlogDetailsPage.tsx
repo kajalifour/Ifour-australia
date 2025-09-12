@@ -77,9 +77,13 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
               }
             }
             toRemove.forEach(n => {
-              if (n && n.parentNode) {
+              if (n && n.parentNode && n.parentNode.contains(n)) {
                 try {
-                  n.parentNode.removeChild(n);
+                  if (n.remove) {
+                    n.remove();
+                  } else {
+                    n.parentNode.removeChild(n);
+                  }
                 } catch (error) {
                   console.warn('Failed to remove child node:', error);
                 }
@@ -119,9 +123,13 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                   if (isBr || isEmptyText || isEmptySpan) {
                     const toRemove = first;
                     first = first.nextSibling;
-                    if (toRemove && node) {
+                    if (toRemove && node && node.contains(toRemove)) {
                       try {
-                    node.removeChild(toRemove);
+                        if (toRemove.remove) {
+                          toRemove.remove();
+                        } else {
+                          node.removeChild(toRemove);
+                        }
                       } catch (error) {
                         console.warn('Failed to remove child node:', error);
                       }
@@ -141,9 +149,13 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                 if (isBr || isEmptyText || isEmptySpan) {
                   const toRemove = prev;
                   prev = prev.previousSibling;
-                  if (toRemove && toRemove.parentNode) {
+                  if (toRemove && toRemove.parentNode && toRemove.parentNode.contains(toRemove)) {
                     try {
-                      toRemove.parentNode.removeChild(toRemove);
+                      if (toRemove.remove) {
+                        toRemove.remove();
+                      } else {
+                        toRemove.parentNode.removeChild(toRemove);
+                      }
                     } catch (error) {
                       console.warn('Failed to remove child node:', error);
                     }
@@ -164,9 +176,13 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                   if (isBr || isEmptyText || isEmptySpan) {
                     const toRemove = first;
                     first = first.nextSibling;
-                    if (toRemove && wrapper) {
+                    if (toRemove && wrapper && wrapper.contains(toRemove)) {
                       try {
-                    wrapper.removeChild(toRemove);
+                        if (toRemove.remove) {
+                          toRemove.remove();
+                        } else {
+                          wrapper.removeChild(toRemove);
+                        }
                       } catch (error) {
                         console.warn('Failed to remove child node:', error);
                       }
@@ -184,9 +200,13 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                   if (isBr || isEmptyText || isEmptySpan) {
                     const toRemove = prev;
                     prev = prev.previousSibling;
-                  if (toRemove && toRemove.parentNode) {
+                  if (toRemove && toRemove.parentNode && toRemove.parentNode.contains(toRemove)) {
                     try {
-                      toRemove.parentNode.removeChild(toRemove);
+                      if (toRemove.remove) {
+                        toRemove.remove();
+                      } else {
+                        toRemove.parentNode.removeChild(toRemove);
+                      }
                     } catch (error) {
                       console.warn('Failed to remove child node:', error);
                     }
@@ -275,8 +295,8 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
     // Observe mutations to re-apply fix when CMS content updates or reflows
     const blogMain = document.querySelector('.blog-main-content');
     let observer: MutationObserver | null = null;
+    let rafId = 0;
     if (blogMain) {
-      let rafId = 0;
       const scheduleFix = () => {
         if (rafId) cancelAnimationFrame(rafId);
         rafId = requestAnimationFrame(() => {
@@ -296,6 +316,11 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
       // Remove event listener if it was added
       if (document.readyState === 'loading') {
         document.removeEventListener('DOMContentLoaded', fixSpacing);
+      }
+      // Cancel any pending animation frames
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = 0;
       }
     };
   }, [blogDetail]);
