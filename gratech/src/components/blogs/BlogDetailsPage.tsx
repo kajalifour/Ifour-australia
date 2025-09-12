@@ -44,11 +44,11 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
       spacers.forEach((spacer) => {
         const element = spacer as HTMLElement;
         if (element) {
-          element.style.marginTop = '0px';
-          element.style.height = '0px';
-          element.style.display = 'none';
-          element.style.visibility = 'hidden';
-          element.style.opacity = '0';
+        element.style.marginTop = '0px';
+        element.style.height = '0px';
+        element.style.display = 'none';
+        element.style.visibility = 'hidden';
+        element.style.opacity = '0';
         }
       });
 
@@ -104,7 +104,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
               if (parentElement && tableElement) {
                 try {
                   parentElement.insertBefore(wrapper, tableElement);
-                  wrapper.appendChild(tableElement);
+              wrapper.appendChild(tableElement);
                 } catch (error) {
                   console.warn('Failed to wrap table element:', error);
                 }
@@ -121,7 +121,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                     first = first.nextSibling;
                     if (toRemove && node) {
                       try {
-                        node.removeChild(toRemove);
+                    node.removeChild(toRemove);
                       } catch (error) {
                         console.warn('Failed to remove child node:', error);
                       }
@@ -166,7 +166,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                     first = first.nextSibling;
                     if (toRemove && wrapper) {
                       try {
-                        wrapper.removeChild(toRemove);
+                    wrapper.removeChild(toRemove);
                       } catch (error) {
                         console.warn('Failed to remove child node:', error);
                       }
@@ -181,9 +181,9 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                   const isBr = prev.nodeType === 1 && (prev as Element).tagName === 'BR';
                   const isEmptyText = prev.nodeType === 3 && ((prev.textContent || '').replace(/\u00A0/g, ' ').trim() === '');
                   const isEmptySpan = prev.nodeType === 1 && (prev as Element).tagName === 'SPAN' && (((prev as Element).textContent || '').trim() === '');
-                if (isBr || isEmptyText || isEmptySpan) {
-                  const toRemove = prev;
-                  prev = prev.previousSibling;
+                  if (isBr || isEmptyText || isEmptySpan) {
+                    const toRemove = prev;
+                    prev = prev.previousSibling;
                   if (toRemove && toRemove.parentNode) {
                     try {
                       toRemove.parentNode.removeChild(toRemove);
@@ -192,7 +192,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                     }
                   }
                   continue;
-                }
+                  }
                   break;
                 }
               }
@@ -266,7 +266,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', fixSpacing);
     } else {
-      fixSpacing();
+    fixSpacing();
     }
     
     // Run again after a short delay to ensure it overrides any other scripts

@@ -5,7 +5,7 @@ import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
 export const metadata = { 
   title: 'Hire Vue Js Developers | Top VueJs Experts',
-  keywords: 'hire Vue.js developers Australia, Vue.js development company, Vue.js programmers for hire, frontend developers, web app development, JavaScript developers',
+  keywords: '',
   description: 'Hire Vue Js developers from iFour instantly who match your technical expertise and provide end-to-end development services for your needs.',
   openGraph: {
     title: 'Hire Vue Js Developers | Top VueJs Experts',

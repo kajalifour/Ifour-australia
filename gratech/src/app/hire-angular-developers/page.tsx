@@ -5,7 +5,7 @@ import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
 export const metadata = {
   title: 'Hire Angular Developers in Australia',
-  keywords: 'hire Angular developers Australia, Angular development company, Angular programmers for hire, frontend developers, Angular solutions, TypeScript developers',
+  keywords: '',
   description: 'Hire Angular developers in Australia from a top-notch IT company iFour and get robust and feature-rich Angular solutions for your business.',
   openGraph: {
     title: 'Hire Angular Developers in Australia',

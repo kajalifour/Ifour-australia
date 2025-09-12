@@ -106,6 +106,88 @@ export default function BlogSidebar() {
   return (
     <div id="sidebar" className="sidebar">
 
+      {/* Recent Posts Widget */}
+      <div className="widget widget_recent_posts mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+        <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
+          Recent Posts
+        </h5>
+        <ul className="recent-posts-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          {recentPosts.length > 0 ? (
+            recentPosts.map((post) => (
+              <li
+                key={post.id || post.postId || `post-${post.slug}`}
+                style={{
+                  marginBottom: '14px',
+                  paddingBottom: '14px',
+                  borderBottom: '1px solid #eef2f7',
+                }}
+              >
+                <Link 
+                  href={`/blog/${post.slug}`}
+                  style={{ 
+                    color: '#1f2937',
+                    textDecoration: 'none', 
+                    fontSize: '15px',
+                    fontWeight: 600,
+                    display: 'block',
+                    marginBottom: '6px',
+                    lineHeight: '1.5',
+                    transition: 'color 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#0f7a95')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#1f2937')}
+                >
+                  {post.postTitle}
+                </Link>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#d1d5db', display: 'inline-block' }} />
+                  <span style={{ color: '#6b7280', fontSize: '12px' }}>{post.publishedDates}</span>
+                </div>
+              </li>
+            ))
+          ) : (
+            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic' }}>
+              No recent posts available
+            </li>
+          )}
+        </ul>
+      </div>
+
+      {/* Categories Widget */}
+      <div className="widget widget_categories mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+        <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
+          Categories
+        </h5>
+        <ul className="categories-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          {categories.length > 0 ? (
+            categories.map((category) => (
+              <li key={category.catId || category.id} style={{ marginBottom: '10px' }}>
+                <Link 
+                  href={`/blog-category/${category.catSlug || category.categorySlug || category.slug || category.categoryName?.toLowerCase().replace(/\s+/g, '-')}`}
+                  style={{ 
+                    color: '#0f7a95', 
+                    textDecoration: 'none', 
+                    fontSize: '14px',
+                    display: 'block',
+                    padding: '8px 0',
+                    borderBottom: '1px solid #f0f0f0',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#0a5a6f'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = '#0f7a95'}
+                >
+                  {category.catTitle || category.categoryName || category.name}
+                </Link>
+              </li>
+            ))
+          ) : (
+            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic' }}>
+              No categories available
+            </li>
+          )}
+        </ul>
+      </div>
+
       {/* Reach out to us Widget */}
       <div className="widget widget_reach_out mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
         <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
@@ -163,125 +245,7 @@ export default function BlogSidebar() {
         </div>
       </div>
 
-      {/* Categories Widget */}
-      <div className="widget widget_categories mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-        <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
-          Categories
-        </h5>
-        <ul className="categories-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-          {categories.length > 0 ? (
-            categories.map((category) => (
-              <li key={category.catId || category.id} style={{ marginBottom: '10px' }}>
-                <Link 
-                  href={`/blog-category/${category.catSlug || category.categorySlug || category.slug || category.categoryName?.toLowerCase().replace(/\s+/g, '-')}`}
-                  style={{ 
-                    color: '#0f7a95', 
-                    textDecoration: 'none', 
-                    fontSize: '14px',
-                    display: 'block',
-                    padding: '8px 0',
-                    borderBottom: '1px solid #f0f0f0',
-                    transition: 'color 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#0a5a6f'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = '#0f7a95'}
-                >
-                  {category.catTitle || category.categoryName || category.name}
-                </Link>
-              </li>
-            ))
-          ) : (
-            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic' }}>
-              No categories available
-            </li>
-          )}
-        </ul>
-      </div>
-
-      {/* Recent Posts Widget */}
-      <div className="widget widget_recent_posts mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-        <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
-          Recent Posts
-        </h5>
-        <ul className="recent-posts-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-          {recentPosts.length > 0 ? (
-            recentPosts.map((post) => (
-              <li
-                key={post.id || post.postId || `post-${post.slug}`}
-                style={{
-                  marginBottom: '14px',
-                  paddingBottom: '14px',
-                  borderBottom: '1px solid #eef2f7',
-                }}
-              >
-                <Link 
-                  href={`/blog/${post.slug}`}
-                  style={{ 
-                    color: '#1f2937',
-                    textDecoration: 'none', 
-                    fontSize: '15px',
-                    fontWeight: 600,
-                    display: 'block',
-                    marginBottom: '6px',
-                    lineHeight: '1.5',
-                    transition: 'color 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#0f7a95')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#1f2937')}
-                >
-                  {post.postTitle}
-                </Link>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#d1d5db', display: 'inline-block' }} />
-                  <span style={{ color: '#6b7280', fontSize: '12px' }}>{post.publishedDates}</span>
-                </div>
-              </li>
-            ))
-          ) : (
-            <li style={{ color: '#6b7280', fontSize: '14px', fontStyle: 'italic' }}>
-              No recent posts available
-            </li>
-          )}
-        </ul>
-      </div>
-
-      {/* Popular Tags Widget */}
-      <div className="widget widget_popular_tags mb-4" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-        <h5 className="mb-3" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: '600', borderBottom: '2px solid #0f7a95', paddingBottom: '8px', marginBottom: '20px' }}>
-          Popular Tags
-        </h5>
-        <div className="tags-container">
-          {['web design', 'ui/ux design', 'graphics', 'design', 'icon', 'graphics design', 'branding'].map((tag, index) => (
-            <Link
-              key={index}
-              href={`/blog-category/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-              className="tag-link"
-              style={{
-                display: 'inline-block',
-                backgroundColor: '#f8f9fa',
-                color: '#0f7a95',
-                padding: '6px 12px',
-                margin: '3px',
-                borderRadius: '20px',
-                fontSize: '12px',
-                textDecoration: 'none',
-                border: '1px solid #e9ecef',
-                transition: 'all 0.3s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#0f7a95';
-                e.currentTarget.style.color = 'white';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#f8f9fa';
-                e.currentTarget.style.color = '#0f7a95';
-              }}
-            >
-              {tag}
-            </Link>
-          ))}
-        </div>
-      </div>
+      {/* Popular Tags Widget - REMOVED */}
     </div>
   );
 }

@@ -5,7 +5,7 @@ import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
 export const metadata = { 
   title: 'Hire Node.js Developers & Programmers',
-  keywords: 'hire Node.js developers Australia, Node.js development company, Node.js programmers for hire, backend developers, web app development, JavaScript developers', 
+  keywords: '', 
   description: 'Connect with iFour to hire Node.js developers and build robust and feature-oriented web app solutions for your needs.',
   openGraph: {
     title: 'Hire Node.js Developers & Programmers',

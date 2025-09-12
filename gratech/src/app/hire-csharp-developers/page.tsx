@@ -5,7 +5,7 @@ import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
 export const metadata = { 
   title: 'Hire C Sharp Developers in Australia | Skilled C# Programmers',
-  keywords: 'hire C# developers Australia, C# development company, C# programmers for hire, .NET developers, custom software development, software solutions', 
+  keywords: '', 
   description: 'Hire highly skilled C# developers from iFour with hands-on experience to build custom software for your business.',
   openGraph: {
     title: 'Hire C Sharp Developers in Australia | Skilled C# Programmers',

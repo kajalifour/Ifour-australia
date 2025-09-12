@@ -5,7 +5,7 @@ import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
 export const metadata = {
   title: 'Hire Java Developers | iFour Technolabs - Expert Enterprise Development Team',
-  keywords: 'hire Java developers, Java development team, enterprise developers, Java programmers, backend developers, Spring framework developers',
+  keywords: '',
   description: 'Hire experienced Java developers from iFour Technolabs for your enterprise application projects. Professional Java development services with expert Spring framework and enterprise development skills.',
   openGraph: {
     title: 'Hire Java Developers | iFour Technolabs - Expert Enterprise Development Team',

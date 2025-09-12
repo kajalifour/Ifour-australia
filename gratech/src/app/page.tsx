@@ -3,7 +3,7 @@ import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
   title: 'IT Service & Technology Solutions | iFour Technolabs - Leading Software Development Company',
-  keywords: 'IT services, software development, technology solutions, custom software development, web development, mobile app development, cloud services, digital transformation',
+  keywords: '',
   description: 'iFour Technolabs is a leading IT service and technology company providing comprehensive software development solutions including web development, mobile apps, cloud services, and digital transformation.',
   openGraph: {
     title: 'IT Service & Technology Solutions | iFour Technolabs - Leading Software Development Company',

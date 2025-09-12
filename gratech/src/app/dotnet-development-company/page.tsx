@@ -5,7 +5,7 @@ import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsAr
 
 export const metadata = {
   title: '.NET Development Company | ASP.Net Development Services',
-  keywords: '.NET development company, ASP.NET development services, .NET developers Australia, hire ASP.NET developers, .NET web development, ASP.NET app development',
+  keywords: '',
   description: 'Leading .NET development company in Australia. We provide a range of ASP.NET development services to build powerful apps, games, & websites. Contact us today!',
   openGraph: {
     title: '.NET Development Company | ASP.Net Development Services',

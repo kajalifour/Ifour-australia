@@ -5,7 +5,7 @@ import HireDetailsArea from "@/components/hire/HireDetailsArea"
 
 export const metadata = {
   title: 'Hire .NET Developer | .NET Programmers for Hire',
-  keywords: '.NET developer for hire, hire .NET programmers, .NET development services Australia, dedicated .NET developers, custom .NET solutions, scalable .NET applications',
+  keywords: '',
   description: 'Get access to a talent pool of resources to hire .NET developers in Australia with iFour and get dynamic and scalable .NET solutions.',
   openGraph: {
     title: 'Hire .NET Developer | .NET Programmers for Hire',

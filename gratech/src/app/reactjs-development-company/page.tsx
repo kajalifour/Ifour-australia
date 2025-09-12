@@ -5,7 +5,7 @@ import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsAr
 
 export const metadata = {
   title: 'React.js Development Company Australia | iFour',
-  keywords: 'React.js development company, React development services, React web development, React app development, hire React developers, frontend development, JavaScript developers, UI development',
+  keywords: '',
   description: 'As a leading React.js Development Company in Australia, we provide top-notch React development services worldwide, leveraging the expertise of our industry-specific software developers.',
   openGraph: {
     title: 'React.js Development Company Australia | iFour',

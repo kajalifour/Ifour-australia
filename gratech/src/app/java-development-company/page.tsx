@@ -5,7 +5,7 @@ import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsAr
 
 export const metadata = {
   title: 'Java Development Company | Java Web & App Development Services',
-  keywords: 'Java development company, Java development services, hire Java developers, custom Java software, Java web development, Java mobile app development, enterprise Java solutions, Australia Java company',
+  keywords: '',
   description: 'As a leading Java development company in Australia, we offer a range of Java development services to build custom software, web, & mobile apps. Call us!',
   openGraph: {
     title: 'Java Development Company | Java Web & App Development Services',

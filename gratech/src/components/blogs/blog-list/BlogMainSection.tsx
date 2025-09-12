@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllBlog } from "@/utils/api";
 import styles from "./BlogMainSection.module.css";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 interface Blog {
   id: string;
@@ -28,12 +29,21 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  // Derive current page from the query string, fallback to prop/default
+  const currentPage = useMemo(() => {
+    const fromQuery = Number(searchParams?.get("page") || "");
+    return Number.isFinite(fromQuery) && fromQuery > 0 ? fromQuery : pageNum || 1;
+  }, [searchParams, pageNum]);
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         setLoading(true);
-        const response: any = await getAllBlog(categorySlug, pageNum);
+        const response: any = await getAllBlog(categorySlug, currentPage);
         const blogList = response?.data?.blogList?.resultSet || [];
         const pageCount = response?.data?.blogList?.pageCount || 1;
         
@@ -49,7 +59,14 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
     };
 
     fetchBlogs();
-  }, [categorySlug, pageNum]);
+  }, [categorySlug, currentPage]);
+
+  const goToPage = (p: number) => {
+    if (!router) return;
+    const params = new URLSearchParams(searchParams?.toString() || "");
+    params.set("page", String(p));
+    router.push(`${pathname}?${params.toString()}`);
+  };
 
   if (loading) {
     return (
@@ -204,9 +221,58 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
             data-smobile={70}
           />
           {totalPages > 1 && (
-            <div className="pagination-wrapper">
-              {/* Pagination will be handled by the parent component */}
-              <p>Page {pageNum} of {totalPages}</p>
+            <div className="pagination-wrapper" style={{ display: 'flex', justifyContent: 'center', gap: 8 }}>
+              <button
+                aria-label="Previous page"
+                disabled={currentPage <= 1}
+                onClick={() => goToPage(Math.max(1, currentPage - 1))}
+                style={{
+                  padding: '8px 12px',
+                  border: '1px solid #0f7a95',
+                  background: currentPage <= 1 ? '#e9ecef' : '#fff',
+                  color: '#0f7a95',
+                  borderRadius: 4,
+                  cursor: currentPage <= 1 ? 'not-allowed' : 'pointer'
+                }}
+              >
+                Prev
+              </button>
+              {Array.from({ length: totalPages }).map((_, idx) => {
+                const p = idx + 1;
+                const isActive = p === currentPage;
+                return (
+                  <button
+                    key={p}
+                    onClick={() => goToPage(p)}
+                    aria-current={isActive ? 'page' : undefined}
+                    style={{
+                      padding: '8px 12px',
+                      border: '1px solid #0f7a95',
+                      background: isActive ? '#0f7a95' : '#fff',
+                      color: isActive ? '#fff' : '#0f7a95',
+                      borderRadius: 4,
+                      cursor: 'pointer'
+                    }}
+                  >
+                    {p}
+                  </button>
+                );
+              })}
+              <button
+                aria-label="Next page"
+                disabled={currentPage >= totalPages}
+                onClick={() => goToPage(Math.min(totalPages, currentPage + 1))}
+                style={{
+                  padding: '8px 12px',
+                  border: '1px solid #0f7a95',
+                  background: currentPage >= totalPages ? '#e9ecef' : '#fff',
+                  color: '#0f7a95',
+                  borderRadius: 4,
+                  cursor: currentPage >= totalPages ? 'not-allowed' : 'pointer'
+                }}
+              >
+                Next
+              </button>
             </div>
           )}
         <div

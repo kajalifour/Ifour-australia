@@ -6,7 +6,7 @@ import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsAr
 
 export const metadata = {
   title: 'C# Development Company Australia | CSharp Development Services',
-  keywords: 'C# development company, CSharp development services, hire C# developers, Microsoft solutions partner, cross-platform C# development, cloud development, Windows software development, mobile app development with C#',
+  keywords: '',
   description: 'Microsoft Solutions Partner iFour Technolab, a reputed C# development company that delivers C# development services in cross-platform, cloud, windows software, android/IOS mobile applications with the help of industry-specific software experts.',
   openGraph: {
     title: 'C# Development Company Australia | CSharp Development Services',

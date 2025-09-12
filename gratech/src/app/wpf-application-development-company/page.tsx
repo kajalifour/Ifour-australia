@@ -5,7 +5,7 @@ import TechnologyDetailsArea from "@/components/technologies/TechnologyDetailsAr
 
 export const metadata = {
   title: 'WPF Application Development Company Australia | iFour Technolab',
-  keywords: 'WPF development company, WPF application development, WPF desktop applications, Microsoft solutions partner, custom WPF apps, hire WPF developers, WPF UI design, WPF software development Australia',
+  keywords: '',
   description: 'iFour Technolab, a Microsoft Solutions Partner, leads in WPF application development in Australia. Our team delivers interactive, user-friendly, and straightforward WPF desktop applications globally.',
   openGraph: {
     title: 'WPF Application Development Company Australia | iFour Technolab',
