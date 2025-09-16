@@ -13,6 +13,29 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
   const [blogDetail, setBlogDetail] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
+  // Sanitize any CMS HTML to avoid requesting invalid placeholder images
+  const sanitizeHtml = (html: string): string => {
+    try {
+      const FALLBACK_IMG = '/assets/images/project-image-04.webp';
+      if (!html) return '';
+      let out = html
+        .replace(/https?:\/\/[^"'\s]+default\.Thumbnail\.[a-z0-9]+(?:\?[^"'\s]*)?/gi, FALLBACK_IMG)
+        .replace(/default\.Thumbnail\.[a-z0-9]+(?:\?[^"'\s]*)?/gi, FALLBACK_IMG);
+      // strip srcset candidates that include the bad URL
+      out = out.replace(/srcset=("|')(.*?)\1/gi, (m: string, q: string, val: string) => {
+        const cleaned = val
+          .split(',')
+          .map((s: string) => s.trim())
+          .filter((s: string) => !/default\.Thumbnail\.[a-z0-9]+/i.test(s))
+          .join(', ');
+        return `srcset=${q}${cleaned}${q}`;
+      });
+      return out;
+    } catch {
+      return html || '';
+    }
+  };
+
   useEffect(() => {
     const fetchBlogDetails = async () => {
       try {
@@ -245,9 +268,9 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
           }
 
           // Target all paragraphs in the blog-main-content
-          const allParagraphs = blogMainContent.querySelectorAll('p');
-          allParagraphs.forEach((paragraph) => {
-            const element = paragraph as HTMLElement;
+           const allParagraphs = blogMainContent.querySelectorAll('p');
+           allParagraphs.forEach((paragraph) => {
+             const element = paragraph as HTMLElement;
             element.style.margin = '0px';
             element.style.marginTop = '0px';
             element.style.marginBottom = '0px';
@@ -257,16 +280,16 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
           });
 
           // Target all tables in the blog-main-content
-          const allTables = blogMainContent.querySelectorAll('table');
-          allTables.forEach((table) => {
-            const element = table as HTMLElement;
+           const allTables = blogMainContent.querySelectorAll('table');
+           allTables.forEach((table) => {
+             const element = table as HTMLElement;
             element.style.margin = '0px';
             element.style.marginTop = '0px';
             element.style.marginBottom = '0px';
             element.style.padding = '0px';
             element.style.paddingTop = '0px';
             element.style.paddingBottom = '0px';
-          });
+           });
         }
       }
 
@@ -278,19 +301,67 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
         element.style.padding = '0px';
       });
       } catch (error) {
-        console.warn('Error in fixSpacing function:', error);
+        console.warn('Error in fixSocialSharingAndSpacing function:', error);
       }
     };
 
+    // Backward-compatible alias so references below compile
+    // Define before any usages below
+    const fixSocialSharingAndSpacing = fixSpacing;
+    if (typeof window !== 'undefined') {
+      // @ts-ignore expose for external scripts
+      (window as any).fixSocialSharingAndSpacing = fixSpacing;
+    }
+
     // Run immediately if DOM is ready
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fixSpacing);
+      document.addEventListener('DOMContentLoaded', fixSocialSharingAndSpacing);
     } else {
-    fixSpacing();
+    fixSocialSharingAndSpacing();
     }
     
     // Run again after a short delay to ensure it overrides any other scripts
-    setTimeout(fixSpacing, 100);
+      setTimeout(fixSocialSharingAndSpacing, 100);
+      setTimeout(fixSocialSharingAndSpacing, 300);
+      setTimeout(fixSocialSharingAndSpacing, 500);
+      setTimeout(fixSocialSharingAndSpacing, 1000);
+      setTimeout(fixSocialSharingAndSpacing, 2000);
+
+      // Minimal visibility fix for social sharing without altering design/position
+      const forceSocialSharing = () => {
+        const socialSharing = document.querySelector('.social-sharing');
+        if (!socialSharing) return;
+        const element = socialSharing as HTMLElement;
+        // Only clear properties that could hide it; do not change layout/design
+        element.style.removeProperty('display');
+        element.style.removeProperty('visibility');
+        element.style.removeProperty('opacity');
+        
+        const style = window.getComputedStyle(element);
+        if (style.display === 'none') element.style.display = 'block';
+        if (style.visibility === 'hidden') element.style.visibility = 'visible';
+        if (style.opacity === '0') element.style.opacity = '1';
+
+        // Ensure links are visible without restyling
+        const links = element.querySelectorAll('a');
+        links.forEach((link) => {
+          const linkEl = link as HTMLElement;
+          linkEl.style.removeProperty('display');
+          linkEl.style.removeProperty('visibility');
+          linkEl.style.removeProperty('opacity');
+          const linkStyle = window.getComputedStyle(linkEl);
+          if (linkStyle.display === 'none') linkEl.style.display = 'inline-flex';
+          if (linkStyle.visibility === 'hidden') linkEl.style.visibility = 'visible';
+          if (linkStyle.opacity === '0') linkEl.style.opacity = '1';
+        });
+      };
+
+      // Run the force function multiple times
+      setTimeout(forceSocialSharing, 50);
+      setTimeout(forceSocialSharing, 200);
+      setTimeout(forceSocialSharing, 500);
+      setTimeout(forceSocialSharing, 1000);
+      setTimeout(forceSocialSharing, 2000);
 
     // Observe mutations to re-apply fix when CMS content updates or reflows
     const blogMain = document.querySelector('.blog-main-content');
@@ -300,7 +371,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
       const scheduleFix = () => {
         if (rafId) cancelAnimationFrame(rafId);
         rafId = requestAnimationFrame(() => {
-          fixSpacing();
+          fixSocialSharingAndSpacing();
         });
       };
       observer = new MutationObserver(scheduleFix);
@@ -315,7 +386,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
       }
       // Remove event listener if it was added
       if (document.readyState === 'loading') {
-        document.removeEventListener('DOMContentLoaded', fixSpacing);
+        document.removeEventListener('DOMContentLoaded', fixSocialSharingAndSpacing);
       }
       // Cancel any pending animation frames
       if (rafId) {
@@ -411,37 +482,54 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
             />
           </div>
 
-          {/* Admin Content Block - Before Main Content */}
-          {blogDetail?.adminContentBefore && (
-            <div 
-              className="admin-content-before"
-              dangerouslySetInnerHTML={{ __html: blogDetail.adminContentBefore }}
-            />
-          )}
+          {/* Admin Content Block - Before Main Content (sanitized) */}
+          {blogDetail?.adminContentBefore && (() => {
+            const raw = blogDetail.adminContentBefore as string;
+            const sanitized = sanitizeHtml(raw);
+            return (
+              <div
+                className="admin-content-before"
+                dangerouslySetInnerHTML={{ __html: sanitized }}
+              />
+            );
+          })()}
 
           <div className="content-post blog-details-content">
-            <div className="blog-main-content"
-              dangerouslySetInnerHTML={{
-                __html: blogDetail?.postContent || "",
-              }}
-            ></div>
+            {(() => {
+              const raw = blogDetail?.postContent || "";
+              const sanitized = sanitizeHtml(raw);
+              return (
+                <div
+                  className="blog-main-content"
+                  dangerouslySetInnerHTML={{ __html: sanitized }}
+                ></div>
+              );
+            })()}
           </div>
 
-          {/* Admin Content Block - After Main Content */}
-          {blogDetail?.adminContentAfter && (
-            <div 
-              className="admin-content-after"
-              dangerouslySetInnerHTML={{ __html: blogDetail.adminContentAfter }}
-            />
-          )}
+          {/* Admin Content Block - After Main Content (sanitized) */}
+          {blogDetail?.adminContentAfter && (() => {
+            const raw = blogDetail.adminContentAfter as string;
+            const sanitized = sanitizeHtml(raw);
+            return (
+              <div
+                className="admin-content-after"
+                dangerouslySetInnerHTML={{ __html: sanitized }}
+              />
+            );
+          })()}
 
-          {/* Admin Content Block - Custom Position */}
-          {blogDetail?.adminContentCustom && (
-            <div 
-              className="admin-content-custom"
-              dangerouslySetInnerHTML={{ __html: blogDetail.adminContentCustom }}
-            />
-          )}
+          {/* Admin Content Block - Custom Position (sanitized) */}
+          {blogDetail?.adminContentCustom && (() => {
+            const raw = blogDetail.adminContentCustom as string;
+            const sanitized = sanitizeHtml(raw);
+            return (
+              <div
+                className="admin-content-custom"
+                dangerouslySetInnerHTML={{ __html: sanitized }}
+              />
+            );
+          })()}
 
           {blogDetail?.showDetail ? (
             <div className="author-container ">
@@ -495,6 +583,137 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                             title="LinkedIn"
                           ></a>
                       </div>
+                    </div>
+                  </div>
+
+                  {/* Social Sharing Section - Simple Text Approach */}
+                  <div className="social-sharing" style={{ 
+                    background: '#f8f9fa', 
+                    padding: '20px', 
+                    borderRadius: '12px', 
+                    border: '1px solid #e9ecef', 
+                    margin: '26px 0 6px',
+                    textAlign: 'left'
+                  }}>
+                    <h4 style={{ 
+                      marginBottom: '15px', 
+                      color: '#2c3e50', 
+                      fontSize: '1.2rem', 
+                      fontWeight: '600' 
+                    }}>Share:</h4>
+                    <div style={{ 
+                      display: 'flex', 
+                      gap: '15px', 
+                      marginTop: '20px' 
+                    }}>
+                      <a href="#" title="Share on Facebook" style={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '40px',
+                        height: '40px',
+                        background: '#0f7a95',
+                        borderRadius: '50%',
+                        color: '#ffffff',
+                        textDecoration: 'none',
+                        transition: 'all 0.3s ease',
+                        border: '1px solid #0f7a95',
+                        fontSize: '14px',
+                        fontWeight: 'bold'
+                      }} onMouseEnter={(e) => {
+                        e.currentTarget.style.background = '#0a5a6a';
+                        e.currentTarget.style.color = '#ffffff';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.border = '1px solid #0a5a6a';
+                      }} onMouseLeave={(e) => {
+                        e.currentTarget.style.background = '#0f7a95';
+                        e.currentTarget.style.color = '#ffffff';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.border = '1px solid #0f7a95';
+                      }}>
+                        FB
+                      </a>
+                      <a href="#" title="Share on Twitter" style={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '40px',
+                        height: '40px',
+                        background: '#0f7a95',
+                        borderRadius: '50%',
+                        color: '#ffffff',
+                        textDecoration: 'none',
+                        transition: 'all 0.3s ease',
+                        border: '1px solid #0f7a95',
+                        fontSize: '14px',
+                        fontWeight: 'bold'
+                      }} onMouseEnter={(e) => {
+                        e.currentTarget.style.background = '#0a5a6a';
+                        e.currentTarget.style.color = '#ffffff';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.border = '1px solid #0a5a6a';
+                      }} onMouseLeave={(e) => {
+                        e.currentTarget.style.background = '#0f7a95';
+                        e.currentTarget.style.color = '#ffffff';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.border = '1px solid #0f7a95';
+                      }}>
+                        TW
+                      </a>
+                      <a href="#" title="Share on LinkedIn" style={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '40px',
+                        height: '40px',
+                        background: '#0f7a95',
+                        borderRadius: '50%',
+                        color: '#ffffff',
+                        textDecoration: 'none',
+                        transition: 'all 0.3s ease',
+                        border: '1px solid #0f7a95',
+                        fontSize: '14px',
+                        fontWeight: 'bold'
+                      }} onMouseEnter={(e) => {
+                        e.currentTarget.style.background = '#0a5a6a';
+                        e.currentTarget.style.color = '#ffffff';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.border = '1px solid #0a5a6a';
+                      }} onMouseLeave={(e) => {
+                        e.currentTarget.style.background = '#0f7a95';
+                        e.currentTarget.style.color = '#ffffff';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.border = '1px solid #0f7a95';
+                      }}>
+                        LI
+                      </a>
+                      <a href="#" title="Share on Instagram" style={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '40px',
+                        height: '40px',
+                        background: '#0f7a95',
+                        borderRadius: '50%',
+                        color: '#ffffff',
+                        textDecoration: 'none',
+                        transition: 'all 0.3s ease',
+                        border: '1px solid #0f7a95',
+                        fontSize: '14px',
+                        fontWeight: 'bold'
+                      }} onMouseEnter={(e) => {
+                        e.currentTarget.style.background = '#0a5a6a';
+                        e.currentTarget.style.color = '#ffffff';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.border = '1px solid #0a5a6a';
+                      }} onMouseLeave={(e) => {
+                        e.currentTarget.style.background = '#0f7a95';
+                        e.currentTarget.style.color = '#ffffff';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.border = '1px solid #0f7a95';
+                      }}>
+                        IG
+                      </a>
                     </div>
                   </div>
                 </div>

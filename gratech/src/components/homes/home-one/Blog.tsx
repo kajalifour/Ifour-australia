@@ -136,9 +136,18 @@ const Blog = () => {
                <div className="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                   <div className="blog-two__grid-item">
                 <Link href={`/blog/${blogs[0].slug}`} className="blog__image d-block image">
+                  {(() => {
+                    const DEFAULT_REMOTE_PLACEHOLDER = 'https://ifourtechnolab.ifour-consultancy.net/pics/Post/default.Thumbnail.jpg';
+                    const FALLBACK_BANNER = '/assets/images/blog/blog-image1.jpg';
+                    const rawSrc = blogs[0].fileName || '';
+                    const isProblematic =
+                      !rawSrc || /default\.Thumbnail\.[a-z0-9]+/i.test(rawSrc) || rawSrc === DEFAULT_REMOTE_PLACEHOLDER;
+                    const resolvedSrc = isProblematic ? FALLBACK_BANNER : rawSrc;
+                    const unoptimized = resolvedSrc.startsWith('http');
+                    return (
                   <Image
                     alt={blogs[0].alt || blogs[0].postTitle}
-                    src={blogs[0].fileName || '/assets/images/blog/blog-image1.jpg'}
+                        src={resolvedSrc}
                     width={900}
                     height={540}
                     quality={100}
@@ -152,13 +161,15 @@ const Blog = () => {
                       display: 'block',
                       backgroundColor: '#f8f9fa'
                     }}
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                        placeholder="empty"
+                        unoptimized={unoptimized}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      target.src = '/assets/images/blog/blog-image1.jpg';
+                          target.src = FALLBACK_BANNER;
                     }}
                   />
+                    );
+                  })()}
                            <div className="blog-tag">
                     <h3 className="text-white">{formatDate(blogs[0].publishedDates).day}</h3>
                     <span className="text-white">{formatDate(blogs[0].publishedDates).month}</span>
@@ -216,9 +227,18 @@ const Blog = () => {
               {blogs.slice(1, 3).map((item, index) => (
                 <div key={item.id} className="blog-two__list-item mb-30 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                   <Link href={`/blog/${item.slug}`} className="blog__image d-block image">
+                    {(() => {
+                      const DEFAULT_REMOTE_PLACEHOLDER = 'https://ifourtechnolab.ifour-consultancy.net/pics/Post/default.Thumbnail.jpg';
+                      const FALLBACK_BANNER = '/assets/images/blog/blog-image1.jpg';
+                      const rawSrc = item.fileName || '';
+                      const isProblematic =
+                        !rawSrc || /default\.Thumbnail\.[a-z0-9]+/i.test(rawSrc) || rawSrc === DEFAULT_REMOTE_PLACEHOLDER;
+                      const resolvedSrc = isProblematic ? FALLBACK_BANNER : rawSrc;
+                      const unoptimized = resolvedSrc.startsWith('http');
+                      return (
                     <Image
                       alt={item.alt || item.postTitle}
-                      src={item.fileName || '/assets/images/blog/blog-image1.jpg'}
+                          src={resolvedSrc}
                       width={900}
                       height={540}
                       quality={100}
@@ -231,13 +251,15 @@ const Blog = () => {
                         display: 'block',
                         backgroundColor: '#f8f9fa'
                       }}
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                          placeholder="empty"
+                          unoptimized={unoptimized}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        target.src = '/assets/images/blog/blog-image1.jpg';
+                            target.src = FALLBACK_BANNER;
                       }}
                     />
+                      );
+                    })()}
                     <div className="blog-tag">
                       <h3 className="text-white">{formatDate(item.publishedDates).day}</h3>
                       <span className="text-white">{formatDate(item.publishedDates).month}</span>

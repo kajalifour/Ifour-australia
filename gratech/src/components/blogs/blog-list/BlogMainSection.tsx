@@ -121,29 +121,40 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                     <article className={`post clearfix post-standar fl-sd wow fadeInUp ${styles.blogPost}`}>
                       <div className={`featured-post ${styles.featuredPost}`}>
                         <Link href={`/blog/${blog.slug}`}>
-                          <Image
-                            alt={blog.alt || blog.postTitle}
-                            src={blog.fileName || '/assets/images/blog/blog-image1.jpg'}
-                            width={900}
-                            height={540}
-                            quality={75}
-                            priority={i === 0}
-                            style={{ 
-                              objectFit: 'contain', 
-                              objectPosition: 'center center',
-                              width: '100%', 
-                              height: 'auto',
-                              borderRadius: '8px 8px 0 0',
-                              display: 'block',
-                              backgroundColor: '#f8f9fa'
-                            }}
-                            placeholder="blur"
-                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.src = '/assets/images/blog/blog-image1.jpg';
-                            }}
-                          />
+                          {(() => {
+                            const DEFAULT_REMOTE_PLACEHOLDER = 'https://ifourtechnolab.ifour-consultancy.net/pics/Post/default.Thumbnail.jpg';
+                            const FALLBACK_BANNER = '/assets/images/blog/blog-image1.jpg';
+                            const rawSrc = blog.fileName || '';
+                            const isProblematic =
+                              !rawSrc || /default\.Thumbnail\.[a-z0-9]+/i.test(rawSrc) || rawSrc === DEFAULT_REMOTE_PLACEHOLDER;
+                            const resolvedSrc = isProblematic ? FALLBACK_BANNER : rawSrc;
+                            const unoptimized = resolvedSrc.startsWith('http');
+                            return (
+                              <Image
+                                alt={blog.alt || blog.postTitle}
+                                src={resolvedSrc}
+                                width={900}
+                                height={540}
+                                quality={75}
+                                priority={i === 0}
+                                style={{
+                                  objectFit: 'contain',
+                                  objectPosition: 'center center',
+                                  width: '100%',
+                                  height: 'auto',
+                                  borderRadius: '8px 8px 0 0',
+                                  display: 'block',
+                                  backgroundColor: '#f8f9fa'
+                                }}
+                                placeholder="empty"
+                                unoptimized={unoptimized}
+                                onError={(e) => {
+                                  const target = e.target as HTMLImageElement;
+                                  target.src = FALLBACK_BANNER;
+                                }}
+                              />
+                            );
+                          })()}
                         </Link>
                       </div>
                       <div className={`content-post ${styles.contentPost}`}>

@@ -177,23 +177,40 @@ export default function BlogCategoryPage({
                       }}>
                         <div className="featured-post" style={{ position: 'relative', overflow: 'hidden' }}>
                           <Link href={`/blog/${blog.slug}`}>
-                            <Image
-                              alt={blog.alt || blog.postTitle}
-                              src={blog.fileName}
-                              width={900}
-                              height={540}
-                              quality={100}
-                              priority={i === 0}
-                              style={{ 
-                                objectFit: 'contain', 
-                                objectPosition: 'center center',
-                                width: '100%', 
-                                maxWidth: '100%', 
-                                margin: 0, 
-                                padding: 0,
-                                backgroundColor: '#f8f9fa'
-                              }}
-                            />
+                            {(() => {
+                              const DEFAULT_REMOTE_PLACEHOLDER = 'https://ifourtechnolab.ifour-consultancy.net/pics/Post/default.Thumbnail.jpg';
+                              const FALLBACK_BANNER = '/assets/images/blog/blog-image1.jpg';
+                              const rawSrc = blog.fileName || '';
+                              const isProblematic =
+                                !rawSrc || /default\.Thumbnail\.[a-z0-9]+/i.test(rawSrc) || rawSrc === DEFAULT_REMOTE_PLACEHOLDER;
+                              const resolvedSrc = isProblematic ? FALLBACK_BANNER : rawSrc;
+                              const unoptimized = resolvedSrc.startsWith('http');
+                              return (
+                                <Image
+                                  alt={blog.alt || blog.postTitle}
+                                  src={resolvedSrc}
+                                  width={900}
+                                  height={540}
+                                  quality={100}
+                                  priority={i === 0}
+                                  style={{
+                                    objectFit: 'contain',
+                                    objectPosition: 'center center',
+                                    width: '100%',
+                                    maxWidth: '100%',
+                                    margin: 0,
+                                    padding: 0,
+                                    backgroundColor: '#f8f9fa'
+                                  }}
+                                  placeholder="empty"
+                                  unoptimized={unoptimized}
+                                  onError={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.src = FALLBACK_BANNER;
+                                  }}
+                                />
+                              );
+                            })()}
                           </Link>
                         </div>
                         <div className="content-post" style={{ padding: '20px 25px 25px' }}>
