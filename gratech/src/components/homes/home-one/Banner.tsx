@@ -129,9 +129,8 @@ const Banner = () => {
                         <p data-animation="slideInRight" data-duration="2s" data-delay=".7s" className="mt-20" style={{ color: '#ffffff' }}>
                            {item.desc}
                         </p>
-                        <a data-animation="slideInRight" data-duration="2s" data-delay=".9s" href="about.html"
-                           className="btn-one mt-60">Explore
-                           More <i className="fa-regular fa-arrow-right-long"></i></a>
+                        <a data-animation="slideInRight" data-duration="2s" data-delay=".9s" href="/contact"
+                           className="btn-one mt-60">Let's head to Business <i className="fa-regular fa-arrow-right-long"></i></a>
                      </div>
                   </div>
                </SwiperSlide>

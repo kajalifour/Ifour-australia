@@ -20,6 +20,27 @@ const Service = () => {
             <div className="row g-4">
                {service_data.filter((items) => items.page === "home_3").map((item) => (
                   <div key={item.id} className="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                     {item.link ? (
+                     <Link href={item.link} className="service-three__item" style={{ textDecoration: 'none' }}>
+                        <div className="service-three__image image">
+                           <Image src={item.thumb ? item.thumb : ""} alt="image" />
+                        </div>
+                        <div className="service-three__content">
+                           <div className="icon">
+                              <Image src={item.icon} alt="icon" />
+                           </div>
+                           <h4>{item.title}</h4>
+                        </div>
+                        <div className="service-three__up-content text-center">
+                           <div className="icon">
+                              <Image src={item.icon} alt="icon" />
+                           </div>
+                           <h4 className="text-white mt-25 mb-15">{item.title}</h4>
+                           <p className="text-white">{item.desc}</p>
+                           <span className="mt-20 read-more-btn text-white">Read More <i className="fa-regular fa-arrow-right-long text-white"></i></span>
+                        </div>
+                     </Link>
+                     ) : (
                      <div className="service-three__item">
                         <div className="service-three__image image">
                            <Image src={item.thumb ? item.thumb : ""} alt="image" />
@@ -34,13 +55,22 @@ const Service = () => {
                            <div className="icon">
                               <Image src={item.icon} alt="icon" />
                            </div>
-                           <h4><Link href="/service-single" className="text-white mt-25 mb-15">{item.title}</Link>
+                           <h4>
+                              {item.link ? (
+                                 <Link href={item.link} className="text-white mt-25 mb-15">{item.title}</Link>
+                              ) : (
+                                 <a href="#" className="no-link text-white mt-25 mb-15" onClick={(e)=>e.preventDefault()} role="link" aria-disabled="true">{item.title}</a>
+                              )}
                            </h4>
                            <p className="text-white">{item.desc}</p>
-                           <Link className="mt-20 read-more-btn text-white" href="/service-single">Read More <i
-                              className="fa-regular fa-arrow-right-long text-white"></i></Link>
+                           {item.link ? (
+                              <Link className="mt-20 read-more-btn text-white" href={item.link}>Read More <i className="fa-regular fa-arrow-right-long text-white"></i></Link>
+                           ) : (
+                              <a className="mt-20 read-more-btn text-white no-link" href="#" onClick={(e)=>e.preventDefault()} role="link" aria-disabled="true">Read More <i className="fa-regular fa-arrow-right-long text-white"></i></a>
+                           )}
                         </div>
                      </div>
+                     )}
                   </div>
                ))}
             </div>

@@ -108,6 +108,85 @@
   }
 }
 
+/* Global: remove link underlines on non-blog pages only */
+body:not(.blog-details-page) a,
+body:not(.blog-details-page) a:hover,
+body:not(.blog-details-page) a:focus,
+body:not(.blog-details-page) a:visited {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Global: remove link underlines everywhere (including blog pages) */
+a,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Service cards: title teal, text black, no hover overlay */
+.service__item h4,
+.service-two__item .service-two__content h4,
+.service-three__item .service-three__content h4,
+.service-three__item .service-three__up-content h4 {
+  color: #0f7a95 !important;
+}
+
+.service__item p,
+.service-two__item .service-two__content p,
+.service-three__item .service-three__content p,
+.service-three__item .service-three__up-content p {
+  color: #000000 !important;
+}
+
+/* Ensure link wrappers don’t change colors on hover */
+.service__item,
+.service-two__item,
+.service-three__item {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.service__item a,
+.service-two__item a,
+.service-three__item a {
+  color: inherit !important;
+}
+.service__item a:hover,
+.service-two__item a:hover,
+.service-three__item a:hover {
+  color: inherit !important;
+}
+
+/* Remove overlay/background color changes on hover */
+.service__item:hover,
+.service-two__item:hover,
+.service-three__item:hover {
+  background-color: inherit !important;
+}
+.service-three__item .service-three__up-content,
+.service-three__item:hover .service-three__up-content {
+  background-color: transparent !important;
+}
+
+/* Override any forced white text utilities in the hover layer */
+.service-three__item .service-three__up-content .text-white,
+.service-three__item .service-three__up-content .read-more-btn,
+.service-three__item .service-three__up-content .read-more-btn .text-white {
+  color: #000000 !important;
+}
+
+/* Utility: visually no-link and disable click cues */
+.no-link {
+  cursor: default !important;
+  pointer-events: none !important;
+  text-decoration: none !important;
+}
+
 @media (max-width: 576px) {
   .blog-area .post .featured-post,
   .featured-post {

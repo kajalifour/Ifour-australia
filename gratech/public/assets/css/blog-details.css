@@ -17,6 +17,16 @@
   border-left: 4px solid #0f7a95;
 }
 
+/* Blog details content intro keeps blue accent; rest sections remain neutral */
+.blog-details-content .blog-intro {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left: 0 !important;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.blog-details-content .blog-intro p { margin: 0; }
+
 .blog-intro p {
   font-size: 1.1rem;
   color: #495057;
@@ -1148,3 +1158,121 @@
 .blog-main-content p + .comparison-table { margin-top: 0 !important; }
 .blog-main-content .comparison-table + p { margin-top: 10px !important; }
 .blog-main-content :is(h2,h3,h4) + .comparison-table { margin-top: 6px !important; }
+
+/* --- Inline CTA and hero image helpers for admin-injected blocks --- */
+.blog-details-content .blockquote-cta {
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.blog-details-content .blockquote-cta p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1565c0;
+  line-height: 1.5;
+}
+.blog-details-content .blockquote-cta a {
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.blog-details-content .blockquote-cta a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+.blog-details-content .blog-hero-image { margin: 12px 0 20px; }
+.blog-details-content .blog-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Vertical rhythm for admin-injected sections */
+.blog-details-content > .section { margin: 16px 0; }
+.blog-details-content > .section:first-child { margin-top: 0; }
+.blog-details-content > .section:last-child { margin-bottom: 0; }
+.blog-details-content .section p { margin: 10px 0; line-height: 1.6; }
+
+.blog-details-content .section h2 {
+  color: #0f7a95;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 4px;
+}
+.blog-details-content .section h3,
+.blog-details-content .section h4 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 18px 0 10px 0;
+}
+
+.blog-details-content .section ul,
+.blog-details-content .section ol {
+  margin: 14px 0 14px 20px;
+  padding-left: 20px;
+}
+.blog-details-content .section ul li,
+.blog-details-content .section ol li {
+  margin-bottom: 6px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.blog-details-content .social-sharing .share-buttons { justify-content: center; }
+
+/* Force visibility and consistent styling for admin-injected share blocks */
+.blog-details-content .social-sharing {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.blog-details-content .social-sharing .share-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog-details-content .social-sharing .share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.blog-details-content .social-sharing .share-btn.facebook { background: #1877f2; }
+.blog-details-content .social-sharing .share-btn.twitter { background: #1da1f2; }
+.blog-details-content .social-sharing .share-btn.linkedin { background: #0077b5; }
+.blog-details-content .social-sharing .share-btn.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.blog-details-content .social-sharing .share-btn i { color: #ffffff; font-size: 18px; }
+
+.blog-details-content .social-sharing .share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0.9;
+}

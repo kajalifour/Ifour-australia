@@ -72,6 +72,21 @@ const Service = () => {
             <Swiper {...setting} modules={[Autoplay, Navigation]} className="swiper service-two__slider">
                {service_data.filter((items) => items.page === "home_2").map((item) => (
                   <SwiperSlide key={item.id} className="swiper-slide">
+                     {item.link ? (
+                     <Link href={item.link} className="service-two__item" style={{ textDecoration: 'none' }}>
+                        <div className="image">
+                           <Image src={item.thumb ? item.thumb : ""} alt="image" />
+                        </div>
+                        <div className="service-two__content">
+                           <div className="icon">
+                              <Image src={item.icon} alt="icon" />
+                           </div>
+                           <h4 className="primary-hover">{item.title}</h4>
+                           <p>{item.desc}</p>
+                           <span className="read-more-btn">Read More <i className="fa-regular fa-arrow-right-long"></i></span>
+                        </div>
+                     </Link>
+                     ) : (
                      <div className="service-two__item">
                         <div className="image">
                            <Image src={item.thumb ? item.thumb : ""} alt="image" />
@@ -81,12 +96,22 @@ const Service = () => {
                               <Image src={item.icon} alt="icon" />
                            </div>
 
-                           <h4><Link href="/service-details" className="primary-hover">{item.title}</Link></h4>
+                           <h4>
+                              {item.link ? (
+                                 <Link href={item.link} className="primary-hover">{item.title}</Link>
+                              ) : (
+                                 <a href="#" className="no-link primary-hover" onClick={(e)=>e.preventDefault()} role="link" aria-disabled="true">{item.title}</a>
+                              )}
+                           </h4>
                            <p>{item.desc}</p>
-                           <Link className="read-more-btn" href="/service-details">Read More <i
-                              className="fa-regular fa-arrow-right-long"></i></Link>
+                           {item.link ? (
+                              <Link className="read-more-btn" href={item.link}>Read More <i className="fa-regular fa-arrow-right-long"></i></Link>
+                           ) : (
+                              <a className="read-more-btn no-link" href="#" onClick={(e)=>e.preventDefault()} role="link" aria-disabled="true">Read More <i className="fa-regular fa-arrow-right-long"></i></a>
+                           )}
                         </div>
                      </div>
+                     )}
                   </SwiperSlide>
                ))}
             </Swiper>

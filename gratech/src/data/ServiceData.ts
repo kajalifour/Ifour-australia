@@ -11,6 +11,7 @@ interface DataType {
    icon: StaticImageData;
    title: string;
    desc: string;
+   link?: string;
 }
 
 const service_data: DataType[] = [
@@ -18,43 +19,49 @@ const service_data: DataType[] = [
       id: 1,
       page: "home_1",
       icon: icon_1,
-      title: "Custom Product Development",
-      desc: "Transform your vision into an innovative solution with our product development services. We provide end-to-end consultation from concept to product launch to help you ensure competitiveness in the marketplace."
+      title: "Custom Software Development Company",
+      desc: "We specialize in the use of advanced technology and frameworks, such as .NET, Angular, and Node.js, to construct software solutions tailored exclusively to fit your unique needs.",
+      link: "/custom-software-development-company"
    },
    {
       id: 2,
       page: "home_1",
       icon: icon_2,
-      title: "Web Application Development",
-      desc: "We have a team of experts proficient in building stunning and user-centered web applications to drive engagement. We integrate modern tech stacks to get high-performing web apps that help you stand out."
+      title: "Ecommerce Website Development Company",
+      desc: "We design, develop, and implement e-commerce-based solutions with visually engaging interfaces and unmatched functionality to increase sales and boost profitability exponentially.",
+      link: "/ecommerce-website-development-company"
    },
    {
       id: 3,
       page: "home_1",
       icon: icon_3,
-      title: "Cloud Application Development",
-      desc: "Our team holds enough experience in the field to help you build cloud apps. At iFour, we build scalable and secure cloud solutions that drive business agility."
+      title: "Microsoft Azure Cloud Services Company",
+      desc: "Through our expertise in Azure application development, we aid businesses in harnessing the full potential of the cloud, enabling business growth and enhanced business efficiency.",
+      link: "/microsoft-azure-cloud-services-company"
    },
    {
       id: 4,
       page: "home_1",
       icon: icon_1,
-      title: "Business Line Solutions",
-      desc: "We help you simplify your business operations by designing a tailored solution that addresses your pain points and business challenges."
+      title: "Blockchain Development Company",
+      desc: "As a leading Australia-based software development company, we are experienced in developing high-end blockchain solutions, either from scratch or revamping existing ones.",
+      link: "/blockchain-development-company"
    },
    {
       id: 5,
       page: "home_1",
       icon: icon_2,
-      title: "Desktop App Development",
-      desc: "With our top-notch desktop app development services, you can experience user-friendly and high-performing solutions that maximize your productivity and let you work flawlessly into your current infrastructure."
+      title: "Desktop Application Development Company",
+      desc: "Our team, composed of the brightest minds from the software development industry, can help you build robust, resilient, and highly secure desktop apps.",
+      link: "/desktop-application-development-company"
    },
    {
       id: 6,
       page: "home_1",
       icon: icon_3,
-      title: "Internet or Intranet Services",
-      desc: "Trust iFour Technolab for reliable support and maintenance services. We monitor your software after deployment to ensure continued performance and security and address bugs."
+      title: "Mobile App Development Company",
+      desc: "We help formulate your disruptive business idea into a mobile app that matches your aspirations, delivers a delightful user experience, and sets your business up for success.",
+      link: "/mobile-app-development-company"
    },
 ];
 
