@@ -2799,17 +2799,16 @@ a[class*="btn"]:active {
     text-decoration: underline !important;
 }
 
-/* Home page headings (within .home-standard wrapper) */
-/* Home page 25% smaller than defaults */
-body:has(.home-standard) h1 { font-size: 67.5px !important; line-height: 75px !important; }
-body:has(.home-standard) h2 { font-size: 30px !important; line-height: 36px !important; }
+/* Home page headings (within .home-standard wrapper) — 25% smaller */
+.home-standard h1 { font-size: 67.5px !important; line-height: 75px !important; }
+.home-standard h2 { font-size: 30px !important; line-height: 36px !important; }
 @media (max-width: 767px) {
-  body:has(.home-standard) h2 { font-size: 22.5px !important; line-height: 30px !important; }
+  .home-standard h2 { font-size: 22.5px !important; line-height: 30px !important; }
 }
-body:has(.home-standard) h3 { font-size: 18px !important; line-height: 24px !important; }
-body:has(.home-standard) h4 { font-size: 15px !important; line-height: 24px !important; }
-body:has(.home-standard) h5 { font-size: 12px !important; line-height: 21px !important; }
-body:has(.home-standard) h6 { font-size: 10.5px !important; }
+.home-standard h3 { font-size: 18px !important; line-height: 24px !important; }
+.home-standard h4 { font-size: 15px !important; line-height: 24px !important; }
+.home-standard h5 { font-size: 12px !important; line-height: 21px !important; }
+.home-standard h6 { font-size: 10.5px !important; }
 
 /* Non-Home pages (no .home-standard present) */
 body:not(:has(.home-standard)) h1 { font-size: 90px; line-height: 100px; }
@@ -2821,3 +2820,9 @@ body:not(:has(.home-standard)) h3 { font-size: 24px; line-height: 32px; }
 body:not(:has(.home-standard)) h4 { font-size: 20px; line-height: 32px; }
 body:not(:has(.home-standard)) h5 { font-size: 16px; line-height: 28px; }
 body:not(:has(.home-standard)) h6 { font-size: 14px; }
+
+/* Home page: force H1 brand color (prevent initial black flash) */
+.home-standard h1,
+.home-standard h1 * {
+  color: #0f7a95 !important; /* teal */
+}
