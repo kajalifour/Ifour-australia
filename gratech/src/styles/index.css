@@ -646,6 +646,31 @@ section.blog-area .col-lg-5 {
   color: #000000 !important;
 }
 
+/* Remove underline if the H2 title is wrapped in a link */
+.blog-two-area .section-header h2 a,
+#blog-section .section-header h2 a,
+.blog-two-area h2 a,
+#blog-section h2 a {
+  color: #000000 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+/* Remove underline from any section header H2 links globally */
+.section-header h2 a,
+.section-header h2 a:link,
+.section-header h2 a:visited,
+.section-header h2 a:hover,
+.section-header h2 a:focus,
+.section-header h2 a:active {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* Removed previous global link reset; keep underline removal only for buttons */
+
 /* Ensure blog section titles are black */
 .blog-two-area .section-header h2:contains("Explore Blogs and News"),
 #blog-section .section-header h2:contains("Explore Blogs and News") {
@@ -2564,7 +2589,7 @@ a.btn.btn-primary.service-details-cta-button,
     padding: 15px 30px;
     border-radius: 5px;
     font-weight: 600;
-    text-decoration: underline !important;
+    text-decoration: none !important;
     display: inline-block;
     transition: all 0.3s ease;
     margin-bottom: 20px;
@@ -2690,7 +2715,52 @@ a[href="/contact"].btn.btn-primary.service-details-cta-button:hover {
     background: linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%) !important;
 }
 
-/* Blog CTA link underline - Force underline for all blog CTA links */
+/* ============================= */
+/* Buttons: remove underline sitewide (home and other pages) */
+/* ============================= */
+a.btn,
+.btn,
+a.btn-one,
+.btn-one,
+a.service-details-cta-button,
+.service-details-cta-button,
+a.btn:link,
+a.btn:visited,
+a.btn:hover,
+a.btn:focus,
+a.btn:active,
+a.btn-one:link,
+a.btn-one:visited,
+a.btn-one:hover,
+a.btn-one:focus,
+a.btn-one:active,
+a.service-details-cta-button:link,
+a.service-details-cta-button:visited,
+a.service-details-cta-button:hover,
+a.service-details-cta-button:focus,
+a.service-details-cta-button:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* Keep underline for blog text CTAs (non-button links) */
+.blog-details-content .cta-box a,
+.blockquote-cta a:not(.btn):not(.btn-one):not(.service-details-cta-button) {
+    text-decoration: underline !important;
+}
+
+/* Final guard: ensure ALL button-like links never show underline */
+a[class*="btn"],
+a[class*="btn"]:link,
+a[class*="btn"]:visited,
+a[class*="btn"]:hover,
+a[class*="btn"]:focus,
+a[class*="btn"]:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* Blog CTA buttons - remove underline for button-style links */
 .blog-details-content .cta-box a,
 .blog-details-content .cta-box .btn-one,
 .blog-details-content .cta-box p a,
@@ -2699,12 +2769,8 @@ a[href="/contact"].btn.btn-primary.service-details-cta-button:hover {
 .blog-two__grid-item .btn-one,
 .blog-two__list-item .btn-one,
 .blog-two__grid-item a.btn-one,
-.blog-two__list-item a.btn-one,
-a[href*="/blog"].btn-one,
-a[href="/blog"].btn-one,
-a[href*="contact"].btn-one,
-a[href="/contact"].btn-one {
-    text-decoration: underline !important;
+.blog-two__list-item a.btn-one {
+    text-decoration: none !important;
 }
 
 /* Blog CTA link hover - White color on hover */
@@ -2717,12 +2783,10 @@ a[href="/contact"].btn-one {
 .blog-two__list-item .btn-one:hover,
 .blog-two__grid-item a.btn-one:hover,
 .blog-two__list-item a.btn-one:hover,
-a[href*="/blog"].btn-one:hover,
-a[href="/blog"].btn-one:hover,
-a[href*="contact"].btn-one:hover,
-a[href="/contact"].btn-one:hover {
+.blog-two-area .btn-one:hover,
+.blog-details-content .cta-box .btn-one:hover {
     color: #ffffff !important;
-    text-decoration: underline !important;
+    text-decoration: none !important;
 }
 
 /* Enforce underline in Blog Detail CTA across all link states and nested elements */
@@ -2734,3 +2798,26 @@ a[href="/contact"].btn-one:hover {
 .blog-details-content .cta-box a * {
     text-decoration: underline !important;
 }
+
+/* Home page headings (within .home-standard wrapper) */
+/* Home page 25% smaller than defaults */
+body:has(.home-standard) h1 { font-size: 67.5px !important; line-height: 75px !important; }
+body:has(.home-standard) h2 { font-size: 30px !important; line-height: 36px !important; }
+@media (max-width: 767px) {
+  body:has(.home-standard) h2 { font-size: 22.5px !important; line-height: 30px !important; }
+}
+body:has(.home-standard) h3 { font-size: 18px !important; line-height: 24px !important; }
+body:has(.home-standard) h4 { font-size: 15px !important; line-height: 24px !important; }
+body:has(.home-standard) h5 { font-size: 12px !important; line-height: 21px !important; }
+body:has(.home-standard) h6 { font-size: 10.5px !important; }
+
+/* Non-Home pages (no .home-standard present) */
+body:not(:has(.home-standard)) h1 { font-size: 90px; line-height: 100px; }
+body:not(:has(.home-standard)) h2 { font-size: 40px; line-height: 48px; }
+@media (max-width: 767px) {
+  body:not(:has(.home-standard)) h2 { font-size: 30px; line-height: 40px; }
+}
+body:not(:has(.home-standard)) h3 { font-size: 24px; line-height: 32px; }
+body:not(:has(.home-standard)) h4 { font-size: 20px; line-height: 32px; }
+body:not(:has(.home-standard)) h5 { font-size: 16px; line-height: 28px; }
+body:not(:has(.home-standard)) h6 { font-size: 14px; }
