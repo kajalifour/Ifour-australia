@@ -195,13 +195,13 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
         <BreadCrumb title="Life Cycle Assessment Software" sub_title="Our Showcase" />
         
         {/* About Customer Section */}
-        <section className="about-customer-section pt-40 pb-40" style={{ background: '#f8f9fa' }}>
+        <section className="about-customer-section pt-40 pb-40 bg-light">
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <h2 className="mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Life Cycle Assessment for Packaging Industry</h2>
-                <h3 className="mb-20" style={{ color: '#0f7a95', fontSize: '24px', fontWeight: 600 }}>About customer:</h3>
-                <p style={{ fontSize: '18px', lineHeight: 1.8, color: '#333333' }}>
+                <h2 className="mb-20 case-single-title">Life Cycle Assessment for Packaging Industry</h2>
+                <h3 className="mb-20 case-single-subtitle">About customer:</h3>
+                <p className="case-single-content-dark">
                   Our esteemed client is an Australian company specializing in assisting businesses and policymakers in understanding and enhancing their sustainability and overall performance. With strategic partnerships and connections with consultancies and research organizations, they undertake projects ranging from life cycle assessment to training, software support, and data development.
                 </p>
               </div>
@@ -211,16 +211,16 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
         
         <section className="case-single-area pt-120 pb-120">
           <div className="container">
-            <div className="case-single__item" style={{ padding: '20px 0' }}>
+            <div className="case-single__item case-single-item">
               
-              <div className="row align-items-center g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row align-items-center g-4 mb-40 case-single-section">
                 <div className="col-lg-7">
-                  <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Challenge</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>The customer recognized the need for an integrated design method that could comprehensively assess all aspects of a project. Manual execution of each procedure throughout the life cycle of building design demanded significant time and effort. Additionally, accurately determining the environmental impact of building designs required complex calculations. Automation of operations and calculations became imperative to save time, enhance accuracy, and streamline the design assessment process.</p>
-                  <div style={{ borderLeft: '3px solid #0f7a95', paddingLeft: '24px' }}>
-                    <p style={{ marginBottom: 0, fontSize: '18px', lineHeight: 1.8 }}>With our impeccable solution, the customer can now efficiently assess the life cycle of building designs, ensuring compliance with industry and government standards, reducing errors, and saving valuable time. The integration of automation, advanced calculations, and comprehensive reporting capabilities empowers our customers to make informed decisions regarding environmental impact and sustainability. Together, we are revolutionizing building design assessment, fostering a greener and more sustainable future.</p>
+                  <h3 className="case-single__title mb-20 case-single-title">Challenge</h3>
+                  <p className="mb-20 case-single-content">The customer recognized the need for an integrated design method that could comprehensively assess all aspects of a project. Manual execution of each procedure throughout the life cycle of building design demanded significant time and effort. Additionally, accurately determining the environmental impact of building designs required complex calculations. Automation of operations and calculations became imperative to save time, enhance accuracy, and streamline the design assessment process.</p>
+                  <div className="case-single-highlight">
+                    <p>With our impeccable solution, the customer can now efficiently assess the life cycle of building designs, ensuring compliance with industry and government standards, reducing errors, and saving valuable time. The integration of automation, advanced calculations, and comprehensive reporting capabilities empowers our customers to make informed decisions regarding environmental impact and sustainability. Together, we are revolutionizing building design assessment, fostering a greener and more sustainable future.</p>
                   </div>
-                  <p className="mt-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Explore your business potential with our custom software development services. React out us now.</p>
+                  <p className="mt-20 case-single-content">Explore your business potential with our custom software development services. React out us now.</p>
                 </div>
                 <div className="col-lg-5">
                   <div className="image text-lg-end">
@@ -236,79 +236,79 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
               
 
               
-              <div className="row align-items-center g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row align-items-center g-4 mb-40 case-single-section">
                 <div className="col-12">
-                  <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Solution</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>To address these challenges, iFour Technolab Pvt. Ltd., a leading .NET web development company, developed a cutting-edge solution that automates the processes involved in building life cycle assessments while adhering to industry and government standards of the UK and Australia. Our solution encompasses the following key features:</p>
+                  <h3 className="case-single__title mb-20 case-single-title">Solution</h3>
+                  <p className="mb-20 case-single-content">To address these challenges, iFour Technolab Pvt. Ltd., a leading .NET web development company, developed a cutting-edge solution that automates the processes involved in building life cycle assessments while adhering to industry and government standards of the UK and Australia. Our solution encompasses the following key features:</p>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Automated Procedures and Synchronization:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Streamlining the life cycle assessment procedures of building design through automated operations, ensuring efficiency and accuracy.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Automated Procedures and Synchronization:</h4>
+                    <p className="case-single-content-small">Streamlining the life cycle assessment procedures of building design through automated operations, ensuring efficiency and accuracy.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Compatibility with Industry Standards:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Formulas used to calculate the environmental impact of building designs are fully compatible with Australian and UK standards, including EN 15978 and ISO 14044.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Compatibility with Industry Standards:</h4>
+                    <p className="case-single-content-small">Formulas used to calculate the environmental impact of building designs are fully compatible with Australian and UK standards, including EN 15978 and ISO 14044.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Project Creation and Management:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Creating and managing designed projects with lifecycle modules and comprehensive impact analysis.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Project Creation and Management:</h4>
+                    <p className="case-single-content-small">Creating and managing designed projects with lifecycle modules and comprehensive impact analysis.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Structural Design Module:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Efficient categorization and management of project structures, facilitating design creation or redevelopment.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Structural Design Module:</h4>
+                    <p className="case-single-content-small">Efficient categorization and management of project structures, facilitating design creation or redevelopment.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Assembly Components Module:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Designing various structures and generating reports for transportation and recurring environmental impacts.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Assembly Components Module:</h4>
+                    <p className="case-single-content-small">Designing various structures and generating reports for transportation and recurring environmental impacts.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Material Management Module:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Efficient management of material components used in building structures, including details such as products, transport, construction, and recurring charges.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Material Management Module:</h4>
+                    <p className="case-single-content-small">Efficient management of material components used in building structures, including details such as products, transport, construction, and recurring charges.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Operational Energy and Water Management:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Creating operational energy and water components, including gas, electricity, and water types, and reporting associated environmental impacts.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Operational Energy and Water Management:</h4>
+                    <p className="case-single-content-small">Creating operational energy and water components, including gas, electricity, and water types, and reporting associated environmental impacts.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Template Design:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Enabling users to create a global template with assembly, material, and operational components for consistent assessment.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Template Design:</h4>
+                    <p className="case-single-content-small">Enabling users to create a global template with assembly, material, and operational components for consistent assessment.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Enhanced Report Generation:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Creating user-friendly technical reports adhering to international standards, facilitating clear communication of assessment outcomes.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Enhanced Report Generation:</h4>
+                    <p className="case-single-content-small">Creating user-friendly technical reports adhering to international standards, facilitating clear communication of assessment outcomes.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Collaboration and Workflow Management:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Enabling communication and collaboration among users, including group creation, invitation acceptance or rejection, and sharing of designs or templates.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Collaboration and Workflow Management:</h4>
+                    <p className="case-single-content-small">Enabling communication and collaboration among users, including group creation, invitation acceptance or rejection, and sharing of designs or templates.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Task Management and Notifications:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Providing a comprehensive task list and scheduling system for individual users, ensuring timely completion and monitoring progress.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Task Management and Notifications:</h4>
+                    <p className="case-single-content-small">Providing a comprehensive task list and scheduling system for individual users, ensuring timely completion and monitoring progress.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Role-Based Access:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Individualized access to the system, granting appropriate permissions based on user roles and responsibilities.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Role-Based Access:</h4>
+                    <p className="case-single-content-small">Individualized access to the system, granting appropriate permissions based on user roles and responsibilities.</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Comprehensive Impact Analysis:</h4>
-                    <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Analyzing the impacts of CO2, cost, energy, water, land use, ozone depletion, human toxicity, and more, providing a holistic insight into the environmental consequences of building designs.</p>
+                    <h4 className="mb-2 case-single-subtitle-small">Comprehensive Impact Analysis:</h4>
+                    <p className="case-single-content-small">Analyzing the impacts of CO2, cost, energy, water, land use, ozone depletion, human toxicity, and more, providing a holistic insight into the environmental consequences of building designs.</p>
                   </div>
                 </div>
               </div>
               
-              <div className="row align-items-center g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row align-items-center g-4 mb-40 case-single-section">
                 <div className="col-lg-6">
                   <div className="image">
                     <Image 
@@ -316,49 +316,49 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                       alt="iFour Technolab Team" 
                       width={600}
                       height={400}
-                      style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+                      className="case-single-image"
                     />
                   </div>
                 </div>
                 <div className="col-lg-6">
-                  <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '32px', fontWeight: 700 }}>Technologies we used:</h3>
+                  <h3 className="case-single__title mb-20 case-single-title-medium">Technologies we used:</h3>
                   <div className="technologies-list">
                     <div className="mb-3">
-                      <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Type:</h4>
-                      <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Web Application</p>
+                      <h4 className="mb-2 case-single-subtitle-small">Type:</h4>
+                      <p className="case-single-content-small">Web Application</p>
                     </div>
                     <div className="mb-3">
-                      <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Web Server:</h4>
-                      <p style={{ fontSize: '16px', lineHeight: 1.6 }}>IIS</p>
+                      <h4 className="mb-2 case-single-subtitle-small">Web Server:</h4>
+                      <p className="case-single-content-small">IIS</p>
                     </div>
                     <div className="mb-3">
-                      <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Programming Language:</h4>
-                      <p style={{ fontSize: '16px', lineHeight: 1.6 }}>ASP.NET (C#) Framework 4.5</p>
+                      <h4 className="mb-2 case-single-subtitle-small">Programming Language:</h4>
+                      <p className="case-single-content-small">ASP.NET (C#) Framework 4.5</p>
                     </div>
                     <div className="mb-3">
-                      <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Database Management Server:</h4>
-                      <p style={{ fontSize: '16px', lineHeight: 1.6 }}>MySQL</p>
+                      <h4 className="mb-2 case-single-subtitle-small">Database Management Server:</h4>
+                      <p className="case-single-content-small">MySQL</p>
               </div>
                     <div className="mb-3">
-                      <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Architecture:</h4>
-                      <p style={{ fontSize: '16px', lineHeight: 1.6 }}>MVC / NHibernate framework</p>
+                      <h4 className="mb-2 case-single-subtitle-small">Architecture:</h4>
+                      <p className="case-single-content-small">MVC / NHibernate framework</p>
                     </div>
                     <div className="mb-3">
-                      <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Client Technology:</h4>
-                      <p style={{ fontSize: '16px', lineHeight: 1.6 }}>JavaScript, JQuery</p>
+                      <h4 className="mb-2 case-single-subtitle-small">Client Technology:</h4>
+                      <p className="case-single-content-small">JavaScript, JQuery</p>
                     </div>
                     <div className="mb-3">
-                      <h4 className="mb-2" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Version Control:</h4>
-                      <p style={{ fontSize: '16px', lineHeight: 1.6 }}>Hg Workbench</p>
+                      <h4 className="mb-2 case-single-subtitle-small">Version Control:</h4>
+                      <p className="case-single-content-small">Hg Workbench</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="row g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row g-4 mb-40 case-single-section">
                 <div className="col-12">
-                  <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Conclusion/Results:</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>iFour Technolab Pty. Ltd. developed a sustainable solution that aids in life cycle assessment procedures and is compliant with the legal infrastructure criteria of the UK and Australia governments. It also assisted clients in gaining a thorough understanding of operational environmental implications. It provides users with simpler processes, an easy-to-interact experience, and support in decision-making at various phases of the project.</p>
+                  <h3 className="case-single__title mb-20 case-single-title">Conclusion/Results:</h3>
+                  <p className="mb-20 case-single-content">iFour Technolab Pty. Ltd. developed a sustainable solution that aids in life cycle assessment procedures and is compliant with the legal infrastructure criteria of the UK and Australia governments. It also assisted clients in gaining a thorough understanding of operational environmental implications. It provides users with simpler processes, an easy-to-interact experience, and support in decision-making at various phases of the project.</p>
                 </div>
               </div>
             </div>
@@ -366,19 +366,19 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
         </section>
 
         {/* How we work Section */}
-        <section className="pb-120" style={{ background: '#ffffff', paddingTop: '0px' }}>
+        <section className="pb-120 bg-white">
           <div className="container">
-            <div className="row g-4 mb-40" style={{ padding: '60px 0' }}>
+            <div className="row g-4 mb-40 case-single-section">
               <div className="col-12">
-                <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>How we work</h3>
-                <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Let&apos;s unveil our unique software development approach -</h4>
+                <h3 className="case-single__title mb-20 case-single-title">How we work</h3>
+                <h4 className="mb-20 case-single-subtitle">Let&apos;s unveil our unique software development approach -</h4>
                 <div className="text-center">
                   <Image 
                     src="/assets/images/case/casestudyimage-01.png"
                     alt="How we work - Agile Method and Scrum Framework"
                     width={1200}
                     height={800}
-                    style={{ maxWidth: '100%', height: 'auto' }}
+                    className="case-single-image"
                   />
                 </div>
               </div>
@@ -387,10 +387,7 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
         </section>
 
         {/* Client&apos;s Talk Section */}
-        <section id="testimonial-section" className="testimonial-area bg-image pt-120 pb-120" style={{ 
-          backgroundImage: `url(/assets/images/bg/testimonial-bg.png)`,
-          marginTop: '120px'
-        }}>
+        <section id="testimonial-section" className="testimonial-area bg-image pt-120 pb-120 testimonial-bg mt-120px">
           <div className="container">
             <div className="row g-4">
               <div className="col-lg-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -417,8 +414,8 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                     <Image className="me-1" src={shape_1} alt="icon" />
                     Client&apos;s Talk
                   </h5>
-                  <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: 'white' }}>
-                    <span style={{ color: '#0f7a95' }}>What Clients Say</span> <span style={{ color: '#000000' }}>About Us</span>
+                  <h2 className="wow fadeInUp text-white" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <span className="text-teal">What Clients Say</span> <span className="text-black">About Us</span>
                   </h2>
                   <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients&apos; projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don&apos;t want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
                 </div>
@@ -501,18 +498,18 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                             <div className="d-flex align-items-center gap-3">
                               <Image src={item.avatar} alt="image" width={50} height={50} />
                               <div className="testi-info">
-                                <h4 style={{ color: 'white' }}>{item.name}</h4>
-                                <p style={{ color: '#0f7a95' }}>{item.designation}</p>
+                                <h4 className="text-white">{item.name}</h4>
+                                <p className="text-teal">{item.designation}</p>
                                 <div className="star mt-1">
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
                                 </div>
                               </div>
                             </div>
-                            <p className="mt-30" style={{ color: 'white' }}>{item.desc}</p>
+                            <p className="mt-30 text-white">{item.desc}</p>
                           </>
                         )}
                       </div>
@@ -527,21 +524,18 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
         </section>
 
         {/* Spacing Div */}
-        <div style={{ height: '120px', width: '100%' }}></div>
+        <div className="case-study-spacing-div"></div>
 
         {/* Industry We Serve Section */}
-        <section className="industry-we-serve-area pt-120 pb-120" style={{ 
-          background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)',
-          marginTop: '120px'
-        }}>
+        <section className="industry-we-serve-area pt-120 pb-120 case-study-industry-section">
           <div className="container">
             <div className="d-flex gap-4 flex-wrap align-items-center justify-content-between mb-95">
               <div className="section-header">
-                <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
+                <h5 className="wow fadeInLeft text-white" data-wow-delay="00ms" data-wow-duration="1500ms">
                   Tech Talent
                 </h5>
                 <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                  <span style={{ color: '#0f7a95' }}>Industry</span> We Serve
+                  <span className="text-teal">Industry</span> We Serve
                 </h2>
               </div>
               <Link href="/contact" className="btn-one wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -551,28 +545,9 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
             <div className="row g-4">
               {industry_data.map((item) => (
                 <div key={item.id} className="col-lg-3 col-md-4 col-sm-6">
-                  <div className="offer__item text-center wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ 
-                    height: '100%', 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: '20px',
-                    transition: 'all 0.3s ease',
-                    cursor: item.link ? 'pointer' : 'default',
-                    isolation: 'isolate',
-                    borderRadius: '0'
-                  }}>
+                  <div className={`offer__item text-center wow fadeInUp case-study-offer-item ${!item.link ? 'case-study-offer-item-no-link' : ''}`} data-wow-delay="200ms" data-wow-duration="1500ms">
                     {item.link ? (
-                      <Link href={item.link} style={{ 
-                        textDecoration: 'none', 
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        width: '100%',
-                        height: '100%',
-                        justifyContent: 'center'
-                      }}>
+                      <Link href={item.link} className="case-study-offer-link">
                         {item.icon && (
                           <div className="offer__icon mb-20">
                             <Image 
@@ -580,16 +555,11 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                               alt={item.title} 
                               width={60} 
                               height={60} 
-                              style={{ 
-                                background: 'transparent', 
-                                borderRadius: '50%', 
-                                objectFit: 'cover',
-                                transition: 'transform 0.3s ease'
-                              }} 
+                              className="case-study-offer-image" 
                             />
                           </div>
                         )}
-                        <h4 className="text-white mt-20" style={{ margin: 0, textAlign: 'center' }}>{item.title}</h4>
+                        <h4 className="text-white mt-20 case-study-offer-title">{item.title}</h4>
                       </Link>
                     ) : (
                       <>
@@ -600,16 +570,11 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                               alt={item.title} 
                               width={60} 
                               height={60} 
-                              style={{ 
-                                background: 'transparent', 
-                                borderRadius: '50%', 
-                                objectFit: 'cover',
-                                transition: 'transform 0.3s ease'
-                              }} 
+                              className="case-study-offer-image" 
                             />
                           </div>
                         )}
-                        <h4 className="text-white mt-20" style={{ margin: 0, textAlign: 'center' }}>{item.title}</h4>
+                        <h4 className="text-white mt-20 case-study-offer-title">{item.title}</h4>
                       </>
                     )}
                   </div>
@@ -620,17 +585,16 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
         </section>
 
         {/* Spacing Div */}
-        <div style={{ height: '120px', width: '100%' }}></div>
+        <div className="case-study-spacing-div"></div>
 
         {/* Explore Blogs and News Section */}
-        <section id="blog-section" className="blog-two-area pb-120" style={{ 
-          background: '#ffffff', 
-          marginTop: '120px' 
+        <section id="blog-section" className="blog-two-area pb-120 themed-section mt-120px" style={{ 
+          background: '#ffffff' 
         }}>
           <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
               <div className="section-header">
-                <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#000000' }}>
+                <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                   <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.75" y="0.748047" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
@@ -643,7 +607,7 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                   </svg>
                   Blog & news
                 </h5>
-                <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#000000', marginTop: '20px' }}>Explore Blogs and
+                <h2 className="wow fadeInLeft mt-20px" data-wow-delay="200ms" data-wow-duration="1500ms">Explore Blogs and
                   News</h2>
               </div>
               <Link href="/blog" className="btn-one wow fadeInUp" data-wow-delay="200ms"
@@ -655,9 +619,9 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                 <p>Loading blogs...</p>
               </div>
             ) : blogs.length > 0 ? (
-              <div className="row g-4">
-                <div className="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                  <div className="blog-two__grid-item">
+            <div className="row g-4">
+              <div className="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div className="blog-two__grid-item">
                     <Link href={`/blog/${blogs[0].slug}`} className="blog__image d-block image">
                       {(() => {
                         const DEFAULT_REMOTE_PLACEHOLDER = 'https://ifourtechnolab.ifour-consultancy.net/pics/Post/default.Thumbnail.jpg';
@@ -692,11 +656,11 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                           />
                         );
                       })()}
-                      <div className="blog-tag">
+                    <div className="blog-tag">
                         <h3 className="text-white">{formatDate(blogs[0].publishedDates).day}</h3>
                         <span className="text-white">{formatDate(blogs[0].publishedDates).month}</span>
-                      </div>
-                    </Link>
+                    </div>
+                  </Link>
                   <div className="blog__content">
                     <ul className="blog-info mb-20">
                       <li>
@@ -750,7 +714,7 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                   </div>
                 </div>
               </div>
-                <div className="col-lg-6">
+              <div className="col-lg-6">
                   {blogs.slice(1, 3).map((item, index) => (
                     <div key={item.id} className="blog-two__list-item mb-30 wow fadeInUp" data-wow-delay="00ms"
                       data-wow-duration="1500ms">
@@ -792,7 +756,7 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                           <h3 className="text-white">{formatDate(item.publishedDates).day}</h3>
                           <span className="text-white">{formatDate(item.publishedDates).month}</span>
                         </div>
-                      </Link>
+                          </Link>
                       <div className="blog__content">
                         <ul className="blog-info mb-20">
                           <li>
@@ -838,8 +802,8 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                             <div className="info">
                               <Link href="#" className="primary-color">By Admin</Link>
                               <h5>{item.authorName}</h5>
-                            </div>
                           </div>
+                        </div>
                           <Link href={`/blog/${item.slug}`} className="btn-one">Read More <i
                             className="fa-regular fa-arrow-right-long"></i></Link>
                         </div>
@@ -851,7 +815,7 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
             ) : (
               <div className="text-center py-5">
                 <p>No blogs available at the moment.</p>
-              </div>
+            </div>
             )}
           </div>
         </section>

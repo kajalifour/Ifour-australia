@@ -587,25 +587,9 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                   </div>
 
                   {/* Social Sharing Section - Simple Text Approach */}
-                  <div className="social-sharing" style={{ 
-                    background: '#f8f9fa', 
-                    padding: '20px', 
-                    borderRadius: '12px', 
-                    border: '1px solid #e9ecef', 
-                    margin: '26px 0 6px',
-                    textAlign: 'left'
-                  }}>
-                    <h4 style={{ 
-                      marginBottom: '15px', 
-                      color: '#2c3e50', 
-                      fontSize: '1.2rem', 
-                      fontWeight: '600' 
-                    }}>Share:</h4>
-                    <div style={{ 
-                      display: 'flex', 
-                      gap: '15px', 
-                      marginTop: '20px' 
-                    }}>
+                  <div className="social-sharing blog-social-sharing">
+                    <h4 className="blog-social-title">Share:</h4>
+                    <div className="blog-social-links">
                       <a href="#" title="Share on Facebook" style={{ 
                         display: 'flex',
                         alignItems: 'center',

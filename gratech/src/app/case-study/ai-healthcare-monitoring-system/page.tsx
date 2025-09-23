@@ -218,20 +218,20 @@ const AIHealthcareCaseStudy = () => {
         
         <section className="case-single-area pt-120 pb-120">
           <div className="container">
-            <div className="case-single__item" style={{ padding: '40px 0' }}>
-              <h3 className="case-single__title mb-30" style={{ color: '#0f7a95', fontSize: '48px', fontWeight: 700 }}>AI Healthcare Monitoring System</h3>
+            <div className="case-single__item case-single-item">
+              <h3 className="case-single__title mb-30 case-single-title-large">AI Healthcare Monitoring System</h3>
               
-              <h4 className="case-single__subtitle mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>About customer:</h4>
-              <p className="mb-40" style={{ fontSize: '18px', lineHeight: 1.8 }}>Our client is a leading healthcare technology company that aims to eliminate the variability in the healthcare management cycle and automate the manual diagnostic process, with the goal of significantly improving patient care and clinical outcomes.</p>
+              <h4 className="case-single__subtitle mb-20 case-single-subtitle">About customer:</h4>
+              <p className="mb-40 case-single-content">Our client is a leading healthcare technology company that aims to eliminate the variability in the healthcare management cycle and automate the manual diagnostic process, with the goal of significantly improving patient care and clinical outcomes.</p>
               
-              <div className="row align-items-center g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row align-items-center g-4 mb-40 case-single-section">
                 <div className="col-lg-7">
-                  <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Challenge</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>The customer recognized the need for an integrated design method that could comprehensively assess all aspects of a project. Manual execution of each procedure throughout the life cycle of building design demanded significant time and effort. Additionally, accurately determining the environmental impact of building designs required complex calculations. Automation of operations and calculations became imperative to save time, enhance accuracy, and streamline the design assessment process.</p>
-                  <div style={{ borderLeft: '3px solid #0f7a95', paddingLeft: '24px' }}>
-                    <p style={{ marginBottom: 0, fontSize: '18px', lineHeight: 1.8 }}>With our impeccable solution, the customer can now efficiently assess the life cycle of building designs, ensuring compliance with industry and government standards, reducing errors, and saving valuable time. The integration of automation, advanced calculations, and comprehensive reporting capabilities empowers our customers to make informed decisions regarding environmental impact and sustainability. Together, we are revolutionizing building design assessment, fostering a greener and more sustainable future.</p>
+                  <h3 className="case-single__title mb-20 case-single-title">Challenge</h3>
+                  <p className="mb-20 case-single-content">The customer recognized the need for an integrated design method that could comprehensively assess all aspects of a project. Manual execution of each procedure throughout the life cycle of building design demanded significant time and effort. Additionally, accurately determining the environmental impact of building designs required complex calculations. Automation of operations and calculations became imperative to save time, enhance accuracy, and streamline the design assessment process.</p>
+                  <div className="case-single-highlight">
+                    <p>With our impeccable solution, the customer can now efficiently assess the life cycle of building designs, ensuring compliance with industry and government standards, reducing errors, and saving valuable time. The integration of automation, advanced calculations, and comprehensive reporting capabilities empowers our customers to make informed decisions regarding environmental impact and sustainability. Together, we are revolutionizing building design assessment, fostering a greener and more sustainable future.</p>
                   </div>
-                  <p className="mt-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Explore your business potential with our custom software development services. React out us now.</p>
+                  <p className="mt-20 case-single-content">Explore your business potential with our custom software development services. React out us now.</p>
                 </div>
                 <div className="col-lg-5">
                   <div className="image text-lg-end">
@@ -247,197 +247,197 @@ const AIHealthcareCaseStudy = () => {
               
 
               
-              <div className="row align-items-center g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row align-items-center g-4 mb-40 case-single-section">
                 <div className="col-12">
-                  <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Solution</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>To address the client&apos;s needs, we embarked on an AI-based project that resulted in a versatile and intelligent tracking device, reforming the health monitoring experience. Leveraging cutting-edge sensors, IoT network technologies, Informedica, ChatGPT, and AI capabilities, our solution facilitates quick and secure data transfer and interpretation. This empowers healthcare staff in hospitals and nursing homes to respond promptly to unforeseen incidents identified by an autonomous diagnostic system.</p>
+                  <h3 className="case-single__title mb-20 case-single-title">Solution</h3>
+                  <p className="mb-20 case-single-content">To address the client&apos;s needs, we embarked on an AI-based project that resulted in a versatile and intelligent tracking device, reforming the health monitoring experience. Leveraging cutting-edge sensors, IoT network technologies, Informedica, ChatGPT, and AI capabilities, our solution facilitates quick and secure data transfer and interpretation. This empowers healthcare staff in hospitals and nursing homes to respond promptly to unforeseen incidents identified by an autonomous diagnostic system.</p>
                   
-                  <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Web and Mobile Application:</h4>
+                  <h4 className="mb-20 case-single-subtitle">Web and Mobile Application:</h4>
                   <ul className="list-unstyled">
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Patient Registration:</strong> Streamlined process for patient registration, ensuring easy access to healthcare services.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Health Updates:</strong> Real-time health updates, allowing users to track their well-being.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Doctor Appointments:</strong> Hassle-free scheduling of appointments with healthcare providers.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Patient Diagnosis Procedures:</strong> Convenient access to information and updates related to diagnosis procedures.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Patient History:</strong> Centralized storage of patient history, ensuring comprehensive and organized healthcare records.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Symptom Monitoring with Infermedica:</strong> Interactive chat feature facilitating symptom monitoring and analysis, powered by advanced AI technologies.
                     </li>
                   </ul>
                 </div>
               </div>
               
-              <div className="row g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row g-4 mb-40 case-single-section">
                 <div className="col-12">
-                  <h3 className="case-single__title mb-20" style={{ color: '#000000', fontSize: '32px', fontWeight: 700 }}>Modules</h3>
-                  <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Dashboard:</h4>
-                                        <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>A comprehensive overview of the member&apos;s health, activities, and essential updates.</p>
-                  <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Chatbot (Yasmina Chatbot):</h4>
+                  <h3 className="case-single__title mb-20 case-single-title-medium text-black">Modules</h3>
+                  <h4 className="mb-10 case-single-subtitle-small">Dashboard:</h4>
+                  <p className="mb-20 case-single-content">A comprehensive overview of the member&apos;s health, activities, and essential updates.</p>
+                  <h4 className="mb-10 case-single-subtitle-small">Chatbot (Yasmina Chatbot):</h4>
                   <ul className="list-unstyled mb-20">
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       Intelligent chatbot integrated with Infermedica API for symptom checking and ChatGPT for addressing user queries.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       Access the symptom checker function through application login, providing analysis results via Infermedica API integration.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       Find answers to other questions using the ChatGPT-integrated chat view.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       Explore website pages and receive feedback through voice or text-to-speech using Azure Speech-to-Text and Text-to-Speech services.
                     </li>
                   </ul>
                   <ul className="list-unstyled">
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
+                    <li className="mb-3 case-single-content">
                       <strong>Symptom Checker:</strong> User-friendly symptom check dialogue based on age and gender, simplifying the evaluation process.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
+                    <li className="mb-3 case-single-content">
                       <strong>Contact & Emergency Contact:</strong> Management of contacts, including emergency contacts, for quick access during critical situations.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
+                    <li className="mb-3 case-single-content">
                       <strong>Appointment:</strong> Integration of Microsoft and Google email accounts, providing a unified platform for managing appointments and meetings.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
+                    <li className="mb-3 case-single-content">
                       <strong>Setting:</strong> Integration of Google and Microsoft accounts for seamless appointment management and customization of application settings.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
+                    <li className="mb-3 case-single-content">
                       <strong>History Management:</strong> Tracking and visualization of historical data related to heart rate, temperature, activity, and spo2.
                     </li>
                   </ul>
                 </div>
               </div>
               
-              <div className="row g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row g-4 mb-40 case-single-section">
                 <div className="col-12">
-                  <h3 className="case-single__title mb-20" style={{ color: '#000000', fontSize: '32px', fontWeight: 700 }}>Technologies we used:</h3>
+                  <h3 className="case-single__title mb-20 case-single-title-medium text-black">Technologies we used:</h3>
                   
-                  <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Front end:</h4>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Angular 14</p>
+                  <h4 className="mb-10 case-single-subtitle-small">Front end:</h4>
+                  <p className="mb-20 case-single-content">Angular 14</p>
                   
-                  <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Back end:</h4>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>.NET Core 6.0 Web API</p>
+                  <h4 className="mb-10 case-single-subtitle-small">Back end:</h4>
+                  <p className="mb-20 case-single-content">.NET Core 6.0 Web API</p>
                   
-                  <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Database:</h4>
-                  <p className="mb-40" style={{ fontSize: '18px', lineHeight: 1.8 }}>SQL Server 2022</p>
+                  <h4 className="mb-10 case-single-subtitle-small">Database:</h4>
+                  <p className="mb-40 case-single-content">SQL Server 2022</p>
                   
-                  <h3 className="case-single__title mb-20" style={{ color: '#000000', fontSize: '32px', fontWeight: 700 }}>Mobile Application Features:</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>The following are the mobile app features available to users.</p>
+                  <h3 className="case-single__title mb-20 case-single-title-medium text-black">Mobile Application Features:</h3>
+                  <p className="mb-20 case-single-content">The following are the mobile app features available to users.</p>
                   
                   <ul className="list-unstyled">
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Device Administration:</strong> Manage device settings and configurations.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>User Registration:</strong> Register user accounts within the mobile application.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Dashboards:</strong> Display device-gathered data through interactive dashboards.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Mobile Communication with Device:</strong> Communicate with the device using the mobile application.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Mobile Communication with Azure Cloud:</strong> Establish a connection between the mobile application and Azure Cloud services.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Patient Appointment Processes:</strong> Manage patient appointments through the mobile application.
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div className="row g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row g-4 mb-40 case-single-section">
                 <div className="col-12">
-                  <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Mobile Application Visualization (with Digital Avatar Integration):</h3>
+                  <h3 className="case-single__title mb-20 case-single-title">Mobile Application Visualization (with Digital Avatar Integration):</h3>
                   
-                  <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Key Considerations:</h4>
+                  <h4 className="mb-10 case-single-subtitle-small">Key Considerations:</h4>
                   
-                  <h5 className="mb-10" style={{ color: '#0f7a95', fontSize: '16px', fontWeight: 600 }}>Tab Bar:</h5>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>The tab bar serves as a vital element of the mobile application, providing easy access to core functionality with a single tap and enabling seamless switching between features.</p>
+                  <h5 className="mb-10 case-single-subtitle-small">Tab Bar:</h5>
+                  <p className="mb-20 case-single-content">The tab bar serves as a vital element of the mobile application, providing easy access to core functionality with a single tap and enabling seamless switching between features.</p>
                   
-                  <h5 className="mb-10" style={{ color: '#0f7a95', fontSize: '16px', fontWeight: 600 }}>Tabs:</h5>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>Home | Yasmine/Digital Avatar</p>
+                  <h5 className="mb-10 case-single-subtitle-small">Tabs:</h5>
+                  <p className="mb-20 case-single-content">Home | Yasmine/Digital Avatar</p>
                   
                   <ul className="list-unstyled mb-20">
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Yasmine/Digital Avatar:</strong> Interact with a digital avatar for user/patient interaction.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Home:</strong> Displays other features of the mobile application.
                     </li>
                   </ul>
                   
-                  <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Home Tab:</h4>
+                  <h4 className="mb-10 case-single-subtitle-small">Home Tab:</h4>
                   <ul className="list-unstyled mb-20">
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Heart Rate Display:</strong> When a user/patient requests their heart rate or its history, the digital avatar presents the data on the Home tab.
                     </li>
                   </ul>
                   
-                  <h4 className="mb-10" style={{ color: '#0f7a95', fontSize: '18px', fontWeight: 600 }}>Device Connection:</h4>
+                  <h4 className="mb-10 case-single-subtitle-small">Device Connection:</h4>
                   <ul className="list-unstyled">
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Bluetooth Connectivity:</strong> Connect the device via Bluetooth to retrieve temperature, heart rate, SPO2, and battery status readings.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Data Management:</strong> Manage device data within the mobile app and upload it to the Azure IoT Hub.
                     </li>
-                    <li className="mb-3" style={{ fontSize: '18px', lineHeight: 1.8 }}>
-                      <i className="fa-solid fa-check me-3" style={{ color: '#0f7a95' }}></i>
+                    <li className="mb-3 case-single-content">
+                      <i className="fa-solid fa-check me-3 text-teal"></i>
                       <strong>Web Application Integration:</strong> The web application displays updated data to users.
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div className="row g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row g-4 mb-40 case-single-section">
                 <div className="col-12">
-                  <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '36px', fontWeight: 700 }}>Conclusion/Results:</h3>
-                  <p className="mb-20" style={{ fontSize: '18px', lineHeight: 1.8 }}>iFour Technolab Pty. Ltd., a leading healthcare software development firm, delivered client with the desired solution offering a complete health monitoring experience. Our solution combines advanced sensors, AloT network technologies, Informedica, and ChatGPT to enable quick and secure data transfer. Healthcare staff in hospitals now have the capability to respond quickly to unexpected instances identified by an autonomous diagnostic system. With our innovative approach, we have transformed healthcare practices, ensuring efficient monitoring and improved patient care.</p>
+                  <h3 className="case-single__title mb-20 case-single-title">Conclusion/Results:</h3>
+                  <p className="mb-20 case-single-content">iFour Technolab Pty. Ltd., a leading healthcare software development firm, delivered client with the desired solution offering a complete health monitoring experience. Our solution combines advanced sensors, AloT network technologies, Informedica, and ChatGPT to enable quick and secure data transfer. Healthcare staff in hospitals now have the capability to respond quickly to unexpected instances identified by an autonomous diagnostic system. With our innovative approach, we have transformed healthcare practices, ensuring efficient monitoring and improved patient care.</p>
                 </div>
               </div>
 
-              <div className="row g-4 mb-40" style={{ padding: '40px 0' }}>
+              <div className="row g-4 mb-40 case-single-section">
                 <div className="col-12">
-                  <h3 className="case-single__title mb-20" style={{ color: '#0f7a95', fontSize: '48px', fontWeight: 700 }}>How we work</h3>
-                  <h4 className="mb-20" style={{ color: '#0f7a95', fontSize: '20px', fontWeight: 600 }}>Let&apos;s unveil our unique software development approach -</h4>
+                  <h3 className="case-single__title mb-20 case-single-title-large">How we work</h3>
+                  <h4 className="mb-20 case-single-subtitle">Let&apos;s unveil our unique software development approach -</h4>
                   <div className="text-center">
                     <Image 
                       src="/assets/images/case/casestudyimage-01.png"
                       alt="How we work - Agile Method and Scrum Framework"
                       width={1200}
                       height={800}
-                      style={{ maxWidth: '100%', height: 'auto' }}
+                      className="case-single-image"
                     />
                   </div>
                 </div>
@@ -447,11 +447,7 @@ const AIHealthcareCaseStudy = () => {
         </section>
 
         {/* Client&apos;s Talk Section */}
-        <section id="testimonial-section" className="testimonial-area bg-image pt-120 pb-120" style={{ 
-          backgroundImage: `url(/assets/images/bg/testimonial-bg.png)`,
-          marginTop: '120px',
-          marginBottom: '120px'
-        }}>
+        <section id="testimonial-section" className="testimonial-area bg-image pt-120 pb-120 testimonial-bg mt-120px mb-120px">
           <div className="container">
             <div className="row g-4">
               <div className="col-lg-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -478,8 +474,8 @@ const AIHealthcareCaseStudy = () => {
                     <Image className="me-1" src={shape_1} alt="icon" />
                     Client&apos;s Talk
                   </h5>
-                  <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: 'white' }}>
-                    <span style={{ color: '#0f7a95' }}>What Clients Say</span> <span style={{ color: '#000000' }}>About Us</span>
+                  <h2 className="wow fadeInUp text-white" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <span className="text-teal">What Clients Say</span> <span className="text-black">About Us</span>
                   </h2>
                   <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients&apos; projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don&apos;t want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
                 </div>
@@ -499,57 +495,21 @@ const AIHealthcareCaseStudy = () => {
                       <div className="testimonial__item">
                         {item.isVideo ? (
                           <div className="video-testimonial">
-                            <div className="video-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
+                            <div className="video-container">
                               <iframe
                                 src={item.videoUrl}
                                 title="Client Testimonial"
-                                style={{
-                                  position: 'absolute',
-                                  top: 0,
-                                  left: 0,
-                                  width: '100%',
-                                  height: '100%',
-                                  border: 'none'
-                                }}
+                                className="video-iframe"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                               ></iframe>
                               {/* Play Button Overlay */}
                               <div 
-                                className="play-button-overlay"
-                                style={{
-                                  position: 'absolute',
-                                  top: '50%',
-                                  left: '50%',
-                                  transform: 'translate(-50%, -50%)',
-                                  zIndex: 10,
-                                  cursor: 'pointer',
-                                  background: 'rgba(0, 0, 0, 0.3)',
-                                  borderRadius: '50%',
-                                  width: '80px',
-                                  height: '80px',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  justifyContent: 'center',
-                                  transition: 'all 0.3s ease'
-                                }}
-                                onMouseEnter={(e) => {
-                                  e.currentTarget.style.background = 'rgba(15, 122, 149, 0.4)';
-                                  e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)';
-                                  e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1)';
-                                }}
+                                className="case-study-play-button-overlay"
                                 onClick={() => handleVideoPlay(index)}
                               >
                                 <i 
-                                  className="fa-solid fa-play" 
-                                  style={{ 
-                                    color: 'white', 
-                                    fontSize: '24px',
-                                    marginLeft: '4px'
-                                  }}
+                                  className="fa-solid fa-play text-white"
                                 ></i>
                               </div>
                             </div>
@@ -562,18 +522,18 @@ const AIHealthcareCaseStudy = () => {
                             <div className="d-flex align-items-center gap-3">
                               <Image src={item.avatar} alt="image" width={50} height={50} />
                               <div className="testi-info">
-                                <h4 style={{ color: 'white' }}>{item.name}</h4>
-                                <p style={{ color: '#0f7a95' }}>{item.designation}</p>
+                                <h4 className="text-white">{item.name}</h4>
+                                <p className="text-teal">{item.designation}</p>
                                 <div className="star mt-1">
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
-                                  <i className="fa-sharp fa-solid fa-star" style={{ color: '#ffd700' }}></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
+                                  <i className="fa-sharp fa-solid fa-star text-yellow"></i>
                                 </div>
                               </div>
                             </div>
-                            <p className="mt-30" style={{ color: 'white' }}>{item.desc}</p>
+                            <p className="mt-30 text-white">{item.desc}</p>
                           </>
                         )}
                       </div>
@@ -588,22 +548,18 @@ const AIHealthcareCaseStudy = () => {
         </section>
 
         {/* Spacing Div */}
-        <div style={{ height: '120px', width: '100%' }}></div>
+        <div className="case-study-spacing-div"></div>
 
         {/* Industry We Serve Section */}
-        <section className="industry-we-serve-area pt-120 pb-120" style={{ 
-          background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)',
-          marginTop: '120px',
-          marginBottom: '120px'
-        }}>
+        <section className="industry-we-serve-area pt-120 pb-120 case-study-industry-section">
           <div className="container">
             <div className="d-flex gap-4 flex-wrap align-items-center justify-content-between mb-95">
               <div className="section-header">
-                <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
+                <h5 className="wow fadeInLeft text-white" data-wow-delay="00ms" data-wow-duration="1500ms">
                   Tech Talent
                 </h5>
                 <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                  <span style={{ color: '#0f7a95' }}>Industry</span> We Serve
+                  <span className="text-teal">Industry</span> We Serve
                 </h2>
               </div>
               <Link href="/contact" className="btn-one wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -613,28 +569,9 @@ const AIHealthcareCaseStudy = () => {
             <div className="row g-4">
               {industry_data.map((item) => (
                 <div key={item.id} className="col-lg-3 col-md-4 col-sm-6">
-                  <div className="offer__item text-center wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ 
-                    height: '100%', 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: '20px',
-                    transition: 'all 0.3s ease',
-                    cursor: item.link ? 'pointer' : 'default',
-                    isolation: 'isolate',
-                    borderRadius: '0'
-                  }}>
+                  <div className={`offer__item text-center wow fadeInUp case-study-offer-item ${!item.link ? 'case-study-offer-item-no-link' : ''}`} data-wow-delay="200ms" data-wow-duration="1500ms">
                     {item.link ? (
-                      <Link href={item.link} style={{ 
-                        textDecoration: 'none', 
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        width: '100%',
-                        height: '100%',
-                        justifyContent: 'center'
-                      }}>
+                      <Link href={item.link} className="case-study-offer-link">
                         {item.icon && (
                           <div className="offer__icon mb-20">
                             <Image 
@@ -642,16 +579,11 @@ const AIHealthcareCaseStudy = () => {
                               alt={item.title} 
                               width={60} 
                               height={60} 
-                              style={{ 
-                                background: 'transparent', 
-                                borderRadius: '50%', 
-                                objectFit: 'cover',
-                                transition: 'transform 0.3s ease'
-                              }} 
+                              className="case-study-offer-image" 
                             />
                           </div>
                         )}
-                        <h4 className="text-white mt-20" style={{ margin: 0, textAlign: 'center' }}>{item.title}</h4>
+                        <h4 className="text-white mt-20 case-study-offer-title">{item.title}</h4>
                       </Link>
                     ) : (
                       <>
@@ -662,16 +594,11 @@ const AIHealthcareCaseStudy = () => {
                               alt={item.title} 
                               width={60} 
                               height={60} 
-                              style={{ 
-                                background: 'transparent', 
-                                borderRadius: '50%', 
-                                objectFit: 'cover',
-                                transition: 'transform 0.3s ease'
-                              }} 
+                              className="case-study-offer-image" 
                             />
                           </div>
                         )}
-                        <h4 className="text-white mt-20" style={{ margin: 0, textAlign: 'center' }}>{item.title}</h4>
+                        <h4 className="text-white mt-20 case-study-offer-title">{item.title}</h4>
                       </>
                     )}
                   </div>
@@ -682,18 +609,16 @@ const AIHealthcareCaseStudy = () => {
         </section>
 
         {/* Spacing Div */}
-        <div style={{ height: '120px', width: '100%' }}></div>
+        <div className="case-study-spacing-div"></div>
 
         {/* Explore Blogs and News Section */}
-        <section id="blog-section" className="blog-two-area pb-120" style={{ 
-          background: '#ffffff', 
-          marginTop: '120px',
-          marginBottom: '120px'
+        <section id="blog-section" className="blog-two-area pb-120 themed-section mt-120px mb-120px" style={{ 
+          background: '#ffffff' 
         }}>
           <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
               <div className="section-header">
-                <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#000000' }}>
+                <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                   <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.75" y="0.748047" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
@@ -706,7 +631,7 @@ const AIHealthcareCaseStudy = () => {
                   </svg>
                   Blog & news
                 </h5>
-                <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#000000', marginTop: '20px' }}>Explore Blogs and
+                <h2 className="wow fadeInLeft mt-20px" data-wow-delay="200ms" data-wow-duration="1500ms">Explore Blogs and
                   News</h2>
               </div>
               <Link href="/blog" className="btn-one wow fadeInUp" data-wow-delay="200ms"
@@ -719,9 +644,9 @@ const AIHealthcareCaseStudy = () => {
                 <p>Loading blogs...</p>
               </div>
             ) : blogs.length > 0 ? (
-              <div className="row g-4">
-                <div className="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                  <div className="blog-two__grid-item">
+            <div className="row g-4">
+              <div className="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div className="blog-two__grid-item">
                     <Link href={`/blog/${blogs[0].slug}`} className="blog__image d-block image">
                       {(() => {
                         const DEFAULT_REMOTE_PLACEHOLDER = 'https://ifourtechnolab.ifour-consultancy.net/pics/Post/default.Thumbnail.jpg';
@@ -756,11 +681,11 @@ const AIHealthcareCaseStudy = () => {
                           />
                         );
                       })()}
-                      <div className="blog-tag">
+                    <div className="blog-tag">
                         <h3 className="text-white">{formatDate(blogs[0].publishedDates).day}</h3>
                         <span className="text-white">{formatDate(blogs[0].publishedDates).month}</span>
-                      </div>
-                    </Link>
+                    </div>
+                  </Link>
                   <div className="blog__content">
                     <ul className="blog-info mb-20">
                       <li>
@@ -814,7 +739,7 @@ const AIHealthcareCaseStudy = () => {
                   </div>
                 </div>
               </div>
-                <div className="col-lg-6">
+              <div className="col-lg-6">
                   {blogs.slice(1, 3).map((item, index) => (
                     <div key={item.id} className="blog-two__list-item mb-30 wow fadeInUp" data-wow-delay="00ms"
                       data-wow-duration="1500ms">
@@ -856,7 +781,7 @@ const AIHealthcareCaseStudy = () => {
                           <h3 className="text-white">{formatDate(item.publishedDates).day}</h3>
                           <span className="text-white">{formatDate(item.publishedDates).month}</span>
                         </div>
-                      </Link>
+                          </Link>
                       <div className="blog__content">
                         <ul className="blog-info mb-20">
                           <li>
@@ -902,8 +827,8 @@ const AIHealthcareCaseStudy = () => {
                             <div className="info">
                               <Link href="#" className="primary-color">By Admin</Link>
                               <h5>{item.authorName}</h5>
-                            </div>
                           </div>
+                        </div>
                           <Link href={`/blog/${item.slug}`} className="btn-one">Read More <i
                             className="fa-regular fa-arrow-right-long"></i></Link>
                         </div>
@@ -915,7 +840,7 @@ const AIHealthcareCaseStudy = () => {
             ) : (
               <div className="text-center py-5">
                 <p>No blogs available at the moment.</p>
-              </div>
+            </div>
             )}
           </div>
         </section>

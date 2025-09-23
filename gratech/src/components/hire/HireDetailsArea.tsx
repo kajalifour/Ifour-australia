@@ -67,7 +67,7 @@ const TechnologiesSection = ({ data }: { data: ServiceDetailsData }) => {
     ];
 
     return (
-        <section className="technologies-area pt-120 pb-80" style={{ backgroundColor: '#ffffff' }}>
+        <section className="technologies-area pt-120 pb-80 bg-white">
             <div className="container">
                 <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                     <div className="section-header">
@@ -76,64 +76,23 @@ const TechnologiesSection = ({ data }: { data: ServiceDetailsData }) => {
                             Tech Talent
                         </h5>
                         <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <span style={{ color: '#0f7a95' }}>Technologies</span> We Utilise
+                            <span className="text-teal">Technologies</span> We Utilise
                         </h2>
                     </div>
                 </div>
                 
                 <div className="row justify-content-center">
                     {tech_data.map((tech, index) => (
-                        <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '50%', minWidth: '120px' }}>
-                            <div className="technology__item text-center wow fadeInUp" 
+                        <div key={tech.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 technology-item-wrapper">
+                            <div className="technology__item text-center wow fadeInUp technology-item" 
                                 data-wow-delay={`${index * 100}ms`} 
-                                data-wow-duration="1500ms"
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                                    borderRadius: '0',
-                                    padding: '0',
-                                    border: '1px solid rgba(0, 0, 0, 0.1)',
-                                    transition: 'all 0.3s ease',
-                                    height: '102px',
-                                    backdropFilter: 'blur(10px)',
-                                    transform: 'perspective(1000px) rotateX(0deg)',
-                                    transformStyle: 'preserve-3d',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'perspective(1000px) rotateX(-3deg) translateZ(15px)';
-                                    e.currentTarget.style.borderColor = '#0f7a95';
-                                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(15, 122, 149, 0.25)';
-                                    e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.08)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) translateZ(0px)';
-                                    e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
-                                }}>
+                                data-wow-duration="1500ms">
                                 <Image
                                     src={tech.icon} 
                                     alt="technology" 
                                     width={120}
                                     height={60}
-                                    style={{ 
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'fill',
-                                        borderRadius: '0',
-                                        transition: 'all 0.3s ease',
-                                        transform: 'translateZ(0px)',
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translateZ(8px) scale(1.05)';
-                                        e.currentTarget.style.filter = 'brightness(1.1) contrast(1.1)';
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = 'translateZ(0px) scale(1)';
-                                        e.currentTarget.style.filter = 'none';
-                                    }}
+                                    className="technology-image"
                                 />
                             </div>
                         </div>
@@ -327,44 +286,22 @@ const setting = {
 // Main Service Section Component
 const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
     return (
-        <section className="pt-120 pb-120" style={{ 
-            background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%)',
-            margin: '0 150px',
-            paddingTop: '50px',
-            paddingBottom: '50px'
-        }}>
+        <section className="pt-120 pb-120 service-main-section">
             <div className="container-fluid">
                 <div className="row g-4 align-items-center">
                     <div className="col-xl-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="image-container" style={{ 
-                            position: 'relative',
-                            overflow: 'hidden',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            height: '100%'
-                        }}>
+                        <div className="image-container service-image-container">
                             <Image 
                                 src={data.image || blog_image3} 
                                 alt={data.title || "Service Image"} 
-                                style={{
-                                    width: '110%',
-                                    height: 'auto',
-                                    objectFit: 'cover',
-                                    maxWidth: '550px'
-                                }}
+                                className="service-main-image"
                             />
                         </div>
                     </div>
                     <div className="col-xl-6 wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
                         <div className="content-section">
-                            <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{
-                                fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
-                                lineHeight: '1.2',
-                                marginBottom: '1.5rem',
-                                fontWeight: '700'
-                            }}>
-                                <div style={{ color: '#0f7a95', fontWeight: '400' }}>
+                            <h2 className="wow fadeInUp service-main-title" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                <div className="text-teal service-title-content">
                                     {data.title.includes('Connect with iFour') ? (
                                         <>
                                             Connect with iFour to<br />
@@ -426,13 +363,9 @@ const MainServiceSection = ({ data }: { data: ServiceDetailsData }) => {
                                     )}
                                 </div>
                             </h2>
-                            <div className="text-content wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms" style={{
-                                fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
-                                lineHeight: '1.8',
-                                color: '#333'
-                            }}>
+                            <div className="text-content wow fadeInUp service-main-description" data-wow-delay="400ms" data-wow-duration="1500ms">
                                 {data.description.split('\n\n').map((paragraph, index) => (
-                                    <p key={index} style={{ marginBottom: '1.5rem' }}>
+                                    <p key={index} className="service-description-paragraph">
                                         {paragraph}
                                     </p>
                                 ))}
@@ -463,23 +396,12 @@ const ServiceCardsSection = ({ data }: { data: ServiceDetailsData }) => {
                 <Swiper {...setting} modules={[Autoplay, Navigation, Pagination]} className="swiper service__slider">
                     {data.serviceData.filter((items: { page: string }) => items.page === "home_1").map((item: { id: number; icon: string; title: string; desc: string; page: string }) => (
                         <SwiperSlide key={item.id} className="swiper-slide">
-                            <div className="service__item" style={{
-                                backgroundColor: 'rgba(15, 122, 149, 0.15)',
-                                borderRadius: '5px',
-                                padding: '20px 20px 50px 20px',
-                                transition: 'all 0.3s ease-in-out',
-                                border: '1px solid rgba(15, 122, 149, 0.2)',
-                                boxShadow: '0 2px 10px rgba(15, 122, 149, 0.1)',
-                                height: '320px',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'flex-start'
-                            }}>
+                            <div className="service__item service-card-item">
                                 <div className="service__icon">
                                     <Image src={item.icon || shape_1} alt={item.title || "Service Icon"} width={60} height={60} />
                                 </div>
                                 <h4><Link href="/service-details">{item.title}</Link></h4>
-                                <p style={{ flex: '1' }}>{item.desc}</p>
+                                <p className="service-card-description">{item.desc}</p>
                             </div>
                         </SwiperSlide>
                     ))}
@@ -503,30 +425,23 @@ const ProjectSection = ({ data }: { data: ServiceDetailsData }) => {
     const project_items = project_data.filter((items: { page: string }) => items.page === "home_1");
 
     return (
-        <section id="project-section" className="service-area pt-120 pb-120" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', paddingTop: '100px', paddingBottom: '100px' }}>
+        <section id="project-section" className="service-area pt-120 pb-120 project-section-dark">
             <div className="container">
                 <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                     <div className="section-header">
-                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#ffffff' }}>
-                            <span style={{ color: '#0f7a95' }}>Our</span> Project
+                        <h2 className="wow fadeInLeft text-white" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <span className="text-teal">Our</span> Project
                         </h2>
                     </div>
                 </div>
                 <div className="row g-4">
                     {project_items.map((item: { id: number; image: string; title: string; desc: string }) => (
                         <div key={item.id} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div className="project__item position-relative overflow-hidden rounded-3 project-hover-container" style={{ height: '300px' }}>
+                            <div className="project__item position-relative overflow-hidden rounded-3 project-hover-container project-item-height">
                                 <div className="project__image w-100 h-100">
                                     <Image src={item.image || blog_image3} alt={item.title || "Project Image"} fill className="object-fit-cover" />
                                 </div>
-                                <div className="project__overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4" 
-                                    style={{
-                                        background: 'linear-gradient(135deg, rgba(12, 121, 147, 0.9), rgba(15, 121, 147, 0.9), rgba(17, 19, 20, 0.9))',
-                                        transform: 'translateY(-100%)',
-                                        transition: 'transform 0.3s ease-in-out',
-                                        cursor: 'pointer',
-                                        boxShadow: '0 0 25px rgba(15, 122, 149, 0.4)'
-                                    }}>
+                                <div className="project__overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4 project-overlay">
                                     <h4 className="text-white mb-3 fw-bold fs-4">{item.title}</h4>
                                     <p className="text-white mb-0 fs-6 lh-base">{item.desc}</p>
                                 </div>
@@ -611,7 +526,7 @@ const ClientsSection = ({ data }: { data: ServiceDetailsData }) => {
     };
 
    return (
-      <section className="clients-area pt-120 pb-120" style={{ marginTop: '70px' }}>
+      <section className="clients-area pt-120 pb-120 mt-70px">
          <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                <div className="section-header">
@@ -646,9 +561,7 @@ const AgileApproachSection = ({ data }: { data: ServiceDetailsData }) => {
     if (!data.showAgileApproach) return null;
     
     return (
-        <section className="agile-approach-area pt-120 pb-120" style={{ 
-            background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%)'
-        }}>
+        <section className="agile-approach-area pt-120 pb-120 agile-approach-bg">
             <div className="container">
                 <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                     <div className="section-header">
@@ -657,55 +570,17 @@ const AgileApproachSection = ({ data }: { data: ServiceDetailsData }) => {
                             OUR APPROACH
                         </h5>
                         <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <span style={{ color: '#0f7a95' }}>Our Agile</span> Approach
+                            <span className="text-teal">Our Agile</span> Approach
                         </h2>
                     </div>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-xl-10">
-                        <div className="agile-process-image wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms" 
-                            style={{
-                                backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                                borderRadius: '0',
-                                padding: '5px',
-                                border: '1px solid rgba(0, 0, 0, 0.1)',
-                                transition: 'all 0.3s ease',
-                                backdropFilter: 'blur(10px)',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                cursor: 'pointer'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.borderColor = '#0f7a95';
-                                e.currentTarget.style.boxShadow = '0 15px 40px rgba(15, 122, 149, 0.25)';
-                                e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.08)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
-                                e.currentTarget.style.boxShadow = 'none';
-                                e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
-                            }}>
+                        <div className="agile-process-image wow fadeInUp agile-process-container" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <Image 
                                 src={agileProcess} 
                                 alt="Our Agile Approach Process" 
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    objectFit: 'contain',
-                                    borderRadius: '0',
-                                    transition: 'all 0.3s ease',
-                                    transform: 'translateZ(0px)',
-                                    maxWidth: '100%'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'scale(1.05)';
-                                    e.currentTarget.style.filter = 'brightness(1.1) contrast(1.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'scale(1)';
-                                    e.currentTarget.style.filter = 'none';
-                                }}
+                                className="agile-process-image-content"
                             />
                         </div>
                     </div>
@@ -740,67 +615,32 @@ const MediaCoverageSection = ({ data }: { data: ServiceDetailsData }) => {
     ];
 
     return (
-        <section className="media-coverage-area pt-120 pb-80" style={{ background: '#ffffff', marginBottom: '0' }}>
+        <section className="media-coverage-area pt-120 pb-80 bg-white">
             <div className="container">
                 <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                     <div className="section-header">
-                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#333333' }}>
+                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <Image className="me-1" src={shape_1} alt="icon" />
                             Press & Media
                         </h5>
-                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#333333' }}>
-                            <span style={{ color: '#0f7a95' }}>Media</span> Coverage
+                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <span className="text-teal">Media</span> Coverage
                         </h2>
                     </div>
                 </div>
                 
                 <div className="row justify-content-center">
                     {media_data.map((media, index) => (
-                        <div key={media.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" style={{ maxWidth: '50%', minWidth: '120px' }}>
-                            <div className="media__item text-center wow fadeInUp" 
+                        <div key={media.id} className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4 media-item-wrapper">
+                            <div className="media__item text-center wow fadeInUp media-item" 
                                 data-wow-delay={`${index * 100}ms`} 
-                                data-wow-duration="1500ms"
-                                style={{
-                                    backgroundColor: 'rgba(15, 122, 149, 0.05)',
-                                    borderRadius: '8px',
-                                    padding: '22px 14px',
-                                    border: '1px solid rgba(15, 122, 149, 0.1)',
-                                    transition: 'all 0.3s ease',
-                                    height: '120px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-5px)';
-                                    e.currentTarget.style.borderColor = '#0f7a95';
-                                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(15, 122, 149, 0.2)';
-                                    e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.borderColor = 'rgba(15, 122, 149, 0.1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.backgroundColor = 'rgba(15, 122, 149, 0.05)';
-                                }}>
+                                data-wow-duration="1500ms">
                                 <Image 
                                     src={media.icon} 
                                     alt="media coverage" 
                                     width={120}
                                     height={60}
-                                    style={{ 
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'contain',
-                                        borderRadius: '0',
-                                        transition: 'filter 0.3s ease'
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.filter = 'brightness(1.1) contrast(1.1)';
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.filter = 'none';
-                                    }}
+                                    className="media-image"
                                 />
                             </div>
                         </div>
@@ -869,7 +709,7 @@ const TestimonialSection = ({ data }: { data: ServiceDetailsData }) => {
     };
 
     return (
-        <section id="testimonial-section" className="testimonial-area bg-image pt-120 pb-120" style={{ backgroundImage: `url(/assets/images/bg/testimonial-bg.png)` }}>
+        <section id="testimonial-section" className="testimonial-area bg-image pt-120 pb-120 testimonial-bg">
             <div className="container">
                 <div className="row g-4">
                     <div className="col-lg-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -896,8 +736,8 @@ const TestimonialSection = ({ data }: { data: ServiceDetailsData }) => {
                                 <Image className="me-1" src={shape_1} alt="icon" />
                                 Client&apos;s Talk
                             </h5>
-                            <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: 'white' }}>
-                                <span style={{ color: '#0f7a95' }}>What Clients Say</span> <span style={{ color: '#000000' }}>About Us</span>
+                            <h2 className="wow fadeInUp text-white" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                <span className="text-teal">What Clients Say</span> <span className="text-black">About Us</span>
                             </h2>
                             <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We have added undeniable value to our clients&apos; projects and ensured quantifiable results through our outcome-focused approach, ingenious thinking, and practical innovation. We don&apos;t want you to rely on our word alone. See for yourself what our valuable clients have to say about us and how we helped them succeed.</p>
                         </div>
@@ -1173,27 +1013,27 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
     };
 
     if (!data.showBlog) return null;
-
+    
     if (loading) {
-        return (
-            <section id="blog-section" className="blog-two-area pb-120" style={{ background: '#ffffff', marginTop: '20px' }}>
-                <div className="container">
-                    <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
-                        <div className="section-header">
-                            <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#000000' }}>
-                                <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.75" y="0.748047" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
-                                        strokeWidth="1.5" />
-                                    <mask id="path-2-inside-1_1120_300" fill="white">
-                                        <path
-                                            d="M3 5.99805C3 3.78891 4.79086 1.99805 7 1.99805H13C15.2091 1.99805 17 3.78891 17 5.99805C17 8.20719 15.2091 9.99805 13 9.99805H7C4.79086 9.99805 3 8.20719 3 5.99805ZM17 5.99805C17 9.03561 14.5376 11.498 11.5 11.498H8.5C5.46243 11.498 3 9.03561 3 5.99805C3 7.37876 4.79086 8.49805 7 8.49805H13C15.2091 8.49805 17 7.37876 17 5.99805ZM3 9.99805V1.99805V9.99805ZM17 1.99805V9.99805V1.99805Z"
-                                            fill="#0f7a95" mask="url(#path-2-inside-1_1120_300)" />
-                                    </mask>
-                                </svg>
-                                Blog & news
-                            </h5>
-                            <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#000000', marginTop: '20px' }}>Explore Blogs and News</h2>
+    return (
+            <section id="blog-section" className="blog-two-area pb-120 themed-section bg-white mt-20px">
+            <div className="container">
+                <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
+                    <div className="section-header">
+                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.75" y="0.748047" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
+                                    strokeWidth="1.5" />
+                                <mask id="path-2-inside-1_1120_300" fill="white">
+                                    <path
+                                        d="M3 5.99805C3 3.78891 4.79086 1.99805 7 1.99805H13C15.2091 1.99805 17 3.78891 17 5.99805C17 8.20719 15.2091 9.99805 13 9.99805H7C4.79086 9.99805 3 8.20719 3 5.99805ZM17 5.99805C17 9.03561 14.5376 11.498 11.5 11.498H8.5C5.46243 11.498 3 9.03561 3 5.99805C3 7.37876 4.79086 8.49805 7 8.49805H13C15.2091 8.49805 17 7.37876 17 5.99805ZM3 9.99805V1.99805V9.99805ZM17 1.99805V9.99805V1.99805Z"
+                                        fill="#0f7a95" mask="url(#path-2-inside-1_1120_300)" />
+                                </mask>
+                            </svg>
+                            Blog & news
+                        </h5>
+                            <h2 className="wow fadeInLeft mt-20px" data-wow-delay="200ms" data-wow-duration="1500ms">Explore Blogs and News</h2>
                         </div>
                         <Link href="/blog" className="btn-one wow fadeInUp" data-wow-delay="200ms"
                             data-wow-duration="1500ms">View All News <i className="fa-regular fa-arrow-right-long"></i></Link>
@@ -1207,11 +1047,11 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
     }
     
     return (
-        <section id="blog-section" className="blog-two-area pb-120" style={{ background: '#ffffff', marginTop: '20px' }}>
+        <section id="blog-section" className="blog-two-area pb-120 themed-section bg-white mt-20px">
             <div className="container">
                 <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                     <div className="section-header">
-                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#000000' }}>
+                        <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.75" y="0.748047" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95"
@@ -1224,7 +1064,7 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                             </svg>
                             Blog & news
                         </h5>
-                        <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#000000', marginTop: '20px' }}>Explore Blogs and
+                        <h2 className="wow fadeInLeft mt-20px" data-wow-delay="200ms" data-wow-duration="1500ms">Explore Blogs and
                             News</h2>
                     </div>
                     <Link href="/blog" className="btn-one wow fadeInUp" data-wow-delay="200ms"
@@ -1232,9 +1072,9 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                         News <i className="fa-regular fa-arrow-right-long"></i></Link>
                 </div>
                 {blogs.length > 0 ? (
-                    <div className="row g-4">
-                        <div className="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div className="blog-two__grid-item">
+                <div className="row g-4">
+                    <div className="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div className="blog-two__grid-item">
                                 <Link href={`/blog/${blogs[0].slug}`} className="blog__image d-block image">
                                     {(() => {
                                         const DEFAULT_REMOTE_PLACEHOLDER = 'https://ifourtechnolab.ifour-consultancy.net/pics/Post/default.Thumbnail.jpg';
@@ -1269,11 +1109,11 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                                             />
                                         );
                                     })()}
-                                    <div className="blog-tag">
+                                <div className="blog-tag">
                                         <h3 className="text-white">{formatDate(blogs[0].publishedDates).day}</h3>
                                         <span className="text-white">{formatDate(blogs[0].publishedDates).month}</span>
-                                    </div>
-                                </Link>
+                                </div>
+                            </Link>
                             <div className="blog__content">
                                 <ul className="blog-info mb-20">
                                     <li>
@@ -1328,10 +1168,10 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                         </div>
                     </div>
 
-                        <div className="col-lg-6">
+                    <div className="col-lg-6">
                             {blogs.slice(1, 3).map((item, index) => (
-                                <div key={item.id} className="blog-two__list-item mb-30 wow fadeInUp" data-wow-delay="00ms"
-                                    data-wow-duration="1500ms">
+                            <div key={item.id} className="blog-two__list-item mb-30 wow fadeInUp" data-wow-delay="00ms"
+                                data-wow-duration="1500ms">
                                     <Link href={`/blog/${item.slug}`} className="blog__image d-block image">
                                         {(() => {
                                             const DEFAULT_REMOTE_PLACEHOLDER = 'https://ifourtechnolab.ifour-consultancy.net/pics/Post/default.Thumbnail.jpg';
@@ -1366,63 +1206,65 @@ const BlogSection = ({ data }: { data: ServiceDetailsData }) => {
                                                 />
                                             );
                                         })()}
-                                        <div className="blog-tag">
+                                    <div className="blog-tag">
                                             <h3 className="text-white">{formatDate(item.publishedDates).day}</h3>
                                             <span className="text-white">{formatDate(item.publishedDates).month}</span>
-                                        </div>
-                                    </Link>
-                                    <div className="blog__content">
-                                        <ul className="blog-info mb-20">
-                                            <li>
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <g clipPath="url(#clip0_880_270)">
-                                                        <path
-                                                            d="M8.05666 18.75H8.05504C7.46832 18.7495 6.91657 18.5207 6.50187 18.1052L0.660341 12.2553C-0.194072 11.3994 -0.194072 10.0065 0.660341 9.15058L8.53478 1.26102C9.3463 0.44792 10.426 0 11.575 0H16.5709C17.7824 0 18.7682 0.985546 18.7682 2.19726V7.17785C18.7682 8.32602 18.3208 9.40532 17.5084 10.2167L9.60951 18.1074C9.19455 18.5218 8.64306 18.75 8.05666 18.75ZM11.575 1.46484C10.8179 1.46484 10.1064 1.75998 9.57163 2.29579L1.69707 10.1853C1.41222 10.4708 1.41222 10.9349 1.69707 11.2203L7.53857 17.0702C7.6767 17.2086 7.86051 17.285 8.05619 17.2851H8.05677C8.1529 17.2854 8.24812 17.2666 8.33694 17.2299C8.42577 17.1931 8.50643 17.1391 8.57427 17.071L16.4732 9.18046C17.0086 8.6458 17.3034 7.93447 17.3034 7.17788V2.19726C17.3034 1.79341 16.9748 1.46484 16.5709 1.46484H11.575ZM13.458 7.43408C12.2465 7.43408 11.2608 6.44853 11.2608 5.23681C11.2608 4.0251 12.2465 3.03955 13.458 3.03955C14.6696 3.03955 15.6553 4.0251 15.6553 5.23681C15.6553 6.44853 14.6696 7.43408 13.458 7.43408ZM13.458 4.50439C13.0542 4.50439 12.7256 4.83296 12.7256 5.23681C12.7256 5.64067 13.0542 5.96924 13.458 5.96924C13.862 5.96924 14.1905 5.64067 14.1905 5.23681C14.1905 4.83296 13.862 4.50439 13.458 4.50439Z"
-                                                            fill="#0f7a95" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath>
-                                                            <rect width="20" height="20" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
+                                    </div>
+                                </Link>
+                                <div className="blog__content">
+                                    <ul className="blog-info mb-20">
+                                        <li>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clipPath="url(#clip0_880_270)">
+                                                    <path
+                                                        d="M8.05666 18.75H8.05504C7.46832 18.7495 6.91657 18.5207 6.50187 18.1052L0.660341 12.2553C-0.194072 11.3994 -0.194072 10.0065 0.660341 9.15058L8.53478 1.26102C9.3463 0.44792 10.426 0 11.575 0H16.5709C17.7824 0 18.7682 0.985546 18.7682 2.19726V7.17785C18.7682 8.32602 18.3208 9.40532 17.5084 10.2167L9.60951 18.1074C9.19455 18.5218 8.64306 18.75 8.05666 18.75ZM11.575 1.46484C10.8179 1.46484 10.1064 1.75998 9.57163 2.29579L1.69707 10.1853C1.41222 10.4708 1.41222 10.9349 1.69707 11.2203L7.53857 17.0702C7.6767 17.2086 7.86051 17.285 8.05619 17.2851H8.05677C8.1529 17.2854 8.24812 17.2666 8.33694 17.2299C8.42577 17.1931 8.50643 17.1391 8.57427 17.071L16.4732 9.18046C17.0086 8.6458 17.3034 7.93447 17.3034 7.17788V2.19726C17.3034 1.79341 16.9748 1.46484 16.5709 1.46484H11.575ZM13.458 7.43408C12.2465 7.43408 11.2608 6.44853 11.2608 5.23681C11.2608 4.0251 12.2465 3.03955 13.458 3.03955C14.6696 3.03955 15.6553 4.0251 15.6553 5.23681C15.6553 6.44853 14.6696 7.43408 13.458 7.43408ZM13.458 4.50439C13.0542 4.50439 12.7256 4.83296 12.7256 5.23681C12.7256 5.64067 13.0542 5.96924 13.458 5.96924C13.862 5.96924 14.1905 5.64067 14.1905 5.23681C14.1905 4.83296 13.862 4.50439 13.458 4.50439Z"
+                                                        fill="#0f7a95" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath>
+                                                        <rect width="20" height="20" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
                                                 <Link href="#0">{item.categoryName}</Link>
-                                            </li>
-                                            <li>
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <g clipPath="url(#clip0_615_71)">
-                                                        <path
-                                                            d="M18.752 14.443C20.6847 11.7314 20.3893 8.01637 17.7495 5.59641C16.5434 4.49074 15.0057 3.80242 13.3448 3.6102C13.3344 3.59727 13.3236 3.58479 13.3122 3.57277C11.8673 2.0718 9.79133 1.21094 7.61672 1.21094C3.47848 1.21094 0 4.29426 0 8.24219C0 9.62637 0.429961 10.9533 1.24672 12.0993L0.105742 15.6815C0.0706615 15.7916 0.0689221 15.9096 0.100743 16.0207C0.132563 16.1318 0.196522 16.231 0.284576 16.3058C0.37263 16.3807 0.480845 16.4278 0.595611 16.4413C0.710377 16.4548 0.826568 16.434 0.92957 16.3816L4.39937 14.6173C5.11195 14.9241 5.86758 15.1255 6.65008 15.2171C8.15953 16.8044 10.2467 17.6172 12.382 17.6172C13.492 17.6172 14.598 17.391 15.5992 16.961L19.0692 18.7254C19.1514 18.7673 19.2424 18.7891 19.3346 18.7891C19.73 18.7891 20.0135 18.4037 19.893 18.0253L18.752 14.443ZM4.63586 13.4383C4.5549 13.3999 4.46621 13.3805 4.37659 13.3817C4.28697 13.3829 4.19883 13.4047 4.11895 13.4453L1.64758 14.702L2.45461 12.1681C2.48356 12.0773 2.48989 11.9807 2.47305 11.8869C2.45622 11.793 2.41673 11.7047 2.35801 11.6295C1.58199 10.6362 1.1718 9.46488 1.1718 8.24219C1.1718 5.01133 4.06297 2.38281 7.61672 2.38281C9.04781 2.38281 10.4255 2.81637 11.543 3.59711C7.77945 3.97555 4.76531 6.91516 4.76531 10.5859C4.76531 11.7277 5.05797 12.8268 5.60973 13.8116C5.276 13.7123 4.95042 13.5876 4.63586 13.4383ZM15.8798 15.789C15.7999 15.7484 15.7118 15.7267 15.6222 15.7254C15.5325 15.7242 15.4438 15.7436 15.3629 15.7821C14.4494 16.216 13.4187 16.4453 12.382 16.4453C8.82828 16.4453 5.93711 13.8168 5.93711 10.5859C5.93711 7.35508 8.82828 4.72656 12.382 4.72656C15.9358 4.72656 18.827 7.35508 18.827 10.5859C18.827 11.8086 18.4168 12.9799 17.6407 13.9732C17.582 14.0484 17.5425 14.1367 17.5257 14.2306C17.5089 14.3244 17.5152 14.421 17.5441 14.5118L18.3511 17.0457L15.8798 15.789Z" fill="#0f7a95" />
-                                                        <path d="M9.99939 11.1719C10.323 11.1719 10.5853 10.9095 10.5853 10.5859C10.5853 10.2623 10.323 10 9.99939 10C9.67579 10 9.41345 10.2623 9.41345 10.5859C9.41345 10.9095 9.67579 11.1719 9.99939 11.1719Z" fill="#0f7a95" />
-                                                        <path d="M12.343 11.1719C12.6666 11.1719 12.929 10.9095 12.929 10.5859C12.929 10.2623 12.6666 10 12.343 10C12.0194 10 11.7571 10.2623 11.7571 10.5859C11.7571 10.9095 12.0194 11.1719 12.343 11.1719Z" fill="#0f7a95" />
-                                                        <path d="M14.6866 11.1719C15.0102 11.1719 15.2726 10.9095 15.2726 10.5859C15.2726 10.2623 15.0102 10 14.6866 10C14.363 10 14.1007 10.2623 14.1007 10.5859C14.1007 10.9095 14.363 11.1719 14.6866 11.1719Z" fill="#0f7a95" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath>
-                                                            <rect width="20" height="20" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-                                                <Link href="#0">Comments</Link>
-                                            </li>
-                                        </ul>
+                                        </li>
+                                        <li>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clipPath="url(#clip0_615_71)">
+                                                    <path
+                                                        d="M18.752 14.443C20.6847 11.7314 20.3893 8.01637 17.7495 5.59641C16.5434 4.49074 15.0057 3.80242 13.3448 3.6102C13.3344 3.59727 13.3236 3.58479 13.3122 3.57277C11.8673 2.0718 9.79133 1.21094 7.61672 1.21094C3.47848 1.21094 0 4.29426 0 8.24219C0 9.62637 0.429961 10.9533 1.24672 12.0993L0.105742 15.6815C0.0706615 15.7916 0.0689221 15.9096 0.100743 16.0207C0.132563 16.1318 0.196522 16.231 0.284576 16.3058C0.37263 16.3807 0.480845 16.4278 0.595611 16.4413C0.710377 16.4548 0.826568 16.434 0.92957 16.3816L4.39937 14.6173C5.11195 14.9241 5.86758 15.1255 6.65008 15.2171C8.15953 16.8044 10.2467 17.6172 12.382 17.6172C13.492 17.6172 14.598 17.391 15.5992 16.961L19.0692 18.7254C19.1514 18.7673 19.2424 18.7891 19.3346 18.7891C19.73 18.7891 20.0135 18.4037 19.893 18.0253L18.752 14.443ZM4.63586 13.4383C4.5549 13.3999 4.46621 13.3805 4.37659 13.3817C4.28697 13.3829 4.19883 13.4047 4.11895 13.4453L1.64758 14.702L2.45461 12.1681C2.48356 12.0773 2.48989 11.9807 2.47305 11.8869C2.45622 11.793 2.41673 11.7047 2.35801 11.6295C1.58199 10.6362 1.1718 9.46488 1.1718 8.24219C1.1718 5.01133 4.06297 2.38281 7.61672 2.38281C9.04781 2.38281 10.4255 2.81637 11.543 3.59711C7.77945 3.97555 4.76531 6.91516 4.76531 10.5859C4.76531 11.7277 5.05797 12.8268 5.60973 13.8116C5.276 13.7123 4.95042 13.5876 4.63586 13.4383ZM15.8798 15.789C15.7999 15.7484 15.7118 15.7267 15.6222 15.7254C15.5325 15.7242 15.4438 15.7436 15.3629 15.7821C14.4494 16.216 13.4187 16.4453 12.382 16.4453C8.82828 16.4453 5.93711 13.8168 5.93711 10.5859C5.93711 7.35508 8.82828 4.72656 12.382 4.72656C15.9358 4.72656 18.827 7.35508 18.827 10.5859C18.827 11.8086 18.4168 12.9799 17.6407 13.9732C17.582 14.0484 17.5425 14.1367 17.5257 14.2306C17.5089 14.3244 17.5152 14.421 17.5441 14.5118L18.3511 17.0457L15.8798 15.789Z" fill="#0f7a95" />
+                                                <path d="M9.99939 11.1719C10.323 11.1719 10.5853 10.9095 10.5853 10.5859C10.5853 10.2623 10.323 10 9.99939 10C9.67579 10 9.41345 10.2623 9.41345 10.5859C9.41345 10.9095 9.67579 11.1719 9.99939 11.1719Z" fill="#0f7a95" />
+                                                <path d="M12.343 11.1719C12.6666 11.1719 12.929 10.9095 12.929 10.5859C12.929 10.2623 12.6666 10 12.343 10C12.0194 10 11.7571 10.2623 11.7571 10.5859C11.7571 10.9095 12.0194 11.1719 12.343 11.1719Z" fill="#0f7a95" />
+                                                <path d="M14.6866 11.1719C15.0102 11.1719 15.2726 10.9095 15.2726 10.5859C15.2726 10.2623 15.0102 10 14.6866 10C14.363 10 14.1007 10.2623 14.1007 10.5859C14.1007 10.9095 14.363 11.1719 14.6866 11.1719Z" fill="#0f7a95" />
+                                            </g>
+                                            <defs>
+                                                <clipPath>
+                                                    <rect width="20" height="20" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <Link href="#0">Comments</Link>
+                                    </li>
+                                </ul>
                                         <h3><Link href={`/blog/${item.slug}`} className="primary-hover">{item.postTitle}</Link></h3>
-                                        <div className="about__info mt-30">
-                                            <div className="d-flex gap-2 align-items-center">
+                                <div className="about__info justify-content-between flex-wrap gap-3 mt-25">
+                                    <div className="d-flex gap-2 align-items-center">
                                                 <Image src="/assets/images/blog/admin1.png" alt="Blog Author" width={50} height={50} />
-                                                <div className="info">
-                                                    <Link href="#" className="primary-color">By Admin</Link>
+                                        <div className="info">
+                                            <Link href="#" className="primary-color">By Admin</Link>
                                                     <h5>{item.authorName}</h5>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
+                                    <Link href={`/blog/${item.slug}`} className="btn-one">Read More <i
+                                        className="fa-regular fa-arrow-right-long"></i></Link>
                                 </div>
-                            ))}
+                            </div>
                         </div>
-                    </div>
+                ))}
+                </div>
+                </div>
                 ) : (
                     <div className="text-center py-5">
                         <p>No blogs available at the moment.</p>
@@ -1441,7 +1283,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
               {data.showMainServiceSection !== false && <MainServiceSection data={data} />}
             
             {/* Technologies List Section - Only for Technology Pages (Right after main service section) */}
-            {isTechnologyPage && data.showTechnologiesList !== false && (
+            {isTechnologyPage && data.showTechnologies !== false && (
                 <TechnologiesListSection 
                     data={{
                         hiringOptions: data.hireAboutSection?.hiringOptions,
@@ -1461,30 +1303,17 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
             
             {/* Quality Services Section - Above HireGrid */}
             {data.hireAboutSection?.title && data.hireAboutSection?.description && (
-                <section className="quality-services-section pt-120 pb-80" style={{ 
-                    background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%)',
-                    marginBottom: '50px'
-                }}>
+                <section className="quality-services-section pt-120 pb-80 service-main-section mb-50px">
                     <div className="container">
                         <div className="row g-4 align-items-center">
                             <div className="col-xl-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div className="content-section">
-                                    <h2 style={{ 
-                                        color: '#0f7a95', 
-                                        fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', 
-                                        fontWeight: '700',
-                                        marginBottom: '20px',
-                                        lineHeight: '1.2'
-                                    }}>
+                                    <h2 className="text-teal service-main-title">
                                         {data.hireAboutSection.title}
                                     </h2>
-                                    <div style={{ 
-                                        color: '#666', 
-                                        fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', 
-                                        lineHeight: '1.6'
-                                    }}>
+                                    <div className="service-main-description">
                                         {data.hireAboutSection?.description?.split('\n\n').map((paragraph, index) => (
-                                            <p key={index} style={{ marginBottom: '1.5rem' }}>
+                                            <p key={index} className="service-description-paragraph">
                                                 {paragraph}
                                             </p>
                                         ))}
@@ -1492,11 +1321,11 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
                                 </div>
                             </div>
                             <div className="col-xl-6 wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
-                                <div className="about__left-item" style={{ position: 'relative' }}>
-                                    <div className="image big-image" style={{ marginTop: '0px' }}>
+                                <div className="about__left-item">
+                                    <div className="image big-image">
                                         <Image src={about_thumb3} alt="Quality Services" width={400} height={300} />
                                     </div>
-                                    <div className="image sm-image" style={{ marginTop: '0px' }}>
+                                    <div className="image sm-image">
                                         <Image src={about_thumb4} alt="Quality Services" width={300} height={200} />
                                     </div>
                                     <div className="circle-shape">
@@ -1511,7 +1340,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
             
             {/* Services Grid Section - Added before CTA */}
             {data.showServicesGrid && (
-                <div style={{ marginBottom: '70px' }}>
+                <div className="mb-70px">
                     <HireGrid 
                         key={`hire-grid-${data.services?.join('-') || 'default'}`}
                         services={data.services}

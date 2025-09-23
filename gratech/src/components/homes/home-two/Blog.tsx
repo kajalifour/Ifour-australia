@@ -331,7 +331,7 @@ const Blog = () => {
                           </li>
                         </ul>
                         <h3><Link href={`/blog/${item.slug}`} className="primary-hover">{item.postTitle}</Link></h3>
-                        <div className="about__info mt-30">
+                        <div className="about__info justify-content-between flex-wrap gap-3 mt-25">
                           <div className="d-flex gap-2 align-items-center">
                             <Image src={admin_1} alt="image" />
                             <div className="info">
@@ -339,6 +339,8 @@ const Blog = () => {
                               <h5>{item.authorName}</h5>
                             </div>
                           </div>
+                          <Link href={`/blog/${item.slug}`} className="btn-one">Read More <i
+                            className="fa-regular fa-arrow-right-long"></i></Link>
                         </div>
                       </div>
                     </div>

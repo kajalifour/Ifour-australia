@@ -6,16 +6,16 @@ import ContactForm from "../forms/ContactForm"
 
 const ContactArea = () => {
    return (
-             <section className="contact-area pt-120 pb-120" style={{ minHeight: '100vh', padding: '80px 0' }}>
+             <section className="contact-area pt-120 pb-120 contact-area-full-height">
           <div className="container">
              <div className="row g-4">
                 <div className="col-lg-6">
-                   <div className="contact__left-item primary-bg" style={{ padding: '60px 40px', minHeight: '600px' }}>
+                   <div className="contact__left-item primary-bg contact-left-item">
                                            <h3 className="text-white mb-30">For inquiries,</h3>
-                                             <p className="text-white" style={{ fontSize: '1.15em', marginBottom: '40px', lineHeight: '1.4' }}>contact our Melbourne office:</p>
-                                           <ul className="mt-40 mb-40" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '30px', flexDirection: 'row' }}>
-                             <i style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '5px' }}>
+                                             <p className="text-white contact-description">contact our Melbourne office:</p>
+                                           <ul className="mt-40 mb-40 contact-info-list">
+                                                   <li className="contact-info-item">
+                             <i className="contact-info-icon">
                                 <svg width="40" height="40" viewBox="0 0 30 30" fill="none"
                                    xmlns="http://www.w3.org/2000/svg">
                                    <path
@@ -26,13 +26,13 @@ const ContactArea = () => {
                                       fill="#0f7a95" />
                                 </svg>
                              </i>
-                             <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-                                <span className="text-white" style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '500' }}>Call Us 7/24</span>
-                                <h3 className="mt-1" style={{ margin: 0, fontSize: '18px' }}><Link className="text-white" href="tel:+61489931698">+61 4 8993 1698</Link></h3>
+                             <div className="contact-info-content">
+                                <span className="text-white contact-info-label">Call Us 7/24</span>
+                                <h3 className="mt-1 contact-info-value"><Link className="text-white" href="tel:+61489931698">+61 4 8993 1698</Link></h3>
                              </div>
                           </li>
-                                                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '30px', flexDirection: 'row' }}>
-                             <i style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', marginTop: '5px' }}>
+                                                   <li className="contact-info-item">
+                             <i className="contact-info-icon-relative">
                                                                  <svg width="40" height="40" viewBox="0 0 30 30" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -46,13 +46,13 @@ const ContactArea = () => {
                                        fill="#0f7a95" />
                                  </svg>
                              </i>
-                             <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-                                <span className="text-white" style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '500' }}>Make a Quote</span>
-                                <h3 className="mt-1" style={{ margin: 0, fontSize: '18px' }}><Link className="text-white" href="mailto:info@ifourtechnolab.com.au">info@ifourtechnolab.com.au</Link></h3>
+                             <div className="contact-info-content">
+                                <span className="text-white contact-info-label">Make a Quote</span>
+                                <h3 className="mt-1 contact-info-value"><Link className="text-white" href="mailto:info@ifourtechnolab.com.au">info@ifourtechnolab.com.au</Link></h3>
                              </div>
                           </li>
-                                                   <li style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '30px', flexDirection: 'row' }}>
-                             <i style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', marginTop: '5px' }}>
+                                                   <li className="contact-info-item">
+                             <i className="contact-info-icon-relative">
                                                                  <svg width="40" height="40" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" clipRule="evenodd"
@@ -63,9 +63,9 @@ const ContactArea = () => {
                                        fill="#0f7a95" />
                                  </svg>
                              </i>
-                             <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-                                <span className="text-white" style={{ fontSize: '16px', marginBottom: '8px', fontWeight: '500' }}>Location</span>
-                                <h3 className="mt-1" style={{ margin: 0, fontSize: '18px' }}><Link className="text-white" href="#">15 Banyula drive, Old bar - NSW, 2430, Australia</Link></h3>
+                             <div className="contact-info-content">
+                                <span className="text-white contact-info-label">Location</span>
+                                <h3 className="mt-1 contact-info-value"><Link className="text-white" href="#">15 Banyula drive, Old bar - NSW, 2430, Australia</Link></h3>
                              </div>
                           </li>
                       </ul>
@@ -80,7 +80,7 @@ const ContactArea = () => {
                   </div>
                </div>
                                <div className="col-lg-6">
-                   <div className="contact__right-item" style={{ padding: '60px 40px', minHeight: '600px' }}>
+                   <div className="contact__right-item contact-left-item">
                      <div className="section-header mb-20">
                         <h5 className="wow fadeInUp pb-2" data-wow-delay="00ms" data-wow-duration="1500ms">
                            <Image className="me-1" src={shape} alt="icon" />

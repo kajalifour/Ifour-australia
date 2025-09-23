@@ -85,7 +85,7 @@ const BenefitsSection = ({ data }: { data: {
     };
 } }) => {
     return (
-        <section id="success-section" className="about-two-area" style={{ background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', paddingTop: '50px', paddingBottom: '20px' }}>
+        <section id="success-section" className="about-two-area service-details-benefits-section">
             <div className="container">
                 <div className="row g-4">
                     <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">

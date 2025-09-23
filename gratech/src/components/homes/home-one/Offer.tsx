@@ -105,9 +105,6 @@ const Offer = () => {
                      <span style={{ color: '#0f7a95' }}>Industry</span> We Serve
                   </h2>
                </div>
-               <Link href="/pricing" className="btn-one wow fadeInUp" data-wow-delay="200ms"
-                  data-wow-duration="1500ms">Explore
-                  More <i className="fa-regular fa-arrow-right-long"></i></Link>
             </div>
             <div className="row g-4">
                {offer_data.map((item) => (
