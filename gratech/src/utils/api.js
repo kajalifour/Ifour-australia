@@ -1,8 +1,16 @@
 import axios from 'axios';
 
-const URL = process.env.NEXT_PUBLIC_API_URL;
+const RAW_URL = process.env.NEXT_PUBLIC_API_URL;
+const URL = (RAW_URL && typeof RAW_URL === 'string') ? RAW_URL.replace(/\/$/, '') : '';
 
-const api = axios.create({ baseURL: URL });
+const api = axios.create({ baseURL: URL || undefined });
+
+// Helper: build full URL or return null when base URL is unavailable
+const buildUrl = (path) => {
+  if (!URL) return null;
+  if (!path.startsWith('/')) return `${URL}/${path}`;
+  return `${URL}${path}`;
+};
 
 // Safe JSON parser with silent error handling
 const safeJsonParse = async (response) => {
@@ -22,13 +30,14 @@ const safeJsonParse = async (response) => {
 
 // Safe fetch wrapper with silent error handling
 const safeFetch = async (url, options = {}, retries = 1) => {
+  if (!url) return null; // Guard when API base URL is missing
   for (let attempt = 0; attempt <= retries; attempt++) {
     let timeoutId;
     let controller;
     
     try {
       controller = new AbortController();
-      timeoutId = setTimeout(() => controller.abort(), 5000);
+      timeoutId = setTimeout(() => controller.abort(), 10000);
       
       const response = await fetch(url, {
         ...options,
@@ -77,7 +86,8 @@ const safeFetch = async (url, options = {}, retries = 1) => {
 };
 
 export const getAllBlog = async (catSlug,pageNum) => {
-  const url = `${URL}/Blog/GetAll?catSlug=${catSlug}&pageSize=5&pageNumber=${pageNum}`;
+  const path = `/Blog/GetAll?catSlug=${catSlug}&pageSize=5&pageNumber=${pageNum}`;
+  const url = buildUrl(path);
   
   try {
     const response = await safeFetch(url, { headers: { sitetype: '9' }, cache: 'no-store' });
@@ -94,7 +104,8 @@ export const getAllBlog = async (catSlug,pageNum) => {
 };
 
 export const getBlogCategory = async () => {
-  const response = await safeFetch(`${URL}/Blog/GetBlogCategory`, {
+  const url = buildUrl('/Blog/GetBlogCategory');
+  const response = await safeFetch(url, {
     headers: { sitetype: '9' },
     cache: 'no-store',
   });
@@ -110,7 +121,8 @@ export const getBlogCategory = async () => {
 // Alternative category endpoint
 export const getBlogCategoriesAlternative = async () => {
   try {
-    const response = await safeFetch(`${URL}/Blog/GetCategories`, {
+    const url = buildUrl('/Blog/GetCategories');
+    const response = await safeFetch(url, {
       headers: { sitetype: '9' },
       cache: 'no-store',
     });
@@ -128,7 +140,8 @@ export const getBlogCategoriesAlternative = async () => {
 
 export const getRecentBlogPosts = async () => {
   try {
-    const response = await safeFetch(`${URL}/Blog/GetBlogDetailByCatSlug?categorySlug=plusphysio`, {
+    const url = buildUrl('/Blog/GetBlogDetailByCatSlug?categorySlug=plusphysio');
+    const response = await safeFetch(url, {
       headers: { sitetype: '9' },
       cache: 'no-store',
     });
@@ -146,7 +159,8 @@ export const getRecentBlogPosts = async () => {
 
 export const getRecentInterviewsPosts = async () => {
   try {
-    const response = await safeFetch(`${URL}/Blog/GetBlogDetailByCatSlug?categorySlug=podcast`, {
+    const url = buildUrl('/Blog/GetBlogDetailByCatSlug?categorySlug=podcast');
+    const response = await safeFetch(url, {
       headers: { sitetype: '9' },
       cache: 'no-store',
     });
@@ -163,12 +177,12 @@ export const getRecentInterviewsPosts = async () => {
 };
 
 export const getBlogsOfCategory = async (categoryName, pageNum) => {
-  const response = await safeFetch(
-      `${URL}/Blog/GetAll?catSlug=${categoryName}&pageSize=5&pageNumber=${pageNum}`,
+  const url = buildUrl(`/Blog/GetAll?catSlug=${categoryName}&pageSize=5&pageNumber=${pageNum}`);
+  const response = await safeFetch(url,
     { headers: { sitetype: '9' }, cache: 'no-store' }
     );
   
-    if (!response) {
+  if (!response) {
     return { notFound: true };
   }
   
@@ -178,7 +192,7 @@ export const getBlogsOfCategory = async (categoryName, pageNum) => {
 
 //blog Details
 export const getBlogDetails = async (slug) => {
-  const url = `${URL}/Blog/GetBlogDetailBySlug?slug=${slug}`;
+  const url = buildUrl(`/Blog/GetBlogDetailBySlug?slug=${slug}`);
   
   try {
     const response = await safeFetch(url, {
@@ -228,12 +242,14 @@ export const getBlogDetails = async (slug) => {
 
 // form
 export const CONTACT_FORM_API = async (contactData) => {
+  if (!URL) return; // Prevent calling API without base URL
   await api.post('/Contactform/Add', contactData, {
     headers: { sitetype: '9' },
   });
 };
 
 export const checkRequestByIp = async (ip) => {
+  if (!URL) return { data: null };
   return await api.get(`Contactform/CheckRequestByIp?ipAddress=${ip}`, {
     headers: { sitetype: '9' },
   });
@@ -241,6 +257,7 @@ export const checkRequestByIp = async (ip) => {
 
 //News letter Api
 export const JOIN_NEWS_LETTER_API = async (emailId) => {
+  if (!URL) return; // Prevent calling API without base URL
   await api.post(
     '/JoinOurNewsLetter/Add',
     {
@@ -254,8 +271,9 @@ export const JOIN_NEWS_LETTER_API = async (emailId) => {
 };
 
 export const getMetaDataOfPage = async (slug) => {
+  const url = buildUrl(`/Blog/GetBlogDetailBySlug?slug=${slug}`);
   const response = await safeFetch(
-      `${URL}/Blog/GetBlogDetailBySlug?slug=${slug}`,
+      url,
       {
       headers: { sitetype: '9' },
         cache: 'no-store',
@@ -273,7 +291,8 @@ export const getMetaDataOfPage = async (slug) => {
 //News letter Api
 export const JOIN_NEWS_LETTER_API_GetAll = async (emailId) => {
   try {
-    const response = await safeFetch(`${URL}/JoinOurNewsLetter/GetAll`, {
+    const url = buildUrl('/JoinOurNewsLetter/GetAll');
+    const response = await safeFetch(url, {
       method: 'POST',
       headers: { sitetype: '9', 'Content-Type': 'application/json' },
       body: JSON.stringify({ searchString: emailId }),

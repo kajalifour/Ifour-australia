@@ -437,46 +437,18 @@ const PackagingIndustryCaseStudy = () => {
                               <iframe
                                 src={item.videoUrl}
                                 title="Client Testimonial"
-                                className="video-iframe"
+                                className="case-study-video-iframe"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                               ></iframe>
                               {/* Play Button Overlay */}
                               <div 
                                 className="play-button-overlay"
-                                style={{
-                                  position: 'absolute',
-                                  top: '50%',
-                                  left: '50%',
-                                  transform: 'translate(-50%, -50%)',
-                                  zIndex: 10,
-                                  cursor: 'pointer',
-                                  background: 'rgba(0, 0, 0, 0.3)',
-                                  borderRadius: '50%',
-                                  width: '80px',
-                                  height: '80px',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  justifyContent: 'center',
-                                  transition: 'all 0.3s ease'
-                                }}
-                                onMouseEnter={(e) => {
-                                  e.currentTarget.style.background = 'rgba(15, 122, 149, 0.4)';
-                                  e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)';
-                                  e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1)';
-                                }}
                                 onClick={() => handleVideoPlay(index)}
                               >
                                 <i 
                                   className="fa-solid fa-play" 
-                                  style={{ 
-                                    color: 'white', 
-                                    fontSize: '24px',
-                                    marginLeft: '4px'
-                                  }}
+                                  style={{ color: 'white', fontSize: '24px', marginLeft: '4px' }}
                                 ></i>
                               </div>
                             </div>
@@ -536,28 +508,9 @@ const PackagingIndustryCaseStudy = () => {
             <div className="row g-4">
               {industry_data.map((item) => (
                 <div key={item.id} className="col-lg-3 col-md-4 col-sm-6">
-                  <div className="offer__item text-center wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ 
-                    height: '100%', 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: '20px',
-                    transition: 'all 0.3s ease',
-                    cursor: item.link ? 'pointer' : 'default',
-                    isolation: 'isolate',
-                    borderRadius: '0'
-                  }}>
+                  <div className="offer__item text-center wow fadeInUp case-study-offer-item" data-wow-delay="200ms" data-wow-duration="1500ms">
                     {item.link ? (
-                      <Link href={item.link} style={{ 
-                        textDecoration: 'none', 
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        width: '100%',
-                        height: '100%',
-                        justifyContent: 'center'
-                      }}>
+                      <Link href={item.link} className="case-study-offer-link">
                         {item.icon && (
                           <div className="offer__icon mb-20">
                             <Image 
@@ -565,16 +518,11 @@ const PackagingIndustryCaseStudy = () => {
                               alt={item.title} 
                               width={60} 
                               height={60} 
-                              style={{ 
-                                background: 'transparent', 
-                                borderRadius: '50%', 
-                                objectFit: 'cover',
-                                transition: 'transform 0.3s ease'
-                              }} 
+                              className="case-study-offer-image" 
                             />
                           </div>
                         )}
-                        <h4 className="text-white mt-20" style={{ margin: 0, textAlign: 'center' }}>{item.title}</h4>
+                        <h4 className="text-white mt-20 case-study-offer-title">{item.title}</h4>
                       </Link>
                     ) : (
                       <>
@@ -585,16 +533,11 @@ const PackagingIndustryCaseStudy = () => {
                               alt={item.title} 
                               width={60} 
                               height={60} 
-                              style={{ 
-                                background: 'transparent', 
-                                borderRadius: '50%', 
-                                objectFit: 'cover',
-                                transition: 'transform 0.3s ease'
-                              }} 
+                              className="case-study-offer-image" 
                             />
                           </div>
                         )}
-                        <h4 className="text-white mt-20" style={{ margin: 0, textAlign: 'center' }}>{item.title}</h4>
+                        <h4 className="text-white mt-20 case-study-offer-title">{item.title}</h4>
                       </>
                     )}
                   </div>
@@ -657,15 +600,7 @@ const PackagingIndustryCaseStudy = () => {
                             height={540}
                             quality={100}
                             priority
-                            style={{
-                              objectFit: 'contain',
-                              objectPosition: 'center center',
-                              width: '100%',
-                              height: 'auto',
-                              borderRadius: '8px 8px 0 0',
-                              display: 'block',
-                              backgroundColor: '#f8f9fa'
-                            }}
+                            className="case-study-blog-image"
                             placeholder="empty"
                             unoptimized={unoptimized}
                             onError={(e) => {
@@ -754,15 +689,7 @@ const PackagingIndustryCaseStudy = () => {
                               width={900}
                               height={540}
                               quality={100}
-                              style={{
-                                objectFit: 'contain',
-                                objectPosition: 'center center',
-                                width: '100%',
-                                height: 'auto',
-                                borderRadius: '8px 8px 0 0',
-                                display: 'block',
-                                backgroundColor: '#f8f9fa'
-                              }}
+                              className="case-study-blog-image"
                               placeholder="empty"
                               unoptimized={unoptimized}
                               onError={(e) => {
@@ -846,88 +773,36 @@ const PackagingIndustryCaseStudy = () => {
         {/* Video Popup Modal */}
         {isVideoPopupOpen && (
           <div className="video-popup-overlay" 
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0, 0, 0, 0.9)',
-              zIndex: 9999,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
             onClick={handleCloseVideo}
           >
             <div className="video-popup-content" 
-              style={{
-                position: 'relative',
-                width: '90%',
-                maxWidth: '800px',
-                height: 'auto'
-              }}
               onClick={(e) => e.stopPropagation()}
             >
               <button 
                 className="close-button"
                 onClick={handleCloseVideo}
-                style={{
-                  position: 'absolute',
-                  top: '-40px',
-                  right: '0',
-                  background: 'none',
-                  border: 'none',
-                  color: 'white',
-                  fontSize: '24px',
-                  cursor: 'pointer',
-                  zIndex: 10000
-                }}
               >
                 ×
               </button>
-              <div className="video-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+              <div className="video-container">
                 <iframe
                   src={`${testi_data[currentVideoIndex].videoUrl}?autoplay=1&mute=0`}
                   title="Client Testimonial"
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    border: 'none'
-                  }}
+                  className="case-study-video-iframe"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="video-navigation" style={{ marginTop: '20px', textAlign: 'center' }}>
+              <div className="video-navigation">
                 <button 
                   onClick={handlePrevVideo}
-                  style={{
-                    background: '#0f7a95',
-                    color: 'white',
-                    border: 'none',
-                    padding: '10px 20px',
-                    margin: '0 10px',
-                    borderRadius: '5px',
-                    cursor: 'pointer'
-                  }}
+                  className="video-nav-button"
                 >
                   Previous
                 </button>
                 <button 
                   onClick={handleNextVideo}
-                  style={{
-                    background: '#0f7a95',
-                    color: 'white',
-                    border: 'none',
-                    padding: '10px 20px',
-                    margin: '0 10px',
-                    borderRadius: '5px',
-                    cursor: 'pointer'
-                  }}
+                  className="video-nav-button"
                 >
                   Next
                 </button>

@@ -60,7 +60,12 @@ const TechnologiesGrid: React.FC<TechnologiesGridProps> = ({ items = defaultItem
 
                 <div className="row g-4">
                     {items.map((item, index) => (
-                        <div key={item.id} className="col-lg-4 col-md-6 col-sm-12 technologies-grid-column" style={{ animationDelay: `${index * 100}ms`, animationDuration: "1000ms" }}>
+                        <div
+                            key={item.id}
+                            className="col-lg-4 col-md-6 col-sm-12 technologies-grid-column wow fadeInUp"
+                            data-wow-delay={`${index * 100}ms`}
+                            data-wow-duration="1000ms"
+                        >
                             <Link href={item.link} className="text-decoration-none">
                                 <div className="technologies-grid-item wow fadeInUp" data-wow-delay={`${index * 200}ms`} data-wow-duration="1500ms">
                                     <div className="technologies-grid-overlay"></div>

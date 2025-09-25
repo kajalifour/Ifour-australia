@@ -7,10 +7,12 @@ import shape_2 from "@/assets/images/banner/inner-banner-shape1.png"
 import shape_3 from "@/assets/images/banner/inner-banner-shape3.png"
 
 interface BlogDetailBannerProps {
-  pageName: string;
+  pageName: string; // Heading text
+  breadcrumbName?: string; // Optional breadcrumb label override
+  subtitleName?: string; // Optional subtitle under the main heading
 }
 
-export default function BlogDetailBanner({ pageName }: BlogDetailBannerProps) {
+export default function BlogDetailBanner({ pageName, breadcrumbName, subtitleName }: BlogDetailBannerProps) {
   return (
     <section className="banner__inner-page bg-image pt-180 pb-180 bg-image"
       style={{ 
@@ -25,12 +27,30 @@ export default function BlogDetailBanner({ pageName }: BlogDetailBannerProps) {
       </div>
       <div className="container">
         <h1 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: 'white', fontSize: '2.5rem', fontWeight: '700' }}>{pageName}</h1>
+        {subtitleName && (
+          <p
+            className="wow fadeInUp banner-subtitle"
+            data-wow-delay="100ms"
+            data-wow-duration="1500ms"
+            style={{
+              color: 'white',
+              marginTop: '10px',
+              fontSize: '1.25rem',
+              textDecoration: 'none',
+              borderBottom: 'none',
+              boxShadow: 'none',
+              display: 'inline-block'
+            }}
+          >
+            {subtitleName}
+          </p>
+        )}
         <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
           <Link href="/">Home</Link>
           <span><i className="fa-regular fa-angles-right mx-2"></i></span>
           <Link href="/blog">Blog</Link>
           <span><i className="fa-regular fa-angles-right mx-2"></i></span>
-          <span>{pageName}</span>
+          <span>{breadcrumbName || pageName}</span>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import Image from "next/image";
 import { getMetaDataOfPage } from "@/utils/api";
 import BlogSidebar from "./BlogSidebar";
@@ -36,7 +36,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const fetchBlogDetails = async () => {
       try {
         setLoading(true);
@@ -242,17 +242,20 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
             }
           });
 
-          // Target the specific paragraph before the table
+          // Preserve spacing within CTA blocks but keep others compact
           const costParagraph = blogMainContent.querySelector('p');
           if (costParagraph && costParagraph.textContent?.includes('Here you can look for the average cost')) {
             const element = costParagraph as HTMLElement;
-            element.style.margin = '0px';
-            element.style.marginTop = '0px';
-            element.style.marginBottom = '0px';
-            element.style.padding = '0px';
-            element.style.paddingTop = '0px';
-            element.style.paddingBottom = '0px';
-            element.style.lineHeight = '1.2';
+            const insideCta = !!element.closest('.blockquote-cta');
+            if (!insideCta) {
+              element.style.margin = '0px';
+              element.style.marginTop = '0px';
+              element.style.marginBottom = '0px';
+              element.style.padding = '0px';
+              element.style.paddingTop = '0px';
+              element.style.paddingBottom = '0px';
+              element.style.lineHeight = '1.2';
+            }
           }
 
           // Target the table that comes after the paragraph
@@ -267,10 +270,14 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
             element.style.paddingBottom = '0px';
           }
 
-          // Target all paragraphs in the blog-main-content
-           const allParagraphs = blogMainContent.querySelectorAll('p');
-           allParagraphs.forEach((paragraph) => {
-             const element = paragraph as HTMLElement;
+          // Target all paragraphs in the blog-main-content, but preserve CTA spacing
+          const allParagraphs = blogMainContent.querySelectorAll('p');
+          allParagraphs.forEach((paragraph) => {
+            const element = paragraph as HTMLElement;
+            const insideCta = !!element.closest('.blockquote-cta');
+            if (insideCta) {
+              return; // do not zero-out CTA paragraph spacing
+            }
             element.style.margin = '0px';
             element.style.marginTop = '0px';
             element.style.marginBottom = '0px';
@@ -313,19 +320,8 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
       (window as any).fixSocialSharingAndSpacing = fixSpacing;
     }
 
-    // Run immediately if DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fixSocialSharingAndSpacing);
-    } else {
+    // Apply once pre-paint
     fixSocialSharingAndSpacing();
-    }
-    
-    // Run again after a short delay to ensure it overrides any other scripts
-      setTimeout(fixSocialSharingAndSpacing, 100);
-      setTimeout(fixSocialSharingAndSpacing, 300);
-      setTimeout(fixSocialSharingAndSpacing, 500);
-      setTimeout(fixSocialSharingAndSpacing, 1000);
-      setTimeout(fixSocialSharingAndSpacing, 2000);
 
       // Minimal visibility fix for social sharing without altering design/position
       const forceSocialSharing = () => {
@@ -356,12 +352,8 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
         });
       };
 
-      // Run the force function multiple times
-      setTimeout(forceSocialSharing, 50);
-      setTimeout(forceSocialSharing, 200);
-      setTimeout(forceSocialSharing, 500);
-      setTimeout(forceSocialSharing, 1000);
-      setTimeout(forceSocialSharing, 2000);
+      // Ensure visibility once pre-paint
+      forceSocialSharing();
 
     // Observe mutations to re-apply fix when CMS content updates or reflows
     const blogMain = document.querySelector('.blog-main-content');
@@ -384,10 +376,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
         observer.disconnect();
         observer = null;
       }
-      // Remove event listener if it was added
-      if (document.readyState === 'loading') {
-        document.removeEventListener('DOMContentLoaded', fixSocialSharingAndSpacing);
-      }
+      // no DOMContentLoaded listener used now
       // Cancel any pending animation frames
       if (rafId) {
         cancelAnimationFrame(rafId);
@@ -411,18 +400,7 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
   }
 
   if (!blogDetail) {
-    return (
-      <div className="container">
-        <div className="row g-0">
-          <div className="col-lg-7 col-md-12 col-sm-12 px-0 col-left-70">
-            <div className="text-center py-5">
-              <h2>Blog Post Not Found</h2>
-              <p>The requested blog post could not be found.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+    return null;
   }
 
   return (
@@ -459,10 +437,10 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                     alt={blogDetail?.alt || 'Blog image'}
                     width={770}
                     height={450}
-                    quality={85}
+                    quality={80}
                     priority={false}
                     placeholder="empty"
-                    unoptimized={unoptimized}
+                    unoptimized={false}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = FALLBACK_BANNER;
@@ -547,9 +525,9 @@ export default function BlogDetailsPage({ slug }: BlogDetailsPageProps) {
                           alt={blogDetail?.authorName || 'Author'}
                           width={80}
                           height={80}
-                          quality={85}
+                          quality={80}
                           className="profile-img"
-                          unoptimized={unoptimized}
+                          unoptimized={false}
                           placeholder="empty"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;

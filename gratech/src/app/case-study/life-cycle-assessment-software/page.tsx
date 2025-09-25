@@ -435,58 +435,20 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                       <div className="testimonial__item">
                         {item.isVideo ? (
                           <div className="video-testimonial">
-                            <div className="video-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
+                            <div className="video-container">
                               <iframe
                                 src={item.videoUrl}
                                 title="Client Testimonial"
-                                style={{
-                                  position: 'absolute',
-                                  top: 0,
-                                  left: 0,
-                                  width: '100%',
-                                  height: '100%',
-                                  border: 'none'
-                                }}
+                                className="case-study-video-iframe"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                               ></iframe>
                               {/* Play Button Overlay */}
                               <div 
                                 className="play-button-overlay"
-                                style={{
-                                  position: 'absolute',
-                                  top: '50%',
-                                  left: '50%',
-                                  transform: 'translate(-50%, -50%)',
-                                  zIndex: 10,
-                                  cursor: 'pointer',
-                                  background: 'rgba(0, 0, 0, 0.3)',
-                                  borderRadius: '50%',
-                                  width: '80px',
-                                  height: '80px',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  justifyContent: 'center',
-                                  transition: 'all 0.3s ease'
-                                }}
-                                onMouseEnter={(e) => {
-                                  e.currentTarget.style.background = 'rgba(15, 122, 149, 0.4)';
-                                  e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)';
-                                  e.currentTarget.style.transform = 'translate(-50%, -50%) scale(1)';
-                                }}
                                 onClick={() => handleVideoPlay(index)}
                               >
-                                <i 
-                                  className="fa-solid fa-play" 
-                                  style={{ 
-                                    color: 'white', 
-                                    fontSize: '24px',
-                                    marginLeft: '4px'
-                                  }}
-                                ></i>
+                                <i className="fa-solid fa-play case-study-play-icon"></i>
                               </div>
                             </div>
                           </div>
@@ -588,9 +550,7 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
         <div className="case-study-spacing-div"></div>
 
         {/* Explore Blogs and News Section */}
-        <section id="blog-section" className="blog-two-area pb-120 themed-section mt-120px" style={{ 
-          background: '#ffffff' 
-        }}>
+        <section id="blog-section" className="blog-two-area pb-120 themed-section mt-120px bg-white">
           <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
               <div className="section-header">
@@ -638,15 +598,7 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                             width={400}
                             height={300}
                             quality={100}
-                            style={{
-                              objectFit: 'cover',
-                              objectPosition: 'center center',
-                              width: '100%',
-                              height: 'auto',
-                              borderRadius: '8px 8px 0 0',
-                              display: 'block',
-                              backgroundColor: '#f8f9fa'
-                            }}
+                            className="case-study-blog-image"
                             placeholder="empty"
                             unoptimized={unoptimized}
                             onError={(e) => {
@@ -734,15 +686,7 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
                               width={900}
                               height={540}
                               quality={100}
-                              style={{
-                                objectFit: 'contain',
-                                objectPosition: 'center center',
-                                width: '100%',
-                                height: 'auto',
-                                borderRadius: '8px 8px 0 0',
-                                display: 'block',
-                                backgroundColor: '#f8f9fa'
-                              }}
+                              className="case-study-blog-image"
                               placeholder="empty"
                               unoptimized={unoptimized}
                               onError={(e) => {
@@ -826,88 +770,36 @@ const LifeCycleAssessmentSoftwareCaseStudy = () => {
         {/* Video Popup Modal */}
         {isVideoPopupOpen && (
           <div className="video-popup-overlay" 
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0, 0, 0, 0.9)',
-              zIndex: 9999,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
             onClick={handleCloseVideo}
           >
             <div className="video-popup-content" 
-              style={{
-                position: 'relative',
-                width: '90%',
-                maxWidth: '800px',
-                height: 'auto'
-              }}
               onClick={(e) => e.stopPropagation()}
             >
               <button 
                 className="close-button"
                 onClick={handleCloseVideo}
-                style={{
-                  position: 'absolute',
-                  top: '-40px',
-                  right: '0',
-                  background: 'none',
-                  border: 'none',
-                  color: 'white',
-                  fontSize: '24px',
-                  cursor: 'pointer',
-                  zIndex: 10000
-                }}
               >
                 ×
               </button>
-              <div className="video-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+              <div className="video-container">
                 <iframe
                   src={`${testi_data[currentVideoIndex].videoUrl}?autoplay=1&mute=0`}
                   title="Client Testimonial"
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    border: 'none'
-                  }}
+                  className="case-study-video-iframe"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="video-navigation" style={{ marginTop: '20px', textAlign: 'center' }}>
+              <div className="video-navigation">
                 <button 
                   onClick={handlePrevVideo}
-                  style={{
-                    background: '#0f7a95',
-                    color: 'white',
-                    border: 'none',
-                    padding: '10px 20px',
-                    margin: '0 10px',
-                    borderRadius: '5px',
-                    cursor: 'pointer'
-                  }}
+                  className="video-nav-button"
                 >
                   Previous
                 </button>
                 <button 
                   onClick={handleNextVideo}
-                  style={{
-                    background: '#0f7a95',
-                    color: 'white',
-                    border: 'none',
-                    padding: '10px 20px',
-                    margin: '0 10px',
-                    borderRadius: '5px',
-                    cursor: 'pointer'
-                  }}
+                  className="video-nav-button"
                 >
                   Next
                 </button>

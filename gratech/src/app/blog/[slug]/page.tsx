@@ -8,6 +8,9 @@ import BlogDetailsPage from '@/components/blogs/BlogDetailsPage';
 import BlogDetailBanner from '@/components/blogs/BlogDetailBanner';
 import BlogSidebar from '@/components/blogs/BlogSidebar';
 
+// Always validate against live API; avoid serving cached content for wrong slugs
+export const dynamic = 'force-dynamic';
+
 
 
 interface Props {
@@ -17,8 +20,7 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const { slug } = await params;
-    const blogDetailData = await getMetaDataOfPage(slug);
-    const blogDetail = await blogDetailData;
+    const blogDetail = await getMetaDataOfPage(slug);
 
     return {
       title: blogDetail?.data?.metaTitle || 'Blog Post | iFour Technolabs',
@@ -49,13 +51,29 @@ export async function generateStaticParams() {
 
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params;
+  let pageName = 'Blog Details';
+  let breadcrumbName = '';
+
+  // Server-side validation: if the slug is invalid or not found, render 404
+  try {
+    const blogDetail = await getMetaDataOfPage(slug);
+    const data = blogDetail?.data as any;
+    const slugMismatch = data?.slug && typeof data.slug === 'string' && data.slug.toLowerCase() !== slug.toLowerCase();
+    const missingEssential = !data || (!data.postTitle && !data.metaTitle);
+    const notFoundCondition = !blogDetail || !data || blogDetail?.statusCode === 404 || blogDetail?.notFound || slugMismatch || missingEssential;
+    if (notFoundCondition) {
+      notFound();
+    }
+    breadcrumbName = data?.postTitle || data?.metaTitle || slug;
+  } catch {
+    notFound();
+  }
 
   return (
     <>
       <HeaderOne />
       <main>
-        <BlogDetailBanner pageName="Blog Details" />
-        {/* Force dynamic rendering for always-fresh data */}
+        <BlogDetailBanner pageName={pageName} breadcrumbName={breadcrumbName} />
         <BlogDetailsPage slug={slug} />
         <NewsletterSection />
       </main>

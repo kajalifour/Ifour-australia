@@ -135,7 +135,7 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                                 src={resolvedSrc}
                                 width={900}
                                 height={540}
-                                quality={75}
+                                quality={80}
                                 priority={i === 0}
                                 style={{
                                   objectFit: 'contain',
@@ -147,7 +147,7 @@ export default function BlogMainSection({ pageNum = 1, categorySlug = "plusphysi
                                   backgroundColor: '#f8f9fa'
                                 }}
                                 placeholder="empty"
-                                unoptimized={unoptimized}
+                                unoptimized={false}
                                 onError={(e) => {
                                   const target = e.target as HTMLImageElement;
                                   target.src = FALLBACK_BANNER;
