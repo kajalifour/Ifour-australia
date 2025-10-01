@@ -34,11 +34,11 @@ const ThankYouPage = () => {
                   </p>
                   
                   <div className="ty-actions">
-                    <Link href="/" className="btn btn-primary ty-btn-primary">
+                    <Link href="/" className="btn btn-primary ty-btn-primary thank-you-btn">
                       <i className="fa-solid fa-home me-2"></i>
                       Back to Home
                     </Link>
-                    <Link href="/contact" className="btn btn-outline-light ty-btn-outline">
+                    <Link href="/contact" className="btn btn-outline-light ty-btn-outline thank-you-btn">
                       <i className="fa-solid fa-envelope me-2"></i>
                       Send Another Message
                     </Link>

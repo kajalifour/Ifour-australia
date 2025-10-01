@@ -2876,13 +2876,13 @@ a[class*="btn"]:active {
 .ty-banner-bg { background-image: url(/assets/images/banner/banner-inner-page.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; }
 .ty-title { font-size: 3.5rem; font-weight: 700; }
 .ty-subtitle { font-size: 1.2rem; opacity: 0.9; }
-.ty-card { background: rgba(255,255,255,0.1); border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-.ty-icon-wrap { width: 80px; height: 80px; border-radius: 50%; background: #0f7a95; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+.ty-card { background: rgba(255,255,255,0.1); border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1); height: 340px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.ty-icon-wrap { width: 80px; height: 80px; border-radius: 50%; background: #0f7a95; display: flex; align-items: center; justify-content: center; margin: 0 auto; margin-bottom: 20px; margin-top: -50px;}
 .ty-icon { font-size: 32px; color: #fff; }
-.ty-text { font-size: 1.1rem; opacity: 0.9; line-height: 1.6; }
+.ty-text { font-size: 1.1rem; opacity: 0.9; line-height: 1.6; margin-bottom: 30px; }
 .ty-actions { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }
 .ty-btn-primary { background-color: #ffffff; color: #0f7a95; border: 2px solid #ffffff; }
-.ty-btn-primary:hover { background-color: #e6f3ff; color: #0a5a6a; }
+.ty-btn-primary:hover { background-color: #e6f3ff; color: #0f7a95; }
 .ty-btn-outline { background-color: transparent; color: #ffffff; border: 2px solid #ffffff; }
 .ty-btn-outline:hover { background-color: #ffffff; color: #0f7a95; }
 
@@ -2992,4 +2992,46 @@ a[class*="btn"]:active {
   color: #fff !important;
   background-color: #0f7a95 !important;
   border-color: #0f7a95 !important;
+}
+
+/* contact form checkbox inline */
+.subscribe-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  width: auto;
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+}
+.subscribe-inline input[type="checkbox"] {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+.subscribe-inline__label {
+  margin: 0 !important;
+  white-space: nowrap;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* contact form submit button top spacing */
+.contact-submit {
+  margin-top: 15px;
+}
+
+/* thank you page buttons bottom spacing */
+.thank-you-btn {
+  margin-bottom: 15px;
+  background-color: #0f7a95 !important;
+  border-color: #0f7a95 !important;
+}
+.thank-you-btn:hover {
+  background-color: #0a5a6a !important;
+  border-color: #0a5a6a !important;
+  color: #ffffff !important;
 }

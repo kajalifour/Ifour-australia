@@ -241,8 +241,18 @@ export const getBlogDetails = async (slug) => {
 };
 
 // form
-export const CONTACT_FORM_API = async (contactData) => {
-  if (!URL) return; // Prevent calling API without base URL
+// Contact form endpoints
+// - AddContactForm: used by Contact and Testimonial forms
+// - Add: used by Blog form (Reach out to us)
+export const CONTACT_FORM_ADD_CONTACT_FORM_API = async (contactData) => {
+  if (!URL) return;
+  await api.post('/Contactform/AddContactForm', contactData, {
+    headers: { sitetype: '9' },
+  });
+};
+
+export const CONTACT_FORM_ADD_API = async (contactData) => {
+  if (!URL) return;
   await api.post('/Contactform/Add', contactData, {
     headers: { sitetype: '9' },
   });
@@ -257,17 +267,18 @@ export const checkRequestByIp = async (ip) => {
 
 //News letter Api
 export const JOIN_NEWS_LETTER_API = async (emailId) => {
-  if (!URL) return; // Prevent calling API without base URL
-  await api.post(
+  if (!URL) return null; // Prevent calling API without base URL
+  const response = await api.post(
     '/JoinOurNewsLetter/Add',
     {
       emailId: emailId,
-      isSubscribe: 'true',
+      isSubscribe: true,
     },
     {
       headers: { sitetype: '9' },
     }
   );
+  return response?.data ?? null;
 };
 
 export const getMetaDataOfPage = async (slug) => {
@@ -290,21 +301,16 @@ export const getMetaDataOfPage = async (slug) => {
 
 //News letter Api
 export const JOIN_NEWS_LETTER_API_GetAll = async (emailId) => {
+  if (!URL) return { data: [] };
+  const res = await fetch(`${URL}/JoinOurNewsLetter/GetAll`, {
+    method: 'POST',
+    headers: { sitetype: '9', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ searchString: emailId }),
+  });
   try {
-    const url = buildUrl('/JoinOurNewsLetter/GetAll');
-    const response = await safeFetch(url, {
-      method: 'POST',
-      headers: { sitetype: '9', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ searchString: emailId }),
-    });
-    
-    if (!response) {
-      return { data: [] };
-    }
-    
-    const data = await safeJsonParse(response);
-    return data || { data: [] };
-  } catch (error) {
+    const data = await res.json();
+    return data;
+  } catch {
     return { data: [] };
   }
 };

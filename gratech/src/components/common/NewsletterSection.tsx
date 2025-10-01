@@ -1,29 +1,55 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import { JOIN_NEWS_LETTER_API, JOIN_NEWS_LETTER_API_GetAll } from '@/utils/api';
 
 const NewsletterSection = () => {
 	const [email, setEmail] = useState('');
 	const [emailError, setEmailError] = useState<string>('');
 	const [submitted, setSubmitted] = useState<'idle' | 'success' | 'error'>('idle');
 	const [isMobile, setIsMobile] = useState(false);
+	const [isNewsLetter, setIsNewsLetter] = useState(false);
+	const [oldSubscriber, setOldSubscriber] = useState<any>(null);
+	const [alreadyJoined, setAlreadyJoined] = useState(false);
 
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-		if (!emailRegex.test(email.trim())) {
-			setEmailError('Please enter a valid email address.');
-			return;
-		}
-		try {
-			console.log('Newsletter subscription:', email);
-			setEmail('');
-			setEmailError('');
-			setSubmitted('success');
-		} catch {
-			setSubmitted('error');
-		}
-	};
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        if (!emailRegex.test(email.trim())) {
+            setEmailError('Please enter a valid email address.');
+            return;
+        }
+        try {
+            const submittedEmail = email.trim().toLowerCase();
+
+            // Pre-check to see if this email already exists
+            const preLookup = await JOIN_NEWS_LETTER_API_GetAll(submittedEmail);
+            const preTotal = (preLookup?.data?.recordsTotal ?? (Array.isArray(preLookup?.data) ? preLookup.data.length : 0)) as number;
+            const preExists = (preTotal || 0) > 0;
+            if (preExists) {
+                setOldSubscriber(preLookup);
+                setAlreadyJoined(true);
+                setIsNewsLetter(true);
+                setSubmitted('success');
+                return;
+            }
+
+            // Not existing → create
+            await JOIN_NEWS_LETTER_API(submittedEmail);
+
+            // Fetch the created record to get ID
+            const postLookup = await JOIN_NEWS_LETTER_API_GetAll(submittedEmail);
+            setOldSubscriber(postLookup);
+            setAlreadyJoined(false);
+            setIsNewsLetter(true);
+
+            setEmail('');
+            setEmailError('');
+            setSubmitted('success');
+        } catch {
+            setSubmitted('error');
+        }
+    };
 
 	useEffect(() => {
 		if (submitted !== 'idle') {
@@ -76,21 +102,32 @@ const NewsletterSection = () => {
 					<div className="col-lg-6">
 						{/* right aligned form with max width or confirmation box */}
 						<div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-							{submitted === 'success' ? (
-								<div style={{
+							{submitted === 'success' && isNewsLetter ? (
+								<div className="tfSubscribeMsg" style={{
 									width: '100%',
 									maxWidth: 560,
-									background: '#e6e6e6',
+									background: '#0f7a95',
 									borderRadius: 8,
 									padding: '14px 18px',
 									minHeight: INPUT_HEIGHT,
 									display: 'flex',
 									alignItems: 'center',
 									justifyContent: 'center',
-									color: '#111',
-									fontWeight: 600
+									color: '#fff'
 								}}>
-									Thank you! Your submission has been received!
+									{alreadyJoined ? (
+										<p style={{ margin: 0, paddingTop: '4px' }}>You have already joined</p>
+									) : (
+										<p style={{ margin: 0, textAlign: 'center' }}>
+											Congratulations. You have subscribed to our newsletter successfully.
+										</p>
+									)}
+									{(() => {
+										const createdId = oldSubscriber?.data?.[0]?.id;
+										return createdId ? (
+											<span style={{ marginLeft: 12, fontWeight: 600 }}>(ID: {createdId})</span>
+										) : null;
+									})()}
 								</div>
 							) : (
 								<form onSubmit={handleSubmit} style={{ width: '100%', maxWidth: 560 }} noValidate>

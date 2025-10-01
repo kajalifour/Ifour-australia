@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { getBlogCategory, getBlogCategoriesAlternative, getRecentBlogPosts, getAllBlog } from "@/utils/api";
+import { getBlogCategory, getBlogCategoriesAlternative, getRecentBlogPosts, getAllBlog, CONTACT_FORM_ADD_API } from "@/utils/api";
 
 interface Category {
   id: string;
@@ -197,11 +197,20 @@ export default function BlogSidebar() {
           {!reachSubmitted && (
             <>
               <form
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  setReachSubmitted(true);
-                  setReachName("");
-                  setReachEmail("");
+                  try {
+                    const payload = {
+                      name: reachName,
+                      email: reachEmail,
+                    };
+                    await CONTACT_FORM_ADD_API(payload);
+                    setReachSubmitted(true);
+                    setReachName("");
+                    setReachEmail("");
+                  } catch (error) {
+                    console.error('BlogSidebar: API call failed:', error);
+                  }
                 }}
                 style={{ display: 'grid', gap: '12px' }}
               >
@@ -211,7 +220,7 @@ export default function BlogSidebar() {
                     id="reachName"
                     name="name"
                     type="text"
-                    placeholder="Enter your name"
+                    placeholder=""
                     required
                     value={reachName}
                     onChange={(e) => setReachName(e.target.value)}
@@ -224,7 +233,7 @@ export default function BlogSidebar() {
                     id="reachEmail"
                     name="email"
                     type="email"
-                    placeholder="you@example.com"
+                    placeholder=""
                     required
                     value={reachEmail}
                     onChange={(e) => setReachEmail(e.target.value)}
