@@ -47,10 +47,10 @@ const page = () => {
     showCTATwo: false,
     ctaTitle: "Transform your business with our technology expertise",
     ctaButtonText: "GET STARTED",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Ready to Start Your Project?",
     ctaTwoButtonText: "GET STARTED NOW",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Custom Software Development",
       "Web Application Development",

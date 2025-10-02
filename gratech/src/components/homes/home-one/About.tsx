@@ -10,18 +10,25 @@ const About = () => {
 
    return (
       <div>
-         <section id="about-section" className="about-area sub-bg pt-120 pb-80">
+         <section id="about-section" className="about-area pt-120 pb-80">
             <div className="about__shape wow slideInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
                <Image src={shape_1} alt="shape" />
             </div>
             <div className="container">
                <div className="row g-4">
                   <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                     <div className="about__left-item">
-                        <div className="image big-image" style={{ marginTop: '70px' }}>
+                     <div className="about__left-item mt-70">
+                        <div className="image big-image">
                            <Image src={about_thumb1} alt="image" />
                         </div>
-                        <div className="image sm-image" style={{ marginTop: '70px' }}>
+                        <div className="image sm-image">
+                           {/* <div className="video__btn-wrp">
+                              <div className="video-btn video-pulse">
+                                 <a onClick={() => setIsVideoOpen(true)} style={{ cursor: "pointer" }} className="video-popup">
+                                    <i className="fa-solid fa-play"></i>
+                                 </a>
+                              </div>
+                           </div> */}
                            <Image src={about_thumb2} alt="image" />
                         </div>
                         <div className="circle-shape">
@@ -32,11 +39,11 @@ const About = () => {
                   <div className="col-xl-6">
                      <div className="section-header mb-40">
                         <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                           <Image className="me-1" src={shape_3} alt="icon" />
+                           <Image className="me-1 filter-brightness" src={shape_3} alt="icon" />
                            ABOUT Us
                         </h5>
                         <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                           <span style={{ color: '#0f7a95' }}>A Software Development Company</span> You Can Trust
+                           A Software Development Company <span className="primary-color">You Can Trust</span>
                         </h2>
                         <p className="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                            iFour Technolab is a Microsoft Certified Solutions Partner and a premier software development company delivering leading-edge software development services and solutions. We blend our technological niche-specific expertise with our decade-long experience to bring your innovative vision to life. We keep up with the ever-evolving software development landscape to acquaint ourselves with cutting-edge technology and frameworks, ensuring you get the best possible solutions that perfectly match your business needs.

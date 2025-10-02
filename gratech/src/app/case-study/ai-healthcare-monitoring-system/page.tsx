@@ -189,7 +189,7 @@ const AIHealthcareCaseStudy = () => {
     { id: 9, icon: industry09, title: "Technology" },
     { id: 10, icon: industry10, title: "Retail" },
     { id: 11, icon: industry11, title: "Logistics" },
-    { id: 12, icon: null, title: "Contact Us", link: "/contact" },
+    { id: 12, icon: null, title: "Contact Us", link: "/contact-us" },
   ];
 
 
@@ -562,7 +562,7 @@ const AIHealthcareCaseStudy = () => {
                   <span className="text-teal">Industry</span> We Serve
                 </h2>
               </div>
-              <Link href="/contact" className="btn-one wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+              <Link href="/contact-us" className="btn-one wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 Explore More <i className="fa-regular fa-arrow-right-long"></i>
               </Link>
             </div>

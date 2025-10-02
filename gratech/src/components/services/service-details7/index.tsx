@@ -180,7 +180,7 @@ const ServiceDetails = () => {
                                         }}>
                                            
                                         </p>
-                                        <Link href="/contact" className="btn btn-primary" style={{
+                                        <Link href="/contact-us" className="btn btn-primary" style={{
                                             background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)',
                                             border: 'none',
                                             color: '#0f7a95',

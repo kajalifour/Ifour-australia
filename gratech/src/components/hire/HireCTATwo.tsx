@@ -12,7 +12,7 @@ interface HireCTATwoProps {
 const HireCTATwo: React.FC<HireCTATwoProps> = ({ 
     title, 
     buttonText = "GET STARTED NOW", 
-    buttonLink = "/contact" 
+    buttonLink = "/contact-us" 
 }) => {
     return (
         <section className="hire-cta-two-section pt-80 pb-80">

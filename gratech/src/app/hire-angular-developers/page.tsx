@@ -46,10 +46,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Hire Angular JS Developers to Accelerate Your Frontend Architecture",
     ctaButtonText: "GET STARTED TODAY",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Hire Angular JS Developers and Unlock the Full Potential of Robust Framework",
     ctaTwoButtonText: "Get in touch now",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Quick Onboarding",
       "Proven Track Record",

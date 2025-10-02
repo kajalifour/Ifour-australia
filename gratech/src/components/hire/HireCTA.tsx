@@ -12,7 +12,7 @@ interface HireCTAProps {
 const HireCTA: React.FC<HireCTAProps> = ({ 
     title, 
     buttonText = "GET STARTED NOW", 
-    buttonLink = "/contact" 
+    buttonLink = "/contact-us" 
 }) => {
     return (
         <section className="hire-cta-section pt-80 pb-80">

@@ -122,7 +122,7 @@ const ThankYouPage: React.FC = () => {
 
           {/* Send Another Message Button */}
           <Link
-            href="/contact"
+            href="/contact-us"
             style={{
               background: '#000000',
               color: '#ffffff',

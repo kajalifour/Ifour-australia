@@ -47,10 +47,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Scale with Node.js",
     ctaButtonText: "GET STARTED TODAY",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Revolutionize your business with custom software solutions.",
     ctaTwoButtonText: "Get started now",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Extensive Expertise",
       "End-to-end Solution",

@@ -27,7 +27,7 @@ const Cta = () => {
                         Take Care of
                         Your <br /> Technology</h2>
                   </div>
-                  <Link href="/contact" className="btn-one wow fadeInUp" data-wow-delay="200ms"
+                  <Link href="/contact-us" className="btn-one wow fadeInUp" data-wow-delay="200ms"
                      data-wow-duration="1500ms">get A
                      Quote <i className="fa-regular fa-arrow-right-long"></i></Link>
                </div>

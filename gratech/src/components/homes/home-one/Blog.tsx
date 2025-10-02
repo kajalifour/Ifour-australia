@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { useState, useEffect } from "react"
 import Image from "next/image"
@@ -80,11 +81,11 @@ const Blog = () => {
 
   if (loading) {
    return (
-      <section id="blog-section" className="blog-two-area pb-120" style={{ background: '#ffffff' }}>
+      <section id="blog-section" className="blog-two-area pb-120">
          <div className="container">
             <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
                <div className="section-header">
-                  <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#000000' }}>
+                  <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                 <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.75" y="0.748047" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95" strokeWidth="1.5" />
                         <mask id="path-2-inside-1_1120_300" fill="white">
@@ -93,7 +94,7 @@ const Blog = () => {
                      </svg>
                   Blog & news
                </h5>
-              <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#000000', marginTop: '20px' }}>
+              <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                 Explore Blogs and News
               </h2>
             </div>
@@ -109,11 +110,11 @@ const Blog = () => {
     );
   }
   return (
-    <section id="blog-section" className="blog-two-area pb-120" style={{ background: '#ffffff' }}>
+    <section id="blog-section" className="blog-two-area pt-110 pb-120">
       <div className="container">
         <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between mb-60">
           <div className="section-header">
-            <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms" style={{ color: '#000000' }}>
+            <h5 className="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
               <svg className="me-1" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.75" y="0.748047" width="18.5" height="10.5" rx="5.25" stroke="#0f7a95" strokeWidth="1.5" />
                 <mask id="path-2-inside-1_1120_300" fill="white">
@@ -122,7 +123,7 @@ const Blog = () => {
               </svg>
               Blog & news
             </h5>
-            <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ color: '#000000', marginTop: '20px' }}>
+            <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
               Explore Blogs and News
             </h2>
           </div>
@@ -224,7 +225,7 @@ const Blog = () => {
                </div>
 
                <div className="col-lg-6">
-              {blogs.slice(1, 3).map((item, index) => (
+              {blogs.slice(1, 3).map((item) => (
                 <div key={item.id} className="blog-two__list-item mb-30 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                   <Link href={`/blog/${item.slug}`} className="blog__image d-block image">
                     {(() => {

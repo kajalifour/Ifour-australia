@@ -107,7 +107,7 @@ const Banner = () => {
                         <p data-animation="fadeInUp" data-delay=".7s" className="mt-20">
                            {item.desc}
                         </p>
-                        <Link data-animation="fadeInUp" data-delay="1s" href="/about"
+                        <Link data-animation="fadeInUp" data-delay="1s" href="/about-us"
                            className="btn-one mt-50">Explore
                            More <i className="fa-regular fa-arrow-right-long"></i></Link>
                      </div>

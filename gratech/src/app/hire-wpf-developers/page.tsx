@@ -47,10 +47,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Hire WPF developers with iFour to build your next desktop App.",
     ctaButtonText: "Let’s Discuss Your Project",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Ready to Build Your Next Desktop App? Hire WPF Developers Today.",
     ctaTwoButtonText: "Let’s Connect",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Vetted WPF Experts",
       "Qualitative Solution",

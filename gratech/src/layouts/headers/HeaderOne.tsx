@@ -31,7 +31,7 @@ const HeaderOne = () => {
                      </nav>
                   </div>
                   <div className="d-none d-lg-inline-block">
-                     <Link href="/contact" className="btn-one">Contact Us <i
+                     <Link href="/contact-us" className="btn-one">Contact Us <i
                         className="fa-regular fa-arrow-right-long"></i></Link>
                   </div>
                   <div className="bars d-block d-lg-none" onClick={() => setOffCanvas(true)}>

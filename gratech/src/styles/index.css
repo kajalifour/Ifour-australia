@@ -181,7 +181,6 @@ a:visited {
 
 /* Remove overlay/background color changes on hover */
 .service__item:hover,
-.service-two__item:hover,
 .service-three__item:hover {
   background-color: inherit !important;
 }
@@ -306,7 +305,7 @@ a:visited {
 }
 
 /* Banner color consistency overrides */
-.banner__shape-left1,
+/* .banner__shape-left1,
 .banner__shape-right1 {
   filter: none !important;
 }
@@ -314,7 +313,7 @@ a:visited {
 .banner__shape-left1 img,
 .banner__shape-right1 img {
   filter: brightness(0) invert(1) !important;
-}
+} */
 
 /* Banner title color is controlled per-page; no global override */
 
@@ -2741,13 +2740,13 @@ a.btn.btn-primary.service-details-cta-button,
 }
 
 /* Force CTA button styling - highest priority */
-a[href="/contact"].btn.btn-primary.service-details-cta-button {
+a[href="/contact-us"].btn.btn-primary.service-details-cta-button {
     color: #000000 !important;
     text-decoration: underline !important;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%) !important;
 }
 
-a[href="/contact"].btn.btn-primary.service-details-cta-button:hover {
+a[href="/contact-us"].btn.btn-primary.service-details-cta-button:hover {
     color: #ffffff !important;
     text-decoration: underline !important;
     background: linear-gradient(135deg, #0f7a95 0%, #0d6b7f 50%, #0a5a6a 100%) !important;

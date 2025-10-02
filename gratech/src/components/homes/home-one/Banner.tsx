@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import Image from "next/image"
 import { JSX } from "react"
-import styles from "./Banner.module.css"
 
 import line from "@/assets/images/banner/banner-line.png"
 import shape_1 from "@/assets/images/banner/banner-regular-left-shape.png"
@@ -30,21 +29,21 @@ const banner_data: DataType[] = [
       bg_img: "/assets/images/banner/banner-image.jpg",
       sub_title: "Pioneer Software Development Company",
       title: "Shaping Success through Innovation & Technology Since 2013",
-      desc: (<>Leverage our tech prowess to build the best-in-class software solutions and spur business growth and prosperity.</>)
+      desc: (<>Leverage our tech prowess to build the best-in-class software <br /> solutions and spur business growth and prosperity.</>)
    },
    {
       id: 2,
       bg_img: "/assets/images/banner/banner-image2.jpg",
       sub_title: "Pioneer Software Development Company",
       title: "Shaping Success through Innovation & Technology Since 2013",
-      desc: (<>Leverage our tech prowess to build the best-in-class software solutions and spur business growth and prosperity.</>)
+      desc: (<>Leverage our tech prowess to build the best-in-class software <br /> solutions and spur business growth and prosperity.</>)
    },
    {
       id: 3,
       bg_img: "/assets/images/banner/banner-image3.jpg",
       sub_title: "Pioneer Software Development Company",
       title: "Shaping Success through Innovation & Technology Since 2013",
-      desc: (<>Leverage our tech prowess to build the best-in-class software solutions and spur business growth and prosperity.</>)
+      desc: (<>Leverage our tech prowess to build the best-in-class software <br /> solutions and spur business growth and prosperity.</>)
    },
 ];
 
@@ -74,14 +73,14 @@ const Banner = () => {
             {banner_data.map((item) => (
                <SwiperSlide key={item.id} className="swiper-slide">
                   <div data-animation="slideInLeft" data-duration="2s" data-delay=".3s"
-                     className="banner__shape-left2 d-none d-md-block">
+                     className="banner__shape-left2">
                      <Image src={shape_1} alt="shape" />
                   </div>
                   <div data-animation="slideInLeft" data-duration="2s" data-delay=".9s"
-                     className="banner__shape-left1 d-none d-md-block">
-                     <Image src={shape_2} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />
+                     className="banner__shape-left1">
+                     <Image src={shape_2} alt="shape" />
                   </div>
-                  <div className="banner__shape-left3 wow slideInLeft d-none d-md-block">
+                  <div className="banner__shape-left3 wow slideInLeft">
                      <Image className="sway__animation" src={shape_3} alt="shape" />
                   </div>
                   <div className="banner__shape-right2" data-animation="slideInRight" data-duration="3s"
@@ -90,7 +89,7 @@ const Banner = () => {
                   </div>
                   <div className="banner__shape-right1" data-animation="slideInRight" data-duration="2s"
                      data-delay=".3s">
-                     <Image src={shape_5} alt="shape" style={{ filter: 'brightness(0) invert(1)' }} />
+                     <Image src={shape_5} alt="shape" />
                   </div>
                   <div className="banner__right-line1" data-animation="slideInRight" data-duration="2s"
                      data-delay=".9s">
@@ -112,7 +111,7 @@ const Banner = () => {
                   <div className="container">
                      <div className="banner__content">
                         <h4 data-animation="slideInRight" data-duration="2s" data-delay=".3s"
-                           className="mb-20" style={{ color: '#ffffff' }}>
+                           className="text-white mb-20">
                            <svg className="me-1" width="40" height="16" viewBox="0 0 40 16" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
                               <rect x="0.5" y="0.500183" width="25.6667" height="15" rx="7.5"
@@ -123,14 +122,13 @@ const Banner = () => {
                            {item.sub_title}
                         </h4>
                         <h1 data-animation="slideInRight" data-duration="2s" data-delay=".5s" className="text-white">
-                           <span style={{ color: '#0f7a95 !important', fontWeight: '600' }}>Shaping Success through Innovation & Technology</span>
-                           <span style={{ color: '#0f7a95 !important', fontWeight: '600' }}> Since 2013</span>
+                           Shaping Success through Innovation & Technology <br /> Since 2013
                         </h1>
-                        <p data-animation="slideInRight" data-duration="2s" data-delay=".7s" className="mt-20" style={{ color: '#ffffff' }}>
+                        <p data-animation="slideInRight" data-duration="2s" data-delay=".7s" className="mt-15">
                            {item.desc}
                         </p>
-                        <a data-animation="slideInRight" data-duration="2s" data-delay=".9s" href="/contact"
-                           className="btn-one mt-60">Let's head to Business <i className="fa-regular fa-arrow-right-long"></i></a>
+                        <a data-animation="slideInRight" data-duration="2s" data-delay=".9s" href="/contact-us"
+                           className="btn-one mt-30">Let&#39;s head to Business <i className="fa-regular fa-arrow-right-long"></i></a>
                      </div>
                   </div>
                </SwiperSlide>

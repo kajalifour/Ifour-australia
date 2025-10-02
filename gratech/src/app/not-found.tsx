@@ -38,7 +38,7 @@ const NotFoundPage = () => {
                          <i className="fa-solid fa-home me-2"></i>
                          Back to Home
                        </Link>
-                      <Link href="/contact" className="btn btn-primary nf-btn-primary" aria-label="Contact iFour Technolabs support">
+                      <Link href="/contact-us" className="btn btn-primary nf-btn-primary" aria-label="Contact iFour Technolabs support">
                          <i className="fa-solid fa-envelope me-2"></i>
                          Contact Us
                        </Link>

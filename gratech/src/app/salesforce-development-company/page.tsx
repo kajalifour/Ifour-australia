@@ -47,10 +47,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Enhance your Salesforce platform",
     ctaButtonText: "GET STARTED TODAY",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Ready to Elevate Your Business? Experience Salesforce with iFour!",
     ctaTwoButtonText: "Get started now",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Custom Solutions",
       "Agile Methodology",

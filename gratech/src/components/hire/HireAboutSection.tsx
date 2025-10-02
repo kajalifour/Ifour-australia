@@ -79,7 +79,7 @@ const HireAboutSection: React.FC<HireAboutSectionProps> = ({
                                 {/* CTA Button - Positioned above the CTA section */}
                                 <div className="cta-button-section" style={{ marginTop: '40px' }}>
                                     <a 
-                                        href="/contact" 
+                                        href="/contact-us" 
                                         className="btn-one"
                                         style={{
                                             display: 'inline-block',

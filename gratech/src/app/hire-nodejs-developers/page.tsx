@@ -51,10 +51,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Overcome Scalability Issues with Our Node.js Solutions",
     ctaButtonText: "Let’s Discuss Your Project",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Outsource Dedicated Node.js Developers from iFour Technolab",
     ctaTwoButtonText: "Let’s Connect",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Extensive Expertise",
       "Custom Solutions",

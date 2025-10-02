@@ -49,10 +49,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Hire C#Developers for Optimized Solutions and Assured Business Growth",
     ctaButtonText: "Talk to Our Experts",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Get Instant Access to C# Experts with iFour",
     ctaTwoButtonText: "Let’s Work Together",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Talented Team",
       "Quick Hiring",

@@ -1355,7 +1355,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
             <HireCTA 
                 title={data.ctaTitle || "Looking for reliable bespoke software development solutions?"}
                 buttonText={data.ctaButtonText || "GET STARTED NOW"}
-                buttonLink={data.ctaButtonLink || "/contact"}
+                buttonLink={data.ctaButtonLink || "/contact-us"}
             />
             
             {/* Technologies Section - Show after CTA for technology pages */}
@@ -1402,7 +1402,7 @@ const ServiceDetailsArea = ({ data, BenefitsSection, CTASection, isTechnologyPag
              <HireCTATwo 
                  title={data.ctaTwoTitle || "Ready to Start Your Project?"}
                  buttonText={data.ctaTwoButtonText || "GET STARTED NOW"}
-                 buttonLink={data.ctaTwoButtonLink || "/contact"}
+                 buttonLink={data.ctaTwoButtonLink || "/contact-us"}
              />
              )}
             

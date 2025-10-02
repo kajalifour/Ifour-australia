@@ -44,7 +44,7 @@
 		transition: var(--transition);
 	}
 	&:hover {
-		color: var(--white);
+		color: var(--white) !important;
 		&::before {
 			height: 100%;
 		}

@@ -1,257 +1,169 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import { JOIN_NEWS_LETTER_API, JOIN_NEWS_LETTER_API_GetAll } from '@/utils/api';
+import React, { useEffect, useState } from "react";
+import { JOIN_NEWS_LETTER_API, JOIN_NEWS_LETTER_API_GetAll } from "@/utils/api";
 
 const NewsletterSection = () => {
-	const [email, setEmail] = useState('');
-	const [emailError, setEmailError] = useState<string>('');
-	const [submitted, setSubmitted] = useState<'idle' | 'success' | 'error'>('idle');
-	const [isMobile, setIsMobile] = useState(false);
-	const [isNewsLetter, setIsNewsLetter] = useState(false);
-	const [oldSubscriber, setOldSubscriber] = useState<any>(null);
-	const [alreadyJoined, setAlreadyJoined] = useState(false);
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [submitted, setSubmitted] = useState<"idle" | "success" | "error">("idle");
+  const [isMobile, setIsMobile] = useState(false);
+  const [isNewsLetter, setIsNewsLetter] = useState(false);
+  const [oldSubscriber, setOldSubscriber] = useState<any>(null);
+  const [alreadyJoined, setAlreadyJoined] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-        if (!emailRegex.test(email.trim())) {
-            setEmailError('Please enter a valid email address.');
-            return;
-        }
-        try {
-            const submittedEmail = email.trim().toLowerCase();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!emailRegex.test(email.trim())) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    }
+    try {
+      const submittedEmail = email.trim().toLowerCase();
 
-            // Pre-check to see if this email already exists
-            const preLookup = await JOIN_NEWS_LETTER_API_GetAll(submittedEmail);
-            const preTotal = (preLookup?.data?.recordsTotal ?? (Array.isArray(preLookup?.data) ? preLookup.data.length : 0)) as number;
-            const preExists = (preTotal || 0) > 0;
-            if (preExists) {
-                setOldSubscriber(preLookup);
-                setAlreadyJoined(true);
-                setIsNewsLetter(true);
-                setSubmitted('success');
-                return;
-            }
+      // Pre-check to see if this email already exists
+      const preLookup = await JOIN_NEWS_LETTER_API_GetAll(submittedEmail);
+      const preTotal = (preLookup?.data?.recordsTotal ??
+        (Array.isArray(preLookup?.data) ? preLookup.data.length : 0)) as number;
+      const preExists = (preTotal || 0) > 0;
+      if (preExists) {
+        setOldSubscriber(preLookup);
+        setAlreadyJoined(true);
+        setIsNewsLetter(true);
+        setSubmitted("success");
+        return;
+      }
 
-            // Not existing → create
-            await JOIN_NEWS_LETTER_API(submittedEmail);
+      // Not existing → create
+      await JOIN_NEWS_LETTER_API(submittedEmail);
 
-            // Fetch the created record to get ID
-            const postLookup = await JOIN_NEWS_LETTER_API_GetAll(submittedEmail);
-            setOldSubscriber(postLookup);
-            setAlreadyJoined(false);
-            setIsNewsLetter(true);
+      // Fetch the created record to get ID
+      const postLookup = await JOIN_NEWS_LETTER_API_GetAll(submittedEmail);
+      setOldSubscriber(postLookup);
+      setAlreadyJoined(false);
+      setIsNewsLetter(true);
 
-            setEmail('');
-            setEmailError('');
-            setSubmitted('success');
-        } catch {
-            setSubmitted('error');
-        }
+      setEmail("");
+      setEmailError("");
+      setSubmitted("success");
+    } catch {
+      setSubmitted("error");
+    }
+  };
+
+  useEffect(() => {
+    if (submitted !== "idle") {
+      const timer = setTimeout(() => setSubmitted("idle"), 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitted]);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
 
-	useEffect(() => {
-		if (submitted !== 'idle') {
-			const timer = setTimeout(() => setSubmitted('idle'), 4000);
-			return () => clearTimeout(timer);
-		}
-	}, [submitted]);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
 
-	// Detect mobile screen size
-	useEffect(() => {
-		const checkMobile = () => {
-			setIsMobile(window.innerWidth <= 768);
-		};
-		
-		checkMobile();
-		window.addEventListener('resize', checkMobile);
-		
-		return () => window.removeEventListener('resize', checkMobile);
-	}, []);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
-	const ACCENT = '#0f7a95';
-	const INPUT_HEIGHT = 54; // keep input/button heights in sync
-	const RADIUS = 28;
+  return (
+    <section className="newsletter-section pt-80 pb-80">
+      {/* dotted background */}
+      <div className="newsletter-bg-overlay" />
 
-	return (
-		<section className="newsletter-section pt-80 pb-80" style={{
-			backgroundImage: 'linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 50%, #f0f8ff 100%)',
-			position: 'relative',
-			overflow: 'hidden'
-		}}>
-			{/* dotted background */}
-			<div style={{
-				position: 'absolute', inset: 0,
-				backgroundImage: 'radial-gradient(circle, #0f7a95 1px, transparent 1px)',
-				backgroundSize: '20px 20px', 
-				opacity: 0.08, 
-				pointerEvents: 'none'
-			}} />
-
-			<div className="container">
-				<div className="row align-items-center justify-content-between" style={{ rowGap: 24 }}>
-					<div className="col-lg-6">
-						<h3 style={{
-							color: ACCENT, fontSize: '2.2rem', fontWeight: 700, lineHeight: 1.2, marginBottom: 12
-						}}>
-							Subscribe to our{' '}
-							<span style={{ color: '#000' }}>Newsletter</span>
-						</h3>
-					</div>
-					<div className="col-lg-6">
-						{/* right aligned form with max width or confirmation box */}
-						<div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-							{submitted === 'success' && isNewsLetter ? (
-								<div className="tfSubscribeMsg" style={{
-									width: '100%',
-									maxWidth: 560,
-									background: '#0f7a95',
-									borderRadius: 8,
-									padding: '14px 18px',
-									minHeight: INPUT_HEIGHT,
-									display: 'flex',
-									alignItems: 'center',
-									justifyContent: 'center',
-									color: '#fff'
-								}}>
-									{alreadyJoined ? (
-										<p style={{ margin: 0, paddingTop: '4px' }}>You have already joined</p>
+      <div className="container">
+        <div className="row align-items-center justify-content-between newsletter-row">
+          <div className="col-lg-6">
+            <h3 className="newsletter-heading">
+              Subscribe to our <span className="black-color">Newsletter</span>
+            </h3>
+          </div>
+          <div className="col-lg-6">
+            {/* right aligned form with max width or confirmation box */}
+            <div className="newsletter-form-wrapper">
+              {submitted === "success" && isNewsLetter ? (
+                <div className="newsletter-success">
+                  {alreadyJoined ? (
+										<p className="m-0">You have already joined</p>
 									) : (
-										<p style={{ margin: 0, textAlign: 'center' }}>
+										<p className="m-0 text-center">
 											Congratulations. You have subscribed to our newsletter successfully.
 										</p>
 									)}
 									{(() => {
 										const createdId = oldSubscriber?.data?.[0]?.id;
 										return createdId ? (
-											<span style={{ marginLeft: 12, fontWeight: 600 }}>(ID: {createdId})</span>
+											<span className="ml-10 font-weight-bold">(ID: {createdId})</span>
 										) : null;
 									})()}
-								</div>
-							) : (
-								<form onSubmit={handleSubmit} style={{ width: '100%', maxWidth: 560 }} noValidate>
-									{isMobile ? (
-										/* Mobile layout - stacked */
-										<div style={{ 
-											display: 'flex', 
-											flexDirection: 'column', 
-											gap: '12px',
-											width: '100%'
-										}}>
-											<input
-												type="email"
-												value={email}
-												onChange={(e) => { setEmail(e.target.value); if (emailError) setEmailError(''); }}
-												placeholder="Enter your email here"
-												required
-												style={{
-													height: INPUT_HEIGHT,
-													width: '100%',
-													padding: '0 18px',
-													borderTop: `2px solid ${emailError ? '#b00020' : ACCENT}`,
-													borderRight: `2px solid ${emailError ? '#b00020' : ACCENT}`,
-													borderBottom: `2px solid ${emailError ? '#b00020' : ACCENT}`,
-													borderLeft: `2px solid ${emailError ? '#b00020' : ACCENT}`,
-													borderRadius: RADIUS,
-													outline: 'none',
-													backgroundColor: '#fff',
-													color: '#333',
-													boxShadow: '0 6px 18px rgba(15, 122, 149, 0.12)'
-												}}
-											/>
-											<button
-												type="submit"
-												style={{
-													height: INPUT_HEIGHT,
-													width: '100%',
-													backgroundColor: ACCENT,
-													color: '#fff',
-													borderTop: `2px solid ${ACCENT}`,
-													borderRight: `2px solid ${ACCENT}`,
-													borderBottom: `2px solid ${ACCENT}`,
-													borderLeft: `2px solid ${ACCENT}`,
-													borderRadius: RADIUS,
-													fontSize: '1rem',
-													fontWeight: 700,
-													cursor: 'pointer',
-													boxShadow: '0 6px 18px rgba(15, 122, 149, 0.18)'
-												}}
-												onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0a5a6a')}
-												onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = ACCENT)}
-											>
-												Send now
-											</button>
-										</div>
-									) : (
-										/* Desktop layout - side by side */
-										<div style={{ display: 'flex', alignItems: 'center' }}>
-											<input
-												type="email"
-												value={email}
-												onChange={(e) => { setEmail(e.target.value); if (emailError) setEmailError(''); }}
-												placeholder="Enter your email here"
-												required
-												style={{
-													height: INPUT_HEIGHT,
-													flex: 1,
-													padding: '0 18px',
-													borderTop: `2px solid ${emailError ? '#b00020' : ACCENT}`,
-													borderRight: 'none',
-													borderBottom: `2px solid ${emailError ? '#b00020' : ACCENT}`,
-													borderLeft: `2px solid ${emailError ? '#b00020' : ACCENT}`,
-													borderTopLeftRadius: RADIUS,
-													borderBottomLeftRadius: RADIUS,
-													borderTopRightRadius: 0,
-													borderBottomRightRadius: 0,
-													outline: 'none',
-													backgroundColor: '#fff',
-													color: '#333',
-													boxShadow: '0 6px 18px rgba(15, 122, 149, 0.12)'
-												}}
-											/>
-											<button
-												type="submit"
-												style={{
-													height: INPUT_HEIGHT,
-													padding: '0 28px',
-													backgroundColor: ACCENT,
-													color: '#fff',
-													borderTop: `2px solid ${ACCENT}`,
-													borderRight: `2px solid ${ACCENT}`,
-													borderBottom: `2px solid ${ACCENT}`,
-													borderLeft: 'none',
-													borderTopRightRadius: RADIUS,
-													borderBottomRightRadius: RADIUS,
-													borderTopLeftRadius: 0,
-													borderBottomLeftRadius: 0,
-													fontSize: '1rem',
-													fontWeight: 700,
-													whiteSpace: 'nowrap',
-													cursor: 'pointer',
-													boxShadow: '0 6px 18px rgba(15, 122, 149, 0.18)'
-												}}
-												onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0a5a6a')}
-												onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = ACCENT)}
-											>
-												Send now
-											</button>
-										</div>
-									)}
-									
-									{emailError && (
-										<div aria-live="polite" style={{ marginTop: 10, color: '#b00020', fontSize: '.92rem', fontWeight: 600, textAlign: 'right' }}>
-											{emailError}
-										</div>
-									)}
-								</form>
-							)}
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	);
+                </div>
+              ) : (
+                <form
+                  onSubmit={handleSubmit}
+                  className="newsletter-form"
+                  noValidate
+                >
+                  {isMobile ? (
+                    /* Mobile layout - stacked */
+                    <div className="newsletter-form-mobile">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                          if (emailError) setEmailError("");
+                        }}
+                        placeholder="Enter your email here"
+                        required
+                        className={`newsletter-input ${
+                          emailError ? "error" : ""
+                        }`}
+                      />
+                      <button type="submit" className="newsletter-btn">
+                        Send now
+                      </button>
+                    </div>
+                  ) : (
+                    /* Desktop layout - side by side */
+                    <div className="newsletter-form-desktop">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                          if (emailError) setEmailError("");
+                        }}
+                        placeholder="Enter your email here"
+                        required
+                        className={`newsletter-input ${
+                          emailError ? "error" : ""
+                        }`}
+                      />
+                      <button type="submit" className="newsletter-btn">
+                        Send now
+                      </button>
+                    </div>
+                  )}
+
+                  {emailError && (
+                    <div aria-live="polite" className="newsletter-error">
+                      {emailError}
+                    </div>
+                  )}
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default NewsletterSection;

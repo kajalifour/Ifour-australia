@@ -71,7 +71,10 @@ p {
 	margin: 0;
 	padding: 0;
 	line-height: 28px;
-	font-size: 16px;
+	font-size: 18px;
+	@include breakpoint(max-xl) {
+		font-size: 16px;
+	}
 }
 
 span {
@@ -124,7 +127,7 @@ br {
 // Margin Top ***
 @for $i from 1 through 40 {
 	.mt-#{5 * $i} {
-		margin-top: 5px * $i;
+		margin-top: 5px * $i !important;
 	}
 }
 /*-- Margin Bottom --*/
@@ -281,6 +284,10 @@ img {
 	background-color: var(--sub-bg);
 }
 
+.dark-bg {
+	background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+}
+
 .sm-font {
 	font-size: 14px !important;
 }
@@ -292,6 +299,26 @@ img {
 }
 .transition {
 	transition: var(--transition);
+}
+
+.filter-brightness {
+  filter: brightness(10) invert(1) !important;
+}
+
+.filter-brightness-white {
+  filter: brightness(10) !important;
+}
+
+.we_serve {
+	cursor: default !important;
+}
+
+.we_serve_link {
+	cursor: pointer !important;
+}
+
+.we_serve_link .header-text:hover {
+	color: var(--primary-color) !important;
 }
 
 .fw-600 {

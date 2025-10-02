@@ -5,6 +5,7 @@ import Service from "./Service"
 import About from "./About"
 import Counter from "./Counter"
 import Case from "./Case"
+import WhyChoose from "./WhyChoose"
 import Offer from "./Offer"
 import Brand from "./Brand"
 import Technologies from "./Technologies"
@@ -27,6 +28,7 @@ const HomeOne = () => {
         <Service />
         <Brand />
         <Case />
+        <WhyChoose />
         <Offer />
         <Technologies />
         <TechnologyPartners />
@@ -39,7 +41,7 @@ const HomeOne = () => {
       </main>
       <FooterOne />
     </>
-  )
-}
+  );
+};
 
-export default HomeOne
+export default HomeOne;

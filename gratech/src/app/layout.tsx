@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={isDev}>
       <head>
-        <meta name="keywords" content="Gratech - IT Service React Next js Template" />
-        <meta name="description" content="envisioning a technology business and considering a sleek online presence, Gratech is the ideal choice" />
+        <meta name="title" content="Software Development Company Australia | iFour Technolab" />
+        <meta name="description" content="iFour Technolab is a trusted Microsoft Solutions Partner and Custom Software Development Company in Australia. We offer innovative software solutions to global clients." />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <link rel="icon" href="/favicon.png" sizes="any" />

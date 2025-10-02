@@ -23,7 +23,7 @@ const safeJsonParse = async (response) => {
     
     const text = await response.text();
     return JSON.parse(text);
-  } catch (error) {
+  } catch {
     return null;
   }
 };
@@ -67,7 +67,7 @@ const safeFetch = async (url, options = {}, retries = 1) => {
       }
       
       return response;
-    } catch (error) {
+    } catch {
       if (timeoutId) {
         clearTimeout(timeoutId);
       }
@@ -98,7 +98,7 @@ export const getAllBlog = async (catSlug,pageNum) => {
     
     const data = await safeJsonParse(response);
     return data || { data: { blogList: { resultSet: [], pageCount: 0 } } };
-  } catch (error) {
+  } catch {
     return { data: { blogList: { resultSet: [], pageCount: 0 } } };
   }
 };
@@ -133,7 +133,7 @@ export const getBlogCategoriesAlternative = async () => {
     
     const data = await safeJsonParse(response);
     return data;
-  } catch (error) {
+  } catch {
     return null;
   }
 };
@@ -152,7 +152,7 @@ export const getRecentBlogPosts = async () => {
     
     const data = await safeJsonParse(response);
     return data || { data: [] };
-  } catch (error) {
+  } catch {
     return { data: [] };
   }
 };
@@ -171,7 +171,7 @@ export const getRecentInterviewsPosts = async () => {
     
     const data = await safeJsonParse(response);
     return data || { data: [] };
-  } catch (error) {
+  } catch {
     return { data: [] };
   }
 };
@@ -235,7 +235,7 @@ export const getBlogDetails = async (slug) => {
     
     const blogDetails = await safeJsonParse(response);
     return blogDetails || { notFound: true };
-  } catch (error) {
+  } catch {
     return { notFound: true };
   }
 };

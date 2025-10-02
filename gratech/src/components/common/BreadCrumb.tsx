@@ -1,324 +1,272 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
-import shape_1 from "@/assets/images/banner/inner-banner-shape2.png"
-import shape_2 from "@/assets/images/banner/inner-banner-shape1.png"
-import shape_3 from "@/assets/images/banner/inner-banner-shape3.png"
+import shape_1 from "@/assets/images/banner/inner-banner-shape2.png";
+import shape_2 from "@/assets/images/banner/inner-banner-shape1.png";
+import shape_3 from "@/assets/images/banner/inner-banner-shape3.png";
 
 interface DataType {
-   sub_title: string;
-   title: string;
+  sub_title: string;
+  title: string;
 }
 const BreadCrumb = ({ sub_title, title }: DataType) => {
-   // Function to get service-specific content
-   const getServiceContent = (serviceTitle: string) => {
-      switch (serviceTitle) {
-         case "Custom Software Development Company":
-            return {
-               description: "Discover the top 1% of talent in Australia to build your next dream project. iFour specializes in custom software development services to help you get scalable solutions that improve your current workflow, eliminate manual processes, and mitigate data handling errors. Get affordable and tailored software solutions with us and say no to hefty investment.",
-               buttonText: "Get In Touch Now"
-            };
-         // Technologies pages
-         case "Angular Development Company":
-            return {
-               description: "Boost your brand’s digital footprint to the next level by enlisting our exemplary Angular development services. Build interactive, secure, and highly extensible software solutions by leveraging our technical acumen and knowledge as a leading Angular development company.",
-               buttonText: "Get In Touch Now"
-            };
-         case ".NET Development Company":
-            return {
-               description: "Drive business growth with potent, feature-packed, and cutting-edge .NET-powered software solutions. As a well-experienced .NET development company, we implement software solutions with unrivaled features and functionality while delivering top-notch .NET development services.",
-               buttonText: "Get In Touch Now"
-            };
-         case "C# Development Company":
-            return {
-               description: "Take your business to new heights with our top-notch C# development services. Leverage our expertise to create reliable, high-performance software solutions tailored to your unique needs. As a trusted C# development company, we're dedicated to delivering excellence and driving your business success.",
-               buttonText: "Get In Touch Now"
-            };
-         case "Java Development Company":
-            return {
-               description: "Modernize your company projects with our exceptional Java development services. Harness the power of Java to build scalable, flexible, and robust apps that meet the demands of today's market. Partner with us, a leading Java development company, to realize your business potential.",
-               buttonText: "Get In Touch Now"
-            };
-         case "Salesforce Development Company":
-            return {
-               description: "Transform your business processes with our specialized Salesforce development services. From CRM customization to app development, our seasoned team of Salesforce experts delivers innovative solutions as per your requirements. Choose us as your Salesforce development company now.",
-               buttonText: "Get In Touch Now"
-            };
-         case "WPF Application Development Company":
-            return {
-               description: "Take your desktop applications to the next level with our expert WPF development services. Craft visually stunning, feature-rich software solutions using the latest technologies and best practices. As a trusted WPF development company, we're committed to delivering excellence for your business",
-               buttonText: "Get In Touch Now"
-            };
-         case "React.js Development Company":
-            return {
-               description: "Create highly engaging user interfaces, feature-rich web solutions, and plugins with our React.js development services.",
-               buttonText: "Get In Touch Now"
-            };
-         case "Node.js Development Company":
-            return {
-               description: "Elevate your digital presence with our premier Node.js development services. Build potent, scalable, and efficient web-based solutions by channelling our proficiency as a top Node.js development company. Trust in our technical prowess to bring your innovative ideas to life.",
-               buttonText: "Get In Touch Now"
-            };
-             case "Desktop Application Development Company":
-            return {
-               description: "At iFour, we specialize in crafting innovative desktop app that drive productivity, simplify business workflows, and enhance user experience. With a team of highly experienced and vetted developers we help you transform your ideas into reality with a secure and robust solutions.",
-               buttonText: "Get In Touch"
-            };
-            case "Ecommerce Website Development Company":
-            return {
-               description: "need to add",
-               buttonText: "Get In Touch"
-            };
-            case "Microsoft 365 Development Company":
-            return {
-               description: "Get a comprehensive suite of tools and resources to create solutions that enhance productivity, collaboration, and data management within the Microsoft 365 ecosystem. Our team works closely with clients to understand their unique requirements and provides dynamic Microsoft Office 365 solutions that enhance collaboration, productivity, and work efficiency across your business environment.",
-              buttonText: "Get In Touch"
-            };
-         case "Microsoft Azure Cloud Services Company":
-            return {
-               description: "need to add this.",
-               buttonText: "Get In Touch"
-            };
-            case "Blockchain Development Company":
-            return {
-               description: "need to add this.",
-               buttonText: "Get In Touch"
-            };
-            case "Mobile App Development Company":
-            return {
-               description: "iFour Technolab, your reliable Mobile app development company in Australia helps you improve your digital presence with top-notch mobile app solutions. With industry experience and strong command over the latest tech stack, our team brings solutions that bring success. Whether it's about mobile apps, web solutions, or custom software, our programmers design innovative solutions for all your needs.",
-               buttonText: "Get In Touch"
-            };
-           case "IoT Software Development Company":
-            return {
-               description: "iFour Technolab, your trusted IoT software development company in Australia, specializes in creating innovative IoT solutions that connect devices, collect data, and drive intelligent business decisions. Our expert team delivers cutting-edge IoT applications that transform your business operations and enhance user experiences.",
-               buttonText: "Get In Touch"
-            };
-         default:
-            return {
-               description: "Discover top-tier talent in Australia for custom software development. iFour specializes in crafting innovative, scalable, and affordable solutions tailored to your business needs.",
-               buttonText: "Get In Touch"
-            };
-      }
-   };
+  // Function to get service-specific content
+  const getServiceContent = (serviceTitle: string) => {
+    switch (serviceTitle) {
+      case "Custom Software Development Company":
+        return {
+          description:
+            "Discover the top 1% of talent in Australia to build your next dream project. iFour specializes in custom software development services to help you get scalable solutions that improve your current workflow, eliminate manual processes, and mitigate data handling errors. Get affordable and tailored software solutions with us and say no to hefty investment.",
+          buttonText: "Get In Touch Now",
+        };
+      // Technologies pages
+      case "Angular Development Company":
+        return {
+          description:
+            "Boost your brand’s digital footprint to the next level by enlisting our exemplary Angular development services. Build interactive, secure, and highly extensible software solutions by leveraging our technical acumen and knowledge as a leading Angular development company.",
+          buttonText: "Get In Touch Now",
+        };
+      case ".NET Development Company":
+        return {
+          description:
+            "Drive business growth with potent, feature-packed, and cutting-edge .NET-powered software solutions. As a well-experienced .NET development company, we implement software solutions with unrivaled features and functionality while delivering top-notch .NET development services.",
+          buttonText: "Get In Touch Now",
+        };
+      case "C# Development Company":
+        return {
+          description:
+            "Take your business to new heights with our top-notch C# development services. Leverage our expertise to create reliable, high-performance software solutions tailored to your unique needs. As a trusted C# development company, we're dedicated to delivering excellence and driving your business success.",
+          buttonText: "Get In Touch Now",
+        };
+      case "Java Development Company":
+        return {
+          description:
+            "Modernize your company projects with our exceptional Java development services. Harness the power of Java to build scalable, flexible, and robust apps that meet the demands of today's market. Partner with us, a leading Java development company, to realize your business potential.",
+          buttonText: "Get In Touch Now",
+        };
+      case "Salesforce Development Company":
+        return {
+          description:
+            "Transform your business processes with our specialized Salesforce development services. From CRM customization to app development, our seasoned team of Salesforce experts delivers innovative solutions as per your requirements. Choose us as your Salesforce development company now.",
+          buttonText: "Get In Touch Now",
+        };
+      case "WPF Application Development Company":
+        return {
+          description:
+            "Take your desktop applications to the next level with our expert WPF development services. Craft visually stunning, feature-rich software solutions using the latest technologies and best practices. As a trusted WPF development company, we're committed to delivering excellence for your business",
+          buttonText: "Get In Touch Now",
+        };
+      case "React.js Development Company":
+        return {
+          description:
+            "Create highly engaging user interfaces, feature-rich web solutions, and plugins with our React.js development services.",
+          buttonText: "Get In Touch Now",
+        };
+      case "Node.js Development Company":
+        return {
+          description:
+            "Elevate your digital presence with our premier Node.js development services. Build potent, scalable, and efficient web-based solutions by channelling our proficiency as a top Node.js development company. Trust in our technical prowess to bring your innovative ideas to life.",
+          buttonText: "Get In Touch Now",
+        };
+      case "Desktop Application Development Company":
+        return {
+          description:
+            "At iFour, we specialize in crafting innovative desktop app that drive productivity, simplify business workflows, and enhance user experience. With a team of highly experienced and vetted developers we help you transform your ideas into reality with a secure and robust solutions.",
+          buttonText: "Get In Touch",
+        };
+      case "Ecommerce Website Development Company":
+        return {
+          description: "need to add",
+          buttonText: "Get In Touch",
+        };
+      case "Microsoft 365 Development Company":
+        return {
+          description:
+            "Get a comprehensive suite of tools and resources to create solutions that enhance productivity, collaboration, and data management within the Microsoft 365 ecosystem. Our team works closely with clients to understand their unique requirements and provides dynamic Microsoft Office 365 solutions that enhance collaboration, productivity, and work efficiency across your business environment.",
+          buttonText: "Get In Touch",
+        };
+      case "Microsoft Azure Cloud Services Company":
+        return {
+          description: "need to add this.",
+          buttonText: "Get In Touch",
+        };
+      case "Blockchain Development Company":
+        return {
+          description: "need to add this.",
+          buttonText: "Get In Touch",
+        };
+      case "Mobile App Development Company":
+        return {
+          description:
+            "iFour Technolab, your reliable Mobile app development company in Australia helps you improve your digital presence with top-notch mobile app solutions. With industry experience and strong command over the latest tech stack, our team brings solutions that bring success. Whether it's about mobile apps, web solutions, or custom software, our programmers design innovative solutions for all your needs.",
+          buttonText: "Get In Touch",
+        };
+      case "IoT Software Development Company":
+        return {
+          description:
+            "iFour Technolab, your trusted IoT software development company in Australia, specializes in creating innovative IoT solutions that connect devices, collect data, and drive intelligent business decisions. Our expert team delivers cutting-edge IoT applications that transform your business operations and enhance user experiences.",
+          buttonText: "Get In Touch",
+        };
+      default:
+        return {
+          description:
+            "Discover top-tier talent in Australia for custom software development. iFour specializes in crafting innovative, scalable, and affordable solutions tailored to your business needs.",
+          buttonText: "Get In Touch",
+        };
+    }
+  };
 
-   const serviceContent = getServiceContent(title);
+  const serviceContent = getServiceContent(title);
 
+  //for hire breadcrumb
+  const gethireContent = (serviceTitle: string) => {
+    switch (serviceTitle) {
+      case "Hire .NET Developers":
+        return {
+          description:
+            "iFour remains a reliable partner to hire .NET developers in Australia. We have a team of highly skilled .NET developers proficient in building outstanding web apps. From dynamic web-based software solutions to cross-platform mobile apps and feature-rich Windows apps, we offer a range of .NET development services. Tap into the world of web apps with our .NET experts and take your projects to the next level.",
+          buttonText: "Get In Touch Now",
+        };
+      case "Hire Angular Developers":
+        return {
+          description:
+            "Hire Angular developers to create dynamic and interactive web app solutions. iFour has a talent pool of vetted and certified resources proficient in building robust solutions tailored to your needs. Our programmers work to ensure time zone compatibility to help clients launch their Angular projects globally. Get in touch to hire the top talent for your Angular project.",
+          buttonText: "Let's Discuss Now",
+        };
+      case "Hire Node.js Developers":
+        return {
+          description:
+            "Looking to hire Node.js developers to build scalable and high-performing web apps? iFour is your one-stop place to hire dedicated node.js programmers. iFour brings best-in-class node js developers to hire who possess the latest tech skills and help you build feature rich solutions that align with your business goals. Connect with us today to get high-performing and scalable solutions for your needs.",
+          buttonText: "Request a Quote",
+        };
+      case "Hire Vue JS Developers":
+        return {
+          description:
+            "Hire Vue Js developers from iFour Technolab to build robust, scalable, and reliable web solutions. Whether you want to build interactive UIs, single-page web apps, or other front-end apps, our team holds enough expertise to help you get a reliable solution for all your needs. Get access to proven skills of vue.js programmers with iFour.",
+          buttonText: "Request a Quote",
+        };
+      case "Hire C# Developers":
+        return {
+          description:
+            "At iFour, we have a vetted and dedicated team of C# developers available for hire. Our team holds extensive expertise in the field to help you build custom C# solution that works on multiple platforms   including mobile, web, and desktop. Our team holds extensive experience in the field with strong command over the latest technologies to help you build your dream project. Connect with the vetted C Sharp experts to receive exceptional IT services that go beyond your expectations.",
+          buttonText: "Hire C# Developers Now",
+        };
+      case "Hire WPF Developers":
+        return {
+          description:
+            "At iFour we have a team of experts proficient in WPF technology who work to create customized, responsive, and visually appealing WPF applications featuring outstanding performance and user experience. Recruit the top 1 % of WPF talent with iFour having industry expertise and a proven track record to build your next project.",
+          buttonText: "Hire WPF Developers Now",
+        };
+      case "Hire Java Developers":
+        return {
+          description:
+            "Connect with iFour, your reliable outsourcing partner to hire Java developers. Our programmers are skilled at creating enterprise solutions with the expertise of Java technology and help you meet diverse business needs. Our candidates are passionate about learning and adapting to new technologies, ensuring that the outcomes are future-proof to fit the changing market demands.",
+          buttonText: "Hire Java Developers Now",
+        };
+      default:
+        return {
+          description:
+            "Discover top-tier talent in Australia for custom software development. iFour specializes in crafting innovative, scalable, and affordable solutions tailored to your business needs.",
+          buttonText: "Get In Touch",
+        };
+    }
+  };
 
-   //for hire breadcrumb 
-      const gethireContent = (serviceTitle: string) => {
-      switch (serviceTitle) {
-         case "Hire .NET Developers":
-            return {
-               description: "iFour remains a reliable partner to hire .NET developers in Australia. We have a team of highly skilled .NET developers proficient in building outstanding web apps. From dynamic web-based software solutions to cross-platform mobile apps and feature-rich Windows apps, we offer a range of .NET development services. Tap into the world of web apps with our .NET experts and take your projects to the next level.",
-               buttonText: "Get In Touch Now"
-            };
-             case "Hire Angular Developers":
-            return {
-               description: "Hire Angular developers to create dynamic and interactive web app solutions. iFour has a talent pool of vetted and certified resources proficient in building robust solutions tailored to your needs. Our programmers work to ensure time zone compatibility to help clients launch their Angular projects globally. Get in touch to hire the top talent for your Angular project.",
-               buttonText: "Let's Discuss Now"
-            };
-            case "Hire Node.js Developers":
-            return {
-               description: "Looking to hire Node.js developers to build scalable and high-performing web apps? iFour is your one-stop place to hire dedicated node.js programmers. iFour brings best-in-class node js developers to hire who possess the latest tech skills and help you build feature rich solutions that align with your business goals. Connect with us today to get high-performing and scalable solutions for your needs.",
-               buttonText: "Request a Quote"
-            };
-            case "Hire Vue JS Developers":
-            return {
-               description: "Hire Vue Js developers from iFour Technolab to build robust, scalable, and reliable web solutions. Whether you want to build interactive UIs, single-page web apps, or other front-end apps, our team holds enough expertise to help you get a reliable solution for all your needs. Get access to proven skills of vue.js programmers with iFour.",
-              buttonText: "Request a Quote"
-            };
-         case "Hire C# Developers":
-            return {
-               description: "At iFour, we have a vetted and dedicated team of C# developers available for hire. Our team holds extensive expertise in the field to help you build custom C# solution that works on multiple platforms   including mobile, web, and desktop. Our team holds extensive experience in the field with strong command over the latest technologies to help you build your dream project. Connect with the vetted C Sharp experts to receive exceptional IT services that go beyond your expectations.",
-               buttonText: "Hire C# Developers Now"
-            };
-            case "Hire WPF Developers":
-            return {
-               description: "At iFour we have a team of experts proficient in WPF technology who work to create customized, responsive, and visually appealing WPF applications featuring outstanding performance and user experience. Recruit the top 1 % of WPF talent with iFour having industry expertise and a proven track record to build your next project.",
-               buttonText: "Hire WPF Developers Now"
-            };
-            case "Hire Java Developers":
-            return {
-               description: "Connect with iFour, your reliable outsourcing partner to hire Java developers. Our programmers are skilled at creating enterprise solutions with the expertise of Java technology and help you meet diverse business needs. Our candidates are passionate about learning and adapting to new technologies, ensuring that the outcomes are future-proof to fit the changing market demands.",
-               buttonText: "Hire Java Developers Now"
-            };
-         default:
-            return {
-               description: "Discover top-tier talent in Australia for custom software development. iFour specializes in crafting innovative, scalable, and affordable solutions tailored to your business needs.",
-               buttonText: "Get In Touch"
-            };
-      }
-   };
+  const hireContent = gethireContent(title);
 
-   const hireContent = gethireContent(title);
-
-       return (
-       <>
-         <style jsx>{`
-            .banner__inner-page h1 {
-               color: white;
-               font-size: 2.5rem;
-               font-weight: 700;
-               line-height: 1.2;
-               margin-bottom: 1rem;
-            }
-            @media (max-width: 768px) {
-               .banner__inner-page h1 {
-                  font-size: 2rem;
-                  line-height: 1.3;
-               }
-            }
-            @media (max-width: 576px) {
-               .banner__inner-page h1 {
-                  font-size: 1.75rem;
-                  line-height: 1.4;
-               }
-            }
-            @media (max-width: 480px) {
-               .banner__inner-page h1 {
-                  font-size: 1.5rem;
-                  line-height: 1.4;
-               }
-            }
-         `}</style>
-         <section className="banner__inner-page bg-image pt-180 pb-180 bg-image"
-            style={{ 
-               backgroundImage: `linear-gradient(135deg, rgba(15, 122, 149, 0.3) 0%, rgba(13, 107, 127, 0.3) 50%, rgba(10, 90, 106, 0.3) 100%), url(/assets/images/banner/banner-inner-page.jpg)`,
-               backgroundSize: 'cover',
-               backgroundPosition: 'center',
-               backgroundRepeat: 'no-repeat'
-            }}>
-          {/* Left side shapes - only on home page */}
-          {title === "Home" && (
-             <>
-                <div className="shape2 wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-                   <Image src={shape_1} alt="shape" />
-                </div>
-                <div className="shape1 wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                   <Image src={shape_2} alt="shape" />
-                </div>
-             </>
-          )}
-          {/* Right side shape - always show */}
-          <div className="shape3 wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-             <Image className="sway__animationX" src={shape_3} alt="shape" />
+  return (
+    <>
+      <section
+        className="banner__inner-page bg-image pt-180 pb-180 bg-image"
+        style={{
+          backgroundImage: `url(/assets/images/banner/banner-inner-page.jpg)`,
+        }}
+      >
+        {/* Left side shapes - only on home page */}
+        <div
+          className="shape2 wow slideInLeft"
+          data-wow-delay="00ms"
+          data-wow-duration="1500ms"
+        >
+          <Image src={shape_1} alt="shape" />
+        </div>
+        <div
+          className="shape1 wow slideInLeft"
+          data-wow-delay="200ms"
+          data-wow-duration="1500ms"
+        >
+          <Image src={shape_2} alt="shape" />
+        </div>
+        {/* Right side shape - always show */}
+        <div
+          className="shape3 wow slideInRight"
+          data-wow-delay="200ms"
+          data-wow-duration="1500ms"
+        >
+          <Image className="sway__animationX" src={shape_3} alt="shape" />
+        </div>
+        <div className="container">
+          <h1
+            className="wow fadeInUp"
+            data-wow-delay="00ms"
+            data-wow-duration="1500ms"
+          >
+            {title}
+          </h1>
+          <div
+            className="breadcrumb-list wow fadeInUp"
+            data-wow-delay="200ms"
+            data-wow-duration="1500ms"
+          >
+            <Link href="/">Home</Link>
+            <span>
+              <i className="fa-regular fa-angles-right mx-2"></i>
+              {title}
+            </span>
           </div>
-         <div className="container">
-           <h1 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">{title}</h1>
-            <div className="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-               <Link href="/">Home</Link>
-               <span><i className="fa-regular fa-angles-right mx-2"></i></span>
-               {title === "Our Showcase" ? (
-                  // Simple path for showcase: Home > Our Showcase
-                  <>
-                     <span>Our Showcase</span>
-                  </>
-               ) : title.startsWith("Hire ") ? (
-                  // Hire style: Home > Hire Developers > Hire Angular Developers
-                  <>
-                     <span>Hire Developers</span>
-                     <span><i className="fa-regular fa-angles-right mx-2"></i>{title}</span>
-                  </>
-               ) : title === "Life Cycle Assessment for Packaging Industry" ? (
-                  // Case study style: Home > case-study > life-cycle-assessment-for-packaging-industry
-                  <>
-                     <span>case-study</span>
-                     <span><i className="fa-regular fa-angles-right mx-2"></i>life-cycle-assessment-for-packaging-industry</span>
-                  </>
-               ) : title === "Life Cycle Assessment Software" ? (
-                  // Case study style: Home > case-study > life-cycle-assessment-software
-                  <>
-                     <span>case-study</span>
-                     <span><i className="fa-regular fa-angles-right mx-2"></i>life-cycle-assessment-software</span>
-                  </>
-               ) : title === "Airport Parking Booking System" ? (
-                  // Case study style: Home > case-study > airport-parking-operator-booking-system
-                  <>
-                     <span>case-study</span>
-                     <span><i className="fa-regular fa-angles-right mx-2"></i>airport-parking-operator-booking-system</span>
-                  </>
-               ) : title === "AI Healthcare Monitoring System" ? (
-                  // Case study style: Home > case-study > ai-healthcare-monitoring-system
-                  <>
-                     <span>case-study</span>
-                     <span><i className="fa-regular fa-angles-right mx-2"></i>ai-healthcare-monitoring-system</span>
-                  </>
-               ) : title === "Contact Us" ? (
-                  // Contact page: Home > Contact Us
-                  <>
-                     <span>Contact Us</span>
-                  </>
-               ) : title === "404" ? (
-                  // 404 page: Home > 404
-                  <>
-                     <span>404</span>
-                  </>
-               ) : title === "Terms and Conditions" ? (
-                  // Terms page: Home > Terms and Conditions
-                  <>
-                     <span>Terms and Conditions</span>
-                  </>
-               ) : (
-                  // Technologies style: Home > Technologies > Angular Development Company
-                  <>
-                     <span>Technologies</span>
-                     <span><i className="fa-regular fa-angles-right mx-2"></i>{title}</span>
-                  </>
-               )}
+          {(title.startsWith("Hire ") ||
+            sub_title === "Technologies" ||
+            title === "Custom Software Development Company" ||
+            title === "Web Application Development Company" ||
+            title === "Cloud Application Development Company" ||
+            title === "Business Line Solutions Company" ||
+            title === "Desktop Application Development Company" ||
+            title === "Internet or Intranet Services Company" ||
+            title === "Mobile App Development Company" ||
+            title === "Microsoft 365 Development Company" ||
+            title === "Microsoft Azure Cloud Services Company" ||
+            title === "Ecommerce Website Development Company" ||
+            title === "IoT Software Development Company" ||
+            title === "Blockchain Development Company") && (
+            <div
+              className="banner-content wow fadeInUp mt-4"
+              data-wow-delay="400ms"
+              data-wow-duration="1500ms"
+            >
+              <p className="banner-description text-white mb-4">
+                {title.includes("Hire")
+                  ? hireContent.description
+                  : serviceContent.description}
+              </p>
+              <a
+                data-animation="slideInRight"
+                data-duration="2s"
+                data-delay=".9s"
+                href="/contact-us"
+                className="btn-one mt-10"
+              >
+                {title.includes("Hire")
+                  ? hireContent.buttonText
+                  : serviceContent.buttonText}{" "}
+                <i className="fa-regular fa-arrow-right-long"></i>
+              </a>
             </div>
-            {(title.startsWith("Hire ") ||
-              sub_title === "Technologies" ||
-              title === "Custom Software Development Company" || 
-              title === "Web Application Development Company" ||
-              title === "Cloud Application Development Company" ||
-              title === "Business Line Solutions Company" ||
-              title === "Desktop Application Development Company" ||
-              title === "Internet or Intranet Services Company" ||
-              title === "Mobile App Development Company" ||
-              title === "Microsoft 365 Development Company" ||
-              title === "Microsoft Azure Cloud Services Company" ||
-              title === "Ecommerce Website Development Company" ||
-              title === "IoT Software Development Company" ||
-              title === "Blockchain Development Company") && (
-                <div className="banner-content wow fadeInUp mt-4" data-wow-delay="400ms" data-wow-duration="1500ms">
-                   <p className="text-white mb-4" style={{
-                      fontSize: '1.32rem',
-                      lineHeight: '1.6',
-                      opacity: '0.9',
-                      maxWidth: '600px',
-                      margin: '0',
-                      textAlign: 'left'
-                   }}>
-                      {title.includes("Hire") ? hireContent.description : serviceContent.description}
-                   </p>
-                   <Link href="/contact" className="btn btn-primary" style={{
-                      backgroundColor: '#ffffff',
-                      color: '#0f7a95',
-                      padding: '12px 30px',
-                      borderRadius: '5px',
-                      textDecoration: 'none',
-                      display: 'inline-block',
-                      fontWeight: '600',
-                      transition: 'all 0.3s ease'
-                   }}
-                   onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#0f7a95';
-                      e.currentTarget.style.color = '#ffffff';
-                   }}
-                   onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = '#ffffff';
-                      e.currentTarget.style.color = '#0f7a95';
-                   }}>
-                      {title.includes("Hire") ? hireContent.buttonText : serviceContent.buttonText}
-                   </Link>
-                </div>
-             )}
-         </div>
+          )}
+        </div>
       </section>
-      </>
-   )
-}
+    </>
+  );
+};
 
-export default BreadCrumb
+export default BreadCrumb;

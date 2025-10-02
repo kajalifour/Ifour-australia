@@ -61,6 +61,11 @@
 
 // Header area start here ***
 .header {
+	&-top-wrp {
+		ul {
+			margin-bottom: 0px !important;
+		}
+	}
 	&-area {
 		position: relative;
 		&::after {
@@ -111,6 +116,7 @@
 			ul {
 				@include flex;
 				gap: 35px;
+				padding-left: 0px !important;
 				li {
 					position: relative;
 					&.has-megamenu {
@@ -139,7 +145,7 @@
 						z-index: 99;
 						flex-direction: column;
 						gap: 0;
-						width: 250px;
+						width: 300px;
 						border: var(--border-1px);
 						box-shadow: var(--shadow);
 						background-color: var(--white);

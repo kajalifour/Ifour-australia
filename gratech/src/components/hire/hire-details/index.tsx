@@ -132,7 +132,7 @@ const CTASection = ({ data }: { data: HireDetailsProps }) => {
               }}>
                 {data.ctaDescription || `Get in touch with us today to discuss your project requirements and find the perfect ${data.title.toLowerCase()} for your team.`}
               </p>
-              <Link href={data.ctaButtonLink || "/contact"} className="btn btn-primary cta-read-more" style={{
+              <Link href={data.ctaButtonLink || "/contact-us"} className="btn btn-primary cta-read-more" style={{
                 backgroundImage: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%)',
                 border: 'none',
                 color: '#0f7a95',

@@ -47,10 +47,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Need expert Vue.js developers to enhance your project?",
     ctaButtonText: "Let’s Discuss Your Project",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Engage with Top Vue.js Developers Within Minutes.",
     ctaTwoButtonText: "Let’s Connect",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Technical Efficiency",
       "Cost Saving",

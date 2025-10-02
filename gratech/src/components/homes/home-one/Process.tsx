@@ -52,18 +52,17 @@ const process_data: DataType[] = [
    }
 ];
 
-
 const Process = () => {
    return (
-      <section className="process-area pt-120 pb-120">
+      <section className="process-area pt-120 pb-50">
          <div className="container">
             <div className="section-header text-center mb-60">
                <h5 className="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                  <Image className="me-1" src={shape} alt="icon" />
+                  <Image className="me-1 filter-brightness" src={shape} alt="icon" />
                   Work Process
                </h5>
                <h2 className="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                  <span style={{ color: '#0f7a95' }}>Our Software Development Process:</span> How we work
+                  <span className="primary-color">Our Software Development Process:</span> How we work
                </h2>
             </div>
             <div className="row g-4">
@@ -89,5 +88,4 @@ const Process = () => {
       </section>
    )
 }
-
 export default Process

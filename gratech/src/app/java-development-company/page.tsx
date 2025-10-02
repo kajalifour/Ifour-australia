@@ -46,10 +46,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Accelerate with Java",
     ctaButtonText: "GET STARTED TODAY",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Empower Your Digital Transformation with iFour Technolab",
     ctaTwoButtonText: "Talk to experts",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Vast Talent Pool",
       "Java Industry Expertise",

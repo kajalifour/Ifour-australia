@@ -156,7 +156,7 @@ const ServiceDetails = () => {
                                             </h2>
                                             <p className="service-details-cta-description">
                                             </p>
-                                            <Link href="/contact" className="btn btn-primary service-details-cta-button">
+                                            <Link href="/contact-us" className="btn btn-primary service-details-cta-button">
                                                Get started now
                                             </Link>
                                         </div>

@@ -49,10 +49,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Build with C# experts",
     ctaButtonText: "GET STARTED TODAY",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Revolutionize your business with custom software solutions.",
     ctaTwoButtonText: "Get started now",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Talented Team",
       "Quick Hiring",

@@ -376,7 +376,7 @@
   gap: 15px;
 }
 
-.social-icon {
+.author-social-icons .social-icon {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -384,15 +384,15 @@
   transition: all 0.3s ease;
 }
 
-.social-icon.email {
+.author-social-icons .social-icon.email {
   background: #ea4335;
 }
 
-.social-icon.linkedin {
+.author-social-icons .social-icon.linkedin {
   background: #0077b5;
 }
 
-.social-icon:hover {
+.author-social-icons .social-icon:hover {
   transform: scale(1.1);
 }
 

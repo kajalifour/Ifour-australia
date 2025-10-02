@@ -172,7 +172,7 @@ const PackagingIndustryCaseStudy = () => {
     { id: 9, icon: "/assets/images/industry/industry-09.webp", title: "Technology" },
     { id: 10, icon: "/assets/images/industry/industry-10.webp", title: "Retail" },
     { id: 11, icon: "/assets/images/industry/industry-11.webp", title: "Logistics" },
-    { id: 12, title: "Contact Us", link: "/contact" },
+    { id: 12, title: "Contact Us", link: "/contact-us" },
   ];
 
 
@@ -501,7 +501,7 @@ const PackagingIndustryCaseStudy = () => {
                   <span className="text-teal">Industry</span> We Serve
                 </h2>
               </div>
-              <Link href="/contact" className="btn-one wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+              <Link href="/contact-us" className="btn-one wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 Explore More <i className="fa-regular fa-arrow-right-long"></i>
               </Link>
             </div>

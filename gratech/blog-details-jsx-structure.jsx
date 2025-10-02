@@ -19,7 +19,7 @@ const BlogDetailsStructure = () => {
           </div>
           <div className="text-content">Personalize Patient Care with <a className="highlight" href="https://www.plusphysio.com/healthcare-software-development">Custom Healthcare Software Development.</a></div>
         </div>
-        <a className="cta-button" href="https://www.plusphysio.com/contact">
+        <a className="cta-button" href="https://www.plusphysio.com/contact-us">
           <svg className="button-icon" viewBox="0 0 24 24">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM8.5 16L12 13.5 15.5 16 12 18.5 8.5 16z"></path>
           </svg> 
@@ -60,7 +60,7 @@ const BlogDetailsStructure = () => {
           </div>
           <div className="text-content">Track Patient Progress Effectively with <a className="highlight" href="https://www.plusphysio.com/">Physiotherapy Software</a></div>
         </div>
-        <a className="cta-button" href="https://www.plusphysio.com/contact">
+        <a className="cta-button" href="https://www.plusphysio.com/contact-us">
           <svg className="button-icon" viewBox="0 0 24 24">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM8.5 16L12 13.5 15.5 16 12 18.5 8.5 16z"></path>
           </svg> 
@@ -105,7 +105,7 @@ const BlogDetailsStructure = () => {
           </div>
           <div className="text-content">Get <a className="highlight" href="https://www.plus-doctor.com/">Clinic Management Software </a>to Automate Clinical Processes.</div>
         </div>
-        <a className="cta-button" href="https://www.plusphysio.com/contact">
+        <a className="cta-button" href="https://www.plusphysio.com/contact-us">
           <svg className="button-icon" viewBox="0 0 24 24">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM8.5 16L12 13.5 15.5 16 12 18.5 8.5 16z"></path>
           </svg> 
@@ -142,7 +142,7 @@ const BlogDetailsStructure = () => {
           </div>
           <div className="text-content">Custom <a className="highlight" href="https://www.plusphysio.com/physiotherapy-appointment-scheduling-software">Appointment Scheduling</a> Software for Physiotherapy Doctor</div>
         </div>
-        <a className="cta-button" href="https://www.plusphysio.com/contact">
+        <a className="cta-button" href="https://www.plusphysio.com/contact-us">
           <svg className="button-icon" viewBox="0 0 24 24">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM8.5 16L12 13.5 15.5 16 12 18.5 8.5 16z"></path>
           </svg> 
@@ -181,7 +181,7 @@ const BlogDetailsStructure = () => {
           </div>
           <div className="text-content"><a className="highlight" href="https://www.plusphysio.com/physiotherapy-patient-management-software">Patient Administration System </a>(PAS) for Physiotherapists</div>
         </div>
-        <a className="cta-button" href="https://www.plusphysio.com/contact">
+        <a className="cta-button" href="https://www.plusphysio.com/contact-us">
           <svg className="button-icon" viewBox="0 0 24 24">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM8.5 16L12 13.5 15.5 16 12 18.5 8.5 16z"></path>
           </svg> 

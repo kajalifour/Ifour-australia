@@ -83,7 +83,7 @@ const industry_data: DataType[] = [
    {
       id: 12,
       title: "Contact Us",
-      link: "/contact",
+      link: "/contact-us",
    },
 ];
 

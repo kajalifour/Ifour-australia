@@ -46,10 +46,10 @@ const page = () => {
     showServicesGrid: true,
     ctaTitle: "Looking for an expert Java development team? Get started with us.",
     ctaButtonText: "Let’s Discuss Your Project",
-    ctaButtonLink: "/contact",
+    ctaButtonLink: "/contact-us",
     ctaTwoTitle: "Hire Skilled Java Developers to Bring Your Vision to Life.",
     ctaTwoButtonText: "Let’s Connect",
-    ctaTwoButtonLink: "/contact",
+    ctaTwoButtonLink: "/contact-us",
     serviceTwoServices: [
       "Vast Talent Pool",
       "Industry Expertise",
